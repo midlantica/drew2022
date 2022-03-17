@@ -1,0 +1,16 @@
+// FONTS
+$base-font-size   :1rem;
+$base-line-height :1.7em;
+$font             :'Dosis', 'Helvetica Neue', Arial, sans-serif !important;
+$font-head        :'Dosis', 'Helvetica Neue', Arial, sans-serif !important;
+$font-subhead     :'Dosis', 'Helvetica Neue', Arial, sans-serif !important;
+$font-copy        :'Dosis', 'Helvetica Neue', Arial, sans-serif !important;
+
+// ############################
+
+body {
+  font-family: $font !important;
+  font-size: $base-font-size;
+  background: #333;
+  margin: 0;
+}

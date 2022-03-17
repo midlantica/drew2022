@@ -1,0 +1,234 @@
+$mortar: .25rem;
+
+.vueperslides__arrow {
+  color: rgb(67, 67, 67);
+  // text-shadow: 2px 2px 2px red;
+  // >>>>
+  // fill: none;
+  // stroke: red;
+  // stroke-width: 10px;
+  // stroke-linejoin: round;
+  stroke-linejoin: round;
+  filter:
+    drop-shadow(-1px -1px 1px hsla(0, 0%, 100%, 0.5))
+    drop-shadow(1px -1px 1px hsla(0, 0%, 100%, 0.5))
+    drop-shadow(1px 1px 1px hsla(0, 0%, 100%, 0.5))
+    drop-shadow(-1px 1px 1px hsla(0, 0%, 100%, 0.5));
+
+  &:hover {
+    stroke: rgb(255, 255, 255);
+    stroke-width: 2px;
+  }
+}
+
+.vueperslides__arrow svg {
+  // vertical-align: middle;
+  // stroke: currentColor;
+  // fill: none;
+  width: 3em;
+  // padding: 1em;
+  // -webkit-box-sizing: border-box;
+  // box-sizing: border-box;
+  // stroke: black;
+  // stroke-width: 1px;
+
+  &:hover {
+    // color: white !important;
+    // stroke-width: 2px;
+  }
+
+}
+
+.vueperslides__arrow svg:hover path {
+  stroke: rgb(211, 0, 0);
+  stroke-width: 2px;
+
+  &:hover {
+    // stroke: greenyellow;
+    stroke-width: 2px;
+  }
+}
+
+.vueperslides__progress {
+  color: hsla(98, 100%, 37%, 0.5);
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
+  // top: initial;
+  top: calc(100% - 4px);
+  height: 4px;
+  // border: 1px solid magenta;
+}
+
+.vueperslides__fractions {
+  position: absolute;
+  top: initial;
+  left: initial;
+  bottom: $mortar !important;
+  right: $mortar !important;
+  z-index: 2;
+  padding: 0.15em 0.5em;
+  border: 1px solid hsl(0deg 0% 100% / 27%);
+  border-radius: 0.4em;
+  background: hsl(0deg 0% 32% / 32%);
+  color: hsl(0deg 0% 100%);
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+
+.fullScreen {
+  cursor: pointer;
+}
+
+.carouselArrow {
+  font-size: 0.7em;
+  color: $grey;
+  border: none;
+  border-radius: 4px;
+  border-left-width: 10px;
+  background: transparentize(white, 0.95);
+  padding: 0.15rem .5rem 0.16rem .4rem;
+  margin: 0rem 0 0 0em;
+  font-family: Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  position: absolute;
+  // z-index: 100;
+  box-shadow: 2px 2px 2px white;
+
+  &:hover {
+    // background: grey;
+    background: transparentize(black, .90);
+    // font-weight: bold;
+    // color: $accent-red
+  }
+}
+
+.modern .carouselArrow {
+  font-size: 0.85em;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  border-left-width: 10px;
+  background: transparentize(white, 1);
+  padding: 0.15rem .5rem 0.16rem .4rem;
+  margin: 0rem 0 0 0em;
+  font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif;
+  cursor: pointer;
+  position: absolute;
+  text-transform: none;
+  // z-index: 100;
+
+  &:hover {
+    // background: grey;
+    color: $accent-red;
+    // background: transparentize(white, .9);
+    // font-weight: bold;
+  }
+}
+
+
+.box {
+  //
+
+  &:hover {
+    //
+    .brickBack {
+      fill: hsla(0, 100%, 57%, 0.25);
+      transition: fill 10s ease-out;
+    }
+    .brickCircles {
+      fill: hsla(0, 100%, 57%, 0.25);
+      transition: fill 10s ease-out;
+    }
+  }
+}
+
+$modernCol: $white;
+$ruby: hsla(340, 76%, 48%, 1);
+body.modern .box {
+
+  &:hover {
+    //
+    .brickBack {
+      fill: $ruby;
+      transition: fill 10s ease-out;
+    }
+    .brickCircles {
+      fill: $ruby;
+      transition: fill 10s ease-out;
+    }
+  }
+
+  svg {
+    width: 88px !important;
+  }
+
+  svg path,
+  svg polygon,
+  svg rect,
+  svg polyline {
+    stroke: $modernCol;
+  }
+
+}
+
+
+body.corp .box {
+  //
+
+  &:hover {
+    //
+    .brickBack {
+      fill: hsl(195, 88%, 90%);
+      transition: fill 10s ease-out;
+    }
+    .brickCircles {
+      fill: hsl(195, 88%, 90%);
+      transition: fill 10s ease-out;
+    }
+  }
+}
+
+body.techy .box {
+  //
+
+  &:hover {
+    //
+    .brickBack {
+      fill: hsla(48, 100%, 70%, 0.8);
+      transition: fill 10s ease-out;
+    }
+    .brickCircles {
+      fill: hsla(48, 100%, 70%, 0.8);
+      transition: fill 10s ease-out;
+    }
+  }
+}
+
+body.punk .box {
+  //
+
+  &:hover {
+    //
+    .brickBack {
+      fill: hsla(59, 100%, 50%, 0.85);
+      transition: fill 10s ease-out;
+    }
+    .brickCircles {
+      fill: hsla(59, 100%, 50%, 0.85);
+      transition: fill 10s ease-out;
+    }
+  }
+}
+
+body.groovy .box {
+  //
+
+  &:hover {
+    //
+    .brickBack {
+      fill: hsla(180, 100%, 50%, 0.25);
+      transition: fill 10s ease-out;
+    }
+    .brickCircles {
+      fill: hsla(180, 100%, 50%, 0.25);
+    }
+  }
+}

@@ -1,16 +1,36 @@
-@import "_base.scss";
-@import "_fonts.scss";
-@import "_layout.scss";
-@import "_styles.scss";
-@import "_transitions.scss";
-// @import 'modal';
-// OTHER STYLES TEMP
-// @import 'header';
-// @import 'nav';
-// @import 'footer';
-// @import 'nav_gallery';
-// @import 'type';
-// @import 'contact';
-// @import 'social';
-// @import 'gallery';
-// #############
+// See vue.config for auto import
+
+// SETTINGS
+@import '~breakpoint-sass/stylesheets/breakpoint';
+// @import 'vendor/html5Boilerplate';
+@import '_colors';
+@import '_breakpoints';
+@import './dh-common/_dh-main';
+@import '_drewShake';
+@import 'transitions';
+// @import 'tooltip';
+@import 'tryout';
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+html, html a {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  // color: #222;
+  font-size: 1em;
+  // line-height: 1.4;
+}

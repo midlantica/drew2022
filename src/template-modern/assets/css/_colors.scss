@@ -1,0 +1,25 @@
+// COLORS
+
+$ruby: hsla(340, 76%, 48%, 1);
+$yellow-red: hsla(37, 100%, 68%, 1);
+$black-coffee: hsla(280, 9%, 20%, 1);
+//~~~~~~~
+$grey:       $black-coffee;
+$backer:     $grey;
+$accent:     $yellow-red;
+$accent-red: $ruby;
+// $ivory:      hsl(49, 100%, 98%);
+// $orange:     hsl(303, 76%, 55%);
+// $paleyellow: hsla(22, 100%, 50%, 0.6);
+$white:      white;
+$black:     black;
+
+// link colors (normal, hover, active, visited, focus)
+// a {
+//   @include link-colors($blue-dark, // normal
+//     $accent, // hover
+//     $blue-mid, // active
+//     $grey, // visited
+//     $blue-dark // focus
+//   );
+// }
