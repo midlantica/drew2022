@@ -6,7 +6,7 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '@/template-techy/assets/css/techy-main.scss';
+  @import '../assets/css/techy-main.scss';
 
   .quoteBlock {
     background: darken($accent-red, 10);

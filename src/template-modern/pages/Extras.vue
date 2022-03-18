@@ -23,5 +23,5 @@
 </script>
 
 <style lang="scss">
-  @import '@/template-modern/assets/css/modern-main.scss';
+  @import '../assets/css/modern-main.scss';
 </style>

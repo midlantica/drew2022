@@ -42,13 +42,13 @@
   import Navvy from '../components/Navvy.vue'
   import HeadAndCopy from '../components/HeadAndCopy.vue'
   // import Quote from '../components/Quote.vue'
-  import Skills from '@/components/Skills.vue'
-  import About from '@/components/About.vue'
-  import Carousel from '@/components/Carousel/Carousel.vue'
+  import Skills from '../../components/Skills.vue'
+  import About from '../../components/About.vue'
+  import Carousel from '../../components/Carousel/Carousel.vue'
 </script>
 
 <style lang='scss' scoped>
-  @import '@/template-punk/assets/css/punk-main.scss';
+  @import '../assets/css/punk-main.scss';
 
   header,
   footer {

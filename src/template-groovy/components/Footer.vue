@@ -6,7 +6,7 @@
 </template>
 
 <style lang='scss' scoped>
-  @import '@/template-groovy/assets/css/groovy-main.scss';
+  @import '../assets/css/groovy-main.scss';
 
   $breakThou: 1024px;
   $breakOne: 840px;

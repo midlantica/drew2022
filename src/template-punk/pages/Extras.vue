@@ -15,11 +15,11 @@
 
 <script setup>
   import Navvy from '../components/Navvy'
-  import ExtrasC from '@/components/ExtrasC'
+  import ExtrasC from '../../components/ExtrasC'
 </script>
 
 <style lang="scss" scoped>
-  @import '@/template-punk/assets/css/punk-main.scss';
+  @import '../assets/css/punk-main.scss';
 
   header,
   footer {

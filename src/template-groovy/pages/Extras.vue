@@ -17,11 +17,11 @@
 <script setup>
   import NavvyHead from '../components/NavvyHead'
   import Footer from '../components/Footer'
-  import ExtrasC from '@/components/ExtrasC'
+  import ExtrasC from '../../components/ExtrasC'
 </script>
 
 <style lang="scss" scoped>
-  @import '@/template-groovy/assets/css/groovy-main.scss';
+  @import '../assets/css/groovy-main.scss';
 
   header {
     color: $ivory;

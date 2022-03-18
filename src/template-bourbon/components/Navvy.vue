@@ -25,7 +25,7 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '@/template-bourbon/assets/css/bourbon-main.scss';
+  @import "../assets/css/bourbon-main.scss";
 
   $outRed: hsla(356, 92%, 45%, 0.3);
   $outBlue: hsla(197, 88%, 66%, 0.3);

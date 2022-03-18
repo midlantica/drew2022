@@ -49,14 +49,14 @@
   import Navvy from '../components/Navvy.vue'
   import NavvyEmpty from '../components/NavvyEmpty.vue'
   import HeadAndCopy from '../components/HeadAndCopy.vue'
-  import About from '@/components/About.vue'
-  import Skills from '@/components/Skills.vue'
+  import About from '../../components/About.vue'
+  import Skills from '../../components/Skills.vue'
   import Quotes from '../components/Quote.vue'
-  import Carousel from '@/components/Carousel/Carousel.vue'
+  import Carousel from '../../components/Carousel/Carousel.vue'
 </script>
 
 <style lang='scss' scoped>
-  @import '@/template-bourbon/assets/css/bourbon-main.scss';
+  @import "../assets/css/bourbon-main.scss";
 
   header,
   footer {

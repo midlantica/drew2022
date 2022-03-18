@@ -15,7 +15,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/template-bourbon/assets/css/bourbon-main.scss";
+  @import "../assets/css/bourbon-main.scss";
 
   .headBlock {
     display: grid;

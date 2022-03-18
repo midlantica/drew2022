@@ -13,17 +13,17 @@
 
 <script lang="ts" setup>
   import { provide } from 'vue'
-  import store from '@/store/index'
-  import quotes from '@/store/quotes'
-  import Tabs from '@/components/Tabs.vue'
+  import store from './store/index'
+  import quotes from './store/quotes'
+  import Tabs from './components/Tabs.vue'
 
   provide('store', store) as any
   provide('quotes', quotes) as any
 </script>
 
 <style lang="scss">
-  @import '@/assets/css/_colors.scss';
-  @import "@/assets/css/main.scss";
+  @import './assets/css/_colors.scss';
+  @import './assets/css/main.scss';
 
   $font-groovy: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   $backer: #fffae4;

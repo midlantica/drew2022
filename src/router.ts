@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ModernRoot from '@/template-modern/pages/ModernRoot.vue'
-import ModernExtras from '@/template-modern/pages/ModernExtras.vue'
-import ModernProjects from '@/template-modern/pages/ModernProjects.vue'
-import ModernSkills from '@/template-modern/pages/ModernSkills.vue'
-import ModernAbout from '@/template-modern/pages/ModernAbout.vue'
-import HomeBourbon from '@/template-bourbon/pages/HomeBourbon.vue'
-import HomeGroovy from '@/template-groovy/pages/HomeGroovy.vue'
-import HomeTechy from '@/template-techy/pages/HomeTechy.vue'
-import HomeCorp from '@/template-corp/pages/HomeCorp.vue'
-import HomePunk from '@/template-punk/pages/HomePunk.vue'
+import ModernRoot from './template-modern/pages/ModernRoot.vue'
+import ModernExtras from './template-modern/pages/ModernExtras.vue'
+import ModernProjects from './template-modern/pages/ModernProjects.vue'
+import ModernSkills from './template-modern/pages/ModernSkills.vue'
+import ModernAbout from './template-modern/pages/ModernAbout.vue'
+import HomeBourbon from './template-bourbon/pages/HomeBourbon.vue'
+import HomeGroovy from './template-groovy/pages/HomeGroovy.vue'
+import HomeTechy from './template-techy/pages/HomeTechy.vue'
+import HomeCorp from './template-corp/pages/HomeCorp.vue'
+import HomePunk from './template-punk/pages/HomePunk.vue'
 import VueBodyClass from 'vue-body-class'
 
 const routes = [
@@ -26,7 +26,7 @@ const routes = [
     component: ModernRoot,
     meta: {
       bodyClass: 'modern',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',
@@ -45,7 +45,7 @@ const routes = [
         component: ModernProjects,
         meta: {
           bodyClass: 'projects',
-          title: 'Drew Harper – UI/UX Designer Projects',
+          title: 'Drew Harper &ndash; UI/UX Designer Projects',
           metaTags: [
             // {
             //   name: 'description',
@@ -60,7 +60,7 @@ const routes = [
         component: ModernSkills,
         meta: {
           bodyClass: 'skills',
-          title: 'Drew Harper – UI/UX Designer Skills',
+          title: 'Drew Harper &ndash; UI/UX Designer Skills',
           metaTags: [
             // {
             //   name: 'description',
@@ -75,7 +75,7 @@ const routes = [
         component: ModernAbout,
         meta: {
           bodyClass: 'about',
-          title: 'Drew Harper – UI/UX Designer About',
+          title: 'Drew Harper &ndash; UI/UX Designer About',
           metaTags: [
             // {
             //   name: 'description',
@@ -90,7 +90,7 @@ const routes = [
         component: ModernExtras,
         meta: {
           bodyClass: 'extras',
-          title: 'Drew Harper – UI/UX Designer Projects',
+          title: 'Drew Harper &ndash; UI/UX Designer Projects',
           metaTags: [
             // {
             //   name: 'description',
@@ -109,7 +109,7 @@ const routes = [
     component: HomeBourbon,
     meta: {
       bodyClass: 'bourbon',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',
@@ -124,7 +124,7 @@ const routes = [
     component: HomeGroovy,
     meta: {
       bodyClass: 'groovy',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',
@@ -139,7 +139,7 @@ const routes = [
     component: HomeTechy,
     meta: {
       bodyClass: 'techy',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',
@@ -154,7 +154,7 @@ const routes = [
     component: HomeCorp,
     meta: {
       bodyClass: 'corp',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',
@@ -169,7 +169,7 @@ const routes = [
     component: HomePunk,
     meta: {
       bodyClass: 'punk',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {./template-modern/pages/ModernExtras.vue
         //   name: 'description',
@@ -184,12 +184,10 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (Extras.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-
-      import( /* webpackChunkName: 'ExtrasBourbon' */ './template-bourbon/pages/Extras.vue' ),
+    component: () => import('./template-bourbon/pages/Extras.vue'),
     meta: {
       bodyClass: 'bourbon extras',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',
@@ -204,12 +202,10 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (Extras.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-
-      import( /* webpackChunkName: 'ExtrasCorp' */ './template-corp/pages/Extras.vue' ),
+    component: () => import('./template-corp/pages/Extras.vue'),
     meta: {
       bodyClass: 'corp extras',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',
@@ -224,12 +220,10 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (Extras.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-
-      import( /* webpackChunkName: 'ExtrasGroovy' */ './template-groovy/pages/Extras.vue' ),
+    component: () => import('./template-groovy/pages/Extras.vue'),
     meta: {
       bodyClass: 'groovy extras',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',
@@ -244,12 +238,10 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (Extras.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-
-      import( /* webpackChunkName: 'ExtrasPunk' */ './template-punk/pages/Extras.vue' ),
+    component: () => import('./template-punk/pages/Extras.vue'),
     meta: {
       bodyClass: 'punk extras',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',
@@ -264,12 +256,10 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (Extras.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-
-      import( /* webpackChunkName: 'ExtrasTechy' */ './template-techy/pages/Extras.vue' ),
+    component: () => import('./template-techy/pages/Extras.vue'),
     meta: {
       bodyClass: 'techy extras',
-      title: 'Drew Harper – UI/UX Designer',
+      title: 'Drew Harper &ndash; UI/UX Designer',
       metaTags: [
         // {
         //   name: 'description',

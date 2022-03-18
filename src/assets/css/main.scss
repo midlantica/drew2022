@@ -1,7 +1,8 @@
 // See vue.config for auto import
 
 // SETTINGS
-@import '~breakpoint-sass/stylesheets/breakpoint';
+// @import '~breakpoint-sass/stylesheets/breakpoint';
+@import "../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
 // @import 'vendor/html5Boilerplate';
 @import '_colors';
 @import '_breakpoints';

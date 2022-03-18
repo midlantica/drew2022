@@ -26,7 +26,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '@/template-punk/assets/css/punk-main.scss';
+  @import '../assets/css/punk-main.scss';
 
   $outRed: rgba(221, 9, 22, .3);
   $outBlue: rgba(92, 201, 245, .3);

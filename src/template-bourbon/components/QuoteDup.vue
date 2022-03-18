@@ -16,8 +16,7 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '@/template-bourbon/assets/css/bourbon-main.scss';
-
+  @import "../assets/css/bourbon-main.scss";
   .quoteBlock {
     background: darken($accent-red, 10);
     display: flex;

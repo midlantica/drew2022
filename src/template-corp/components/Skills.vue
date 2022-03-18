@@ -129,18 +129,18 @@
   import { ref } from 'vue'
   import Popper from 'vue3-popper'
 
-  import iconUiuxBlue from '@/template-corp/components/Icons/iconUiux.vue'
-  import iconHtml5Blue from '@/template-corp/components/Icons/iconHtml5.vue'
-  import iconCss3Blue from '@/template-corp/components/Icons/iconCss3.vue'
-  import iconJsBlue from '@/template-corp/components/Icons/iconJs.vue'
-  import iconSketchBlue from '@/template-corp/components/Icons/iconSketch.vue'
-  import iconSassBlue from '@/template-corp/components/Icons/iconSass.vue'
-  import iconVueBlue from '@/template-corp/components/Icons/iconVue.vue'
-  import iconSvgBlue from '@/template-corp/components/Icons/iconSvg.vue'
-  import iconVSCodeBlue from '@/template-corp/components/Icons/iconVscode.vue'
-  import iconFigmaBlue from '@/template-corp/components/Icons/iconFigma.vue'
-  import iconNuxtBlue from '@/template-corp/components/Icons/iconNuxt.vue'
-  import iconChelseaBlue from '@/template-corp/components/Icons/iconChelsea.vue'
+  import iconUiuxBlue from '../components/Icons/iconUiux.vue'
+  import iconHtml5Blue from '../components/Icons/iconHtml5.vue'
+  import iconCss3Blue from '../components/Icons/iconCss3.vue'
+  import iconJsBlue from '../components/Icons/iconJs.vue'
+  import iconSketchBlue from '../components/Icons/iconSketch.vue'
+  import iconSassBlue from '../components/Icons/iconSass.vue'
+  import iconVueBlue from '../components/Icons/iconVue.vue'
+  import iconSvgBlue from '../components/Icons/iconSvg.vue'
+  import iconVSCodeBlue from '../components/Icons/iconVscode.vue'
+  import iconFigmaBlue from '../components/Icons/iconFigma.vue'
+  import iconNuxtBlue from '../components/Icons/iconNuxt.vue'
+  import iconChelseaBlue from '../components/Icons/iconChelsea.vue'
 
   const hover = ref(false)
   // const placement = ref('top')
@@ -163,7 +163,7 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '@/template-corp/assets/css/corp-main.scss';
+  @import '../assets/css/corp-main.scss';
 
   // .active:hover {
   //   // background: red;

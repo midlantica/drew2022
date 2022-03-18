@@ -36,7 +36,7 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '@/template-groovy/assets/css/groovy-main.scss';
+  @import '../assets/css/groovy-main.scss';
 
   nav {
     //

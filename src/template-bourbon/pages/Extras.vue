@@ -17,11 +17,11 @@
 </template>
 
 <script lang="ts" setup>
-  import Navvy from '@/template-bourbon/components/Navvy'
-  import NavvyEmpty from '@/template-bourbon/components/NavvyEmpty'
-  import ExtrasC from '@/components/ExtrasC'
+  import Navvy from '../components/Navvy.vue'
+  import NavvyEmpty from '../components/NavvyEmpty.vue'
+  import ExtrasC from '../../components/ExtrasC.vue'
 </script>
 
 <style lang="scss">
-  @import '@/template-bourbon/assets/css/bourbon-main.scss';
+  @import "../assets/css/bourbon-main.scss";
 </style>

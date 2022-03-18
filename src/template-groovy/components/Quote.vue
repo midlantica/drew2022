@@ -6,7 +6,7 @@
 </template>
 
 <style lang='scss' scoped>
-  @import '@/template-groovy/assets/css/groovy-main.scss';
+  @import '../assets/css/groovy-main.scss';
 
   .quoteBlock {
     background: darken($accent-red, 10);

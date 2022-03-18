@@ -12,7 +12,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '@/template-punk/assets/css/punk-main.scss';
+  @import '../assets/css/punk-main.scss';
 
   .quoteBlock {
     background: rgba(218, 0, 0, 0.79);

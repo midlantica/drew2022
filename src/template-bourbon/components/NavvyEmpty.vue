@@ -4,7 +4,8 @@
 </template>
 
 <style lang='scss' scoped>
-  @import '@/template-bourbon/assets/css/bourbon-main.scss';
+  @import "../assets/css/bourbon-main.scss";
+  // @import '../assets/css/bourbon-main.scss';
 
   nav {
     display: flex;

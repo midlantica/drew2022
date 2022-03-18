@@ -30,7 +30,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/template-punk/assets/css/punk-main.scss";
+  @import "../assets/css/punk-main.scss";
 
   .flexbox {
     display: flex;

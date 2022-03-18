@@ -21,14 +21,14 @@
 </template>
 
 <script lang="ts" setup>
-  import drewHarper from '@/template-corp/components/navvyArt/drewHarper.vue'
+  import drewHarper from '../components/navvyArt/drewHarper.vue'
   import { inject } from 'vue'
 
   const store: any = inject('store')
 </script>
 
 <style lang='scss' scoped>
-  @import '@/template-corp/assets/css/corp-main.scss';
+  @import '../assets/css/corp-main.scss';
 
   nav {
     display: flex;

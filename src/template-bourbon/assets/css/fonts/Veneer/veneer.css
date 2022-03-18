@@ -27,6 +27,9 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3be091");
 
+@import "Veneer/font.woff2";
+
+
 @font-face {
   font-family: 'Veneer';
   src: url('Veneer/font.woff2') format('woff2'), url('Veneer/font.woff') format('woff');

@@ -10,7 +10,7 @@
 </template>
 
 <style lang='scss' scoped>
-  @import '@/template-modern/assets/css/modern-main.scss';
+  @import '../assets/css/modern-main.scss';
 
   .quoteBlock {
     background: darken($accent-red, 10);

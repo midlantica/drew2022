@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '@/template-techy/assets/css/techy-main.scss';
+  @import '../assets/css/techy-main.scss';
 
   section {
     margin: 2rem 1.85rem 0rem 2.25rem;

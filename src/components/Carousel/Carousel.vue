@@ -57,19 +57,19 @@
 
   import { ref } from 'vue'
 
-  import IconUiux from '@/components/Carousel/icons/iconUiux.vue'
-  import IconMobile from '@/components/Carousel/icons/iconMobile.vue'
-  import IconKiosk from '@/components/Carousel/icons/iconKiosk.vue'
-  import IconGraphics from '@/components/Carousel/icons/iconGraphics.vue'
-  import IconPrint from '@/components/Carousel/icons/iconPrint.vue'
-  import IconMisc from '@/components/Carousel/icons/iconMisc.vue'
+  import IconUiux from '../../components/Carousel/icons/iconUiux.vue'
+  import IconMobile from '../../components/Carousel/icons/iconMobile.vue'
+  import IconKiosk from '../../components/Carousel/icons/iconKiosk.vue'
+  import IconGraphics from '../../components/Carousel/icons/iconGraphics.vue'
+  import IconPrint from '../../components/Carousel/icons/iconPrint.vue'
+  import IconMisc from '../../components/Carousel/icons/iconMisc.vue'
 
-  import uiux01 from '@/components/Carousel/uiux01.vue'
-  import mobile02 from '@/components/Carousel/mobile02.vue'
-  import kiosk03 from '@/components/Carousel/kiosk03.vue'
-  import graphics04 from '@/components/Carousel/graphics04.vue'
-  import print05 from '@/components/Carousel/print05.vue'
-  import misc06 from '@/components/Carousel/misc06.vue'
+  import uiux01 from '../../components/Carousel/uiux01.vue'
+  import mobile02 from '../../components/Carousel/mobile02.vue'
+  import kiosk03 from '../../components/Carousel/kiosk03.vue'
+  import graphics04 from '../../components/Carousel/graphics04.vue'
+  import print05 from '../../components/Carousel/print05.vue'
+  import misc06 from '../../components/Carousel/misc06.vue'
 
   let backButtonView = ref(false)
   let selectedView = ref('Carousel')
@@ -97,7 +97,7 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '@/assets/css/carousel.scss';
+  @import '../../assets/css/carousel.scss';
 
   $mortar: .25rem;
 

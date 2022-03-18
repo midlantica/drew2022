@@ -47,14 +47,14 @@
 <script setup>
   import NavvyHead from '../components/NavvyHead'
   import HeadAndCopy from '../components/HeadAndCopy'
-  import Skills from '@/components/Skills'
-  import About from '@/components/About'
+  import Skills from '../../components/Skills'
+  import About from '../../components/About'
   import Footer from '../components/Footer'
-  import Carousel from '@/components/Carousel/Carousel'
+  import Carousel from '../../components/Carousel/Carousel'
 </script>
 
 <style lang="scss" scoped>
-  @import "@/template-groovy/assets/css/groovy-main.scss";
+  @import "../assets/css/groovy-main.scss";
 
   .mainGrid {
     display: grid;

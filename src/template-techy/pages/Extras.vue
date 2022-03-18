@@ -21,11 +21,11 @@
 <script setup>
   import Navvy from '../components/Navvy'
   import Footy from '../components/Footy'
-  import ExtrasC from '@/components/ExtrasC'
+  import ExtrasC from '../../components/ExtrasC'
 </script>
 
 <style lang="scss" scoped>
-  @import '@/template-techy/assets/css/techy-main.scss';
+  @import '../assets/css/techy-main.scss';
 
   header {
     color: $ivory;

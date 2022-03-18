@@ -13,7 +13,7 @@
 
 <style lang="scss" scoped>
 
-  @import "@/template-corp/assets/css/corp-main.scss";
+  @import "../assets/css/corp-main.scss";
 
   // $breakOne: 840px;
   // $breakTwo: 630px;

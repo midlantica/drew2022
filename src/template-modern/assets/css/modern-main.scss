@@ -6,10 +6,10 @@
 // @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;600;900&display=swap');
 
 // BASE
-@import '@/template-modern/assets/css/_base.scss';
+@import '_base.scss';
 
 // SETTINGS
-@import '@/template-modern/assets/css/_colors.scss';
+@import '_colors.scss';
 
 // TYPOGRAPHY
-@import '@/template-modern/assets/css/_typography.scss';
+@import '_typography.scss';

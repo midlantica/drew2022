@@ -17,9 +17,9 @@
 <script setup>
   import Navvy from '../components/Navvy'
   import Quotes from '../components/Quote'
-  import ExtrasC from '@/components/ExtrasC'
+  import ExtrasC from '../../components/ExtrasC'
 </script>
 
 <style lang="scss" scoped>
-  @import '@/template-corp/assets/css/corp-main.scss';
+  @import '../assets/css/corp-main.scss';
 </style>

@@ -45,14 +45,14 @@
 <script setup>
   import Navvy from '../components/Navvy'
   import HeadAndCopy from '../components/HeadAndCopy'
-  import Skills from '@/components/Skills'
-  import About from '@/components/About'
+  import Skills from '../../components/Skills'
+  import About from '../../components/About'
   import Footy from '../components/Footy'
-  import Carousel from '@/components/Carousel/Carousel'
+  import Carousel from '../../components/Carousel/Carousel'
 </script>
 
 <style lang="scss" scoped>
-  @import "@/template-techy/assets/css/techy-main.scss";
+  @import "../assets/css/techy-main.scss";
 
   .mainGrid {
     display: grid;
