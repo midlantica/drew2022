@@ -185,8 +185,8 @@
     // text-transform: uppercase;
     max-width: 26ch;
     background: linear-gradient(180deg,
-        darken($ruby, 0)
-        const darken($ruby, 7)
+        darken($ruby, 0),
+        darken($ruby, 7)
       ) !important;
     z-index: 200000;
     top: -1.25rem !important;
