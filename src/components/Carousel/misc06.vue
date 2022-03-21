@@ -29,25 +29,25 @@
   // const imgPath = ('/public/img/portfolio/01_uiux/')
   let slides = ref([
     {
-      image: '/public/img/portfolio/06_misc/booth/jpay_tradeshow_booth2.png'
+      image: '/img/portfolio/06_misc/booth/jpay_tradeshow_booth2.png'
     },
     {
-      image: '/public/img/portfolio/06_misc/email/jpay_email_jp4.jpg'
+      image: '/img/portfolio/06_misc/email/jpay_email_jp4.jpg'
     },
     {
-      image: '/public/img/portfolio/06_misc/email/jpay_email.jpg'
+      image: '/img/portfolio/06_misc/email/jpay_email.jpg'
     },
     {
-      image: '/public/img/portfolio/06_misc/mural/atlanta_tree_pro_truck.jpg'
+      image: '/img/portfolio/06_misc/mural/atlanta_tree_pro_truck.jpg'
     },
     {
-      image: '/public/img/portfolio/06_misc/mural/jpay_mural.jpg'
+      image: '/img/portfolio/06_misc/mural/jpay_mural.jpg'
     },
     {
-      image: '/public/img/portfolio/06_misc/packaging/jp3_package.jpg'
+      image: '/img/portfolio/06_misc/packaging/jp3_package.jpg'
     },
     {
-      image: '/public/img/portfolio/06_misc/JP3_many.jpg'
+      image: '/img/portfolio/06_misc/JP3_many.jpg'
     }
   ])
 </script>

@@ -26,16 +26,16 @@
   // const imgPath = ('/public/img/portfolio/01_uiux/')
   let slides = ref([
     {
-      image: "/public/img/portfolio/05_print/jpay/jpay_newsletters.png"
+      image: "/img/portfolio/05_print/jpay/jpay_newsletters.png"
     },
     {
-      image: "/public/img/portfolio/05_print/mlotto_brochure.jpg"
+      image: "/img/portfolio/05_print/mlotto_brochure.jpg"
     },
     {
-      image: "/public/img/portfolio/05_print/celebrity_cruise_lines_brochure.jpg"
+      image: "/img/portfolio/05_print/celebrity_cruise_lines_brochure.jpg"
     },
     {
-      image: "/public/img/portfolio/05_print/starclippers_email_panel.png"
+      image: "/img/portfolio/05_print/starclippers_email_panel.png"
     },
   ]);
 </script>
