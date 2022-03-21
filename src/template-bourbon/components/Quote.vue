@@ -2,7 +2,7 @@
   <transition name='bounce7' appear>
     <div class='quoteBlock'>
       <transition-group name='zoomQuote' tag='quotePad'>
-        <div class='quotePad'>
+        <div class='quotePad' v-bind:key="copy">
           <p class='fadeTexter'>&ldquo;{{ quotes.copy[slideNum].quote }}&rdquo;</p>
           <cite class='fadeTexter'>&ndash; {{ quotes.copy[slideNum].author }}</cite>
       </div>
@@ -19,6 +19,7 @@
   // const quoteViz = ref(false)
   let slideNum: any = ref(1)
   let rolls: any = ref([])
+  let copy: any = ref('copy')
 
   function roll() {
     setInterval(() => {

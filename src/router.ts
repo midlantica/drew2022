@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createRouter, createWebHistory } from 'vue-router'
 import ModernRoot from './template-modern/pages/ModernRoot.vue'
 import ModernExtras from './template-modern/pages/ModernExtras.vue'

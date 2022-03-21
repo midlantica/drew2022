@@ -399,8 +399,8 @@
     :deep(.popper) {
       // background: #932213 !important;
       background: linear-gradient(180deg,
-        darken(#932213, 0)
-        const darken(#932213, 7)
+        darken(#932213, 0),
+        darken(#932213, 7)
       ) !important;
     }
   }
@@ -430,8 +430,8 @@
     :deep(.popper) {
       // background: #932213 !important;
       background: linear-gradient(180deg,
-        darken(#423BA0, 0)
-        const darken(#423BA0, 7)
+        darken(#423BA0, 0),
+        darken(#423BA0, 7)
       ) !important;
     }
   }
@@ -463,8 +463,8 @@
     :deep(.popper) {
       // background: #932213 !important;
       background: linear-gradient(180deg,
-        darken( #ff1a22, 0)
-        const darken( #ff1a22, 7)
+        darken( #ff1a22, 0),
+        darken( #ff1a22, 7)
       ) !important;
     }
   }
@@ -501,8 +501,8 @@
     :deep(.popper) {
       // background: #932213 !important;
       background: linear-gradient(180deg,
-        darken( #01487f, 0)
-        const darken( #01345c, 7)
+        darken( #01487f, 0),
+        darken( #01345c, 7)
       ) !important;
     }
   }
@@ -536,8 +536,8 @@
     :deep(.popper) {
       // background: #932213 !important;
       background: linear-gradient(180deg,
-        darken(#b100a7, 0)
-        const darken(#b100a7, 7)
+        darken(#b100a7, 0),
+        darken(#b100a7, 7)
       ) !important;
       border: 2px dashed white !important;
     }
