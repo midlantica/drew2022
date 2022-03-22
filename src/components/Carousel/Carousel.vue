@@ -55,7 +55,7 @@
 
 <script setup lang="ts">
 
-  import { ref } from 'vue'
+  import { ref, shallowRef } from 'vue'
 
   import IconUiux from '../../components/Carousel/icons/iconUiux.vue'
   import IconMobile from '../../components/Carousel/icons/iconMobile.vue'
@@ -72,15 +72,15 @@
   import misc06 from '../../components/Carousel/misc06.vue'
 
   let backButtonView = ref(false)
-  let selectedView = ref('Carousel')
+  let selectedView = shallowRef('Carousel')
   let selectedViewTxt = ref('Select one...')
 
-  let uiux01Txt = ref(`UI/UX`)
-  let mobile02Txt = ref(`Mobile`)
-  let kiosk03Txt = ref(`Kiosk`)
-  let graphics04Txt = ref(`Graphics`)
-  let print05Txt = ref(`Print`)
-  let misc06Txt = ref(`Misc`)
+  let uiux01Txt = shallowRef(`UI/UX`)
+  let mobile02Txt = shallowRef(`Mobile`)
+  let kiosk03Txt = shallowRef(`Kiosk`)
+  let graphics04Txt = shallowRef(`Graphics`)
+  let print05Txt = shallowRef(`Print`)
+  let misc06Txt = shallowRef(`Misc`)
 
   function selectCarousel(i, x) {
     selectedView.value = i

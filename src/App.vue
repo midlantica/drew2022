@@ -1,7 +1,7 @@
 <template>
   <transition name="fade" appear>
     <div class="wrapper">
-      <Tabs />
+      <component :is="Tabs" />
       <router-view v-slot="{ Component }">
         <transition name="fade" appear>
           <component :is="Component" />

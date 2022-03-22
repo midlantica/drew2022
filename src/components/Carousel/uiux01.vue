@@ -23,11 +23,11 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { shallowRef } from 'vue'
   import { VueperSlides, VueperSlide } from 'vueperslides'
   import 'vueperslides/dist/vueperslides.css'
 
-  let slides = ref([
+  const slides = shallowRef([
     {
       image: '/img/portfolio/01_uiux/Zander_screenshot_v1.png'
     },

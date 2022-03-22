@@ -21,13 +21,13 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { shallowRef } from 'vue'
   import { VueperSlides, VueperSlide } from 'vueperslides'
   import 'vueperslides/dist/vueperslides.css'
 
   // let title = ref('')
   // const imgPath = ('/public/img/portfolio/01_uiux/')
-  let slides = ref([
+  const slides = shallowRef([
     {
       image: '/img/portfolio/06_misc/booth/jpay_tradeshow_booth2.png'
     },
