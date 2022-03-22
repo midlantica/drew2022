@@ -1,9 +1,17 @@
 <template>
   <div class="tabs">
-    <router-link :to="{ name: 'ModernProjects' }" class="modern">{{ store.copy.modern }}</router-link>
-    <router-link :to="{ name: 'Bourbon' }" class="bourbon">{{ store.copy.bourbon }}</router-link>
-    <router-link :to="{ name: 'Groovy' }" class="groovy">{{ store.copy.groovy }}</router-link>
-    <router-link :to="{ name: 'Techy' }" class="techy">{{ store.copy.techy }}</router-link>
+    <router-link :to="{ name: 'ModernProjects' }" class="modern">{{
+      store.copy.modern
+    }}</router-link>
+    <router-link :to="{ name: 'Bourbon' }" class="bourbon">{{
+      store.copy.bourbon
+    }}</router-link>
+    <router-link :to="{ name: 'Groovy' }" class="groovy">{{
+      store.copy.groovy
+    }}</router-link>
+    <router-link :to="{ name: 'Techy' }" class="techy">{{
+      store.copy.techy
+    }}</router-link>
     <router-link :to="{ name: 'Corp' }" class="corp">{{ store.copy.corp }}</router-link>
     <router-link :to="{ name: 'Punk' }" class="punk">{{ store.copy.punk }}</router-link>
   </div>
@@ -11,12 +19,14 @@
 
 <script lang="ts" setup>
   // import { defineComponent } from 'vue'
-  import { inject } from 'vue'
 
-  const store: any = inject('store')
+  import { inject } from "vue";
+
+  const store: any = inject("store");
 </script>
 
 <style lang="scss" scoped>
+  @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap");
   .tabs {
     display: flex;
     flex-direction: row;
@@ -25,13 +35,14 @@
     align-items: flex-start;
     align-content: center;
     text-align: center;
-    font-size: 0.7em;
+    font-size: 0.85em;
     position: relative;
     top: 0px;
     left: 0px;
     z-index: 10;
     width: calc(100%);
-    font-family: Helvetica, Arial,sans-serif;
+    font-family: "Barlow Semi Condensed";
+    letter-spacing: 0em;
     overflow-x: hidden !important;
 
     a {
@@ -80,16 +91,16 @@
       // border-bottom: 1px solid $ivory;
       background: linear-gradient(
         // 0 - 10%
-          $groovy-aqua 0%,
+        $groovy-aqua 0%,
         $groovy-aqua 20%,
         // 10% - 50%
-          $groovy-yellow 20%,
+        $groovy-yellow 20%,
         $groovy-yellow 50%,
         // 50% - 75%
-          $groovy-orange 50%,
+        $groovy-orange 50%,
         $groovy-orange 75%,
         // 75% - 100%
-          $groovy-red 75%,
+        $groovy-red 75%,
         $groovy-red 100%
       );
     }
@@ -138,16 +149,16 @@
         background: darken(#ff3940, 30);
         background: linear-gradient(
           // 0 - 10%
-            $groovy-aqua-dk 0%,
+          $groovy-aqua-dk 0%,
           $groovy-aqua-dk 20%,
           // 10% - 50%
-            $groovy-yellow-dk 20%,
+          $groovy-yellow-dk 20%,
           $groovy-yellow-dk 50%,
           // 50% - 75%
-            $groovy-orange-dk 50%,
+          $groovy-orange-dk 50%,
           $groovy-orange-dk 75%,
           // 75% - 100%
-            $groovy-red-dk 75%,
+          $groovy-red-dk 75%,
           $groovy-red-dk 100%
         );
       }
@@ -173,6 +184,5 @@
         background: darken(#ff4bf5, 30);
       }
     }
-
   }
 </style>

@@ -1,29 +1,26 @@
 <template>
-  <transition name="fade" appear>
-    <div class="wrapper">
-      <component :is="Tabs" />
-      <router-view v-slot="{ Component }">
-        <transition name="fade" appear>
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </div>
-  </transition>
+  <div class="wrapper">
+    <component :is="Tabs" />
+    <router-view v-slot="{ Component }">
+      <transition name="fade" appear>
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <script lang="ts" setup>
-  import { provide } from 'vue'
-  import store from './store/index'
-  import quotes from './store/quotes'
-  import Tabs from './components/Tabs.vue'
+  import { provide } from "vue";
+  import store from "./store/index";
+  import quotes from "./store/quotes";
+  import Tabs from "./components/Tabs.vue";
 
-  provide('store', store) as any
-  provide('quotes', quotes) as any
+  provide("store", store) as any;
+  provide("quotes", quotes) as any;
 </script>
 
 <style lang="scss">
-  @import './assets/css/_colors.scss';
-  @import './assets/css/main.scss';
+  @import "./assets/css/main.scss";
 
   $font-groovy: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   $backer: #fffae4;
@@ -75,7 +72,6 @@
         font-size: 3vw;
       }
     }
-
 
     &.extras .extrasWrapper {
       //
@@ -135,7 +131,11 @@
 
     .about {
       // background: hsla(340, 76%, 48%, 1) !important;
-      background: linear-gradient(180deg,hsl(340deg 76% 48% / 61%),hsl(340deg 76% 31% / 62%)) !important;
+      background: linear-gradient(
+        180deg,
+        hsl(340deg 76% 48% / 61%),
+        hsl(340deg 76% 31% / 62%)
+      ) !important;
       width: 50%;
       margin: 0 auto;
     }
@@ -153,7 +153,7 @@
     &.extras .extrasWrapper {
       //
       h1 {
-        font-size: clamp(.85rem, 1.2rem, 1.4rem) !important;
+        font-size: clamp(0.85rem, 1.2rem, 1.4rem) !important;
         font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
         color: white;
         padding-top: 1em;
@@ -187,7 +187,6 @@
       @media (max-width: $breakOne) {
         // background-size: 110% 50%;
       }
-
     }
 
     .about > p {
@@ -242,7 +241,8 @@
     }
 
     .about {
-      background: #FFE268 !important; box-shadow: none !important;
+      background: #ffe268 !important;
+      box-shadow: none !important;
 
       p {
         font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
@@ -273,7 +273,6 @@
     &.extras .contact {
       width: 100% !important;
     }
-
   }
 
   // #############################
@@ -296,23 +295,22 @@
       h1 {
         font-size: 1.5em;
         padding-top: 1em;
-        font-family: 'Bodoni Moda', Times, serif !important;
+        font-family: "Bodoni Moda", Times, serif !important;
         font-weight: 600;
-        color: #01487F !important;
+        color: #01487f !important;
         text-transform: capitalize;
       }
 
       p {
-        font-family: 'Bodoni Moda', Times, serif !important;
+        font-family: "Bodoni Moda", Times, serif !important;
         font-size: 1em;
       }
     }
 
     .about p {
-      font-family: 'Bodoni Moda', Times, serif !important;
+      font-family: "Bodoni Moda", Times, serif !important;
       font-size: 1em;
     }
-
   }
 
   // #############################
@@ -341,7 +339,6 @@
         background-size: 100% 600%, 250% 70%;
         background-position: center center, -3em 3em;
       }
-
     }
 
     .about > p {
@@ -388,5 +385,4 @@
       letter-spacing: 0.05rem;
     }
   }
-
 </style>

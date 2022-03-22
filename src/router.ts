@@ -47,6 +47,7 @@ const routes = [
         meta: {
           bodyClass: 'projects',
           title: 'Drew Harper &ndash; UI/UX Designer Projects',
+          // transition: 'flash',
           metaTags: [
             // {
             //   name: 'description',
@@ -59,6 +60,7 @@ const routes = [
         path: 'Skills',
         name: 'ModernSkills',
         component: ModernSkills,
+        // transition: 'fade',
         meta: {
           bodyClass: 'skills',
           title: 'Drew Harper &ndash; UI/UX Designer Skills',
@@ -74,6 +76,7 @@ const routes = [
         path: 'About',
         name: 'ModernAbout',
         component: ModernAbout,
+        // transition: 'fade',
         meta: {
           bodyClass: 'about',
           title: 'Drew Harper &ndash; UI/UX Designer About',
