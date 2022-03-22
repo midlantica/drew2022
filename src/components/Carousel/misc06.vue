@@ -8,10 +8,7 @@
     fractions
     progress
   >
-    <vueper-slide
-      v-for='(slide, i) in slides' :key='i'
-      :image='slide.image'
-    >
+    <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
       <template v-slot:loader>
         <i class="icon icon-loader spinning"></i>
         <span>Loading...</span>
@@ -21,37 +18,37 @@
 </template>
 
 <script setup lang="ts">
-  import { shallowRef } from 'vue'
-  import { VueperSlides, VueperSlide } from 'vueperslides'
-  import 'vueperslides/dist/vueperslides.css'
+// import { ref } from "vue";
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 
-  // let title = ref('')
-  // const imgPath = ('/public/img/portfolio/01_uiux/')
-  const slides = shallowRef([
-    {
-      image: '/img/portfolio/06_misc/booth/jpay_tradeshow_booth2.png'
-    },
-    {
-      image: '/img/portfolio/06_misc/email/jpay_email_jp4.jpg'
-    },
-    {
-      image: '/img/portfolio/06_misc/email/jpay_email.jpg'
-    },
-    {
-      image: '/img/portfolio/06_misc/mural/atlanta_tree_pro_truck.jpg'
-    },
-    {
-      image: '/img/portfolio/06_misc/mural/jpay_mural.jpg'
-    },
-    {
-      image: '/img/portfolio/06_misc/packaging/jp3_package.jpg'
-    },
-    {
-      image: '/img/portfolio/06_misc/JP3_many.jpg'
-    }
-  ])
+// let title = ref('')
+// const imgPath = ('/public/img/portfolio/01_uiux/')
+let slides = [
+  {
+    image: "/img/portfolio/06_misc/booth/jpay_tradeshow_booth2.png",
+  },
+  {
+    image: "/img/portfolio/06_misc/email/jpay_email_jp4.jpg",
+  },
+  {
+    image: "/img/portfolio/06_misc/email/jpay_email.jpg",
+  },
+  {
+    image: "/img/portfolio/06_misc/mural/atlanta_tree_pro_truck.jpg",
+  },
+  {
+    image: "/img/portfolio/06_misc/mural/jpay_mural.jpg",
+  },
+  {
+    image: "/img/portfolio/06_misc/packaging/jp3_package.jpg",
+  },
+  {
+    image: "/img/portfolio/06_misc/JP3_many.jpg",
+  },
+]
 </script>
 
 <style lang="scss">
-  @import '../../assets/css/carousel.scss';
+@import "../../assets/css/carousel.scss";
 </style>

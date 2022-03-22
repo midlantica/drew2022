@@ -18,26 +18,26 @@
 </template>
 
 <script setup lang="ts">
-  import { shallowRef } from "vue";
-  import { VueperSlides, VueperSlide } from 'vueperslides'
-  import "vueperslides/dist/vueperslides.css"
+// import { ref } from "vue";
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 
-  // let title = ref('')
-  // const imgPath = ('/public/img/portfolio/01_uiux/')
-  const slides = shallowRef([
-    {
-      image: "/img/portfolio/05_print/jpay/jpay_newsletters.png"
-    },
-    {
-      image: "/img/portfolio/05_print/mlotto_brochure.jpg"
-    },
-    {
-      image: "/img/portfolio/05_print/celebrity_cruise_lines_brochure.jpg"
-    },
-    {
-      image: "/img/portfolio/05_print/starclippers_email_panel.png"
-    },
-  ]);
+// let title = ref('')
+// const imgPath = ('/public/img/portfolio/01_uiux/')
+let slides = [
+  {
+    image: "/img/portfolio/05_print/jpay/jpay_newsletters.png",
+  },
+  {
+    image: "/img/portfolio/05_print/mlotto_brochure.jpg",
+  },
+  {
+    image: "/img/portfolio/05_print/celebrity_cruise_lines_brochure.jpg",
+  },
+  {
+    image: "/img/portfolio/05_print/starclippers_email_panel.png",
+  },
+]
 </script>
 
 <style lang="scss">

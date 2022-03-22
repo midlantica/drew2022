@@ -22,6 +22,6 @@
     "breakpoint-sass": "^2.7.1",
     "sass": "^1.49.9",
     "vite": "^2.8.0",
-    "vueperslides": "^2.15.2"
+    "vueperslides": "^3.3.2"
   }
 }
