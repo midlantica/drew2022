@@ -26,7 +26,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
   .tabs {
     display: flex;
     flex-direction: row;
