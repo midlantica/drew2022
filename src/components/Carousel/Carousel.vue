@@ -12,37 +12,37 @@
 
     <component :is='selectedView'>
       <div class='miniGallery'>
-        <a @click='selectCarousel(uiux01, uiux01Txt);' >
+        <a @click='selectCarousel(uiux01, uiux01Txt)' >
           <div class='box Uiux'>
             <IconUiux />
             <p>UI/UX Design</p>
           </div>
         </a>
-        <a @click='selectCarousel(mobile02, mobile02Txt);' >
+        <a @click='selectCarousel(mobile02, mobile02Txt)' >
           <div class='box Mobile'>
             <IconMobile />
             <p>Mobile</p>
           </div>
         </a>
-        <a @click='selectCarousel(kiosk03, kiosk03Txt);' >
+        <a @click='selectCarousel(kiosk03, kiosk03Txt)' >
           <div class='box Kiosk'>
             <IconKiosk />
             <p>Kiosk</p>
           </div>
         </a>
-        <a @click='selectCarousel(graphics04, graphics04Txt);' >
+        <a @click='selectCarousel(graphics04, graphics04Txt)' >
           <div class='box Graphics'>
             <IconGraphics />
             <p>Graphics</p>
           </div>
         </a>
-        <a @click='selectCarousel(print05, print05Txt);' >
+        <a @click='selectCarousel(print05, print05Txt)' >
           <div class='box Print'>
             <IconPrint />
             <p>Print</p>
           </div>
         </a>
-        <a @click='selectCarousel(misc06, misc06Txt);' >
+        <a @click='selectCarousel(misc06, misc06Txt)' >
           <div class='box Misc'>
             <IconMisc />
             <p>Misc.</p>
