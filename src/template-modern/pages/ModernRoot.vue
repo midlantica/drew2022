@@ -1,7 +1,6 @@
 <template>
   <transition name="fade" appear class="modBacker">
     <div>
-
       <transition name="topDown" appear>
         <header>
           <Navvy />
@@ -13,26 +12,23 @@
       </transition>
 
       <transition name="bounce3" appear>
-        <main class='mainGrid'>
-
+        <main class="mainGrid">
           <router-view v-slot="{ Component }">
             <component :is="Component" />
           </router-view>
-
         </main>
       </transition>
-
     </div>
   </transition>
 </template>
 
 <script setup lang="ts">
-  import Navvy from '../components/Navvy.vue'
-  import ModernTabs from '../components/ModernTabs.vue'
+  import Navvy from "../components/Navvy.vue";
+  import ModernTabs from "../components/ModernTabs.vue";
 </script>
 
-<style lang='scss' scoped>
-  @import '../assets/css/modern-main.scss';
+<style lang="scss" scoped>
+  @import "../assets/css/modern-main.scss";
 
   .modBacker {
     // background: hsl(282, 10%, 10%);
@@ -65,11 +61,11 @@
     grid-template-columns: 1fr;
     // grid-gap: 1em;
     // margin: 0em 0 1em;
-    gap: .5rem;
+    gap: 0.5rem;
     width: 90%;
 
     @media (max-width: $breakThou) {
-      }
+    }
 
     @media (max-width: $breakOne) {
       width: 90%;
@@ -129,7 +125,4 @@
       grid-row: 2;
     }
   }
-
-
-
 </style>

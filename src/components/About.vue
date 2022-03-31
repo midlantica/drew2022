@@ -8,13 +8,12 @@
 </template>
 
 <script lang="ts" setup>
-  import { inject } from 'vue'
+  import { inject } from "vue";
 
-  const store: any = inject('store')
+  const store: any = inject("store");
 </script>
 
 <style lang="scss" scoped>
-
   .about {
     background: #fbf3bb;
     padding: 1.25rem 1.75rem;
@@ -31,11 +30,11 @@
     @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
 
     @media (max-width: $breakThou) {
-      margin: 0rem 0 .5rem;
+      margin: 0rem 0 0.5rem;
     }
 
     @media (max-width: $breakOne) {
-      margin: 0 0 .5rem;
+      margin: 0 0 0.5rem;
     }
 
     @media (max-width: $breakFour) {
@@ -80,7 +79,7 @@
   p {
     display: block;
     color: lighten($grey, 15);
-    font-size: .9em;
+    font-size: 0.9em;
     line-height: 1.4em;
     letter-spacing: 0.05em;
     //
@@ -100,16 +99,16 @@
   .punk .about {
     //
     p {
-      margin: .25rem auto;
+      margin: 0.25rem auto;
     }
   }
 
   .corp .about {
     //
     p {
-      font-family: 'Bodoni Moda', Times, serif !important;
-      font-size: .85rem;
-      letter-spacing: .001rem;
+      font-family: "Bodoni Moda", Times, serif !important;
+      font-size: 0.85rem;
+      letter-spacing: 0.001rem;
       line-height: 1.4rem;
       margin: 0;
       font-weight: 500;
@@ -123,7 +122,6 @@
         font-size: 1rem;
         line-height: 1.5rem;
       }
-
     }
   }
 
@@ -169,8 +167,8 @@
 
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-      font-size: clamp(.75rem, .8rem, 1.15rem) !important;
-      letter-spacing: .000rem;
+      font-size: clamp(0.75rem, 0.8rem, 1.15rem) !important;
+      letter-spacing: 0rem;
       line-height: 1.5rem;
       margin: 0;
       font-weight: 300;
@@ -185,9 +183,6 @@
       //   font-size: 1rem;
       //   line-height: 1.5rem;
       // }
-
     }
-
   }
-
 </style>
