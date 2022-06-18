@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "jsx": "preserve",
     "paths": {
       "/@/*": [ // / to begin with.
         "src/*"
