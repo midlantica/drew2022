@@ -3,10 +3,10 @@
     viewBox="0 0 88 60"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    @click="iconAni"
+    id="iconUiux"
   >
     <title>UI/UX Design</title>
-    <g class="iconUiux" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g id="Actual" transform="translate(-21.000000, -16.000000)">
         <g id="uiux" transform="translate(38.832246, 26.459350)">
           <g id="background">
@@ -50,16 +50,16 @@
 <script setup lang="ts">
   // const svg = document.getElementById("triangles");
 
-  const iconAni = (e) => {
-    const colors = ["red", "green", "blue", "purple", "orange", "pink", "purple"];
-    const rando = () => colors[Math.floor(Math.random() * colors.length)];
+  // const iconAni = (e) => {
+  //   const colors = ["red", "green", "blue", "purple", "orange", "pink", "purple"];
+  //   const rando = () => colors[Math.floor(Math.random() * colors.length)];
 
-    document.documentElement.style.cssText = `
-      --dark-color: ${rando()};
-      --light-color: ${rando()};
-      `;
-    // alert('You have clicked the circle.')
-  };
+  //   document.documentElement.style.cssText = `
+  //     --dark-color: ${rando()};
+  //     --light-color: ${rando()};
+  //     `;
+  //   // alert('You have clicked the circle.')
+  // };
 </script>
 
 <style lang="scss" scoped>
@@ -69,44 +69,41 @@
     cursor: pointer;
 
     &:hover {
-      cursor: grab;
+      cursor: pointer;
     }
 
     #ui,
     #ux {
       fill: white;
+      filter: drop-shadow(0px 1px 0.5px rgba(0, 0, 0, 0.3));
     }
   }
 
-  svg #uiux #uiuxFront2 {
+  #uiux #uiuxFront1 {
+    //
+  }
+  #uiux:hover #uiuxFront1 {
+    animation: cycleAni1 0.7s alternate;
+    animation-iteration-count: 2;
+  }
+  #uiux #uiuxFront2 {
     transform: translateY(50px);
   }
-  svg #uiux:hover #uiuxFront1 {
-    animation: cycleAni 1s;
-    animation-direction: alternate;
-  }
-  svg #uiux:hover #uiuxFront2 {
-    animation: cycleAni2 1s;
-    animation-direction: alternate;
+  #uiux:hover #uiuxFront2 {
+    animation: cycleAni2 0.7s alternate;
+    animation-iteration-count: 2;
   }
 
-  @keyframes spinCycle {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes cycleAni {
+  @keyframes cycleAni1 {
     0% {
       opacity: 1;
     }
-    50% {
-      opacity: 0.2;
+    60% {
+      opacity: 0;
+      //transform: scale(1.2);
     }
     100% {
-      transform: translateY(-30px);
+      transform: translate(3px, -30px);
       opacity: 0;
     }
   }
@@ -114,8 +111,9 @@
     0% {
       opacity: 0;
     }
-    50% {
-      opacity: 0.2;
+    60% {
+      opacity: 0;
+      //transform: scale(1);
     }
     100% {
       transform: translate(3px, 13px);
