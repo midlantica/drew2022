@@ -83,22 +83,22 @@
     //
   }
   #uiux:hover #uiuxFront1 {
-    animation: cycleAni1 0.7s alternate;
-    animation-iteration-count: 2;
+    animation: cycleAni1 0.75s alternate;
+    //animation-iteration-count: 2;
   }
   #uiux #uiuxFront2 {
     transform: translateY(50px);
   }
   #uiux:hover #uiuxFront2 {
-    animation: cycleAni2 0.7s alternate;
-    animation-iteration-count: 2;
+    animation: cycleAni2 0.75s alternate;
+    //animation-iteration-count: 2;
   }
 
   @keyframes cycleAni1 {
     0% {
       opacity: 1;
     }
-    60% {
+    50% {
       opacity: 0;
       //transform: scale(1.2);
     }
@@ -111,7 +111,7 @@
     0% {
       opacity: 0;
     }
-    60% {
+    50% {
       opacity: 0;
       //transform: scale(1);
     }

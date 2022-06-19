@@ -202,11 +202,6 @@
 <style lang="scss" scoped>
   @import "../template-modern/assets/css/modern-main.scss";
 
-  // .active:hover {
-  //   // background: red;
-  //   box-shadow: 0px 0px 10px red;
-  // }
-
   :deep(.popper) {
     color: white !important;
     // width: 30ch;

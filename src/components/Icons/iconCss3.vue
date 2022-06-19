@@ -1,5 +1,5 @@
 <template>
-  <svg viewBox="0 0 88 60" xmlns="http://www.w3.org/2000/svg">
+  <svg id="css3item" viewBox="0 0 88 60" xmlns="http://www.w3.org/2000/svg">
     <title>CSS</title>
     <g id="css3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g
@@ -19,26 +19,29 @@
               fill="#1B86C1"
               points="17.5 37.363 29.015 34.163 31.725 3.757 17.498 3.757 17.498 37.363"
             ></polyline>
-            <polygon
-              id="Shape"
-              fill="#DEDEDE"
-              points="12.628 26.985 12.318 23.505 7.945 23.505 8.555 30.357 17.479 32.839 17.499 28.292"
-            ></polygon>
-            <path
-              d="M22.849,21.32 L17.405,21.321 L17.405,16.956 L27.61,16.956 L27.504,18.128 L26.414,30.356 L17.482,32.836 L17.482,28.296 L22.342,26.982 L22.849,21.32 Z M28.3928475,8.103 L28.4,8.1 L28.3997487,8.103 L28.401,8.103 L28.3792467,8.34772417 L28.037,12.433 L28.0121551,12.443533 L28.01,12.467 L27.9570033,12.4669146 L17.465,16.915 L17.465,21.279 L17.459,12.689 L18.026642,12.4509131 L17.46,12.45 L17.46,12.451 L17.46,8.103 L28.3928475,8.103 Z"
-              id="Combined-Shape"
-              fill="#F8F8F8"
-            ></path>
-            <polygon
-              id="Shape"
-              fill="#DEDEDE"
-              points="7.034 12.434 6.634 8.102 17.499 8.102 17.499 12.452 7.033 12.434"
-            ></polygon>
-            <polygon
-              id="Shape"
-              fill="#DEDEDE"
-              points="7.75 21.321 17.46 21.321 17.46 12.693 7.405 16.907"
-            ></polygon>
+
+            <g id="whiteStuff">
+              <path
+                d="M22.849,21.32 L17.405,21.321 L17.405,16.956 L27.61,16.956 L27.504,18.128 L26.414,30.356 L17.482,32.836 L17.482,28.296 L22.342,26.982 L22.849,21.32 Z M28.3928475,8.103 L28.4,8.1 L28.3997487,8.103 L28.401,8.103 L28.3792467,8.34772417 L28.037,12.433 L28.0121551,12.443533 L28.01,12.467 L27.9570033,12.4669146 L17.465,16.915 L17.465,21.279 L17.459,12.689 L18.026642,12.4509131 L17.46,12.45 L17.46,12.451 L17.46,8.103 L28.3928475,8.103 Z"
+                id="Combined-Shape"
+                fill="#F8F8F8"
+              ></path>
+              <polygon
+                id="Shape"
+                fill="#DEDEDE"
+                points="7.034 12.434 6.634 8.102 17.499 8.102 17.499 12.452 7.033 12.434"
+              ></polygon>
+              <polygon
+                id="Shape"
+                fill="#DEDEDE"
+                points="7.75 21.321 17.46 21.321 17.46 12.693 7.405 16.907"
+              ></polygon>
+              <polygon
+                id="Shape"
+                fill="#DEDEDE"
+                points="12.628 26.985 12.318 23.505 7.945 23.505 8.555 30.357 17.479 32.839 17.499 28.292"
+              ></polygon>
+            </g>
           </g>
         </g>
       </g>
@@ -52,13 +55,25 @@
   svg {
     // width: 88px;
     // height: 60px;
-
-    .letterInsides {
-      // fill: white;
+    &:hover {
+      cursor: pointer;
     }
   }
 
-  svg:hover {
-    cursor: grab;
+  #css3item:hover #whiteStuff {
+    //animation: rounder 1s ease-in;
+    animation-fill-mode: forwards;
+    transform-origin: 17px 17px;
+    transform: rotateY(180deg);
+    transition-duration: 0.75s;
+    //animation-delay: 400ms;
+    //animation-iteration-count: 2;
+  }
+
+  @keyframes rounder {
+    100% {
+      transform: rotate(360deg);
+      //opacity: 0;
+    }
   }
 </style>
