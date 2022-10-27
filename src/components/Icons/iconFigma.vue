@@ -67,6 +67,7 @@ svg#figmaBox {
 #figmaBox:hover #figmaIconGroup .shape {
   animation: transparenter 1s ease-in;
   animation-delay: .75s;
+  animation-iteration-count: 2;
   // animation-fill-mode: forwards;
   // transform-origin: 18px 17px;
   //animation-iteration-count: 2;
