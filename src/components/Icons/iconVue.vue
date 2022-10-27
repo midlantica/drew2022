@@ -24,9 +24,9 @@ svg:hover {
   //
 
   &:hover .groupVue {
-    animation: iconFlipXAni 2s ease-in-out infinite;
+    animation: iconFlipYAni 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2;
     transform-origin: 50% 50%;
-    animation-delay: 1s;
+    animation-delay: .85s;
   }
 }
 
@@ -40,7 +40,7 @@ svg:hover {
   fill: #34495e;
 }
 
-@keyframes iconFlipXAni {
+@keyframes iconFlipYAni {
   to {
     transform: rotateY(360deg);
   }
