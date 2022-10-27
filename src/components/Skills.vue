@@ -123,7 +123,7 @@ const vue = ref(
   `Vue.js is my favorite JS framework, a great balance of Angular's ease and React's abilities.`
 )
 const nuxt = ref(
-  `The Next framework for Vue: SSR, routes by dir, SEO; it's jam-packed with crunchy goodness. Digging Gridsome.js too.`
+  `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`
 )
 const vsCode = ref(
   `VS Code: Used to be into Sublime Text but I'm all VS Code these days. MS better late than never.`
