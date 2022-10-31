@@ -3,14 +3,14 @@
     <title>Nuxt JS</title>
     <g class="groupNuxt">
       <path
-        class="darkGreen"
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M41.833 13.9399C40.2963 11.3264 36.4543 11.3263 34.9175 13.9399L18.169 42.4236C16.6322 45.0371 18.5532 48.3041 21.6267 48.3041H34.7016C33.3882 47.1688 32.9019 45.2048 33.8957 43.5198L46.5803 22.0135L41.833 13.9399Z"
+        fill="#80EEC0"
       />
       <path
-        class="lightGreen"
         d="M52.4398 20.6218C53.7419 18.5164 56.997 18.5164 58.299 20.6218L72.4891 43.567C73.7914 45.6723 72.1639 48.304 69.5599 48.304H41.1791C38.5751 48.304 36.9475 45.6723 38.2495 43.567L52.4398 20.6218Z"
+        fill="#00DC82"
       />
     </g>
   </svg>
@@ -29,7 +29,7 @@
   }
 
   .corp #svgNuxt {
-    filter: brightness(0.75) sepia(1) hue-rotate(160deg) saturate(5);
+    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(6);
 
     &:hover {
       filter: none;
@@ -46,11 +46,15 @@
   }
 
   .lightGreen {
-    fill: #00dc82;
+    fill: #00c58e;
+  }
+
+  .midGreen {
+    fill: #108775;
   }
 
   .darkGreen {
-    fill: #80eec0;
+    fill: #2f495e;
   }
 
   @keyframes iconFlipXAni {

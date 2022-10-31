@@ -7,7 +7,7 @@
   >
     <title>UI/UX Design</title>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <g id="Actual" transform="translate(-21.000000, -16.000000)">
+      <g transform="translate(-21.000000, -16.000000)">
         <g id="uiux" transform="translate(38.832246, 26.459350)">
           <g id="background">
             <path
@@ -64,20 +64,28 @@
     }
   }
 
-  #uiux #uiuxFront1 {
+  .corp #iconUiux {
+    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(6);
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  #iconUiux #uiuxFront1 {
     //
   }
 
-  #uiux:hover #uiuxFront1 {
-    animation: cycleAni1 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275) alternate;
+  #iconUiux:hover #uiuxFront1 {
+    animation: cycleAni1 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) alternate;
     //animation-iteration-count: 2;
   }
 
-  #uiux #uiuxFront2 {
+  #iconUiux #uiuxFront2 {
     transform: translateY(50px);
   }
 
-  #uiux:hover #uiuxFront2 {
+  #iconUiux:hover #uiuxFront2 {
     animation: cycleAni2 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275) alternate;
     //animation-iteration-count: 2;
   }
