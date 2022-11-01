@@ -40,7 +40,8 @@
   }
 
   .corp #figmaBox {
-    filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(10);
+    filter: brightness(0.5) sepia(1) hue-rotate(156deg) saturate(30);
+    // filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(10);
 
     &:hover {
       filter: none;
@@ -52,7 +53,7 @@
     // height: 60px;
 
     .background {
-      fill: url(#backer) black;
+      fill: url(#backer) hsl(0, 0%, 10%);
     }
 
     .shape {

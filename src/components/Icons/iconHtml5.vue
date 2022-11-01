@@ -46,9 +46,21 @@
       filter: drop-shadow(0px 1px 0.5px rgba(0, 0, 0, 0.3));
     }
   }
+
+  .corp #html5 {
+    // filter: brightness(0.6) sepia(1) hue-rotate(156deg) saturate(30);
+    // filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(10);
+    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(6);
+
+    &:hover {
+      filter: none;
+    }
+  }
+
   #html5 #five1 {
     //
   }
+
   #html5:hover #fiveWhite {
     animation: rounder 1s ease-in;
     animation-fill-mode: forwards;
@@ -56,6 +68,7 @@
     //animation-delay: 400ms;
     //animation-iteration-count: 2;
   }
+
   /*  #html5:hover #fiveWhite {
     animation: cycleAni1 0.7s alternate;
     animation-iteration-count: 2;
@@ -74,27 +87,33 @@
       //opacity: 0;
     }
   }
+
   @keyframes cycleAni1 {
     0% {
       opacity: 1;
     }
+
     60% {
       opacity: 0;
       //transform: scale(1.2);
     }
+
     100% {
       transform: translate(0px, -30px);
       opacity: 0;
     }
   }
+
   @keyframes cycleAni2 {
     0% {
       opacity: 0;
     }
+
     60% {
       opacity: 0;
       //transform: scale(1);
     }
+
     100% {
       transform: translate(0px, 0px);
       opacity: 1;

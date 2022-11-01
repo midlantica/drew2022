@@ -60,6 +60,16 @@
     }
   }
 
+  .corp #css3item {
+    // filter: brightness(0.6) sepia(1) hue-rotate(156deg) saturate(30);
+    // filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(10);
+    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(6);
+
+    &:hover {
+      filter: none;
+    }
+  }
+
   #css3item:hover #whiteStuff {
     //animation: rounder 1s ease-in;
     animation-fill-mode: forwards;
@@ -76,6 +86,7 @@
       //opacity: 0;
       transform: translateX(2rem);
     }
+
     100% {
       transform: rotate(360deg);
       //opacity: 0;
