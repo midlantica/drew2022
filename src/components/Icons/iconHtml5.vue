@@ -50,7 +50,7 @@
   .corp #html5 {
     // filter: brightness(0.6) sepia(1) hue-rotate(156deg) saturate(30);
     // filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(10);
-    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(6);
+    filter: brightness(0.9) sepia(1) hue-rotate(160deg) saturate(3);
 
     &:hover {
       filter: none;

@@ -58,6 +58,14 @@
     cursor: pointer;
   }
 
+  .corp #svgSketch {
+    filter: brightness(0.9) sepia(1) hue-rotate(160deg) saturate(2);
+
+    &:hover {
+      filter: none;
+    }
+  }
+
   #svgSketch .groupSketch1 {
     transform: translate(21px, -40px);
   }

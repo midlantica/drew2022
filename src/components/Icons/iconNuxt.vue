@@ -29,7 +29,7 @@
   }
 
   .corp #svgNuxt {
-    filter: brightness(0.75) sepia(1) hue-rotate(160deg) saturate(5);
+    filter: brightness(0.75) sepia(1) hue-rotate(160deg) saturate(3);
 
     &:hover {
       filter: none;

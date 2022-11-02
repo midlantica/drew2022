@@ -28,7 +28,7 @@
   }
 
   .corp #svgVscode {
-    filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(10);
+    filter: brightness(0.85) sepia(1) hue-rotate(160deg) saturate(3);
 
     &:hover {
       filter: none;

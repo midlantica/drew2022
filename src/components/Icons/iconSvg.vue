@@ -38,6 +38,14 @@
     }
   }
 
+  .corp #svgSvg {
+    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(2);
+
+    &:hover {
+      filter: none;
+    }
+  }
+
   #svgSvg {
     // transform: translate(28px, 7px);
 

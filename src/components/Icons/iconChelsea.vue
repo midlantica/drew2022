@@ -292,6 +292,14 @@
     transform-origin: 50% 50%;
   }
 
+  .corp #svgChelsea {
+    filter: brightness(0.95) sepia(1) hue-rotate(160deg) saturate(3);
+
+    &:hover {
+      filter: none;
+    }
+  }
+
   #svgChelsea:hover .groupChelsea {
     animation: chelseaRotate 2s ease-in-out 2;
     animation-delay: 1s;

@@ -9,40 +9,49 @@
 </template>
 
 <style lang="scss" scoped>
-// @import '~/assets/css/_colors.scss';
+  // @import '~/assets/css/_colors.scss';
 
-svg {
-  // width: 88px;
-  // height: 60px;
-}
-
-svg:hover {
-  cursor: pointer;
-}
-
-#svgVue {
-  //
-
-  &:hover .groupVue {
-    animation: iconFlipYAni 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2;
-    transform-origin: 50% 50%;
-    animation-delay: .85s;
+  svg {
+    // width: 88px;
+    // height: 60px;
   }
-}
 
-.groupVue {}
-
-.lightGreen {
-  fill: #40b883;
-}
-
-.darkGreen {
-  fill: #34495e;
-}
-
-@keyframes iconFlipYAni {
-  to {
-    transform: rotateY(360deg);
+  svg:hover {
+    cursor: pointer;
   }
-}
+
+  #svgVue {
+    //
+
+    &:hover .groupVue {
+      animation: iconFlipYAni 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2;
+      transform-origin: 50% 50%;
+      animation-delay: 0.85s;
+    }
+  }
+
+  .corp #svgVue {
+    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(3);
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  .groupVue {
+  }
+
+  .lightGreen {
+    fill: #40b883;
+  }
+
+  .darkGreen {
+    fill: #34495e;
+  }
+
+  @keyframes iconFlipYAni {
+    to {
+      transform: rotateY(360deg);
+    }
+  }
 </style>
