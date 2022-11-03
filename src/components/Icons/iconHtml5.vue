@@ -43,7 +43,7 @@
     #five1,
     #five2 {
       //fill: white;
-      filter: drop-shadow(0px 1px 0.5px rgba(0, 0, 0, 0.3));
+      // filter: drop-shadow(0px 1px 0.5px rgba(0, 0, 0, 0.3));
     }
   }
 
@@ -59,6 +59,10 @@
 
   #html5 #five1 {
     //
+  }
+
+  #fiveWhite {
+    filter: drop-shadow(0px 0.5px 0.5px rgba(0, 0, 0, 0.3));
   }
 
   #html5:hover #fiveWhite {

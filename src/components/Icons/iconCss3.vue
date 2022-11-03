@@ -70,6 +70,10 @@
     }
   }
 
+  #whiteStuff {
+    filter: drop-shadow(0px 0.5px 0.5px rgba(0, 0, 0, 0.3));
+  }
+
   #css3item:hover #whiteStuff {
     //animation: rounder 1s ease-in;
     animation-fill-mode: forwards;
