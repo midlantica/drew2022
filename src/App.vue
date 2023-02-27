@@ -10,19 +10,19 @@
 </template>
 
 <script lang="ts" setup>
-  import { provide } from "vue";
-  import store from "./store/index";
-  import quotes from "./store/quotes";
-  import Tabs from "./components/Tabs.vue";
+  import { provide } from 'vue';
+  import store from './store/index';
+  import quotes from './store/quotes';
+  import Tabs from './components/Tabs.vue';
 
-  provide("store", store) as any;
-  provide("quotes", quotes) as any;
+  provide('store', store) as any;
+  provide('quotes', quotes) as any;
 </script>
 
 <style lang="scss">
-  @import "./assets/css/main.scss";
+  @import './assets/css/main.scss';
 
-  $font-groovy: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  $font-groovy: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   $backer: #fffae4;
   $backBlack: #1f1f1f;
 
@@ -52,7 +52,7 @@
     }
 
     .about > p {
-      font-family: "AmericanTypewriterStd-Med";
+      font-family: 'AmericanTypewriterStd-Med';
       font-size: 0.84em;
       margin: 0.25rem auto;
 
@@ -80,7 +80,7 @@
         padding-top: 1em;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
-        font-family: "VeneerTwo", Helvetica, Arial, sans-serif;
+        font-family: 'VeneerTwo', Helvetica, Arial, sans-serif;
         font-weight: 300;
       }
     }
@@ -144,7 +144,7 @@
       background: #2e001f;
 
       .flexxy a p {
-        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+        font-family: Spartan, 'Helvetica Neue', Helvetica, sans-serif !important;
         color: white;
         border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
       }
@@ -154,7 +154,7 @@
       //
       h1 {
         font-size: clamp(0.85rem, 1.2rem, 1.4rem) !important;
-        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+        font-family: Spartan, 'Helvetica Neue', Helvetica, sans-serif !important;
         color: white;
         padding-top: 1em;
         font-weight: 600;
@@ -212,6 +212,7 @@
         text-transform: capitalize;
         color: black;
       }
+
       p {
         font-family: $font-groovy;
         font-size: 1em !important;
@@ -245,7 +246,7 @@
       box-shadow: none !important;
 
       p {
-        font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
+        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
         margin: 0rem auto;
       }
     }
@@ -261,11 +262,12 @@
       h1 {
         font-size: 1.75em;
         padding-top: 1em;
-        font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
+        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
         font-weight: 500;
       }
+
       p {
-        font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
+        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
         font-size: 1em !important;
       }
     }
@@ -295,20 +297,20 @@
       h1 {
         font-size: 1.5em;
         padding-top: 1em;
-        font-family: "Bodoni Moda", Times, serif !important;
+        font-family: 'Bodoni Moda', Times, serif !important;
         font-weight: 600;
         color: #01487f !important;
         text-transform: capitalize;
       }
 
       p {
-        font-family: "Bodoni Moda", Times, serif !important;
+        font-family: 'Bodoni Moda', Times, serif !important;
         font-size: 1em;
       }
     }
 
     .about p {
-      font-family: "Bodoni Moda", Times, serif !important;
+      font-family: 'Bodoni Moda', Times, serif !important;
       font-size: 1em;
     }
   }
@@ -342,7 +344,7 @@
     }
 
     .about > p {
-      font-family: Poppins, "Helvetica Neue", Arial, sans-serif !important;
+      font-family: Poppins, 'Helvetica Neue', Arial, sans-serif !important;
       font-size: 0.8em !important;
 
       @media (max-width: $breakThou) {
@@ -367,14 +369,14 @@
       h1 {
         font-size: 1.75em;
         padding-top: 1em;
-        font-family: Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
         font-weight: 300;
         text-transform: capitalize;
         color: black;
       }
 
       p {
-        font-family: Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
         color: black;
       }
     }
