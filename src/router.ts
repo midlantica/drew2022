@@ -48,12 +48,6 @@ const routes = [
           bodyClass: 'projects',
           title: 'Drew Harper &ndash; UI/UX Designer Projects',
           // transition: 'flash',
-          metaTags: [
-            // {
-            //   name: 'description',
-            //   content: 'The home page of our example app.',
-            // }
-          ],
         },
       },
       {
@@ -64,12 +58,6 @@ const routes = [
         meta: {
           bodyClass: 'skills',
           title: 'Drew Harper &ndash; UI/UX Designer Skills',
-          metaTags: [
-            // {
-            //   name: 'description',
-            //   content: 'The home page of our example app.',
-            // }
-          ],
         },
       },
       {
@@ -80,12 +68,6 @@ const routes = [
         meta: {
           bodyClass: 'about',
           title: 'Drew Harper &ndash; UI/UX Designer About',
-          metaTags: [
-            // {
-            //   name: 'description',
-            //   content: 'The home page of our example app.',
-            // }
-          ],
         },
       },
       {
@@ -95,15 +77,8 @@ const routes = [
         meta: {
           bodyClass: 'extras',
           title: 'Drew Harper &ndash; UI/UX Designer Projects',
-          metaTags: [
-            // {
-            //   name: 'description',
-            //   content: 'The home page of our example app.',
-            // }
-          ],
         },
       },
-      // ...other sub routes
     ],
   },
   // />> END MODERN
@@ -114,12 +89,6 @@ const routes = [
     meta: {
       bodyClass: 'bourbon',
       title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
     },
     children: [
       {
@@ -132,12 +101,6 @@ const routes = [
         meta: {
           bodyClass: 'bourbon extras',
           title: 'Drew Harper &ndash; UI/UX Designer',
-          metaTags: [
-            // {
-            //   name: 'description',
-            //   content: 'The home page of our example app.',
-            // }
-          ],
         },
       }
     ]
@@ -149,30 +112,15 @@ const routes = [
     meta: {
       bodyClass: 'groovy',
       title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
     },
     children: [
       {
         path: '/Groovy/Extras',
         name: 'ExtrasGroovy',
-        // route level code-splitting
-        // this generates a separate chunk (Extras.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import('./template-groovy/pages/Extras.vue'),
         meta: {
           bodyClass: 'groovy extras',
           title: 'Drew Harper &ndash; UI/UX Designer',
-          metaTags: [
-            // {
-            //   name: 'description',
-            //   content: 'The home page of our example app.',
-            // }
-          ],
         },
       },
     ]
@@ -184,30 +132,15 @@ const routes = [
     meta: {
       bodyClass: 'techy',
       title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
     },
     children: [
       {
         path: '/Techy/Extras',
         name: 'ExtrasTechy',
-        // route level code-splitting
-        // this generates a separate chunk (Extras.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import('./template-techy/pages/Extras.vue'),
         meta: {
           bodyClass: 'techy extras',
           title: 'Drew Harper &ndash; UI/UX Designer',
-          metaTags: [
-            // {
-            //   name: 'description',
-            //   content: 'The home page of our example app.',
-            // }
-          ],
         },
       },
     ]
@@ -219,30 +152,15 @@ const routes = [
     meta: {
       bodyClass: 'corp',
       title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
     },
     children: [
       {
         path: '/Corp/Extras',
         name: 'ExtrasCorp',
-        // route level code-splitting
-        // this generates a separate chunk (Extras.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import('./template-corp/pages/Extras.vue'),
         meta: {
           bodyClass: 'corp extras',
           title: 'Drew Harper &ndash; UI/UX Designer',
-          metaTags: [
-            // {
-            //   name: 'description',
-            //   content: 'The home page of our example app.',
-            // }
-          ],
         },
       },
     ]
@@ -254,30 +172,15 @@ const routes = [
     meta: {
       bodyClass: 'punk',
       title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {./template-modern/pages/ModernExtras.vue
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
     },
     children: [
       {
         path: '/Punk/Extras',
         name: 'ExtrasPunk',
-        // route level code-splitting
-        // this generates a separate chunk (Extras.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import('./template-punk/pages/Extras.vue'),
         meta: {
           bodyClass: 'punk extras',
           title: 'Drew Harper &ndash; UI/UX Designer',
-          metaTags: [
-            // {
-            //   name: 'description',
-            //   content: 'The home page of our example app.',
-            // }
-          ],
         },
       },
     ]
