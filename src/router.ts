@@ -121,6 +121,26 @@ const routes = [
         // }
       ],
     },
+    children: [
+      {
+        path: '/Bourbon/Extras',
+        name: 'ExtrasBourbon',
+        // route level code-splitting
+        // this generates a separate chunk (Extras.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('./template-bourbon/pages/Extras.vue'),
+        meta: {
+          bodyClass: 'bourbon extras',
+          title: 'Drew Harper &ndash; UI/UX Designer',
+          metaTags: [
+            // {
+            //   name: 'description',
+            //   content: 'The home page of our example app.',
+            // }
+          ],
+        },
+      }
+    ]
   },
   {
     path: '/Groovy',
@@ -136,6 +156,26 @@ const routes = [
         // }
       ],
     },
+    children: [
+      {
+        path: '/Groovy/Extras',
+        name: 'ExtrasGroovy',
+        // route level code-splitting
+        // this generates a separate chunk (Extras.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('./template-groovy/pages/Extras.vue'),
+        meta: {
+          bodyClass: 'groovy extras',
+          title: 'Drew Harper &ndash; UI/UX Designer',
+          metaTags: [
+            // {
+            //   name: 'description',
+            //   content: 'The home page of our example app.',
+            // }
+          ],
+        },
+      },
+    ]
   },
   {
     path: '/Techy',
@@ -151,6 +191,26 @@ const routes = [
         // }
       ],
     },
+    children: [
+      {
+        path: '/Techy/Extras',
+        name: 'ExtrasTechy',
+        // route level code-splitting
+        // this generates a separate chunk (Extras.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('./template-techy/pages/Extras.vue'),
+        meta: {
+          bodyClass: 'techy extras',
+          title: 'Drew Harper &ndash; UI/UX Designer',
+          metaTags: [
+            // {
+            //   name: 'description',
+            //   content: 'The home page of our example app.',
+            // }
+          ],
+        },
+      },
+    ]
   },
   {
     path: '/Corp',
@@ -166,6 +226,26 @@ const routes = [
         // }
       ],
     },
+    children: [
+      {
+        path: '/Corp/Extras',
+        name: 'ExtrasCorp',
+        // route level code-splitting
+        // this generates a separate chunk (Extras.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('./template-corp/pages/Extras.vue'),
+        meta: {
+          bodyClass: 'corp extras',
+          title: 'Drew Harper &ndash; UI/UX Designer',
+          metaTags: [
+            // {
+            //   name: 'description',
+            //   content: 'The home page of our example app.',
+            // }
+          ],
+        },
+      },
+    ]
   },
   {
     path: '/Punk',
@@ -181,96 +261,26 @@ const routes = [
         // }
       ],
     },
-  },
-  {
-    path: '/Bourbon/Extras',
-    name: 'ExtrasBourbon',
-    // route level code-splitting
-    // this generates a separate chunk (Extras.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('./template-bourbon/pages/Extras.vue'),
-    meta: {
-      bodyClass: 'bourbon extras',
-      title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
-    },
-  },
-  {
-    path: '/Corp/Extras',
-    name: 'ExtrasCorp',
-    // route level code-splitting
-    // this generates a separate chunk (Extras.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('./template-corp/pages/Extras.vue'),
-    meta: {
-      bodyClass: 'corp extras',
-      title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
-    },
-  },
-  {
-    path: '/Groovy/Extras',
-    name: 'ExtrasGroovy',
-    // route level code-splitting
-    // this generates a separate chunk (Extras.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('./template-groovy/pages/Extras.vue'),
-    meta: {
-      bodyClass: 'groovy extras',
-      title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
-    },
-  },
-  {
-    path: '/Punk/Extras',
-    name: 'ExtrasPunk',
-    // route level code-splitting
-    // this generates a separate chunk (Extras.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('./template-punk/pages/Extras.vue'),
-    meta: {
-      bodyClass: 'punk extras',
-      title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
-    },
-  },
-  {
-    path: '/Techy/Extras',
-    name: 'ExtrasTechy',
-    // route level code-splitting
-    // this generates a separate chunk (Extras.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('./template-techy/pages/Extras.vue'),
-    meta: {
-      bodyClass: 'techy extras',
-      title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
-    },
+    children: [
+      {
+        path: '/Punk/Extras',
+        name: 'ExtrasPunk',
+        // route level code-splitting
+        // this generates a separate chunk (Extras.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('./template-punk/pages/Extras.vue'),
+        meta: {
+          bodyClass: 'punk extras',
+          title: 'Drew Harper &ndash; UI/UX Designer',
+          metaTags: [
+            // {
+            //   name: 'description',
+            //   content: 'The home page of our example app.',
+            // }
+          ],
+        },
+      },
+    ]
   },
   {
     path: '/NotFound',
