@@ -1,5 +1,5 @@
 <template>
-  <transition name='bounce7' appear>
+  <transition name='bounce12' appear>
     <div class='quoteBlock'>
       <transition-group name='zoomQuote' tag='quotePad'>
         <div class='quotePad' v-bind:key="copy">
@@ -27,7 +27,7 @@
       slideNum.value = Math.floor(Math.random() * Math.floor(24)) + 1
       rolls.value.unshift(slideNum)
       // quoteViz.value = true
-    }, 6000)
+    }, 12000)
     // quoteViz.value = false
   }
 

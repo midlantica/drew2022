@@ -37,7 +37,8 @@ const routes = [
     },
     children: [
       {
-        path: '',
+        path: '/Modern',
+        name: 'Modern',
         redirect: '/Modern/Projects', // default child path
       },
       {

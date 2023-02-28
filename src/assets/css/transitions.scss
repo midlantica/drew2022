@@ -1,18 +1,22 @@
 $timeBase: 1;
+
 // bounce
 @keyframes bounceIn {
   0% {
     transform: scale(0);
     opacity: 0;
   }
+
   50% {
     transform: scale(0);
     opacity: 0;
   }
+
   95% {
     transform: scale(1.015);
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -22,77 +26,107 @@ $timeBase: 1;
 .bounce-enter-active {
   animation: bounceIn ($timeBase * .25 + s);
 }
+
 .bounce-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce2
 .bounce2-enter-active {
   animation: bounceIn ($timeBase * .75 + s);
 }
+
 .bounce2-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce3
 .bounce3-enter-active {
   animation: bounceIn ($timeBase * 1 + s);
 }
+
 .bounce3-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce4
 .bounce4-enter-active {
   animation: bounceIn ($timeBase * 1.25 + s);
 }
+
 .bounce4-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce5
 .bounce5-enter-active {
   animation: bounceIn($timeBase * 1.5 + s);
 }
+
 .bounce5-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce6
 .bounce6-enter-active {
   animation: bounceIn ($timeBase * 1.75 + s);
 }
+
 .bounce6-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce7
 .bounce7-enter-active {
   animation: bounceIn ($timeBase * 2 + s);
 }
+
 .bounce7-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce8
 .bounce8-enter-active {
   animation: bounceIn ($timeBase * 2.25 + s);
 }
+
 .bounce8-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce9
 .bounce9-enter-active {
   animation: bounceIn ($timeBase * 2.5 + s);
 }
+
 .bounce9-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce10
 .bounce10-enter-active {
   animation: bounceIn ($timeBase * 2.75 + s);
 }
+
 .bounce10-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
+
 // bounce11
 .bounce11-enter-active {
   animation: bounceIn ($timeBase * 3 + s);
 }
+
 .bounce11-leave-active {
+  animation: bounceIn ($timeBase * .25 + s) reverse;
+}
+
+// bounce12
+.bounce12-enter-active {
+  animation: bounceIn ($timeBase * 3.5 + s);
+}
+
+.bounce12-leave-active {
   animation: bounceIn ($timeBase * .25 + s) reverse;
 }
 
@@ -102,81 +136,96 @@ $timeBase: 1;
   transform: translateY(0px);
   animation: topDown .75s;
 }
+
 .topDown-leave-active {
   position: relative;
   transform: translateY(0px);
   animation: bottomUp 0.25s;
 }
+
 @keyframes topDown {
   0% {
     transform: translateY(-100px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0px);
     opacity: 1;
   }
 }
+
 // bottomUp
 .bottomUp-enter-active {
   position: relative;
   transform: translateY(0px);
   animation: bottomUp .5s;
 }
+
 .bottomUp-leave-active {
   position: relative;
   transform: translateY(0px);
   animation: bottomUp 0s;
 }
+
 @keyframes bottomUp {
   0% {
     transform: translateY(0px);
     opacity: 0;
     height: 0;
   }
+
   100% {
     transform: translateY(-100px);
     opacity: 1;
     // height: initial;
   }
 }
+
 // LeftIn
 .leftIn-enter-active {
   position: relative;
   transform: translateX(0px);
   animation: leftIn .5s;
 }
+
 .leftIn-leave-active {
   position: relative;
   transform: translateX(0px);
   animation: leftIn 0s;
 }
+
 @keyframes leftIn {
   0% {
     transform: translateX(-1000px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0px);
     opacity: 1;
   }
 }
+
 // RightIn
 .rightIn-enter-active {
   position: relative;
   transform: translateX(0px);
   animation: rightIn .5s;
 }
+
 .rightIn-leave-active {
   position: relative;
   transform: translateX(0px);
   animation: rightIn 0s;
 }
+
 @keyframes rightIn {
   0% {
     transform: translateX(1000px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0px);
     opacity: 1;
@@ -187,6 +236,7 @@ $timeBase: 1;
 .fade-enter-active {
   animation: fade 1s;
 }
+
 .fade-leave-active {
   animation: fade 0s reverse;
 }
@@ -195,6 +245,7 @@ $timeBase: 1;
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -204,15 +255,18 @@ $timeBase: 1;
   0% {
     transform: scale(1.0);
   }
+
   50% {
     transform: scale(0.90);
   }
+
   100% {
     transform: scale(1.15);
   }
 }
 
 @keyframes flash {
+
   from,
   50%,
   to {
@@ -224,19 +278,23 @@ $timeBase: 1;
     opacity: 0;
   }
 }
+
 .flash {
   animation-name: flash;
 }
 
 // fadey animation
-.fadey-enter-active, .fadey-leave-active {
+.fadey-enter-active,
+.fadey-leave-active {
   transition: all 0.8s ease;
   overflow: hidden;
   visibility: visible;
   opacity: 1;
   position: absolute;
 }
-.fadey-enter, .fadey-leave-to {
+
+.fadey-enter,
+.fadey-leave-to {
   opacity: 0;
   visibility: hidden;
 }
