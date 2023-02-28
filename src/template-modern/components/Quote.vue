@@ -1,73 +1,117 @@
 <template>
-  <transition name="bounce7" appear>
+  <transition name='bounce12' appear>
     <div class='quoteBlock'>
-      <div class='quotePad'>
-        <p>&ldquo;Everything should be made as simple as possible, but not simpler.&rdquo;</p>
-        <cite>&ndash; Albert Einstein</cite>
-      </div>
+      <transition-group name='zoomQuote' tag='quotePad'>
+        <div class='quotePad' v-bind:key="copy">
+          <p class='fadeTexter'>&ldquo;{{ quotes.copy[slideNum].quote }}&rdquo; <cite>&ndash; {{
+            quotes.copy[slideNum].author }}</cite></p>
+        </div>
+      </transition-group>
     </div>
   </transition>
 </template>
 
+<script lang="ts" setup>
+  import { inject, ref, onMounted } from 'vue'
+  const quotes: any = inject('quotes')
+
+  // let quotesLength: any = ref(quotes.length.value)
+  // const quoteViz = ref(false)
+  let slideNum: any = ref(1)
+  let rolls: any = ref([])
+  let copy: any = ref('copy')
+
+  function roll(): void {
+    setInterval((): void => {
+      slideNum.value = Math.floor(Math.random() * Math.floor(24)) + 1
+      rolls.value.unshift(slideNum)
+      // quoteViz.value = true
+    }, 12000)
+    // quoteViz.value = false
+  }
+
+  onMounted((): void => {
+    console.log(`She's a-runnin'!`)
+    roll()
+  })
+
+</script>
+
 <style lang='scss' scoped>
-  @import '../assets/css/modern-main.scss';
+@import '../assets/css/modern-main.scss';
 
-  .quoteBlock {
-    background: darken($accent-red, 10);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.75em 2em 1em;
+
+/* Zoom animation */
+.zoomQuote-enter-active,
+.zoomQuote-leave-active {
+  transition: transform 300ms ease;
+}
+
+.zoomQuote-enter-from,
+.zoomQuote-leave-to {
+  transform: scale(0.9);
+}
+
+.fadeTexter-enter-active {
+  transition: all 0.3s ease-out;
+  opacity: 1;
+}
+
+.fadeTexter-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  opacity: 1;
+}
+
+.fadeTexter-enter-from,
+.fadeTexter-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.quoteBlock {
+  // background: darken($accent-red, 10);
+  text-align: center;
+  max-width: 70%;
+  margin: 2rem auto 0;
+
+  p {
+    font-family: $font-head;
+    font-weight: 400;
+    font-size: .85em;
+    color: transparentize($ivory, .2);
     text-align: center;
-    border-radius: 2px;
-    @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
+    letter-spacing: -0rem;
+    letter-spacing: 0.07rem;
+    line-height: 1.5rem;
+    display: inline !important;
 
-    @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-      clear: both;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      grid-row-gap: 0em;
+    @media (max-width: $breakThou) {
+      // font-size: 1.25em;
     }
 
-    .quotePad {
-      text-align: center !important;
+    @media (max-width: $breakOne) {
+      // font-size: 1.2em;
     }
 
-    p {
-      font-size: 0.9em;
-      color: $ivory !important;
-      letter-spacing: 0.05em;
-      line-height: 1.5em;
-      text-align: center;
-
-      @media only screen and (min-device-width: 700px) and (max-device-width: $breakThou) {
-        font-size: 0.9em;
-      }
-
-      @media only screen and (min-device-width: 0px) and (max-device-width: 700px) {
-        font-size: 0.9em;
-      }
+    @media (max-width: $breakTwo) {
+      // font-size: 1em;
     }
 
-    cite {
-      font-family: $font-copy;
-      font-size: 0.9em;
-      color: $ivory;
-      font-style: italic;
-      // margin: 0 4em 0 0;
-      display: block;
-      text-align: right;
-      letter-spacing: 0.02em;
-
-      @media only screen and (min-device-width: 700px) and (max-device-width: $breakThou) {
-        // font-size: 1.5vw;
-        font-size: 0.9em;
-      }
-
-      @media only screen and (min-device-width: 0px) and (max-device-width: 700px) {
-        // font-size: 3vw;
-        font-size: 0.9em;
-      }
+    @media (max-width: $breakThree) {
+      font-size: .85em;
+      // line-height: 1.25em;
     }
   }
+
+  cite {
+    display: inline !important;
+    font-family: $font-copy;
+    color: $ivory;
+    // margin: 0 4em 0 0;
+    text-align: right;
+    letter-spacing: .08em;
+    font-style: normal;
+    white-space: pre;
+  }
+}
 </style>

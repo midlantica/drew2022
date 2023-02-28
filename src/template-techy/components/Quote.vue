@@ -107,7 +107,7 @@
     display: inline !important;
     font-family: $font-copy;
     color: $blueTech;
-    margin: 0 4em 0 0;
+    // margin: 0 4em 0 0;
     text-align: right;
     letter-spacing: .08em;
     font-style: normal;

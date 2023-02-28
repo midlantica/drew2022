@@ -26,7 +26,7 @@
       slideNum.value = Math.floor(Math.random() * Math.floor(24)) + 1
       rolls.value.unshift(slideNum)
       // quoteViz.value = true
-    }, 6000)
+    }, 12000)
     // quoteViz.value = false
   }
 
