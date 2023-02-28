@@ -25,19 +25,11 @@ const copy = reactive([
     author: `Albert Einstein`,
   },
   {
-    quote: `Everything should be made as simple as possible, but not simpler.`,
-    author: `Albert Einstein`,
-  },
-  {
     quote: `The answer to life is knowing when to stop`,
     author: `My Mom, when I was a kid :)`
   },
   {
     quote: `If you can't explain it simply, you don't understand it well enough.`,
-    author: `Albert Einstein`
-  },
-  {
-    quote: `Everything should be made as simple as possible, but not simpler.`,
     author: `Albert Einstein`
   },
   {
@@ -115,10 +107,6 @@ const copy = reactive([
   {
     quote: `The letter I have written today is longer than usual because I lacked the time to make it shorter`,
     author: `Blaise Pascal`
-  },
-  {
-    quote: `If we want users to like our software, we should design it to behave like a likeable person`,
-    author: `Alan Cooper`
   },
   {
     quote: `If there's a 'trick' to it, the UI is broken`,
