@@ -1,15 +1,29 @@
 // @ts-nocheck
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, useRoute } from 'vue-router'
+
 import ModernRoot from './template-modern/pages/ModernRoot.vue'
-import ModernExtras from './template-modern/pages/ModernExtras.vue'
 import ModernProjects from './template-modern/pages/ModernProjects.vue'
 import ModernSkills from './template-modern/pages/ModernSkills.vue'
 import ModernAbout from './template-modern/pages/ModernAbout.vue'
+import ModernExtras from './template-modern/pages/ModernExtras.vue'
+
 import HomeBourbon from './template-bourbon/pages/HomeBourbon.vue'
+import ExtrasBourbon from './template-bourbon/pages/ExtrasBourbon.vue'
+
 import HomeGroovy from './template-groovy/pages/HomeGroovy.vue'
+import ExtrasGroovy from './template-groovy/pages/ExtrasGroovy.vue'
+
 import HomeTechy from './template-techy/pages/HomeTechy.vue'
+import ExtrasTechy from './template-techy/pages/ExtrasTechy.vue'
+
 import HomeCorp from './template-corp/pages/HomeCorp.vue'
+import ExtrasCorp from './template-corp/pages/ExtrasCorp.vue'
+
 import HomePunk from './template-punk/pages/HomePunk.vue'
+import ExtrasPunk from './template-punk/pages/ExtrasPunk.vue'
+
+import ExtrasC from './components/ExtrasC.vue'
+
 import VueBodyClass from 'vue-body-class'
 
 const routes = [
@@ -37,7 +51,7 @@ const routes = [
     },
     children: [
       {
-        path: '/Modern',
+        path: 'Modern',
         name: 'Modern',
         redirect: '/Modern/Projects', // default child path
       },
@@ -74,15 +88,14 @@ const routes = [
       {
         path: 'Extras',
         name: 'ModernExtras',
-        component: ModernExtras,
+        component: ExtrasC,
         meta: {
           bodyClass: 'extras',
-          title: 'Drew Harper &ndash; UI/UX Designer Projects',
+          title: 'Drew Harper &ndash; UI/UX Designer Projects Extras',
         },
       },
     ],
   },
-  // />> END MODERN
   {
     path: '/Bourbon',
     name: 'Bourbon',
@@ -93,17 +106,14 @@ const routes = [
     },
     children: [
       {
-        path: '/Bourbon/Extras',
+        path: 'Extras',
         name: 'ExtrasBourbon',
-        // route level code-splitting
-        // this generates a separate chunk (Extras.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import('./template-bourbon/pages/Extras.vue'),
+        component: ExtrasC,
         meta: {
-          bodyClass: 'bourbon extras',
-          title: 'Drew Harper &ndash; UI/UX Designer',
+          bodyClass: 'extras',
+          title: 'Drew Harper &ndash; UI/UX Designer Extras',
         },
-      }
+      },
     ]
   },
   {
@@ -116,12 +126,12 @@ const routes = [
     },
     children: [
       {
-        path: '/Groovy/Extras',
+        path: 'Extras',
         name: 'ExtrasGroovy',
-        component: () => import('./template-groovy/pages/Extras.vue'),
+        component: ExtrasC,
         meta: {
-          bodyClass: 'groovy extras',
-          title: 'Drew Harper &ndash; UI/UX Designer',
+          bodyClass: 'extras',
+          title: 'Drew Harper &ndash; UI/UX Designer Extras',
         },
       },
     ]
@@ -136,12 +146,12 @@ const routes = [
     },
     children: [
       {
-        path: '/Techy/Extras',
+        path: 'Extras',
         name: 'ExtrasTechy',
-        component: () => import('./template-techy/pages/Extras.vue'),
+        component: ExtrasC,
         meta: {
-          bodyClass: 'techy extras',
-          title: 'Drew Harper &ndash; UI/UX Designer',
+          bodyClass: 'extras',
+          title: 'Drew Harper &ndash; UI/UX Designer Extras',
         },
       },
     ]
@@ -156,12 +166,12 @@ const routes = [
     },
     children: [
       {
-        path: '/Corp/Extras',
+        path: 'Extras',
         name: 'ExtrasCorp',
-        component: () => import('./template-corp/pages/Extras.vue'),
+        component: ExtrasC,
         meta: {
-          bodyClass: 'corp extras',
-          title: 'Drew Harper &ndash; UI/UX Designer',
+          bodyClass: 'extras',
+          title: 'Drew Harper &ndash; UI/UX Designer Extras',
         },
       },
     ]
@@ -176,12 +186,12 @@ const routes = [
     },
     children: [
       {
-        path: '/Punk/Extras',
+        path: 'Extras',
         name: 'ExtrasPunk',
-        component: () => import('./template-punk/pages/Extras.vue'),
+        component: ExtrasC,
         meta: {
-          bodyClass: 'punk extras',
-          title: 'Drew Harper &ndash; UI/UX Designer',
+          bodyClass: 'extras',
+          title: 'Drew Harper &ndash; UI/UX Designer Extras',
         },
       },
     ]

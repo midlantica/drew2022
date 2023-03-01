@@ -1,25 +1,34 @@
 <template>
   <transition name="bounce" appear>
     <div>
-      <header>
+      <!-- <header>
         <Navvy />
-      </header>
+      </header> -->
 
-      <ExtrasC />
+      <div class='backer'>
+        <ExtrasC />
+      </div>
 
-      <footer>
-        <Quotes />
-      </footer>
     </div>
   </transition>
 </template>
 
 <script setup>
   import Navvy from '../components/Navvy'
-  import Quotes from '../components/Quote'
   import ExtrasC from '../../components/ExtrasC'
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/corp-main.scss';
+@import '../assets/css/punk-main.scss';
+
+header,
+footer {
+  color: $ivory;
+  background: initial !important;
+  box-shadow: none;
+}
+
+.backer {
+  background: $ivory;
+}
 </style>
