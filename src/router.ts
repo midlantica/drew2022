@@ -29,16 +29,17 @@ import VueBodyClass from 'vue-body-class'
 const routes = [
   {
     path: '/',
-    redirect: 'Modern',
+    redirect: '/Modern/Projects',
   },
   {
     path: '/:pathMatch(.*)',
-    component: ModernRoot
+    redirect: '/Modern/Projects',
   },
   {
     path: '/Modern',
-    name: 'Modern',
+    name: 'ModernRoot',
     component: ModernRoot,
+    redirect: '/Modern/Projects',
     meta: {
       bodyClass: 'modern',
       title: 'Drew Harper &ndash; UI/UX Designer',
@@ -50,11 +51,6 @@ const routes = [
       ],
     },
     children: [
-      {
-        path: 'Modern',
-        name: 'Modern',
-        redirect: '/Modern/Projects', // default child path
-      },
       {
         path: 'Projects',
         name: 'ModernProjects',
@@ -104,17 +100,6 @@ const routes = [
       bodyClass: 'bourbon',
       title: 'Drew Harper &ndash; UI/UX Designer',
     },
-    children: [
-      {
-        path: 'Extras',
-        name: 'ExtrasBourbon',
-        component: ExtrasC,
-        meta: {
-          bodyClass: 'extras',
-          title: 'Drew Harper &ndash; UI/UX Designer Extras',
-        },
-      },
-    ]
   },
   {
     path: '/Groovy',
@@ -124,17 +109,6 @@ const routes = [
       bodyClass: 'groovy',
       title: 'Drew Harper &ndash; UI/UX Designer',
     },
-    children: [
-      {
-        path: 'Extras',
-        name: 'ExtrasGroovy',
-        component: ExtrasC,
-        meta: {
-          bodyClass: 'extras',
-          title: 'Drew Harper &ndash; UI/UX Designer Extras',
-        },
-      },
-    ]
   },
   {
     path: '/Techy',
@@ -144,17 +118,6 @@ const routes = [
       bodyClass: 'techy',
       title: 'Drew Harper &ndash; UI/UX Designer',
     },
-    children: [
-      {
-        path: 'Extras',
-        name: 'ExtrasTechy',
-        component: ExtrasC,
-        meta: {
-          bodyClass: 'extras',
-          title: 'Drew Harper &ndash; UI/UX Designer Extras',
-        },
-      },
-    ]
   },
   {
     path: '/Corp',
@@ -164,17 +127,6 @@ const routes = [
       bodyClass: 'corp',
       title: 'Drew Harper &ndash; UI/UX Designer',
     },
-    children: [
-      {
-        path: 'Extras',
-        name: 'ExtrasCorp',
-        component: ExtrasC,
-        meta: {
-          bodyClass: 'extras',
-          title: 'Drew Harper &ndash; UI/UX Designer Extras',
-        },
-      },
-    ]
   },
   {
     path: '/Punk',
@@ -184,17 +136,51 @@ const routes = [
       bodyClass: 'punk',
       title: 'Drew Harper &ndash; UI/UX Designer',
     },
-    children: [
-      {
-        path: 'Extras',
-        name: 'ExtrasPunk',
-        component: ExtrasC,
-        meta: {
-          bodyClass: 'extras',
-          title: 'Drew Harper &ndash; UI/UX Designer Extras',
-        },
-      },
-    ]
+  },
+  {
+    path: '/Bourbon/Extras',
+    name: 'ExtrasBourbon',
+    component: ExtrasC,
+    meta: {
+      bodyClass: 'bourbon extras',
+      title: 'Drew Harper &ndash; UI/UX Designer Extras',
+    },
+  },
+  {
+    path: '/Groovy/Extras',
+    name: 'ExtrasGroovy',
+    component: ExtrasC,
+    meta: {
+      bodyClass: 'groovy extras',
+      title: 'Drew Harper &ndash; UI/UX Designer Extras',
+    },
+  },
+  {
+    path: '/Techy/Extras',
+    name: 'ExtrasTechy',
+    component: ExtrasC,
+    meta: {
+      bodyClass: 'techy extras',
+      title: 'Drew Harper &ndash; UI/UX Designer Extras',
+    },
+  },
+  {
+    path: '/Corp/Extras',
+    name: 'ExtrasCorp',
+    component: ExtrasC,
+    meta: {
+      bodyClass: 'corp extras',
+      title: 'Drew Harper &ndash; UI/UX Designer Extras',
+    },
+  },
+  {
+    path: '/Punk/Extras',
+    name: 'ExtrasPunk',
+    component: ExtrasC,
+    meta: {
+      bodyClass: 'punk extras',
+      title: 'Drew Harper &ndash; UI/UX Designer Extras',
+    },
   },
   {
     path: '/NotFound',
