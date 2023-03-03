@@ -1,97 +1,145 @@
 <template>
   <div class="skillsGrid">
-    <Popper v-for="item in poppers" trigger="hover">
-      <component :is="item[0]" class="icon {{item[1]}}" @mouseover="hover = true" @mouseleave="hover = false"
+    <Popper trigger="hover">
+      <iconUiux class="icon uiux" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ uiux }}
+      </template>
+    </Popper>
+    <Popper trigger="hover">
+      <iconFigma class="icon figma" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ figma }}
+      </template>
+    </Popper>
+    <Popper trigger="hover">
+      <iconHtml5 class="icon html5" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ html5 }}
+      </template>
+    </Popper>
+    <Popper trigger="hover">
+      <iconCss3 class="icon css3" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ css3 }}
+      </template>
+    </Popper>
+    <!--  -->
+    <Popper trigger="hover">
+      <iconJs class="icon js" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ js }}
+      </template>
+    </Popper>
+    <Popper trigger="hover">
+      <iconSass class="icon sass" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ sass }}
+      </template>
+    </Popper>
+    <Popper trigger="hover">
+      <iconVue class="icon vue" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ vue }}
+      </template>
+    </Popper>
+    <Popper trigger="hover">
+      <iconSvg class="icon svg" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ svg }}
+      </template>
+    </Popper>
+    <!--  -->
+    <Popper trigger="hover">
+      <iconVSCode class="icon vsCode" @mouseover="hover = true" @mouseleave="hover = false"
         :class="{ active: hover }" />
       <template #content class="popper">
-        {{ item[2] }}
+        {{ vsCode }}
+      </template>
+    </Popper>
+    <Popper trigger="hover">
+      <iconNuxt class="icon nuxt" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ nuxt }}
+      </template>
+    </Popper>
+    <Popper trigger="hover">
+      <iconSketch class="icon sketch" @mouseover="hover = true" @mouseleave="hover = false"
+        :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ sketch }}
+      </template>
+    </Popper>
+    <Popper trigger="hover">
+      <iconChelsea class="icon chelsea" @mouseover="hover = true" @mouseleave="hover = false"
+        :class="{ active: hover }" />
+      <template #content class="popper">
+        {{ chelsea }}
       </template>
     </Popper>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ref } from "vue"
-  import Popper from "vue3-popper"
+import { ref } from "vue"
+import Popper from "vue3-popper"
 
-  import iconUiux from "./Icons/iconUiux.vue"
-  import iconHtml5 from "./Icons/iconHtml5.vue"
-  import iconCss3 from "./Icons/iconCss3.vue"
-  import iconJs from "./Icons/iconJs.vue"
-  import iconSketch from "./Icons/iconSketch.vue"
-  import iconSass from "./Icons/iconSass.vue"
-  import iconVue from "./Icons/iconVue.vue"
-  import iconSvg from "./Icons/iconSvg.vue"
-  import iconVSCode from "./Icons/iconVscode.vue"
-  import iconFigma from "./Icons/iconFigma.vue"
-  import iconNuxt from "./Icons/iconNuxt.vue"
-  import iconChelsea from "./Icons/iconChelsea.vue"
+import iconUiux from "./Icons/iconUiux.vue"
+import iconHtml5 from "./Icons/iconHtml5.vue"
+import iconCss3 from "./Icons/iconCss3.vue"
+import iconJs from "./Icons/iconJs.vue"
+import iconSketch from "./Icons/iconSketch.vue"
+import iconSass from "./Icons/iconSass.vue"
+import iconVue from "./Icons/iconVue.vue"
+import iconSvg from "./Icons/iconSvg.vue"
+import iconVSCode from "./Icons/iconVscode.vue"
+import iconFigma from "./Icons/iconFigma.vue"
+import iconNuxt from "./Icons/iconNuxt.vue"
+import iconChelsea from "./Icons/iconChelsea.vue"
 
-  const hover = ref(false)
-
-  const poppers = ref([
-    [
-      iconUiux,
-      'uiux',
-      'UX Design is my first love. Humility before the User. Crack the flow!'
-    ],
-    [
-      iconHtml5,
-      'html5',
-      `HTML5: the bones of the Internet. As few divs and spans as possible if you please.`
-    ],
-    [
-      iconCss3,
-      'css3',
-      `CSS3: Engineers just love CSS haha! Let me do that for you 🙂 I enjoy its declarative cascading infuriating novelty.`
-    ],
-    [
-      iconJs,
-      'js',
-      `JavaScript: I design, do all my HTML & CSS, I'm still mastering JS. Continuous learning, Love me some Vue 💚, like this site`
-    ],
-    [
-      iconSketch,
-      'sass',
-      `SASS has made CSS so much more fun to use. CSS's new --vars make CSS more robust, but there's a long way to go.`
-    ],
-    [
-      iconSass,
-      'vue',
-      `Vue.js is my favorite JS framework, a great balance of Angular's ease and React's abilities.`
-    ],
-    [
-      iconVue,
-      'nuxt',
-      `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`
-    ],
-    [
-      iconSvg,
-      'vsCode',
-      `VS Code: Used to be into Sublime Text but I'm all VS Code these days. MS better late than never.`
-    ],
-    [
-      iconVSCode,
-      'sketch',
-      `Sketch used to be the king of UX prototyping, now there are many alternatives.`
-    ],
-    [
-      iconFigma,
-      'figma',
-      `Figma is the new king of UX prototyping. It ain't Illustrator but UX rarely requires such sophistication.`
-    ],
-    [
-      iconNuxt,
-      'svg',
-      `SVG: Vector is best because it scales and rasters don't, and it's editable, but it still cannot replace a photograph.`
-    ],
-    [
-      iconChelsea,
-      'chelsea',
-      `Blue is the color! Chelsea is the name! We're all together... and We're the only team in London with the European Cup! x2! 💙 `
-    ],
-  ])
-
+const hover = ref(false)
+// const(false)
+// const placemNt = ref('top')
+// const offsetY = ref(25)
+// const arrow = ref(true)
+// const openDelay = ref(0)
+// const interactive = ref(true)
+const uiux = ref(
+  `UX Design is my first love. Humility before the User. Crack the flow!`
+)
+const html5 = ref(
+  `HTML5: the bones of the Internet. As few divs and spans as possible if you please.`
+)
+const css3 = ref(
+  `CSS3: Engineers just love CSS haha! Let me do that for you 🙂 I enjoy its declarative cascading infuriating novelty.`
+)
+const js = ref(
+  `JavaScript: I design, do all my HTML & CSS, I'm still mastering JS. Continuous learning, Love me some Vue 💚, like this site`
+)
+const sass = ref(
+  `SASS has made CSS so much more fun to use. CSS's new --vars make CSS more robust, but there's a long way to go.`
+)
+const vue = ref(
+  `Vue.js is my favorite JS framework, a great balance of Angular's ease and React's abilities.`
+)
+const nuxt = ref(
+  `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`
+)
+const vsCode = ref(
+  `VS Code: Used to be into Sublime Text but I'm all VS Code these days. MS better late than never.`
+)
+const sketch = ref(
+  `Sketch used to be the king of UX prototyping, now there are many alternatives.`
+)
+const figma = ref(
+  `Figma is the new king of UX prototyping. It ain't Illustrator but UX rarely requires such sophistication.`
+)
+const svg = ref(
+  `SVG: Vector is best because it scales and rasters don't, and it's editable, but it still cannot replace a photograph.`
+)
+const chelsea = ref(
+  `Blue is the color! Chelsea is the name! We're all together... and We're the only team in London with the European Cup! x2! 💙 `
+)
 </script>
 
 <style lang="scss" scoped>
