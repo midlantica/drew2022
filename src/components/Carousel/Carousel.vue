@@ -8,13 +8,15 @@
     </div>
 
     <component :is='selectedView'>
-      <div v-for="item in projects" class='miniGallery'>
-        <a @click='selectCarousel(item[1], item[2])'>
-          <div class='box {{item[3}}'>
-            <component :is='item[0]' />
-            <p>UI/UX Design</p>
-          </div>
-        </a>
+      <div class='miniGallery'>
+        <div v-for="item in projects">
+          <a @click='selectCarousel(item[1], item[2])'>
+            <div class='box {{item[3}}'>
+              <component :is='item[0]' />
+              <p>{{ item[2] }}</p>
+            </div>
+          </a>
+        </div>
       </div>
     </component>
   </div>
@@ -22,7 +24,7 @@
 
 <script setup lang="ts">
 
-  import { ref, shallowRef } from 'vue'
+  import { ref, defineAsyncComponent, shallowRef } from 'vue'
 
   import IconUiux from '../../components/Carousel/icons/iconUiux.vue'
   import IconMobile from '../../components/Carousel/icons/iconMobile.vue'
@@ -31,29 +33,22 @@
   import IconPrint from '../../components/Carousel/icons/iconPrint.vue'
   import IconMisc from '../../components/Carousel/icons/iconMisc.vue'
 
-  import uiux01 from '../../components/Carousel/uiux01.vue'
-  import mobile02 from '../../components/Carousel/mobile02.vue'
-  import kiosk03 from '../../components/Carousel/kiosk03.vue'
-  import graphics04 from '../../components/Carousel/graphics04.vue'
-  import print05 from '../../components/Carousel/print05.vue'
-  import misc06 from '../../components/Carousel/misc06.vue'
+  const uiux01 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/uiux01.vue'))
+  const mobile02 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/mobile02.vue'))
+  const kiosk03 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/kiosk03.vue'))
+  const graphics04 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/graphics04.vue'))
+  const print05 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/print05.vue'))
+  const misc06 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/misc06.vue'))
 
   let backButtonView = ref(false)
   let selectedView = shallowRef('Carousel')
-  let selectedViewTxt = ref('Select one...')
+  let selectedViewTxt = shallowRef('Select one...')
 
-  let uiux01Txt = shallowRef(`UI/UX`)
-  let mobile02Txt = shallowRef(`Mobile`)
-  let kiosk03Txt = shallowRef(`Kiosk`)
-  let graphics04Txt = shallowRef(`Graphics`)
-  let print05Txt = shallowRef(`Print`)
-  let misc06Txt = shallowRef(`Misc`)
-
-  const projects = ref([
+  const projects = shallowRef([
     [
       IconUiux,
       uiux01,
-      `UI/UX`,
+      `UI/UX Design`,
       'Uiux'
     ],
     [
@@ -83,7 +78,7 @@
     [
       IconMisc,
       misc06,
-      `Misc`,
+      `Misc.`,
       'Misc'
     ],
   ])
@@ -273,6 +268,8 @@ body.bourbon .projectHead,
 body.bourbon .box p {
   font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
   // color: $black !important;
+  text-align: center;
+
 }
 
 body.bourbon .box {
@@ -288,6 +285,8 @@ body.groovy .projectHead,
 body.groovy .box p {
   font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
   // color: red !important;
+  text-align: center;
+
 }
 
 body.groovy .box {
@@ -299,6 +298,8 @@ body.techy .projectHead,
 body.techy .box p {
   font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
   // color: red !important;
+  text-align: center;
+
 }
 
 body.techy .box {
@@ -311,6 +312,8 @@ body.corp .box p {
   font-family: 'Bodoni Moda', Times, serif !important;
   letter-spacing: 0em;
   // color: red !important;
+  text-align: center;
+
 }
 
 body.corp .box {
@@ -321,7 +324,7 @@ body.corp .VueCarousel.druCarousel {
   box-shadow: none;
 }
 
-body.corp .miniGallery a .box {
+body.corp .miniGallery div a .box {
   border: none;
 
   &:hover {
@@ -372,6 +375,8 @@ body.modern .box p {
   letter-spacing: 0em !important;
   color: white !important;
   text-transform: lowercase !important;
+  text-align: center;
+
 
   a {
     color: white !important;
@@ -401,7 +406,7 @@ body.corp .VueCarousel.druCarousel {
 body.punk .projectHead,
 body.punk .box p {
   font-family: Poppins, 'Helvetica Neue', Arial, sans-serif !important;
-
+  text-align: center;
 }
 
 body.punk .box {
@@ -417,7 +422,7 @@ body.punk .box {
   margin: auto;
   // color: red !important;
 
-  a {
+  div a {
     cursor: pointer;
   }
 }
@@ -433,11 +438,12 @@ body.punk .box {
   width: 100%;
   // margin-top: .3rem;
 
-  a {
+  div {
     flex-grow: 1;
     width: 125px;
     text-decoration: none;
     cursor: pointer;
+    display: inline-block;
 
     &:hover {
       color: $ivory;
@@ -445,11 +451,17 @@ body.punk .box {
 
       p {
         color: $black !important;
+        text-align: center;
+        text-align: center;
 
         &:hover {
           color: $black !important;
         }
       }
+    }
+
+    a {
+      display: flex;
     }
 
     .box {
@@ -537,6 +549,8 @@ body.punk .box {
         text-align: center;
         letter-spacing: 0.05em;
         margin-bottom: 0.5em;
+        text-align: center;
+
 
         &:hover {
           color: $ivory;
@@ -572,7 +586,8 @@ body.punk .box {
 
 $carouselFade: 1;
 
-.miniGallery a {
+.miniGallery div {
+  text-align: center;
 
   //
   &:nth-of-type(1) {
@@ -607,7 +622,7 @@ $ruby: hsla(340, 76%, 48%, 1);
 $modernCol: $white;
 
 // >>>>>>
-.modern .miniGallery a .box {
+.modern .miniGallery div a .box {
   background: none !important;
   // border: 1px solid #1b171c !important;
   border: 1px solid transparent !important;

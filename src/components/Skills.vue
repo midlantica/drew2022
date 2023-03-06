@@ -1,8 +1,8 @@
 <template>
   <div class="skillsGrid">
     <Popper v-for="item in poppers" trigger="hover">
-      <component :is="item[0]" class="icon {{item[1]}}" @mouseover="hover = true" @mouseleave="hover = false"
-        :class="{ active: hover }" />
+      <component :is="item[0]" class="icon {{item[1]}} { active: hover }" @mouseover="hover = true"
+        @mouseleave="hover = false" />
       <template #content class="popper">
         {{ item[2] }}
       </template>
@@ -11,25 +11,25 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from "vue"
+  import { ref, defineAsyncComponent, shallowRef } from "vue"
   import Popper from "vue3-popper"
 
-  import iconUiux from "./Icons/iconUiux.vue"
-  import iconHtml5 from "./Icons/iconHtml5.vue"
-  import iconCss3 from "./Icons/iconCss3.vue"
-  import iconJs from "./Icons/iconJs.vue"
-  import iconSketch from "./Icons/iconSketch.vue"
-  import iconSass from "./Icons/iconSass.vue"
-  import iconVue from "./Icons/iconVue.vue"
-  import iconSvg from "./Icons/iconSvg.vue"
-  import iconVSCode from "./Icons/iconVscode.vue"
-  import iconFigma from "./Icons/iconFigma.vue"
-  import iconNuxt from "./Icons/iconNuxt.vue"
-  import iconChelsea from "./Icons/iconChelsea.vue"
+  const iconUiux = defineAsyncComponent((): Promise<any> => import('./Icons/iconUiux.vue'))
+  const iconHtml5 = defineAsyncComponent((): Promise<any> => import('./Icons/iconHtml5.vue'))
+  const iconCss3 = defineAsyncComponent((): Promise<any> => import('./Icons/iconCss3.vue'))
+  const iconJs = defineAsyncComponent((): Promise<any> => import('./Icons/iconJs.vue'))
+  const iconSketch = defineAsyncComponent((): Promise<any> => import('./Icons/iconSketch.vue'))
+  const iconSass = defineAsyncComponent((): Promise<any> => import('./Icons/iconSass.vue'))
+  const iconVue = defineAsyncComponent((): Promise<any> => import('./Icons/iconVue.vue'))
+  const iconSvg = defineAsyncComponent((): Promise<any> => import('./Icons/iconSvg.vue'))
+  const iconVSCode = defineAsyncComponent((): Promise<any> => import('./Icons/iconVscode.vue'))
+  const iconFigma = defineAsyncComponent((): Promise<any> => import('./Icons/iconFigma.vue'))
+  const iconNuxt = defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue'))
+  const iconChelsea = defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue'))
 
   const hover = ref(false)
 
-  const poppers = ref([
+  const poppers = shallowRef([
     [
       iconUiux,
       'uiux',
@@ -51,27 +51,27 @@
       `JavaScript: I design, do all my HTML & CSS, I'm still mastering JS. Continuous learning, Love me some Vue 💚, like this site`
     ],
     [
-      iconSketch,
+      iconSass,
       'sass',
       `SASS has made CSS so much more fun to use. CSS's new --vars make CSS more robust, but there's a long way to go.`
     ],
     [
-      iconSass,
+      iconVue,
       'vue',
       `Vue.js is my favorite JS framework, a great balance of Angular's ease and React's abilities.`
     ],
     [
-      iconVue,
+      iconNuxt,
       'nuxt',
       `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`
     ],
     [
-      iconSvg,
+      iconVSCode,
       'vsCode',
       `VS Code: Used to be into Sublime Text but I'm all VS Code these days. MS better late than never.`
     ],
     [
-      iconVSCode,
+      iconSketch,
       'sketch',
       `Sketch used to be the king of UX prototyping, now there are many alternatives.`
     ],
@@ -81,7 +81,7 @@
       `Figma is the new king of UX prototyping. It ain't Illustrator but UX rarely requires such sophistication.`
     ],
     [
-      iconNuxt,
+      iconSvg,
       'svg',
       `SVG: Vector is best because it scales and rasters don't, and it's editable, but it still cannot replace a photograph.`
     ],
