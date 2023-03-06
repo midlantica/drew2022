@@ -62,7 +62,11 @@
   opacity: 1;
 }
 
-.fadeTexter-enter-from,
+.fadeTexter-enter-from {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
 .fadeTexter-leave-to {
   transform: translateX(20px);
   opacity: 0;
