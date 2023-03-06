@@ -1,19 +1,15 @@
 <template>
+  <header>
+    <Navvy />
+  </header>
+
   <transition name="bounce2" appear>
-    <div>
-
-      <header>
-        <Navvy />
-      </header>
-
-      <ExtrasC />
-
-      <footer>
-        <NavvyEmpty />
-      </footer>
-
-    </div>
+    <ExtrasC />
   </transition>
+
+  <footer>
+    <NavvyEmpty />
+  </footer>
 </template>
 
 <script setup lang="ts">

@@ -1,17 +1,15 @@
 <template>
-  <transition name="bounce" appear>
-    <div>
-      <!-- <header>
-        <Navvy />
-      </header> -->
+  <header>
+    <Navvy />
+  </header>
 
-      <ExtrasC />
-
-      <!-- <footer>
-        <Quotes />
-      </footer> -->
-    </div>
+  <transition name="bounce2" appear>
+    <ExtrasC />
   </transition>
+
+  <footer>
+    <NavvyEmpty />
+  </footer>
 </template>
 
 <script setup>

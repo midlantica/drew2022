@@ -1,19 +1,26 @@
 <template>
-  <transition name="bounce" appear>
-    <div>
-      <!-- <header>
-        <Navvy />
-      </header> -->
-
-      <div class='backer'>
-        <ExtrasC />
-      </div>
-
+  <header>
+    <Navvy />
+    <div class="flexxy">
+      <span class="headerCopy">{{ store.copy.uiuxDesigner }}/{{ store.copy.vizDesigner }}</span>
+      <a class='headerCopy resume rOne' href="resume/drew_harper_resume_portfolio.pdf" target="_BLANK">PDF Resume</a>
     </div>
+
+  </header>
+
+  <transition name="bounce2" appear>
+    <ExtrasC />
   </transition>
+
+  <footer>
+    <Navvy />
+  </footer>
 </template>
 
 <script setup>
+  import { provide } from 'vue'
+  import store from '../../store/index'
+
   import Navvy from '../components/Navvy'
   import ExtrasC from '../../components/ExtrasC'
 </script>
@@ -30,5 +37,26 @@ footer {
 
 .backer {
   background: $ivory;
+}
+
+.flexxy {
+  width: 100%;
+  display: flex;
+  gap: 0 2rem;
+  place-content: center;
+  justify-content: center;
+  // position: absolute;
+  // z-index: 100;
+  // top: .5rem;
+  // left: 1rem;
+}
+
+.headerCopy {
+  color: black;
+  font-family: $font;
+
+  a {
+    color: black;
+  }
 }
 </style>

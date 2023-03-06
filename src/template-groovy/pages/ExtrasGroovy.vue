@@ -1,17 +1,15 @@
 <template>
-  <transition name="fade" appear>
-    <div>
-      <!-- <header>
-        <NavvyHead/>
-      </header> -->
+  <header>
+    <NavvyHead />
+  </header>
 
-      <ExtrasC />
-
-      <!-- <footer>
-        <Footer />
-      </footer> -->
-    </div>
+  <transition name="bounce2" appear>
+    <ExtrasC />
   </transition>
+
+  <footer>
+    <NavvyEmpty />
+  </footer>
 </template>
 
 <script setup>

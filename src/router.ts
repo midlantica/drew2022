@@ -140,7 +140,7 @@ const routes = [
   {
     path: '/Bourbon/Extras',
     name: 'ExtrasBourbon',
-    component: ExtrasC,
+    component: ExtrasBourbon,
     meta: {
       bodyClass: 'bourbon extras',
       title: 'Drew Harper &ndash; UI/UX Designer Extras',
@@ -149,7 +149,7 @@ const routes = [
   {
     path: '/Groovy/Extras',
     name: 'ExtrasGroovy',
-    component: ExtrasC,
+    component: ExtrasGroovy,
     meta: {
       bodyClass: 'groovy extras',
       title: 'Drew Harper &ndash; UI/UX Designer Extras',
@@ -158,7 +158,7 @@ const routes = [
   {
     path: '/Techy/Extras',
     name: 'ExtrasTechy',
-    component: ExtrasC,
+    component: ExtrasTechy,
     meta: {
       bodyClass: 'techy extras',
       title: 'Drew Harper &ndash; UI/UX Designer Extras',
@@ -167,7 +167,7 @@ const routes = [
   {
     path: '/Corp/Extras',
     name: 'ExtrasCorp',
-    component: ExtrasC,
+    component: ExtrasCorp,
     meta: {
       bodyClass: 'corp extras',
       title: 'Drew Harper &ndash; UI/UX Designer Extras',
@@ -176,7 +176,7 @@ const routes = [
   {
     path: '/Punk/Extras',
     name: 'ExtrasPunk',
-    component: ExtrasC,
+    component: ExtrasPunk,
     meta: {
       bodyClass: 'punk extras',
       title: 'Drew Harper &ndash; UI/UX Designer Extras',
