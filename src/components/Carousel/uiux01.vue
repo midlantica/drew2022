@@ -11,11 +11,11 @@
 </template>
 
 <script setup lang="ts">
-  // import { ref } from "vue";
+  import { shallowRef } from "vue"
   import { VueperSlides, VueperSlide } from "vueperslides"
   import "vueperslides/dist/vueperslides.css"
 
-  let slides = [
+  let slides = shallowRef([
     {
       image: "/img/portfolio/01_uiux/Zander_screenshot_v1.png",
     },
@@ -85,7 +85,7 @@
     {
       image: "/img/portfolio/01_uiux/tinsley_website.jpg",
     },
-  ]
+  ])
 </script>
 
 <style lang="scss">

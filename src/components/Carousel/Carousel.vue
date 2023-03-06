@@ -11,7 +11,7 @@
       <div class='miniGallery'>
         <div v-for="item in projects">
           <a @click='selectCarousel(item[1], item[2])'>
-            <div class='box {{item[3}}'>
+            <div class='box {{item[3]}}'>
               <component :is='item[0]' />
               <p>{{ item[2] }}</p>
             </div>
@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 
-  import { ref, defineAsyncComponent, shallowRef } from 'vue'
+  import { ref, shallowRef } from 'vue'
 
   import IconUiux from '../../components/Carousel/icons/iconUiux.vue'
   import IconMobile from '../../components/Carousel/icons/iconMobile.vue'
@@ -33,16 +33,17 @@
   import IconPrint from '../../components/Carousel/icons/iconPrint.vue'
   import IconMisc from '../../components/Carousel/icons/iconMisc.vue'
 
-  const uiux01 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/uiux01.vue'))
-  const mobile02 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/mobile02.vue'))
-  const kiosk03 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/kiosk03.vue'))
-  const graphics04 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/graphics04.vue'))
-  const print05 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/print05.vue'))
-  const misc06 = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/misc06.vue'))
+  import uiux01 from '../../components/Carousel/uiux01.vue'
+  import mobile02 from '../../components/Carousel/mobile02.vue'
+  import kiosk03 from '../../components/Carousel/kiosk03.vue'
+  import graphics04 from '../../components/Carousel/graphics04.vue'
+  import print05 from '../../components/Carousel/print05.vue'
+  import misc06 from '../../components/Carousel/misc06.vue'
 
-  let backButtonView = ref(false)
+  // let item = ref()
+  let backButtonView = shallowRef(false)
   let selectedView = shallowRef('Carousel')
-  let selectedViewTxt = shallowRef('Select one...')
+  let selectedViewTxt = ref('Select one...')
 
   const projects = shallowRef([
     [
@@ -83,13 +84,13 @@
     ],
   ])
 
-  function selectCarousel(i, x) {
+  function selectCarousel(i, x): void {
     selectedView.value = i
     selectedViewTxt.value = x
     backButtonView.value = true
   }
 
-  function viewCarousel() {
+  function viewCarousel(): void {
     selectedView.value = `Carousel`
     selectedViewTxt.value = `Select one...`
     backButtonView.value = false
@@ -478,7 +479,7 @@ body.punk .box {
       margin: auto;
       //
       padding-bottom: .5rem;
-      background: hsl(0, 0%, 97%);
+      background: hsl(0, 0%, 100%);
       border: 1px solid transparentize(grey, 0.85) !important;
 
       @media (max-width: $breakThou) {
