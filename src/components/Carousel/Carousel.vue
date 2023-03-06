@@ -41,7 +41,7 @@
   import misc06 from '../../components/Carousel/misc06.vue'
 
   // let item = ref()
-  let backButtonView = shallowRef(false)
+  let backButtonView = ref(false)
   let selectedView = shallowRef('Carousel')
   let selectedViewTxt = ref('Select one...')
 
@@ -84,13 +84,13 @@
     ],
   ])
 
-  function selectCarousel(i, x): void {
+  const selectCarousel = (i, x): void => {
     selectedView.value = i
     selectedViewTxt.value = x
     backButtonView.value = true
   }
 
-  function viewCarousel(): void {
+  const viewCarousel = (): void => {
     selectedView.value = `Carousel`
     selectedViewTxt.value = `Select one...`
     backButtonView.value = false
