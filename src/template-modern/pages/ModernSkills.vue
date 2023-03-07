@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
   import Skills from '../../components/Skills.vue'
-  import Quotes from '../components/Quote.vue'
+  import Quotes from '../../components/Quote.vue'
 </script>
 
 <style lang='scss' scoped>
@@ -131,4 +131,5 @@
 /* .fade-leave-active below version 2.1.8 */
   {
   opacity: 0;
-}</style>
+}
+</style>

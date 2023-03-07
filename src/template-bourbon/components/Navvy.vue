@@ -142,7 +142,7 @@ section.jobDesc {
 
     @media (max-width: $breakTwo) {
       display: inline-block;
-      font-size: 1.85em !important;
+      font-size: 1.775em !important;
       margin-top: -3px;
 
       &:nth-child(2) {
@@ -223,7 +223,7 @@ section.contact {
 
     @media (max-width: $breakThree) {
       justify-content: center;
-      font-size: 1.25rem !important;
+      font-size: 1.15rem !important;
       letter-spacing: 0.09em !important;
       line-height: 1.25em;
       margin-bottom: -4px;

@@ -10,6 +10,7 @@
 @import '_drewShake';
 @import 'transitions';
 // @import 'tooltip';
+@import 'quotes';
 @import 'tryout';
 
 * {
@@ -25,7 +26,8 @@ body {
   margin: 0;
 }
 
-html, html a {
+html,
+html a {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
