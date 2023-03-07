@@ -23,15 +23,14 @@
 </template>
 
 <script setup lang="ts">
-
   import { ref, shallowRef } from 'vue'
 
-  import IconUiux from '../../components/Carousel/icons/iconUiux.svg?component'
-  import IconMobile from '../../components/Carousel/icons/iconMobile.svg?component'
-  import IconKiosk from '../../components/Carousel/icons/iconKiosk.svg?component'
-  import IconGraphics from '../../components/Carousel/icons/iconGraphics.svg?component'
-  import IconPrint from '../../components/Carousel/icons/iconPrint.svg?component'
-  import IconMisc from '../../components/Carousel/icons/iconMisc.svg?component'
+  import IconUiux from '../../components/Carousel/icons/iconUiux.vue'
+  import IconMobile from '../../components/Carousel/icons/iconMobile.vue'
+  import IconKiosk from '../../components/Carousel/icons/iconKiosk.vue'
+  import IconGraphics from '../../components/Carousel/icons/iconGraphics.vue'
+  import IconPrint from '../../components/Carousel/icons/iconPrint.vue'
+  import IconMisc from '../../components/Carousel/icons/iconMisc.vue'
 
   import uiux01 from '../../components/Carousel/uiux01.vue'
   import mobile02 from '../../components/Carousel/mobile02.vue'
@@ -471,14 +470,14 @@ body.punk .box {
       flex-wrap: nowrap;
       align-items: center;
       align-content: center;
-      justify-content: flex-end;
+      justify-content: center;
       //
       transition-duration: 1s;
       text-align: center;
       box-shadow: 0px 2px 2px -3px black;
       margin: auto;
       //
-      padding-bottom: .5rem;
+      // padding-bottom: .5rem;
       background: hsl(0, 0%, 100%);
       border: 1px solid transparentize(grey, 0.85) !important;
 
@@ -648,12 +647,13 @@ $modernCol: $white;
 
   .iconSVG {
     position: relative !important;
-    top: 10px !important;
+    // top: 10px !important;
     transition: ease-out;
+    width: initial !important;
 
     &:hover {
       position: relative !important;
-      top: 10px !important;
+      // top: 10px !important;
       transition: ease-out;
     }
 
@@ -683,14 +683,14 @@ $modernCol: $white;
 
     p {
       position: relative;
-      top: 0px !important;
+      // top: 0px !important;
       transition: ease-out;
       // color: $ruby !important;
 
       &:hover {
         color: $white !important;
         position: relative;
-        top: 0px !important;
+        // top: 0px !important;
         transition: ease-out;
       }
     }

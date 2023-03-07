@@ -27,8 +27,13 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "src/**/*.svg"
   ],
   "exclude": [
     "node_modules"
+  ],
+  "types": [
+    "vite-svg-loader",
+    "vite/client"
   ]
 }
