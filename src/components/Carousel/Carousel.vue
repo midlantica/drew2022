@@ -11,7 +11,7 @@
       <div class='miniGallery'>
         <div v-for="item in projects">
           <a @click='selectCarousel(item[1], item[2])'>
-            <div class='box {{item[3]}}'>
+            <div class='box' :class='item[3]'>
               <component :is='item[0]' />
               <p>{{ item[2] }}</p>
             </div>
@@ -26,12 +26,12 @@
 
   import { ref, shallowRef } from 'vue'
 
-  import IconUiux from '../../components/Carousel/icons/iconUiux.vue'
-  import IconMobile from '../../components/Carousel/icons/iconMobile.vue'
-  import IconKiosk from '../../components/Carousel/icons/iconKiosk.vue'
-  import IconGraphics from '../../components/Carousel/icons/iconGraphics.vue'
-  import IconPrint from '../../components/Carousel/icons/iconPrint.vue'
-  import IconMisc from '../../components/Carousel/icons/iconMisc.vue'
+  import IconUiux from '../../components/Carousel/icons/iconUiux.svg?component'
+  import IconMobile from '../../components/Carousel/icons/iconMobile.svg?component'
+  import IconKiosk from '../../components/Carousel/icons/iconKiosk.svg?component'
+  import IconGraphics from '../../components/Carousel/icons/iconGraphics.svg?component'
+  import IconPrint from '../../components/Carousel/icons/iconPrint.svg?component'
+  import IconMisc from '../../components/Carousel/icons/iconMisc.svg?component'
 
   import uiux01 from '../../components/Carousel/uiux01.vue'
   import mobile02 from '../../components/Carousel/mobile02.vue'
@@ -338,7 +338,7 @@ body.corp .miniGallery div a .box {
 
 body.modern .box {
   width: 130px !important;
-  height: 140px !important;
+  height: 181px !important;
 }
 
 body.modern .projectBox {

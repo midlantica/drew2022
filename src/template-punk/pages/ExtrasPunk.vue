@@ -13,7 +13,7 @@
   </transition>
 
   <footer>
-    <Navvy />
+    <!-- <Navvy /> -->
   </footer>
 </template>
 
