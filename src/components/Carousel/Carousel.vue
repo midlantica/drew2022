@@ -337,7 +337,7 @@ body.corp .miniGallery div a .box {
 
 body.modern .box {
   width: 130px !important;
-  height: 181px !important;
+  height: 170px !important;
 }
 
 body.modern .projectBox {

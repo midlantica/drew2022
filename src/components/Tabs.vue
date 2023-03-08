@@ -1,17 +1,9 @@
 <template>
   <div class="tabs">
-    <router-link :to="{ name: 'ModernProjects' }" class="modern">{{
-      store.copy.modern
-    }}</router-link>
-    <router-link :to="{ name: 'Bourbon' }" class="bourbon">{{
-      store.copy.bourbon
-    }}</router-link>
-    <router-link :to="{ name: 'Groovy' }" class="groovy">{{
-      store.copy.groovy
-    }}</router-link>
-    <router-link :to="{ name: 'Techy' }" class="techy">{{
-      store.copy.techy
-    }}</router-link>
+    <router-link :to="{ name: 'ModernProjects' }" class="modern">{{ store.copy.modern }}</router-link>
+    <router-link :to="{ name: 'Bourbon' }" class="bourbon">{{ store.copy.bourbon }}</router-link>
+    <router-link :to="{ name: 'Groovy' }" class="groovy">{{ store.copy.groovy }}</router-link>
+    <router-link :to="{ name: 'Techy' }" class="techy">{{ store.copy.techy }}</router-link>
     <router-link :to="{ name: 'Corp' }" class="corp">{{ store.copy.corp }}</router-link>
     <router-link :to="{ name: 'Punk' }" class="punk">{{ store.copy.punk }}</router-link>
   </div>
@@ -82,29 +74,37 @@ body.bourbon .tabs>a.bourbon {
 }
 
 body.groovy .tabs>a.groovy {
-  color: transparentize($ivory, 0);
-  text-shadow: 0px 0px 1px black;
-  background: darken(#ff3940, 30);
-  box-shadow: 0px -2px 6px black inset;
+  // color: transparentize($ivory, 0);
+  color: $black;
+  text-shadow: 0px 0px 1px hsla(0, 0%, 0%, 0.25);
+  // box-shadow: 0px -2px 6px black inset;
+  // background: darken(#ff3940, 30);
+  background: linear-gradient($groovy-aqua-dk 0%,
+      $groovy-aqua-dk 20%,
+      $groovy-yellow-dk 20%,
+      $groovy-yellow-dk 50%,
+      $groovy-orange-dk 50%,
+      $groovy-orange-dk 75%,
+      $groovy-red-dk 75%,
+      $groovy-red-dk 100%);
 
   &:hover {
     color: $black;
     text-shadow: 0px 0px 1px black;
     // border-bottom: 1px solid $ivory;
-    background: linear-gradient( // 0 - 10%
-        $groovy-aqua 0%,
+    background: linear-gradient($groovy-aqua 0%,
         $groovy-aqua 20%,
-        // 10% - 50%
         $groovy-yellow 20%,
         $groovy-yellow 50%,
-        // 50% - 75%
         $groovy-orange 50%,
         $groovy-orange 75%,
-        // 75% - 100%
         $groovy-red 75%,
-        $groovy-red 100%);
+        $groovy-red 90% black 90% black 100%);
   }
+
 }
+
+
 
 body.techy .tabs>a.techy {
   color: transparentize($ivory, 0.1);
@@ -152,7 +152,7 @@ body .tabs {
 
     &:hover {
       color: $black;
-      background: darken(#ff3940, 30);
+      // background: darken(#ff3940, 30);
       background: linear-gradient( // 0 - 10%
           $groovy-aqua-dk 0%,
           $groovy-aqua-dk 20%,
