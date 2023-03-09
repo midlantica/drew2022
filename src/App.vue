@@ -10,13 +10,14 @@
 </template>
 
 <script lang="ts" setup>
-  import { provide } from 'vue'
+  import { provide, ref } from 'vue'
   import store from './store/index'
   import quotes from './store/quotes'
   import Tabs from './components/Tabs.vue'
 
   provide('store', store) as any
   provide('quotes', quotes) as any
+
 </script>
 
 <style lang="scss">
