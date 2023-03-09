@@ -1,14 +1,19 @@
 <template>
   <transition name="modal-fade">
-    <div class="modalBg" v-if="isModalOpen">
-      <div class="modal">
-        <div class="closeBtn" @close="isModalOpen = false">X</div>
-        <div class="modalInner">
+    <div class="modalWrapper" v-if="isModalOpen">
+      <div class="modalBg">
+        <div class="modal">
+          <div class="closeBtn" @click="closeModal">X</div>
+          <div class="modalInner">
+            <div>
+              <component :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }" @mouseleave="hover = false" />
+            </div>
+            <div>
+              <h4>{{ modelItem[2] }}</h4>
+              <p>{{ modelItem[3] }}</p>
+            </div>
 
-          <div>{{ icon }}</div>
-          <h3>{{ title }}</h3>
-          <p>{{ text }}</p>
-
+          </div>
         </div>
       </div>
     </div>
@@ -16,7 +21,7 @@
 </template>
 
 <script setup>
-  import { ref, defineProps } from "vue"
+  import { ref } from "vue"
 
   defineProps({
     icon: String,

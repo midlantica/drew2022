@@ -2,21 +2,23 @@
   <div class="skillsGrid">
     <div v-for="item in skills" key="index">
       <component :is="item[0]" class="icon {{item[1]}} { active: hover }" @mouseleave="hover = false"
-        @click="showModal(item)" />
+        @click="showModal(item[0], item[1], item[2], item[3])" />
     </div>
 
-    <div class="modalBg" v-if="isModalOpen">
-      <div class="modal">
-        <div class="closeBtn" @click="closeModal">X</div>
-        <div class="modalInner">
-          <div>
-            <component :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }" @mouseleave="hover = false" />
-          </div>
-          <div>
-            <h4>{{ modelItem[2] }}</h4>
-            <p>{{ modelItem[3] }}</p>
-          </div>
+    <div class="modalWrapper" v-if="isModalOpen">
+      <div class="modalBg">
+        <div class="modal">
+          <div class="closeBtn" @click="closeModal">X</div>
+          <div class="modalInner">
+            <div>
+              <component :is="icon" class="icon {{title}} { active: hover }" @mouseleave="hover = false" />
+            </div>
+            <div>
+              <h4>{{ title }}</h4>
+              <p>{{ text }}</p>
+            </div>
 
+          </div>
         </div>
       </div>
     </div>
@@ -25,32 +27,42 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, shallowRef } from "vue"
+  import { ref, defineAsyncComponent, shallowRef } from "vue"
 
-  import iconUiux from './Icons/iconUiux.vue'
-  import iconHtml5 from './Icons/iconHtml5.vue'
-  import iconCss3 from './Icons/iconCss3.vue'
-  import iconJs from './Icons/iconJs.vue'
-  import iconSketch from './Icons/iconSketch.vue'
-  import iconSass from './Icons/iconSass.vue'
-  import iconVue from './Icons/iconVue.vue'
-  import iconSvg from './Icons/iconSvg.vue'
-  import iconVSCode from './Icons/iconVscode.vue'
-  import iconFigma from './Icons/iconFigma.vue'
-  import iconNuxt from './Icons/iconNuxt.vue'
-  import iconChelsea from './Icons/iconChelsea.vue'
+  const iconUiux = defineAsyncComponent((): Promise<any> => import('./Icons/iconUiux.vue'))
+  const iconHtml5 = defineAsyncComponent((): Promise<any> => import('./Icons/iconHtml5.vue'))
+  const iconCss3 = defineAsyncComponent((): Promise<any> => import('./Icons/iconCss3.vue'))
+  const iconJs = defineAsyncComponent((): Promise<any> => import('./Icons/iconJs.vue'))
+  const iconSketch = defineAsyncComponent((): Promise<any> => import('./Icons/iconSketch.vue'))
+  const iconSass = defineAsyncComponent((): Promise<any> => import('./Icons/iconSass.vue'))
+  const iconVue = defineAsyncComponent((): Promise<any> => import('./Icons/iconVue.vue'))
+  const iconSvg = defineAsyncComponent((): Promise<any> => import('./Icons/iconSvg.vue'))
+  const iconVSCode = defineAsyncComponent((): Promise<any> => import('./Icons/iconVscode.vue'))
+  const iconFigma = defineAsyncComponent((): Promise<any> => import('./Icons/iconFigma.vue'))
+  const iconNuxt = defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue'))
+  const iconChelsea = defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue'))
 
   const hover = ref(false)
 
+  // let item = ''
   const isModalOpen = ref(false)
-  let modelItem = ref([])
+  let icon = ''
+  let title = ''
+  let text = ''
+  let open = ''
 
-  function showModal(item): void {
-    modelItem.value = item
+  function showModal(icon, title, text, open): void {
+    // console.log("showModal() just ran: ", icon, title, text, open)
+    // icon.value, title.value, text.value, open.value
+    icon = icon.value
+    title = title.value
+    text = text.value
+    open = open.value
     isModalOpen.value = true
   }
 
   function closeModal(): any {
+    console.log("closeModal(item) just ran: ")
     isModalOpen.value = false
   }
 
@@ -58,74 +70,74 @@
     [
       iconUiux,
       'uiux',
-      'UI/UX Design',
       `UX Design is my first love. Humility before the User. Crack the flow!`,
+      'openUiux'
     ],
     [
       iconHtml5,
       'html5',
-      'Html 5',
       `HTML5: the bones of the Internet. As few divs and spans as possible if you please.`,
+      'openHtml5'
     ],
     [
       iconCss3,
       'css3',
-      'CSS 3',
       `CSS3: Engineers just love CSS haha! Let me do that for you 🙂 I enjoy its declarative cascading infuriating novelty.`,
+      'openCss3'
     ],
     [
       iconJs,
       'js',
-      'JavaScript',
       `JavaScript: I design, do all my HTML & CSS, I'm still mastering JS. Continuous learning, Love me some Vue 💚, like this site`,
+      'openJs'
     ],
     [
       iconSass,
       'sass',
-      'SASS',
       `SASS has made CSS so much more fun to use. CSS's new --vars make CSS more robust, but there's a long way to go.`,
+      'openSass'
     ],
     [
       iconVue,
       'vue',
-      'Vue',
       `Vue.js is my favorite JS framework, a great balance of Angular's ease and React's abilities.`,
+      'openVue'
     ],
     [
       iconNuxt,
       'nuxt',
-      'Nuxt',
       `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`,
+      'openNuxt'
     ],
     [
       iconVSCode,
       'vsCode',
-      'VS Code',
       `VS Code: Used to be into Sublime Text but I'm all VS Code these days. MS better late than never.`,
+      'openVSCode'
     ],
     [
       iconSketch,
       'sketch',
-      'Sketch',
       `Sketch used to be the king of UX prototyping, now there are many alternatives.`,
+      'openSketch'
     ],
     [
       iconFigma,
       'figma',
-      'Figma',
       `Figma is the new king of UX prototyping. It ain't Illustrator but UX rarely requires such sophistication.`,
+      'openFigma'
     ],
     [
       iconSvg,
       'svg',
-      'SVG',
       `SVG: Vector is best because it scales and rasters don't, and it's editable, but it still cannot replace a photograph.`,
+      'openSvg'
     ],
     [
       iconChelsea,
       'chelsea',
-      'Chelsea FC',
       `Blue is the color! Chelsea is the name! We're all together... and We're the only team in London with the European Cup! x2! 💙 `,
+      'openChelsea'
     ],
   ])
 
@@ -134,47 +146,6 @@
 <style lang="scss" scoped>
 @import "../template-modern/assets/css/modern-main.scss";
 @import "../assets/css/modal.scss";
-
-.modalBg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: hsla(0, 0%, 0%, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 200;
-}
-
-.modal {
-  position: relative;
-  width: 400px;
-  background-color: white;
-  // padding: 1rem 1rem 1rem 0rem;
-  border-radius: .15rem;
-  box-shadow: 0px 3px 5px 0px hsla(0, 0%, 0%, 0.25);
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: black;
-    margin-top: .25rem;
-  }
-}
-
-.modalInner {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-grow: 3 1;
-  margin: 1rem 2rem;
-}
 
 .skillsGrid {
   display: grid;
