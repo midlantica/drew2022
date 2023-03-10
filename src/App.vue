@@ -17,7 +17,6 @@
 
   provide('store', store) as any
   provide('quotes', quotes) as any
-
 </script>
 
 <style lang="scss">
@@ -30,7 +29,7 @@ $backBlack: #1f1f1f;
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  position: relative;
+  position: relative !important;
   //
 }
 
