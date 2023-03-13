@@ -27,21 +27,23 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, shallowRef } from "vue"
+  import { ref, markRaw, defineAsyncComponent } from "vue"
 
-  import iconUiux from './Icons/iconUiux.vue'
-  import iconHtml5 from './Icons/iconHtml5.vue'
-  import iconCss3 from './Icons/iconCss3.vue'
-  import iconJs from './Icons/iconJs.vue'
-  import iconSketch from './Icons/iconSketch.vue'
-  import iconSass from './Icons/iconSass.vue'
-  import iconVue from './Icons/iconVue.vue'
-  import iconSvg from './Icons/iconSvg.vue'
-  import iconVSCode from './Icons/iconVscode.vue'
-  import iconFigma from './Icons/iconFigma.vue'
-  import iconNuxt from './Icons/iconNuxt.vue'
-  import iconChelsea from './Icons/iconChelsea.vue'
   import xOut from './Icons/iconXout.vue'
+
+  const iconUiux = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconUiux.vue')))
+  const iconHtml5 = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconHtml5.vue')))
+  const iconCss3 = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconCss3.vue')))
+  const iconJs = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconJs.vue')))
+  const iconSketch = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSketch.vue')))
+  const iconSass = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSass.vue')))
+  const iconVue = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconVue.vue')))
+  const iconSvg = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSvg.vue')))
+  const iconVSCode = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconVscode.vue')))
+  const iconFigma = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconFigma.vue')))
+  const iconNuxt = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue')))
+  const iconChelsea = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue')))
+
 
   const hover = ref(false)
 
@@ -57,7 +59,7 @@
     isModalOpen.value = false
   }
 
-  const skills = shallowRef([
+  const skills = markRaw([
     [
       iconUiux,
       'uiux',
@@ -152,17 +154,21 @@
   align-items: center;
   z-index: 100000;
   margin: auto;
-  transition: 0.25s ease-in;
-  transform: translate(0px, 0px) rotate(0deg) !important;
+  // transition: 20s ease-in;
+  // transform: translate(0px, 0px) rotate(0deg) !important;
+  animation: fade .25s;
 
   .modal {
     position: relative;
-    max-width: 300px;
+    // max-width: 300px;
+    width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));
     // min-width: 80%;
     // margin: auto 20%;
     // margin-bottom: 4rem;
     background: white;
-    background: linear-gradient(90deg, hsl(0, 0%, 100%) 5%, hsl(185, 58%, 95%) 48%, hsl(186, 43%, 90%) 48%, hsl(185, 50%, 95%) 70%, hsl(0, 0%, 100%) 95%);
+    background: linear-gradient(180deg,
+        hsl(0, 0%, 100%) 0%,
+        hsl(186, 43%, 92%) 100%);
     // background: linear-gradient(180deg, white 0%, white 75%, rgba(230, 251, 255, 1) 100%);
 
     // padding: 1rem 1rem 1rem 0rem;
@@ -171,46 +177,20 @@
 
     .closeBtn {
       position: absolute;
-      // display: inline-block;
       top: -10px;
       right: -10px;
       background-color: transparent;
       color: hsla(0, 0%, 0%, 50%);
       border: none;
       cursor: pointer;
-      // font-size: 2rem;
-      // line-height: .6;
       background: #ffffff;
-      // padding: 0.2rem 0.4rem 0.5rem;
       border-radius: 20px;
       width: 40px;
       height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      &:hover {
-        stroke: hsla(0, 0%, 0%, 1);
-        // background: #fff4cb;
-      }
-
-      &:hover {
-        cursor: pointer;
-      }
-
-    }
-
-    .xOut {
-      // stroke: red;
-
-      path {
-        stroke: yellow !important;
-        // stroke: hsla(0, 0%, 0%, .5);
-      }
-
-      &:hover path {
-        stroke: hsla(0, 0%, 0%, 1) !important;
-      }
+      cursor: pointer;
 
     }
 
@@ -269,9 +249,6 @@
 
   }
 }
-
-
-
 
 .skillsGrid {
   display: grid;
@@ -472,7 +449,7 @@ body.corp .skillsGrid {
 body.punk .skillsGrid {
   margin: 0.5em auto 0em;
   transition: 0.25s ease-in;
-  transform: rotate(-0.5deg);
+  // transform: rotate(-0.5deg);
   background: transparentize(rgba(0, 140, 0, 0.829), 0.5) !important;
 
   @media (min-width: 1026px) {

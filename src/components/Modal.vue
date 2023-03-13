@@ -34,12 +34,12 @@
   const isModalOpen = ref(false)
   let modelItem = ref([])
 
-  function showModal (item): void {
+  function showModal (item) {
     modelItem.value = item
     isModalOpen.value = true
   }
 
-  function closeModal (): any {
+  function closeModal () {
     isModalOpen.value = false
   }
 

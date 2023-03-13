@@ -61,7 +61,8 @@
 
 body.modern .tabs a.modern {
   color: $ivory;
-  background: hsla(340, 76%, 48%, 1);
+  // background: hsla(340, 76%, 48%, 1);
+  background: linear-gradient(top-down hsla(340, 76%, 48%, 1), rgb(156, 21, 66));
   text-shadow: 0px 0px 1px black;
   box-shadow: 0px -2px 6px black inset;
 }
@@ -122,8 +123,9 @@ body.corp .tabs>a.corp {
 
 body.punk .tabs>a.punk {
   color: transparentize($ivory, 0.1);
-  background: darken(#ff4bf5, 30);
-  box-shadow: 0px -2px 6px black inset;
+  background: hsla(0, 100%, 50%, 0.85);
+  // box-shadow: 0px -2px 6px black inset;
+  filter: saturate(40) opacity(0.7);
 }
 
 body .tabs {
