@@ -6,11 +6,12 @@
         <component :is="Component" />
       </transition>
     </router-view>
+    <teleport to="#modal"></teleport>
   </div>
 </template>
 
 <script lang="ts" setup>
-  import { provide } from 'vue'
+  import { provide, ref } from 'vue'
   import store from './store/index'
   import quotes from './store/quotes'
   import Tabs from './components/Tabs.vue'
@@ -29,7 +30,7 @@ $backBlack: #1f1f1f;
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  position: relative;
+  position: relative !important;
   //
 }
 

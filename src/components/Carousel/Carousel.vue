@@ -395,7 +395,7 @@ body.punk .miniGallery {
 
 body.modern .miniGallery {
   background: none;
-  gap: .75rem;
+  gap: 1rem;
 }
 
 body.corp .VueCarousel.druCarousel {
@@ -632,6 +632,7 @@ $modernCol: $white;
     color: $white !important;
     font-size: .85rem;
     transition: ease-out;
+    margin: 4px 0 0;
 
     &:hover {
       color: $accent-red !important;

@@ -2,145 +2,142 @@
   <div class="skillsGrid">
     <div v-for="item in skills" key="index">
       <component :is="item[0]" class="icon {{item[1]}} { active: hover }" @mouseleave="hover = false"
-        @click="showModal(item)" />
+        @click="showModal(item[0], item[1], item[2], item[3])" />
     </div>
 
-    <Teleport to="#modal">
-      <transition name="modal-fade">
-        <div class="modalBg" v-if="isModalOpen">
-          <div class="modal" ref="modal">
-            <div class="closeBtn" @click="closeModal">
-              <xOut />
+    <div class="modalWrapper" v-if="isModalOpen">
+      <div class="modalBg">
+        <div class="modal">
+          <div class="closeBtn" @click="closeModal">X</div>
+          <div class="modalInner">
+            <div>
+              <component :is="icon" class="icon {{title}} { active: hover }" @mouseleave="hover = false" />
             </div>
-            <div class="modalInner">
-              <div class="icon">
-                <component :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }"
-                  @mouseleave="hover = false" />
-              </div>
-              <div class="content">
-                <h4>{{ modelItem[2] }}</h4>
-                <p>{{ modelItem[3] }}</p>
-              </div>
+            <div>
+              <h4>{{ title }}</h4>
+              <p>{{ text }}</p>
+            </div>
 
-            </div>
           </div>
         </div>
-      </transition>
-    </Teleport>
+      </div>
+    </div>
 
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ref, markRaw, defineAsyncComponent } from "vue"
-  import { onClickOutside } from '@vueuse/core'
+  import { ref, defineAsyncComponent, shallowRef } from "vue"
 
-  import xOut from './Icons/iconXout.vue'
-
-  const iconUiux = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconUiux.vue')))
-  const iconHtml5 = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconHtml5.vue')))
-  const iconCss3 = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconCss3.vue')))
-  const iconJs = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconJs.vue')))
-  const iconSketch = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSketch.vue')))
-  const iconSass = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSass.vue')))
-  const iconVue = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconVue.vue')))
-  const iconSvg = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSvg.vue')))
-  const iconVSCode = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconVscode.vue')))
-  const iconFigma = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconFigma.vue')))
-  const iconNuxt = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue')))
-  const iconChelsea = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue')))
-
-  const modal = ref(null)
+  const iconUiux = defineAsyncComponent((): Promise<any> => import('./Icons/iconUiux.vue'))
+  const iconHtml5 = defineAsyncComponent((): Promise<any> => import('./Icons/iconHtml5.vue'))
+  const iconCss3 = defineAsyncComponent((): Promise<any> => import('./Icons/iconCss3.vue'))
+  const iconJs = defineAsyncComponent((): Promise<any> => import('./Icons/iconJs.vue'))
+  const iconSketch = defineAsyncComponent((): Promise<any> => import('./Icons/iconSketch.vue'))
+  const iconSass = defineAsyncComponent((): Promise<any> => import('./Icons/iconSass.vue'))
+  const iconVue = defineAsyncComponent((): Promise<any> => import('./Icons/iconVue.vue'))
+  const iconSvg = defineAsyncComponent((): Promise<any> => import('./Icons/iconSvg.vue'))
+  const iconVSCode = defineAsyncComponent((): Promise<any> => import('./Icons/iconVscode.vue'))
+  const iconFigma = defineAsyncComponent((): Promise<any> => import('./Icons/iconFigma.vue'))
+  const iconNuxt = defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue'))
+  const iconChelsea = defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue'))
 
   const hover = ref(false)
 
-  let modelItem = ref([])
+  // let item = ''
+  const isModalOpen = ref(false)
+  let icon = ''
+  let title = ''
+  let text = ''
+  let open = ''
 
-  function showModal(item): void {
-    modelItem.value = item
+  function showModal(icon, title, text, open): void {
+    // console.log("showModal() just ran: ", icon, title, text, open)
+    // icon.value, title.value, text.value, open.value
+    icon = icon.value
+    title = title.value
+    text = text.value
+    open = open.value
     isModalOpen.value = true
   }
 
   function closeModal(): any {
+    console.log("closeModal(item) just ran: ")
     isModalOpen.value = false
   }
 
-  const isModalOpen = ref(false)
-
-  onClickOutside(modal, (): boolean => (isModalOpen.value = false))
-
-  const skills = markRaw([
+  const skills = shallowRef([
     [
       iconUiux,
       'uiux',
-      'UI/UX Design',
       `UX Design is my first love. Humility before the User. Crack the flow!`,
+      'openUiux'
     ],
     [
       iconHtml5,
       'html5',
-      'Html 5',
       `HTML5: the bones of the Internet. As few divs and spans as possible if you please.`,
+      'openHtml5'
     ],
     [
       iconCss3,
       'css3',
-      'CSS 3',
       `CSS3: Engineers just love CSS haha! Let me do that for you 🙂 I enjoy its declarative cascading infuriating novelty.`,
+      'openCss3'
     ],
     [
       iconJs,
       'js',
-      'JavaScript',
       `JavaScript: I design, do all my HTML & CSS, I'm still mastering JS. Continuous learning, Love me some Vue 💚, like this site`,
+      'openJs'
     ],
     [
       iconSass,
       'sass',
-      'SASS',
       `SASS has made CSS so much more fun to use. CSS's new --vars make CSS more robust, but there's a long way to go.`,
+      'openSass'
     ],
     [
       iconVue,
       'vue',
-      'Vue',
       `Vue.js is my favorite JS framework, a great balance of Angular's ease and React's abilities.`,
+      'openVue'
     ],
     [
       iconNuxt,
       'nuxt',
-      'Nuxt',
       `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`,
+      'openNuxt'
     ],
     [
       iconVSCode,
       'vsCode',
-      'VS Code',
       `VS Code: Used to be into Sublime Text but I'm all VS Code these days. MS better late than never.`,
+      'openVSCode'
     ],
     [
       iconSketch,
       'sketch',
-      'Sketch',
       `Sketch used to be the king of UX prototyping, now there are many alternatives.`,
+      'openSketch'
     ],
     [
       iconFigma,
       'figma',
-      'Figma',
-      `Figma is the king of UX prototyping. It ain't Illustrator but UX rarely requires so many features.`,
+      `Figma is the new king of UX prototyping. It ain't Illustrator but UX rarely requires such sophistication.`,
+      'openFigma'
     ],
     [
       iconSvg,
       'svg',
-      'SVG',
       `SVG: Vector is best because it scales and rasters don't, and it's editable, but it still cannot replace a photograph.`,
+      'openSvg'
     ],
     [
       iconChelsea,
       'chelsea',
-      'Chelsea FC',
       `Blue is the color! Chelsea is the name! We're all together... and We're the only team in London with the European Cup! x2! 💙 `,
+      'openChelsea'
     ],
   ])
 
@@ -148,117 +145,7 @@
 
 <style lang="scss" scoped>
 @import "../template-modern/assets/css/modern-main.scss";
-// @import "../assets/css/modal.scss";
-
-.modalBg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: hsla(0, 0%, 0%, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100000;
-  margin: auto;
-  // transition: 20s ease-in;
-  // transform: translate(0px, 0px) rotate(0deg) !important;
-  animation: fade .25s;
-
-  .modal {
-    position: relative;
-    // max-width: 300px;
-    width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));
-    // min-width: 80%;
-    // margin: auto 20%;
-    // margin-bottom: 4rem;
-    background: white;
-    background: linear-gradient(180deg,
-        hsl(0, 0%, 100%) 0%,
-        hsl(186, 43%, 92%) 100%);
-    // background: linear-gradient(180deg, white 0%, white 75%, rgba(230, 251, 255, 1) 100%);
-
-    // padding: 1rem 1rem 1rem 0rem;
-    border-radius: 20px;
-    box-shadow: 0px 6px 10px 0px hsl(0deg 0% 0% / 30%);
-
-    .closeBtn {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background-color: transparent;
-      color: hsla(0, 0%, 0%, 50%);
-      border: none;
-      cursor: pointer;
-      background: #ffffff;
-      border-radius: 20px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      color: hsla(0, 0%, 0%, 0.85);
-      margin-top: .25rem;
-      text-align: center;
-    }
-
-    h4 {
-      font-size: 1.2rem;
-      letter-spacing: 0rem;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-
-    .modalInner {
-      // width: 100%;
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      margin: 1rem 2rem 1.5rem;
-      justify-content: center;
-      align-items: center;
-
-      .icon {
-        // display: inline-block;
-        // margin-left: -1rem;
-        // flex-shrink: 1;
-        align-self: center;
-
-        svg {
-          // display: block;
-          width: 180px !important;
-          margin-right: -1.4rem !important;
-          margin-left: -2rem !important;
-          margin-bottom: -.5rem !important;
-        }
-      }
-
-      .content {
-        display: inline;
-        flex-shrink: 1;
-      }
-
-    }
-
-  }
-}
+@import "../assets/css/modal.scss";
 
 .skillsGrid {
   display: grid;
@@ -459,7 +346,7 @@ body.corp .skillsGrid {
 body.punk .skillsGrid {
   margin: 0.5em auto 0em;
   transition: 0.25s ease-in;
-  // transform: rotate(-0.5deg);
+  transform: rotate(-0.5deg);
   background: transparentize(rgba(0, 140, 0, 0.829), 0.5) !important;
 
   @media (min-width: 1026px) {
@@ -482,16 +369,5 @@ body.punk .skillsGrid {
     width: 88px;
   }
 
-}
-
-.modal-fade-enter-active,
-.modal-fade-leave-active {
-  transition: all .5s ease;
-  // transform: scale(1.1);
-}
-
-.modal-fade-enter-from,
-.modal-fade-leave-to {
-  opacity: 0;
 }
 </style>

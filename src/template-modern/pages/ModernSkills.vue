@@ -73,53 +73,6 @@
   position: relative;
 }
 
-.skillsBubble {
-  width: 45%;
-  // background: transparent;
-  background: hsla(340, 100%, 50%, 0.25);
-  // background: transparentize($ruby, .2);
-  margin: auto;
-  padding: .75rem 1.25rem;
-  border: 1px solid $ruby;
-  border-radius: .5rem;
-  transition: all .15s ease-out;
-  @include box-shadow(0px, 1px, 20px, 0px, hsl(0, 0%, 0%));
-
-  @media (max-width: $breakFour) {
-    flex-direction: column;
-  }
-
-  @media (max-width: 900px) {
-    width: 55%;
-  }
-
-  @media (max-width: 600px) {
-    width: 65%;
-  }
-
-  @media (max-width: 300px) {
-    width: 100%;
-  }
-
-  p {
-    // display: block;
-    // width: 50%;
-    font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-    font-size: .85em;
-    line-height: 1.75em;
-    letter-spacing: 0.025em;
-    color: white;
-    font-weight: 500;
-    //
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    text-align: left;
-    // transition: all .25s ease-out .25s;
-  }
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: all .25s ease-out .25s;
