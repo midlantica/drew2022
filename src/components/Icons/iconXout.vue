@@ -18,14 +18,14 @@ svg.xOut {
     stroke-linecap: round;
 
     &:hover {
-      stroke: hsl(0, 100%, 30%);
+      stroke: hsl(0, 54%, 60%);
       stroke-width: 2px;
     }
   }
 }
 
 .closeBtn:hover svg.xOut path {
-  stroke: hsl(0, 100%, 30%);
+  stroke: hsl(0, 54%, 60%);
   stroke-width: 2px;
 }
 </style>
