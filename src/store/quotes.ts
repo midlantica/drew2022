@@ -34,7 +34,7 @@ const copy = reactive([
   },
   {
     quote: `It is vain to do with more what can be done with fewer`,
-    author: `unknown`
+    author: `William of Occam`
   },
   {
     quote: `Design is not just what it looks like and feels like. Design is how it works`,

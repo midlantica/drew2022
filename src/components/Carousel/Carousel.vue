@@ -39,7 +39,6 @@
   import print05 from '../../components/Carousel/print05.vue'
   import misc06 from '../../components/Carousel/misc06.vue'
 
-  // let item = ref()
   let backButtonView = ref(false)
   let selectedView = shallowRef('Carousel')
   let selectedViewTxt = ref('Select one...')
