@@ -6,6 +6,7 @@
         <component :is="Component" />
       </transition>
     </router-view>
+    <teleport to="#modal"></teleport>
   </div>
 </template>
 

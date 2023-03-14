@@ -1,7 +1,7 @@
 <template>
   <transition name="modal-fade">
     <div class="modalBg" v-if="isModalOpen">
-      <div class="modal">
+      <div class="modal" ref="modal">
         <div class="closeBtn" @click="closeModal">
           <xOut />
         </div>
@@ -22,6 +22,8 @@
 
 <script setup>
   import { ref } from "vue"
+
+  import xOut from './Icons/iconXout.vue'
 
   defineProps({
     icon: String,
@@ -60,17 +62,21 @@
   align-items: center;
   z-index: 100000;
   margin: auto;
-  transition: 0.25s ease-in;
-  transform: translate(0px, 0px) rotate(0deg) !important;
+  // transition: 20s ease-in;
+  // transform: translate(0px, 0px) rotate(0deg) !important;
+  animation: fade .25s;
 
   .modal {
     position: relative;
-    max-width: 300px;
+    // max-width: 300px;
+    width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));
     // min-width: 80%;
     // margin: auto 20%;
     // margin-bottom: 4rem;
     background: white;
-    background: linear-gradient(90deg, hsl(0, 0%, 100%) 5%, hsl(185, 58%, 95%) 48%, hsl(186, 43%, 90%) 48%, hsl(185, 50%, 95%) 70%, hsl(0, 0%, 100%) 95%);
+    background: linear-gradient(180deg,
+        hsl(0, 0%, 100%) 0%,
+        hsl(186, 43%, 92%) 100%);
     // background: linear-gradient(180deg, white 0%, white 75%, rgba(230, 251, 255, 1) 100%);
 
     // padding: 1rem 1rem 1rem 0rem;
@@ -79,46 +85,20 @@
 
     .closeBtn {
       position: absolute;
-      // display: inline-block;
       top: -10px;
       right: -10px;
       background-color: transparent;
       color: hsla(0, 0%, 0%, 50%);
       border: none;
       cursor: pointer;
-      // font-size: 2rem;
-      // line-height: .6;
       background: #ffffff;
-      // padding: 0.2rem 0.4rem 0.5rem;
       border-radius: 20px;
       width: 40px;
       height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      &:hover {
-        stroke: hsla(0, 0%, 0%, 1);
-        // background: #fff4cb;
-      }
-
-      &:hover {
-        cursor: pointer;
-      }
-
-    }
-
-    .xOut {
-      // stroke: red;
-
-      path {
-        stroke: yellow !important;
-        // stroke: hsla(0, 0%, 0%, .5);
-      }
-
-      &:hover path {
-        stroke: hsla(0, 0%, 0%, 1) !important;
-      }
+      cursor: pointer;
 
     }
 
@@ -179,13 +159,14 @@
 }
 
 
-.modal-fade-enter,
-.modal-fade-leave-to {
-  opacity: 0;
-}
-
 .modal-fade-enter-active,
 .modal-fade-leave-active {
-  transition: opacity .5s ease;
+  transition: all .5s ease;
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
+  transform: scale(1.1);
 }
 </style>

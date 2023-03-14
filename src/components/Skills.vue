@@ -5,29 +5,35 @@
         @click="showModal(item)" />
     </div>
 
-    <div class="modalBg" v-if="isModalOpen">
-      <div class="modal">
-        <div class="closeBtn" @click="closeModal">
-          <xOut />
-        </div>
-        <div class="modalInner">
-          <div class="icon">
-            <component :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }" @mouseleave="hover = false" />
-          </div>
-          <div class="content">
-            <h4>{{ modelItem[2] }}</h4>
-            <p>{{ modelItem[3] }}</p>
-          </div>
+    <Teleport to="#modal">
+      <transition name="modal-fade">
+        <div class="modalBg" v-if="isModalOpen">
+          <div class="modal" ref="modal">
+            <div class="closeBtn" @click="closeModal">
+              <xOut />
+            </div>
+            <div class="modalInner">
+              <div class="icon">
+                <component :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }"
+                  @mouseleave="hover = false" />
+              </div>
+              <div class="content">
+                <h4>{{ modelItem[2] }}</h4>
+                <p>{{ modelItem[3] }}</p>
+              </div>
 
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </transition>
+    </Teleport>
 
   </div>
 </template>
 
 <script setup lang="ts">
   import { ref, markRaw, defineAsyncComponent } from "vue"
+  import { onClickOutside } from '@vueuse/core'
 
   import xOut from './Icons/iconXout.vue'
 
@@ -44,10 +50,10 @@
   const iconNuxt = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue')))
   const iconChelsea = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue')))
 
+  const modal = ref(null)
 
   const hover = ref(false)
 
-  const isModalOpen = ref(false)
   let modelItem = ref([])
 
   function showModal(item): void {
@@ -58,6 +64,10 @@
   function closeModal(): any {
     isModalOpen.value = false
   }
+
+  const isModalOpen = ref(false)
+
+  onClickOutside(modal, (): boolean => (isModalOpen.value = false))
 
   const skills = markRaw([
     [
@@ -472,5 +482,16 @@ body.punk .skillsGrid {
     width: 88px;
   }
 
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: all .5s ease;
+  // transform: scale(1.1);
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
 }
 </style>
