@@ -38,6 +38,7 @@
   font-family: "Barlow Semi Condensed";
   letter-spacing: 0em;
   overflow-x: hidden !important;
+  background: #333;
 
   a {
     flex-grow: 1;
@@ -62,16 +63,17 @@
 body.modern .tabs a.modern {
   color: $ivory;
   // background: hsla(340, 76%, 48%, 1);
-  background: linear-gradient(top-down hsla(340, 76%, 48%, 1), rgb(156, 21, 66));
+  background: linear-gradient(hsla(340, 76%, 48%, 1), hsl(340, 76%, 30%));
   text-shadow: 0px 0px 1px black;
-  box-shadow: 0px -2px 6px black inset;
+  // box-shadow: 0px -2px 6px black inset;
 }
 
 body.bourbon .tabs>a.bourbon {
   color: $ivory;
-  background: darken($orange, 30);
+  // background: darken($orange, 30);
+  background: linear-gradient(darken($orange, 10), darken($orange, 25));
   text-shadow: 0px 0px 1px black;
-  box-shadow: 0px -2px 6px black inset;
+  // box-shadow: 0px -2px 6px black inset;
 }
 
 body.groovy .tabs>a.groovy {
@@ -105,27 +107,28 @@ body.groovy .tabs>a.groovy {
 
 }
 
-
-
 body.techy .tabs>a.techy {
   color: transparentize($ivory, 0.1);
-  background: darken(#02528a, 10);
+  // background: darken(#02528a, 10);
+  background: linear-gradient(darken(#423BA0, 00), darken(#423BA0, 15));
   text-shadow: 0px 0px 1px black;
-  box-shadow: 0px -2px 6px black inset;
+  // box-shadow: 0px -2px 6px black inset;
 }
 
 body.corp .tabs>a.corp {
   color: transparentize($ivory, 0.1);
-  background: darken(#02528a, 0);
+  // background: darken(#02528a, 0);
+  background: linear-gradient(darken(hsl(205, 97%, 27%), 0), darken(hsl(205, 97%, 27%), 10));
   text-shadow: 0px 0px 1px black;
-  box-shadow: 0px -2px 6px black inset;
+  // box-shadow: 0px -2px 6px black inset;
 }
 
 body.punk .tabs>a.punk {
   color: transparentize($ivory, 0.1);
   background: hsla(0, 100%, 50%, 0.85);
+  background: linear-gradient(hsl(303, 100%, 35%), hsl(303, 100%, 20%));
   // box-shadow: 0px -2px 6px black inset;
-  filter: saturate(40) opacity(0.7);
+  // filter: saturate(40) opacity(0.7);
 }
 
 body .tabs {
