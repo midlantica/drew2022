@@ -14,7 +14,6 @@
 
 <script setup>
   import Navvy from '../components/Navvy'
-  import Quotes from '../../components/Quote.vue'
   import ExtrasC from '../../components/ExtrasC'
 </script>
 

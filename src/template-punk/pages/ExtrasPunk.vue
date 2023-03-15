@@ -3,7 +3,7 @@
     <Navvy />
     <div class="flexxy">
       <span class="headerCopy">{{ store.copy.uiuxDesigner }}/{{ store.copy.vizDesigner }}</span>
-      <a class='headerCopy resume rOne' href="resume/drew_harper_resume_portfolio.pdf" target="_BLANK">PDF Resume</a>
+      <a class='headerCopy resume rOne' :href='resumeUrl' target="_BLANK">PDF Resume</a>
     </div>
 
   </header>
@@ -23,6 +23,7 @@
 
   import Navvy from '../components/Navvy'
   import ExtrasC from '../../components/ExtrasC'
+  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 
 <style lang="scss" scoped>

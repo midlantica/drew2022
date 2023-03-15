@@ -14,10 +14,12 @@
   import { provide, ref } from 'vue'
   import store from './store/index'
   import quotes from './store/quotes'
+  import portfolioExtras from './store/portfolioExtras'
   import Tabs from './components/Tabs.vue'
 
   provide('store', store) as any
   provide('quotes', quotes) as any
+  provide('portfolioExtras', portfolioExtras) as any
 </script>
 
 <style lang="scss">

@@ -1,20 +1,5 @@
 import { reactive } from 'vue'
 
-const test = reactive([
-  {
-    quote: `Quote 11111111`,
-    author: `author 11111111`,
-  },
-  {
-    quote: `Quote 22222222`,
-    author: `author 22222222`,
-  },
-  {
-    quote: `Quote 33333333`,
-    author: `author 33333333`,
-  },
-])
-
 const copy = reactive([
   {
     quote: `A user experience is like a joke: if you have to explain it, it's not that good`,
@@ -122,4 +107,4 @@ const copy = reactive([
   },
 ])
 
-export default { copy, test }
+export default { copy }

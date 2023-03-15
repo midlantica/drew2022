@@ -14,7 +14,7 @@
 
 <script setup>
   import Navvy from '../components/Navvy'
-  import Footy from '../components/Footy'
+  // import Footy from '../components/Footy'
   import ExtrasC from '../../components/ExtrasC'
 </script>
 

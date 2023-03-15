@@ -11,21 +11,17 @@
         <a :href="`mailto:` + `${store.copy.druEmail}`" class="marTH">{{
           store.copy.druEmail
         }}</a>
-        <a
-          href="https://drewharper.com/resume/drew_harper_resume_portfolio.pdf"
-          target="_blank"
-          class="marTH"
-          >PDF&nbsp;Resume</a
-        >
+        <a :href='resumeUrl' target="_blank" class="marTH">PDF&nbsp;Resume</a>
       </p>
     </section>
   </nav>
 </template>
 
 <script lang="ts" setup>
-import { inject } from "vue";
+  import { inject, ref } from "vue"
 
-const store: any = inject("store");
+  const store: any = inject("store")
+  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 
 <style lang="scss" scoped>
@@ -95,6 +91,7 @@ h1 {
 
   a {
     color: $accent !important;
+
     //
     &:hover {
       color: $accent !important;

@@ -12,7 +12,7 @@
         <a :href='`mailto:` + `${store.copy.druEmail}`'>{{ store.copy.druEmail }}</a>
       </p>
       <p class='resume'>
-        <a href='resume/drew_harper_resume_portfolio.pdf' target="_blank">PDF Resume</a>
+        <a href='/resume/drew_harper_resume_portfolio.pdf' target="_blank">PDF Resume</a>
       </p>
     </section>
   </nav>
