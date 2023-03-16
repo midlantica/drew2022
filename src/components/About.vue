@@ -1,5 +1,7 @@
 <template>
-  <div class="about" ref='target' :style="{ transform: cardTransform, transition: 'transform 0.25 ease-out' }">
+  <div class="about" ref='target' :style="{ transform: cardTransform, transition: 'transform 0.25 ease-out' }"
+    @click="play">
+
     <div class="flagBox">
       <div class="flag">&nbsp;</div>
     </div>
@@ -7,11 +9,11 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
   import { inject, ref, computed } from "vue"
   import { useMouseInElement } from '@vueuse/core'
 
-  const store: any = inject("store")
+  const store = inject("store")
 
   const target = ref(null)
   const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(target)
@@ -23,6 +25,25 @@
 
     return isOutside.value ? '' : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
   })
+
+  // SOUND!!! ###################################
+  // SOUND!!! ###################################
+  const yeehaw = new Audio('/yeehaw.mp3')
+  const jollyGood = new Audio('/jollyGood.mp3')
+
+  let isActive = false
+
+  const play = () => {
+    if (isActive) {
+      yeehaw.play()
+      console.log(isActive)
+    } else {
+      jollyGood.play()
+      console.log(isActive)
+    }
+    isActive = !isActive
+  }
+
 </script>
 
 <style lang="scss" scoped>
@@ -39,6 +60,7 @@
   align-content: center;
   align-self: center;
   border-radius: 2px;
+  cursor: pointer;
   @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
 
   @media (max-width: $breakThou) {
@@ -131,9 +153,9 @@ p {
   //
   p {
     font-family: "Bodoni Moda", Times, serif !important;
-    font-size: 1.071rem;
-    letter-spacing: 0.04rem;
-    line-height: 1.8rem;
+    font-size: .9rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.5rem;
     margin: 0;
     font-weight: 500;
 

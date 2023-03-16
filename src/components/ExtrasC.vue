@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { ref } from 'vue'
+  // import { ref } from 'vue'
 
   const myUrl = '/img/portfolio/extras/'
 

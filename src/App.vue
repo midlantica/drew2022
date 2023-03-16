@@ -14,12 +14,10 @@
   import { provide, ref } from 'vue'
   import store from './store/index'
   import quotes from './store/quotes'
-  import portfolioExtras from './store/portfolioExtras'
   import Tabs from './components/Tabs.vue'
 
   provide('store', store) as any
   provide('quotes', quotes) as any
-  provide('portfolioExtras', portfolioExtras) as any
 </script>
 
 <style lang="scss">
@@ -136,8 +134,8 @@ body.modern {
   .about {
     // background: hsla(340, 76%, 48%, 1) !important;
     background: linear-gradient(180deg,
-        hsl(340deg 76% 48% / 61%),
-        hsl(340deg 76% 31% / 62%)) !important;
+        hsl(340deg 76% 48% / 100%),
+        hsl(340deg 76% 31% / 100%)) !important;
     width: 50%;
     margin: 0 auto;
   }

@@ -31,7 +31,7 @@
   }
 
   onMounted((): void => {
-    console.log(`She's a-runnin'!`)
+    // console.log(`She's a-runnin'!`)
     roll()
   })
 
