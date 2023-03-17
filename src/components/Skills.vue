@@ -45,7 +45,7 @@
   const iconSass = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSass.vue')))
   const iconVue = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconVue.vue')))
   const iconSvg = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSvg.vue')))
-  const iconVSCode = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconVscode.vue')))
+  const iconTailwind = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconTailwind.vue')))
   const iconFigma = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconFigma.vue')))
   const iconNuxt = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue')))
   const iconChelsea = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue')))
@@ -113,10 +113,10 @@
       `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`,
     ],
     [
-      iconVSCode,
-      'vsCode',
-      'VS Code',
-      `VS Code: Used to be into Sublime Text but I'm all VS Code these days. MS better late than never.`,
+      iconTailwind,
+      'tailwind',
+      'Tailwind CSS',
+      `Tailwind takes the naming pain out of CSS and is brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park`,
     ],
     [
       iconSketch,
