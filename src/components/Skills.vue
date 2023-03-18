@@ -128,7 +128,7 @@
       iconFigma,
       'figma',
       'Figma',
-      `Figma is the king of UX prototyping. It ain't Illustrator but UX rarely requires so many features.`,
+      `Figma is the king of UX prototyping. It ain't Illustrator but collaboration is ftw.`,
     ],
     [
       iconSvg,
