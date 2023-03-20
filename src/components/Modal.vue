@@ -1,49 +1,61 @@
 <template>
-  <transition name="modal-fade">
-    <div class="modalBg" v-if="isModalOpen">
-      <div class="modal" ref="modal">
-        <div class="closeBtn" @click="closeModal">
-          <xOut />
+<transition name="modal-fade">
+  <div
+    class="modalBg"
+    v-if="isModalOpen"
+  >
+    <div
+      class="modal"
+      ref="modal"
+    >
+      <div
+        class="closeBtn"
+        @click="closeModal"
+      >
+        <xOut />
+      </div>
+      <div class="modalInner">
+        <div class="icon">
+          <component
+            :is="modelItem[0]"
+            class="icon {{modelItem[1]}} { active: hover }"
+            @mouseleave="hover = false"
+          />
         </div>
-        <div class="modalInner">
-          <div class="icon">
-            <component :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }" @mouseleave="hover = false" />
-          </div>
-          <div class="content">
-            <h4>{{ modelItem[2] }}</h4>
-            <p>{{ modelItem[3] }}</p>
-          </div>
-
+        <div class="content">
+          <h4>{{ modelItem[2] }}</h4>
+          <p>{{ modelItem[3] }}</p>
         </div>
       </div>
     </div>
-  </transition>
+  </div>
+</transition>
 </template>
 
 <script setup>
-  import { ref } from "vue"
+import { ref } from 'vue'
 
-  import xOut from './Icons/iconXout.vue'
+import xOut from './Icons/iconXout.vue'
 
-  defineProps({
-    icon: String,
-    title: String,
-    text: String
-  })
+defineProps({
+  icon: String,
+  title: String,
+  text: String
+})
 
-  defineEmits('close')
+defineEmits('close')
 
-  const isModalOpen = ref(false)
-  let modelItem = ref([])
+const isModalOpen = ref(false)
+const modelItem = ref([])
 
-  function showModal (item) {
-    modelItem.value = item
-    isModalOpen.value = true
-  }
+function showModal (item) {
+  modelItem.value = item
+  isModalOpen.value = true
+}
 
-  function closeModal () {
-    isModalOpen.value = false
-  }
+function closeModal () {
+  isModalOpen.value = false
+}
 
 </script>
 
@@ -157,7 +169,6 @@
 
   }
 }
-
 
 .modal-fade-enter-active,
 .modal-fade-leave-active {

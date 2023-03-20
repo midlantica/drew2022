@@ -1,18 +1,21 @@
 <template>
-  <div>
-    <div class="headBlock">
-      <router-link :to="{ name: 'ModernExtras' }" class="drewhead jelloHorizontal" />
-      <h1>{{ store.copy.druHead }}</h1>
-    </div>
-    <p v-html="store.copy.druCopy"></p>
+<div>
+  <div class="headBlock">
+    <router-link
+      :to="{ name: 'ModernExtras' }"
+      class="drewhead jelloHorizontal"
+    />
+    <h1>{{ store.copy.druHead }}</h1>
   </div>
+  <p v-html="store.copy.druCopy" />
+</div>
 </template>
 
 <script setup>
-  // import { defineComponent } from 'vue'
-  import { inject } from 'vue'
+// import { defineComponent } from 'vue'
+import { inject } from 'vue'
 
-  const store = inject('store')
+const store = inject('store')
 </script>
 
 <style lang="scss" scoped>

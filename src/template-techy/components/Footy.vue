@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <p>"Everything should be made as simple as possible, but not simpler." &ndash; Albert&nbsp;Einstein</p>
-  </div>
+<div>
+  <p>"Everything should be made as simple as possible, but not simpler." &ndash; Albert&nbsp;Einstein</p>
+</div>
 </template>
 
 <style lang='scss' scoped>

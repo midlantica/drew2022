@@ -1,50 +1,71 @@
 <template>
-  <transition name="fade" appear>
-    <div>
-      <transition name="topDown" appear>
-        <header>
-          <Navvy />
-        </header>
-      </transition>
+<transition
+  name="fade"
+  appear
+>
+  <div>
+    <transition
+      name="topDown"
+      appear
+    >
+      <header>
+        <Navvy />
+      </header>
+    </transition>
 
-      <transition name="bounce2" appear>
-        <main class="mainGrid">
-          <transition name="bounce3" appear>
-            <div class="copyArea">
-              <HeadAndCopy />
-            </div>
-          </transition>
+    <transition
+      name="bounce2"
+      appear
+    >
+      <main class="mainGrid">
+        <transition
+          name="bounce3"
+          appear
+        >
+          <div class="copyArea">
+            <HeadAndCopy />
+          </div>
+        </transition>
 
-          <transition name="bounce4" appear>
-            <div class="slides">
-              <Carousel />
-            </div>
-          </transition>
+        <transition
+          name="bounce4"
+          appear
+        >
+          <div class="slides">
+            <Carousel />
+          </div>
+        </transition>
 
-          <transition name="bounce9" appear>
-            <About />
-          </transition>
+        <transition
+          name="bounce9"
+          appear
+        >
+          <About />
+        </transition>
 
-          <transition name="bounce7" appear>
-            <Skills />
-          </transition>
-        </main>
-      </transition>
+        <transition
+          name="bounce7"
+          appear
+        >
+          <Skills />
+        </transition>
+      </main>
+    </transition>
 
-      <footer>
-        <Quotes />
-      </footer>
-    </div>
-  </transition>
+    <footer>
+      <Quotes />
+    </footer>
+  </div>
+</transition>
 </template>
 
 <script setup>
-  import Navvy from '../components/Navvy'
-  import HeadAndCopy from '../components/HeadAndCopy'
-  import Skills from '../../components/Skills'
-  import About from '../../components/About'
-  import Quotes from '../../components/Quote'
-  import Carousel from '../../components/Carousel/Carousel'
+import Navvy from '../components/Navvy'
+import HeadAndCopy from '../components/HeadAndCopy'
+import Skills from '../../components/Skills'
+import About from '../../components/About'
+import Quotes from '../../components/Quote'
+import Carousel from '../../components/Carousel/Carousel'
 </script>
 
 <style lang="scss" scoped>

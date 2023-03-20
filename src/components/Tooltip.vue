@@ -1,12 +1,12 @@
 <template>
-  <div class="tooltip">
-    <p>{{ tooltipText }}</p>
-  </div>
+<div class="tooltip">
+  <p>{{ tooltipText }}</p>
+</div>
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
-  let tooltipText = ref('tooltipText')
+import { ref } from 'vue'
+const tooltipText = ref('tooltipText')
 </script>
 
 <style lang="scss" scoped>

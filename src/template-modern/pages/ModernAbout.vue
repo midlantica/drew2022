@@ -1,17 +1,23 @@
 <template>
-  <div class="aboutGrid">
-    <transition name="bounce3" appear>
-      <HeadAndCopy />
-    </transition>
-    <transition name="bounce4" appear>
-      <About />
-    </transition>
-  </div>
+<div class="aboutGrid">
+  <transition
+    name="bounce3"
+    appear
+  >
+    <HeadAndCopy />
+  </transition>
+  <transition
+    name="bounce4"
+    appear
+  >
+    <About />
+  </transition>
+</div>
 </template>
 
 <script setup lang="ts">
-  import HeadAndCopy from "../components/HeadAndCopy.vue";
-  import About from "../../components/About.vue";
+import HeadAndCopy from '../components/HeadAndCopy.vue'
+import About from '../../components/About.vue'
 </script>
 
 <style lang="scss" scoped>

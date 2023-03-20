@@ -1,21 +1,24 @@
 <template>
-  <header>
-    <Navvy />
-  </header>
+<header>
+  <Navvy />
+</header>
 
-  <transition name="bounce2" appear>
-    <ExtrasC />
-  </transition>
+<transition
+  name="bounce2"
+  appear
+>
+  <ExtrasC />
+</transition>
 
-  <footer>
-    <NavvyEmpty />
-  </footer>
+<footer>
+  <NavvyEmpty />
+</footer>
 </template>
 
 <script setup lang="ts">
-  import Navvy from '../components/Navvy.vue'
-  import NavvyEmpty from '../components/NavvyEmpty.vue'
-  import ExtrasC from '../../components/ExtrasC.vue'
+import Navvy from '../components/Navvy.vue'
+import NavvyEmpty from '../components/NavvyEmpty.vue'
+import ExtrasC from '../../components/ExtrasC.vue'
 </script>
 
 <style lang="scss" scoped>

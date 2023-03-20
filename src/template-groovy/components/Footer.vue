@@ -1,10 +1,13 @@
 <template>
-  <transition name="topDown" appear>
-    <footer>
-      <div class='car'></div>
-      <div class='starWars'></div>
-    </footer>
-  </transition>
+<transition
+  name="topDown"
+  appear
+>
+  <footer>
+    <div class="car" />
+    <div class="starWars" />
+  </footer>
+</transition>
 </template>
 
 <style lang='scss' scoped>

@@ -1,9 +1,24 @@
 <template>
-  <div class="modernTabs">
-    <router-link to="/Modern/Projects" class="projectsTab">Projects</router-link>
-    <router-link to="/Modern/Skills" class="skillsTab">Skills</router-link>
-    <router-link to="/Modern/About" class="aboutTab">About</router-link>
-  </div>
+<div class="modernTabs">
+  <router-link
+    to="/Modern/Projects"
+    class="projectsTab"
+  >
+    Projects
+  </router-link>
+  <router-link
+    to="/Modern/Skills"
+    class="skillsTab"
+  >
+    Skills
+  </router-link>
+  <router-link
+    to="/Modern/About"
+    class="aboutTab"
+  >
+    About
+  </router-link>
+</div>
 </template>
 
 <script setup></script>

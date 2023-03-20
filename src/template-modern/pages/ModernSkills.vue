@@ -1,17 +1,26 @@
 <template>
-  <div name="bounce" appear>
-    <transition name="bounce2" appear>
-      <Skills />
-    </transition>
-    <transition name="bounce4" appear>
-      <Quotes />
-    </transition>
-  </div>
+<div
+  name="bounce"
+  appear
+>
+  <transition
+    name="bounce2"
+    appear
+  >
+    <Skills />
+  </transition>
+  <transition
+    name="bounce4"
+    appear
+  >
+    <Quotes />
+  </transition>
+</div>
 </template>
 
 <script setup lang="ts">
-  import Skills from '../../components/Skills.vue'
-  import Quotes from '../../components/Quote.vue'
+import Skills from '../../components/Skills.vue'
+import Quotes from '../../components/Quote.vue'
 </script>
 
 <style lang='scss' scoped>

@@ -1,30 +1,43 @@
 <template>
-  <transition name="fade" appear class="modBacker">
-    <div>
-      <transition name="topDown" appear>
-        <header>
-          <Navvy />
-        </header>
-      </transition>
+<transition
+  name="fade"
+  appear
+  class="modBacker"
+>
+  <div>
+    <transition
+      name="topDown"
+      appear
+    >
+      <header>
+        <Navvy />
+      </header>
+    </transition>
 
-      <transition name="bounce2" appear>
-        <ModernTabs />
-      </transition>
+    <transition
+      name="bounce2"
+      appear
+    >
+      <ModernTabs />
+    </transition>
 
-      <transition name="bounce3" appear>
-        <main class="mainGrid">
-          <router-view v-slot="{ Component }">
-            <component :is="Component" />
-          </router-view>
-        </main>
-      </transition>
-    </div>
-  </transition>
+    <transition
+      name="bounce3"
+      appear
+    >
+      <main class="mainGrid">
+        <router-view v-slot="{ Component }">
+          <component :is="Component" />
+        </router-view>
+      </main>
+    </transition>
+  </div>
+</transition>
 </template>
 
 <script setup lang="ts">
-  import Navvy from "../components/Navvy.vue"
-  import ModernTabs from "../components/ModernTabs.vue"
+import Navvy from '../components/Navvy.vue'
+import ModernTabs from '../components/ModernTabs.vue'
 </script>
 
 <style lang="scss" scoped>

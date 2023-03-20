@@ -1,50 +1,67 @@
 <template>
-  <transition name="fade" appear>
-    <div>
+<transition
+  name="fade"
+  appear
+>
+  <div>
+    <transition
+      name="topDown"
+      appear
+    >
+      <header>
+        <Navvy />
+      </header>
+    </transition>
 
-      <transition name="topDown" appear>
-        <header>
-          <Navvy />
-        </header>
-      </transition>
+    <transition
+      name="bounce"
+      appear
+    >
+      <main class="mainGrid">
+        <transition
+          name="bounce2"
+          appear
+        >
+          <div class="copyArea">
+            <HeadAndCopy />
+          </div>
+        </transition>
 
-      <transition name="bounce" appear>
-        <main class='mainGrid'>
+        <transition
+          name="bounce4"
+          appear
+        >
+          <div class="slides">
+            <Carousel />
+          </div>
+        </transition>
 
-          <transition name="bounce2" appear>
-            <div class='copyArea'>
-              <HeadAndCopy />
-            </div>
-          </transition>
+        <transition
+          name="bounce6"
+          appear
+        >
+          <About />
+        </transition>
 
-          <transition name="bounce4" appear>
-            <div class='slides'>
-              <Carousel />
-            </div>
-          </transition>
-
-          <transition name="bounce6" appear>
-            <About />
-          </transition>
-
-          <transition name="bounce7" appear>
-            <Skills />
-          </transition>
-
-        </main>
-      </transition>
-
-    </div>
-  </transition>
+        <transition
+          name="bounce7"
+          appear
+        >
+          <Skills />
+        </transition>
+      </main>
+    </transition>
+  </div>
+</transition>
 </template>
 
 <script setup lang="ts">
-  import Navvy from '../components/Navvy.vue'
-  import HeadAndCopy from '../components/HeadAndCopy.vue'
-  // import Quote from '../components/Quote.vue'
-  import Skills from '../../components/Skills.vue'
-  import About from '../../components/About.vue'
-  import Carousel from '../../components/Carousel/Carousel.vue'
+import Navvy from '../components/Navvy.vue'
+import HeadAndCopy from '../components/HeadAndCopy.vue'
+// import Quote from '../components/Quote.vue'
+import Skills from '../../components/Skills.vue'
+import About from '../../components/About.vue'
+import Carousel from '../../components/Carousel/Carousel.vue'
 </script>
 
 <style lang='scss' scoped>
