@@ -95,6 +95,18 @@
       `JavaScript: I design, do all my HTML & CSS, I'm still mastering JS. Continuous learning, Love me some Vue 💚, like this site`,
     ],
     [
+      iconFigma,
+      'figma',
+      'Figma',
+      `Figma is the king of UX prototyping. It ain't Illustrator but collaboration ftw.`,
+    ],
+    [
+      iconTailwind,
+      'tailwind',
+      'Tailwind CSS',
+      `Tailwind takes the naming pain out of CSS and is brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park`,
+    ],
+    [
       iconSass,
       'sass',
       'SASS',
@@ -113,22 +125,10 @@
       `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`,
     ],
     [
-      iconTailwind,
-      'tailwind',
-      'Tailwind CSS',
-      `Tailwind takes the naming pain out of CSS and is brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park`,
-    ],
-    [
       iconSketch,
       'sketch',
       'Sketch',
       `Sketch used to be the king of UX prototyping, now there are many alternatives.`,
-    ],
-    [
-      iconFigma,
-      'figma',
-      'Figma',
-      `Figma is the king of UX prototyping. It ain't Illustrator but collaboration is ftw.`,
     ],
     [
       iconSvg,
@@ -170,6 +170,8 @@
 
   .modal {
     position: relative;
+    margin-bottom: auto;
+    margin-top: 260px;
     // max-width: 300px;
     width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));
     // min-width: 80%;
