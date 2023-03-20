@@ -9,7 +9,7 @@
 <script setup lang="ts">
   import { defineAsyncComponent } from 'vue'
   import Carousel from '../../components/Carousel/Carousel.vue'
-    // const Carousel = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/Carousel.vue'))
+      // const Carousel = defineAsyncComponent((): Promise<any> => import('../../components/Carousel/Carousel.vue'))
 
 </script>
 
