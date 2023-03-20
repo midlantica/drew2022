@@ -8,11 +8,11 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
   // import { defineComponent } from 'vue'
   import { inject } from 'vue'
 
-  const store: any = inject('store')
+  const store = inject('store')
 </script>
 
 <style lang="scss" scoped>
