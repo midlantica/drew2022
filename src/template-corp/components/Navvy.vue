@@ -152,7 +152,7 @@ h1 {
 
 h3 {
   font-family: $font-copy;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   letter-spacing: -0.025em;
   transition: 0.25s ease-in;
   font-weight: bold;
@@ -319,4 +319,5 @@ h3 {
 
   }
 
-}</style>
+}
+</style>

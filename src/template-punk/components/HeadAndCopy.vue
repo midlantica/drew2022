@@ -148,7 +148,7 @@
   transform: rotate(-1deg);
 
   h1 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     background: hsla(0, 100%, 50%, 0.85);
     color: white;
     font-weight: 500;

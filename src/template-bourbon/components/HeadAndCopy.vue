@@ -64,7 +64,7 @@
     }
 
     @media (max-width: $breakThree) {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
     }
 
   }

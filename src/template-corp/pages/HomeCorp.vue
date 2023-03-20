@@ -63,6 +63,7 @@ header,
 footer {
   // color: $ivory;
   box-shadow: none !important;
+
 }
 
 .mainGrid {

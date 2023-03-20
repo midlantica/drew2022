@@ -49,6 +49,7 @@ body.bourbon {
     header,
     footer {
       background: url(./template-bourbon/assets/img/bg/bg_bag_dk.jpg) repeat;
+      // padding: 1rem;
     }
   }
 
