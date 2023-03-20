@@ -104,13 +104,13 @@
       iconTailwind,
       'tailwind',
       'Tailwind CSS',
-      `Tailwind takes the naming pain out of CSS and is brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park`,
+      `Tailwind takes the naming pain out of CSS and it's brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park`,
     ],
     [
       iconSass,
       'sass',
       'SASS',
-      `SASS has made CSS so much more fun to use. CSS's new --vars make CSS more robust, but there's a long way to go.`,
+      `SASS has made CSS so much more fun and nesty to use. CSS's new --vars make it more robust, but there's a long way to go.`,
     ],
     [
       iconVue,
@@ -128,19 +128,19 @@
       iconSketch,
       'sketch',
       'Sketch',
-      `Sketch used to be the king of UX prototyping, now there are many alternatives.`,
+      `Sketch used to be the king of UX prototyping, now it's old school.`,
     ],
     [
       iconSvg,
       'svg',
       'SVG',
-      `SVG: Vector is best because it scales and rasters don't, and it's editable, but it still cannot replace a photograph.`,
+      `SVG: Vector is best because it scales and rasters don't, and it's editable, you can even put CSS in a SVG file.`,
     ],
     [
       iconChelsea,
       'chelsea',
       'Chelsea FC',
-      `Blue is the color! Chelsea is the name! We're all together... and We're the only team in London with the European Cup! x2! 💙 `,
+      `I love Chelsea FC! 💙  I enjoy competition. Love Rugby and Cricket, I was a demon fast bowler! And Football, Go Titans!`,
     ],
   ])
 
