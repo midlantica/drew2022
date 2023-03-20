@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="headBlock">
-      <router-link :to="{ name: 'ModernProjects' }" class="drewhead jelloHorizontal" />
+      <router-link :to="{ name: 'ModernExtras' }" class="drewhead jelloHorizontal" />
       <h1>{{ store.copy.druHead }}</h1>
     </div>
     <p v-html="store.copy.druCopy"></p>
