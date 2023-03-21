@@ -1,54 +1,55 @@
 <template>
-<div
-  class="about"
-  ref="target"
-  :style="{ transform: cardTransform, transition: 'transform 0.25 ease-out' }"
-  @click="play"
->
-  <div class="flagBox">
-    <div class="flag">
+  <div
+    ref="target"
+    class="about"
+    :style="{ transform: cardTransform, transition: 'transform 0.25 ease-out' }"
+    @click="play"
+  >
+    <div class="flagBox">
+      <div class="flag">
 &nbsp;
+      </div>
     </div>
+    <p>{{ store.copy.aboutCopy }}</p>
   </div>
-  <p>{{ store.copy.aboutCopy }}</p>
-</div>
 </template>
 
 <script setup>
-import { inject, ref, computed } from 'vue'
-import { useMouseInElement } from '@vueuse/core'
+  import { inject, ref, computed } from 'vue'
+  import { useMouseInElement } from '@vueuse/core'
 
-const store = inject('store')
+  const store = inject('store')
 
-const target = ref(null)
-const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(target)
-const cardTransform = computed(() => {
-  const MAX_ROTATION = 10
+  const target = ref(null)
+  const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(target)
+  const cardTransform = computed(() => {
+    const MAX_ROTATION = 10
 
-  const rX = (MAX_ROTATION / 2 - (elementY.value / elementHeight.value) * MAX_ROTATION).toFixed(2) // handles x-axis
-  const rY = (MAX_ROTATION / 2 - (elementX.value / elementWidth.value) * MAX_ROTATION).toFixed(2) // handles x-axis
+    const rX = (MAX_ROTATION / 2 - (elementY.value / elementHeight.value) * MAX_ROTATION).toFixed(2) // handles x-axis
+    const rY = (MAX_ROTATION / 2 - (elementX.value / elementWidth.value) * MAX_ROTATION).toFixed(2) // handles x-axis
 
-  return isOutside.value ? '' : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
-})
+    return isOutside.value
+      ? ''
+      : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
+  })
 
-// SOUND!!! ###################################
-// SOUND!!! ###################################
-const yeehaw = new Audio('/yeehaw.mp3')
-const jollyGood = new Audio('/jollyGood.mp3')
+  // SOUND!!! ###################################
+  // SOUND!!! ###################################
+  const yeehaw = new Audio('/yeehaw.mp3')
+  const jollyGood = new Audio('/jollyGood.mp3')
 
-let isActive = false
+  let isActive = false
 
-const play = () => {
-  if (isActive) {
-    yeehaw.play()
-    console.log(isActive)
-  } else {
-    jollyGood.play()
-    console.log(isActive)
+  const play = () => {
+    if (isActive) {
+      yeehaw.play()
+      console.log(isActive)
+    } else {
+      jollyGood.play()
+      console.log(isActive)
+    }
+    isActive = !isActive
   }
-  isActive = !isActive
-}
-
 </script>
 
 <style lang="scss" scoped>
@@ -136,7 +137,6 @@ p {
 }
 
 .punk .about {
-
   //
   p {
     margin: 0.25rem auto;
@@ -144,7 +144,7 @@ p {
 }
 
 .techy .about {
-  background: #423BA0 !important;
+  background: #423ba0 !important;
 
   //
   p {
@@ -154,11 +154,10 @@ p {
 }
 
 .corp .about {
-
   //
   p {
     font-family: "Bodoni Moda", Times, serif !important;
-    font-size: .9rem;
+    font-size: 0.9rem;
     letter-spacing: 0.02rem;
     line-height: 1.5rem;
     margin: 0;

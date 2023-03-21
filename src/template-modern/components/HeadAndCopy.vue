@@ -1,21 +1,18 @@
 <template>
-<div>
-  <div class="headBlock">
-    <router-link
-      :to="{ name: 'ModernExtras' }"
-      class="drewhead jelloHorizontal"
-    />
-    <h1>{{ store.copy.druHead }}</h1>
+  <div>
+    <div class="headBlock">
+      <router-link :to="{ name: 'ModernExtras' }" class="drewhead jelloHorizontal" />
+      <h1>{{ store.copy.druHead }}</h1>
+    </div>
+    <p v-html="store.copy.druCopy" />
   </div>
-  <p v-html="store.copy.druCopy" />
-</div>
 </template>
 
 <script setup>
-// import { defineComponent } from 'vue'
-import { inject } from 'vue'
+  // import { defineComponent } from 'vue'
+  import { inject } from 'vue'
 
-const store = inject('store')
+  const store = inject('store')
 </script>
 
 <style lang="scss" scoped>
@@ -29,7 +26,7 @@ const store = inject('store')
   justify-items: start;
   align-items: center;
   margin-bottom: 1rem;
-  gap: .5rem;
+  gap: 0.5rem;
 
   a.drewhead {
     margin-right: 1em;
@@ -56,7 +53,7 @@ const store = inject('store')
     width: 20ch;
     color: #da2561 !important;
     font-weight: 400;
-    font-size: clamp(.8rem, 1.1rem, 1.25rem) !important;
+    font-size: clamp(0.8rem, 1.1rem, 1.25rem) !important;
     text-shadow: 1px 1px 4px black;
     // >>>>>>
     color: white !important;
@@ -66,7 +63,7 @@ const store = inject('store')
 
     @media (max-width: 535px) {
       width: initial;
-      margin-top: .75rem;
+      margin-top: 0.75rem;
     }
 
     @media (max-width: $breakOne) {
@@ -82,7 +79,6 @@ const store = inject('store')
     @media (max-width: $breakThree) {
       // font-size: 1.25rem;
     }
-
   }
 }
 

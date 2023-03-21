@@ -1,30 +1,30 @@
 <template>
-<div
-  name="bounce"
-  appear
->
-  <transition
-    name="bounce2"
+  <div
+    name="bounce"
     appear
   >
-    <Skills />
-  </transition>
-  <transition
-    name="bounce4"
-    appear
-  >
-    <Quotes />
-  </transition>
-</div>
+    <transition
+      name="bounce2"
+      appear
+    >
+      <Skills />
+    </transition>
+    <transition
+      name="bounce4"
+      appear
+    >
+      <Quotes />
+    </transition>
+  </div>
 </template>
 
 <script setup lang="ts">
-import Skills from '../../components/Skills.vue'
-import Quotes from '../../components/Quote.vue'
+  import Skills from '../../components/Skills.vue'
+  import Quotes from '../../components/Quote.vue'
 </script>
 
-<style lang='scss' scoped>
-@import '../assets/css/modern-main.scss';
+<style lang="scss" scoped>
+@import "../assets/css/modern-main.scss";
 
 .modern .skillsGrid {
   width: 50%;
@@ -39,7 +39,7 @@ import Quotes from '../../components/Quote.vue'
   align-items: stretch;
   align-content: space-between;
   text-align: center;
-  gap: .5rem auto;
+  gap: 0.5rem auto;
 
   @media (max-width: 900px) {
     width: 60%;
@@ -61,7 +61,7 @@ import Quotes from '../../components/Quote.vue'
     width: 100px;
     // stroke: $accent;
     // margin-bottom: 1rem;
-    margin: 0rem auto .75rem;
+    margin: 0rem auto 0.75rem;
 
     g {
       // stroke: red !important;
@@ -75,7 +75,6 @@ import Quotes from '../../components/Quote.vue'
       stroke-width: 10px;
     }
   }
-
 }
 
 .bounce {
@@ -84,14 +83,13 @@ import Quotes from '../../components/Quote.vue'
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: all .25s ease-out .25s;
+  transition: all 0.25s ease-out 0.25s;
 }
 
 .fade-enter,
 .fade-leave-to
 
-/* .fade-leave-active below version 2.1.8 */
-  {
+/* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
 </style>

@@ -1,17 +1,17 @@
 <template>
-<transition
-  name="topDown"
-  appear
->
-  <footer>
-    <div class="car" />
-    <div class="starWars" />
-  </footer>
-</transition>
+  <transition
+    name="topDown"
+    appear
+  >
+    <footer>
+      <div class="car" />
+      <div class="starWars" />
+    </footer>
+  </transition>
 </template>
 
-<style lang='scss' scoped>
-@import '../assets/css/groovy-main.scss';
+<style lang="scss" scoped>
+@import "../assets/css/groovy-main.scss";
 
 $breakThou: 1024px;
 $breakOne: 840px;
@@ -23,18 +23,15 @@ footer {
   height: 160px;
   color: $ivory;
   background: linear-gradient(
-      /* 0 - 25% */
-      $groovy-aqua 0%,
-      $groovy-aqua 25%,
-      /* 25% - 50% */
-      $groovy-yellow 25%,
-      $groovy-yellow 50%,
-      /* 50% - 75% */
-      $groovy-orange 50%,
-      $groovy-orange 75%,
-      /* 75% - 100% */
-      $groovy-red 75%,
-      $groovy-red 100%);
+    /* 0 - 25% */ $groovy-aqua 0%,
+    $groovy-aqua 25%,
+    /* 25% - 50% */ $groovy-yellow 25%,
+    $groovy-yellow 50%,
+    /* 50% - 75% */ $groovy-orange 50%,
+    $groovy-orange 75%,
+    /* 75% - 100% */ $groovy-red 75%,
+    $groovy-red 100%
+  );
 
   @media (max-width: $breakThou) {
     //
@@ -94,7 +91,6 @@ footer {
       width: 120px;
       height: 177px;
     }
-
   }
 }
 </style>

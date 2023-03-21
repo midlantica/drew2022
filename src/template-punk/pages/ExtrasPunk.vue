@@ -1,39 +1,39 @@
 <template>
-<header>
-  <Navvy />
-  <div class="flexxy">
-    <span class="headerCopy">{{ store.copy.uiuxDesigner }}/{{ store.copy.vizDesigner }}</span>
-    <a
-      class="headerCopy resume rOne"
-      :href="resumeUrl"
-      target="_BLANK"
-    >PDF Resume</a>
-  </div>
-</header>
+  <header>
+    <Navvy />
+    <div class="flexxy">
+      <span class="headerCopy">{{ store.copy.uiuxDesigner }}/{{ store.copy.vizDesigner }}</span>
+      <a
+        class="headerCopy resume rOne"
+        :href="resumeUrl"
+        target="_BLANK"
+      >PDF Resume</a>
+    </div>
+  </header>
 
-<transition
-  name="bounce2"
-  appear
->
-  <ExtrasC />
-</transition>
+  <transition
+    name="bounce2"
+    appear
+  >
+    <ExtrasC />
+  </transition>
 
-<footer>
+  <footer>
   <!-- <Navvy /> -->
-</footer>
+  </footer>
 </template>
 
 <script setup>
-import { provide } from 'vue'
-import store from '../../store/index'
+  import { provide } from 'vue'
+  import store from '../../store/index'
 
-import Navvy from '../components/Navvy'
-import ExtrasC from '../../components/ExtrasC'
-const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
+  import Navvy from '../components/Navvy'
+  import ExtrasC from '../../components/ExtrasC'
+  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/css/punk-main.scss';
+@import "../assets/css/punk-main.scss";
 
 header,
 footer {

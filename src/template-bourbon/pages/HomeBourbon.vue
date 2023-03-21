@@ -1,82 +1,82 @@
 <template>
-<transition
-  name="fade"
-  appear
->
-  <div>
-    <transition
-      name="topDown"
-      appear
-    >
-      <header>
-        <Navvy />
-      </header>
-    </transition>
+  <transition
+    name="fade"
+    appear
+  >
+    <div>
+      <transition
+        name="topDown"
+        appear
+      >
+        <header>
+          <Navvy />
+        </header>
+      </transition>
 
-    <transition
-      name="bounce2"
-      appear
-    >
-      <main class="mainGrid">
-        <transition
-          name="bounce3"
-          appear
-        >
-          <div class="copyArea">
-            <HeadAndCopy />
-          </div>
-        </transition>
-
-        <transition
-          name="bounce6"
-          appear
-        >
-          <Skills />
-        </transition>
-
-        <div class="slides">
+      <transition
+        name="bounce2"
+        appear
+      >
+        <main class="mainGrid">
           <transition
-            name="bounce4"
+            name="bounce3"
             appear
           >
-            <Carousel />
+            <div class="copyArea">
+              <HeadAndCopy />
+            </div>
           </transition>
-        </div>
 
-        <transition
-          name="bounce8"
-          appear
-        >
-          <About />
-        </transition>
+          <transition
+            name="bounce6"
+            appear
+          >
+            <Skills />
+          </transition>
 
-        <transition
-          name="bounce10"
-          appear
-        >
-          <Quotes />
-        </transition>
-      </main>
-    </transition>
+          <div class="slides">
+            <transition
+              name="bounce4"
+              appear
+            >
+              <Carousel />
+            </transition>
+          </div>
 
-    <footer>
-      <NavvyEmpty />
-    </footer>
-  </div>
-</transition>
+          <transition
+            name="bounce8"
+            appear
+          >
+            <About />
+          </transition>
+
+          <transition
+            name="bounce10"
+            appear
+          >
+            <Quotes />
+          </transition>
+        </main>
+      </transition>
+
+      <footer>
+        <NavvyEmpty />
+      </footer>
+    </div>
+  </transition>
 </template>
 
 <script setup lang="ts">
-import Navvy from '../components/Navvy.vue'
-import NavvyEmpty from '../components/NavvyEmpty.vue'
-import HeadAndCopy from '../components/HeadAndCopy.vue'
-import About from '../../components/About.vue'
-import Skills from '../../components/Skills.vue'
-import Quotes from '../../components/Quote.vue'
-import Carousel from '../../components/Carousel/Carousel.vue'
+  import Navvy from '../components/Navvy.vue'
+  import NavvyEmpty from '../components/NavvyEmpty.vue'
+  import HeadAndCopy from '../components/HeadAndCopy.vue'
+  import About from '../../components/About.vue'
+  import Skills from '../../components/Skills.vue'
+  import Quotes from '../../components/Quote.vue'
+  import Carousel from '../../components/Carousel/Carousel.vue'
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 @import "../assets/css/bourbon-main.scss";
 
 header,

@@ -1,27 +1,25 @@
 <template>
-<div class="showbox">
-  <div class="loader">
-    <svg
-      class="circular"
-      viewBox="25 25 50 50"
-    >
-      <circle
-        class="path"
-        cx="50"
-        cy="50"
-        r="20"
-        fill="none"
-        stroke-width="2"
-        stroke-miterlimit="10"
-      />
-    </svg>
+  <div class="showbox">
+    <div class="loader">
+      <svg
+        class="circular"
+        viewBox="25 25 50 50"
+      >
+        <circle
+          class="path"
+          cx="50"
+          cy="50"
+          r="20"
+          fill="none"
+          stroke-width="2"
+          stroke-miterlimit="10"
+        />
+      </svg>
+    </div>
   </div>
-</div>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 $green: #008744;
@@ -39,7 +37,7 @@ $width: 100px;
   width: $width;
 
   &:before {
-    content: '';
+    content: "";
     display: block;
     padding-top: 100%;
   }
@@ -89,7 +87,6 @@ $width: 100px;
 }
 
 @keyframes color {
-
   100%,
   0% {
     stroke: $red;
@@ -116,4 +113,5 @@ $width: 100px;
   left: 0;
   right: 0;
   padding: 5%;
-}</style>
+}
+</style>

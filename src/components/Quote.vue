@@ -1,158 +1,157 @@
 <template>
-<div
-  class="quoteBlock"
-  v-if="currentQuote"
->
-  <div
-    @click="previousQuote()"
-    class="arrowBtn"
-  >
-    &lt;
-  </div>
-  <transition name="quoteFade">
-    <div class="quotePad">
-      <p>&ldquo;{{ currentQuote.quote }}&rdquo; <cite>&ndash; {{ currentQuote.author }}</cite></p>
+  <div v-if="currentQuote" class="quoteBlock">
+    <div class="arrowBtn" @click="previousQuote()">
+      &lt;
     </div>
-  </transition>
-  <div
-    @click="nextQuote()"
-    class="arrowBtn"
-  >
-    &gt;
+    <transition name="quoteFade">
+      <div class="quotePad">
+        <p>
+          &ldquo;{{ currentQuote.quote }}&rdquo; <cite>&ndash; {{ currentQuote.author }}</cite>
+        </p>
+      </div>
+    </transition>
+    <div class="arrowBtn" @click="nextQuote()">
+      &gt;
+    </div>
   </div>
-</div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+  import { ref, onMounted } from 'vue'
 
-const currentQuoteIndex = ref(0)
-const currentQuote = ref(null)
+  const currentQuoteIndex = ref(0)
+  const currentQuote = ref(null)
 
-const nextQuote = () => {
-  currentQuoteIndex.value = (currentQuoteIndex.value + 1) % quotes.length
-  currentQuote.value = quotes[currentQuoteIndex.value]
-}
-
-const previousQuote = () => {
-  currentQuoteIndex.value = (currentQuoteIndex.value - 1 + quotes.length) % quotes.length
-  currentQuote.value = quotes[currentQuoteIndex.value]
-}
-
-onMounted(() => {
-  currentQuote.value = quotes[currentQuoteIndex.value]
-  setInterval(nextQuote, 10000)
-})
-
-const quotes = [
-  {
-    quote: 'A user experience is like a joke: if you have to explain it, it\'s not that good',
-    author: 'Martin LeBlanc'
-  },
-  {
-    quote: 'Everything should be made as simple as possible, but not simpler.',
-    author: 'Albert Einstein'
-  },
-  {
-    quote: 'The answer to life is knowing when to stop',
-    author: 'My Mom, when I was a kid :)'
-  },
-  {
-    quote: 'If you can\'t explain it simply, you don\'t understand it well enough.',
-    author: 'Albert Einstein'
-  },
-  {
-    quote: 'It is vain to do with more what can be done with fewer',
-    author: 'William of Occam'
-  },
-  {
-    quote: 'Design is not just what it looks like and feels like. Design is how it works',
-    author: 'Steve Jobs, 2003'
-  },
-  {
-    quote: 'A picture is worth a thousand words. An interface is worth a thousand pictures',
-    author: 'Ben Shneiderman'
-  },
-  {
-    quote: 'We do not see things as they are; we see things as we are',
-    author: 'The Talmud'
-  },
-  {
-    quote: 'Measure twice, cut once',
-    author: 'unknown'
-  },
-  {
-    quote: 'You can use an eraser on the drafting table or a sledge hammer on the construction site.',
-    author: 'Frank Lloyd Wright'
-  },
-  {
-    quote: 'Design should never say, \'Look at me.\' It should always say, \'Look at this.\'',
-    author: 'David Craib'
-  },
-  {
-    quote: 'Good web design is about the character of the content, not the character of the designer.',
-    author: 'Jeffrey Zeldman'
-  },
-  {
-    quote: 'Good design is about effective communication, not decoration at the expense of legibility.',
-    author: 'Vitaly Friedman'
-  },
-  {
-    quote: 'If we want users to like our software, we should design it to behave like a likeable person.',
-    author: 'Alan Cooper'
-  },
-  {
-    quote: 'Good designers want to be proved wrong, bad designers hope to be proved right.',
-    author: 'Andy Budd'
-  },
-  {
-    quote: 'The ability to simplify means to eliminate the unnecessary so that the necessary may speak.',
-    author: 'Hans Hofmann'
-  },
-  {
-    quote: 'Simple is hard. Easy is harder. Invisible is hardest.',
-    author: 'Jean-Louis Gassée'
-  },
-  {
-    quote: 'As far as the customer is concerned, the interface is the product.',
-    author: 'Jef Raskin'
-  },
-  {
-    quote: 'A lot of what we are doing is getting design out of the way.',
-    author: 'Jonathan Ive'
-  },
-  {
-    quote: 'It\'s art if can\'t be explained. It\'s fashion if no one asks for an explanation.',
-    author: 'unknown'
-  },
-  {
-    quote: 'It\'s design if it doesn\'t need explanation.',
-    author: 'Wouter Stokkel'
-  },
-  {
-    quote: 'Simple design, intense content.',
-    author: 'Edward Tufte'
-  },
-  {
-    quote: 'The letter I have written today is longer than usual because I lacked the time to make it shorter',
-    author: 'Blaise Pascal'
-  },
-  {
-    quote: 'If there\'s a \'trick\' to it, the UI is broken',
-    author: 'Douglas Anderson'
-  },
-  {
-    quote: 'Know the user, and You are not the user.',
-    author: 'unknown'
-  },
-  {
-    quote: 'Usability is like oxygen, you don\'t notice it until it\'s missing',
-    author: 'unknown'
+  const nextQuote = () => {
+    currentQuoteIndex.value = (currentQuoteIndex.value + 1) % quotes.length
+    currentQuote.value = quotes[currentQuoteIndex.value]
   }
-]
+
+  const previousQuote = () => {
+    currentQuoteIndex.value = (currentQuoteIndex.value - 1 + quotes.length) % quotes.length
+    currentQuote.value = quotes[currentQuoteIndex.value]
+  }
+
+  onMounted(() => {
+    currentQuote.value = quotes[currentQuoteIndex.value]
+    setInterval(nextQuote, 10000)
+  })
+
+  const quotes = [
+    {
+      quote: "A user experience is like a joke: if you have to explain it, it's not that good",
+      author: 'Martin LeBlanc'
+    },
+    {
+      quote: 'Everything should be made as simple as possible, but not simpler.',
+      author: 'Albert Einstein'
+    },
+    {
+      quote: 'The answer to life is knowing when to stop',
+      author: 'My Mom, when I was a kid :)'
+    },
+    {
+      quote: "If you can't explain it simply, you don't understand it well enough.",
+      author: 'Albert Einstein'
+    },
+    {
+      quote: 'It is vain to do with more what can be done with fewer',
+      author: 'William of Occam'
+    },
+    {
+      quote: 'Design is not just what it looks like and feels like. Design is how it works',
+      author: 'Steve Jobs, 2003'
+    },
+    {
+      quote: 'A picture is worth a thousand words. An interface is worth a thousand pictures',
+      author: 'Ben Shneiderman'
+    },
+    {
+      quote: 'We do not see things as they are; we see things as we are',
+      author: 'The Talmud'
+    },
+    {
+      quote: 'Measure twice, cut once',
+      author: 'unknown'
+    },
+    {
+      quote:
+        'You can use an eraser on the drafting table or a sledge hammer on the construction site.',
+      author: 'Frank Lloyd Wright'
+    },
+    {
+      quote: "Design should never say, 'Look at me.' It should always say, 'Look at this.'",
+      author: 'David Craib'
+    },
+    {
+      quote:
+        'Good web design is about the character of the content, not the character of the designer.',
+      author: 'Jeffrey Zeldman'
+    },
+    {
+      quote:
+        'Good design is about effective communication, not decoration at the expense of legibility.',
+      author: 'Vitaly Friedman'
+    },
+    {
+      quote:
+        'If we want users to like our software, we should design it to behave like a likeable person.',
+      author: 'Alan Cooper'
+    },
+    {
+      quote: 'Good designers want to be proved wrong, bad designers hope to be proved right.',
+      author: 'Andy Budd'
+    },
+    {
+      quote:
+        'The ability to simplify means to eliminate the unnecessary so that the necessary may speak.',
+      author: 'Hans Hofmann'
+    },
+    {
+      quote: 'Simple is hard. Easy is harder. Invisible is hardest.',
+      author: 'Jean-Louis Gassée'
+    },
+    {
+      quote: 'As far as the customer is concerned, the interface is the product.',
+      author: 'Jef Raskin'
+    },
+    {
+      quote: 'A lot of what we are doing is getting design out of the way.',
+      author: 'Jonathan Ive'
+    },
+    {
+      quote: "It's art if can't be explained. It's fashion if no one asks for an explanation.",
+      author: 'unknown'
+    },
+    {
+      quote: "It's design if it doesn't need explanation.",
+      author: 'Wouter Stokkel'
+    },
+    {
+      quote: 'Simple design, intense content.',
+      author: 'Edward Tufte'
+    },
+    {
+      quote:
+        'The letter I have written today is longer than usual because I lacked the time to make it shorter',
+      author: 'Blaise Pascal'
+    },
+    {
+      quote: "If there's a 'trick' to it, the UI is broken",
+      author: 'Douglas Anderson'
+    },
+    {
+      quote: 'Know the user, and You are not the user.',
+      author: 'unknown'
+    },
+    {
+      quote: "Usability is like oxygen, you don't notice it until it's missing",
+      author: 'unknown'
+    }
+  ]
 </script>
 
-<style lang='scss'>
+<style lang="scss">
 // ALL QUOTES ########################
 
 .arrowBtn {
@@ -170,14 +169,13 @@ const quotes = [
     // background: hsla(0, 0%, 0%, 0.5);
     // display: block;
   }
-
 }
 
 .quoteBlock {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.75em 1rem .5em;
+  padding: 0.75em 1rem 0.5em;
   text-align: center;
   // border-radius: 2px;
   margin: auto;
@@ -186,8 +184,8 @@ const quotes = [
   min-width: 100%;
   min-height: 5rem;
   line-height: 1.5;
-  font-size: .9rem;
-  gap: .5rem;
+  font-size: 0.9rem;
+  gap: 0.5rem;
   // padding: 1rem 2rem;
   // min-height: 5.5rem;
 
@@ -196,8 +194,8 @@ const quotes = [
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     grid-row-gap: 0em;
-    font-size: .8rem;
-    gap: .25rem;
+    font-size: 0.8rem;
+    gap: 0.25rem;
   }
 
   p,
@@ -282,7 +280,6 @@ const quotes = [
     @media only screen and (min-device-width: 0px) and (max-device-width: 700px) {
       font-size: 0.9em;
     }
-
   }
 
   // GROOVY ########################
@@ -301,10 +298,9 @@ const quotes = [
 .groovy .quoteBlock {
   font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   background: darken($accent-red, 10);
-  padding: .75em 2em 1em;
+  padding: 0.75em 2em 1em;
   @include shadow;
   text-align: center;
-
 }
 
 // TECHY ########################
@@ -331,7 +327,7 @@ const quotes = [
     font-size: 1em;
     color: $blueTech;
     text-align: center;
-    padding: .4rem auto .5rem;
+    padding: 0.4rem auto 0.5rem;
     letter-spacing: 0.02em;
 
     @media (max-width: $breakThou) {
@@ -347,7 +343,7 @@ const quotes = [
     }
 
     @media (max-width: $breakThree) {
-      font-size: .85em;
+      font-size: 0.85em;
       line-height: 1.25em;
     }
   }
@@ -355,7 +351,7 @@ const quotes = [
   .cite {
     display: inline !important;
     color: $blueTech;
-    letter-spacing: .08em;
+    letter-spacing: 0.08em;
   }
 }
 
@@ -364,7 +360,7 @@ const quotes = [
   font-family: "Bodoni Moda", Times, serif !important;
   // background: #FFC600;
   padding: 1rem !important;
-  background: #01487F;
+  background: #01487f;
   padding: 1em 0em 1rem;
   text-align: center;
   color: white;
@@ -372,7 +368,7 @@ const quotes = [
 
   .arrowBtn {
     color: white;
-    padding: 0rem 0.5rem .1rem;
+    padding: 0rem 0.5rem 0.1rem;
     // border: 1px solid white;
     font-weight: bold !important;
 
@@ -386,8 +382,7 @@ const quotes = [
 
     //
     &:hover {
-      content: '<';
-
+      content: "<";
     }
   }
 
@@ -395,8 +390,7 @@ const quotes = [
 
     //
     &:hover {
-      content: '>';
-
+      content: ">";
     }
   }
 
@@ -406,7 +400,6 @@ const quotes = [
 
   .cite {
     font-family: "Bodoni Moda", Times, serif !important;
-
   }
 }
 
