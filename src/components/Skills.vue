@@ -1,14 +1,14 @@
 <template>
   <div class="skillsGrid">
-    <div v-for="item in skills" key="index">
+    <div v-for="item in skills" :key="item">
       <component :is="item[0]" class="icon {{item[1]}} { active: hover }" @mouseleave="hover = false"
         @click="showModal(item)" />
     </div>
 
     <Teleport to="#modal">
       <transition name="modal-fade">
-        <div class="modalBg" v-if="isModalOpen">
-          <div class="modal" ref="modal">
+        <div v-if="isModalOpen" class="modalBg">
+          <div ref="modal" class="modal">
             <div class="closeBtn" @click="closeModal">
               <xOut />
             </div>
@@ -21,34 +21,32 @@
                 <h4>{{ modelItem[2] }}</h4>
                 <p>{{ modelItem[3] }}</p>
               </div>
-
             </div>
           </div>
         </div>
       </transition>
     </Teleport>
-
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
   import { ref, markRaw, defineAsyncComponent } from "vue"
   import { onClickOutside } from '@vueuse/core'
 
   import xOut from './Icons/iconXout.vue'
 
-  const iconUiux = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconUiux.vue')))
-  const iconHtml5 = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconHtml5.vue')))
-  const iconCss3 = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconCss3.vue')))
-  const iconJs = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconJs.vue')))
-  const iconSketch = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSketch.vue')))
-  const iconSass = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSass.vue')))
-  const iconVue = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconVue.vue')))
-  const iconSvg = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSvg.vue')))
-  const iconTailwind = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconTailwind.vue')))
-  const iconFigma = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconFigma.vue')))
-  const iconNuxt = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue')))
-  const iconChelsea = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue')))
+  const iconUiux = markRaw(defineAsyncComponent(() => import('./Icons/iconUiux.vue')))
+  const iconHtml5 = markRaw(defineAsyncComponent(() => import('./Icons/iconHtml5.vue')))
+  const iconCss3 = markRaw(defineAsyncComponent(() => import('./Icons/iconCss3.vue')))
+  const iconJs = markRaw(defineAsyncComponent(() => import('./Icons/iconJs.vue')))
+  const iconSketch = markRaw(defineAsyncComponent(() => import('./Icons/iconSketch.vue')))
+  const iconSass = markRaw(defineAsyncComponent(() => import('./Icons/iconSass.vue')))
+  const iconVue = markRaw(defineAsyncComponent(() => import('./Icons/iconVue.vue')))
+  const iconSvg = markRaw(defineAsyncComponent(() => import('./Icons/iconSvg.vue')))
+  const iconTailwind = markRaw(defineAsyncComponent(() => import('./Icons/iconTailwind.vue')))
+  const iconFigma = markRaw(defineAsyncComponent(() => import('./Icons/iconFigma.vue')))
+  const iconNuxt = markRaw(defineAsyncComponent(() => import('./Icons/iconNuxt.vue')))
+  const iconChelsea = markRaw(defineAsyncComponent(() => import('./Icons/iconChelsea.vue')))
 
   const modal = ref(null)
 
@@ -56,18 +54,18 @@
 
   let modelItem = ref([])
 
-  function showModal(item): void {
+  function showModal (item) {
     modelItem.value = item
     isModalOpen.value = true
   }
 
-  function closeModal(): any {
+  function closeModal () {
     isModalOpen.value = false
   }
 
   const isModalOpen = ref(false)
 
-  onClickOutside(modal, (): boolean => (isModalOpen.value = false))
+  onClickOutside(modal, () => (isModalOpen.value = false))
 
   const skills = markRaw([
     [
@@ -75,6 +73,12 @@
       'uiux',
       'UI/UX Design',
       `UX Design is my first love. Humility before the User. Crack the flow!`,
+    ],
+    [
+      iconFigma,
+      'figma',
+      'Figma',
+      `Figma is the king of UX prototyping. It ain't Illustrator but collaboration ftw.`,
     ],
     [
       iconHtml5,
@@ -93,12 +97,6 @@
       'js',
       'JavaScript',
       `JavaScript: I design, do all my HTML & CSS, I'm still mastering JS. Continuous learning, Love me some Vue 💚, like this site`,
-    ],
-    [
-      iconFigma,
-      'figma',
-      'Figma',
-      `Figma is the king of UX prototyping. It ain't Illustrator but collaboration ftw.`,
     ],
     [
       iconTailwind,

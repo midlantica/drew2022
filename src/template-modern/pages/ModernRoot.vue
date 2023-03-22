@@ -1,30 +1,17 @@
 <template>
-  <transition
-    name="fade"
-    appear
-    class="modBacker"
-  >
+  <transition name="fade" appear class="modBacker">
     <div>
-      <transition
-        name="topDown"
-        appear
-      >
+      <transition name="topDown" appear>
         <header>
           <Navvy />
         </header>
       </transition>
 
-      <transition
-        name="bounce2"
-        appear
-      >
+      <transition name="bounce2" appear>
         <ModernTabs />
       </transition>
 
-      <transition
-        name="bounce3"
-        appear
-      >
+      <transition name="bounce3" appear>
         <main class="mainGrid">
           <router-view v-slot="{ Component }">
             <component :is="Component" />
@@ -77,8 +64,7 @@
   gap: 0.5rem;
   width: 90%;
 
-  @media (max-width: $breakThou) {
-  }
+  @media (max-width: $breakThou) {}
 
   @media (max-width: $breakOne) {
     width: 90%;

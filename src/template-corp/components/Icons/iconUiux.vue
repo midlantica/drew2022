@@ -1,26 +1,15 @@
 <template>
   <svg
-    height="60"
-    width="88"
-    xmlns="http://www.w3.org/2000/svg"
+    height="60" width="88" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
   >
     <title>UI/UX Design</title>
     <g
-      id="Icons"
-      stroke="none"
-      stroke-width="1"
-      fill="none"
-      fill-rule="evenodd"
+      id="Icons" stroke="none" stroke-width="1"
+      fill="none" fill-rule="evenodd"
     >
-      <g
-        id="Actual-Blue"
-        transform="translate(-21.000000, -16.000000)"
-      >
-        <g
-          id="uiux"
-          transform="translate(38.832246, 26.459350)"
-        >
+      <g id="Actual-Blue" transform="translate(-21.000000, -16.000000)">
+        <g id="uiux" transform="translate(38.832246, 26.459350)">
           <path
             id="Combined-Shape"
             d="M28.8279936,0.892253216 L49.59048,9.15005405 C51.2257912,9.80046142 52.2990879,11.3824126 52.2990879,13.1423195 L52.2990879,27.9347657 C52.2990879,29.6946727 51.2257912,31.2766238 49.59048,31.9270312 L27.9615916,40.5294235 C26.9418834,40.9349889 25.8056365,40.9349889 24.7859283,40.5294235 L18.0905281,37.8664822 L28.8279936,0.892253216 Z"
@@ -43,7 +32,6 @@
           />
         </g>
       </g>
-    </g>
     </g>
   </svg>
 </template>

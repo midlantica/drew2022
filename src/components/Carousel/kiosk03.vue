@@ -1,5 +1,9 @@
 <template>
-  <vueper-slides fade :infinite="false" :bullets="false" :slide-ratio="1 / 1.3" autoplay fractions progress>
+  <vueper-slides
+    fade :infinite="false" :bullets="false"
+    :slide-ratio="1 / 1.3" autoplay fractions
+    progress
+  >
     <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
       <template #loader>
         <i class="icon icon-loader spinning" />

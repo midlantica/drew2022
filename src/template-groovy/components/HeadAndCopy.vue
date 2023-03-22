@@ -1,15 +1,15 @@
 <template>
   <section>
     <h1>{{ store.copy.druHead }}</h1>
-    <p v-html="store.copy.druCopy"></p>
+    <p v-html="store.copy.druCopy" />
   </section>
 </template>
 
-<script lang="ts" setup>
+<script setup>
   // import { defineComponent } from 'vue'
   import { inject } from 'vue'
 
-  const store: any = inject('store')
+  const store = inject('store')
 </script>
 
 <style lang='scss' scoped>

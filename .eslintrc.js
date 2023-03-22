@@ -7,7 +7,7 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-recommended',
     // 'plugin:@typescript-eslint/recommended',
-    'standard-with-typescript'
+    // 'standard-with-typescript'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -40,9 +40,10 @@ module.exports = {
         max: 3
       },
       multiline: {
-        max: 1
+        max: 3
       }
-    }]
+    }],
+    'vue/no-v-html': 0
   },
   overrides: [
     {

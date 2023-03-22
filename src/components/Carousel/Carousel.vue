@@ -1,18 +1,20 @@
 <template>
-  <div class='projectBox'>
+  <div class="projectBox">
     <div class="projectBox__top">
       <transition name="bounce3" appear>
-        <a class='carouselArrow flash' v-if="backButtonView" @click='viewCarousel()'>﹤ back</a>
+        <a v-if="backButtonView" class="carouselArrow flash" @click="viewCarousel()">﹤ back</a>
       </transition>
-      <p class='projectHead' @click='viewCarousel()'>Projects - {{ selectedViewTxt }}</p>
+      <p class="projectHead" @click="viewCarousel()">
+        Projects - {{ selectedViewTxt }}
+      </p>
     </div>
 
-    <component :is='selectedView'>
-      <div class='miniGallery'>
-        <div v-for="item in projects">
-          <a @click='selectCarousel(item[1], item[2])'>
-            <div class='box' :class='item[3]'>
-              <component :is='item[0]' />
+    <component :is="selectedView">
+      <div class="miniGallery">
+        <div v-for="item in projects" :key="item">
+          <a @click="selectCarousel(item[1], item[2])">
+            <div class="box" :class="item[3]">
+              <component :is="item[0]" />
               <p>{{ item[2] }}</p>
             </div>
           </a>
@@ -22,7 +24,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
   import { ref, shallowRef } from 'vue'
 
   import IconUiux from '../../components/Carousel/icons/iconUiux.vue'
@@ -82,13 +84,13 @@
     ],
   ])
 
-  const selectCarousel = (i, x): void => {
+  const selectCarousel = (i, x) => {
     selectedView.value = i
     selectedViewTxt.value = x
     backButtonView.value = true
   }
 
-  const viewCarousel = (): void => {
+  const viewCarousel = () => {
     selectedView.value = `Carousel`
     selectedViewTxt.value = `Select one...`
     backButtonView.value = false

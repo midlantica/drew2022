@@ -1,20 +1,30 @@
 <template>
   <div class="tabs">
-    <router-link :to="{ name: 'ModernProjects' }" class="modern">{{ store.copy.modern }}</router-link>
-    <router-link :to="{ name: 'Bourbon' }" class="bourbon">{{ store.copy.bourbon }}</router-link>
-    <router-link :to="{ name: 'Groovy' }" class="groovy">{{ store.copy.groovy }}</router-link>
-    <router-link :to="{ name: 'Techy' }" class="techy">{{ store.copy.techy }}</router-link>
-    <router-link :to="{ name: 'Corp' }" class="corp">{{ store.copy.corp }}</router-link>
-    <router-link :to="{ name: 'Punk' }" class="punk">{{ store.copy.punk }}</router-link>
+    <router-link :to="{ name: 'ModernProjects' }" class="modern">
+      {{ store.copy.modern }}
+    </router-link>
+    <router-link :to="{ name: 'Bourbon' }" class="bourbon">
+      {{ store.copy.bourbon }}
+    </router-link>
+    <router-link :to="{ name: 'Groovy' }" class="groovy">
+      {{ store.copy.groovy }}
+    </router-link>
+    <router-link :to="{ name: 'Techy' }" class="techy">
+      {{ store.copy.techy }}
+    </router-link>
+    <router-link :to="{ name: 'Corp' }" class="corp">
+      {{ store.copy.corp }}
+    </router-link>
+    <router-link :to="{ name: 'Punk' }" class="punk">
+      {{ store.copy.punk }}
+    </router-link>
   </div>
 </template>
 
-<script lang="ts" setup>
-  // import { defineComponent } from 'vue'
-
+<script setup>
   import { inject } from "vue"
 
-  const store: any = inject("store")
+  const store = inject("store")
 </script>
 
 <style lang="scss" scoped>

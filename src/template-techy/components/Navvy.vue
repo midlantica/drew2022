@@ -1,47 +1,46 @@
 <template>
   <nav>
-    <div class='mastMain'>
-
-      <div class='masty'>
-
-        <div class='DHmast'>
-          <router-link :to="{ name: 'ExtrasTechy' }" class='drewHeadPic jelloHorizontal' />
-          <router-link to='/Techy' class='svgArt mastDrew'>
+    <div class="mastMain">
+      <div class="masty">
+        <div class="DHmast">
+          <router-link :to="{ name: 'ExtrasTechy' }" class="drewHeadPic jelloHorizontal" />
+          <router-link to="/Techy" class="svgArt mastDrew">
             <mastDrew />
           </router-link>
-          <router-link :to="{ name: 'Techy' }" class='svgArt mastHarper'>
+          <router-link :to="{ name: 'Techy' }" class="svgArt mastHarper">
             <mastHarper />
           </router-link>
         </div>
 
-        <div class='jobDesc block'>
+        <div class="jobDesc block">
           <h2>{{ store.copy.uiuxDesigner }} +</h2>
-          <h2 class='marLH'>{{ store.copy.vizDesigner }}</h2>
+          <h2 class="marLH">
+            {{ store.copy.vizDesigner }}
+          </h2>
         </div>
       </div>
 
-      <div class='bar'>
-        <div class='contact'>
-          <p class='email'>
-            <a :href='`mailto:` + `${store.copy.druEmail}`'>{{ store.copy.druEmail }}</a>
+      <div class="bar">
+        <div class="contact">
+          <p class="email">
+            <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
           </p>
-          <p class='resume'>
-            <a :href='resumeUrl' target="_blank">PDF Resume</a>
+          <p class="resume">
+            <a :href="resumeUrl" target="_blank">PDF Resume</a>
           </p>
         </div>
       </div>
-
     </div>
   </nav>
 </template>
 
-<script setup lang="ts">
+<script setup>
   import mastDrew from './masthead/mastDrew.vue'
   import mastHarper from './masthead/mastHarper.vue'
 
   import { inject } from 'vue'
 
-  const store: any = inject('store')
+  const store = inject('store')
   const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 

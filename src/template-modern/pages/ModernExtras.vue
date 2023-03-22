@@ -1,15 +1,9 @@
 <template>
-  <transition
-    name="bounce3"
-    appear
-  >
+  <transition name="bounce3" appear>
     <HeadAndCopy />
   </transition>
 
-  <transition
-    name="bounce2"
-    appear
-  >
+  <transition name="bounce2" appear>
     <ExtrasC />
   </transition>
 </template>

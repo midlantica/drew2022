@@ -1,18 +1,9 @@
 <template>
-  <div
-    name="bounce"
-    appear
-  >
-    <transition
-      name="bounce2"
-      appear
-    >
+  <div name="bounce" appear>
+    <transition name="bounce2" appear>
       <Skills />
     </transition>
-    <transition
-      name="bounce4"
-      appear
-    >
+    <transition name="bounce4" appear>
       <Quotes />
     </transition>
   </div>
@@ -89,7 +80,8 @@
 .fade-enter,
 .fade-leave-to
 
-/* .fade-leave-active below version 2.1.8 */ {
+/* .fade-leave-active below version 2.1.8 */
+  {
   opacity: 0;
 }
 </style>

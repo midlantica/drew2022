@@ -1,8 +1,11 @@
 <template>
   <nav>
-
-    <div class="greenBar">&nbsp;</div>
-    <p class='email'><a :href='`mailto:` + `${store.copy.druEmail}`'>{{ store.copy.druEmail }}</a></p>
+    <div class="greenBar">
+      &nbsp;
+    </div>
+    <p class="email">
+      <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
+    </p>
 
     <div class="mastMain">
       <router-link :to="{ name: 'Punk' }">
@@ -11,18 +14,19 @@
       <router-link :to="{ name: 'Punk' }">
         <mastHarper class="svgArt mastHarper" />
       </router-link>
-      <router-link :to="{ name: 'ExtrasPunk' }" class="DrewHead jelloHorizontal">&nbsp;</router-link>
+      <router-link :to="{ name: 'ExtrasPunk' }" class="DrewHead jelloHorizontal">
+        &nbsp;
+      </router-link>
     </div>
-
   </nav>
 </template>
 
-<script setup lang="ts">
+<script setup>
   import { inject } from 'vue'
   import mastDrew from './masthead/mastDrew.vue'
   import mastHarper from './masthead/mastHarper.vue'
 
-  const store: any = inject('store')
+  const store = inject('store')
 </script>
 
 <style lang="scss" scoped>

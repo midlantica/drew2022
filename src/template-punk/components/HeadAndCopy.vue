@@ -1,32 +1,30 @@
 <template>
   <div>
     <div class="flexbox">
-
       <div class="jobTitles">
         <p>{{ store.copy.uiuxDesigner }}</p>
         <p>{{ store.copy.vizDesigner }}</p>
       </div>
 
       <div class="resumeLinks">
-        <a class='resume rOne' :href="resumeUrl" target="_BLANK">PDF
+        <a class="resume rOne" :href="resumeUrl" target="_BLANK">PDF
           Resume</a>
       </div>
-
     </div>
 
     <div class="copyGrid">
       <div class="mainBody">
         <h1>{{ store.copy.druHead }}</h1>
-        <p v-html="store.copy.druCopy"></p>
+        <p v-html="store.copy.druCopy" />
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
   // import { defineComponent } from 'vue'
   import { inject } from 'vue'
-  const store: any = inject('store')
+  const store = inject('store')
   const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 

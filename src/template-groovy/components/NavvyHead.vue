@@ -1,38 +1,38 @@
 <template>
   <nav>
-    <div class='gridMast'>
-      <div class='groovyCircle'>
-        <router-link :to="{ name: 'ExtrasGroovy' }" class='drewhead jelloHorizontal' />
+    <div class="gridMast">
+      <div class="groovyCircle">
+        <router-link :to="{ name: 'ExtrasGroovy' }" class="drewhead jelloHorizontal" />
       </div>
 
-      <router-link to='/Groovy' class='drewHarperSVG'>
-        <mastDrew class='svgArt mastDrew' />
-        <mastHarper class='svgArt mastHarper' />
+      <router-link to="/Groovy" class="drewHarperSVG">
+        <mastDrew class="svgArt mastDrew" />
+        <mastHarper class="svgArt mastHarper" />
       </router-link>
 
-      <div class='jobDesc'>
+      <div class="jobDesc">
         <h2>{{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}</h2>
       </div>
 
-      <div class='contact'>
-        <p class='email'>
-          <a :href='`mailto:` + `${store.copy.druEmail}`'>{{ store.copy.druEmail }}</a>
+      <div class="contact">
+        <p class="email">
+          <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
         </p>
-        <p class='resume'>
-          <a href='/resume/drew_harper_resume_portfolio.pdf' target="_blank">PDF Resume</a>
+        <p class="resume">
+          <a href="/resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
         </p>
       </div>
     </div>
   </nav>
 </template>
 
-<script setup lang="ts">
+<script setup>
   import mastDrew from './masthead/mastDrew.vue'
   import mastHarper from './masthead/mastHarper.vue'
 
   import { inject } from 'vue'
 
-  const store: any = inject('store')
+  const store = inject('store')
 </script>
 
 <style lang='scss' scoped>
