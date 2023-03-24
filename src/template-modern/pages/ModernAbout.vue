@@ -1,18 +1,12 @@
 <template>
-<div class="aboutGrid">
-  <transition
-    name="bounce3"
-    appear
-  >
-    <HeadAndCopy />
-  </transition>
-  <transition
-    name="bounce4"
-    appear
-  >
-    <About />
-  </transition>
-</div>
+  <div class="aboutGrid">
+    <transition name="bounce3" appear>
+      <HeadAndCopy />
+    </transition>
+    <transition name="bounce4" appear>
+      <About />
+    </transition>
+  </div>
 </template>
 
 <script setup lang="ts">

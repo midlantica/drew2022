@@ -1,26 +1,17 @@
 <template>
-<div
-  class="quoteBlock"
-  v-if="currentQuote"
->
-  <div
-    @click="previousQuote()"
-    class="arrowBtn"
-  >
-    &lt;
-  </div>
-  <transition name="quoteFade">
-    <div class="quotePad">
-      <p>&ldquo;{{ currentQuote.quote }}&rdquo; <cite>&ndash; {{ currentQuote.author }}</cite></p>
+  <div class="quoteBlock" v-if="currentQuote">
+    <div @click="previousQuote()" class="arrowBtn">
+      &lt;
     </div>
-  </transition>
-  <div
-    @click="nextQuote()"
-    class="arrowBtn"
-  >
-    &gt;
+    <transition name="quoteFade">
+      <div class="quotePad">
+        <p>&ldquo;{{ currentQuote.quote }}&rdquo; <cite>&ndash; {{ currentQuote.author }}</cite></p>
+      </div>
+    </transition>
+    <div @click="nextQuote()" class="arrowBtn">
+      &gt;
+    </div>
   </div>
-</div>
 </template>
 
 <script setup>
@@ -153,140 +144,81 @@ const quotes = [
 </script>
 
 <style lang='scss'>
-// ALL QUOTES ########################
+  // ALL QUOTES ########################
 
-.arrowBtn {
-  color: white;
-  font-weight: bold;
-  // padding: 0.25rem 0.5rem 0.35rem;
-  // border-radius: .25rem;
-  // background: hsla(0, 0%, 0%, 0.25);
-  // line-height: 1 !important;
-  user-select: none;
-
-  &:hover {
-    color: yellow;
-    cursor: pointer;
-    // background: hsla(0, 0%, 0%, 0.5);
-    // display: block;
-  }
-
-}
-
-.quoteBlock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.75em 1rem .5em;
-  text-align: center;
-  // border-radius: 2px;
-  margin: auto;
-  width: 100% !important;
-  flex-basis: auto;
-  min-width: 100%;
-  min-height: 5rem;
-  line-height: 1.5;
-  font-size: .9rem;
-  gap: .5rem;
-  // padding: 1rem 2rem;
-  // min-height: 5.5rem;
-
-  @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-    clear: both;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    grid-row-gap: 0em;
-    font-size: .8rem;
-    gap: .25rem;
-  }
-
-  p,
-  cite {
-    font-style: normal;
-    display: inline !important;
-    line-height: 1.5;
-  }
-
-  cite {
-    word-break: keep-all;
-    white-space: nowrap;
-  }
-
-  .quotePad {
-    padding: 0;
-    line-height: 1;
-    margin: auto;
+  .arrowBtn {
+    color: white;
+    font-weight: bold;
+    // padding: 0.25rem 0.5rem 0.35rem;
+    // border-radius: .25rem;
+    // background: hsla(0, 0%, 0%, 0.25);
+    // line-height: 1 !important;
     user-select: none;
-  }
-}
-
-// ####################################
-// ####################################
-
-// MODERN ########################
-.modern .quoteBlock {
-  font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-  color: hsl(0, 0%, 80%);
-
-  p {
-    font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-  }
-
-  .cite {
-    font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-  }
-}
-
-// BOURBON ########################
-.bourbon .quoteBlock {
-  font-family: "AmericanTypewriterStd-Med";
-  background: darken($accent-red, 10);
-  border-radius: 2px;
-  // min-height: 5.5rem;
-  @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
-
-  @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-    clear: both;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    grid-row-gap: 0em;
-  }
-
-  .quotePad {
-    text-align: center !important;
-    // color: white;
-  }
-
-  .quotePad a {
-    color: white !important;
-    cursor: pointer;
 
     &:hover {
-      color: yellow !important;
+      color: yellow;
+      cursor: pointer;
+      // background: hsla(0, 0%, 0%, 0.5);
+      // display: block;
     }
+
   }
 
-  p {
-    font-size: 0.9em;
-    color: $ivory !important;
-    letter-spacing: 0.05em;
-    line-height: 1.5em;
+  .quoteBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75em 1rem .5em;
     text-align: center;
-    //
-    animation: fadeTexter 2s forwards;
+    // border-radius: 2px;
+    margin: auto;
+    width: 100% !important;
+    flex-basis: auto;
+    min-width: 100%;
+    min-height: 5rem;
+    line-height: 1.5;
+    font-size: .9rem;
+    gap: .5rem;
+    // padding: 1rem 2rem;
+    // min-height: 5.5rem;
 
-    @media only screen and (min-device-width: 700px) and (max-device-width: $breakThou) {
-      font-size: 0.9em;
+    @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
+      clear: both;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      grid-row-gap: 0em;
+      font-size: .8rem;
+      gap: .25rem;
     }
 
-    @media only screen and (min-device-width: 0px) and (max-device-width: 700px) {
-      font-size: 0.9em;
+    p,
+    cite {
+      font-style: normal;
+      display: inline !important;
+      line-height: 1.5;
     }
 
+    cite {
+      word-break: keep-all;
+      white-space: nowrap;
+    }
+
+    .quotePad {
+      padding: 0;
+      line-height: 1;
+      margin: auto;
+      user-select: none;
+    }
   }
 
-  // GROOVY ########################
-  .groovy .quoteBlock {
+  // ####################################
+  // ####################################
+
+  // MODERN ########################
+  .modern .quoteBlock {
+    font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+    color: hsl(0, 0%, 80%);
+
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
     }
@@ -295,171 +227,230 @@ const quotes = [
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
     }
   }
-}
 
-// GROOVY ########################
-.groovy .quoteBlock {
-  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  background: darken($accent-red, 10);
-  padding: .75em 2em 1em;
-  @include shadow;
-  text-align: center;
+  // BOURBON ########################
+  .bourbon .quoteBlock {
+    font-family: "AmericanTypewriterStd-Med";
+    background: darken($accent-red, 10);
+    border-radius: 2px;
+    // min-height: 5.5rem;
+    @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
 
-}
+    @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
+      clear: both;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      grid-row-gap: 0em;
+    }
 
-// TECHY ########################
-.techy .quoteBlock {
-  font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
-  background: $mango;
-  padding: 1rem !important;
-  min-height: initial;
-  // padding: .75em 2em 1em;
+    .quotePad {
+      text-align: center !important;
+      // color: white;
+    }
 
-  .arrowBtn {
-    color: $blueTech;
-    padding: 0rem 0.5rem 0.2rem;
-    border: 1px solid $blueTech;
-    line-height: 1.3;
+    .quotePad a {
+      color: white !important;
+      cursor: pointer;
 
-    &:hover {
-      color: $mango;
-      background: $blueTech;
+      &:hover {
+        color: yellow !important;
+      }
+    }
+
+    p {
+      font-size: 0.9em;
+      color: $ivory !important;
+      letter-spacing: 0.05em;
+      line-height: 1.5em;
+      text-align: center;
+      //
+      animation: fadeTexter 2s forwards;
+
+      @media only screen and (min-device-width: 700px) and (max-device-width: $breakThou) {
+        font-size: 0.9em;
+      }
+
+      @media only screen and (min-device-width: 0px) and (max-device-width: 700px) {
+        font-size: 0.9em;
+      }
+
+    }
+
+    // GROOVY ########################
+    .groovy .quoteBlock {
+      p {
+        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+      }
+
+      .cite {
+        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+      }
     }
   }
 
-  p {
-    font-size: 1em;
-    color: $blueTech;
+  // GROOVY ########################
+  .groovy .quoteBlock {
+    font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    background: darken($accent-red, 10);
+    padding: .75em 2em 1em;
+    @include shadow;
     text-align: center;
-    padding: .4rem auto .5rem;
-    letter-spacing: 0.02em;
 
-    @media (max-width: $breakThou) {
-      font-size: 1.25em;
+  }
+
+  // TECHY ########################
+  .techy .quoteBlock {
+    font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
+    background: $mango;
+    padding: 1rem !important;
+    min-height: initial;
+    // padding: .75em 2em 1em;
+
+    .arrowBtn {
+      color: $blueTech;
+      padding: 0rem 0.5rem 0.2rem;
+      border: 1px solid $blueTech;
+      line-height: 1.3;
+
+      &:hover {
+        color: $mango;
+        background: $blueTech;
+      }
     }
 
-    @media (max-width: $breakOne) {
-      font-size: 1.2em;
-    }
-
-    @media (max-width: $breakTwo) {
+    p {
       font-size: 1em;
+      color: $blueTech;
+      text-align: center;
+      padding: .4rem auto .5rem;
+      letter-spacing: 0.02em;
+
+      @media (max-width: $breakThou) {
+        font-size: 1.25em;
+      }
+
+      @media (max-width: $breakOne) {
+        font-size: 1.2em;
+      }
+
+      @media (max-width: $breakTwo) {
+        font-size: 1em;
+      }
+
+      @media (max-width: $breakThree) {
+        font-size: .85em;
+        line-height: 1.25em;
+      }
     }
 
-    @media (max-width: $breakThree) {
-      font-size: .85em;
-      line-height: 1.25em;
+    .cite {
+      display: inline !important;
+      color: $blueTech;
+      letter-spacing: .08em;
     }
   }
 
-  .cite {
-    display: inline !important;
-    color: $blueTech;
-    letter-spacing: .08em;
-  }
-}
-
-// CORP ########################
-.corp .quoteBlock {
-  font-family: "Bodoni Moda", Times, serif !important;
-  // background: #FFC600;
-  padding: 1rem !important;
-  background: #01487F;
-  padding: 1em 0em 1rem;
-  text-align: center;
-  color: white;
-  min-height: initial;
-
-  .arrowBtn {
+  // CORP ########################
+  .corp .quoteBlock {
+    font-family: "Bodoni Moda", Times, serif !important;
+    // background: #FFC600;
+    padding: 1rem !important;
+    background: #01487F;
+    padding: 1em 0em 1rem;
+    text-align: center;
     color: white;
-    padding: 0rem 0.5rem .1rem;
-    // border: 1px solid white;
-    font-weight: bold !important;
+    min-height: initial;
 
-    &:hover {
-      color: $mango;
-      background: #00355d;
+    .arrowBtn {
+      color: white;
+      padding: 0rem 0.5rem .1rem;
+      // border: 1px solid white;
+      font-weight: bold !important;
+
+      &:hover {
+        color: $mango;
+        background: #00355d;
+      }
+    }
+
+    .arrowBtn:nth-child(1)::after {
+
+      //
+      &:hover {
+        content: '<';
+
+      }
+    }
+
+    .arrowBtn:nth-child(3)::after {
+
+      //
+      &:hover {
+        content: '>';
+
+      }
+    }
+
+    p {
+      font-family: "Bodoni Moda", Times, serif !important;
+    }
+
+    .cite {
+      font-family: "Bodoni Moda", Times, serif !important;
+
     }
   }
 
-  .arrowBtn:nth-child(1)::after {
+  // PUNK ########################
+  .punk .quoteBlock {
+    p {
+      font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+    }
 
-    //
-    &:hover {
-      content: '<';
-
+    .cite {
+      font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
     }
   }
 
-  .arrowBtn:nth-child(3)::after {
-
-    //
-    &:hover {
-      content: '>';
-
-    }
+  // ZOOM ANIMATION ########################
+  .zoomQuote-enter-active,
+  .zoomQuote-leave-active {
+    transition: transform 300ms ease;
   }
 
-  p {
-    font-family: "Bodoni Moda", Times, serif !important;
+  .zoomQuote-enter-from,
+  .zoomQuote-leave-to {
+    transform: scale(0.9);
+    transform: translateX(-20px);
+    transition: all 1s ease-out;
+    opacity: 0;
   }
 
-  .cite {
-    font-family: "Bodoni Moda", Times, serif !important;
-
-  }
-}
-
-// PUNK ########################
-.punk .quoteBlock {
-  p {
-    font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+  .fadeTexter-enter,
+  .fadeTexter-enter-active {
+    transition: all 1s ease-out;
+    opacity: 1;
   }
 
-  .cite {
-    font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+  .fadeTexter-leave-active {
+    transition: all 1s cubic-bezier(1, 0.5, 0.8, 1);
+    opacity: 1;
   }
-}
 
-// ZOOM ANIMATION ########################
-.zoomQuote-enter-active,
-.zoomQuote-leave-active {
-  transition: transform 300ms ease;
-}
+  .fadeTexter-enter-from,
+  .fadeTexter-leave-to {
+    transform: translateX(20px);
+    transition: all 1s ease-out;
+    opacity: 0;
+  }
 
-.zoomQuote-enter-from,
-.zoomQuote-leave-to {
-  transform: scale(0.9);
-  transform: translateX(-20px);
-  transition: all 1s ease-out;
-  opacity: 0;
-}
+  .quoteFade-enter-active,
+  .quoteFade-leave-active {
+    transition: opacity 1s;
+  }
 
-.fadeTexter-enter,
-.fadeTexter-enter-active {
-  transition: all 1s ease-out;
-  opacity: 1;
-}
-
-.fadeTexter-leave-active {
-  transition: all 1s cubic-bezier(1, 0.5, 0.8, 1);
-  opacity: 1;
-}
-
-.fadeTexter-enter-from,
-.fadeTexter-leave-to {
-  transform: translateX(20px);
-  transition: all 1s ease-out;
-  opacity: 0;
-}
-
-.quoteFade-enter-active,
-.quoteFade-leave-active {
-  transition: opacity 1s;
-}
-
-.quoteFade-enter,
-.quoteFade-leave-to {
-  opacity: 0;
-}
+  .quoteFade-enter,
+  .quoteFade-leave-to {
+    opacity: 0;
+  }
 </style>

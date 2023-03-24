@@ -1,7 +1,7 @@
 <template>
-<div class="tooltip">
-  <p>{{ tooltipText }}</p>
-</div>
+  <div class="tooltip">
+    <p>{{ tooltipText }}</p>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -58,6 +58,7 @@ const tooltipText = ref('tooltipText')
   }
 
   body.punk .tooltip {
+
     //
     p {
       margin: .25rem auto;
@@ -65,6 +66,7 @@ const tooltipText = ref('tooltipText')
   }
 
   body.corp .tooltip {
+
     //
     p {
       font-family: 'Bodoni Moda', Times, serif !important;
@@ -112,5 +114,4 @@ const tooltipText = ref('tooltipText')
 
     }
   }
-
 </style>

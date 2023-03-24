@@ -9,28 +9,51 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'standard-with-typescript'
   ],
-  overrides: [
-  ],
+  // parser: 'vue-eslint-parser',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
+    sourceType: 'module',
     ecmaFeatures: {
-      experimentalObjectRestSpread: true
-    },
-    sourceType: 'module'
+      globalReturn: false,
+      impliedStrict: false,
+      jsx: false
+    }
   },
   plugins: [
     'vue'
   ],
   rules: {
+    // indent: ['error', 2],
     'vue/html-indent': [1, 2, {
-      attribute: 1,
-      baseIndent: 0,
+      baseIndent: 1,
       closeBracket: 0,
       alignAttributesVertically: true,
       ignores: []
     }],
+    'vue/script-indent': ['error', 2, {
+      baseIndent: 0,
+      switchCase: 0,
+      ignores: []
+    }],
     'vue/multi-word-component-names': [0, {
       ignores: []
+    }],
+    'vue/max-attributes-per-line': ['error', {
+      singleline: {
+        max: 3
+      },
+      multiline: {
+        max: 3
+      }
     }]
-  }
+  },
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        indent: 1
+      }
+    }
+  ]
 }

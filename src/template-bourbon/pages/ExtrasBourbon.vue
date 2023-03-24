@@ -1,18 +1,15 @@
 <template>
-<header>
-  <Navvy />
-</header>
+  <header>
+    <Navvy />
+  </header>
 
-<transition
-  name="bounce2"
-  appear
->
-  <ExtrasC />
-</transition>
+  <transition name="bounce2" appear>
+    <ExtrasC />
+  </transition>
 
-<footer>
-  <NavvyEmpty />
-</footer>
+  <footer>
+    <NavvyEmpty />
+  </footer>
 </template>
 
 <script setup lang="ts">
@@ -22,5 +19,5 @@ import ExtrasC from '../../components/ExtrasC.vue'
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/css/bourbon-main.scss";
+  @import "../assets/css/bourbon-main.scss";
 </style>

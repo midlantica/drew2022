@@ -91,9 +91,7 @@
     color: transparentize($blueTech, .2);
     letter-spacing: 0.06em;
 
-    @media (min-width: $breakThou)
-    and (-webkit-min-device-pixel-ratio: 2)
-    {
+    @media (min-width: $breakThou) and (-webkit-min-device-pixel-ratio: 2) {
       // font-size: 1.2rem;
       // line-height: 2.6em;
     }
@@ -127,9 +125,7 @@
       // background: red;
     }
 
-    @media (max-width: $breakTwo)
-    and (-webkit-min-device-pixel-ratio: 2)
-    {
+    @media (max-width: $breakTwo) and (-webkit-min-device-pixel-ratio: 2) {
       font-size: 1.15rem;
       // line-height: 2.4em;
       // margin: 1em 1em 0;
@@ -137,11 +133,7 @@
       // background: red;
     }
 
-    @media only screen
-    and (min-device-width: 375px)
-    and (max-device-width: 660px)
-    and (-webkit-min-device-pixel-ratio: 2)
-    {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
       margin: 0.5em 0em 0em;
       // padding-bottom: 1em;
       font-size: 1.18em;
@@ -149,12 +141,9 @@
       // background: purple;
     }
 
-    @media only screen
-    and (min-device-width : 375px)
-    and (max-device-width : 667px) {
+    @media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
       // background: red;
     }
 
   }
-
 </style>

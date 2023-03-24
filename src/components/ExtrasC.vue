@@ -1,35 +1,22 @@
 <template>
-<transition
-  name="bounce3"
-  appear
->
-  <div class="extrasWrapper flexRowWrap w100 marAuto">
-    <h1 class="marAuto">
-      Portfolio Extras
-    </h1>
+  <transition name="bounce3" appear>
+    <div class="extrasWrapper flexRowWrap w100 marAuto">
+      <h1 class="marAuto">
+        Portfolio Extras
+      </h1>
 
-    <div class="flexxy flexRowWrap center-flex gapY1 align-items-flex-start">
-      <div
-        v-for="(item, index) in portfolioExtras"
-        :key="index"
-        class="align-content-center marX1"
-      >
-        <a
-          :href="itemUrl(item)"
-          target="_BLANK"
-        >
-          <img
-            class="portThumbs"
-            :src="itemSrc(item)"
-          >
-          <div class="text-center">
-            <p>{{ item.text }}</p>
-          </div>
-        </a>
+      <div class="flexxy flexRowWrap center-flex gapY1 align-items-flex-start">
+        <div v-for="(item, index) in portfolioExtras" :key="index" class="align-content-center marX1">
+          <a :href="itemUrl(item)" target="_BLANK">
+            <img class="portThumbs" :src="itemSrc(item)">
+            <div class="text-center">
+              <p>{{ item.text }}</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</transition>
+  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -101,73 +88,73 @@ const portfolioExtras = [
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  font-size: 2em;
-  text-align: center;
-  padding: 0.5em 0;
-
-  a {
-    text-decoration: none;
-  }
-}
-
-.flexxy {
-  padding: 0 0em;
-  display: flex;
-  width: 100%;
-
-  a {
-    flex-basis: auto;
-    flex-grow: 1;
-    box-sizing: border-box;
+  h1 {
+    font-size: 2em;
     text-align: center;
-    align-items: center;
-    text-decoration: none;
-    // margin: 0em 1em;
-    color: black;
+    padding: 0.5em 0;
 
-    img.portThumbs {
-      width: 400px;
-      height: auto;
-      // margin: 1em auto 0;
-      border: 2px solid $ivory;
-      transition: opacity 1s ease-in-out;
-      @include shadow;
-
-      &:hover {
-        border: 2px solid lighten($accent-red, 0);
-        @include no-shadow;
-      }
+    a {
+      text-decoration: none;
     }
+  }
 
-    p {
-      display: inline-block;
+  .flexxy {
+    padding: 0 0em;
+    display: flex;
+    width: 100%;
+
+    a {
+      flex-basis: auto;
+      flex-grow: 1;
+      box-sizing: border-box;
       text-align: center;
-      // margin: 0;
-      margin-bottom: 1em;
-      margin-top: 0.5em;
-      padding-bottom: 0;
-      font-size: 0.85em;
+      align-items: center;
+      text-decoration: none;
+      // margin: 0em 1em;
       color: black;
-      border-bottom: 1px solid transparent;
-      max-width: 400px;
-      @include clearfix;
 
-      &:hover {
+      img.portThumbs {
+        width: 400px;
+        height: auto;
+        // margin: 1em auto 0;
+        border: 2px solid $ivory;
+        transition: opacity 1s ease-in-out;
+        @include shadow;
+
+        &:hover {
+          border: 2px solid lighten($accent-red, 0);
+          @include no-shadow;
+        }
+      }
+
+      p {
+        display: inline-block;
+        text-align: center;
+        // margin: 0;
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+        padding-bottom: 0;
+        font-size: 0.85em;
+        color: black;
+        border-bottom: 1px solid transparent;
+        max-width: 400px;
+        @include clearfix;
+
+        &:hover {
+          border-bottom: 1px solid lighten($accent-red, 30);
+        }
+      }
+
+      &:hover p {
+        color: purple;
         border-bottom: 1px solid lighten($accent-red, 30);
       }
-    }
 
-    &:hover p {
-      color: purple;
-      border-bottom: 1px solid lighten($accent-red, 30);
-    }
-
-    &:hover img {
-      border: 2px solid lighten($accent-red, 0);
-      @include no-shadow;
-      cursor: pointer;
+      &:hover img {
+        border: 2px solid lighten($accent-red, 0);
+        @include no-shadow;
+        cursor: pointer;
+      }
     }
   }
-}
 </style>

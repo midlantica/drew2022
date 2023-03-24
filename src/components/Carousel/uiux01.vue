@@ -1,26 +1,17 @@
 <template>
-<vueper-slides
-  fade
-  :infinite="false"
-  :bullets="false"
-  :slide-ratio="1 / 1.3"
-  autoplay
-  fractions
-  progress
-  lazy
-  lazy-load-on-drag
->
-  <vueper-slide
-    v-for="(slide, i) in slides"
-    :key="i"
-    :image="slide.image"
+  <vueper-slides
+    fade :infinite="false" :bullets="false"
+    :slide-ratio="1 / 1.3" autoplay fractions
+    progress lazy
+    lazy-load-on-drag
   >
-    <template #loader>
-      <i class="icon icon-loader spinning" />
-      <span>Loading...</span>
-    </template>
-  </vueper-slide>
-</vueper-slides>
+    <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
+      <template #loader>
+        <i class="icon icon-loader spinning" />
+        <span>Loading...</span>
+      </template>
+    </vueper-slide>
+  </vueper-slides>
 </template>
 
 <script setup lang="ts">
@@ -102,5 +93,5 @@ const slides = shallowRef([
 </script>
 
 <style lang="scss">
-@import "../../assets/css/carousel.scss";
+  @import "../../assets/css/carousel.scss";
 </style>

@@ -1,18 +1,15 @@
 <template>
-<header>
-  <Navvy />
-</header>
+  <header>
+    <Navvy />
+  </header>
 
-<transition
-  name="bounce2"
-  appear
->
-  <ExtrasC />
-</transition>
+  <transition name="bounce2" appear>
+    <ExtrasC />
+  </transition>
 
-<footer>
-  <NavvyEmpty />
-</footer>
+  <footer>
+    <NavvyEmpty />
+  </footer>
 </template>
 
 <script setup>
@@ -21,5 +18,5 @@ import ExtrasC from '../../components/ExtrasC'
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/css/corp-main.scss';
+  @import '../assets/css/corp-main.scss';
 </style>
