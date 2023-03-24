@@ -86,14 +86,15 @@ footer {
 
 .mainGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
   margin: 1em 1em;
 
+  grid-gap: 1em;
+  grid-template-columns: repeat(2, 1fr);
+
   @media (max-width: $breakThou) {
-    grid-template-columns: 1fr;
-    grid-gap: 0em;
+    grid-gap: 0;
     grid-row-gap: 1em;
+    grid-template-columns: 1fr;
   }
 
   @media (max-width: $breakOne) {
@@ -106,9 +107,10 @@ footer {
 }
 
 .copyArea {
+  transition-delay: 250ms;
+
   grid-column: 1 / 2;
   grid-row: 1 / 4;
-  transition-delay: 250ms;
 
   @media (max-width: $breakThou) {
     grid-column: 1 / 3;
@@ -170,9 +172,10 @@ footer {
   }
 
   @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-    margin-top: 0.25em;
-    margin-bottom: 0.5em;
-    grid-row-gap: 0em;
+    margin-top: .25em;
+    margin-bottom: .5em;
+
+    grid-row-gap: 0;
   }
 }
 

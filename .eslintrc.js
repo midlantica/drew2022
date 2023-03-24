@@ -13,8 +13,8 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true
     },
     sourceType: 'module'
   },
@@ -22,15 +22,15 @@ module.exports = {
     'vue'
   ],
   rules: {
-    "vue/html-indent": [1, 2, {
-      "attribute": 1,
-      "baseIndent": 0,
-      "closeBracket": 0,
-      "alignAttributesVertically": true,
-      "ignores": []
+    'vue/html-indent': [1, 2, {
+      attribute: 1,
+      baseIndent: 0,
+      closeBracket: 0,
+      alignAttributesVertically: true,
+      ignores: []
     }],
-    "vue/multi-word-component-names": [0, {
-      "ignores": []
+    'vue/multi-word-component-names': [0, {
+      ignores: []
     }]
   }
 }
