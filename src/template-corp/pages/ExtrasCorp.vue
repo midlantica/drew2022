@@ -13,8 +13,8 @@
 </template>
 
 <script setup>
-import Navvy from '../components/Navvy'
-import ExtrasC from '../../components/ExtrasC'
+  import Navvy from '../components/Navvy'
+  import ExtrasC from '../../components/ExtrasC'
 </script>
 
 <style lang="scss" scoped>

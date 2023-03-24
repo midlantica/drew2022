@@ -9,9 +9,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import Skills from '../../components/Skills.vue'
-import Quotes from '../../components/Quote.vue'
+<script setup>
+  import Skills from '../../components/Skills.vue'
+  import Quotes from '../../components/Quote.vue'
 </script>
 
 <style lang='scss' scoped>

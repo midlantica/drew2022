@@ -10,9 +10,9 @@
 
 <script setup>
 // import { defineComponent } from 'vue'
-import { inject } from 'vue'
+  import { inject } from 'vue'
 
-const store = inject('store')
+  const store = inject('store')
 </script>
 
 <style lang="scss" scoped>

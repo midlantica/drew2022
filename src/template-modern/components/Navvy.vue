@@ -1,7 +1,9 @@
 <template>
   <nav>
     <h1>
-      <router-link :to="{ name: 'ModernProjects' }">&nbsp;drew harper</router-link>
+      <router-link :to="{ name: 'ModernProjects' }">
+        &nbsp;drew harper
+      </router-link>
     </h1>
     <section class="jobDesc">
       <h2>{{ store.copy.uiuxDesigner }} / {{ store.copy.vizDesigner }}</h2>
@@ -11,16 +13,16 @@
         <a :href="`mailto:` + `${store.copy.druEmail}`" class="marTH">{{
           store.copy.druEmail
         }}</a>
-        <a :href='resumeUrl' target="_blank" class="marTH">PDF&nbsp;Resume</a>
+        <a :href="resumeUrl" target="_blank" class="marTH">PDF&nbsp;Resume</a>
       </p>
     </section>
   </nav>
 </template>
 
-<script lang="ts" setup>
-  import { inject, ref } from "vue"
+<script  setup>
+  import { inject } from 'vue'
 
-  const store: any = inject("store")
+  const store = inject('store')
   const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 

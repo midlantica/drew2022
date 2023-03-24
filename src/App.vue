@@ -6,18 +6,18 @@
         <component :is="Component" />
       </transition>
     </router-view>
-    <teleport to="#modal"></teleport>
+    <teleport to="#modal" />
   </div>
 </template>
 
-<script lang="ts" setup>
+<script  setup>
   import { provide } from 'vue'
   import store from './store/index'
   import quotes from './store/quotes'
   import Tabs from './components/Tabs.vue'
 
-  provide('store', store) as any
-  provide('quotes', quotes) as any
+  provide('store', store)
+  provide('quotes', quotes)
 </script>
 
 <style lang="scss">

@@ -32,7 +32,7 @@ module.exports = {
       ignores: []
     }],
     'vue/script-indent': ['error', 2, {
-      baseIndent: 0,
+      baseIndent: 1,
       switchCase: 0,
       ignores: []
     }],
@@ -52,7 +52,7 @@ module.exports = {
     {
       files: ['*.vue'],
       rules: {
-        indent: 1
+        indent: 0
       }
     }
   ]

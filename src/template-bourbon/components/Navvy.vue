@@ -1,28 +1,30 @@
 <template>
   <nav>
     <h1>
-      <router-link :to="{ name: 'Bourbon' }">DREW HARPER</router-link>
+      <router-link :to="{ name: 'Bourbon' }">
+        DREW HARPER
+      </router-link>
     </h1>
-    <section class='jobDesc'>
+    <section class="jobDesc">
       <h2>{{ store.copy.uiuxDesigner }}</h2>
       <h2>{{ store.copy.vizDesigner }}</h2>
     </section>
-    <section class='contact'>
-      <p class='email'>
-        <a :href='`mailto:` + `${store.copy.druEmail}`'>{{ store.copy.druEmail }}</a>
+    <section class="contact">
+      <p class="email">
+        <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
       </p>
-      <p class='resume'>
-        <a href='/resume/drew_harper_resume_portfolio.pdf' target="_blank">PDF Resume</a>
+      <p class="resume">
+        <a href="/resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
       </p>
     </section>
   </nav>
 </template>
 
-<script lang="ts" setup>
+<script  setup>
   import { inject } from 'vue'
   import { RouterLink } from 'vue-router'
 
-  const store: any = inject('store')
+  const store = inject('store')
 </script>
 
 <style lang='scss' scoped>

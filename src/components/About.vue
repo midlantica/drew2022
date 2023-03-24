@@ -13,39 +13,39 @@
 </template>
 
 <script setup>
-import { inject, ref, computed } from 'vue'
-import { useMouseInElement } from '@vueuse/core'
+  import { inject, ref, computed } from 'vue'
+  import { useMouseInElement } from '@vueuse/core'
 
-const store = inject('store')
+  const store = inject('store')
 
-const target = ref(null)
-const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(target)
-const cardTransform = computed(() => {
-  const MAX_ROTATION = 10
+  const target = ref(null)
+  const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(target)
+  const cardTransform = computed(() => {
+    const MAX_ROTATION = 10
 
-  const rX = (MAX_ROTATION / 2 - (elementY.value / elementHeight.value) * MAX_ROTATION).toFixed(2) // handles x-axis
-  const rY = (MAX_ROTATION / 2 - (elementX.value / elementWidth.value) * MAX_ROTATION).toFixed(2) // handles x-axis
+    const rX = (MAX_ROTATION / 2 - (elementY.value / elementHeight.value) * MAX_ROTATION).toFixed(2) // handles x-axis
+    const rY = (MAX_ROTATION / 2 - (elementX.value / elementWidth.value) * MAX_ROTATION).toFixed(2) // handles x-axis
 
-  return isOutside.value ? '' : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
-})
+    return isOutside.value ? '' : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
+  })
 
-// SOUND!!! ###################################
-// SOUND!!! ###################################
-const yeehaw = new Audio('/yeehaw.mp3')
-const jollyGood = new Audio('/jollyGood.mp3')
+  // SOUND!!! ###################################
+  // SOUND!!! ###################################
+  const yeehaw = new Audio('/yeehaw.mp3')
+  const jollyGood = new Audio('/jollyGood.mp3')
 
-let isActive = false
+  let isActive = false
 
-const play = () => {
-  if (isActive) {
-    yeehaw.play()
-    console.log(isActive)
-  } else {
-    jollyGood.play()
-    console.log(isActive)
+  const play = () => {
+    if (isActive) {
+      yeehaw.play()
+      console.log(isActive)
+    } else {
+      jollyGood.play()
+      console.log(isActive)
+    }
+    isActive = !isActive
   }
-  isActive = !isActive
-}
 </script>
 
 <style lang="scss" scoped>

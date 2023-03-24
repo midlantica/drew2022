@@ -39,12 +39,12 @@
 </template>
 
 <script setup>
-import Navvy from '../components/Navvy'
-import HeadAndCopy from '../components/HeadAndCopy'
-import Skills from '../../components/Skills'
-import About from '../../components/About'
-import Quote from '../../components/Quote.vue'
-import Carousel from '../../components/Carousel/Carousel'
+  import Navvy from '../components/Navvy'
+  import HeadAndCopy from '../components/HeadAndCopy'
+  import Skills from '../../components/Skills'
+  import About from '../../components/About'
+  import Quote from '../../components/Quote.vue'
+  import Carousel from '../../components/Carousel/Carousel'
 </script>
 
 <style lang="scss" scoped>

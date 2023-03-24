@@ -9,9 +9,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import HeadAndCopy from '../components/HeadAndCopy.vue'
-import About from '../../components/About.vue'
+<script setup>
+  import HeadAndCopy from '../components/HeadAndCopy.vue'
+  import About from '../../components/About.vue'
 </script>
 
 <style lang="scss" scoped>

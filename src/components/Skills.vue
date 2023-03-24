@@ -1,8 +1,10 @@
 <template>
   <div class="skillsGrid">
-    <div v-for="item in skills" key="index">
-      <component :is="item[0]" class="icon {{item[1]}} { active: hover }" @mouseleave="hover = false"
-        @click="showModal(item)" />
+    <div v-for="(item, index) in skills" :key="index">
+      <component
+        :is="item[0]" class="icon {{item[1]}} { active: hover }" @mouseleave="hover = false"
+        @click="showModal(item)"
+      />
     </div>
 
     <Teleport to="#modal">
@@ -14,134 +16,134 @@
             </div>
             <div class="modalInner">
               <div class="icon">
-                <component :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }"
-                  @mouseleave="hover = false" />
+                <component
+                  :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }"
+                  @mouseleave="hover = false"
+                />
               </div>
               <div class="content">
                 <h4>{{ modelItem[2] }}</h4>
                 <p>{{ modelItem[3] }}</p>
               </div>
-
             </div>
           </div>
         </div>
       </transition>
     </Teleport>
-
   </div>
 </template>
 
-<script setup lang="ts">
-  import { ref, markRaw, defineAsyncComponent } from "vue"
+<script setup>
+  import { ref, markRaw, defineAsyncComponent } from 'vue'
   import { onClickOutside } from '@vueuse/core'
 
   import xOut from './Icons/iconXout.vue'
 
-  const iconUiux = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconUiux.vue')))
-  const iconHtml5 = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconHtml5.vue')))
-  const iconCss3 = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconCss3.vue')))
-  const iconJs = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconJs.vue')))
-  const iconSketch = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSketch.vue')))
-  const iconSass = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSass.vue')))
-  const iconVue = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconVue.vue')))
-  const iconSvg = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconSvg.vue')))
-  const iconTailwind = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconTailwind.vue')))
-  const iconFigma = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconFigma.vue')))
-  const iconNuxt = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue')))
-  const iconChelsea = markRaw(defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue')))
+  const iconUiux = markRaw(defineAsyncComponent(() => import('./Icons/iconUiux.vue')))
+  const iconHtml5 = markRaw(defineAsyncComponent(() => import('./Icons/iconHtml5.vue')))
+  const iconCss3 = markRaw(defineAsyncComponent(() => import('./Icons/iconCss3.vue')))
+  const iconJs = markRaw(defineAsyncComponent(() => import('./Icons/iconJs.vue')))
+  const iconSketch = markRaw(defineAsyncComponent(() => import('./Icons/iconSketch.vue')))
+  const iconSass = markRaw(defineAsyncComponent(() => import('./Icons/iconSass.vue')))
+  const iconVue = markRaw(defineAsyncComponent(() => import('./Icons/iconVue.vue')))
+  const iconSvg = markRaw(defineAsyncComponent(() => import('./Icons/iconSvg.vue')))
+  const iconTailwind = markRaw(defineAsyncComponent(() => import('./Icons/iconTailwind.vue')))
+  const iconFigma = markRaw(defineAsyncComponent(() => import('./Icons/iconFigma.vue')))
+  const iconNuxt = markRaw(defineAsyncComponent(() => import('./Icons/iconNuxt.vue')))
+  const iconChelsea = markRaw(defineAsyncComponent(() => import('./Icons/iconChelsea.vue')))
 
   const modal = ref(null)
 
   const hover = ref(false)
 
-  let modelItem = ref([])
+  const modelItem = ref([])
 
-  function showModal(item): void {
+  function showModal (item) {
     modelItem.value = item
     isModalOpen.value = true
   }
 
-  function closeModal(): any {
+  function closeModal () {
     isModalOpen.value = false
   }
 
   const isModalOpen = ref(false)
 
-  onClickOutside(modal, (): boolean => (isModalOpen.value = false))
+  onClickOutside(modal, () => (isModalOpen.value = false))
 
   const skills = markRaw([
     [
       iconUiux,
       'uiux',
       'UI/UX Design',
-      `UX Design is my first love. Humility before the User. Crack the flow!`,
+      'UX Design is my first love. Humility before the User. Crack the flow!'
     ],
     [
       iconHtml5,
       'html5',
       'Html 5',
-      `HTML5: the bones of the Internet. As few divs and spans as possible if you please.`,
+      'HTML5: the bones of the Internet. As few divs and spans as possible if you please.'
     ],
     [
       iconCss3,
       'css3',
       'CSS 3',
-      `CSS3: Engineers just love CSS haha! Let me do that for you 🙂 I enjoy its declarative cascading infuriating novelty.`,
+      'CSS3: Engineers just love CSS haha! Let me do that for you 🙂 I enjoy its declarative cascading infuriating novelty.'
     ],
     [
       iconJs,
       'js',
       'JavaScript',
-      `JavaScript: I design, do all my HTML & CSS, I'm still mastering JS. Continuous learning, Love me some Vue 💚, like this site`,
+      'JavaScript: I design, do all my HTML & CSS, I\'m still mastering JS. Continuous learning, Love me some Vue 💚, like this site'
     ],
     [
       iconFigma,
       'figma',
       'Figma',
-      `Figma is the king of UX prototyping. It ain't Illustrator but collaboration ftw.`,
+      'Figma is the king of UX prototyping. It ain\'t Illustrator but collaboration ftw.'
     ],
     [
       iconTailwind,
       'tailwind',
       'Tailwind CSS',
-      `Tailwind takes the naming pain out of CSS and it's brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park`,
+      'Tailwind takes the naming pain out of CSS and it\'s brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park'
     ],
     [
       iconSass,
       'sass',
       'SASS',
-      `SASS has made CSS so much more fun and nesty to use. CSS's new --vars make it more robust, but there's a long way to go.`,
+      'SASS has made CSS so much more fun and nesty to use. CSS\'s new --vars make it more robust, but there\'s a long way to go.'
     ],
     [
       iconVue,
       'vue',
       'Vue',
-      `Vue.js is my favorite JS framework, a great balance of Angular's ease and React's abilities.`,
+      'Vue.js is my favorite JS framework, a great balance of Angular\'s ease and React\'s abilities.'
     ],
     [
       iconNuxt,
       'nuxt',
       'Nuxt',
-      `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`,
+      'The Nuxt framework for Vue: SSR, routes by dir, SEO; it\'s jam-stacked with Dev happiness. Digging Gridsome.js too.'
     ],
     [
       iconSketch,
       'sketch',
       'Sketch',
-      `Sketch used to be the king of UX prototyping, now it's old school.`,
+      'Sketch used to be the king of UX prototyping, now it\'s old school.'
     ],
     [
       iconSvg,
       'svg',
       'SVG',
-      `SVG: Vector is best because it scales and rasters don't, and it's editable, you can even put CSS in a SVG file.`,
+      'SVG: Vector is best because it scales and rasters don\'t, and it\'s editable, you can even put CSS in a SVG file.'
     ],
     [
       iconChelsea,
       'chelsea',
       'Chelsea FC',
-      `I love Chelsea FC! 💙  I enjoy competition. Love Rugby and Cricket, I was a demon fast bowler! And Football, Go Titans!`,
-    ],
+      'I love Chelsea FC! 💙  I enjoy competition. Love Rugby and Cricket, I was a demon fast bowler! And Football, Go Titans!'
+    ]
   ])
 
 </script>
@@ -396,7 +398,6 @@
     svg {
       width: 88px;
     }
-
 
   }
 

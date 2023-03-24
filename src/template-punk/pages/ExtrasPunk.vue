@@ -17,11 +17,11 @@
 </template>
 
 <script setup>
-import store from '../../store/index'
+  import store from '../../store/index'
 
-import Navvy from '../components/Navvy'
-import ExtrasC from '../../components/ExtrasC'
-const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
+  import Navvy from '../components/Navvy'
+  import ExtrasC from '../../components/ExtrasC'
+  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 
 <style lang="scss" scoped>

@@ -4,9 +4,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-const tooltipText = ref('tooltipText')
+<script setup>
+  import { ref } from 'vue'
+  const tooltipText = ref('tooltipText')
 </script>
 
 <style lang="scss" scoped>

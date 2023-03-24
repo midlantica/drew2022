@@ -6,8 +6,8 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import Carousel from '../../components/Carousel/Carousel.vue'
+<script setup>
+  import Carousel from '../../components/Carousel/Carousel.vue'
 
 </script>
 

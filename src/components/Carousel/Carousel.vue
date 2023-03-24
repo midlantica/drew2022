@@ -1,18 +1,20 @@
 <template>
-  <div class='projectBox'>
+  <div class="projectBox">
     <div class="projectBox__top">
       <transition name="bounce3" appear>
-        <a class='carouselArrow flash' v-if="backButtonView" @click='viewCarousel()'>﹤ back</a>
+        <a class="carouselArrow flash" v-if="backButtonView" @click="viewCarousel()">﹤ back</a>
       </transition>
-      <p class='projectHead' @click='viewCarousel()'>Projects - {{ selectedViewTxt }}</p>
+      <p class="projectHead" @click="viewCarousel()">
+        Projects - {{ selectedViewTxt }}
+      </p>
     </div>
 
-    <component :is='selectedView'>
-      <div class='miniGallery'>
-        <div v-for="item in projects">
-          <a @click='selectCarousel(item[1], item[2])'>
-            <div class='box' :class='item[3]'>
-              <component :is='item[0]' />
+    <component :is="selectedView">
+      <div class="miniGallery">
+        <div v-for="item in projects" :key="item">
+          <a @click="selectCarousel(item[1], item[2])">
+            <div class="box" :class="item[3]">
+              <component :is="item[0]" />
               <p>{{ item[2] }}</p>
             </div>
           </a>
@@ -22,7 +24,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
   import { ref, shallowRef } from 'vue'
 
   import IconUiux from '../../components/Carousel/icons/iconUiux.vue'
@@ -39,58 +41,58 @@
   import print05 from '../../components/Carousel/print05.vue'
   import misc06 from '../../components/Carousel/misc06.vue'
 
-  let backButtonView = ref(false)
-  let selectedView = shallowRef('Carousel')
-  let selectedViewTxt = ref('Select one...')
+  const backButtonView = ref(false)
+  const selectedView = shallowRef('Carousel')
+  const selectedViewTxt = ref('Select one...')
 
   const projects = shallowRef([
     [
       IconUiux,
       uiux01,
-      `UI/UX Design`,
+      'UI/UX Design',
       'Uiux'
     ],
     [
       IconMobile,
       mobile02,
-      `Mobile`,
+      'Mobile',
       'Mobile'
     ],
     [
       IconKiosk,
       kiosk03,
-      `Kiosk`,
+      'Kiosk',
       'Kiosk'
     ],
     [
       IconGraphics,
       graphics04,
-      `Graphics`,
+      'Graphics',
       'Graphics'
     ],
     [
       IconPrint,
       print05,
-      `Print`,
+      'Print',
       'Print'
     ],
     [
       IconMisc,
       misc06,
-      `Misc.`,
+      'Misc.',
       'Misc'
-    ],
+    ]
   ])
 
-  const selectCarousel = (i, x): void => {
+  const selectCarousel = (i, x) => {
     selectedView.value = i
     selectedViewTxt.value = x
     backButtonView.value = true
   }
 
-  const viewCarousel = (): void => {
-    selectedView.value = `Carousel`
-    selectedViewTxt.value = `Select one...`
+  const viewCarousel = () => {
+    selectedView.value = 'Carousel'
+    selectedViewTxt.value = 'Select one...'
     backButtonView.value = false
   }
 
@@ -376,7 +378,6 @@
     text-transform: lowercase !important;
     text-align: center;
 
-
     a {
       color: white !important;
 
@@ -384,7 +385,6 @@
         color: white;
       }
     }
-
 
   }
 
@@ -550,13 +550,11 @@
           margin-bottom: 0.5em;
           text-align: center;
 
-
           &:hover {
             color: $ivory;
           }
         }
       }
-
 
     }
   }
@@ -667,7 +665,6 @@
         // transition: ease-out;
       }
     }
-
 
     &:hover {
       transition: ease-out;

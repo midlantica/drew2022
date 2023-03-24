@@ -22,9 +22,9 @@
   </transition>
 </template>
 
-<script setup lang="ts">
-import Navvy from '../components/Navvy.vue'
-import ModernTabs from '../components/ModernTabs.vue'
+<script setup>
+  import Navvy from '../components/Navvy.vue'
+  import ModernTabs from '../components/ModernTabs.vue'
 </script>
 
 <style lang="scss" scoped>
