@@ -43,13 +43,13 @@
 </template>
 
 <script setup lang="ts">
-  import Navvy from '../components/Navvy.vue'
-  import NavvyEmpty from '../components/NavvyEmpty.vue'
-  import HeadAndCopy from '../components/HeadAndCopy.vue'
-  import About from '../../components/About.vue'
-  import Skills from '../../components/Skills.vue'
-  import Quotes from '../../components/Quote.vue'
-  import Carousel from '../../components/Carousel/Carousel.vue'
+import Navvy from '../components/Navvy.vue'
+import NavvyEmpty from '../components/NavvyEmpty.vue'
+import HeadAndCopy from '../components/HeadAndCopy.vue'
+import About from '../../components/About.vue'
+import Skills from '../../components/Skills.vue'
+import Quotes from '../../components/Quote.vue'
+import Carousel from '../../components/Carousel/Carousel.vue'
 </script>
 
 <style lang='scss' scoped>

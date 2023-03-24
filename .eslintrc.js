@@ -9,8 +9,8 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'standard-with-typescript'
   ],
-  // parser: 'vue-eslint-parser',
-  parser: '@babel/eslint-parser',
+  parser: 'vue-eslint-parser',
+  // parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
