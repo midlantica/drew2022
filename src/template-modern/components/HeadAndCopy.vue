@@ -24,7 +24,7 @@
     grid-template-rows: auto;
     grid-column-gap: 6px;
     justify-items: start;
-    align-items: center;
+    @apply items-center;
     margin-bottom: 1rem;
     gap: .5rem;
 

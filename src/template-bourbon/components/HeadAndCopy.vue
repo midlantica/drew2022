@@ -23,7 +23,7 @@
     grid-template-rows: auto;
     grid-column-gap: 6px;
     justify-items: start;
-    align-items: center;
+    @apply items-center;
     margin-top: .5rem;
 
     a.drewhead {

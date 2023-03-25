@@ -144,7 +144,7 @@
     }
 
     @media (max-width: $breakThree) {
-      margin: 0;
+      @apply m-0;
     }
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -175,7 +175,7 @@
     }
 
     @media (max-width: $breakThree) {
-      margin: 0;
+      @apply m-0;
     }
   }
 </style>

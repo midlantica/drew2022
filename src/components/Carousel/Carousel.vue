@@ -118,18 +118,18 @@
     // background: transparentize($color: white, $amount: .25);
     border-radius: $mortar;
     padding: .5rem;
-    position: relative;
+    @apply relative;
     @include clearfix;
   }
 
   .projectBox__top {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
+    @apply flex;
+    @apply flex-row;
+    @apply flex-nowrap;
+    @apply items-start;
     height: 1.5rem;
     margin-bottom: $mortar;
-    position: relative;
+    @apply relative;
     z-index: 20;
   }
 
@@ -269,7 +269,7 @@
   body.bourbon .box p {
     font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
     // color: $black !important;
-    text-align: center;
+    @apply text-center;
 
   }
 
@@ -286,7 +286,7 @@
   body.groovy .box p {
     font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
     // color: red !important;
-    text-align: center;
+    @apply text-center;
 
   }
 
@@ -299,7 +299,7 @@
   body.techy .box p {
     font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
     // color: red !important;
-    text-align: center;
+    @apply text-center;
 
   }
 
@@ -311,9 +311,9 @@
   body.corp .projectHead,
   body.corp .box p {
     font-family: 'Bodoni Moda', Times, serif !important;
-    letter-spacing: 0em;
+    @apply tracking-normal;
     // color: red !important;
-    text-align: center;
+    @apply text-center;
 
   }
 
@@ -376,7 +376,7 @@
     letter-spacing: 0em !important;
     color: white !important;
     text-transform: lowercase !important;
-    text-align: center;
+    @apply text-center;
 
     a {
       color: white !important;
@@ -405,7 +405,7 @@
   body.punk .projectHead,
   body.punk .box p {
     font-family: Poppins, 'Helvetica Neue', Arial, sans-serif !important;
-    text-align: center;
+    @apply text-center;
   }
 
   body.punk .box {
@@ -415,8 +415,8 @@
   ///////
   .projectHead {
     font-size: 0.9em;
-    text-align: center;
-    text-transform: uppercase;
+    @apply text-center;
+    @apply uppercase;
     // margin-right: 3.5em;
     margin: auto;
     // color: red !important;
@@ -427,31 +427,31 @@
   }
 
   .miniGallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+    @apply flex;
+    @apply flex-row;
+    @apply flex-wrap;
+    @apply justify-between;
+    @apply items-center;
+    @apply content-center;
     transition-duration: 1s;
     width: 100%;
     // margin-top: .3rem;
 
     div {
-      flex-grow: 1;
+      @apply grow;
       width: 125px;
-      text-decoration: none;
+      @apply no-underline;
       cursor: pointer;
       display: inline-block;
 
       &:hover {
         color: $ivory;
-        text-decoration: none;
+        @apply no-underline;
 
         p {
           color: $black !important;
-          text-align: center;
-          text-align: center;
+          @apply text-center;
+          @apply text-center;
 
           &:hover {
             color: $black !important;
@@ -460,19 +460,19 @@
       }
 
       a {
-        display: flex;
+        @apply flex;
       }
 
       .box {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
+        @apply flex;
+        @apply flex-col;
+        @apply flex-nowrap;
+        @apply items-center;
+        @apply content-center;
+        @apply justify-center;
         //
         transition-duration: 1s;
-        text-align: center;
+        @apply text-center;
         box-shadow: 0px 2px 2px -3px black;
         margin: auto;
         //
@@ -485,8 +485,8 @@
         }
 
         p {
-          position: relative;
-          top: 0px;
+          @apply relative;
+          @apply top-0;
           transition: ease-out;
         }
 
@@ -496,7 +496,7 @@
           box-shadow: 0px 2px 4px -1px hsla(0, 0%, 50%, 0.25);
 
           p {
-            position: relative;
+            @apply relative;
             top: -4px;
             transition: ease-out;
           }
@@ -542,13 +542,13 @@
 
         p {
           width: 100%;
-          font-size: 0.85em;
-          text-transform: uppercase;
+          @apply text-[0.85em];
+          @apply uppercase;
           color: $grey;
-          text-align: center;
+          @apply text-center;
           letter-spacing: 0.05em;
           margin-bottom: 0.5em;
-          text-align: center;
+          @apply text-center;
 
           &:hover {
             color: $ivory;
@@ -584,7 +584,7 @@
   $carouselFade: 1;
 
   .miniGallery div {
-    text-align: center;
+    @apply text-center;
 
     //
     &:nth-of-type(1) {
@@ -679,14 +679,14 @@
       box-shadow: 0px 0px 1rem 0px $ruby;
 
       p {
-        position: relative;
+        @apply relative;
         // top: 0px !important;
         transition: ease-out;
         // color: $ruby !important;
 
         &:hover {
           color: $white !important;
-          position: relative;
+          @apply relative;
           // top: 0px !important;
           transition: ease-out;
         }

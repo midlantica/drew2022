@@ -35,9 +35,9 @@
     // height: 770px;
     // background-repeat: no-repeat;
     // background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
     // transform: scaleX(-1);
 
     @media (max-width: 900px) {
@@ -79,7 +79,7 @@
   .slides {
     grid-column: 1;
     grid-row: 1;
-    align-content: center;
+    @apply content-center;
     max-width: 500px;
     width: 100%;
     justify-self: center;
@@ -104,7 +104,7 @@
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     justify-self: center !important;
-    justify-content: center;
+    @apply justify-center;
     width: 35vw !important;
     grid-template-columns: repeat(6, minmax(88px, 1fr)) !important;
     width: initial !important;

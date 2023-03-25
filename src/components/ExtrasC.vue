@@ -90,11 +90,11 @@
 <style lang="scss" scoped>
   h1 {
     font-size: 2em;
-    text-align: center;
-    padding: 0.5em 0;
+    @apply text-center;
+    @apply py-2 px-0;
 
     a {
-      text-decoration: none;
+      @apply no-underline;
     }
   }
 
@@ -103,11 +103,11 @@
 
     a {
       flex-basis: auto;
-      flex-grow: 1;
+      @apply grow;
       box-sizing: border-box;
-      text-align: center;
-      align-items: center;
-      text-decoration: none;
+      @apply text-center;
+      @apply items-center;
+      @apply no-underline;
       // margin: 0em 1em;
       color: black;
 
@@ -127,12 +127,12 @@
 
       p {
         display: inline-block;
-        text-align: center;
-        // margin: 0;
+        @apply text-center;
+        // @apply m-0;
         margin-bottom: 1em;
         margin-top: 0.5em;
         padding-bottom: 0;
-        font-size: 0.85em;
+        @apply text-[0.85em];
         color: black;
         border-bottom: 1px solid transparent;
         max-width: 400px;

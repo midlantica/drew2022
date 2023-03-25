@@ -34,11 +34,11 @@
 
   a {
     color: $ivory;
-    text-decoration: none;
+    @apply no-underline;
 
     &:link {
       color: $ivory;
-      text-decoration: none;
+      @apply no-underline;
     }
 
     &:hover {
@@ -53,7 +53,7 @@
   h5,
   p {
     line-height: 1em;
-    margin: 0;
+    @apply m-0;
     padding: 0;
     color: $ivory !important;
     text-transform: none;
@@ -61,7 +61,7 @@
 
     a {
       color: $ivory !important;
-      text-decoration: none;
+      @apply no-underline;
     }
   }
 
@@ -70,11 +70,11 @@
   }
 
   nav {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    @apply flex;
+    @apply flex-col;
+    @apply flex-nowrap;
+    @apply justify-center;
+    @apply items-center;
     padding: 2rem 0 0;
   }
 
@@ -85,11 +85,11 @@
     font-family: $font-subhead;
     text-shadow: 1px 1px 4px $black;
     transition: 0.25s ease-in;
-    text-align: center;
+    @apply text-center;
     @include font-smoothing;
     //
     width: auto;
-    flex-grow: 1;
+    @apply grow;
 
     a {
       color: $accent !important;
@@ -107,7 +107,7 @@
 
     @media (max-width: $breakTwo) {
       // flex-grow: 0;
-      // text-align: center;
+      // @apply text-center;
     }
 
     @media (max-width: $breakThree) {
@@ -117,7 +117,7 @@
   }
 
   section.jobDesc {
-    // flex-grow: 1;
+    // @apply grow;
     // margin-left: 1em;
     margin-top: 1rem;
     transition: 0.25s ease-in;
@@ -125,7 +125,7 @@
 
     @media (max-width: $breakTwo) {
       // flex-grow: 0;
-      text-align: center;
+      @apply text-center;
       align-self: center;
 
       &:nth-child(1) {
@@ -154,7 +154,7 @@
       line-height: 1.5em;
       font-weight: 400;
       color: hsla(0, 0%, 100%, 0.85) !important;
-      text-align: center;
+      @apply text-center;
       text-shadow: 1px 1px 4px$black;
       text-transform: lowercase !important;
       @include font-smoothing;
@@ -173,11 +173,11 @@
   }
 
   section.contact {
-    // text-transform: uppercase;
+    // @apply uppercase;
     margin-top: 0.2em;
     // margin-left: 1em;
     margin-bottom: 0rem;
-    z-index: 10;
+    @apply z-10;
     // border: 1px solid $outBlue;
     // text-shadow: 3px 0px 1px $black;
     transition: 0.25s ease-in;
@@ -201,7 +201,7 @@
       letter-spacing: -0.01em;
       font-weight: 400;
       font-size: 1rem !important;
-      text-align: center;
+      @apply text-center;
       margin-top: 0.5rem;
       text-shadow: 1px 1px 4px $black;
       line-height: 1.4rem;
@@ -222,13 +222,13 @@
         &:hover {
           color: $yellow-red !important;
           text-decoration: underline;
-          text-decoration: none;
+          @apply no-underline;
           background: darken($ruby, 15);
         }
       }
 
       @media (max-width: $breakOne) {
-        // justify-content: center;
+        // @apply justify-center;
         // font-size: 1.5rem !important;
         // letter-spacing: 0.1785rem !important;
         // margin-top: -0.3em;
@@ -240,12 +240,12 @@
       }
 
       @media (max-width: $breakThree) {
-        // justify-content: center;
+        // @apply justify-center;
         // font-size: 1.25rem !important;
         // letter-spacing: 0.09em !important;
         // line-height: 1.25em;
         // margin-bottom: -4px;
-        // text-align: center;
+        // @apply text-center;
       }
     }
   }
@@ -253,7 +253,7 @@
   h1 {
     color: $accent-red !important;
     text-transform: none;
-    text-align: center;
+    @apply text-center;
 
     a {
       color: $accent-red !important;

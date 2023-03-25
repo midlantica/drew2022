@@ -27,7 +27,7 @@
   $width: 100px;
 
   .loader {
-    position: relative;
+    @apply relative;
     margin: 0 auto;
     width: $width;
 

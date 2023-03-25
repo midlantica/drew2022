@@ -49,13 +49,13 @@
 
   nav {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    @apply flex;
+    @apply flex-col;
     flex-wrap: no-wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-grow: 1;
+    @apply justify-center;
+    @apply items-center;
+    @apply content-center;
+    @apply grow;
 
     @media (max-width: $breakOne) {
       //
@@ -76,20 +76,20 @@
 
     .masty {
       margin: 0 auto;
-      text-align: center;
+      @apply text-center;
 
       .DHmast {
         display: grid;
         grid-template-columns: 2fr 4fr 7fr;
         grid-gap: 2em;
-        align-items: center;
+        @apply items-center;
         margin: 0 auto;
         padding-top: 1em;
         //
 
         @media (max-width: $breakThou) {
           grid-template-columns: auto auto;
-          justify-content: center;
+          @apply justify-center;
           justify-items: center;
           grid-gap: .5em;
         }
@@ -138,13 +138,13 @@
           @media (max-width: $breakThree) {
             width: 46px !important;
             height: 55px !important;
-            margin: 0;
+            @apply m-0;
           }
 
           @media (max-width: $breakFour) {
             // width: 28px !important;
             height: 55px !important;
-            margin: 0;
+            @apply m-0;
           }
 
           // @media (max-device-width: 667px)
@@ -244,19 +244,19 @@
 
   nav .jobDesc {
     margin: -1em 0em 1em 11.1em;
-    // text-align: center;
+    // @apply text-center;
     // margin-top: -1em;
     // @include clearfix;
     text-align: left;
 
     @media (max-width: $breakThou) {
       margin: 1em 0em;
-      text-align: center;
+      @apply text-center;
     }
 
     @media (max-width: $breakOne) {
       margin: 0rem 0rem 1rem;
-      text-align: center;
+      @apply text-center;
     }
 
     @media (max-width: $breakTwo) {
@@ -272,7 +272,7 @@
     }
 
     h2 {
-      margin: 0;
+      @apply m-0;
       font-family: $font-copy;
       font-weight: 400;
       color: $blueTech;
@@ -334,13 +334,13 @@
     .contact {
       font-weight: 400;
       color: $ivory;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      flex-grow: 1;
+      @apply flex;
+      @apply flex-row;
+      @apply flex-wrap;
+      @apply justify-center;
+      @apply items-center;
+      @apply content-center;
+      @apply grow;
       width: 50%;
 
       @media (max-width: 1024px) {
@@ -370,7 +370,7 @@
 
         >a {
           color: transparentize($ivory, .1);
-          text-decoration: none;
+          @apply no-underline;
 
           &:hover {
             text-decoration: underline;
@@ -386,7 +386,7 @@
         }
 
         @media (max-width: $breakOne) {
-          justify-content: center;
+          @apply justify-center;
           font-size: 1.2em !important;
           letter-spacing: .1em !important;
 
@@ -412,11 +412,11 @@
         }
 
         @media (max-width: $breakThree) {
-          justify-content: center;
+          @apply justify-center;
           font-size: 1.1em !important;
           letter-spacing: 0.07em !important;
           line-height: 2em;
-          text-align: center;
+          @apply text-center;
 
           &:nth-child(1) {
             //

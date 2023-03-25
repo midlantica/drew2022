@@ -43,7 +43,7 @@
     // }
 
     // @media (max-width: $breakThree) {
-    //   margin: 0;
+    //   @apply m-0;
     // }
 
     // @media (min-device-width: 375px)

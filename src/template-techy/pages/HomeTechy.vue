@@ -117,21 +117,21 @@
   .slides {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    z-index: 10;
+    @apply z-10;
     margin-top: -5.5em;
 
     // IPAD LANDSCAPE
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      z-index: 10;
+      @apply z-10;
     }
 
     // IPAD PRO LANDSCAPE
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      z-index: 10;
+      @apply z-10;
     }
 
     @media (max-width: $breakThou) {

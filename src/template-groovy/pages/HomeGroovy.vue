@@ -116,7 +116,7 @@
   .slides {
     grid-column: 2 / 3;
     grid-row: 1;
-    z-index: 10;
+    @apply z-10;
     margin-top: -9.3em;
 
     @media (max-width: $breakThou) {

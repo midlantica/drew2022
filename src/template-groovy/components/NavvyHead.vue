@@ -73,7 +73,7 @@
       height: 210px;
       box-shadow: 8px 6px 0px rgba(37, 37, 37, 0.25);
       border-radius: 10em;
-      position: relative;
+      @apply relative;
       top: -2em;
       left: -2.75em;
       z-index: 5;
@@ -125,7 +125,7 @@
         width: 98px;
         height: 119px;
         display: block;
-        position: relative;
+        @apply relative;
         top: 2.8em;
         left: 3.5em;
         // background-position: 0px 0px;
@@ -151,11 +151,11 @@
     }
 
     .drewHarperSVG {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      @apply flex;
+      @apply flex-row;
+      @apply flex-wrap;
       align-items: flex-end;
-      flex-grow: 1;
+      @apply grow;
 
       @media (max-width: $breakThou) {
         grid-column: 2 / 3;
@@ -248,7 +248,7 @@
 
     @media (max-width: $breakThou) {
       margin: 1em 0em;
-      text-align: center;
+      @apply text-center;
       grid-column: 2;
       grid-row: 2;
       align-self: self-start;
@@ -274,7 +274,7 @@
     }
 
     h2 {
-      margin: 0;
+      @apply m-0;
       font-family: $font-subhead;
       font-weight: 400;
       color: $ivory;
@@ -355,14 +355,14 @@
       display: inline-block;
       font-family: $font-copy;
       font-size: 1.085em;
-      letter-spacing: 0em;
+      @apply tracking-normal;
       text-transform: none;
       line-height: 0.7em;
-      text-align: center;
+      @apply text-center;
       letter-spacing: -0.01em;
 
       &:nth-child(1) {
-        margin: 0;
+        @apply m-0;
       }
 
       &:nth-child(2) {
@@ -371,11 +371,11 @@
 
       a {
         color: $ivory;
-        text-decoration: none;
+        @apply no-underline;
 
         &:link {
           color: $ivory;
-          text-decoration: none;
+          @apply no-underline;
         }
 
         &:hover {
@@ -386,7 +386,7 @@
       @media (max-width: $breakThou) {
         font-size: 1.79vw;
         line-height: 0.5em;
-        text-align: center;
+        @apply text-center;
         font-size: 2vw;
         line-height: 1.4em;
         text-align: left;
@@ -405,7 +405,7 @@
 
       @media (max-width: $breakOne) {
         font-size: 2.785vw;
-        text-align: center;
+        @apply text-center;
         margin: 0 auto;
         float: initial;
         clear: initial;

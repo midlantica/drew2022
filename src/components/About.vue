@@ -53,13 +53,13 @@
     background: #fbf3bb;
     padding: 1.25rem 1.75rem;
     // display: block;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    @apply flex;
+    @apply flex-row;
+    @apply flex-nowrap;
     //
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    @apply justify-center;
+    @apply items-center;
+    @apply content-center;
     align-self: center;
     border-radius: 2px;
     cursor: pointer;
@@ -74,17 +74,17 @@
     }
 
     @media (max-width: $breakFour) {
-      flex-direction: column;
+      @apply flex-col;
     }
   }
 
   .flagBox {
-    display: flex;
-    flex-direction: column;
+    @apply flex;
+    @apply flex-col;
     //
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    @apply content-center;
+    @apply items-center;
+    @apply justify-center;
     align-self: center;
     //
     float: left;
@@ -104,9 +104,9 @@
     margin-right: 1em;
     background-position-y: center;
     //
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    @apply content-center;
+    @apply items-center;
+    @apply justify-center;
     align-self: center;
     width: 100px;
     height: 60px;
@@ -119,9 +119,9 @@
     line-height: 1.4em;
     letter-spacing: 0.05em;
     //
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    @apply content-center;
+    @apply items-center;
+    @apply justify-center;
     align-self: center;
     text-align: left;
   }
@@ -158,7 +158,7 @@
       font-size: .9rem;
       letter-spacing: 0.02rem;
       line-height: 1.5rem;
-      margin: 0;
+      @apply m-0;
       font-weight: 500;
 
       @media (max-width: $breakThou) {
@@ -174,8 +174,8 @@
   }
 
   .modern .about {
-    display: flex;
-    flex-direction: column;
+    @apply flex;
+    @apply flex-col;
     margin: initial;
     margin-top: auto;
     width: 100%;
@@ -185,11 +185,11 @@
     border-radius: 3px;
 
     @media (max-width: 850px) {
-      flex-direction: row;
+      @apply flex-row;
     }
 
     @media (max-width: 550px) {
-      flex-direction: column;
+      @apply flex-col;
     }
 
     .flagBox {
@@ -205,9 +205,9 @@
       margin-right: initial !important;
       background-position-y: center;
       //
-      align-content: center;
-      align-items: center;
-      justify-content: center;
+      @apply content-center;
+      @apply items-center;
+      @apply justify-center;
       align-self: center;
       width: 100px;
       height: 60px;
@@ -218,7 +218,7 @@
       font-size: clamp(0.75rem, 0.8rem, 1.15rem) !important;
       letter-spacing: 0rem;
       line-height: 1.5rem;
-      margin: 0;
+      @apply m-0;
       font-weight: 300;
       color: $ivory;
 

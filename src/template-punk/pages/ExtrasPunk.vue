@@ -40,10 +40,10 @@
 
   .flexxy {
     width: 100%;
-    display: flex;
+    @apply flex;
     gap: 0 2rem;
     place-content: center;
-    justify-content: center;
+    @apply justify-center;
     // position: absolute;
     // z-index: 100;
     // top: .5rem;

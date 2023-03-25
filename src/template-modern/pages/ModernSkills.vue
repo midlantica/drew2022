@@ -24,12 +24,12 @@
     grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
     // grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    justify-content: center;
+    @apply justify-center;
     margin: 1rem auto;
     justify-items: center;
     align-items: stretch;
     align-content: space-between;
-    text-align: center;
+    @apply text-center;
     gap: .5rem auto;
 
     @media (max-width: 900px) {
@@ -70,7 +70,7 @@
   }
 
   .bounce {
-    position: relative;
+    @apply relative;
   }
 
   .fade-enter-active,

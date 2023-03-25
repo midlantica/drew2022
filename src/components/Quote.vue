@@ -165,11 +165,11 @@
   }
 
   .quoteBlock {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
     padding: 0.75em 1rem .5em;
-    text-align: center;
+    @apply text-center;
     // border-radius: 2px;
     margin: auto;
     width: 100% !important;
@@ -262,7 +262,7 @@
       color: $ivory !important;
       letter-spacing: 0.05em;
       line-height: 1.5em;
-      text-align: center;
+      @apply text-center;
       //
       animation: fadeTexter 2s forwards;
 
@@ -294,7 +294,7 @@
     background: darken($accent-red, 10);
     padding: .75em 2em 1em;
     @include shadow;
-    text-align: center;
+    @apply text-center;
 
   }
 
@@ -321,7 +321,7 @@
     p {
       font-size: 1em;
       color: $blueTech;
-      text-align: center;
+      @apply text-center;
       padding: .4rem auto .5rem;
       letter-spacing: 0.02em;
 
@@ -357,7 +357,7 @@
     padding: 1rem !important;
     background: #01487F;
     padding: 1em 0em 1rem;
-    text-align: center;
+    @apply text-center;
     color: white;
     min-height: initial;
 

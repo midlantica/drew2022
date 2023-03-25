@@ -35,11 +35,11 @@
 
   a {
     color: $ivory;
-    text-decoration: none;
+    @apply no-underline;
 
     &:link {
       color: $ivory;
-      text-decoration: none;
+      @apply no-underline;
     }
 
     &:hover {
@@ -54,26 +54,26 @@
   h5,
   p {
     line-height: 1em;
-    margin: 0;
+    @apply m-0;
     padding: 0;
     color: $ivory !important;
 
     a {
       color: $ivory !important;
-      text-decoration: none;
+      @apply no-underline;
     }
   }
 
   nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    @apply flex;
+    @apply flex-row;
+    @apply flex-wrap;
+    @apply justify-between;
+    @apply items-center;
     padding: 0.5em 1.25em;
 
     @media (max-width: $breakOne) {
-      justify-content: center;
+      @apply justify-center;
     }
   }
 
@@ -96,7 +96,7 @@
 
     @media (max-width: $breakTwo) {
       flex-grow: 0;
-      text-align: center;
+      @apply text-center;
     }
 
     @media (max-width: $breakThree) {
@@ -106,14 +106,14 @@
   }
 
   section.jobDesc {
-    flex-grow: 1;
+    @apply grow;
     margin-left: 1em;
     margin-top: 0.1rem;
     transition: 0.25s ease-in;
 
     @media (max-width: $breakTwo) {
       flex-grow: 0;
-      text-align: center;
+      @apply text-center;
       align-self: center;
 
       &:nth-child(1) {
@@ -160,11 +160,11 @@
   }
 
   section.contact {
-    text-transform: uppercase;
+    @apply uppercase;
     margin-top: 0.75em;
     margin-left: 1em;
     margin-bottom: 4px;
-    z-index: 10;
+    @apply z-10;
     // border: 1px solid $outBlue;
     text-shadow: 3px 0px 1px $black;
     transition: 0.25s ease-in;
@@ -202,7 +202,7 @@
       }
 
       @media (max-width: $breakOne) {
-        justify-content: center;
+        @apply justify-center;
         font-size: 1.5rem !important;
         letter-spacing: 0.1785rem !important;
         margin-top: -0.3em;
@@ -224,12 +224,12 @@
       }
 
       @media (max-width: $breakThree) {
-        justify-content: center;
+        @apply justify-center;
         font-size: 1.15rem !important;
         letter-spacing: 0.09em !important;
         line-height: 1.25em;
         margin-bottom: -4px;
-        text-align: center;
+        @apply text-center;
 
         &:nth-child(1) {
           float: initial;

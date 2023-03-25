@@ -11,7 +11,7 @@
 
 <style lang="scss" scoped>
   .tooltip {
-    background: #d71d5b;
+    @apply bg-[#d71d5b];
     font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
     box-shadow: 0 2px 20px 0px black;
     padding: .5rem 1.5rem;
@@ -30,7 +30,7 @@
     }
 
     @media (max-width: $breakFour) {
-      // flex-direction: column;
+      // @apply flex-col;
     }
 
     p {
@@ -41,9 +41,9 @@
       color: white;
       font-weight: 500;
       //
-      align-content: center;
-      align-items: center;
-      justify-content: center;
+      @apply content-center;
+      @apply items-center;
+      @apply justify-center;
       align-self: center;
       text-align: left;
 
@@ -73,7 +73,7 @@
       font-size: 1rem;
       letter-spacing: .001rem;
       line-height: 1.4rem;
-      margin: 0;
+      @apply m-0;
       font-weight: 500;
 
       @media (max-width: $breakThou) {
@@ -99,7 +99,7 @@
       font-size: .85rem;
       letter-spacing: .000rem;
       line-height: 1.4rem;
-      margin: 0;
+      @apply m-0;
       font-weight: 300;
 
       // @media (max-width: $breakThou) {

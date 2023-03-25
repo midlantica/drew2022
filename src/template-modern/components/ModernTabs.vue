@@ -26,11 +26,11 @@
   .modernTabs {
     // margin: 0.75rem 0 0.5rem;
     margin: 1.25rem 0 1.5rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    // justify-content: space-between;
+    @apply flex;
+    @apply flex-row;
+    @apply flex-wrap;
+    @apply justify-center;
+    // @apply justify-between;
     // justify-content: space-evenly;
     // justify-content: space-around;
     font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
@@ -42,7 +42,7 @@
       // border: 1px solid $ruby !important;
       border-radius: 2rem;
       text-decoration: none !important;
-      text-transform: uppercase;
+      @apply uppercase;
       font-size: 0.6rem;
       font-weight: 600;
       letter-spacing: 0.075ch;

@@ -16,7 +16,7 @@
   $breakThree: 530px;
 
   footer {
-    position: relative;
+    @apply relative;
     height: 160px;
     color: $ivory;
     background: linear-gradient(

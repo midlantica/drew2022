@@ -36,16 +36,16 @@
   $outBlue: rgba(92, 201, 245, .3);
 
   nav {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    // align-items: center;
+    @apply flex;
+    @apply flex-col;
+    @apply content-center;
+    // @apply items-center;
     padding: .5em 1em;
 
     @media (max-width: $breakOne) {
-      justify-content: center;
-      align-content: center;
-      align-items: center;
+      @apply justify-center;
+      @apply content-center;
+      @apply items-center;
       // width: 50%;
       // margin: 0 auto;
     }
@@ -94,12 +94,12 @@
     // ###############################
 
     .mastMain {
-      display: flex;
-      flex-direction: row;
+      @apply flex;
+      @apply flex-row;
       flex-wrap: no-wrap;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
+      @apply justify-center;
+      @apply items-center;
+      @apply content-center;
       margin-top: -1.5em;
       z-index: 2;
       width: 100%;
@@ -110,7 +110,7 @@
       }
 
       @media (max-width: $breakOne) {
-        flex-wrap: wrap;
+        @apply flex-wrap;
       }
 
       @media (max-width: $breakTwo) {
@@ -251,7 +251,7 @@
           // width: 46vw;
           // height: 20vh;
           // margin-top: -1.5em;
-          // flex-grow: 1;
+          // @apply grow;
         }
 
         @media (max-width: $breakOne) {
@@ -259,7 +259,7 @@
           // width: 68vw;
           // height: 20vh;
           // margin-top: -1.5em;
-          // flex-grow: 1;
+          // @apply grow;
         }
 
         @media (max-width: $breakTwo) {
@@ -267,7 +267,7 @@
           // width: 64vw;
           // height: 20vh;
           // margin-top: -1.5em;
-          // flex-grow: 1;
+          // @apply grow;
         }
 
         @media (max-width: $breakThree) {
@@ -275,7 +275,7 @@
           // width: 64vw;
           // height: 20vh;
           // margin-top: -1.5em;
-          // flex-grow: 1;
+          // @apply grow;
         }
 
       }
@@ -292,15 +292,15 @@
         // width: 240px;
         width: 18vw;
         height: 120px;
-        text-decoration: none;
+        @apply no-underline;
         // display: block;
-        // position: relative;
+        // @apply relative;
         // top: 2.8em;
         // left: 3.5em;
         // margin-left: .5em;
         // margin-top: 0.5em;
         // order: 3;
-        // flex-grow: 1;
+        // @apply grow;
         // background: green !important;
 
         @media (max-width: $breakOne) {

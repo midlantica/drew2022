@@ -21,11 +21,11 @@
   $paleBlue: #7cc3fa;
 
   .wrap {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    @apply flex;
+    @apply flex-col;
+    @apply flex-nowrap;
     margin: 1em 1em 1em 1.5rem;
-    // position: relative;
+    // @apply relative;
 
     @media (max-width: $breakTwo) {
       margin: 0em 1em 1em;

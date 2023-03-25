@@ -32,12 +32,12 @@
   @import "../assets/css/punk-main.scss";
 
   .flexbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @apply flex;
+    @apply flex-row;
+    @apply justify-between;
 
     .jobTitles {
-      flex-direction: row;
+      @apply flex-row;
       flex: 0 1 auto;
       align-self: flex-start;
 
@@ -77,7 +77,7 @@
 
     .resumeLinks {
       align-self: flex-end;
-      flex-direction: row;
+      @apply flex-row;
 
       .resume {
         color: $black;
@@ -100,7 +100,7 @@
 
         &.rTwo {
           transform: rotate(6deg) !important;
-          text-decoration: none;
+          @apply no-underline;
 
           &:hover {
             color: #ff4bf5 !important;
@@ -110,7 +110,7 @@
 
         &.rThree {
           transform: rotate(3deg) !important;
-          text-decoration: none;
+          @apply no-underline;
 
           &:hover {
             color: #ff4bf5 !important;
@@ -129,11 +129,11 @@
   }
 
   .copyGrid {
-    display: flex;
-    flex-direction: column;
+    @apply flex;
+    @apply flex-col;
     flex: 0 1 auto;
     // margin-top: 1em;
-    position: relative;
+    @apply relative;
     left: 0;
     top: 0;
 
@@ -152,7 +152,7 @@
       font-weight: 500;
       padding: 0 0em 0.1em 0.2rem;
       transform: rotate(1deg);
-      z-index: 10;
+      @apply z-10;
       display: inline-block;
       line-height: 1.7rem;
       // transform: rotate(0deg);
@@ -176,7 +176,7 @@
       color: $grey;
       line-height: 2.25rem;
       letter-spacing: 0.045em;
-      position: relative;
+      @apply relative;
       top: 0em;
       background: #FBC83F;
       margin: 1em 1em 0em;

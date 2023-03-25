@@ -102,9 +102,9 @@
     background: hsl(320, 100%, 9%);
 
     .wrapper {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
+      @apply flex;
+      @apply flex-col;
+      @apply grow;
       max-width: 1024px;
       min-height: 780px;
       padding-bottom: 3.5rem;

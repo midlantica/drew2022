@@ -31,67 +31,60 @@
   @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
 
   .tabs {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: center;
-    text-align: center;
-    font-size: 0.85em;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    z-index: 10;
-    width: calc(100.1%);
-    font-family: "Barlow Semi Condensed";
-    letter-spacing: 0em;
-    overflow-x: hidden !important;
-    background: #333;
+    @apply font-['Barlow_Semi_Condensed'];
+    @apply flex;
+    @apply flex-row;
+    @apply flex-nowrap;
+    @apply justify-between;
+    @apply items-start;
+    @apply content-center;
+    @apply text-center;
+    @apply text-[0.85em];
+    @apply relative;
+    @apply top-0;
+    @apply left-0;
+    @apply z-10;
+    @apply w-[100.1%];
+    @apply tracking-normal;
+    @apply overflow-x-hidden;
+    @apply bg-[#333];
 
     a {
-      flex-grow: 1;
-      color: transparentize($ivory, 0.25);
-      padding: 0.5em 0;
-      border-right: 1px solid transparentize($ivory, 0.75);
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: .8em;
+      @apply grow;
+      @apply text-[#fffdf4bf];
+      @apply py-2 px-0;
+      @apply border-r border-[#fffdf440];
+      @apply no-underline;
+      @apply uppercase;
+      @apply tracking-[0.1em];
+      @apply text-[0.8em];
 
       &:last-child {
-        border-right: 0px !important;
+        @apply border-r-0;
       }
 
       &:hover {
-        color: transparentize($ivory, 0);
-        transition: 0.2s ease-in;
+        @apply text-[#fffdf4];
+        @apply duration-200 ease-in;
       }
     }
   }
 
   body.modern .tabs a.modern {
     color: $ivory;
-    // background: hsla(340, 76%, 48%, 1);
     background: linear-gradient(hsla(340, 76%, 48%, 1), hsl(340, 76%, 30%));
-    text-shadow: 0px 0px 1px black;
-    // box-shadow: 0px -2px 6px black inset;
+    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
   }
 
   body.bourbon .tabs>a.bourbon {
     color: $ivory;
-    // background: darken($orange, 30);
     background: linear-gradient(darken($orange, 10), darken($orange, 25));
-    text-shadow: 0px 0px 1px black;
-    // box-shadow: 0px -2px 6px black inset;
+    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
   }
 
   body.groovy .tabs>a.groovy {
-    // color: transparentize($ivory, 0);
     color: $black;
-    text-shadow: 0px 0px 1px hsla(0, 0%, 0%, 0.25);
-    // box-shadow: 0px -2px 6px black inset;
-    // background: darken(#ff3940, 30);
+    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 0.25)];
     background: linear-gradient($groovy-aqua-dk 0%,
         $groovy-aqua-dk 20%,
         $groovy-yellow-dk 20%,
@@ -103,8 +96,7 @@
 
     &:hover {
       color: $black;
-      text-shadow: 0px 0px 1px black;
-      // border-bottom: 1px solid $ivory;
+      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
       background: linear-gradient($groovy-aqua 0%,
           $groovy-aqua 20%,
           $groovy-yellow 20%,
@@ -118,56 +110,52 @@
   }
 
   body.techy .tabs>a.techy {
-    color: transparentize($ivory, 0.1);
-    // background: darken(#02528a, 10);
+    @apply text-[fffdf4e6];
     background: linear-gradient(darken(#423BA0, 00), darken(#423BA0, 15));
-    text-shadow: 0px 0px 1px black;
+    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
     // box-shadow: 0px -2px 6px black inset;
   }
 
   body.corp .tabs>a.corp {
-    color: transparentize($ivory, 0.1);
-    // background: darken(#02528a, 0);
+    @apply text-[fffdf4e6];
     background: linear-gradient(darken(hsl(205, 97%, 27%), 0), darken(hsl(205, 97%, 27%), 10));
-    text-shadow: 0px 0px 1px black;
+    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
     // box-shadow: 0px -2px 6px black inset;
   }
 
   body.punk .tabs>a.punk {
-    color: transparentize($ivory, 0.1);
-    background: hsla(0, 100%, 50%, 0.85);
+    @apply text-[fffdf4e6];
+    // background: #ff0000d9;
+    // @apply bg-[hsla(0, 100%, 50%, 0.85)];
     background: linear-gradient(hsl(303, 100%, 35%), hsl(303, 100%, 20%));
-    // box-shadow: 0px -2px 6px black inset;
-    // filter: saturate(40) opacity(0.7);
   }
 
   body .tabs {
-
     //
+
     >a.modern {
       background: $grey;
-      text-shadow: 0px 0px 1px black;
+      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
 
       &:hover {
-        background: #d71d5b;
+        @apply bg-[hsl(340, 76%, 48%)];
       }
     }
 
     >a.bourbon {
-      background: #333;
-      text-shadow: 0px 0px 1px black;
+      @apply bg-[hsl(0, 0%, 20%)];
+      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
 
       &:hover {
-        background: darken($orange, 30);
+        @apply bg-[#6f170f];
       }
     }
 
     >a.groovy {
-      background: #333;
+      @apply bg-[#333];
 
       &:hover {
         color: $black;
-        // background: darken(#ff3940, 30);
         background: linear-gradient( // 0 - 10%
             $groovy-aqua-dk 0%,
             $groovy-aqua-dk 20%,
@@ -184,29 +172,29 @@
     }
 
     >a.techy {
-      background: #333;
-      text-shadow: 0px 0px 1px black;
+      @apply bg-[hsl(0, 0%, 20%)];
+      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
 
       &:hover {
-        background: darken(#02528a, 10);
+        @apply bg-[hsl(205, 98%, 17%)];
       }
     }
 
     >a.corp {
-      background: #333;
-      text-shadow: 0px 0px 1px black;
+      @apply bg-[hsl(0, 0%, 20%)];
+      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
 
       &:hover {
-        background: darken(#02528a, 0);
+        @apply bg-[hsl(205, 97%, 27%)];
       }
     }
 
     >a.punk {
-      background: #333;
-      text-shadow: 0px 0px 1px black;
+      @apply bg-[hsl(0, 0%, 20%)];
+      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
 
       &:hover {
-        background: darken(#ff4bf5, 30);
+        @apply bg-[hsl(303, 100%, 35%)];
       }
     }
   }

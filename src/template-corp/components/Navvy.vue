@@ -34,25 +34,25 @@
   @import '../assets/css/corp-main.scss';
 
   nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 1.5em 2em 1em;
-    justify-content: space-between;
+    @apply flex;
+    @apply flex-row;
+    @apply flex-wrap;
+    @apply items-center;
+    @apply pt-[1.5em] px-[2em] pb-[1em];
+    @apply justify-between;
 
     @media (max-width: $breakOne) {
-      justify-content: center;
+      @apply justify-center;
     }
   }
 
   a {
     color: $ivory;
-    text-decoration: none;
+    @apply no-underline;
 
     &:link {
       color: $ivory;
-      text-decoration: none;
+      @apply no-underline;
     }
 
     &:hover {
@@ -67,14 +67,14 @@
   h5,
   p {
     line-height: 1em;
-    margin: 0;
+    @apply m-0;
     padding: 0;
     color: $blue-dark !important;
     text-transform: none;
 
     a {
       color: $blue-dark !important;
-      text-decoration: none;
+      @apply no-underline;
     }
   }
 
@@ -143,7 +143,7 @@
     @media (max-width: $breakTwo) {
       // font-size: 3.5em;
       // flex-grow: 0;
-      // text-align: center;
+      // @apply text-center;
     }
 
     @media (max-width: $breakThree) {
@@ -174,7 +174,7 @@
     @media (max-width: $breakTwo) {
       // font-size: 3.5em;
       // flex-grow: 0;
-      // text-align: center;
+      // @apply text-center;
     }
 
     @media (max-width: $breakThree) {
@@ -202,12 +202,12 @@
   }
 
   .drewTop {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    @apply flex;
+    @apply flex-col;
+    @apply flex-wrap;
     // flex-grow: 1 !important;
-    align-content: center;
-    text-align: center;
+    @apply content-center;
+    @apply text-center;
 
     @media (max-width: $breakThree) {
       width: 100%;
@@ -216,54 +216,54 @@
   }
 
   .contact {
-    flex-grow: 1;
+    @apply grow;
     // width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    @apply flex;
+    @apply flex-col;
+    @apply flex-wrap;
+    @apply justify-center;
+    @apply items-center;
+    @apply content-center;
     margin-top: 0.2em;
     align-self: center;
-    // z-index: 10;
+    // @apply z-10;
     // text-shadow: 3px 0px 1px $black;
     // transition: .25s ease-in;
 
     @media (max-width: $breakOne) {
       margin-left: 0;
-      flex-direction: row;
+      @apply flex-row;
       margin-top: 1em;
     }
 
     @media (max-width: $breakTwo) {
       margin-top: 0.4em;
       // margin-top: 1em;
-      flex-direction: row;
+      @apply flex-row;
       // color: red !important;
     }
 
     @media (max-width: $breakThree) {
       margin-top: 1em;
       transition: 0.25s ease-in;
-      flex-direction: row;
+      @apply flex-row;
       // color: red !important;
     }
 
     @media (max-width: 520px) {
       margin-top: 1em;
       transition: 0.25s ease-in;
-      flex-direction: column;
+      @apply flex-col;
     }
 
     p {
       font-family: $font-copy;
       font-size: 1.15em;
       letter-spacing: 0.01em;
-      align-items: center;
-      text-align: center;
+      @apply items-center;
+      @apply text-center;
       line-height: 1.5em;
-      flex-grow: 1;
+      @apply grow;
       font-weight: 600;
       text-transform: lowercase;
 
@@ -277,7 +277,7 @@
       }
 
       @media (max-width: $breakOne) {
-        justify-content: center;
+        @apply justify-center;
         letter-spacing: 0.01em !important;
 
         &:nth-child(1) {
@@ -296,11 +296,11 @@
       }
 
       @media (max-width: $breakThree) {
-        justify-content: center;
+        @apply justify-center;
         letter-spacing: 0.09em !important;
         line-height: 1.25em;
         margin-bottom: -4px;
-        text-align: center;
+        @apply text-center;
       }
 
       &.resume,

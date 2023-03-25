@@ -14,7 +14,7 @@
     p {
       font-size: 1.2em;
       color: $blueTech;
-      text-align: center;
+      @apply text-center;
       padding: .5em;
       letter-spacing: 0.02em;
 

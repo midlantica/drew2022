@@ -160,9 +160,9 @@
     right: 0;
     bottom: 0;
     background-color: hsla(0, 0%, 0%, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
     z-index: 100000;
     margin: auto;
     // transition: 20s ease-in;
@@ -170,7 +170,7 @@
     animation: fade .25s;
 
     .modal {
-      position: relative;
+      @apply relative;
       margin-bottom: auto;
       margin-top: 260px;
       // max-width: 300px;
@@ -200,9 +200,9 @@
         border-radius: 20px;
         width: 40px;
         height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @apply flex;
+        @apply items-center;
+        @apply justify-center;
         cursor: pointer;
 
       }
@@ -216,7 +216,7 @@
       p {
         color: hsla(0, 0%, 0%, 0.85);
         margin-top: .25rem;
-        text-align: center;
+        @apply text-center;
       }
 
       h4 {
@@ -231,12 +231,12 @@
 
       .modalInner {
         // width: 100%;
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
+        @apply relative;
+        @apply flex;
+        @apply flex-wrap;
         margin: 1rem 2rem 1.5rem;
-        justify-content: center;
-        align-items: center;
+        @apply justify-center;
+        @apply items-center;
 
         .icon {
           // display: inline-block;
@@ -269,12 +269,12 @@
     grid-row: 2 / 4;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     width: 100%;
-    justify-content: space-between;
+    @apply justify-between;
     justify-items: center;
     align-items: stretch;
     align-content: space-between;
     gap: 0.5rem auto;
-    position: relative;
+    @apply relative;
 
     @media (max-width: $breakThou) {
       grid-row: 2;
@@ -322,7 +322,7 @@
   body.modern .skillsGrid {
     width: 70%;
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    justify-content: center;
+    @apply justify-center;
     margin: 1rem auto;
 
     @media (min-width: 770px) {

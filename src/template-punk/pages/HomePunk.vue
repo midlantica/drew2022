@@ -80,8 +80,8 @@
   .copyArea {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    display: flex;
-    flex-direction: column;
+    @apply flex;
+    @apply flex-col;
     align-self: flex-end;
 
     @media (max-width: $breakThou) {
