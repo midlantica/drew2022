@@ -42,7 +42,7 @@
 
   svg {
     // width: 88px;
-    // height: 60px;
+    // @apply h-[60px];
 
     .darkGreen {
       fill: rgba(12, 42, 13, 1);

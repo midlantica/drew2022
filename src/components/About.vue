@@ -50,19 +50,17 @@
 
 <style lang="scss" scoped>
   .about {
-    background: #fbf3bb;
-    padding: 1.25rem 1.75rem;
-    // display: block;
+    @apply bg-[#fbf3bb];
+    @apply py-5 px-7;
     @apply flex;
     @apply flex-row;
     @apply flex-nowrap;
-    //
     @apply justify-center;
     @apply items-center;
     @apply content-center;
-    align-self: center;
-    border-radius: 2px;
-    cursor: pointer;
+    @apply self-center;
+    @apply rounded-sm;
+    @apply cursor-pointer;
     @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
 
     @media (max-width: $breakThou) {
@@ -85,50 +83,50 @@
     @apply content-center;
     @apply items-center;
     @apply justify-center;
-    align-self: center;
+    @apply self-center;
     //
-    float: left;
-    clear: left;
-    flex-basis: auto;
+    @apply float-left;
+    @apply clear-left;
+    @apply basis-auto;
 
     @media (max-width: $breakFour) {
-      margin-bottom: 0.5em;
+      @apply mb-2;
     }
   }
 
   .flag {
     display: block;
     background: url("/img/brit_amer_flag.svg");
-    background-repeat: no-repeat;
+    @apply bg-no-repeat;
     background-size: contain;
-    margin-right: 1em;
+    @apply mr-4;
     background-position-y: center;
     //
     @apply content-center;
     @apply items-center;
     @apply justify-center;
-    align-self: center;
-    width: 100px;
-    height: 60px;
+    @apply self-center;
+    @apply w-[100px];
+    @apply h-[60px];
   }
 
   p {
     display: block;
     color: lighten($grey, 15);
-    font-size: 0.9em;
-    line-height: 1.4em;
-    letter-spacing: 0.05em;
+    @apply text-[0.9em];
+    @apply leading-[1.4em];
+    @apply tracking-wider;
     //
     @apply content-center;
     @apply items-center;
     @apply justify-center;
-    align-self: center;
-    text-align: left;
+    @apply self-center;
+    @apply text-left;
   }
 
   .corp .about {
     @include box-shadow(0px, 0px, 3px, -1px, hsla(0, 14%, 22%, 0.5));
-    border-radius: 2px;
+    @apply rounded-sm;
     font-family: Alegreya;
   }
 
@@ -145,7 +143,7 @@
 
     //
     p {
-      color: white;
+      @apply text-white;
       margin: 0.25rem auto;
     }
   }
@@ -155,20 +153,20 @@
     //
     p {
       font-family: "Bodoni Moda", Times, serif !important;
-      font-size: .9rem;
-      letter-spacing: 0.02rem;
-      line-height: 1.5rem;
+      @apply text-[0.9rem];
+      @apply tracking-[0.02rem];
+      @apply leading-6;
       @apply m-0;
-      font-weight: 500;
+      @apply font-medium;
 
       @media (max-width: $breakThou) {
-        font-size: 1.15rem;
+        @apply text-[1.15rem];
         line-height: 1.75rem;
       }
 
       @media (max-width: $breakTwo) {
-        font-size: 1rem;
-        line-height: 1.5rem;
+        @apply text-[1rem];
+        @apply leading-6;
       }
     }
   }
@@ -179,10 +177,9 @@
     margin: initial;
     margin-top: auto;
     @apply w-full;
-    // min-width: 30ch;
-    gap: 1rem;
+    @apply gap-4;
     box-shadow: 2px 2px 10px 0px black;
-    border-radius: 3px;
+    @apply rounded-[3px];
 
     @media (max-width: 850px) {
       @apply flex-row;
@@ -193,14 +190,13 @@
     }
 
     .flagBox {
-      width: auto;
-      // margin-bottom: 1rem;
+      @apply w-auto;
     }
 
     .flag {
       display: block;
       background: url("/img/brit_amer_flag.svg");
-      background-repeat: no-repeat;
+      @apply bg-no-repeat;
       background-size: contain;
       margin-right: initial !important;
       background-position-y: center;
@@ -208,28 +204,28 @@
       @apply content-center;
       @apply items-center;
       @apply justify-center;
-      align-self: center;
-      width: 100px;
-      height: 60px;
+      @apply self-center;
+      @apply w-[100px];
+      @apply h-[60px];
     }
 
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
       font-size: clamp(0.75rem, 0.8rem, 1.15rem) !important;
-      letter-spacing: 0rem;
-      line-height: 1.5rem;
+      @apply tracking-normal;
+      @apply leading-6;
       @apply m-0;
-      font-weight: 300;
+      @apply font-light;
       color: $ivory;
 
       // @media (max-width: $breakThou) {
-      //   font-size: 1.15rem;
+      //   @apply text-[1.15rem];
       //   line-height: 1.75rem;
       // }
 
       // @media (max-width: $breakTwo) {
-      //   font-size: 1rem;
-      //   line-height: 1.5rem;
+      //   @apply text-[1rem];
+      //   @apply leading-6;
       // }
     }
   }

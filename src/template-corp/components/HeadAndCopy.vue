@@ -34,20 +34,20 @@
 
   h1 {
     font-family: $font-head;
-    // font-weight: 500;
+    // @apply font-medium;
     color: $blue-dark;
     text-transform: none;
-    // font-size: 1.5em;
+    // @apply text-[1.5em];
     margin: 0em 0em .5em;
-    padding: 0;
-    line-height: 2rem;
+    @apply p-0;
+    @apply leading-[2rem];
     transition: 0.25s ease-in;
-    letter-spacing: 0.01rem;
+    @apply tracking-[0.01rem];
     @apply w-full;
     //
     font-weight: 600;
     max-width: 28ch;
-    font-size: 1.3rem;
+    @apply text-[1.3rem];
 
     @media (min-width: $breakThou) {
       max-width: 28ch;
@@ -75,7 +75,7 @@
     font-family: $font-caps;
     font-variant: small-caps;
     font-size: 75%;
-    font-weight: 500;
+    @apply font-medium;
   }
 
   p {
@@ -87,26 +87,26 @@
     padding-left: 1.7rem;
     text-align: justify;
     border-left: 2px dotted $paleBlue;
-    margin-right: 1rem;
+    @apply ml-4;
     letter-spacing: 0.00rem;
 
     @media (max-width: $breakThou) {
       columns: 2 200px;
-      column-gap: 3rem;
+      @apply gap-x-12;
       column-rule: 2px dotted $paleBlue;
-      text-justify: auto;
+      @apply text-justify;
       hyphens: auto;
     }
 
     @media (max-width: $breakOne) {
-      letter-spacing: 0.05rem;
+      @apply tracking-[0.05rem];
       columns: 2 200px;
     }
 
     @media (max-width: 670px) {
       columns: initial;
       // font-size: 1.05rem;
-      // line-height: 2.4rem;
+      // @apply leading-[2.4rem];
       padding-left: 1.3rem;
       border-left: 2px dotted $paleBlue;
       margin-right: 0.5rem;

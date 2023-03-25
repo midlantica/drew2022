@@ -48,7 +48,7 @@
       header,
       footer {
         background: url(./template-bourbon/assets/img/bg/bg_bag_dk.jpg) repeat;
-        // padding: 1rem;
+        // @apply p-4;
       }
     }
 
@@ -80,8 +80,8 @@
       h1 {
         padding-top: 1em;
         font-family: "VeneerTwo", Helvetica, Arial, sans-serif;
-        font-size: 1.75em;
-        font-weight: 300;
+        @apply text-[1.75em];
+        @apply font-light;
         text-rendering: optimizeLegibility;
 
         -webkit-font-smoothing: antialiased;
@@ -111,7 +111,7 @@
       //
       background: hsl(320, 100%, 9%);
       background-image: url(./template-modern/assets/img/bg/bg_bak_dk4.jpeg);
-      background-size: cover;
+      @apply bg-cover;
 
       @media (max-width: $breakOne) {
         // height: 100vh;
@@ -145,7 +145,7 @@
       background: #2e001f;
 
       .flexxy a p {
-        color: white;
+        @apply text-white;
         font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
         border-bottom: 1px solid hsla(0, 0%, 100%, .5);
       }
@@ -156,7 +156,7 @@
       //
       h1 {
         padding-top: 1em;
-        color: white;
+        @apply text-white;
         font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
         font-size: clamp(.85rem, 1.2rem, 1.4rem) !important;
         font-weight: 600;
@@ -194,7 +194,7 @@
       margin: .25rem 0;
       font-family: $font-groovy;
       font-size: .85rem !important;
-      line-height: 1.25rem;
+      @apply leading-[1.25rem];
     }
 
     .smallCaps {
@@ -210,8 +210,8 @@
         padding-top: 1em;
         color: black;
         font-family: $font-groovy;
-        font-size: 1.5em;
-        font-weight: 300;
+        @apply text-[1.5em];
+        @apply font-light;
         text-transform: capitalize;
       }
 
@@ -238,7 +238,7 @@
         padding-top: 1em;
         color: lighten(black, 30);
         font-family: Helvetica !important;
-        font-size: 1.5em;
+        @apply text-[1.5em];
         text-transform: capitalize;
       }
     }
@@ -265,8 +265,8 @@
       h1 {
         padding-top: 1em;
         font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
-        font-size: 1.75em;
-        font-weight: 500;
+        @apply text-[1.75em];
+        @apply font-medium;
       }
 
       p {
@@ -302,20 +302,20 @@
         padding-top: 1em;
         color: #01487f !important;
         font-family: "Bodoni Moda", Times, serif !important;
-        font-size: 1.5em;
+        @apply text-[1.5em];
         font-weight: 600;
         text-transform: capitalize;
       }
 
       p {
         font-family: "Bodoni Moda", Times, serif !important;
-        font-size: 1em;
+        @apply text-[1em];
       }
     }
 
     .about p {
       font-family: "Bodoni Moda", Times, serif !important;
-      font-size: 1em;
+      @apply text-[1em];
     }
   }
 
@@ -375,8 +375,8 @@
         padding-top: 1em;
         color: black;
         font-family: Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-        font-size: 1.75em;
-        font-weight: 300;
+        @apply text-[1.75em];
+        @apply font-light;
         text-transform: capitalize;
       }
 

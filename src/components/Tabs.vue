@@ -73,18 +73,18 @@
   body.modern .tabs a.modern {
     color: $ivory;
     background: linear-gradient(hsla(340, 76%, 48%, 1), hsl(340, 76%, 30%));
-    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
   }
 
   body.bourbon .tabs>a.bourbon {
     color: $ivory;
     background: linear-gradient(darken($orange, 10), darken($orange, 25));
-    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
   }
 
   body.groovy .tabs>a.groovy {
     color: $black;
-    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 0.25)];
+    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,0.25)];
     background: linear-gradient($groovy-aqua-dk 0%,
         $groovy-aqua-dk 20%,
         $groovy-yellow-dk 20%,
@@ -96,7 +96,7 @@
 
     &:hover {
       color: $black;
-      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+      @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
       background: linear-gradient($groovy-aqua 0%,
           $groovy-aqua 20%,
           $groovy-yellow 20%,
@@ -112,14 +112,14 @@
   body.techy .tabs>a.techy {
     @apply text-[fffdf4e6];
     background: linear-gradient(darken(#423BA0, 00), darken(#423BA0, 15));
-    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
     // box-shadow: 0px -2px 6px black inset;
   }
 
   body.corp .tabs>a.corp {
     @apply text-[fffdf4e6];
     background: linear-gradient(darken(hsl(205, 97%, 27%), 0), darken(hsl(205, 97%, 27%), 10));
-    @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
     // box-shadow: 0px -2px 6px black inset;
   }
 
@@ -135,16 +135,16 @@
 
     >a.modern {
       background: $grey;
-      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+      @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
 
       &:hover {
-        @apply bg-[hsl(340, 76%, 48%)];
+        @apply bg-[hsl(340,76%,48%)];
       }
     }
 
     >a.bourbon {
-      @apply bg-[hsl(0, 0%, 20%)];
-      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+      @apply bg-[hsl(0,0%,20%)];
+      @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
 
       &:hover {
         @apply bg-[#6f170f];
@@ -172,29 +172,29 @@
     }
 
     >a.techy {
-      @apply bg-[hsl(0, 0%, 20%)];
-      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+      @apply bg-[rgb(51,51,51)];
+      @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
 
       &:hover {
-        @apply bg-[hsl(205, 98%, 17%)];
+        @apply bg-[rgb(1,50,86)];
       }
     }
 
     >a.corp {
-      @apply bg-[hsl(0, 0%, 20%)];
-      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+      @apply bg-[hsl(0,0%,20%)];
+      @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
 
       &:hover {
-        @apply bg-[hsl(205, 97%, 27%)];
+        @apply bg-[hsl(205,97%,27%)];
       }
     }
 
     >a.punk {
-      @apply bg-[hsl(0, 0%, 20%)];
-      @apply drop-shadow-[0_0px_1px_hsla(0, 0, 0, 1)];
+      @apply bg-[hsl(0,0%,20%)];
+      @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
 
       &:hover {
-        @apply bg-[hsl(303, 100%, 35%)];
+        @apply bg-[hsl(303,100%,35%)];
       }
     }
   }

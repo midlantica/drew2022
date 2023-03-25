@@ -20,7 +20,7 @@
   body.modern.projects a.projectsTab,
   body.modern.skills a.skillsTab,
   body.modern.about a.aboutTab {
-    color: white !important;
+    @apply text-white;
   }
 
   .modernTabs {

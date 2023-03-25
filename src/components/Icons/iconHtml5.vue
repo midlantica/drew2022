@@ -87,39 +87,39 @@
   @keyframes rounder {
     100% {
       transform: rotate(360deg);
-      //opacity: 0;
+      //@apply opacity-0;
     }
   }
 
   @keyframes cycleAni1 {
     0% {
-      opacity: 1;
+      @apply opacity-100;
     }
 
     60% {
-      opacity: 0;
+      @apply opacity-0;
       //transform: scale(1.2);
     }
 
     100% {
       transform: translate(0px, -30px);
-      opacity: 0;
+      @apply opacity-0;
     }
   }
 
   @keyframes cycleAni2 {
     0% {
-      opacity: 0;
+      @apply opacity-0;
     }
 
     60% {
-      opacity: 0;
+      @apply opacity-0;
       //transform: scale(1);
     }
 
     100% {
       transform: translate(0px, 0px);
-      opacity: 1;
+      @apply opacity-100;
     }
   }
 </style>

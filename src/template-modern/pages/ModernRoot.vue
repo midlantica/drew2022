@@ -33,8 +33,8 @@
   .modBacker {
     // background: hsl(282, 10%, 10%);
     // height: 770px;
-    // background-repeat: no-repeat;
-    // background-size: cover;
+    // @apply bg-no-repeat;
+    // @apply bg-cover;
     @apply flex;
     @apply flex-col;
     @apply items-center;

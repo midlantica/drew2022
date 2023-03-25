@@ -69,7 +69,7 @@
 
     @media (max-width: $breakThou) {
       grid-gap: 0;
-      grid-row-gap: 1em;
+      row-gap: 1em;
       grid-template-columns: 1fr;
     }
 
@@ -151,7 +151,7 @@
       margin-top: .25em;
       margin-bottom: .5em;
 
-      grid-row-gap: 0;
+      row-gap: 0;
     }
   }
 

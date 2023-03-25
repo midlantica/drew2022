@@ -20,5 +20,5 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: $base-font-size;
   background: #333;
-  margin: 0;
+  @apply m-0;
 }

@@ -24,7 +24,7 @@
   $white: #eee;
 
   // scaling... any units
-  $width: 100px;
+  $@apply w-[100px];
 
   .loader {
     @apply relative;
@@ -48,7 +48,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    @apply m-auto;
   }
 
   .path {

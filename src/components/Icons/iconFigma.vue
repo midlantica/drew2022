@@ -48,7 +48,7 @@
 
   #figmaBox {
     // width: 88px;
-    // height: 60px;
+    // @apply h-[60px];
 
     .background {
       fill: url(#backer) hsl(0, 0%, 10%);
@@ -114,18 +114,18 @@
 
   @keyframes transparenter {
     0% {
-      opacity: 1;
-      //opacity: 0;
+      @apply opacity-100;
+      //@apply opacity-0;
     }
 
     50% {
-      opacity: 0;
-      //opacity: 0;
+      @apply opacity-0;
+      //@apply opacity-0;
     }
 
     100% {
-      opacity: 1;
-      //opacity: 0;
+      @apply opacity-100;
+      //@apply opacity-0;
     }
   }
 </style>

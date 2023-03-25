@@ -68,7 +68,7 @@
   p {
     line-height: 1em;
     @apply m-0;
-    padding: 0;
+    @apply p-0;
     color: $blue-dark !important;
     text-transform: none;
 
@@ -83,7 +83,7 @@
     // margin: 0em 0 0 1rem;
 
     @media (max-width: $breakOne) {
-      // height: 60px;
+      // @apply h-[60px];
       // margin-left: 0.75em;
     }
 
@@ -98,13 +98,13 @@
     display: inline-block;
     background: #c00000;
     background-image: url(/img/drew_mug_red.png);
-    // background-repeat: no-repeat;
-    // background-size: cover;
+    // @apply bg-no-repeat;
+    // @apply bg-cover;
     width: 80px;
     height: 80px;
     background-position: -39px -59px;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
-    background-repeat: no-repeat;
+    @apply bg-no-repeat;
     background-size: 151%;
     filter: hue-rotate(210deg) grayscale(50%);
     border-radius: 1px;
@@ -123,7 +123,7 @@
 
   h1 {
     font-family: $font-copy;
-    font-size: 1.5rem;
+    @apply text-[1.5rem];
     letter-spacing: -0.025em;
     transition: 0.25s ease-in;
     font-weight: medium;
@@ -137,7 +137,7 @@
     @media (max-width: $breakOne) {
       // font-size: 4.5em;
       // flex-grow: 0;
-      // text-align: right;
+      // @apply text-right;
     }
 
     @media (max-width: $breakTwo) {
@@ -154,10 +154,10 @@
 
   h3 {
     font-family: $font-copy;
-    font-size: 1.15rem;
+    @apply text-[1.15rem];
     letter-spacing: -0.025em;
     transition: 0.25s ease-in;
-    font-weight: bold;
+    @apply font-bold;
 
     a:hover {
       color: initial !important;
@@ -168,7 +168,7 @@
     @media (max-width: $breakOne) {
       // font-size: 4.5em;
       // flex-grow: 0;
-      // text-align: right;
+      // @apply text-right;
     }
 
     @media (max-width: $breakTwo) {
@@ -190,7 +190,7 @@
 
     @media (max-width: $breakOne) {
       // height: 3ch;
-      align-self: center;
+      @apply self-center;
       // margin-top: 0.6em;
       // margin-left: 0.75em;
     }
@@ -225,7 +225,7 @@
     @apply items-center;
     @apply content-center;
     margin-top: 0.2em;
-    align-self: center;
+    @apply self-center;
     // @apply z-10;
     // text-shadow: 3px 0px 1px $black;
     // transition: .25s ease-in;
@@ -262,7 +262,7 @@
       letter-spacing: 0.01em;
       @apply items-center;
       @apply text-center;
-      line-height: 1.5em;
+      @apply leading-[1.5em];
       @apply grow;
       font-weight: 600;
       text-transform: lowercase;
@@ -281,12 +281,12 @@
         letter-spacing: 0.01em !important;
 
         &:nth-child(1) {
-          text-align: right;
+          @apply text-right;
           margin: 0 0.25em;
         }
 
         &:nth-child(2) {
-          text-align: left;
+          @apply text-left;
           margin: 0 0.25em;
         }
       }

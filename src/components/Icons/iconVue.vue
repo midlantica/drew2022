@@ -13,7 +13,7 @@
 
   svg {
     // width: 88px;
-    // height: 60px;
+    // @apply h-[60px];
   }
 
   svg:hover {

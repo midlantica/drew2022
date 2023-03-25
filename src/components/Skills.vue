@@ -152,7 +152,7 @@
   @import "../template-modern/assets/css/modern-main.scss";
 
   .modalBg {
-    position: fixed;
+    @apply fixed;
     @apply w-full;
     height: 100%;
     top: 0;
@@ -164,7 +164,7 @@
     @apply justify-center;
     @apply items-center;
     z-index: 100000;
-    margin: auto;
+    @apply m-auto;
     // transition: 20s ease-in;
     // transform: translate(0px, 0px) rotate(0deg) !important;
     animation: fade .25s;
@@ -195,7 +195,7 @@
         background-color: transparent;
         color: hsla(0, 0%, 0%, 50%);
         border: none;
-        cursor: pointer;
+        @apply cursor-pointer;
         background: #ffffff;
         border-radius: 20px;
         width: 40px;
@@ -203,7 +203,7 @@
         @apply flex;
         @apply items-center;
         @apply justify-center;
-        cursor: pointer;
+        @apply cursor-pointer;
 
       }
 
@@ -220,12 +220,12 @@
       }
 
       h4 {
-        font-size: 1.2rem;
-        letter-spacing: 0rem;
+        @apply text-[1.2rem];
+        @apply tracking-normal;
       }
 
       p {
-        font-size: 1rem;
+        @apply text-[1rem];
         line-height: 1.8;
       }
 
@@ -242,7 +242,7 @@
           // display: inline-block;
           // margin-left: -1rem;
           // flex-shrink: 1;
-          align-self: center;
+          @apply self-center;
 
           svg {
             // display: block;
@@ -254,7 +254,7 @@
         }
 
         .content {
-          display: inline;
+          @apply inline;
           flex-shrink: 1;
         }
 
@@ -315,7 +315,7 @@
     }
 
     svg g {
-      cursor: pointer;
+      @apply cursor-pointer;
     }
   }
 
@@ -336,7 +336,7 @@
     }
 
     svg {
-      width: 100px;
+      @apply w-[100px];
       margin: 0rem auto 0.75rem;
 
       &:hover {
@@ -494,6 +494,6 @@
 
   .modal-fade-enter-from,
   .modal-fade-leave-to {
-    opacity: 0;
+    @apply opacity-0;
   }
 </style>

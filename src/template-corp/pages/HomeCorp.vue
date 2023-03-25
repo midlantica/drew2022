@@ -74,7 +74,7 @@
 
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
-      grid-row-gap: 1em;
+      row-gap: 1em;
     }
 
     @media (max-width: $breakOne) {
@@ -93,7 +93,7 @@
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
       grid-row: 1;
-      margin-bottom: -1em;
+      @apply mb-[-1em];
     }
 
     @media (max-width: $breakOne) {

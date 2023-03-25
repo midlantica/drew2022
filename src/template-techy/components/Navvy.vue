@@ -111,39 +111,39 @@
         }
 
         a.drewHeadPic {
-          width: 92px !important;
-          height: 109px !important;
-          padding: 1em 1em 0em 1em;
+          @apply w-[92px];
+          @apply h-[109px];
+          @apply pt-4 pr-4 pb-0 pl-4;
           background-image: url(/img/drew_mug_dig.png);
-          background-repeat: no-repeat;
-          background-size: cover;
+          @apply bg-no-repeat;
+          @apply bg-cover;
           grid-column: 1 / 2;
           grid-row: 1 / 3;
-          justify-self: end;
+          @apply justify-self-end;
 
           @media (max-width: $breakThou) {
-            width: 92px !important;
-            height: 109px !important;
+            @apply w-[92px];
+            @apply h-[109px];
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            margin: 0 .5em 0 0;
-            justify-self: right;
+            @apply mt-0 mr-2 mb-0 ml-0;
+            @apply justify-self-end;
           }
 
           @media (max-width: $breakTwo) {
-            width: 64px !important;
-            height: 75px !important;
+            @apply w-[64px];
+            @apply h-[75px];
           }
 
           @media (max-width: $breakThree) {
-            width: 46px !important;
-            height: 55px !important;
+            @apply w-[46px];
+            @apply h-[55px];
             @apply m-0;
           }
 
           @media (max-width: $breakFour) {
             // width: 28px !important;
-            height: 55px !important;
+            @apply h-[55px];
             @apply m-0;
           }
 
@@ -166,36 +166,37 @@
         }
 
         a.svgArt {
-          height: 5.9em;
+          @apply h-[5.9em];
 
           @media (max-width: $breakThou) {
-            height: 11.5vw;
+            @apply h-[11.5vw];
           }
 
           @media (max-width: $breakOne) {
-            height: 14vw;
+            @apply h-[14vw];
           }
 
           @media (max-width: $breakTwo) {
-            height: 14vw;
+            @apply h-[14vw];
           }
 
           @media (max-width: $breakThree) {
-            height: 14vw;
+            @apply h-[14vw];
           }
         }
 
         a.mastDrew {
           grid-column: 2 / 3;
           grid-row: 1 / 3;
-          width: 19em;
+          @apply w-[19em];
 
           @media (max-width: $breakThou) {
             grid-column: 2 / 3;
             grid-row: 1 / 1;
-            align-self: end;
-            margin-bottom: -1em;
-            width: 40vw;
+            @apply self-end;
+
+            @apply mb-[-1em];
+            @apply w-[40vw];
           }
 
           @media (max-width: $breakOne) {
@@ -207,7 +208,7 @@
           }
 
           @media (max-width: $breakThree) {
-            margin-bottom: 0em;
+            @apply mb-[0em];
             width: 56vw;
           }
         }
@@ -216,12 +217,12 @@
           display: initial;
           grid-column: 3 / 4;
           grid-row: 1 / 3;
-          width: 25.3em;
+          @apply w-[25.3em];
 
           @media (max-width: $breakThou) {
             grid-column: 1 / 3;
             grid-row: 2 / 3;
-            width: 50vw;
+            @apply w-[50vw];
           }
 
           @media (max-width: $breakOne) {
@@ -229,13 +230,12 @@
           }
 
           @media (max-width: $breakTwo) {
-            margin-left: 0;
-            margin-top: 0;
+            @apply ml-0 mt-0;
           }
 
           @media (max-width: $breakThree) {
-            width: 77vw;
-            height: 20vw;
+            @apply w-[77vw];
+            @apply h-[20vw];
           }
         }
       }
@@ -244,10 +244,7 @@
 
   nav .jobDesc {
     margin: -1em 0em 1em 11.1em;
-    // @apply text-center;
-    // margin-top: -1em;
-    // @include clearfix;
-    text-align: left;
+    @apply text-left;
 
     @media (max-width: $breakThou) {
       margin: 1em 0em;
@@ -277,13 +274,13 @@
       font-weight: 400;
       color: $blueTech;
       text-transform: lowercase;
-      font-size: 1.7em;
+      @apply text-[1.7em];
       line-height: 1.1em;
-      letter-spacing: .03em;
-      display: inline;
+      @apply tracking-[.03em];
+      @apply inline;
 
       &:nth-child(1) {
-        // margin-left: 1rem;
+        // @apply ml-4;
       }
 
       &:nth-child(2) {
@@ -291,7 +288,7 @@
       }
 
       @media (max-width: $breakThou) {
-        display: inline;
+        @apply inline;
         font-size: 3.3vw;
         margin-top: -3px;
 
@@ -305,7 +302,7 @@
       }
 
       @media (max-width: $breakOne) {
-        display: inline;
+        @apply inline;
         font-size: 3.7vw;
         margin-top: -3px;
 
@@ -361,10 +358,10 @@
 
       p {
         font-family: $font-copy;
-        font-weight: 500;
+        @apply font-medium;
         letter-spacing: .09em;
         color: $ivory;
-        font-size: 1.3em;
+        @apply text-[1.3em];
         line-height: 2.5em;
         margin-left: 0.5em;
 

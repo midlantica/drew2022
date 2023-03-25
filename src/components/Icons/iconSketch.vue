@@ -60,23 +60,23 @@
 
   @keyframes cycleAni1 {
     0% {
-      opacity: 0;
+      @apply opacity-0;
     }
 
     100% {
       transform: translate(21px, 9px);
-      opacity: 1;
+      @apply opacity-100;
     }
   }
 
   @keyframes cycleAni2 {
     0% {
-      opacity: 1;
+      @apply opacity-100;
     }
 
     100% {
       transform: translate(21px, 40px);
-      opacity: 0;
+      @apply opacity-0;
     }
   }
 </style>

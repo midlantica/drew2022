@@ -43,11 +43,11 @@
   h1 {
     font-family: $font-head;
     text-transform: initial;
-    font-size: 1.5rem;
-    line-height: 2.1rem;
-    font-weight: 500;
+    @apply text-[1.5rem];
+    @apply leading-[2.1rem];
+    @apply font-medium;
     letter-spacing: 0.00rem;
-    margin-bottom: .5rem;
+    @apply mb-2;
 
     @media (min-width: $breakThou) {
       max-width: 26ch;
@@ -75,25 +75,25 @@
     color: $grey;
     font-size: 1.125rem;
     letter-spacing: 0.009rem;
-    line-height: 2.6rem;
+    @apply leading-[2.6rem];
 
     @media (max-width: $breakThou) {
       columns: 2 200px;
-      column-gap: 3rem;
+      @apply gap-x-12;
       column-rule: 2px dotted transparentize($orange, 0.5);
-      text-justify: auto;
+      @apply text-justify;
       hyphens: auto;
     }
 
     @media (max-width: $breakOne) {
-      letter-spacing: 0.05rem;
+      @apply tracking-[0.05rem];
       columns: 2 200px;
     }
 
     @media (max-width: 670px) {
       columns: initial;
       font-size: 1.05rem;
-      line-height: 2.4rem;
+      @apply leading-[2.4rem];
       padding-left: 1.3rem;
       border-left: 2px dotted transparentize($orange, 0.5);
       margin-right: 0.5rem;

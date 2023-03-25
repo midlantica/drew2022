@@ -39,16 +39,16 @@
     .jobTitles {
       @apply flex-row;
       flex: 0 1 auto;
-      align-self: flex-start;
+      @apply self-start;
 
       p {
         color: $black;
         background: white;
-        font-size: .9em;
+        @apply text-[0.9em];
         font-family: Poppins !important;
-        font-weight: 500;
-        font-style: normal;
-        letter-spacing: .02em;
+        @apply font-medium;
+        @apply not-italic;
+        @apply tracking-[.02em];
         transform: rotate(-1.25deg);
         text-transform: lowercase;
         padding: 0.3em 0.5em;
@@ -69,7 +69,7 @@
         &:nth-of-type(2) {
           transform: rotate(2deg);
           display: inline-block;
-          margin-left: .5rem;
+          @apply ml-2;
         }
 
       }
@@ -82,20 +82,20 @@
       .resume {
         color: $black;
         background: white;
-        font-size: .9em;
+        @apply text-[0.9em];
         font-family: Poppins !important;
-        font-weight: 500;
-        font-style: normal;
-        letter-spacing: .02em;
+        @apply font-medium;
+        @apply not-italic;
+        @apply tracking-[.02em];
         text-transform: lowercase;
         padding: 0.3em 0.5em;
         display: inline-block;
-        margin-left: .25rem;
+        @apply ml-1;
 
         &.rOne {
           transform: rotate(-2deg) !important;
           background: transparentize(#ff4bf5, .5);
-          color: white;
+          @apply text-white;
         }
 
         &.rTwo {
@@ -138,7 +138,7 @@
     top: 0;
 
     @media (max-width: $breakOne) {
-      margin-bottom: 0em;
+      @apply mb-[0em];
     }
   }
 
@@ -146,15 +146,15 @@
     transform: rotate(-1deg);
 
     h1 {
-      font-size: 1.15rem;
+      @apply text-[1.15rem];
       background: hsla(0, 100%, 50%, 0.85);
-      color: white;
-      font-weight: 500;
+      @apply text-white;
+      @apply font-medium;
       padding: 0 0em 0.1em 0.2rem;
       transform: rotate(1deg);
       @apply z-10;
       display: inline-block;
-      line-height: 1.7rem;
+      @apply leading-[1.7rem];
       // transform: rotate(0deg);
 
       &:nth-of-type(1) {
@@ -172,15 +172,15 @@
       font-family: Poppins !important;
       font-weight: 400;
       font-style: italic;
-      font-size: 1em;
+      @apply text-[1em];
       color: $grey;
-      line-height: 2.25rem;
+      @apply leading-9;
       letter-spacing: 0.045em;
       @apply relative;
       top: 0em;
       background: #FBC83F;
       margin: 1em 1em 0em;
-      display: inline;
+      @apply inline;
       padding: 0.4em 0.1em;
       /////////
       // HIGHLIGHTING EFFECT

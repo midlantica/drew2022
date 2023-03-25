@@ -12,26 +12,26 @@
     background: $mango;
 
     p {
-      font-size: 1.2em;
+      @apply text-[1.2em];
       color: $blueTech;
       @apply text-center;
       padding: .5em;
-      letter-spacing: 0.02em;
+      @apply tracking-wide;
 
       @media (max-width: $breakThou) {
-        font-size: 1.25em;
+        @apply text-[1.25em];
       }
 
       @media (max-width: $breakOne) {
-        font-size: 1.2em;
+        @apply text-[1.2em];
       }
 
       @media (max-width: $breakTwo) {
-        font-size: 1em;
+        @apply text-[1em];
       }
 
       @media (max-width: $breakThree) {
-        font-size: .85em;
+        @apply text-[.85em];
         line-height: 1.25em;
       }
     }

@@ -53,13 +53,13 @@
   .mainGrid {
     display: grid;
     grid-template-columns: 7fr 6fr;
-    grid-row-gap: 1em;
+    row-gap: 1em;
     margin: 0em 1em 0.5em;
 
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
       grid-gap: 0em;
-      grid-row-gap: 1em;
+      row-gap: 1em;
       margin: 0em 1em 1em;
     }
 

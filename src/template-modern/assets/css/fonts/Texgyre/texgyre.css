@@ -2,21 +2,21 @@
   font-family: 'texgyre-regular';
   src: url('./texgyre-regular.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
+  @apply not-italic;
 }
 
 @font-face {
   font-family: 'texgyre-italic';
   src: url('./texgyre-italic.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
+  @apply not-italic;
 }
 
 @font-face {
   font-family: 'texgyre-bold';
   src: url('./texgyre-bold.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
+  @apply not-italic;
 }
 
 @font-face {

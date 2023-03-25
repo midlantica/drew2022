@@ -20,28 +20,28 @@
 
     @media (min-width: $breakThou) {
       // margin-top: 1.5rem;
-      // margin-left: 1.5rem;
-      // margin-right: 1.5rem;
+      // @apply ml-6;
+      // @apply ml-6;
     }
 
     @media (max-width: $breakThou) {
       margin-top: 1.5rem;
-      margin-left: 2rem;
-      margin-right: 2rem;
+      @apply ml-8;
+      @apply ml-8;
     }
 
     @media (max-width: $breakOne) {
-      margin-left: 1rem;
-      margin-right: 1rem;
+      @apply ml-4;
+      @apply ml-4;
     }
 
     @media (max-width: $breakTwo) {
-      // margin-left: .75rem;
+      // @apply ml-3;
       // margin-right: .75rem;
     }
 
     @media (max-width: $breakThree) {
-      // margin-left: .25rem;
+      // @apply ml-1;
       // margin-right: .25rem;
     }
   }
@@ -50,8 +50,8 @@
     font-family: $font-head;
     font-weight: 600;
     text-transform: initial;
-    line-height: 2rem;
-    font-size: 1.5rem;
+    @apply leading-[2rem];
+    @apply text-[1.5rem];
     margin-bottom: .85rem;
     margin-top: 2rem;
     color: $blueTech;
@@ -81,35 +81,35 @@
     // font-family: $font-caps;
     font-variant: small-caps;
     font-size: 80%;
-    // font-weight: 500;
+    // @apply font-medium;
   }
 
   p {
     font-family: $font-copy;
-    font-size: 1.3rem;
-    line-height: 3rem;
+    @apply text-[1.3rem];
+    @apply leading-[3rem];
     color: transparentize($blueTech, .2);
     letter-spacing: 0.06em;
 
     @media (min-width: $breakThou) and (-webkit-min-device-pixel-ratio: 2) {
-      // font-size: 1.2rem;
+      // @apply text-[1.2rem];
       // line-height: 2.6em;
     }
 
     @media (max-width: $breakThou) {
-      font-size: 1.2rem;
+      @apply text-[1.2rem];
       line-height: 2.1em;
-      letter-spacing: 0.05em;
+      @apply tracking-wider;
       text-align: justify;
       columns: 2 200px;
-      column-gap: 3rem;
-      text-justify: auto;
+      @apply gap-x-12;
+      @apply text-justify;
       hyphens: auto;
       column-rule: 2px dotted transparentize($blueTech, .5);
     }
 
     @media (max-width: $breakOne) {
-      // font-size: 1rem;
+      // @apply text-[1rem];
       // line-height: 2.2em;
       // margin: 1.5em .5em 0;
       // letter-spacing: 0.00em;
@@ -118,7 +118,7 @@
     }
 
     @media (max-width: $breakTwo) {
-      font-size: 1.2rem;
+      @apply text-[1.2rem];
       line-height: 2.3em;
       // margin: 1em 1em 0;
       letter-spacing: 0.01em;
@@ -126,7 +126,7 @@
     }
 
     @media (max-width: $breakTwo) and (-webkit-min-device-pixel-ratio: 2) {
-      font-size: 1.15rem;
+      @apply text-[1.15rem];
       // line-height: 2.4em;
       // margin: 1em 1em 0;
       // padding: 0 1em;

@@ -36,7 +36,7 @@
   svg {
 
     // width: 88px;
-    // height: 60px;
+    // @apply h-[60px];
     &:hover {
       cursor: pointer;
     }
@@ -68,7 +68,7 @@
 
     .svgWhite2 {
       fill: #fafafa;
-      // opacity: 0;
+      // @apply opacity-0;
       // transform: translate(21px, 9px);
       transform: translate(0px, -50px);
     }
@@ -86,19 +86,19 @@
 
   @keyframes animateWhiteFill {
     0% {
-      opacity: 1;
+      @apply opacity-100;
       transform: translate(0px, 0px);
       // fill: #fafafa;
     }
 
     50% {
-      opacity: 0;
+      @apply opacity-0;
       transform: translate(0px, -50px);
       // fill: #fafafa;
     }
 
     100% {
-      opacity: 1;
+      @apply opacity-100;
       transform: translate(0px, 0px);
       // fill: #fafafa;
     }
@@ -106,19 +106,19 @@
 
   @keyframes animateWhiteFill2 {
     0% {
-      opacity: 0;
+      @apply opacity-0;
       transform: translate(0px, 50px);
       // fill: #fafafa;
     }
 
     50% {
-      opacity: 1;
+      @apply opacity-100;
       transform: translate(0px, 0px);
       // fill: #fafafa;
     }
 
     100% {
-      opacity: 0;
+      @apply opacity-0;
       transform: translate(0px, 50px);
       // fill: #fafafa;
     }

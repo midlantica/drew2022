@@ -89,7 +89,7 @@
 
 <style lang="scss" scoped>
   h1 {
-    font-size: 2em;
+    @apply text-[2em];
     @apply text-center;
     @apply py-2 px-0;
 
@@ -102,7 +102,7 @@
     //
 
     a {
-      flex-basis: auto;
+      @apply basis-auto;
       @apply grow;
       box-sizing: border-box;
       @apply text-center;
@@ -130,7 +130,7 @@
         @apply text-center;
         // @apply m-0;
         margin-bottom: 1em;
-        margin-top: 0.5em;
+        @apply mt-2;
         padding-bottom: 0;
         @apply text-[0.85em];
         color: black;
@@ -151,7 +151,7 @@
       &:hover img {
         border: 2px solid lighten($accent-red, 0);
         @include no-shadow;
-        cursor: pointer;
+        @apply cursor-pointer;
       }
     }
   }
@@ -167,7 +167,7 @@
       }
 
       p {
-        color: white;
+        @apply text-white;
 
         &:hover {
           border-bottom: 1px solid white;
@@ -175,7 +175,7 @@
       }
 
       &:hover p {
-        color: white;
+        @apply text-white;
         border-bottom: 1px solid white;
       }
 
@@ -193,7 +193,7 @@
       }
 
       p {
-        color: white;
+        @apply text-white;
         background: red;
         padding: .15rem .25rem;
 
@@ -203,7 +203,7 @@
       }
 
       &:hover p {
-        color: white;
+        @apply text-white;
         border-bottom: 1px solid black;
       }
 

@@ -137,7 +137,7 @@
     height: 115px;
 
     @media (max-width: $breakThou) {
-      min-height: initial;
+      @apply min-h-min;
     }
 
     @media (max-width: $breakOne) {
@@ -158,7 +158,7 @@
     @include box-shadow(0px, 2px, 6px, -2px, hsla(0, 0%, 0%, .9));
 
     @media (max-width: $breakThou) {
-      // min-height: initial;
+      // @apply min-h-min;
     }
 
     @media (max-width: $breakOne) {
@@ -180,7 +180,7 @@
     // min-height: 357px;
 
     @media (max-width: $breakThou) {
-      min-height: initial;
+      @apply min-h-min;
     }
 
     @media (max-width: $breakOne) {
@@ -200,7 +200,7 @@
     @include box-shadow(0px, 2px, 6px, -2px, hsla(0, 0%, 0%, 1));
 
     @media (max-width: $breakThou) {
-      min-height: initial;
+      @apply min-h-min;
     }
 
     @media (max-width: $breakOne) {
@@ -221,7 +221,7 @@
     @include box-shadow(0px, 1px, 1px, 0px, hsla(0, 0%, 0%, 0.5), false);
 
     @media (max-width: $breakThou) {
-      min-height: initial;
+      @apply min-h-min;
     }
 
     @media (max-width: $breakOne) {
@@ -242,7 +242,7 @@
     @include box-shadow(0px, 1px, 1px, 0px, hsla(0, 0%, 0%, 0.5), false);
 
     @media (max-width: $breakThou) {
-      min-height: initial;
+      @apply min-h-min;
     }
 
     @media (max-width: $breakOne) {
@@ -277,7 +277,7 @@
     height: 181.5px !important;
 
     @media (max-width: $breakThou) {
-      min-height: initial;
+      @apply min-h-min;
     }
   }
 
@@ -347,7 +347,7 @@
     // stroke: orange;
 
     @media (max-width: $breakThou) {
-      // min-height: initial;
+      // @apply min-h-min;
     }
 
     @media (max-width: $breakOne) {
@@ -372,17 +372,17 @@
   body.modern .projectHead,
   body.modern .box p {
     font-family: 'Spartan', Helvetica, Arial, sans-serif !important;
-    font-size: 1rem;
+    @apply text-[1rem];
     letter-spacing: 0em !important;
-    color: white !important;
+    @apply text-white;
     text-transform: lowercase !important;
     @apply text-center;
 
     a {
-      color: white !important;
+      @apply text-white;
 
       &:hover {
-        color: white;
+        @apply text-white;
       }
     }
 
@@ -394,7 +394,7 @@
 
   body.modern .miniGallery {
     background: none;
-    gap: 1rem;
+    @apply gap-4;
   }
 
   body.corp .VueCarousel.druCarousel {
@@ -414,7 +414,7 @@
 
   ///////
   .projectHead {
-    font-size: 0.9em;
+    @apply text-[0.9em];
     @apply text-center;
     @apply uppercase;
     // margin-right: 3.5em;
@@ -546,7 +546,7 @@
           @apply uppercase;
           color: $grey;
           @apply text-center;
-          letter-spacing: 0.05em;
+          @apply tracking-wider;
           margin-bottom: 0.5em;
           @apply text-center;
 
@@ -562,22 +562,22 @@
   @keyframes carouselFader {
     0% {
       transform: scale(0);
-      opacity: 0;
+      @apply opacity-0;
     }
 
     50% {
       transform: scale(0);
-      opacity: 0;
+      @apply opacity-0;
     }
 
     95% {
       transform: scale(1.015);
-      opacity: 1;
+      @apply opacity-100;
     }
 
     100% {
       transform: scale(1);
-      opacity: 1;
+      @apply opacity-100;
     }
   }
 

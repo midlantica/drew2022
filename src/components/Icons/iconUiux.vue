@@ -95,24 +95,24 @@
 
   @keyframes cycleAni1 {
     0% {
-      opacity: 1;
+      @apply opacity-100;
       // transform: translate(3px, 13px);
     }
 
     100% {
-      opacity: 0;
+      @apply opacity-0;
       transform: translate(3px, -52px);
     }
   }
 
   @keyframes cycleAni2 {
     0% {
-      opacity: 0;
+      @apply opacity-0;
       // transform: translate(3px, 52px);
     }
 
     100% {
-      opacity: 1;
+      @apply opacity-100;
       transform: translate(3px, 13px);
     }
   }

@@ -20,22 +20,23 @@
   .headBlock {
     display: grid;
     grid-template-columns: 88px auto;
+    grid-auto-rows: auto;
     grid-template-rows: auto;
-    grid-column-gap: 6px;
-    justify-items: start;
+    @apply gap-x-1.5;
+    @apply justify-items-start;
     @apply items-center;
-    margin-top: .5rem;
+    @apply mt-2;
 
     a.drewhead {
-      margin-right: 1em;
+      // @apply ml-4;
       background-image: url(/img/drew_mug_red.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 78px;
-      height: 94px;
+      @apply bg-no-repeat;
+      @apply bg-cover;
+      @apply w-[78px];
+      @apply h-[94px];
       grid-column: 1 / 2;
       grid-row: 1 / 2;
-      align-self: flex-start;
+      @apply self-start;
     }
 
     h1 {
@@ -43,28 +44,28 @@
       font-family: $font-subhead;
       color: $accent-red;
       font-size: 1.7rem;
-      padding: 0;
+      @apply p-0;
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      align-self: center;
-      max-width: 30ch;
+      @apply self-center;
+      @apply max-w-[30ch];
 
       @media (min-width: $breakThou) {
-        max-width: 30ch;
+        @apply max-w-[30ch];
       }
 
       @media (max-width: $breakOne) {
         max-width: initial;
-        font-size: 1.65rem;
+        @apply text-[1.65rem];
       }
 
       @media (max-width: $breakTwo) {
-        max-width: 30ch;
-        font-size: 1.5rem;
+        @apply max-w-[30ch];
+        @apply text-[1.5rem];
       }
 
       @media (max-width: $breakThree) {
-        font-size: 1.15rem;
+        @apply text-[1.15rem];
       }
 
     }
@@ -72,42 +73,42 @@
 
   p.smallCaps {
     font-variant: small-caps !important;
-    font-size: 185% !important;
-    // font-weight: 500;
+    // @apply all-small-caps;
+    @apply text-[185%];
+    // @apply font-medium;
   }
 
   p {
     font-family: $font-copy;
-    font-size: 1.1rem !important;
-    line-height: 2.6rem;
     color: $grey;
-    margin: 0.5rem 0.5rem 0rem !important;
-    letter-spacing: 0.03rem;
+    @apply text-[1.1rem];
+    @apply leading-[2.6rem];
+    @apply mt-2 mx-2 mb-0;
+    @apply tracking-[0.03rem];
 
     @media (max-width: $breakThou) {
       columns: 2 20ch;
-      line-height: 2.25rem !important;
-      column-gap: 3rem;
+      @apply leading-9;
+      @apply gap-x-12;
       column-rule: 1px solid transparentize($accent-red, .75);
-      text-justify: auto;
+      @apply text-justify;
       hyphens: auto;
     }
 
     @media (max-width: $breakOne) {
-      letter-spacing: 0.05rem;
-      // columns: 2 200px;
-      text-justify: auto;
+      @apply tracking-[0.05rem];
+      @apply text-justify;
       hyphens: auto;
     }
 
     @media (max-width: 670px) {
       columns: initial;
-      text-justify: auto;
+      @apply text-justify;
       hyphens: auto;
     }
 
     @media (max-width: $breakTwo) {
-      text-justify: auto;
+      @apply text-justify;
       hyphens: auto;
     }
   }

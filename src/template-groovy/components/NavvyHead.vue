@@ -120,8 +120,8 @@
 
       a.drewhead {
         background-image: url(/img/drew_mug_sepia.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        @apply bg-no-repeat;
+        @apply bg-cover;
         width: 98px;
         height: 119px;
         display: block;
@@ -185,7 +185,7 @@
 
         @media (max-width: $breakThou) {
           height: 6vw;
-          align-self: center;
+          @apply self-center;
         }
 
         @media (max-width: $breakOne) {
@@ -205,7 +205,7 @@
       }
 
       .mastDrew {
-        margin-right: 1em;
+        //
 
         @media (max-width: $breakThou) {
           //
@@ -225,17 +225,19 @@
       }
 
       .mastHarper {
+        @apply ml-4;
 
         @media (max-width: $breakThou) {
+          // @apply ml-4;
           //
         }
 
         @media (max-width: $breakOne) {
-          //
+          // @apply ml-4;
         }
 
         @media (max-width: $breakTwo) {
-          //
+          @apply ml-2;
         }
       }
     }
@@ -243,8 +245,8 @@
 
   nav .gridMast .jobDesc {
     grid-column: 2 / 3;
-    align-self: center;
-    font-size: 1em;
+    @apply self-center;
+    @apply text-[1em];
 
     @media (max-width: $breakThou) {
       margin: 1em 0em;
@@ -258,7 +260,7 @@
       margin: 0em 0em;
       grid-row: 2;
       grid-column: 2 / 3;
-      align-self: center;
+      @apply self-center;
     }
 
     @media (max-width: $breakTwo) {
@@ -322,7 +324,7 @@
       }
 
       @media (max-width: $breakThree) {
-        line-height: 1.5em;
+        @apply leading-[1.5em];
         font-size: 4.4vw;
       }
     }
@@ -331,14 +333,14 @@
   nav .gridMast .contact {
     grid-column: 2 / 3;
     align-self: start;
-    font-size: 1em;
+    @apply text-[1em];
 
     @media (max-width: $breakThou) {
       text-align: start;
       grid-column: 3;
       grid-row: 1 / 3;
       -ms-flex-item-align: self-start;
-      align-self: center;
+      @apply self-center;
     }
 
     @media (max-width: $breakOne) {
@@ -348,7 +350,7 @@
 
     @media (max-width: $breakTwo) {
       align-content: flex-start;
-      align-self: flex-start;
+      @apply self-start;
     }
 
     p {
@@ -388,11 +390,11 @@
         line-height: 0.5em;
         @apply text-center;
         font-size: 2vw;
-        line-height: 1.4em;
-        text-align: left;
+        @apply leading-[1.4em];
+        @apply text-left;
         display: inline-block;
-        float: left;
-        clear: left;
+        @apply float-left;
+        @apply clear-left;
 
         &:nth-child(1) {
           //

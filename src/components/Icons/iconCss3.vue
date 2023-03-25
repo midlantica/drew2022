@@ -45,7 +45,7 @@
   svg {
 
     // width: 88px;
-    // height: 60px;
+    // @apply h-[60px];
     &:hover {
       cursor: pointer;
     }
@@ -76,13 +76,13 @@
   @keyframes rounder {
     0% {
       transform: rotate(0deg);
-      //opacity: 0;
+      //@apply opacity-0;
       transform: translateX(2rem);
     }
 
     100% {
       transform: rotate(360deg);
-      //opacity: 0;
+      //@apply opacity-0;
       transform: translateX(2rem);
     }
   }

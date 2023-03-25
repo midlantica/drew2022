@@ -51,8 +51,8 @@
 
     .car {
       background: url(/img/alfa-carabo.png);
-      background-repeat: no-repeat;
-      background-size: cover;
+      @apply bg-no-repeat;
+      @apply bg-cover;
       width: 226px;
       height: 165px;
       display: block;
@@ -78,8 +78,8 @@
 
     .starWars {
       background: url(/img/star-wars-transfers.png);
-      background-repeat: no-repeat;
-      background-size: cover;
+      @apply bg-no-repeat;
+      @apply bg-cover;
       width: 148px;
       height: 177px;
       display: block;

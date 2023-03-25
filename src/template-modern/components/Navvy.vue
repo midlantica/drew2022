@@ -54,7 +54,7 @@
   p {
     line-height: 1em;
     @apply m-0;
-    padding: 0;
+    @apply p-0;
     color: $ivory !important;
     text-transform: none;
     font-weight: 200;
@@ -88,7 +88,7 @@
     @apply text-center;
     @include font-smoothing;
     //
-    width: auto;
+    @apply w-auto;
     @apply grow;
 
     a {
@@ -102,7 +102,7 @@
 
     @media (max-width: $breakOne) {
       // flex-grow: 0;
-      // text-align: right;
+      // @apply text-right;
     }
 
     @media (max-width: $breakTwo) {
@@ -126,15 +126,15 @@
     @media (max-width: $breakTwo) {
       // flex-grow: 0;
       @apply text-center;
-      align-self: center;
+      @apply self-center;
 
       &:nth-child(1) {
-        // float: left;
-        // clear: left;
+        // @apply float-left;
+        // @apply clear-left;
       }
 
       &:nth-child(2) {
-        // float: left;
+        // @apply float-left;
         // margin-left: 0em;
       }
     }
@@ -148,10 +148,10 @@
     }
 
     h2 {
-      font-size: 1.15rem;
+      @apply text-[1.15rem];
       letter-spacing: -0.01em;
       text-shadow: 3px 0px 3px $black;
-      line-height: 1.5em;
+      @apply leading-[1.5em];
       font-weight: 400;
       color: hsla(0, 0%, 100%, 0.85) !important;
       @apply text-center;
@@ -191,7 +191,7 @@
     }
 
     @media (max-width: $breakThree) {
-      width: 30ch;
+      @apply w-[30ch];
       // margin-top: 0em;
       // transition: 0.25s ease-in;
     }
@@ -204,8 +204,8 @@
       @apply text-center;
       margin-top: 0.5rem;
       text-shadow: 1px 1px 4px $black;
-      line-height: 1.4rem;
-      letter-spacing: 0.05rem;
+      @apply leading-[1.4rem];
+      @apply tracking-[0.05rem];
       @include font-smoothing;
       font-size: 0.85rem !important;
 

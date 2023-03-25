@@ -147,67 +147,56 @@
   // ALL QUOTES ########################
 
   .arrowBtn {
-    color: white;
-    font-weight: bold;
-    // padding: 0.25rem 0.5rem 0.35rem;
-    // border-radius: .25rem;
-    // background: hsla(0, 0%, 0%, 0.25);
-    // line-height: 1 !important;
-    user-select: none;
+    @apply text-white;
+    @apply font-bold;
+    @apply select-none;
 
     &:hover {
-      color: yellow;
-      cursor: pointer;
-      // background: hsla(0, 0%, 0%, 0.5);
-      // display: block;
+      @apply text-[yellow];
+      @apply cursor-pointer;
     }
-
   }
 
   .quoteBlock {
     @apply flex;
     @apply justify-center;
     @apply items-center;
-    padding: 0.75em 1rem .5em;
+    @apply pt-3 px-4 pb-2;
     @apply text-center;
-    // border-radius: 2px;
-    margin: auto;
-    width: 100% !important;
-    flex-basis: auto;
+    @apply m-auto;
+    @apply w-full;
+    @apply basis-auto;
     @apply min-w-full;
-    min-height: 5rem;
-    line-height: 1.5;
-    font-size: .9rem;
-    gap: .5rem;
-    // padding: 1rem 2rem;
-    // min-height: 5.5rem;
+    @apply min-h-[5rem];
+    @apply leading-normal;
+    @apply text-[0.9rem];
+    @apply gap-2;
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-      clear: both;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      grid-row-gap: 0em;
-      font-size: .8rem;
-      gap: .25rem;
+      @apply clear-both;
+      @apply my-2;
+      @apply gap-y-0;
+      @apply text-[0.8rem];
+      @apply gap-1;
     }
 
     p,
     cite {
-      font-style: normal;
-      display: inline !important;
-      line-height: 1.5;
+      @apply not-italic;
+      @apply inline;
+      @apply leading-normal;
     }
 
     cite {
-      word-break: keep-all;
-      white-space: nowrap;
+      @apply break-keep;
+      @apply whitespace-nowrap;
     }
 
     .quotePad {
-      padding: 0;
-      line-height: 1;
-      margin: auto;
-      user-select: none;
+      @apply p-0;
+      @apply leading-4;
+      @apply m-auto;
+      @apply select-none;
     }
   }
 
@@ -217,7 +206,7 @@
   // MODERN ########################
   .modern .quoteBlock {
     font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-    color: hsl(0, 0%, 80%);
+    @apply text-[hsl(0,0%,80%)];
 
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
@@ -231,47 +220,44 @@
   // BOURBON ########################
   .bourbon .quoteBlock {
     font-family: "AmericanTypewriterStd-Med";
-    background: darken($accent-red, 10);
-    border-radius: 2px;
-    // min-height: 5.5rem;
+    @apply bg-[#932213];
+    @apply rounded-sm;
     @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-      clear: both;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      grid-row-gap: 0em;
+      @apply clear-both;
+      @apply mt-2;
+      @apply mb-2;
+      @apply gap-y-0;
     }
 
     .quotePad {
-      text-align: center !important;
-      // color: white;
+      @apply text-center;
     }
 
     .quotePad a {
-      color: white !important;
-      cursor: pointer;
+      @apply text-white;
+      @apply cursor-pointer;
 
       &:hover {
-        color: yellow !important;
+        @apply text-[yellow];
       }
     }
 
     p {
-      font-size: 0.9em;
+      @apply text-[0.9em];
       color: $ivory !important;
-      letter-spacing: 0.05em;
-      line-height: 1.5em;
+      @apply tracking-wider;
+      @apply leading-[1.5em];
       @apply text-center;
-      //
       animation: fadeTexter 2s forwards;
 
       @media only screen and (min-device-width: 700px) and (max-device-width: $breakThou) {
-        font-size: 0.9em;
+        @apply text-[0.9em];
       }
 
       @media only screen and (min-device-width: 0px) and (max-device-width: 700px) {
-        font-size: 0.9em;
+        @apply text-[0.9em];
       }
 
     }
@@ -291,8 +277,8 @@
   // GROOVY ########################
   .groovy .quoteBlock {
     font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    background: darken($accent-red, 10);
-    padding: .75em 2em 1em;
+    @apply bg-[#932213];
+    @apply pt-[0.75em] px-[2em] pb-[1em];
     @include shadow;
     @apply text-center;
 
@@ -302,13 +288,12 @@
   .techy .quoteBlock {
     font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
     background: $mango;
-    padding: 1rem !important;
-    min-height: initial;
-    // padding: .75em 2em 1em;
+    @apply p-4;
+    @apply min-h-min;
 
     .arrowBtn {
       color: $blueTech;
-      padding: 0rem 0.5rem 0.2rem;
+      @apply pt-0 px-2 pb-[0.2rem];
       border: 1px solid $blueTech;
       line-height: 1.3;
 
@@ -319,75 +304,69 @@
     }
 
     p {
-      font-size: 1em;
+      @apply text-[1em];
       color: $blueTech;
       @apply text-center;
-      padding: .4rem auto .5rem;
-      letter-spacing: 0.02em;
+      @apply tracking-wide;
 
       @media (max-width: $breakThou) {
-        font-size: 1.25em;
+        @apply text-[1.25em];
       }
 
       @media (max-width: $breakOne) {
-        font-size: 1.2em;
+        @apply text-[1.2em];
       }
 
       @media (max-width: $breakTwo) {
-        font-size: 1em;
+        @apply text-[1em];
       }
 
       @media (max-width: $breakThree) {
-        font-size: .85em;
+        @apply text-[.85em];
         line-height: 1.25em;
       }
     }
 
     .cite {
-      display: inline !important;
+      @apply inline;
       color: $blueTech;
-      letter-spacing: .08em;
+      @apply tracking-[.08em];
     }
   }
 
   // CORP ########################
   .corp .quoteBlock {
     font-family: "Bodoni Moda", Times, serif !important;
-    // background: #FFC600;
-    padding: 1rem !important;
-    background: #01487F;
-    padding: 1em 0em 1rem;
+    @apply bg-[#01487F];
+    @apply py-3 px-3;
     @apply text-center;
-    color: white;
-    min-height: initial;
+    @apply text-white;
+    @apply min-h-min;
 
     .arrowBtn {
-      color: white;
-      padding: 0rem 0.5rem .1rem;
-      // border: 1px solid white;
-      font-weight: bold !important;
+      @apply text-white;
+      @apply py-0 px-1;
+      @apply font-bold;
 
       &:hover {
         color: $mango;
-        background: #00355d;
+        @apply bg-[#00355d];
       }
     }
 
     .arrowBtn:nth-child(1)::after {
-
       //
+
       &:hover {
         content: '<';
-
       }
     }
 
     .arrowBtn:nth-child(3)::after {
-
       //
+
       &:hover {
         content: '>';
-
       }
     }
 
@@ -397,7 +376,6 @@
 
     .cite {
       font-family: "Bodoni Moda", Times, serif !important;
-
     }
   }
 
@@ -423,25 +401,25 @@
     transform: scale(0.9);
     transform: translateX(-20px);
     transition: all 1s ease-out;
-    opacity: 0;
+    @apply opacity-0;
   }
 
   .fadeTexter-enter,
   .fadeTexter-enter-active {
     transition: all 1s ease-out;
-    opacity: 1;
+    @apply opacity-100;
   }
 
   .fadeTexter-leave-active {
     transition: all 1s cubic-bezier(1, 0.5, 0.8, 1);
-    opacity: 1;
+    @apply opacity-100;
   }
 
   .fadeTexter-enter-from,
   .fadeTexter-leave-to {
     transform: translateX(20px);
     transition: all 1s ease-out;
-    opacity: 0;
+    @apply opacity-0;
   }
 
   .quoteFade-enter-active,
@@ -451,6 +429,6 @@
 
   .quoteFade-enter,
   .quoteFade-leave-to {
-    opacity: 0;
+    @apply opacity-0;
   }
 </style>

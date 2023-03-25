@@ -49,7 +49,7 @@
     }
 
     svg {
-      width: 100px;
+      @apply w-[100px];
       // stroke: $accent;
       // margin-bottom: 1rem;
       margin: 0rem auto .75rem;
@@ -83,6 +83,6 @@
 
   /* .fade-leave-active below version 2.1.8 */
     {
-    opacity: 0;
+    @apply opacity-0;
   }
 </style>

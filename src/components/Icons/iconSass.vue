@@ -20,7 +20,7 @@
 
   svg#svgIcon {
     // width: 88px;
-    // height: 60px;
+    // @apply h-[60px];
     fill: #cc6699;
 
     // #sassIcon {

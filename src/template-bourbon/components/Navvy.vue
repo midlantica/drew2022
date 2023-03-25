@@ -55,7 +55,7 @@
   p {
     line-height: 1em;
     @apply m-0;
-    padding: 0;
+    @apply p-0;
     color: $ivory !important;
 
     a {
@@ -86,12 +86,12 @@
     transition: 0.25s ease-in;
     @include font-smoothing;
     //
-    width: auto;
+    @apply w-auto;
     flex-grow: 0;
 
     @media (max-width: $breakOne) {
       flex-grow: 0;
-      text-align: right;
+      @apply text-right;
     }
 
     @media (max-width: $breakTwo) {
@@ -114,15 +114,15 @@
     @media (max-width: $breakTwo) {
       flex-grow: 0;
       @apply text-center;
-      align-self: center;
+      @apply self-center;
 
       &:nth-child(1) {
-        float: left;
-        clear: left;
+        @apply float-left;
+        @apply clear-left;
       }
 
       &:nth-child(2) {
-        float: left;
+        @apply float-left;
         margin-left: 0em;
       }
     }
@@ -132,7 +132,7 @@
     }
 
     h2 {
-      font-size: 1.6em;
+      @apply text-[1.6em];
       letter-spacing: 0.03em;
       text-shadow: 3px 0px 3px $black;
       @include font-smoothing;
@@ -184,21 +184,21 @@
 
     p {
       font-family: $font-copy;
-      letter-spacing: 0.05rem;
-      font-size: 1.2rem;
+      @apply tracking-[0.05rem];
+      @apply text-[1.2rem];
       line-height: 1.25;
       text-transform: lowercase;
       @include font-smoothing;
 
       &:nth-child(1) {
-        font-size: 1.25em;
-        // letter-spacing: 0.05rem;
-        // margin-top: .5rem;
+        @apply text-[1.25em];
+        // @apply tracking-[0.05rem];
+        // @apply mt-2;
       }
 
       &:nth-child(2) {
-        font-size: 1.25em;
-        // letter-spacing: 0.05rem;
+        @apply text-[1.25em];
+        // @apply tracking-[0.05rem];
       }
 
       @media (max-width: $breakOne) {
@@ -208,13 +208,13 @@
         margin-top: -0.3em;
 
         &:nth-child(1) {
-          float: left;
-          clear: left;
+          @apply float-left;
+          @apply clear-left;
           margin-right: 0.5em;
         }
 
         &:nth-child(2) {
-          float: left;
+          @apply float-left;
         }
       }
 

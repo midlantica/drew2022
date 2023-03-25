@@ -51,7 +51,7 @@
     // and (-webkit-min-device-pixel-ratio: 2) {
     //   margin-top: 0.25em;
     //   margin-bottom: 0.5em;
-    //   grid-row-gap: 0em;
+    //   @apply gap-y-0;
     // }
   }
 </style>

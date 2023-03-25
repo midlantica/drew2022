@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="greenBar">
-&nbsp;
+      &nbsp;
     </div>
     <p class="email">
       <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
@@ -15,7 +15,7 @@
         <mastHarper class="svgArt mastHarper" />
       </router-link>
       <router-link :to="{ name: 'ExtrasPunk' }" class="DrewHead jelloHorizontal">
-&nbsp;
+        &nbsp;
       </router-link>
     </div>
   </nav>
@@ -60,7 +60,7 @@
       top: 0;
       left: 50%;
       height: 5em;
-      align-self: center;
+      @apply self-center;
       transform: translate(-50%, 0%);
       //
       filter: saturate(2.5);
@@ -70,7 +70,7 @@
 
     p.email {
       font-family: $font;
-      font-size: 1.5em;
+      @apply text-[1.5em];
       color: $ivory;
       letter-spacing: 0.03em;
       text-shadow: 1px 1px 2px black;
@@ -81,12 +81,12 @@
 
       a {
         color: $ivory;
-        letter-spacing: 0.05em;
-        font-size: .9em;
+        @apply tracking-wider;
+        @apply text-[0.9em];
       }
 
       @media (max-width: $breakOne) {
-        align-self: center;
+        @apply self-center;
       }
     }
 
@@ -287,7 +287,7 @@
         background-image: url(/img/drew_mug_punk.png);
         filter: hue-rotate(360deg);
         //
-        background-repeat: no-repeat;
+        @apply bg-no-repeat;
         background-size: contain;
         // width: 240px;
         width: 18vw;
