@@ -119,7 +119,7 @@
         // max-height: 100vh;
         // background-size: 100% calc(100%);
         // //
-        // width: 100%;
+        // @apply w-full;
         // position: absolute;
         // top: 0;
         // left: 0;
@@ -325,7 +325,7 @@
     background: $backBlack;
 
     .wrapper {
-      width: 100%;
+      @apply w-full;
       background: url(/img/bg/circles.svg), url(/img/bg/Drew-punk-back.jpg);
       background-repeat: repeat-y, repeat-y;
       background-position: center center, center center;

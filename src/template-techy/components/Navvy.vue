@@ -48,10 +48,10 @@
   @import '../assets/css/techy-main.scss';
 
   nav {
-    width: 100%;
+    @apply w-full;
     @apply flex;
     @apply flex-col;
-    flex-wrap: no-wrap;
+    @apply flex-nowrap;
     @apply justify-center;
     @apply items-center;
     @apply content-center;
@@ -63,7 +63,7 @@
   }
 
   nav .mastMain {
-    width: 100%;
+    @apply w-full;
     background: $mango;
 
     @media (max-width: $breakOne) {
@@ -344,7 +344,7 @@
       width: 50%;
 
       @media (max-width: 1024px) {
-        width: 100%;
+        @apply w-full;
       }
 
       @media (max-width: $breakOne) {

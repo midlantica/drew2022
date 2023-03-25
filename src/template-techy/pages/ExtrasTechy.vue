@@ -40,7 +40,7 @@
   }
 
   .backer {
-    width: 100%;
+    @apply w-full;
     background: #fffff1;
   }
 </style>

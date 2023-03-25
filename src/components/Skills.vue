@@ -153,7 +153,7 @@
 
   .modalBg {
     position: fixed;
-    width: 100%;
+    @apply w-full;
     height: 100%;
     top: 0;
     left: 0;
@@ -230,7 +230,7 @@
       }
 
       .modalInner {
-        // width: 100%;
+        // @apply w-full;
         @apply relative;
         @apply flex;
         @apply flex-wrap;
@@ -268,7 +268,7 @@
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    width: 100%;
+    @apply w-full;
     @apply justify-between;
     justify-items: center;
     align-items: stretch;

@@ -434,7 +434,7 @@
     @apply items-center;
     @apply content-center;
     transition-duration: 1s;
-    width: 100%;
+    @apply w-full;
     // margin-top: .3rem;
 
     div {
@@ -541,7 +541,7 @@
         }
 
         p {
-          width: 100%;
+          @apply w-full;
           @apply text-[0.85em];
           @apply uppercase;
           color: $grey;

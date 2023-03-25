@@ -81,7 +81,7 @@
     grid-row: 1;
     @apply content-center;
     max-width: 500px;
-    width: 100%;
+    @apply w-full;
     justify-self: center;
 
     @media (max-width: $breakThou) {

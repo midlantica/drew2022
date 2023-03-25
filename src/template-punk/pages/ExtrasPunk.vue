@@ -39,7 +39,7 @@
   }
 
   .flexxy {
-    width: 100%;
+    @apply w-full;
     @apply flex;
     gap: 0 2rem;
     place-content: center;

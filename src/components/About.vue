@@ -178,7 +178,7 @@
     @apply flex-col;
     margin: initial;
     margin-top: auto;
-    width: 100%;
+    @apply w-full;
     // min-width: 30ch;
     gap: 1rem;
     box-shadow: 2px 2px 10px 0px black;

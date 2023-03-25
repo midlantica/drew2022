@@ -42,7 +42,7 @@
     animation: rotate 2s linear infinite;
     height: 100%;
     transform-origin: center center;
-    width: 100%;
+    @apply w-full;
     position: absolute;
     top: 0;
     bottom: 0;

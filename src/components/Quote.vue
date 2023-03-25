@@ -174,7 +174,7 @@
     margin: auto;
     width: 100% !important;
     flex-basis: auto;
-    min-width: 100%;
+    @apply min-w-full;
     min-height: 5rem;
     line-height: 1.5;
     font-size: .9rem;

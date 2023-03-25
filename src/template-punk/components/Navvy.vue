@@ -53,7 +53,7 @@
     .greenBar {
       display: block;
       // width: 1024px;
-      width: 100%;
+      @apply w-full;
       max-width: 1024px;
       z-index: 0;
       position: absolute;
@@ -96,13 +96,13 @@
     .mastMain {
       @apply flex;
       @apply flex-row;
-      flex-wrap: no-wrap;
+      @apply flex-nowrap;
       @apply justify-center;
       @apply items-center;
       @apply content-center;
       margin-top: -1.5em;
       z-index: 2;
-      width: 100%;
+      @apply w-full;
       //
 
       @media (max-width: $breakThou) {

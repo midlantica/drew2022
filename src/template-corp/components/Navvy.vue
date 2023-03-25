@@ -210,14 +210,14 @@
     @apply text-center;
 
     @media (max-width: $breakThree) {
-      width: 100%;
+      @apply w-full;
     }
 
   }
 
   .contact {
     @apply grow;
-    // width: 100%;
+    // @apply w-full;
     @apply flex;
     @apply flex-col;
     @apply flex-wrap;

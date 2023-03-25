@@ -43,7 +43,7 @@
     line-height: 2rem;
     transition: 0.25s ease-in;
     letter-spacing: 0.01rem;
-    width: 100%;
+    @apply w-full;
     //
     font-weight: 600;
     max-width: 28ch;
