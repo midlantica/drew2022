@@ -1,14 +1,14 @@
 <template>
   <nav>
-    <section class="flexRowWrap w100">
-      <div class="drewTop">
-        <router-link :to="{ name: 'Corp' }" class="w100">
-          <router-link :to="{ name: 'ExtrasCorp' }" class="drewhead jelloHorizontal" />
+    <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center">
+      <div class="drewTop max-[830px]:m-auto gap-4">
+        <router-link :to="{ name: 'Corp' }" class="w-full flex max-[830px]:flex-column flex-row flex-wrap content-center gap-x-4">
+          <router-link :to="{ name: 'ExtrasCorp' }" class="drewhead jelloHorizontal content-center m-auto" />
           <drewHarper class="drewHarper marTH" />
-          <div class="flexRow just-center marTH">
-            <h3>{{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}</h3>
-          </div>
         </router-link>
+        <div class="flex flex-row just-center">
+          <h3>{{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}</h3>
+        </div>
       </div>
       <section class="contact">
         <p class="resume">
@@ -80,7 +80,7 @@
 
   .drewHarper {
     height: 83px;
-    margin: 0em 0 0 1rem;
+    // margin: 0em 0 0 1rem;
 
     @media (max-width: $breakOne) {
       // height: 60px;
@@ -114,8 +114,8 @@
     // display: block;
 
     @media (max-width: $breakTwo) {
-      width: 80px;
-      height: 80px;
+      // width: 80px;
+      // height: 80px;
       background-position: -40px -50px !important;
       background-size: 145% !important;
     }
@@ -205,7 +205,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    flex-grow: 1 !important;
+    // flex-grow: 1 !important;
     align-content: center;
     text-align: center;
 

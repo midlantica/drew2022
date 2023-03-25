@@ -1,12 +1,12 @@
 <template>
   <transition name="bounce3" appear>
-    <div class="extrasWrapper flexRowWrap w100 marAuto">
+    <div class="extrasWrapper flex flex-row flex-wrap w-full m-auto">
       <h1 class="marAuto">
         Portfolio Extras
       </h1>
 
-      <div class="flexxy flexRowWrap center-flex gapY1 align-items-flex-start">
-        <div v-for="(item, index) in portfolioExtras" :key="index" class="align-content-center marX1">
+      <div class="extrasWrap w-full p-0 flex flex-row flex-wrap place-content-center gap-x-4 items-start">
+        <div v-for="(item, index) in portfolioExtras" :key="index" class="content-center gap-x-4">
           <a :href="itemUrl(item)" target="_BLANK">
             <img class="portThumbs" :src="itemSrc(item)">
             <div class="text-center">
@@ -19,8 +19,8 @@
   </transition>
 </template>
 
-<script  setup>
-// import { ref } from 'vue'
+<script setup>
+  // import { ref } from 'vue'
 
   const myUrl = '/img/portfolio/extras/'
 
@@ -98,10 +98,8 @@
     }
   }
 
-  .flexxy {
-    padding: 0 0em;
-    display: flex;
-    width: 100%;
+  .extrasWrap {
+    //
 
     a {
       flex-basis: auto;
@@ -155,6 +153,60 @@
         @include no-shadow;
         cursor: pointer;
       }
+    }
+  }
+
+  .modern .extrasWrap {
+    //
+
+    a {
+      //
+
+      img.portThumbs {
+        //
+      }
+
+      p {
+        color: white;
+
+        &:hover {
+          border-bottom: 1px solid white;
+        }
+      }
+
+      &:hover p {
+        color: white;
+        border-bottom: 1px solid white;
+      }
+
+    }
+  }
+
+  .punk .extrasWrap {
+    //
+
+    a {
+      //
+
+      img.portThumbs {
+        //
+      }
+
+      p {
+        color: white;
+        background: red;
+        padding: .15rem .25rem;
+
+        &:hover {
+          border-bottom: 1px solid white;
+        }
+      }
+
+      &:hover p {
+        color: white;
+        border-bottom: 1px solid black;
+      }
+
     }
   }
 </style>

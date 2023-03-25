@@ -21,7 +21,7 @@
   </div>
 </template>
 
-<script  setup>
+<script setup>
   // import { defineComponent } from 'vue'
   import { inject } from 'vue'
   const store = inject('store')

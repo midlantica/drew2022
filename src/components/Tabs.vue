@@ -21,9 +21,7 @@
   </div>
 </template>
 
-<script  setup>
-  // import { defineComponent } from 'vue'
-
+<script setup>
   import { inject } from 'vue'
 
   const store = inject('store')
@@ -46,7 +44,6 @@
     left: 0px;
     z-index: 10;
     width: calc(100.1%);
-    // width: auto;
     font-family: "Barlow Semi Condensed";
     letter-spacing: 0em;
     overflow-x: hidden !important;
@@ -55,11 +52,12 @@
     a {
       flex-grow: 1;
       color: transparentize($ivory, 0.25);
-      padding: 0.65em 0;
+      padding: 0.5em 0;
       border-right: 1px solid transparentize($ivory, 0.75);
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.1em;
+      font-size: .8em;
 
       &:last-child {
         border-right: 0px !important;
