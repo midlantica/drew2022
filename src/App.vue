@@ -235,7 +235,7 @@
       h1 {
         @apply pt-4;
         color: lighten(black, 30);
-        @apply font-['Helvetica_Neue,Helvetica,Arial,sans-serif'];
+        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
         @apply text-[1.5em];
         @apply capitalize;
       }
@@ -247,7 +247,7 @@
 
       p {
         @apply my-0 mx-auto;
-        font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
+        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
       }
     }
 
@@ -261,14 +261,14 @@
 
       //
       h1 {
-        font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
+        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
         @apply pt-4;
         @apply text-[1.75em];
         @apply font-medium;
       }
 
       p {
-        font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
+        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
         @apply text-[1em];
       }
     }
@@ -370,7 +370,7 @@
 
       //
       h1 {
-        font-family: Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        @apply font-['Poppins,"Helvetica_Neue",Helvetica,Arial,sans-serif'];
         @apply pt-4;
         @apply text-black;
         @apply text-[1.75em];
@@ -379,7 +379,7 @@
       }
 
       p {
-        font-family: Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        @apply font-['Poppins,"Helvetica_Neue",Helvetica,Arial,sans-serif'];
         @apply text-black;
       }
     }

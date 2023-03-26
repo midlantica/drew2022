@@ -24,28 +24,23 @@
   }
 
   .modernTabs {
-    // margin: 0.75rem 0 0.5rem;
-    margin: 1.25rem 0 1.5rem;
+    @apply mt-3 mx-0 mb-2;
     @apply flex;
     @apply flex-row;
     @apply flex-wrap;
     @apply justify-center;
-    // @apply justify-between;
-    // justify-content: space-evenly;
-    // justify-content: space-around;
     font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
 
     a {
       color: $black;
-      margin: 0.5rem 0.5rem;
-      padding: 0.55rem 1rem 0.4rem;
-      // border: 1px solid $ruby !important;
-      border-radius: 2rem;
-      text-decoration: none !important;
+      @apply my-2 mx-2;
+      @apply pt-[.55rem] px-4 pb-[.4rem];
+      @apply rounded-[2rem];
+      @apply no-underline;
       @apply uppercase;
-      font-size: 0.6rem;
+      @apply text-[.6rem];
       @apply font-semibold;
-      letter-spacing: 0.075ch;
+      @apply tracking-[0.075ch];
       background: $ruby;
       background: linear-gradient(180deg, darken($ruby, 0), darken($ruby, 15));
 

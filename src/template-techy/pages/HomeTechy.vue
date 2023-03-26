@@ -118,13 +118,15 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     @apply z-10;
-    margin-top: -5.5em;
+    // margin-top: 0 !important;
+    margin-top: -5.5em !important;
 
     // IPAD LANDSCAPE
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
       @apply z-10;
+      margin-top: -5.5em !important;
     }
 
     // IPAD PRO LANDSCAPE
@@ -132,22 +134,27 @@
       grid-column: 2 / 3;
       grid-row: 1 / 2;
       @apply z-10;
+      // @apply mt-0;
+      @apply mt-0;
     }
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
       grid-row: 2;
       @apply top-0;
+      margin-top: 0em !important;
     }
 
     @media (max-width: $breakOne) {
       grid-column: 1 / 3;
       grid-row: 2;
+      @apply mt-0;
     }
 
     @media (max-width: $breakTwo) {
       grid-column: 1 / 3;
       grid-row: 2;
+      @apply mt-0;
     }
   }
 

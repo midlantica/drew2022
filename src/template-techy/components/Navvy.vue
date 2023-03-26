@@ -150,8 +150,8 @@
           // @media (max-device-width: 667px)
           // and (-webkit-device-pixel-ratio: 2)
           // {
-          //   margin-right: 0.5em;
-          //   margin-left: 0em;
+          //   @apply mr-2;
+          //   @apply ml-0;
           //   width: 65px !important;
           //   height: 77px !important;
           //   margin: 0em;

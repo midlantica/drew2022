@@ -79,6 +79,12 @@
       'UX Design is my first love. Humility before the User. Crack the flow!'
     ],
     [
+      iconFigma,
+      'figma',
+      'Figma',
+      'Figma is the king of UX prototyping. It ain\'t Illustrator but collaboration ftw.'
+    ],
+    [
       iconHtml5,
       'html5',
       'Html 5',
@@ -95,12 +101,6 @@
       'js',
       'JavaScript',
       'JavaScript: I design, do all my HTML & CSS, I\'m still mastering JS. Continuous learning, Love me some Vue 💚, like this site'
-    ],
-    [
-      iconFigma,
-      'figma',
-      'Figma',
-      'Figma is the king of UX prototyping. It ain\'t Illustrator but collaboration ftw.'
     ],
     [
       iconTailwind,
@@ -402,7 +402,7 @@
   }
 
   body.groovy .skillsGrid {
-    transition: 0.25s ease-in;
+    @apply transition duration-[.25s] ease-in;
     margin: 0 -1em 0 0em;
 
     @media (min-width: 1026px) {
@@ -460,7 +460,7 @@
 
   body.punk .skillsGrid {
     margin: 0.5em auto 0em;
-    transition: 0.25s ease-in;
+    @apply transition duration-[.25s] ease-in;
     // transform: rotate(-0.5deg);
     background: transparentize(rgba(0, 140, 0, 0.829), 0.5) !important;
 

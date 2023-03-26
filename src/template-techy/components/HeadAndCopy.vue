@@ -6,7 +6,6 @@
 </template>
 
 <script setup>
-  // import { defineComponent } from 'vue'
   import { inject } from 'vue'
 
   const store = inject('store')
@@ -19,9 +18,7 @@
     margin: 2rem 1.85rem 0rem 2.25rem;
 
     @media (min-width: $breakThou) {
-      // margin-top: 1.5rem;
-      // @apply ml-6;
-      // @apply ml-6;
+      //
     }
 
     @media (max-width: $breakThou) {
@@ -36,13 +33,11 @@
     }
 
     @media (max-width: $breakTwo) {
-      // @apply ml-3;
-      // margin-right: .75rem;
+      //
     }
 
     @media (max-width: $breakThree) {
-      // @apply ml-1;
-      // margin-right: .25rem;
+      //
     }
   }
 
@@ -89,7 +84,7 @@
     @apply text-[1.3rem];
     @apply leading-[3rem];
     color: transparentize($blueTech, .2);
-    letter-spacing: 0.06em;
+    @apply tracking-[.06em];
 
     @media (min-width: $breakThou) and (-webkit-min-device-pixel-ratio: 2) {
       // @apply text-[1.2rem];

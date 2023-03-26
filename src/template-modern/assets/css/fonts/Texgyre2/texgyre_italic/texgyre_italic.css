@@ -6,7 +6,7 @@
          url('texgyreadventor-italic-webfont.woff') format('woff'),
          url('texgyreadventor-italic-webfont.ttf') format('truetype'),
          url('texgyreadventor-italic-webfont.svg#tex_gyre_adventoritalic') format('svg');
-    font-weight: normal;
+    @apply font-normal;
     @apply not-italic;
 
 }

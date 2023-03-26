@@ -53,7 +53,7 @@
   h4,
   h5,
   p {
-    line-height: 1em;
+    @apply leading-4;
     @apply m-0;
     @apply p-0;
     color: $ivory !important;
@@ -78,24 +78,25 @@
   }
 
   h1 {
-    font-size: 4em;
-    font-weight: normal;
-    letter-spacing: 0.06em;
     font-family: $font-subhead;
+    @apply font-normal;
+    @apply text-[4em];
+    @apply leading-4;
     text-shadow: 4px 0px 3px $black;
-    transition: 0.25s ease-in;
-    @include font-smoothing;
-    //
+    @apply tracking-[.06em];
+    @apply transition duration-[.25s] ease-in;
+    @apply antialiased;
     @apply w-auto;
-    flex-grow: 0;
+    @apply grow-0;
 
     @media (max-width: $breakOne) {
-      flex-grow: 0;
+      @apply grow-0;
+      @apply leading-[4.5rem];
       @apply text-right;
     }
 
     @media (max-width: $breakTwo) {
-      flex-grow: 0;
+      @apply grow-0;
       @apply text-center;
     }
 
@@ -107,12 +108,11 @@
 
   section.jobDesc {
     @apply grow;
-    margin-left: 1em;
-    margin-top: 0.1rem;
-    transition: 0.25s ease-in;
+    @apply ml-4 mt-[.1rem];
+    @apply transition duration-[.25s] ease-in;
 
     @media (max-width: $breakTwo) {
-      flex-grow: 0;
+      @apply grow-0;
       @apply text-center;
       @apply self-center;
 
@@ -123,94 +123,88 @@
 
       &:nth-child(2) {
         @apply float-left;
-        margin-left: 0em;
+        @apply ml-0;
       }
     }
 
     @media (max-width: $breakOne) {
-      flex-grow: 0;
+      @apply grow-0;
     }
 
     h2 {
       @apply text-[1.6em];
-      letter-spacing: 0.03em;
+      @apply tracking-[0.03em];
       text-shadow: 3px 0px 3px $black;
-      @include font-smoothing;
+      @apply leading-[1.55rem];
+      @apply antialiased;
 
       &:nth-child(2) {
-        font-size: 1.45em;
-        margin-bottom: 0.1em;
+        @apply text-[1.45rem];
+        @apply mb-[.1em];
       }
 
       @media (max-width: $breakTwo) {
         @apply inline-block;
-        font-size: 1.775em !important;
-        margin-top: -3px;
+        @apply text-[1.775em];
+        @apply mt-[-3px];
 
         &:nth-child(2) {
-          margin-left: 0.25em !important;
+          @apply ml-1;
         }
       }
 
       @media (max-width: $breakThree) {
-        font-size: 1.25em !important;
-        line-height: 2em;
+        @apply text-[1.25em];
       }
     }
   }
 
   section.contact {
     @apply uppercase;
-    margin-top: 0.75em;
-    margin-left: 1em;
-    margin-bottom: 4px;
+    @apply mt-3 ml-4 mb-1;
     @apply z-10;
-    // border: 1px solid $outBlue;
     text-shadow: 3px 0px 1px $black;
-    transition: 0.25s ease-in;
+    @apply transition duration-[.25s] ease-in;
 
     @media (max-width: $breakOne) {
-      margin-left: 0;
+      @apply ml-0;
     }
 
     @media (max-width: $breakTwo) {
-      margin-top: 0.4em;
+      @apply mt-[.4em];
     }
 
     @media (max-width: $breakThree) {
-      margin-top: 0em;
-      transition: 0.25s ease-in;
+      @apply mt-0;
+      @apply transition duration-[.25s] ease-in;
     }
 
     p {
       font-family: $font-copy;
       @apply tracking-[0.05rem];
       @apply text-[1.2rem];
-      line-height: 1.25;
+      @apply leading-5;
       @apply lowercase;
-      @include font-smoothing;
+      @apply antialiased;
 
       &:nth-child(1) {
         @apply text-[1.25em];
-        // @apply tracking-[0.05rem];
-        // @apply mt-2;
       }
 
       &:nth-child(2) {
         @apply text-[1.25em];
-        // @apply tracking-[0.05rem];
       }
 
       @media (max-width: $breakOne) {
         @apply justify-center;
-        font-size: 1.5rem !important;
-        letter-spacing: 0.1785rem !important;
-        margin-top: -0.3em;
+        @apply text-[1.5rem];
+        @apply tracking-[0.1785rem];
+        @apply mt-[-.3em];
 
         &:nth-child(1) {
           @apply float-left;
           @apply clear-left;
-          margin-right: 0.5em;
+          @apply mr-2;
         }
 
         &:nth-child(2) {
@@ -219,26 +213,25 @@
       }
 
       @media (max-width: $breakTwo) {
-        font-size: 1.05rem !important;
-        letter-spacing: 0.09em !important;
+        @apply text-[1.05rem];
+        @apply tracking-[.09em];
       }
 
       @media (max-width: $breakThree) {
         @apply justify-center;
-        font-size: 1.15rem !important;
-        letter-spacing: 0.09em !important;
-        line-height: 1.25em;
-        margin-bottom: -4px;
+        @apply text-[1.15rem];
+        @apply tracking-[.09em];
+        @apply leading-5;
+        @apply mb-[-4px];
         @apply text-center;
 
         &:nth-child(1) {
-          float: initial;
-          clear: initial;
-          margin-right: 0em;
+          @apply float-none clear-none;
+          @apply mr-0;
         }
 
         &:nth-child(2) {
-          float: initial;
+          @apply float-none;
           font-size: 1.04em !important;
           line-height: 1.6em;
           margin-left: 0 !important;

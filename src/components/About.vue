@@ -98,8 +98,8 @@
     @apply block;
     background: url("/img/brit_amer_flag.svg");
     @apply bg-no-repeat;
-    background-size: contain;
     @apply mr-4;
+    background-size: contain;
     background-position-y: center;
     //
     @apply content-center;

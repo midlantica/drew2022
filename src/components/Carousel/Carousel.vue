@@ -259,7 +259,7 @@
   // ########################
 
   p.projectHead {
-    color: lighten($black, 20) !important;
+    // color: lighten($black, 20) !important;
     @apply cursor-pointer;
   }
 
@@ -494,7 +494,7 @@
         }
 
         &.Uiux {
-          // background: url(/img/carousel/car-icon-uiux.svg) no-repeat center center;
+          //
 
           @media (max-width: $breakThou) {
             //
@@ -502,7 +502,7 @@
         }
 
         &.Mobile {
-          // background: url(/img/carousel/car-icon-mobile.svg) no-repeat center center;
+          //
 
           @media (max-width: $breakThou) {
             //
@@ -510,26 +510,27 @@
         }
 
         &.Kiosk {
-          // background: url(/img/carousel/car-icon-kiosk.svg) no-repeat center center;
+          //
         }
 
         &.Graphics {
-          // background: url(/img/carousel/car-icon-graphics.svg) no-repeat center center;
+          //
         }
 
         &.Print {
-          // background: url(/img/carousel/car-icon-print.svg) no-repeat center center;
+          //
         }
 
         &.Misc {
-          // background: url(/img/carousel/car-icon-misc.svg) no-repeat center center;
+          //
         }
 
         p {
           @apply w-full;
           @apply text-[0.85em];
           @apply uppercase;
-          color: $grey;
+          // color: $grey;
+          @apply text-white;
           @apply text-center;
           @apply tracking-wider;
           @apply mb-2;

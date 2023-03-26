@@ -220,7 +220,7 @@
         }
 
         @media (max-width: $breakThree) {
-          margin-right: 0.5em;
+          @apply mr-2;
         }
       }
 
@@ -408,8 +408,8 @@
         @apply text-[2.785vw];
         @apply text-center;
         @apply my-0 mx-auto;
-        float: initial;
-        clear: initial;
+        @apply float-none;
+        @apply clear-none;
 
         &:nth-child(2) {
           @apply ml-2;

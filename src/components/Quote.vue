@@ -286,7 +286,8 @@
 
   // TECHY ########################
   .techy .quoteBlock {
-    font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
+    // @apply font-['Dosis,Helvetica,Arial,sans-serif'];
+    font-family: 'Dosis, "Helvetica Neue", Arial, sans-serif' !important;
     background: $mango;
     @apply p-4;
     @apply min-h-min;
@@ -295,7 +296,7 @@
       color: $blueTech;
       @apply pt-0 px-2 pb-[0.2rem];
       border: 1px solid $blueTech;
-      line-height: 1.3;
+      @apply leading-[1.3];
 
       &:hover {
         color: $mango;
@@ -308,6 +309,7 @@
       color: $blueTech;
       @apply text-center;
       @apply tracking-wide;
+      font-family: 'Dosis, "Helvetica Neue", Arial, sans-serif' !important;
 
       @media (max-width: $breakThou) {
         @apply text-[1.25em];
@@ -323,7 +325,7 @@
 
       @media (max-width: $breakThree) {
         @apply text-[.85em];
-        line-height: 1.25em;
+        @apply leading-5;
       }
     }
 

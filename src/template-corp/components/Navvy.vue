@@ -1,9 +1,9 @@
 <template>
   <nav>
-    <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center">
-      <div class="drewTop max-[830px]:m-auto gap-4">
-        <router-link :to="{ name: 'Corp' }" class="w-full flex max-[830px]:flex-column flex-row flex-wrap content-center gap-x-4">
-          <router-link :to="{ name: 'ExtrasCorp' }" class="drewhead jelloHorizontal content-center m-auto" />
+    <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center justify-center gap-12">
+      <div class="drewTop max-[830px]:m-auto gap-4 grow">
+        <router-link :to="{ name: 'Corp' }" class="w-full flex max-[830px]:flex-column flex-row flex-wrap content-center gap-x-6 justify-center">
+          <router-link :to="{ name: 'ExtrasCorp' }" class="drewhead jelloHorizontal content-center m-0" />
           <drewHarper class="drewHarper marTH" />
         </router-link>
         <div class="flex flex-row just-center">
@@ -66,7 +66,7 @@
   h4,
   h5,
   p {
-    line-height: 1em;
+    @apply leading-4;
     @apply m-0;
     @apply p-0;
     color: $blue-dark !important;
@@ -125,7 +125,7 @@
     font-family: $font-copy;
     @apply text-[1.5rem];
     letter-spacing: -0.025em;
-    transition: 0.25s ease-in;
+    @apply transition duration-[.25s] ease-in;
     font-weight: medium;
 
     a:hover {
@@ -136,13 +136,13 @@
 
     @media (max-width: $breakOne) {
       // font-size: 4.5em;
-      // flex-grow: 0;
+      // @apply grow-0;
       // @apply text-right;
     }
 
     @media (max-width: $breakTwo) {
       // font-size: 3.5em;
-      // flex-grow: 0;
+      // @apply grow-0;
       // @apply text-center;
     }
 
@@ -156,7 +156,7 @@
     font-family: $font-copy;
     @apply text-[1.15rem];
     letter-spacing: -0.025em;
-    transition: 0.25s ease-in;
+    @apply transition duration-[.25s] ease-in;
     @apply font-bold;
 
     a:hover {
@@ -167,13 +167,13 @@
 
     @media (max-width: $breakOne) {
       // font-size: 4.5em;
-      // flex-grow: 0;
+      // @apply grow-0;
       // @apply text-right;
     }
 
     @media (max-width: $breakTwo) {
       // font-size: 3.5em;
-      // flex-grow: 0;
+      // @apply grow-0;
       // @apply text-center;
     }
 
@@ -224,20 +224,20 @@
     @apply justify-center;
     @apply items-center;
     @apply content-center;
-    margin-top: 0.2em;
+    @apply mt-[0.2em];
     @apply self-center;
     // @apply z-10;
     // text-shadow: 3px 0px 1px $black;
     // transition: .25s ease-in;
 
     @media (max-width: $breakOne) {
-      margin-left: 0;
+      @apply ml-0;
       @apply flex-row;
       margin-top: 1em;
     }
 
     @media (max-width: $breakTwo) {
-      margin-top: 0.4em;
+      @apply mt-[.4em];
       // margin-top: 1em;
       @apply flex-row;
       // color: red !important;
@@ -245,14 +245,14 @@
 
     @media (max-width: $breakThree) {
       margin-top: 1em;
-      transition: 0.25s ease-in;
+      @apply transition duration-[.25s] ease-in;
       @apply flex-row;
       // color: red !important;
     }
 
     @media (max-width: 520px) {
       margin-top: 1em;
-      transition: 0.25s ease-in;
+      @apply transition duration-[.25s] ease-in;
       @apply flex-col;
     }
 
@@ -298,8 +298,8 @@
       @media (max-width: $breakThree) {
         @apply justify-center;
         letter-spacing: 0.09em !important;
-        line-height: 1.25em;
-        margin-bottom: -4px;
+        @apply leading-5;
+        @apply mb-[-4px];
         @apply text-center;
       }
 

@@ -32,7 +32,7 @@
 
       @media (max-width: $breakThree) {
         @apply text-[.85em];
-        line-height: 1.25em;
+        @apply leading-5;
       }
     }
   }

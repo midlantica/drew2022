@@ -41,7 +41,7 @@
     margin: 0em 0em .5em;
     @apply p-0;
     @apply leading-[2rem];
-    transition: 0.25s ease-in;
+    @apply transition duration-[.25s] ease-in;
     @apply tracking-[0.01rem];
     @apply w-full;
     //
@@ -81,7 +81,7 @@
   p {
     color: transparentize($black, 0.15);
     font-family: $font-copy;
-    font-weight: normal;
+    @apply font-normal;
     font-size: 1.05rem;
     line-height: 2.8rem;
     padding-left: 1.7rem;
