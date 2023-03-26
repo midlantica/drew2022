@@ -70,7 +70,7 @@
     @apply m-0;
     @apply p-0;
     color: $blue-dark !important;
-    text-transform: none;
+    @apply normal-case;
 
     a {
       color: $blue-dark !important;
@@ -95,7 +95,7 @@
   }
 
   a.drewhead {
-    display: inline-block;
+    @apply inline-block;
     background: #c00000;
     background-image: url(/img/drew_mug_red.png);
     // @apply bg-no-repeat;
@@ -111,7 +111,7 @@
     margin-bottom: .75rem;
     // width: 72px;
     // height: 88px;
-    // display: block;
+    // @apply block;
 
     @media (max-width: $breakTwo) {
       // width: 80px;
@@ -264,8 +264,8 @@
       @apply text-center;
       @apply leading-[1.5em];
       @apply grow;
-      font-weight: 600;
-      text-transform: lowercase;
+      @apply font-semibold;
+      @apply lowercase;
 
       a {
         border-bottom: 2px dotted lighten($blue-dark, 20);
@@ -306,7 +306,7 @@
       &.resume,
       &.email {
         color: $blue-dark !important;
-        line-height: 1.5;
+        @apply leading-normal;
 
         a {
           color: $blue-dark !important;

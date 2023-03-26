@@ -33,10 +33,10 @@
 
 <style lang="scss" scoped>
   svg {
-    cursor: pointer;
+    @apply cursor-pointer;
 
     &:hover {
-      cursor: pointer;
+      @apply cursor-pointer;
     }
 
     #five1,
@@ -114,7 +114,7 @@
 
     60% {
       @apply opacity-0;
-      //transform: scale(1);
+      //@apply scale-100;
     }
 
     100% {

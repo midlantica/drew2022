@@ -52,10 +52,10 @@
   // @import '~/assets/css/_colors.scss';
 
   svg {
-    cursor: pointer;
+    @apply cursor-pointer;
 
     &:hover {
-      cursor: pointer;
+      @apply cursor-pointer;
     }
 
     #ui,

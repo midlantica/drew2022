@@ -29,7 +29,7 @@
 
 <style lang="scss" scoped>
   svg:hover {
-    cursor: pointer;
+    @apply cursor-pointer;
   }
 
   .corp #svgSketch {

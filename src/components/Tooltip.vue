@@ -34,7 +34,7 @@
     }
 
     p {
-      // display: block;
+      // @apply block;
       @apply text-[0.9em];
       @apply leading-[1.4em];
       @apply tracking-wider;
@@ -62,7 +62,7 @@
 
     //
     p {
-      margin: .25rem auto;
+     @apply my-1 mx-auto;
     }
   }
 
@@ -97,7 +97,7 @@
 
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-      font-size: .85rem;
+      @apply text-[.85rem];
       letter-spacing: .000rem;
       @apply leading-[1.4rem];
       @apply m-0;

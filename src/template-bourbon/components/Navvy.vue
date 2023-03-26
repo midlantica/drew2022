@@ -143,7 +143,7 @@
       }
 
       @media (max-width: $breakTwo) {
-        display: inline-block;
+        @apply inline-block;
         font-size: 1.775em !important;
         margin-top: -3px;
 
@@ -187,7 +187,7 @@
       @apply tracking-[0.05rem];
       @apply text-[1.2rem];
       line-height: 1.25;
-      text-transform: lowercase;
+      @apply lowercase;
       @include font-smoothing;
 
       &:nth-child(1) {

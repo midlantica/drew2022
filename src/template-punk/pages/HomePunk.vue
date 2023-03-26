@@ -50,17 +50,17 @@
   footer {
     color: $ivory;
     background: initial !important;
-    box-shadow: none;
+    @apply shadow-none;
     margin-bottom: -1rem;
   }
 
   .mainGrid {
-    display: grid;
+    @apply grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.5rem 1rem;
     background: transparent;
     padding: 0em 1em;
-    box-shadow: none;
+    @apply shadow-none;
 
     //
     @media (max-width: $breakThou) {
@@ -82,7 +82,7 @@
     grid-row: 1 / 3;
     @apply flex;
     @apply flex-col;
-    align-self: flex-end;
+    @apply self-end;
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
@@ -142,7 +142,7 @@
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
       margin-top: 0.25em;
-      margin-bottom: 0.5em;
+      @apply mb-2;
       @apply gap-y-0;
     }
   }

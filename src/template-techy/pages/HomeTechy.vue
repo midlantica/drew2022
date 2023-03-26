@@ -51,7 +51,7 @@
   @import "../assets/css/techy-main.scss";
 
   .mainGrid {
-    display: grid;
+    @apply grid;
     grid-template-columns: 7fr 6fr;
     grid-gap: 1rem 1rem;
     padding: 0 1em 0.5em;
@@ -79,7 +79,7 @@
     color: $ivory;
     background: $groovy-red;
     background: $mango;
-    box-shadow: none;
+    @apply shadow-none;
   }
 
   .copyArea {
@@ -137,7 +137,7 @@
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
       grid-row: 2;
-      margin-top: 0;
+      @apply top-0;
     }
 
     @media (max-width: $breakOne) {
@@ -215,7 +215,7 @@
   footer {
     color: $ivory;
     background: $mango;
-    box-shadow: none;
+    @apply shadow-none;
 
     @media (max-width: $breakThou) {
       //

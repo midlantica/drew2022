@@ -36,7 +36,7 @@
     font-family: $font-head;
     // @apply font-medium;
     color: $blue-dark;
-    text-transform: none;
+    @apply normal-case;
     // @apply text-[1.5em];
     margin: 0em 0em .5em;
     @apply p-0;
@@ -45,7 +45,7 @@
     @apply tracking-[0.01rem];
     @apply w-full;
     //
-    font-weight: 600;
+    @apply font-semibold;
     max-width: 28ch;
     @apply text-[1.3rem];
 

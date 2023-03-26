@@ -25,14 +25,14 @@
     color: $ivory;
     background: $groovy-red;
     background: $mango;
-    box-shadow: none;
+    @apply shadow-none;
     // margin-bottom: -1.2em;
   }
 
   footer {
     color: $ivory;
     background: $mango;
-    box-shadow: none;
+    @apply shadow-none;
   }
 
   .flexContainer {

@@ -57,7 +57,7 @@
   }
 
   .mainGrid {
-    display: grid;
+    @apply grid;
     grid-template-columns: 1fr;
     // grid-gap: 1em;
     // margin: 0em 0 1em;

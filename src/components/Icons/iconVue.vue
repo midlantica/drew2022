@@ -17,7 +17,7 @@
   }
 
   svg:hover {
-    cursor: pointer;
+    @apply cursor-pointer;
   }
 
   #svgVue {

@@ -61,7 +61,7 @@
   }
 
   .mainGrid {
-    display: grid;
+    @apply grid;
     margin: 1em 1em;
 
     grid-gap: 1em;

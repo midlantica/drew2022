@@ -155,7 +155,7 @@
     @apply fixed;
     @apply w-full;
     height: 100%;
-    top: 0;
+    @apply top-0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -175,7 +175,7 @@
       margin-top: 260px;
       // max-width: 300px;
       width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));
-      // min-width: 80%;
+      // min-@apply w-[80%];
       // margin: auto 20%;
       // margin-bottom: 4rem;
       background: white;
@@ -189,7 +189,7 @@
       box-shadow: 0px 6px 10px 0px hsl(0deg 0% 0% / 30%);
 
       .closeBtn {
-        position: absolute;
+        @apply absolute;
         top: -10px;
         right: -10px;
         background-color: transparent;
@@ -239,13 +239,13 @@
         @apply items-center;
 
         .icon {
-          // display: inline-block;
+          // @apply inline-block;
           // margin-left: -1rem;
           // flex-shrink: 1;
           @apply self-center;
 
           svg {
-            // display: block;
+            // @apply block;
             width: 180px !important;
             margin-right: -1.4rem !important;
             margin-left: -2rem !important;
@@ -264,7 +264,7 @@
   }
 
   .skillsGrid {
-    display: grid;
+    @apply grid;
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -320,19 +320,19 @@
   }
 
   body.modern .skillsGrid {
-    width: 70%;
+    @apply w-[70%];
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     @apply justify-center;
     margin: 1rem auto;
 
     @media (min-width: 770px) {
-      width: 60%;
+      @apply w-3/5;
       // grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     }
 
     @media (max-width: 700px) {
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      width: 80%;
+      @apply w-[80%];
     }
 
     svg {

@@ -50,7 +50,7 @@
         @apply not-italic;
         @apply tracking-[.02em];
         transform: rotate(-1.25deg);
-        text-transform: lowercase;
+        @apply lowercase;
         padding: 0.3em 0.5em;
 
         @media (max-width: $breakTwo) {
@@ -63,12 +63,12 @@
 
         &:nth-of-type(1) {
           transform: rotate(-.5deg);
-          display: inline-block;
+          @apply inline-block;
         }
 
         &:nth-of-type(2) {
           transform: rotate(2deg);
-          display: inline-block;
+          @apply inline-block;
           @apply ml-2;
         }
 
@@ -76,7 +76,7 @@
     }
 
     .resumeLinks {
-      align-self: flex-end;
+      @apply self-end;
       @apply flex-row;
 
       .resume {
@@ -87,9 +87,9 @@
         @apply font-medium;
         @apply not-italic;
         @apply tracking-[.02em];
-        text-transform: lowercase;
+        @apply lowercase;
         padding: 0.3em 0.5em;
-        display: inline-block;
+        @apply inline-block;
         @apply ml-1;
 
         &.rOne {
@@ -104,7 +104,7 @@
 
           &:hover {
             color: #ff4bf5 !important;
-            text-decoration: underline;
+            @apply underline;
           }
         }
 
@@ -114,7 +114,7 @@
 
           &:hover {
             color: #ff4bf5 !important;
-            text-decoration: underline;
+            @apply underline;
           }
         }
 
@@ -135,7 +135,7 @@
     // margin-top: 1em;
     @apply relative;
     left: 0;
-    top: 0;
+    @apply top-0;
 
     @media (max-width: $breakOne) {
       @apply mb-[0em];
@@ -153,7 +153,7 @@
       padding: 0 0em 0.1em 0.2rem;
       transform: rotate(1deg);
       @apply z-10;
-      display: inline-block;
+      @apply inline-block;
       @apply leading-[1.7rem];
       // transform: rotate(0deg);
 
@@ -163,14 +163,14 @@
     }
 
     p.smallCaps {
-      font-size: 90% !important;
+      @apply text-[90%];
       font-variant: small-caps !important;
       color: red !important;
     }
 
     p {
       font-family: Poppins !important;
-      font-weight: 400;
+      @apply font-normal;
       font-style: italic;
       @apply text-[1em];
       color: $grey;

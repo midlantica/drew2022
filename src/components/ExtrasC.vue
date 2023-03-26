@@ -109,7 +109,7 @@
       @apply items-center;
       @apply no-underline;
       // margin: 0em 1em;
-      color: black;
+      @apply text-black;
 
       img.portThumbs {
         width: 400px;
@@ -126,14 +126,14 @@
       }
 
       p {
-        display: inline-block;
+        @apply inline-block;
         @apply text-center;
         // @apply m-0;
         margin-bottom: 1em;
         @apply mt-2;
         padding-bottom: 0;
         @apply text-[0.85em];
-        color: black;
+        @apply text-black;
         border-bottom: 1px solid transparent;
         max-width: 400px;
         @include clearfix;

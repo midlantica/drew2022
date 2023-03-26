@@ -95,7 +95,7 @@
   }
 
   .flag {
-    display: block;
+    @apply block;
     background: url("/img/brit_amer_flag.svg");
     @apply bg-no-repeat;
     background-size: contain;
@@ -111,7 +111,7 @@
   }
 
   p {
-    display: block;
+    @apply block;
     color: lighten($grey, 15);
     @apply text-[0.9em];
     @apply leading-[1.4em];
@@ -194,7 +194,7 @@
     }
 
     .flag {
-      display: block;
+      @apply block;
       background: url("/img/brit_amer_flag.svg");
       @apply bg-no-repeat;
       background-size: contain;

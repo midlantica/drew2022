@@ -18,8 +18,8 @@
   @import '../assets/css/modern-main.scss';
 
   .modern .skillsGrid {
-    width: 50%;
-    display: grid;
+    @apply w-1/2;
+    @apply grid;
     // grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
     // grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -33,11 +33,11 @@
     gap: .5rem auto;
 
     @media (max-width: 900px) {
-      width: 60%;
+      @apply w-3/5;
     }
 
     @media (max-width: 600px) {
-      width: 70%;
+      @apply w-[70%];
     }
 
     @media (max-width: 300px) {

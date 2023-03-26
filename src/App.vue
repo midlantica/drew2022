@@ -27,9 +27,9 @@
   $backBlack: #1f1f1f;
 
   .wrapper {
-    position: relative !important;
-    max-width: 1024px;
-    margin: 0 auto;
+    @apply relative;
+    @apply max-w-[1024px];
+    @apply my-0 mx-auto;
     //
   }
 
@@ -53,24 +53,24 @@
     }
 
     .about>p {
-      margin: .25rem auto;
       font-family: "AmericanTypewriterStd-Med";
-      font-size: .84em;
+      @apply my-1 mx-auto;
+      @apply text-[.84em];
 
       @media (max-width: $breakThou) {
-        font-size: 1.65vw;
+        @apply text-[1.65vw];
       }
 
       @media (max-width: $breakOne) {
-        font-size: 1.85vw;
+        @apply text-[1.85vw];
       }
 
       @media (max-width: $breakTwo) {
-        font-size: 2.5vw;
+        @apply text-[2.5vw];
       }
 
       @media (max-width: $breakThree) {
-        font-size: 3vw;
+        @apply text-[3vw];
       }
     }
 
@@ -78,38 +78,37 @@
 
       //
       h1 {
-        padding-top: 1em;
         font-family: "VeneerTwo", Helvetica, Arial, sans-serif;
+        @apply pt-4;
         @apply text-[1.75em];
         @apply font-light;
+        @apply antialiased;
         text-rendering: optimizeLegibility;
-
-        -webkit-font-smoothing: antialiased;
       }
     }
 
     .smallCaps {
-      font-size: 90% !important;
+      @apply text-[90%];
+      @apply tracking-wider;
       font-variant: small-caps !important;
-      letter-spacing: .05rem;
     }
   }
 
   // #############################
   // MODERN
   body.modern {
-    height: calc(100%);
-    background: hsl(320, 100%, 9%);
+    @apply h-[calc(100%)];
+    @apply bg-[hsl(320,100%,9%)];
 
     .wrapper {
       @apply flex;
       @apply flex-col;
       @apply grow;
-      max-width: 1024px;
-      min-height: 780px;
-      padding-bottom: 3.5rem;
+      @apply max-w-[1024px];
+      @apply min-h-[780px];
+      @apply pb-14;
       //
-      background: hsl(320, 100%, 9%);
+      @apply bg-[hsl(320,100%,9%)];
       background-image: url(./template-modern/assets/img/bg/bg_bak_dk4.jpeg);
       @apply bg-cover;
 
@@ -120,21 +119,21 @@
         // background-size: 100% calc(100%);
         // //
         // @apply w-full;
-        // position: absolute;
-        // top: 0;
+        // @apply absolute;
+        // @apply top-0;
         // left: 0;
       }
 
       header,
       footer {
         // background: url(./template-modern/assets/img/bg/bg_bag_dk.jpg) repeat;
-        box-shadow: none;
+        @apply shadow-none;
       }
     }
 
     .about {
-      width: 50%;
-      margin: 0 auto;
+      @apply w-1/2;
+      @apply my-0 mx-auto;
       // background: hsla(340, 76%, 48%, 1) !important;
       background: linear-gradient(180deg,
           hsl(340deg 76% 48% / 100%),
@@ -142,12 +141,12 @@
     }
 
     &.extras {
-      background: #2e001f;
+      @apply bg-[#2e001f];
 
       .flexxy a p {
         @apply text-white;
         font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-        border-bottom: 1px solid hsla(0, 0%, 100%, .5);
+        @apply border-b border-solid border-[hsla(0,0%,100%,.5)];
       }
     }
 
@@ -155,23 +154,22 @@
 
       //
       h1 {
-        padding-top: 1em;
+        @apply pt-4;
         @apply text-white;
         font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
         font-size: clamp(.85rem, 1.2rem, 1.4rem) !important;
-        font-weight: 600;
-        line-height: 1.5;
+        @apply font-semibold;
+        @apply leading-normal;
+        @apply capitalize;
+        @apply antialiased;
         text-rendering: optimizeLegibility;
-        text-transform: capitalize;
-
-        -webkit-font-smoothing: antialiased;
       }
     }
 
     .smallCaps {
-      font-size: 90% !important;
+      @apply text-[90%];
+      @apply tracking-wider;
       font-variant: small-caps !important;
-      letter-spacing: .05rem;
     }
   }
 
@@ -191,33 +189,33 @@
     }
 
     .about>p {
-      margin: .25rem 0;
+      @apply mt-1 mx-0;
       font-family: $font-groovy;
-      font-size: .85rem !important;
+      @apply text-[.85rem];
       @apply leading-[1.25rem];
     }
 
     .smallCaps {
-      font-size: 87.5% !important;
+      @apply text-[87.5%];
+      @apply tracking-wider;
       font-variant: small-caps !important;
-      letter-spacing: .05rem;
     }
 
     &.extras .extrasWrapper {
-
       //
+
       h1 {
-        padding-top: 1em;
-        color: black;
         font-family: $font-groovy;
+        @apply pt-4;
+        @apply text-black;
         @apply text-[1.5em];
         @apply font-light;
-        text-transform: capitalize;
+        @apply capitalize;
       }
 
       p {
         font-family: $font-groovy;
-        font-size: 1em !important;
+        @apply text-[1em];
       }
     }
   }
@@ -228,55 +226,55 @@
     background: $backBlack;
 
     .wrapper {
-      background: #fffdf4;
+      @apply bg-[#fffdf4];
     }
 
     &.extras .extrasWrapper {
-      background: #fffff1 !important;
+      @apply bg-[#fffff1];
 
       h1 {
-        padding-top: 1em;
+        @apply pt-4;
         color: lighten(black, 30);
-        font-family: Helvetica !important;
+        @apply font-['Helvetica_Neue,Helvetica,Arial,sans-serif'];
         @apply text-[1.5em];
-        text-transform: capitalize;
+        @apply capitalize;
       }
     }
 
     .about {
-      background: #ffe268 !important;
+      @apply bg-[#ffe268];
       box-shadow: none !important;
 
       p {
-        margin: 0rem auto;
+        @apply my-0 mx-auto;
         font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
       }
     }
 
     .smallCaps {
-      font-size: 87.5% !important;
+      @apply text-[87.5%];
+      @apply tracking-wider;
       font-variant: small-caps !important;
-      letter-spacing: .05rem;
     }
 
     &.extras .extrasWrapper {
 
       //
       h1 {
-        padding-top: 1em;
         font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
+        @apply pt-4;
         @apply text-[1.75em];
         @apply font-medium;
       }
 
       p {
         font-family: Dosis, "Helvetica Neue", Arial, sans-serif !important;
-        font-size: 1em !important;
+        @apply text-[1em];
       }
     }
 
     &.extras .contact {
-      width: 100% !important;
+      @apply w-full;
     }
   }
 
@@ -290,21 +288,21 @@
     }
 
     .smallCaps {
-      font-size: 90% !important;
+      @apply text-[90%];
+      @apply tracking-[.03em];
       font-variant: small-caps !important;
-      letter-spacing: .03rem;
     }
 
     &.extras .extrasWrapper {
-
       //
+
       h1 {
-        padding-top: 1em;
-        color: #01487f !important;
         font-family: "Bodoni Moda", Times, serif !important;
+        @apply pt-4;
+        @apply text-[#01487f];
         @apply text-[1.5em];
-        font-weight: 600;
-        text-transform: capitalize;
+        @apply font-semibold;
+        @apply capitalize;
       }
 
       p {
@@ -326,9 +324,9 @@
 
     .wrapper {
       @apply w-full;
+      @apply bg-repeat;
+      @apply bg-center;
       background: url(/img/bg/circles.svg), url(/img/bg/Drew-punk-back.jpg);
-      background-repeat: repeat-y, repeat-y;
-      background-position: center center, center center;
       background-size: 100% 640%, 100% 100%;
 
       @media (max-width: $breakOne) {
@@ -349,22 +347,22 @@
 
     .about>p {
       font-family: Poppins, "Helvetica Neue", Arial, sans-serif !important;
-      font-size: .8em !important;
+      @apply text-[.8em];
 
       @media (max-width: $breakThou) {
-        font-size: 1.65vw !important;
+        @apply text-[1.65vw];
       }
 
       @media (max-width: $breakOne) {
-        font-size: 1.85vw !important;
+        @apply text-[1.85vw];
       }
 
       @media (max-width: $breakTwo) {
-        font-size: 2.5vw !important;
+        @apply text-[2.5vw];
       }
 
       @media (max-width: $breakThree) {
-        font-size: 3vw !important;
+        @apply text-[3vw];
       }
     }
 
@@ -372,24 +370,24 @@
 
       //
       h1 {
-        padding-top: 1em;
-        color: black;
         font-family: Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        @apply pt-4;
+        @apply text-black;
         @apply text-[1.75em];
         @apply font-light;
-        text-transform: capitalize;
+        @apply capitalize;
       }
 
       p {
-        color: black;
         font-family: Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        @apply text-black;
       }
     }
 
     .smallCaps {
-      font-size: 95% !important;
+      @apply text-[95%];
+      @apply tracking-wider;
       font-variant: small-caps !important;
-      letter-spacing: .05rem;
     }
   }
 </style>

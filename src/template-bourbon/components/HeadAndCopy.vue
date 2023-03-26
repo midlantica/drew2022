@@ -18,7 +18,7 @@
   @import "../assets/css/bourbon-main.scss";
 
   .headBlock {
-    display: grid;
+    @apply grid;
     grid-template-columns: 88px auto;
     grid-auto-rows: auto;
     grid-template-rows: auto;
@@ -28,7 +28,6 @@
     @apply mt-2;
 
     a.drewhead {
-      // @apply ml-4;
       background-image: url(/img/drew_mug_red.png);
       @apply bg-no-repeat;
       @apply bg-cover;
@@ -40,10 +39,10 @@
     }
 
     h1 {
-      display: inline-block;
+      @apply inline-block;
       font-family: $font-subhead;
       color: $accent-red;
-      font-size: 1.7rem;
+      @apply text-[1.7rem];
       @apply p-0;
       grid-column: 2 / 3;
       grid-row: 1 / 2;

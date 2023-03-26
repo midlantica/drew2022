@@ -18,14 +18,14 @@
   @import "../assets/css/modern-main.scss";
 
   .aboutGrid {
-    display: grid;
+    @apply grid;
     grid-template-columns: minmax(auto, 2fr) minmax(225px, 1fr);
     // grid-template-columns: minmax(5rem, 1fr) minmax(auto, 70rem) minmax(5rem, 1fr)
     // grid-column: 2 / 3;
     // grid-row: 2;
-    width: 80%;
+    @apply w-[80%];
     gap: 2rem;
-    margin: auto;
+    @apply m-auto;
 
     @media (max-width: 850px) {
       width: 90%;
@@ -50,7 +50,7 @@
     // and (max-device-width: 660px)
     // and (-webkit-min-device-pixel-ratio: 2) {
     //   margin-top: 0.25em;
-    //   margin-bottom: 0.5em;
+    //   @apply mb-2;
     //   @apply gap-y-0;
     // }
   }

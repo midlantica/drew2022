@@ -43,7 +43,7 @@
   }
 
   nav .gridMast {
-    display: grid;
+    @apply grid;
     grid-template-columns: 175px auto;
     grid-column-gap: 1em;
     margin-bottom: 1em;
@@ -124,7 +124,7 @@
         @apply bg-cover;
         width: 98px;
         height: 119px;
-        display: block;
+        @apply block;
         @apply relative;
         top: 2.8em;
         left: 3.5em;
@@ -249,15 +249,15 @@
     @apply text-[1em];
 
     @media (max-width: $breakThou) {
-      margin: 1em 0em;
+      @apply my-4 mx-0;
       @apply text-center;
       grid-column: 2;
       grid-row: 2;
-      align-self: self-start;
+      @apply self-start;
     }
 
     @media (max-width: $breakOne) {
-      margin: 0em 0em;
+      @apply m-0;
       grid-row: 2;
       grid-column: 2 / 3;
       @apply self-center;
@@ -278,12 +278,12 @@
     h2 {
       @apply m-0;
       font-family: $font-subhead;
-      font-weight: 400;
+      @apply font-normal;
       color: $ivory;
-      text-transform: lowercase;
-      font-size: 1.40em;
-      line-height: 0.5em;
-      letter-spacing: 0.025em;
+      @apply lowercase;
+      @apply text-[1.40em];
+      @apply leading-[.5em];
+      @apply tracking-[.025em];
 
       &:nth-child(1) {
         //
@@ -294,21 +294,21 @@
       }
 
       @media (max-width: $breakThou) {
-        font-size: 2.7vw;
-        line-height: 0;
+        @apply text-[2.7vw];
+        @apply leading-[0];
 
         &:nth-child(1) {
           //
         }
 
         &:nth-child(2) {
-          margin-left: 0.25em !important;
+          @apply ml-1;
         }
       }
 
       @media (max-width: $breakOne) {
-        font-size: 3.525vw;
-        line-height: 1.1em;
+        @apply text-[3.525vw];
+        @apply leading-[1.1em];
 
         &:nth-child(1) {
           //
@@ -324,22 +324,21 @@
       }
 
       @media (max-width: $breakThree) {
+        @apply text-[4.4vw];
         @apply leading-[1.5em];
-        font-size: 4.4vw;
       }
     }
   }
 
   nav .gridMast .contact {
     grid-column: 2 / 3;
-    align-self: start;
+    @apply self-start;
     @apply text-[1em];
 
     @media (max-width: $breakThou) {
-      text-align: start;
+      @apply text-start;
       grid-column: 3;
       grid-row: 1 / 3;
-      -ms-flex-item-align: self-start;
       @apply self-center;
     }
 
@@ -349,26 +348,26 @@
     }
 
     @media (max-width: $breakTwo) {
-      align-content: flex-start;
+      @apply content-start;
       @apply self-start;
     }
 
     p {
-      display: inline-block;
+      @apply inline-block;
       font-family: $font-copy;
-      font-size: 1.085em;
+      @apply text-[1.085em];
       @apply tracking-normal;
-      text-transform: none;
-      line-height: 0.7em;
+      @apply normal-case;
+      @apply leading-[0.7em];
       @apply text-center;
-      letter-spacing: -0.01em;
+      @apply tracking-[-0.01em];
 
       &:nth-child(1) {
         @apply m-0;
       }
 
       &:nth-child(2) {
-        margin: 0 0 0 0.5em;
+        @apply mt-0 mr-0 mb-0 ml-2;
       }
 
       a {
@@ -386,13 +385,13 @@
       }
 
       @media (max-width: $breakThou) {
-        font-size: 1.79vw;
-        line-height: 0.5em;
+        @apply text-[1.79vw];
+        @apply leading-[.5em];
         @apply text-center;
-        font-size: 2vw;
+        @apply text-[2vw];
         @apply leading-[1.4em];
         @apply text-left;
-        display: inline-block;
+        @apply inline-block;
         @apply float-left;
         @apply clear-left;
 
@@ -401,24 +400,24 @@
         }
 
         &:nth-child(2) {
-          margin-left: 0;
+          @apply ml-0;
         }
       }
 
       @media (max-width: $breakOne) {
-        font-size: 2.785vw;
+        @apply text-[2.785vw];
         @apply text-center;
-        margin: 0 auto;
+        @apply my-0 mx-auto;
         float: initial;
         clear: initial;
 
         &:nth-child(2) {
-          margin-left: 0.5em !important;
+          @apply ml-2;
         }
       }
 
       @media (max-width: $breakThree) {
-        font-size: 3.6vw;
+        @apply text-[3.6vw];
       }
     }
   }

@@ -67,7 +67,7 @@
   }
 
   .mainGrid {
-    display: grid;
+    @apply grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.5rem 1rem;
     margin: 0.25rem 1rem 1rem;

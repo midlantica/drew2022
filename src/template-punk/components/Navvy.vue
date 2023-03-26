@@ -39,45 +39,39 @@
     @apply flex;
     @apply flex-col;
     @apply content-center;
-    // @apply items-center;
     padding: .5em 1em;
 
     @media (max-width: $breakOne) {
       @apply justify-center;
       @apply content-center;
       @apply items-center;
-      // width: 50%;
-      // margin: 0 auto;
     }
 
     .greenBar {
-      display: block;
-      // width: 1024px;
+      @apply block;
       @apply w-full;
-      max-width: 1024px;
-      z-index: 0;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      height: 5em;
+      @apply max-w-[1024px];
+      @apply z-0;
+      @apply absolute;
+      @apply top-0;
+      @apply left-1/2;
+      @apply h-[5em];
       @apply self-center;
       transform: translate(-50%, 0%);
-      //
       filter: saturate(2.5);
       background: rgba(0, 128, 0, 0.25);
-      // background: transparentize(green, .5);
     }
 
     p.email {
       font-family: $font;
       @apply text-[1.5em];
       color: $ivory;
-      letter-spacing: 0.03em;
+      @apply tracking-[0.03em];
       text-shadow: 1px 1px 2px black;
-      text-transform: lowercase;
-      align-self: flex-end;
+      @apply lowercase;
+      @apply self-end;
       transform: rotate(-1deg);
-      margin-top: -0.4em;
+      @apply mt-[-0.4em];
 
       a {
         color: $ivory;
@@ -100,10 +94,9 @@
       @apply justify-center;
       @apply items-center;
       @apply content-center;
-      margin-top: -1.5em;
-      z-index: 2;
+      @apply mt-[-1.5em];
+      @apply z-[2];
       @apply w-full;
-      //
 
       @media (max-width: $breakThou) {
         //
@@ -125,204 +118,181 @@
         //
 
         &:nth-child(1) {
-          width: 60vw;
-          // background: red;
+          @apply w-[60vw];
 
           @media (max-width: $breakThou) {
-            order: 1;
+            @apply order-1;
           }
 
           @media (max-width: $breakOne) {
-            order: 1;
-            width: 47vw;
-            margin-bottom: -1.5em;
+            @apply order-1;
+            @apply w-[47vw];
+            // @apply mb-6;
+            @apply mt-6;
           }
 
           @media (max-width: $breakTwo) {
-            order: 1;
-            width: 59vw;
-            // flex-grow: 0;
+            @apply order-1;
+            @apply w-[59vw];
           }
 
           @media (max-width: $breakThree) {
-            width: 63vw;
-            order: 1;
+            @apply w-[63vw];
+            @apply order-1;
           }
         }
 
         &:nth-child(2) {
-          width: 80vw;
-          // background: green;
+          @apply w-[80vw];
 
           @media (max-width: $breakThou) {
-            order: 1;
+            @apply order-1;
           }
 
           @media (max-width: $breakOne) {
-            order: 3;
-            width: 68vw;
+            @apply w-[68vw];
+            @apply order-3;
           }
 
           @media (max-width: $breakTwo) {
-            width: 88vw;
-            order: 3;
+            @apply w-[88vw];
+            @apply order-3;
           }
 
           @media (max-width: $breakThree) {
-            order: 3;
-            width: 92vw;
+            @apply w-[92vw];
+            @apply order-3;
           }
         }
 
         &:nth-child(3) {
-          // width: 130px;
-          // height: 150px;
-          // background: blue;
+          //
 
           @media (max-width: $breakThou) {
-            order: 3;
+            @apply order-3;
           }
 
           @media (max-width: $breakOne) {
-            order: 2;
+            @apply order-2;
           }
 
           @media (max-width: $breakTwo) {
-            order: 2;
+            @apply order-2;
           }
 
           @media (max-width: $breakThree) {
-            order: 2;
+            @apply order-2;
           }
         }
 
       }
 
       a.svg.svgArt.mastDrew {
-        // display: block;
-        width: 200px;
-        width: 170px;
+        @apply w-[170px];
+        // @apply block;
         // height: 12vw;
         // transform: rotate(1deg);
-        // margin-top: -1.5em;
-        // order: 1;
+        // @apply mt-[-1.5em];
+        // @apply order-1;
 
         @media (max-width: $breakThou) {
           // width: 34vw;
           // height: 17vh;
           // margin-top: 1em;
-          // order: 1;
+          // @apply order-1;
         }
 
         @media (max-width: $breakOne) {
           // width: 130px;
           // height: 140px;
           // margin-top: 1em;
-          // order: 1;
+          // @apply order-1;
         }
 
         @media (max-width: $breakTwo) {
           // width: 55vw;
           // height: 17vh;
           // margin-top: 1em;
-          // order: 1;
+          // @apply order-1;
         }
 
         @media (max-width: $breakThree) {
           // width: 55vw;
           // height: 17vh;
           // margin-top: 1em;
-          // order: 1;
+          // @apply order-1;
         }
       }
 
       a.svg.svgArt.mastHarper {
-        // display: block;
+        // @apply block;
         // width: 480px;
         // width: 32.4vw;
         // height: 20vh;
         // transform: rotate(1deg);
         // margin-top: -0.6em;
         // margin-left: 1em;
-        // order: 2;
+        // @apply order-2;
 
         @media (max-width: $breakThou) {
-          // order: 2;
+          // @apply order-2;
           // width: 46vw;
           // height: 20vh;
-          // margin-top: -1.5em;
+          // @apply mt-[-1.5em];
           // @apply grow;
         }
 
         @media (max-width: $breakOne) {
-          // order: 3;
+          // @apply order-3;
           // width: 68vw;
           // height: 20vh;
-          // margin-top: -1.5em;
+          // @apply mt-[-1.5em];
           // @apply grow;
         }
 
         @media (max-width: $breakTwo) {
-          // order: 3;
+          // @apply order-3;
           // width: 64vw;
           // height: 20vh;
-          // margin-top: -1.5em;
+          // @apply mt-[-1.5em];
           // @apply grow;
         }
 
         @media (max-width: $breakThree) {
-          // order: 3;
+          // @apply order-3;
           // width: 64vw;
           // height: 20vh;
-          // margin-top: -1.5em;
+          // @apply mt-[-1.5em];
           // @apply grow;
         }
 
       }
 
       a.DrewHead {
-        // display: block;
-        // min-width: 114px;
-        // height: 132px;
         background-image: url(/img/drew_mug_punk.png);
         filter: hue-rotate(360deg);
         //
         @apply bg-no-repeat;
-        background-size: contain;
-        // width: 240px;
-        width: 18vw;
-        height: 120px;
+        @apply bg-contain;
+        @apply w-[18vw];
+        @apply h-[120px];
         @apply no-underline;
-        // display: block;
-        // @apply relative;
-        // top: 2.8em;
-        // left: 3.5em;
-        // margin-left: .5em;
-        // margin-top: 0.5em;
-        // order: 3;
-        // @apply grow;
-        // background: green !important;
 
         @media (max-width: $breakOne) {
-          width: 122px;
-          height: 122px;
-          margin-top: 1em;
-          // background: red !important;
-          // order: 2;
+          @apply w-[122px];
+          @apply h-[122px];
+          @apply mt-4;
         }
 
         @media (max-width: $breakTwo) {
-          width: 122px;
-          height: 135px;
-          margin-top: .5em;
-          // background: blue !important;
+          @apply w-[122px];
+          @apply h-[135px];
+          @apply mt-2;
         }
 
         @media (max-width: $breakThree) {
-          width: 82px;
-          height: 93px;
-          // background: purple !important;
-          // order: 2;
+          @apply w-[82px];
+          @apply h-[93px];
         }
 
       }

@@ -38,7 +38,7 @@
     // width: 88px;
     // @apply h-[60px];
     &:hover {
-      cursor: pointer;
+      @apply cursor-pointer;
     }
   }
 

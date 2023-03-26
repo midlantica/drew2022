@@ -55,8 +55,8 @@
       @apply bg-cover;
       width: 226px;
       height: 165px;
-      display: block;
-      position: absolute;
+      @apply block;
+      @apply absolute;
       top: -0.3em;
       left: 0.7em;
 
@@ -82,8 +82,8 @@
       @apply bg-cover;
       width: 148px;
       height: 177px;
-      display: block;
-      position: absolute;
+      @apply block;
+      @apply absolute;
       top: -17px;
       right: 0px;
 

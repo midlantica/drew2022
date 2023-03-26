@@ -19,7 +19,7 @@
   @import "../assets/css/modern-main.scss";
 
   .headBlock {
-    display: grid;
+    @apply grid;
     grid-template-columns: 88px auto;
     grid-template-rows: auto;
     @apply gap-x-1.5;
@@ -29,7 +29,6 @@
     gap: .5rem;
 
     a.drewhead {
-      @apply ml-4;
       background-image: url(/img/drew_mug_red.png);
       @apply bg-no-repeat;
       @apply bg-cover;
@@ -41,29 +40,29 @@
     }
 
     h1 {
-      display: inline-block;
+      @apply inline-block;
       font-family: $font-subhead;
-      letter-spacing: -0.01ch;
+      @apply tracking-[-0.01ch];
       @apply p-0;
       grid-column: 2 / 3;
       grid-row: 1 / 2;
       @apply self-center;
-      margin-top: 2.2rem;
+      @apply mt-[2.2rem];
       // >>>>>>
-      width: 20ch;
-      color: #da2561 !important;
-      font-weight: 400;
+      @apply w-[20ch];
+      @apply text-[#da2561];
+      @apply font-normal;
       font-size: clamp(.8rem, 1.1rem, 1.25rem) !important;
       text-shadow: 1px 1px 4px black;
       // >>>>>>
       @apply text-white;
       @apply font-medium;
       @apply text-[1.1rem];
-      width: 20ch;
+      @apply w-[20ch];
 
       @media (max-width: 535px) {
         width: initial;
-        margin-top: .75rem;
+        @apply mt-[.75rem];
       }
 
       @media (max-width: $breakOne) {

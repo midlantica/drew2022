@@ -44,7 +44,7 @@
       text-decoration: none !important;
       @apply uppercase;
       font-size: 0.6rem;
-      font-weight: 600;
+      @apply font-semibold;
       letter-spacing: 0.075ch;
       background: $ruby;
       background: linear-gradient(180deg, darken($ruby, 0), darken($ruby, 15));

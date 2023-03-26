@@ -14,7 +14,7 @@
     width: 20px !important;
     height: auto !important;
     margin: auto !important;
-    cursor: pointer;
+    @apply cursor-pointer;
 
     >path {
       stroke: hsla(0, 0%, 0%, .85);

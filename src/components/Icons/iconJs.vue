@@ -29,7 +29,7 @@
     }
 
     &:hover {
-      cursor: pointer;
+      @apply cursor-pointer;
 
       .jsBoxInner {
         // fill: rebeccapurple;

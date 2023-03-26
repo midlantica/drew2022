@@ -15,7 +15,7 @@
   // @import '~/assets/css/_colors.scss';
 
   svg:hover {
-    cursor: pointer;
+    @apply cursor-pointer;
   }
 
   #svgTailwind .groupTailwind {

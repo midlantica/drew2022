@@ -117,7 +117,7 @@
     background: lighten(lightgrey, 12);
     // background: transparentize($color: white, $amount: .25);
     border-radius: $mortar;
-    padding: .5rem;
+    @apply p-2;
     @apply relative;
     @include clearfix;
   }
@@ -127,10 +127,10 @@
     @apply flex-row;
     @apply flex-nowrap;
     @apply items-start;
-    height: 1.5rem;
+    @apply h-6;
     margin-bottom: $mortar;
     @apply relative;
-    z-index: 20;
+    @apply z-20;
   }
 
   body.box {
@@ -158,7 +158,7 @@
     @include box-shadow(0px, 2px, 6px, -2px, hsla(0, 0%, 0%, .9));
 
     @media (max-width: $breakThou) {
-      // @apply min-h-min;
+      //
     }
 
     @media (max-width: $breakOne) {
@@ -166,7 +166,7 @@
     }
 
     @media (max-width: $breakTwo) {
-      // min-height: 386px;
+      //
     }
 
     @media (max-width: $breakThree) {
@@ -176,8 +176,6 @@
 
   body.groovy .projectBox {
     @include box-shadow(0px, 6px, 0px, 0px, hsla(0, 0%, 0%, 0.25));
-    // padding: $mortar 0.3rem $mortar;
-    // min-height: 357px;
 
     @media (max-width: $breakThou) {
       @apply min-h-min;
@@ -188,7 +186,7 @@
     }
 
     @media (max-width: $breakTwo) {
-      // min-height: 386px;
+      //
     }
 
     @media (max-width: $breakThree) {
@@ -250,7 +248,7 @@
     }
 
     @media (max-width: $breakTwo) {
-      // min-height: 386px;
+      //
     }
 
     @media (max-width: $breakThree) {
@@ -262,19 +260,17 @@
 
   p.projectHead {
     color: lighten($black, 20) !important;
-    cursor: pointer;
+    @apply cursor-pointer;
   }
 
   body.bourbon .projectHead,
   body.bourbon .box p {
     font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-    // color: $black !important;
     @apply text-center;
-
   }
 
   body.bourbon .box {
-    height: 181.5px !important;
+    @apply h-[181.5px];
 
     @media (max-width: $breakThou) {
       @apply min-h-min;
@@ -285,7 +281,6 @@
   body.groovy .projectHead,
   body.groovy .box p {
     font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-    // color: red !important;
     @apply text-center;
 
   }
@@ -298,7 +293,6 @@
   body.techy .projectHead,
   body.techy .box p {
     font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-    // color: red !important;
     @apply text-center;
 
   }
@@ -312,7 +306,6 @@
   body.corp .box p {
     font-family: 'Bodoni Moda', Times, serif !important;
     @apply tracking-normal;
-    // color: red !important;
     @apply text-center;
 
   }
@@ -322,7 +315,7 @@
   }
 
   body.corp .VueCarousel.druCarousel {
-    box-shadow: none;
+    @apply shadow-none;
   }
 
   body.corp .miniGallery div a .box {
@@ -334,20 +327,16 @@
   }
 
   // .modern .projectBox >>>>>>>>
-  // .modern .projectBox >>>>>>>>
-
   body.modern .box {
     width: 130px !important;
     height: 170px !important;
   }
 
   body.modern .projectBox {
-    // @include box-shadow(0px, 2px, 6px, -2px, hsla(0, 0%, 0%, .9));
     background: none;
-    // stroke: orange;
 
     @media (max-width: $breakThou) {
-      // @apply min-h-min;
+      //
     }
 
     @media (max-width: $breakOne) {
@@ -389,7 +378,7 @@
   }
 
   body.punk .miniGallery {
-    margin-top: 0;
+    @apply top-0;
   }
 
   body.modern .miniGallery {
@@ -409,7 +398,7 @@
   }
 
   body.punk .box {
-    height: 181.5px !important;
+    @apply h-[181.5px];
   }
 
   ///////
@@ -417,12 +406,10 @@
     @apply text-[0.9em];
     @apply text-center;
     @apply uppercase;
-    // margin-right: 3.5em;
-    margin: auto;
-    // color: red !important;
+    @apply m-auto;
 
     div a {
-      cursor: pointer;
+      @apply cursor-pointer;
     }
   }
 
@@ -433,16 +420,15 @@
     @apply justify-between;
     @apply items-center;
     @apply content-center;
-    transition-duration: 1s;
+    @apply duration-1000;
     @apply w-full;
-    // margin-top: .3rem;
 
     div {
       @apply grow;
       width: 125px;
       @apply no-underline;
-      cursor: pointer;
-      display: inline-block;
+      @apply cursor-pointer;
+      @apply inline-block;
 
       &:hover {
         color: $ivory;
@@ -471,13 +457,12 @@
         @apply content-center;
         @apply justify-center;
         //
-        transition-duration: 1s;
+        @apply duration-1000;
         @apply text-center;
         box-shadow: 0px 2px 2px -3px black;
-        margin: auto;
+        @apply m-auto;
         //
-        // padding-bottom: .5rem;
-        background: hsl(0, 0%, 100%);
+        @apply bg-white;
         border: 1px solid transparentize(grey, 0.85) !important;
 
         @media (max-width: $breakThou) {
@@ -487,24 +472,24 @@
         p {
           @apply relative;
           @apply top-0;
-          transition: ease-out;
+          @apply ease-out;
         }
 
         &:hover {
-          transition: ease-out;
+          @apply ease-out;
           border: 1px solid transparentize(grey, 0.5);
           box-shadow: 0px 2px 4px -1px hsla(0, 0%, 50%, 0.25);
 
           p {
             @apply relative;
             top: -4px;
-            transition: ease-out;
+            @apply ease-out;
           }
 
           svg {
-            position: relative !important;
-            top: -4px !important;
-            transition: ease-out;
+            @apply relative;
+            @apply top-[-4px];
+            @apply ease-out;
           }
         }
 
@@ -547,7 +532,7 @@
           color: $grey;
           @apply text-center;
           @apply tracking-wider;
-          margin-bottom: 0.5em;
+          @apply mb-2;
           @apply text-center;
 
           &:hover {
@@ -561,22 +546,22 @@
 
   @keyframes carouselFader {
     0% {
-      transform: scale(0);
+      @apply scale-0;
       @apply opacity-0;
     }
 
     50% {
-      transform: scale(0);
+      @apply scale-0;
       @apply opacity-0;
     }
 
     95% {
-      transform: scale(1.015);
+      @apply scale-100;
       @apply opacity-100;
     }
 
     100% {
-      transform: scale(1);
+      @apply scale-100;
       @apply opacity-100;
     }
   }
@@ -613,8 +598,6 @@
   }
 
   // .modern Carousel box >>>>>>>>>>>>>
-  // .modern Carousel box >>>>>>>>>>>>>
-  // .modern Carousel box >>>>>>>>>>>>>
   $ruby: hsla(340, 76%, 48%, 1);
   $modernCol: $white;
 
@@ -627,32 +610,24 @@
 
     p {
       color: $white !important;
-      font-size: .85rem;
-      transition: ease-out;
-      margin: 4px 0 0;
+      @apply text-[.85rem];
+      @apply ease-out;
+      @apply mt-[4px] mx-0 mb-0;
 
       &:hover {
         color: $accent-red !important;
-        transition: ease-out;
+        @apply ease-out;
       }
     }
 
-    // &:hover {
-    //   position: relative !important;
-    //   top: 10px !important;
-    //   transition: ease-out;
-    // }
-
     .iconSVG {
-      position: relative !important;
-      // top: 10px !important;
-      transition: ease-out;
+      @apply relative;
+      @apply ease-out;
       width: initial !important;
 
       &:hover {
-        position: relative !important;
-        // top: 10px !important;
-        transition: ease-out;
+        @apply relative;
+        @apply ease-out;
       }
 
       svg path,
@@ -660,61 +635,40 @@
       svg rect,
       svg polyline {
         stroke: $modernCol;
-        // position: relative !important;
+        // @apply relative;
         // top: -10px !important;
-        // transition: ease-out;
+        // @apply ease-out;
       }
     }
 
     &:hover {
-      transition: ease-out;
-      // border: 1px solid transparentize(grey, 0.5);
-      // box-shadow: 0px 0px 4px 0px hsl(0, 0%, 100%);
-      // color: yellow;
-      // border: 1px solid transparentize($ruby, .2) !important;
+      @apply ease-out;
       border-radius: .75rem;
-      // background: transparentize($ruby, .9) !important;
       border: 1px solid transparentize($white, .5) !important;
-      // box-shadow: 0px 0px .5rem 0px $ruby;
       box-shadow: 0px 0px 1rem 0px $ruby;
 
       p {
         @apply relative;
-        // top: 0px !important;
-        transition: ease-out;
-        // color: $ruby !important;
+        @apply ease-out;
 
         &:hover {
           color: $white !important;
           @apply relative;
-          // top: 0px !important;
-          transition: ease-out;
+          @apply ease-out;
         }
       }
 
-      // .brickBack {
-      //   fill: $modernCol;
-      //   transition: fill 10s ease-out;
-      // }
-      // .brickCircles {
-      //   fill: $modernCol;
-      //   transition: fill 10s ease-out;
-      // }
-
       svg {
-        position: relative !important;
-        top: 10 !important;
-        transition: ease-out;
+        @apply relative;
+        @apply top-[5px];
+        @apply ease-out;
 
         &:hover {
-          // background: $accent-red;
           stroke: $accent-red;
-          // stroke-width: 2px;
-          // fill-opacity: 0.5;
-          stroke-opacity: 0.8;
-          position: relative !important;
-          top: 10 !important;
-          transition: ease-out;
+          @apply opacity-[.8];
+          @apply relative;
+          @apply top-[-5px];
+          @apply ease-out;
         }
       }
     }

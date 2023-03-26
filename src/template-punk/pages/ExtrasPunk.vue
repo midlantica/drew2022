@@ -31,7 +31,7 @@
   footer {
     color: $ivory;
     background: initial !important;
-    box-shadow: none;
+    @apply shadow-none;
   }
 
   .backer {
@@ -44,18 +44,18 @@
     gap: 0 2rem;
     place-content: center;
     @apply justify-center;
-    // position: absolute;
+    // @apply absolute;
     // z-index: 100;
     // top: .5rem;
     // left: 1rem;
   }
 
   .headerCopy {
-    color: black;
+    @apply text-black;
     font-family: $font;
 
     a {
-      color: black;
+      @apply text-black;
     }
   }
 </style>

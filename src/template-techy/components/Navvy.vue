@@ -75,16 +75,16 @@
     }
 
     .masty {
-      margin: 0 auto;
+      @apply my-0 mx-auto;
       @apply text-center;
 
       .DHmast {
-        display: grid;
+        @apply grid;
         grid-template-columns: 2fr 4fr 7fr;
         grid-gap: 2em;
         @apply items-center;
-        margin: 0 auto;
-        padding-top: 1em;
+        @apply my-0 mx-auto;
+        @apply pt-4;
         //
 
         @media (max-width: $breakThou) {
@@ -107,7 +107,7 @@
         }
 
         @media only screen and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
-          padding-top: 1em;
+          @apply pt-4;
         }
 
         a.drewHeadPic {
@@ -243,16 +243,16 @@
   }
 
   nav .jobDesc {
-    margin: -1em 0em 1em 11.1em;
+    @apply mt-[-1em] mr-0 mb-4 ml-[11.1em];
     @apply text-left;
 
     @media (max-width: $breakThou) {
-      margin: 1em 0em;
+      @apply my-4 mx-0;
       @apply text-center;
     }
 
     @media (max-width: $breakOne) {
-      margin: 0rem 0rem 1rem;
+      @apply my-0 mx-0 mb-4;
       @apply text-center;
     }
 
@@ -271,11 +271,12 @@
     h2 {
       @apply m-0;
       font-family: $font-copy;
-      font-weight: 400;
+      @apply font-normal;
+      @apply font-normal;
       color: $blueTech;
-      text-transform: lowercase;
+      @apply lowercase;
       @apply text-[1.7em];
-      line-height: 1.1em;
+      @apply leading-[1.1em];
       @apply tracking-[.03em];
       @apply inline;
 
@@ -289,47 +290,47 @@
 
       @media (max-width: $breakThou) {
         @apply inline;
-        font-size: 3.3vw;
-        margin-top: -3px;
+        @apply text-[3.3vw];
+        @apply mt-[-3px];
 
         &:nth-child(1) {
           //
         }
 
         &:nth-child(2) {
-          margin-left: .25em !important;
+          @apply ml-1;
         }
       }
 
       @media (max-width: $breakOne) {
         @apply inline;
-        font-size: 3.7vw;
-        margin-top: -3px;
+        @apply text-[3.7vw];
+        @apply mt-[-3px];
 
         &:nth-child(1) {
           //
         }
 
         &:nth-child(2) {
-          margin-left: .25em !important;
+          @apply ml-1;
         }
       }
 
       @media (max-width: $breakTwo) {
-        font-size: 5.8vw;
+        @apply text-[5.8vw];
       }
     }
   }
 
   nav .bar {
-    padding: 0.5vh 1em;
+    @apply py-[.5vh] px-4;
     background: $blueTech;
     color: $ivory;
     grid-column: 1 / 3;
     grid-row: 3 / 4;
 
     .contact {
-      font-weight: 400;
+      @apply font-normal;
       color: $ivory;
       @apply flex;
       @apply flex-row;
@@ -338,31 +339,32 @@
       @apply items-center;
       @apply content-center;
       @apply grow;
-      width: 50%;
+      @apply w-1/2;
 
       @media (max-width: 1024px) {
         @apply w-full;
       }
 
       @media (max-width: $breakOne) {
-        width: 100%
+        @apply w-full;
       }
 
       @media (max-width: $breakTwo) {
-        width: 100%
+        @apply w-full;
       }
 
       @media (max-width: $breakThree) {
-        width: 100%
+        @apply w-full;
       }
 
       p {
         font-family: $font-copy;
         @apply font-medium;
-        letter-spacing: .09em;
+        @apply tracking-[.09em];
+        @apply tracking-[.09em];
         color: $ivory;
         @apply text-[1.3em];
-        line-height: 2.5em;
+        @apply leading-10;
         margin-left: 0.5em;
 
         >a {
@@ -370,7 +372,7 @@
           @apply no-underline;
 
           &:hover {
-            text-decoration: underline;
+            @apply underline;
           }
         }
 
@@ -384,8 +386,9 @@
 
         @media (max-width: $breakOne) {
           @apply justify-center;
-          font-size: 1.2em !important;
+          @apply text-[1.2em];
           letter-spacing: .1em !important;
+          @apply tracking-[.1em];
 
           &:nth-child(1) {
             //
@@ -398,6 +401,7 @@
 
         @media (max-width: $breakTwo) {
           letter-spacing: 0.09em !important;
+          @apply tracking-[.1em];
 
           &:nth-child(1) {
             //
@@ -410,9 +414,9 @@
 
         @media (max-width: $breakThree) {
           @apply justify-center;
-          font-size: 1.1em !important;
-          letter-spacing: 0.07em !important;
-          line-height: 2em;
+          @apply text-[1.1em];
+          @apply tracking-[.07em];
+          @apply leading-8;
           @apply text-center;
 
           &:nth-child(1) {

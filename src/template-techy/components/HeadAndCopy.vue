@@ -48,7 +48,7 @@
 
   h1 {
     font-family: $font-head;
-    font-weight: 600;
+    @apply font-semibold;
     text-transform: initial;
     @apply leading-[2rem];
     @apply text-[1.5rem];
@@ -135,7 +135,7 @@
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
       margin: 0.5em 0em 0em;
-      // padding-bottom: 1em;
+      // @apply pb-4;
       font-size: 1.18em;
       padding: 0em 0em 0em;
       // background: purple;

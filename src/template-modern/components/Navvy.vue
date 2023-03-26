@@ -56,7 +56,7 @@
     @apply m-0;
     @apply p-0;
     color: $ivory !important;
-    text-transform: none;
+    @apply normal-case;
     font-weight: 200;
 
     a {
@@ -66,7 +66,7 @@
   }
 
   h1 {
-    text-transform: none;
+    @apply normal-case;
   }
 
   nav {
@@ -144,7 +144,7 @@
     }
 
     @media (max-width: $breakThree) {
-      width: 20ch;
+      @apply w-[20ch];
     }
 
     h2 {
@@ -152,7 +152,7 @@
       letter-spacing: -0.01em;
       text-shadow: 3px 0px 3px $black;
       @apply leading-[1.5em];
-      font-weight: 400;
+      @apply font-normal;
       color: hsla(0, 0%, 100%, 0.85) !important;
       @apply text-center;
       text-shadow: 1px 1px 4px$black;
@@ -160,7 +160,7 @@
       @include font-smoothing;
 
       @media (max-width: $breakTwo) {
-        // display: inline-block;
+        // @apply inline-block;
         // font-size: 1.85rem !important;
         // margin-top: -3px;
       }
@@ -199,7 +199,7 @@
     p {
       font-family: $font-subhead;
       letter-spacing: -0.01em;
-      font-weight: 400;
+      @apply font-normal;
       font-size: 1rem !important;
       @apply text-center;
       margin-top: 0.5rem;
@@ -221,7 +221,7 @@
 
         &:hover {
           color: $yellow-red !important;
-          text-decoration: underline;
+          @apply underline;
           @apply no-underline;
           background: darken($ruby, 15);
         }
@@ -252,7 +252,7 @@
 
   h1 {
     color: $accent-red !important;
-    text-transform: none;
+    @apply normal-case;
     @apply text-center;
 
     a {

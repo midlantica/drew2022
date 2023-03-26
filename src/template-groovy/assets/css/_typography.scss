@@ -2,7 +2,7 @@
 
 h1, h2, h3, h4, h5 {
   color: $accent-red;
-  line-height: 1.1em;
+  @apply leading-[1.1em];
   font-weight: normal;
   @apply text-left;
   margin: .75em 0 .25em 0;
@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5 {
 h2 {
   font-size: 2.25em;
   color: $accent;
-  text-transform: capitalize;
+  @apply capitalize;
   font-family: $font-subhead !important;
 }
 

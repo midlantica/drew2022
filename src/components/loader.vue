@@ -28,12 +28,12 @@
 
   .loader {
     @apply relative;
-    margin: 0 auto;
+    @apply my-0 mx-auto;
     width: $width;
 
     &:before {
       content: '';
-      display: block;
+      @apply block;
       padding-top: 100%;
     }
   }
@@ -43,8 +43,8 @@
     height: 100%;
     transform-origin: center center;
     @apply w-full;
-    position: absolute;
-    top: 0;
+    @apply absolute;
+    @apply top-0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -103,8 +103,8 @@
   }
 
   .showbox {
-    position: absolute;
-    top: 0;
+    @apply absolute;
+    @apply top-0;
     bottom: 0;
     left: 0;
     right: 0;

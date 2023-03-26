@@ -6,17 +6,17 @@ h1, h2, h3, h4, h5 {
   margin: .75em 0 .25em 0;
   @apply p-0;
   @apply tracking-[.025em];
-  text-transform: capitalize;
+  @apply capitalize;
   font-family: $font-subhead;
-  font-weight: 600;
+  @apply font-semibold;
 }
 
 h2 {
   @apply text-[2em];
   // color: $accent;
-  text-transform: capitalize;
+  @apply capitalize;
   font-family: $font-subhead;
-  font-weight: 400;
+  @apply font-normal;
 }
 
 h3 {

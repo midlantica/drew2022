@@ -31,6 +31,6 @@
   }
 
   svg g {
-    cursor: pointer;
+    @apply cursor-pointer;
   }
 </style>
