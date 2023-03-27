@@ -8,7 +8,6 @@
 
 <script setup>
   import Carousel from '../../components/Carousel/Carousel.vue'
-
 </script>
 
 <style lang='scss' scoped>

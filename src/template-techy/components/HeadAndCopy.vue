@@ -116,7 +116,7 @@
       @apply text-[1.2rem];
       line-height: 2.3em;
       // margin: 1em 1em 0;
-      letter-spacing: 0.01em;
+      @apply tracking-[.01em];
       // background: red;
     }
 

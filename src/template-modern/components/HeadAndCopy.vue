@@ -109,7 +109,7 @@
 
     // @media (max-width: $breakOne) {
     //   @apply tracking-[0.05rem];
-    //   // font-size: 1rem !important;
+    //   // @apply text-[1rem];
     //   // columns: 2 200px;
     //   @apply text-justify;
     //   hyphens: auto;

@@ -161,7 +161,7 @@
     @apply flex;
     @apply justify-center;
     @apply items-center;
-    @apply pt-3 px-4 pb-2;
+    @apply pt-2 px-4 pb-2;
     @apply text-center;
     @apply m-auto;
     @apply w-full;
@@ -207,6 +207,7 @@
   .modern .quoteBlock {
     font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
     @apply text-[hsl(0,0%,80%)];
+    @apply mt-12;
 
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;

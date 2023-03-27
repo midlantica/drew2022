@@ -80,17 +80,14 @@
 
   .drewHarper {
     height: 83px;
-    // margin: 0em 0 0 1rem;
+    //
 
     @media (max-width: $breakOne) {
-      // @apply h-[60px];
-      // margin-left: 0.75em;
+      //
     }
 
     @media (max-width: $breakTwo) {
-      // height: 42px;
       height: auto;
-      // margin-left: 0.75em;
     }
   }
 
@@ -114,8 +111,6 @@
     // @apply block;
 
     @media (max-width: $breakTwo) {
-      // width: 80px;
-      // height: 80px;
       background-position: -40px -50px !important;
       background-size: 145% !important;
     }
@@ -124,80 +119,59 @@
   h1 {
     font-family: $font-copy;
     @apply text-[1.5rem];
-    letter-spacing: -0.025em;
     @apply transition duration-[.25s] ease-in;
-    font-weight: medium;
+    @apply font-medium;
 
     a:hover {
       color: initial !important;
-      // background: orange !important;
-      // border-bottom: 2px dashed transparentize(navy, .75);
     }
 
     @media (max-width: $breakOne) {
-      // font-size: 4.5em;
-      // @apply grow-0;
-      // @apply text-right;
+      //
     }
 
     @media (max-width: $breakTwo) {
-      // font-size: 3.5em;
-      // @apply grow-0;
-      // @apply text-center;
+      //
     }
 
     @media (max-width: $breakThree) {
-      // font-size: 2.5em;
-      // margin-bottom: -9px;
+      //
     }
   }
 
   h3 {
     font-family: $font-copy;
     @apply text-[1.15rem];
-    letter-spacing: -0.025em;
     @apply transition duration-[.25s] ease-in;
     @apply font-bold;
 
     a:hover {
       color: initial !important;
-      // background: orange !important;
-      // border-bottom: 2px dashed transparentize(navy, .75);
+      //
     }
 
     @media (max-width: $breakOne) {
-      // font-size: 4.5em;
-      // @apply grow-0;
-      // @apply text-right;
+      //
     }
 
     @media (max-width: $breakTwo) {
-      // font-size: 3.5em;
-      // @apply grow-0;
-      // @apply text-center;
+      //
     }
 
     @media (max-width: $breakThree) {
-      // font-size: 2.5em;
-      // margin-bottom: -9px;
+      //
     }
   }
 
   .uiux {
-    // height: 35px;
-    height: 4ch;
-    // margin: 0.7em 0 -0.3em 1.3em;
+    @apply h-[4ch];
 
     @media (max-width: $breakOne) {
-      // height: 3ch;
       @apply self-center;
-      // margin-top: 0.6em;
-      // margin-left: 0.75em;
     }
 
     @media (max-width: $breakTwo) {
-      height: 3ch;
-      // margin-left: 0.75em;
+      @apply h-[3ch];
     }
   }
 
@@ -205,7 +179,6 @@
     @apply flex;
     @apply flex-col;
     @apply flex-wrap;
-    // flex-grow: 1 !important;
     @apply content-center;
     @apply text-center;
 
@@ -217,7 +190,6 @@
 
   .contact {
     @apply grow;
-    // @apply w-full;
     @apply flex;
     @apply flex-col;
     @apply flex-wrap;
@@ -226,40 +198,35 @@
     @apply content-center;
     @apply mt-[0.2em];
     @apply self-center;
-    // @apply z-10;
-    // text-shadow: 3px 0px 1px $black;
-    // transition: .25s ease-in;
+    //
 
     @media (max-width: $breakOne) {
       @apply ml-0;
       @apply flex-row;
-      margin-top: 1em;
+      @apply mt-4;
     }
 
     @media (max-width: $breakTwo) {
       @apply mt-[.4em];
-      // margin-top: 1em;
       @apply flex-row;
-      // color: red !important;
     }
 
     @media (max-width: $breakThree) {
-      margin-top: 1em;
+      @apply mt-4;
       @apply transition duration-[.25s] ease-in;
       @apply flex-row;
-      // color: red !important;
     }
 
     @media (max-width: 520px) {
-      margin-top: 1em;
+      @apply mt-4;
       @apply transition duration-[.25s] ease-in;
       @apply flex-col;
     }
 
     p {
       font-family: $font-copy;
-      font-size: 1.15em;
-      letter-spacing: 0.01em;
+      @apply text-[1.15em];
+      @apply tracking-[.01em];
       @apply items-center;
       @apply text-center;
       @apply leading-[1.5em];
@@ -271,33 +238,31 @@
         border-bottom: 2px dotted lighten($blue-dark, 20);
 
         &:hover {
-          color: darken($accent-red, 20) !important;
-          border-bottom: 2px dotted darken($accent-red, 20);
+          @apply text-[maroon];
+          @apply border-b-2 border-dotted border-[hsl(0,100%,25%)];
         }
       }
 
       @media (max-width: $breakOne) {
         @apply justify-center;
-        letter-spacing: 0.01em !important;
 
         &:nth-child(1) {
           @apply text-right;
-          margin: 0 0.25em;
+          @apply my-0 mx-1;
         }
 
         &:nth-child(2) {
           @apply text-left;
-          margin: 0 0.25em;
+          @apply my-0 mx-1;
         }
       }
 
       @media (max-width: $breakTwo) {
-        letter-spacing: 0.03em !important;
+        //
       }
 
       @media (max-width: $breakThree) {
         @apply justify-center;
-        letter-spacing: 0.09em !important;
         @apply leading-5;
         @apply mb-[-4px];
         @apply text-center;
@@ -313,8 +278,8 @@
           border-bottom: 1px dotted $accent;
 
           &:hover {
-            color: maroon !important;
-            border-bottom: 1px dotted hsla(0, 100%, 25%, 1);
+            @apply text-[maroon];
+            @apply border-b-2 border-dotted border-[hsl(0,100%,25%)];
           }
         }
       }

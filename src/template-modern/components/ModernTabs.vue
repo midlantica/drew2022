@@ -24,7 +24,7 @@
   }
 
   .modernTabs {
-    @apply mt-3 mx-0 mb-2;
+    @apply mt-7 mx-0 mb-2;
     @apply flex;
     @apply flex-row;
     @apply flex-wrap;

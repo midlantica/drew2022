@@ -10,16 +10,18 @@
     </div>
 
     <component :is="selectedView">
-      <div class="miniGallery">
-        <div v-for="item in projects" :key="item">
-          <a @click="selectCarousel(item[1], item[2])">
-            <div class="box" :class="item[3]">
-              <component :is="item[0]" />
-              <p>{{ item[2] }}</p>
-            </div>
-          </a>
+      <transition name="bounce3" appear>
+        <div class="miniGallery">
+          <div v-for="item in projects" :key="item">
+            <a @click="selectCarousel(item[1], item[2])">
+              <div class="box" :class="item[3]">
+                <component :is="item[0]" />
+                <p>{{ item[2] }}</p>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
+      </transition>
     </component>
   </div>
 </template>
@@ -101,8 +103,6 @@
 <style lang='scss' scoped>
   @import '../../assets/css/carousel.scss';
 
-  $mortar: .25rem;
-
   .carouselArrow {
     color: hsla(0, 0%, 100%, 1);
     background: hsla(0, 0%, 0%, 0.3);
@@ -115,43 +115,21 @@
 
   .projectBox {
     background: lighten(lightgrey, 12);
-    // background: transparentize($color: white, $amount: .25);
-    border-radius: $mortar;
+    @apply rounded;
     @apply p-2;
     @apply relative;
     @include clearfix;
-  }
 
-  .projectBox__top {
-    @apply flex;
-    @apply flex-row;
-    @apply flex-nowrap;
-    @apply items-start;
-    @apply h-6;
-    margin-bottom: $mortar;
-    @apply relative;
-    @apply z-20;
-  }
-
-  body.box {
-    height: 115px;
-
-    @media (max-width: $breakThou) {
-      @apply min-h-min;
+    .projectBox__top {
+      @apply flex;
+      @apply flex-row;
+      @apply flex-nowrap;
+      @apply items-start;
+      @apply h-6;
+      @apply mb-1;
+      @apply relative;
+      @apply z-20;
     }
-
-    @media (max-width: $breakOne) {
-      //
-    }
-
-    @media (max-width: $breakTwo) {
-      //
-    }
-
-    @media (max-width: $breakThree) {
-      //
-    }
-
   }
 
   body.bourbon .projectBox {
@@ -256,82 +234,7 @@
     }
   }
 
-  // ########################
-
-  p.projectHead {
-    // color: lighten($black, 20) !important;
-    @apply cursor-pointer;
-  }
-
-  body.bourbon .projectHead,
-  body.bourbon .box p {
-    font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-    @apply text-center;
-  }
-
-  body.bourbon .box {
-    @apply h-[181.5px];
-
-    @media (max-width: $breakThou) {
-      @apply min-h-min;
-    }
-  }
-
-  //////////
-  body.groovy .projectHead,
-  body.groovy .box p {
-    font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-    @apply text-center;
-
-  }
-
-  body.groovy .box {
-    height: 170px !important;
-  }
-
-  //////////
-  body.techy .projectHead,
-  body.techy .box p {
-    font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-    @apply text-center;
-
-  }
-
-  body.techy .box {
-    height: 167px !important;
-  }
-
-  //////////
-  body.corp .projectHead,
-  body.corp .box p {
-    font-family: 'Bodoni Moda', Times, serif !important;
-    @apply tracking-normal;
-    @apply text-center;
-
-  }
-
-  body.corp .box {
-    height: 166.25px !important;
-  }
-
-  body.corp .VueCarousel.druCarousel {
-    @apply shadow-none;
-  }
-
-  body.corp .miniGallery div a .box {
-    border: none;
-
-    &:hover {
-      border: none;
-    }
-  }
-
   // .modern .projectBox >>>>>>>>
-  body.modern .box {
-    width: 130px !important;
-    height: 170px !important;
-  }
-
   body.modern .projectBox {
     background: none;
 
@@ -356,25 +259,279 @@
     }
   }
 
-  // .modern >>>>>>>>>>>>>>>>>>
-  // .modern >>>>>>>>>>>>>>>>>>
-  body.modern .projectHead,
-  body.modern .box p {
-    font-family: 'Spartan', Helvetica, Arial, sans-serif !important;
-    @apply text-[1rem];
-    letter-spacing: 0em !important;
-    @apply text-white;
-    text-transform: lowercase !important;
-    @apply text-center;
+  // ########################
+  .box {
+    height: 115px;
+    // background-color: red;
 
-    a {
-      @apply text-white;
+    @media (max-width: $breakThou) {
+      @apply min-h-min;
+    }
 
-      &:hover {
+    @media (max-width: $breakOne) {
+      //
+    }
+
+    @media (max-width: $breakTwo) {
+      //
+    }
+
+    @media (max-width: $breakThree) {
+      //
+    }
+
+    p {
+      @apply text-gray-800;
+      @apply cursor-pointer;
+
+      a {
+        @apply text-gray-800;
+
+        &:hover {
+          @apply text-gray-800;
+        }
+      }
+    }
+  }
+
+  //////////
+  body.modern {
+
+    //
+    .projectBox {
+      //
+
+      p {
+        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
         @apply text-white;
+        @apply text-center;
       }
     }
 
+    .miniGallery div .box {
+      @apply h-[181.5px];
+      background: none !important;
+      border: 1px solid transparent !important;
+      @apply rounded-xl;
+      @apply top-[5px];
+
+      @media (max-width: $breakThou) {
+        @apply min-h-min;
+      }
+
+      &:hover {
+        @apply ease-out;
+        @apply rounded-xl;
+        border: 1px solid transparentize($white, .5) !important;
+        // @apply border border-solid border-[rgba(255,255,255,0.5)];
+        // @apply border border-solid border-[hsl(0,0%,95%)];
+        // box-shadow: 0px 0px 1rem 0px $ruby;
+        box-shadow: 0px 0px 1rem 0px #d71d5b;
+        @apply top-[-5px];
+
+        p {
+          @apply relative;
+          @apply ease-out;
+          @apply top-[5px];
+
+          &:hover {
+            color: $white !important;
+            @apply relative;
+            @apply ease-out;
+            @apply top-[-5px];
+          }
+        }
+
+        svg {
+          @apply relative;
+          @apply top-[5px];
+          @apply ease-out;
+
+          &:hover {
+            @apply top-[-5px];
+            stroke: $accent-red;
+            @apply opacity-[.8];
+            @apply relative;
+            @apply ease-out;
+          }
+        }
+      }
+
+      .iconSVG {
+        @apply relative;
+        @apply ease-out;
+        width: initial !important;
+
+        &:hover {
+          @apply relative;
+          @apply ease-out;
+          @apply top-[-5px];
+        }
+
+        svg path,
+        svg polygon,
+        svg rect,
+        svg polyline {
+          stroke: $modernCol;
+          // @apply relative;
+          // top: -10px !important;
+          // @apply ease-out;
+        }
+      }
+
+      p {
+        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
+        @apply text-white;
+        @apply text-center;
+        @apply text-[.85rem];
+        @apply ease-out;
+        @apply mt-[4px] mx-0 mb-0;
+
+        &:hover {
+          color: $accent-red !important;
+          @apply ease-out;
+        }
+      }
+    }
+  }
+
+  //////////
+  body.bourbon {
+
+    //
+    .projectBox {
+      //
+
+      p {
+        font-family: 'Spartan', Helvetica, Arial, sans-serif !important;
+        @apply text-gray-800;
+      }
+    }
+
+    .miniGallery div .box {
+      width: 130px !important;
+      height: 170px !important;
+
+      p {
+        font-family: 'Spartan', Helvetica, Arial, sans-serif !important;
+        @apply text-[1rem];
+        @apply text-gray-800;
+        @apply text-center;
+        letter-spacing: 0em !important;
+        text-transform: lowercase !important;
+
+        a {
+          @apply text-gray-800;
+
+          &:hover {
+            @apply text-gray-800;
+          }
+        }
+      }
+    }
+  }
+
+  //////////
+  body.groovy {
+
+    //
+    .projectBox {
+      //
+
+      p {
+        @apply text-gray-800;
+      }
+    }
+
+    .miniGallery div .box {
+      height: 170px !important;
+
+      p {
+        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
+        @apply text-center;
+        @apply text-gray-800;
+      }
+    }
+  }
+
+  //////////
+  body.techy {
+    //
+
+    .projectBox {
+      //
+
+      p {
+        @apply text-gray-800;
+      }
+    }
+
+    .miniGallery div .box {
+      height: 167px !important;
+
+      p {
+        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
+        @apply text-center;
+        @apply text-gray-800;
+      }
+    }
+  }
+
+  //////////
+  body.corp {
+
+    //
+    .projectBox {
+      //
+
+      p {
+        @apply text-gray-800;
+      }
+    }
+
+    .miniGallery div .box {
+      height: 182px !important;
+      border: none;
+
+      &:hover {
+        border: none;
+      }
+
+      p {
+        font-family: 'Bodoni Moda', Times, serif !important;
+        @apply tracking-wider;
+        @apply text-center;
+        @apply text-gray-800;
+      }
+    }
+  }
+
+  //////////
+  body.punk {
+
+    //
+    .projectBox {
+      //
+
+      p {
+        @apply text-gray-800;
+      }
+    }
+
+    .miniGallery div .box {
+      @apply h-[181.5px];
+
+      p {
+        font-family: Poppins, 'Helvetica Neue', Arial, sans-serif !important;
+        @apply text-center;
+        @apply text-gray-800;
+      }
+
+    }
+  }
+
+  body.corp .VueCarousel.druCarousel {
+    @apply shadow-none;
   }
 
   body.punk .miniGallery {
@@ -388,17 +545,6 @@
 
   body.corp .VueCarousel.druCarousel {
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.29);
-  }
-
-  //////////
-  body.punk .projectHead,
-  body.punk .box p {
-    font-family: Poppins, 'Helvetica Neue', Arial, sans-serif !important;
-    @apply text-center;
-  }
-
-  body.punk .box {
-    @apply h-[181.5px];
   }
 
   ///////
@@ -425,7 +571,7 @@
 
     div {
       @apply grow;
-      width: 125px;
+      @apply w-[125px];
       @apply no-underline;
       @apply cursor-pointer;
       @apply inline-block;
@@ -434,15 +580,6 @@
         color: $ivory;
         @apply no-underline;
 
-        p {
-          color: $black !important;
-          @apply text-center;
-          @apply text-center;
-
-          &:hover {
-            color: $black !important;
-          }
-        }
       }
 
       a {
@@ -456,12 +593,10 @@
         @apply items-center;
         @apply content-center;
         @apply justify-center;
-        //
         @apply duration-1000;
         @apply text-center;
         box-shadow: 0px 2px 2px -3px black;
         @apply m-auto;
-        //
         @apply bg-white;
         border: 1px solid transparentize(grey, 0.85) !important;
 
@@ -470,6 +605,7 @@
         }
 
         p {
+          @apply text-[#333];
           @apply relative;
           @apply top-0;
           @apply ease-out;
@@ -529,7 +665,6 @@
           @apply w-full;
           @apply text-[0.85em];
           @apply uppercase;
-          // color: $grey;
           @apply text-white;
           @apply text-center;
           @apply tracking-wider;
@@ -602,77 +737,24 @@
   $ruby: hsla(340, 76%, 48%, 1);
   $modernCol: $white;
 
-  // >>>>>>
-  .modern .miniGallery div a .box {
-    background: none !important;
-    // border: 1px solid #1b171c !important;
-    border: 1px solid transparent !important;
-    border-radius: .75rem;
-
-    p {
-      color: $white !important;
-      @apply text-[.85rem];
-      @apply ease-out;
-      @apply mt-[4px] mx-0 mb-0;
-
-      &:hover {
-        color: $accent-red !important;
-        @apply ease-out;
-      }
-    }
-
-    .iconSVG {
-      @apply relative;
-      @apply ease-out;
-      width: initial !important;
-
-      &:hover {
-        @apply relative;
-        @apply ease-out;
-      }
-
-      svg path,
-      svg polygon,
-      svg rect,
-      svg polyline {
-        stroke: $modernCol;
-        // @apply relative;
-        // top: -10px !important;
-        // @apply ease-out;
-      }
-    }
+  .iconSVG {
+    @apply relative;
+    @apply ease-out;
+    width: initial !important;
 
     &:hover {
+      @apply relative;
       @apply ease-out;
-      border-radius: .75rem;
-      border: 1px solid transparentize($white, .5) !important;
-      box-shadow: 0px 0px 1rem 0px $ruby;
-
-      p {
-        @apply relative;
-        @apply ease-out;
-
-        &:hover {
-          color: $white !important;
-          @apply relative;
-          @apply ease-out;
-        }
-      }
-
-      svg {
-        @apply relative;
-        @apply top-[5px];
-        @apply ease-out;
-
-        &:hover {
-          stroke: $accent-red;
-          @apply opacity-[.8];
-          @apply relative;
-          @apply top-[-5px];
-          @apply ease-out;
-        }
-      }
     }
 
+    svg path,
+    svg polygon,
+    svg rect,
+    svg polyline {
+      stroke: $modernCol;
+      // @apply relative;
+      // top: -10px !important;
+      // @apply ease-out;
+    }
   }
 </style>

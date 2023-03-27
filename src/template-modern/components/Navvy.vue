@@ -71,7 +71,7 @@
     @apply flex-nowrap;
     @apply justify-center;
     @apply items-center;
-    padding: 1.5rem 0 0 !important;
+    @apply pt-6 px-0 pb-0;
   }
 
   h1 {
@@ -112,8 +112,9 @@
   }
 
   section.jobDesc {
-    @apply mt-0;
-    @apply lowercase;
+    // @apply mt-2;
+    // @apply lowercase;
+    text-decoration: lowercase;
     @apply transition duration-[.25s] ease-in;
 
     @media (max-width: $breakTwo) {
@@ -142,12 +143,11 @@
       @apply tracking-[-0.01em];
       @apply leading-[1.5em];
       @apply font-normal;
-      // color: hsla(0, 0%, 100%, 0.85) !important;
       @apply text-[hsla(0,0%,100%,0.85)];
       @apply text-center;
-      text-shadow: 1px 1px 4px $black;
       @apply lowercase;
       @apply antialiased;
+      text-shadow: 1px 1px 4px $black;
 
       @media (max-width: $breakTwo) {
         //
@@ -160,8 +160,7 @@
   }
 
   section.contact {
-    @apply mt-[0.2em];
-    @apply mb-0;
+    @apply mt-0;
     @apply z-10;
     @apply transition duration-[.25s] ease-in;
 
@@ -181,7 +180,7 @@
       font-family: $font-subhead;
       @apply tracking-[-0.01em];
       @apply font-normal;
-      font-size: 1rem !important;
+      @apply text-[1rem];
       @apply text-center;
       @apply mt-2;
       text-shadow: 1px 1px 4px $black;
