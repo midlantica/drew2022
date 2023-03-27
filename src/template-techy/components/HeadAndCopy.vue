@@ -45,8 +45,8 @@
     font-family: $font-head;
     @apply font-semibold;
     text-transform: initial;
-    @apply leading-[2rem];
-    @apply text-[1.5rem];
+    @apply leading-[2.2rem];
+    @apply text-[1.7rem];
     margin-bottom: .85rem;
     margin-top: 2rem;
     color: $blueTech;
@@ -82,7 +82,7 @@
   p {
     font-family: $font-copy;
     @apply text-[1.3rem];
-    @apply leading-[3rem];
+    @apply leading-[3.3rem];
     color: transparentize($blueTech, .2);
     @apply tracking-[.06em];
 

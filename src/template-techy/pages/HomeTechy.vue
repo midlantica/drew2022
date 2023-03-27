@@ -118,8 +118,7 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     @apply z-10;
-    // margin-top: 0 !important;
-    margin-top: -5.5em !important;
+    margin-top: -5em !important;
 
     // IPAD LANDSCAPE
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {

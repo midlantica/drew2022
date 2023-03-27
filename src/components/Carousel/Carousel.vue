@@ -302,9 +302,12 @@
       //
 
       p {
-        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
+        font-family: Spartan, Helvetica, Arial, sans-serif !important;
         @apply text-white;
+        @apply text-[1rem];
         @apply text-center;
+        @apply lowercase;
+        @apply tracking-[0em];
       }
     }
 
@@ -314,58 +317,67 @@
       border: 1px solid transparent !important;
       @apply rounded-xl;
       @apply top-[5px];
+      @apply relative;
 
       @media (max-width: $breakThou) {
         @apply min-h-min;
       }
 
       &:hover {
-        @apply ease-out;
+        // @apply ease-out;
         @apply rounded-xl;
         border: 1px solid transparentize($white, .5) !important;
         // @apply border border-solid border-[rgba(255,255,255,0.5)];
         // @apply border border-solid border-[hsl(0,0%,95%)];
         // box-shadow: 0px 0px 1rem 0px $ruby;
         box-shadow: 0px 0px 1rem 0px #d71d5b;
-        @apply top-[-5px];
+        // @apply top-[-5px];
 
         p {
-          @apply relative;
-          @apply ease-out;
-          @apply top-[5px];
-
-          &:hover {
-            color: $white !important;
-            @apply relative;
-            @apply ease-out;
-            @apply top-[-5px];
-          }
+          @apply top-[-5px];
         }
 
         svg {
           @apply relative;
-          @apply top-[5px];
-          @apply ease-out;
+          @apply top-[-5px];
+          // @apply ease-out;
 
           &:hover {
-            @apply top-[-5px];
+            // @apply top-[-5px];
             stroke: $accent-red;
             @apply opacity-[.8];
             @apply relative;
-            @apply ease-out;
+            // @apply ease-out;
           }
+        }
+      }
+
+      p {
+        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
+        @apply text-white;
+        @apply text-[1rem];
+        @apply relative;
+        @apply lowercase;
+        @apply top-[5px];
+        @apply text-center;
+        @apply mt-[4px] mx-0 mb-0;
+        // @apply ease-out;
+
+        &:hover {
+          // @apply ease-out;
+          // @apply top-[-5px];
         }
       }
 
       .iconSVG {
         @apply relative;
-        @apply ease-out;
+        // @apply ease-out;
         width: initial !important;
 
         &:hover {
           @apply relative;
-          @apply ease-out;
-          @apply top-[-5px];
+          // @apply ease-out;
+          // @apply top-[-5px];
         }
 
         svg path,
@@ -379,19 +391,6 @@
         }
       }
 
-      p {
-        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-        @apply text-white;
-        @apply text-center;
-        @apply text-[.85rem];
-        @apply ease-out;
-        @apply mt-[4px] mx-0 mb-0;
-
-        &:hover {
-          color: $accent-red !important;
-          @apply ease-out;
-        }
-      }
     }
   }
 
@@ -409,8 +408,10 @@
     }
 
     .miniGallery div .box {
-      width: 130px !important;
-      height: 170px !important;
+      // width: 130px !important;
+      @apply h-[130px];
+      // height: 181.5px !important;
+      @apply h-[181.5px];
 
       p {
         font-family: 'Spartan', Helvetica, Arial, sans-serif !important;
@@ -530,9 +531,9 @@
     }
   }
 
-  body.corp .VueCarousel.druCarousel {
-    @apply shadow-none;
-  }
+  // body.corp .VueCarousel.druCarousel {
+  //   @apply shadow-none;
+  // }
 
   body.punk .miniGallery {
     @apply top-0;
@@ -553,6 +554,7 @@
     @apply text-center;
     @apply uppercase;
     @apply m-auto;
+    @apply cursor-pointer;
 
     div a {
       @apply cursor-pointer;
@@ -566,7 +568,7 @@
     @apply justify-between;
     @apply items-center;
     @apply content-center;
-    @apply duration-1000;
+    @apply duration-75;
     @apply w-full;
 
     div {
@@ -593,7 +595,7 @@
         @apply items-center;
         @apply content-center;
         @apply justify-center;
-        @apply duration-1000;
+        @apply duration-75;
         @apply text-center;
         box-shadow: 0px 2px 2px -3px black;
         @apply m-auto;
@@ -612,19 +614,19 @@
         }
 
         &:hover {
-          @apply ease-out;
+          // @apply ease-out;
           border: 1px solid transparentize(grey, 0.5);
           box-shadow: 0px 2px 4px -1px hsla(0, 0%, 50%, 0.25);
 
           p {
             @apply relative;
-            top: -4px;
+            // top: -4px;
             @apply ease-out;
           }
 
           svg {
             @apply relative;
-            @apply top-[-4px];
+            // @apply top-[-4px];
             @apply ease-out;
           }
         }

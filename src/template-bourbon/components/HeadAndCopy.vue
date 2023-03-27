@@ -81,7 +81,7 @@
     font-family: $font-copy;
     color: $grey;
     @apply text-[1.1rem];
-    @apply leading-[2.6rem];
+    @apply leading-[2.4rem];
     @apply mt-2 mx-2 mb-0;
     @apply tracking-[0.03rem];
 

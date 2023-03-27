@@ -29,7 +29,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/**/*.svg"
-  ],
+, "src/main.js"  ],
   "exclude": [
     "node_modules"
   ],
