@@ -24,7 +24,7 @@
     @apply flex;
     @apply flex-col;
     @apply flex-nowrap;
-    margin: 1em 1em 1em 1.5rem;
+    @apply mt-4 mr-4 mb-4 ml-6;
     // @apply relative;
 
     @media (max-width: $breakTwo) {
@@ -82,12 +82,12 @@
     color: transparentize($black, 0.15);
     font-family: $font-copy;
     @apply font-normal;
-    font-size: 1.05rem;
-    line-height: 2.8rem;
-    padding-left: 1.7rem;
+    font-size: 1.1rem;
+    line-height: 2.9rem;
+    padding-left: 1.2rem;
     text-align: justify;
     border-left: 2px dotted $paleBlue;
-    @apply ml-4;
+    @apply ml-[.2rem];
     letter-spacing: 0.00rem;
 
     @media (max-width: $breakThou) {

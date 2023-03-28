@@ -23,6 +23,7 @@ module.exports = {
   plugins: [
     'vue'
   ],
+  ignorePatterns: ['temp.js', 'dist'],
   rules: {
     // indent: ['error', 2],
     'vue/html-indent': [1, 2, {
@@ -46,7 +47,8 @@ module.exports = {
       multiline: {
         max: 3
       }
-    }]
+    }],
+    'spaced-comment': 'off'
   },
   overrides: [
     {

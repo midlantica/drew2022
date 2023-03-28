@@ -1,8 +1,8 @@
 <template>
   <nav>
-    <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center justify-center gap-12">
-      <div class="drewTop max-[830px]:m-auto gap-4 grow">
-        <router-link :to="{ name: 'Corp' }" class="w-full flex max-[830px]:flex-column flex-row flex-wrap content-center gap-x-6 justify-center">
+    <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center justify-center gap-0">
+      <div class="drewTop max-[830px]:m-auto gap-2 grow">
+        <router-link :to="{ name: 'Corp' }" class="w-full flex max-[830px]:flex-column flex-row flex-wrap content-center gap-6 justify-center">
           <router-link :to="{ name: 'ExtrasCorp' }" class="drewhead jelloHorizontal content-center m-0" />
           <drewHarper class="drewHarper marTH" />
         </router-link>
@@ -38,11 +38,13 @@
     @apply flex-row;
     @apply flex-wrap;
     @apply items-center;
-    @apply pt-[1.5em] px-[2em] pb-[1em];
+    @apply pt-[2em] px-[2em] pb-0;
     @apply justify-between;
+    @apply mb-4;
 
     @media (max-width: $breakOne) {
       @apply justify-center;
+      @apply mb-4;
     }
   }
 
@@ -141,9 +143,11 @@
 
   h3 {
     font-family: $font-copy;
-    @apply text-[1.15rem];
+    @apply text-[1.35rem];
     @apply transition duration-[.25s] ease-in;
     @apply font-bold;
+    @apply text-center;
+    @apply leading-loose;
 
     a:hover {
       color: initial !important;
@@ -196,8 +200,8 @@
     @apply justify-center;
     @apply items-center;
     @apply content-center;
-    @apply mt-[0.2em];
-    @apply self-center;
+    @apply mt-4;
+    @apply self-baseline;
     //
 
     @media (max-width: $breakOne) {
@@ -225,7 +229,7 @@
 
     p {
       font-family: $font-copy;
-      @apply text-[1.15em];
+      @apply text-[1.3em];
       @apply tracking-[.01em];
       @apply items-center;
       @apply text-center;
@@ -233,6 +237,7 @@
       @apply grow;
       @apply font-semibold;
       @apply lowercase;
+      // @apply mt-[1rem];
 
       a {
         border-bottom: 2px dotted lighten($blue-dark, 20);

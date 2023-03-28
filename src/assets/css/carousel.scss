@@ -84,7 +84,7 @@ $mortar: .25rem;
   border-radius: 4px;
   border-left-width: 10px;
   background: transparentize(white, 0.95);
-  padding: 0.15rem .5rem 0.16rem .4rem;
+  padding: 0.2rem 0.5rem 0.16rem 0.4rem;
   margin: 0rem 0 0 0em;
   font-family: Helvetica, Arial, sans-serif;
   cursor: pointer;
@@ -132,11 +132,11 @@ $mortar: .25rem;
   &:hover {
     //
     .brickBack {
-      fill: hsla(0, 100%, 57%, 0.25);
+      fill: hsla(0, 100%, 57%, .3);
       transition: fill 10s ease-out;
     }
     .brickCircles {
-      fill: hsla(0, 100%, 57%, 0.25);
+      fill: hsla(0, 100%, 57%, .3);
       transition: fill 10s ease-out;
     }
   }
@@ -144,6 +144,7 @@ $mortar: .25rem;
 
 $modernCol: $white;
 $ruby: hsla(340, 76%, 48%, 1);
+
 body.modern .box {
 
   &:hover {
@@ -170,7 +171,6 @@ body.modern .box {
   }
 
 }
-
 
 body.corp .box {
   //

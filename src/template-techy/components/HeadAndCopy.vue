@@ -82,7 +82,7 @@
   p {
     font-family: $font-copy;
     @apply text-[1.3rem];
-    @apply leading-[3.3rem];
+    @apply leading-[3rem];
     color: transparentize($blueTech, .2);
     @apply tracking-[.06em];
 
