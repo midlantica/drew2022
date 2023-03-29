@@ -18,7 +18,7 @@
   footer {
     @apply relative;
     height: 160px;
-    color: $ivory;
+    @apply text-base-ivory;
     background: linear-gradient(
         /* 0 - 25% */
         $groovy-aqua 0%,

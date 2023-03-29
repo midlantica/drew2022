@@ -71,13 +71,13 @@
   }
 
   body.modern .tabs a.modern {
-    color: $ivory;
+    @apply text-base-ivory;
     background: linear-gradient(hsla(340, 76%, 48%, 1), hsl(340, 76%, 30%));
     @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
   }
 
   body.bourbon .tabs>a.bourbon {
-    color: $ivory;
+    @apply text-base-ivory;
     background: linear-gradient(darken($orange, 10), darken($orange, 25));
     @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
   }

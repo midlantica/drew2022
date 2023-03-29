@@ -48,7 +48,7 @@
 
   header,
   footer {
-    color: $ivory;
+    @apply text-base-ivory;
     background: initial !important;
     @apply shadow-none;
     margin-bottom: -1rem;

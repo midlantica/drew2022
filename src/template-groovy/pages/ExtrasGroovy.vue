@@ -21,14 +21,14 @@
   @import '../assets/css/groovy-main.scss';
 
   header {
-    color: $ivory;
+    @apply text-base-ivory;
     background: $groovy-red;
     @include clearfix;
   }
 
   footer {
     height: 160px;
-    color: $ivory;
+    @apply text-base-ivory;
     background: linear-gradient(
         /* // 0 - 25% */
         $groovy-aqua 0%,

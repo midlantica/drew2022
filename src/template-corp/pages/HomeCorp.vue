@@ -61,7 +61,7 @@
 
   header,
   footer {
-    // color: $ivory;
+    // @apply text-base-ivory;
     box-shadow: none !important;
 
   }

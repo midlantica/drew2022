@@ -53,14 +53,15 @@
   .mainGrid {
     @apply grid;
     grid-template-columns: 7fr 6fr;
-    row-gap: 1em;
-    margin: 0em 1em 0.5em;
+    @apply gap-y-4;
+    @apply mt-0 mx-4 mb-2;
 
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
-      grid-gap: 0em;
-      row-gap: 1em;
-      margin: 0em 1em 1em;
+      // grid-gap: 0em;
+      // row-gap: 1em;
+      // @apply gap-y-6;
+      @apply mt-0 mx-4 mb-4;
     }
 
     @media (max-width: $breakOne) {
@@ -81,15 +82,15 @@
   }
 
   header {
-    color: $ivory;
-    background: $groovy-red;
+    @apply text-base-ivory;
+    @apply bg-groovy-red;
     @include clearfix;
   }
 
   .about {
     box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.25);
-    background: $groovy-yellow;
-    border-radius: 0.75em;
+    @apply bg-groovy-yellow;
+    @apply rounded-xl;
     font-family: $font-head;
   }
 
@@ -117,24 +118,22 @@
     grid-column: 2 / 3;
     grid-row: 1;
     @apply z-10;
-    margin-top: -9.3em;
+    @apply mt-[-9.2rem];
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
       grid-row: 3;
-      margin-top: initial;
+      @apply mt-0;
     }
 
     @media (max-width: $breakOne) {
       grid-column: 1 / 3;
       grid-row: 3;
-      margin-top: initial;
     }
 
     @media (max-width: $breakTwo) {
       grid-column: 1 / 3;
       grid-row: 3;
-      margin-top: initial;
     }
   }
 
@@ -158,6 +157,7 @@
   .about {
     grid-column: 2 / 3;
     grid-row: 2;
+    @apply mb-auto;
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;

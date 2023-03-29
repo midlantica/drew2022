@@ -200,7 +200,7 @@
         svg {
           @apply relative;
           @apply top-[-5px];
-          // @apply ease-out;
+          @apply ease-out;
 
           &:hover {
             stroke: $accent-red;
@@ -220,10 +220,10 @@
         @apply top-[5px];
         @apply text-center;
         @apply mt-[4px] mx-0 mb-0;
-        // @apply ease-out;
+        @apply ease-out;
 
         &:hover {
-          // @apply ease-out;
+          @apply ease-out;
           // @apply top-[-5px];
         }
       }
@@ -244,7 +244,7 @@
         svg rect,
         svg polyline {
           @apply stroke-white;
-          top: -5px !important;
+          @apply top-[-5px];
           @apply ease-out;
         }
       }
@@ -496,7 +496,7 @@
       @apply inline-block;
 
       &:hover {
-        // color: $ivory;
+        // @apply text-base-ivory;
         @apply text-bourbon-ivory;
         @apply no-underline;
       }
@@ -588,7 +588,7 @@
           @apply text-center;
 
           &:hover {
-            // color: $ivory;
+            // @apply text-base-ivory;
             @apply text-bourbon-ivory;
           }
         }
@@ -672,10 +672,10 @@
   .carouselArrow {
     color: hsla(0, 0%, 100%, 1);
     background: hsla(0, 0%, 0%, 0.3);
-    padding: 0.2rem 0.5rem 0.1rem 0.4rem;
+    padding: 0.15rem 0.5rem 0.1rem 0.4rem;
 
     &:hover {
       color: hsla(0, 0%, 100%, 1);
-    background: hsla(0, 0%, 0%, 0.5);
+      background: hsla(0, 0%, 0%, 0.5);
   }
 }</style>

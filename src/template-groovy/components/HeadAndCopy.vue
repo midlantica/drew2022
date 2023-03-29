@@ -21,18 +21,18 @@
   $breakThree: 530px;
 
   section {
-    margin: 3rem 2.5rem 0rem 1.75rem;
+    margin: 2rem 1.5rem 1.3rem;
 
     @media (max-width: $breakThou) {
       // margin-top: 2.4em;
     }
 
     @media (max-width: $breakOne) {
-      margin: 3rem 1.5rem 0rem;
+      // margin: 3rem 1.5rem 0rem;
     }
 
     @media (max-width: $breakTwo) {
-      margin: 3rem 1rem 0rem;
+      margin: 1.8rem 1rem 0rem;
     }
 
     @media (max-width: $breakThree) {
@@ -46,7 +46,6 @@
     @apply text-[1.5rem];
     @apply leading-[2.1rem];
     @apply font-medium;
-    letter-spacing: 0.00rem;
     @apply mb-2;
 
     @media (min-width: $breakThou) {

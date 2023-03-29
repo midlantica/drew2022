@@ -65,7 +65,7 @@
     p.email {
       font-family: $font;
       @apply text-[1.5em];
-      color: $ivory;
+      @apply text-base-ivory;
       @apply tracking-[0.03em];
       text-shadow: 1px 1px 2px black;
       @apply lowercase;
@@ -74,7 +74,7 @@
       @apply mt-[-0.4em];
 
       a {
-        color: $ivory;
+        @apply text-base-ivory;
         @apply tracking-wider;
         @apply text-[0.9em];
       }

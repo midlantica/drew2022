@@ -22,7 +22,7 @@
   @import '../assets/css/techy-main.scss';
 
   header {
-    color: $ivory;
+    @apply text-base-ivory;
     background: $groovy-red;
     background: $mango;
     @apply shadow-none;
@@ -30,7 +30,7 @@
   }
 
   footer {
-    color: $ivory;
+    @apply text-base-ivory;
     background: $mango;
     @apply shadow-none;
   }

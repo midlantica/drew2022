@@ -216,7 +216,7 @@
       @apply leading-6;
       @apply m-0;
       @apply font-light;
-      color: $ivory;
+      @apply text-base-ivory;
 
       // @media (max-width: $breakThou) {
       //   @apply text-[1.15rem];

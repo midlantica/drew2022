@@ -29,20 +29,20 @@
 
   header,
   footer {
-    color: $ivory;
+    @apply text-base-ivory;
     background: initial !important;
     @apply shadow-none;
   }
 
   .backer {
-    background: $ivory;
+    @apply bg-base-ivory;
   }
 
   .flexxy {
     @apply w-full;
     @apply flex;
-    gap: 0 2rem;
-    place-content: center;
+    @apply gap-y-0 gap-x-8;
+    @apply place-content-center;
     @apply justify-center;
     // @apply absolute;
     // z-index: 100;

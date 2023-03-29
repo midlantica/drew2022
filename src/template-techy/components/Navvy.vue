@@ -325,13 +325,13 @@
   nav .bar {
     @apply py-[.5vh] px-4;
     background: $blueTech;
-    color: $ivory;
+    @apply text-base-ivory;
     grid-column: 1 / 3;
     grid-row: 3 / 4;
 
     .contact {
       @apply font-normal;
-      color: $ivory;
+      @apply text-base-ivory;
       @apply flex;
       @apply flex-row;
       @apply flex-wrap;
@@ -362,7 +362,7 @@
         @apply font-medium;
         @apply tracking-[.09em];
         @apply tracking-[.09em];
-        color: $ivory;
+        @apply text-base-ivory;
         @apply text-[1.3em];
         @apply leading-10;
         margin-left: 0.5em;

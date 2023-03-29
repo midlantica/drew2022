@@ -34,11 +34,11 @@
   $outBlue: hsla(197, 88%, 66%, 0.3);
 
   a {
-    color: $ivory;
+    @apply text-base-ivory;
     @apply no-underline;
 
     &:link {
-      color: $ivory;
+      @apply text-base-ivory;
       @apply no-underline;
     }
 

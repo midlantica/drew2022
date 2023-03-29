@@ -1,5 +1,5 @@
 <template>
-  <div class="marT1 marL1H marRH">
+  <div class="wrapper">
     <div class="headBlock">
       <router-link :to="{ name: 'ExtrasBourbon' }" class="drewhead jelloHorizontal" />
       <h1>{{ store.copy.druHead }}</h1>
@@ -17,6 +17,27 @@
 <style lang="scss" scoped>
   @import "../assets/css/bourbon-main.scss";
 
+  .wrapper {
+    @apply w-full;
+    @apply pt-4 pl-5 pr-2;
+
+    @media (min-width: $breakThou) {
+      //
+    }
+
+    @media (max-width: $breakOne) {
+      @apply px-4;
+    }
+
+    @media (max-width: $breakTwo) {
+      @apply px-2;
+    }
+
+    @media (max-width: $breakThree) {
+      //
+    }
+  }
+
   .headBlock {
     @apply grid;
     grid-template-columns: 88px auto;
@@ -25,7 +46,7 @@
     @apply gap-x-1.5;
     @apply justify-items-start;
     @apply items-center;
-    @apply mt-2;
+    // @apply mt-2;
 
     a.drewhead {
       background-image: url(/img/drew_mug_red.png);
@@ -64,7 +85,8 @@
       }
 
       @media (max-width: $breakThree) {
-        @apply text-[1.15rem];
+        @apply text-[1.45rem];
+        @apply m-0;
       }
 
     }

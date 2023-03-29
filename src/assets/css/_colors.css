@@ -1,0 +1,35 @@
+/* // COLORS */
+
+/* // Generics */
+grey: '#333',
+ivory: '#fffdf4',
+white: 'white',
+black: 'black',
+
+/* // Bourbon */
+bourbon: '#52090a',
+blueDark: '#46646E',
+blueMid: '#5B7D96',
+blueLight: '#8FA9C2',
+accent: '#ECB469',
+orange: '#e34234',
+paleyellow: '#ffffbf99',
+accentRed: '#c02c19',
+
+/* // Groovy */
+groovyAqua: '#99f1ec',
+groovyYellow: '#ffdd4b',
+groovyOrange: '#ff9f00',
+groovyRed: '#ff1a22',
+groovyYellowPale: '#ffe985',
+
+/* // Corp */
+groovyAquaDk: '#80cbc7',
+groovyYellowDk: '#d3b83e',
+groovyOrangeDk: '#e78e00',
+groovyRedDk: '#d5161d',
+groovyYellowPaleDk: '#ffdd4b',
+
+/* // Techy */
+mango: '#ffc600',
+blueTech: '#423ba0',

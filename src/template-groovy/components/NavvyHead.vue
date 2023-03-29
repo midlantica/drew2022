@@ -5,22 +5,32 @@
         <router-link :to="{ name: 'ExtrasGroovy' }" class="drewhead jelloHorizontal" />
       </div>
 
-      <router-link to="/Groovy" class="drewHarperSVG">
-        <mastDrew class="svgArt mastDrew" />
-        <mastHarper class="svgArt mastHarper" />
-      </router-link>
+      <div class="flex flex-col gap-4 w-[41%] mt-[1.3rem]">
+        <router-link to="/Groovy" class="drewHarperSVG">
+          <div class="flex gap-4 flex-wrap">
+            <mastDrew class="svgArt mastDrew" />
+            <mastHarper class="svgArt mastHarper" />
+          </div>
+        </router-link>
 
-      <div class="jobDesc">
-        <h2>{{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}</h2>
-      </div>
+        <div class="jobDesc">
+          <h2>{{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}</h2>
+        </div>
 
-      <div class="contact">
-        <p class="email">
-          <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
-        </p>
-        <p class="resume">
-          <a href="/resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
-        </p>
+        <div class="contact">
+          <div class="flex flex-row flex-wrap gap-x-4 gap-y-8">
+            <div class="groovyOval">
+              <p class="email">
+                <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
+              </p>
+            </div>
+            <div class="groovyOval">
+              <p class="resume">
+                <a href="/resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -47,6 +57,7 @@
     grid-template-columns: 175px auto;
     grid-column-gap: 1em;
     margin-bottom: 1em;
+    position: relative;
 
     @media (max-width: $breakThou) {
       grid-template-columns: 175px auto auto;
@@ -220,12 +231,12 @@
         }
 
         @media (max-width: $breakThree) {
-          @apply mr-2;
+          // @apply mr-2;
         }
       }
 
       .mastHarper {
-        @apply ml-4;
+        // @apply ml-4;
 
         @media (max-width: $breakThou) {
           // @apply ml-4;
@@ -237,7 +248,7 @@
         }
 
         @media (max-width: $breakTwo) {
-          @apply ml-2;
+          // @apply ml-2;
         }
       }
     }
@@ -279,7 +290,7 @@
       @apply m-0;
       font-family: $font-subhead;
       @apply font-normal;
-      color: $ivory;
+      @apply text-base-ivory;
       @apply lowercase;
       @apply text-[1.40em];
       @apply leading-[.5em];
@@ -332,8 +343,9 @@
 
   nav .gridMast .contact {
     grid-column: 2 / 3;
-    @apply self-start;
+    // @apply self-start;
     @apply text-[1em];
+    // @apply mx-4;
 
     @media (max-width: $breakThou) {
       @apply text-start;
@@ -353,9 +365,9 @@
     }
 
     p {
-      @apply inline-block;
       font-family: $font-copy;
-      @apply text-[1.085em];
+      @apply inline-block;
+      @apply text-[1em];
       @apply tracking-normal;
       @apply normal-case;
       @apply leading-[0.7em];
@@ -371,16 +383,13 @@
       }
 
       a {
-        color: $ivory;
+        @apply text-base-ivory;
+        @apply text-base-ivory;
         @apply no-underline;
 
         &:link {
-          color: $ivory;
+          @apply text-base-ivory;
           @apply no-underline;
-        }
-
-        &:hover {
-          color: lighten($accent, 10) !important;
         }
       }
 
@@ -418,6 +427,53 @@
 
       @media (max-width: $breakThree) {
         @apply text-[3.6vw];
+      }
+    }
+
+    .groovyOval {
+      @apply w-fit;
+      @apply py-1 px-3;
+      @apply border border-groovy-orange border-solid;
+      @apply rounded-[20rem];
+      @apply text-[1rem];
+
+      &:hover {
+        @apply bg-groovy-redDk;
+        @apply text-white;
+        @apply cursor-pointer;
+      }
+
+      >p {
+        @apply text-white;
+
+        &:hover {
+          @apply text-white;
+        }
+
+        a {
+          @apply text-white;
+
+          &:hover {
+            @apply text-white;
+          }
+
+        }
+      }
+
+      @media (max-width: $breakThou) {
+        //
+      }
+
+      @media (max-width: $breakOne) {
+        //
+      }
+
+      @media (max-width: $breakTwo) {
+        //
+      }
+
+      @media (max-width: $breakThree) {
+        @apply mr-2;
       }
     }
   }
