@@ -58,9 +58,6 @@
 
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
-      // grid-gap: 0em;
-      // row-gap: 1em;
-      // @apply gap-y-6;
       @apply mt-0 mx-4 mb-4;
     }
 
@@ -118,7 +115,7 @@
     grid-column: 2 / 3;
     grid-row: 1;
     @apply z-10;
-    @apply mt-[-9.2rem];
+    @apply mt-[-9.8rem];
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
