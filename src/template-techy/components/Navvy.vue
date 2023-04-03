@@ -1,61 +1,61 @@
 <template>
   <nav>
-    <div class="mastMain">
-      <div class="masty">
-        <div class="DHmast">
-          <router-link :to="{ name: 'ExtrasTechy' }" class="drewHeadPic jelloHorizontal" />
-          <router-link to="/Techy" class="svgArt mastDrew">
+    <div class='mastMain'>
+
+      <div class='masty'>
+
+        <div class='DHmast'>
+          <router-link :to="{ name: 'ExtrasTechy' }" class='drewHeadPic jelloHorizontal' />
+          <router-link to='/Techy' class='svgArt mastDrew' >
             <mastDrew />
           </router-link>
-          <router-link :to="{ name: 'Techy' }" class="svgArt mastHarper">
+          <router-link :to="{ name: 'Techy' }" class='svgArt mastHarper'>
             <mastHarper />
           </router-link>
         </div>
 
-        <div class="jobDesc block">
+        <div class='jobDesc block'>
           <h2>{{ store.copy.uiuxDesigner }} +</h2>
-          <h2 class="marLH">
-            {{ store.copy.vizDesigner }}
-          </h2>
+          <h2 class='marLH'>{{ store.copy.vizDesigner }}</h2>
         </div>
       </div>
 
-      <div class="bar">
-        <div class="contact">
-          <p class="email">
-            <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
+      <div class='bar'>
+        <div class='contact'>
+          <p class='email'>
+            <a :href='`mailto:`+`${store.copy.druEmail}`'>{{ store.copy.druEmail }}</a>
           </p>
-          <p class="resume">
-            <a :href="resumeUrl" target="_blank">PDF Resume</a>
+          <p class='resume'>
+            <a href='resume/drew_harper_resume_portfolio.pdf' target="_blank">PDF Resume</a>
           </p>
         </div>
       </div>
+
     </div>
   </nav>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import mastDrew from './masthead/mastDrew.vue'
   import mastHarper from './masthead/mastHarper.vue'
 
   import { inject } from 'vue'
 
-  const store = inject('store')
-  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
+  const store: any = inject('store')
 </script>
 
 <style lang='scss' scoped>
   @import '../assets/css/techy-main.scss';
 
   nav {
-    @apply w-full;
-    @apply flex;
-    @apply flex-col;
-    @apply flex-nowrap;
-    @apply justify-center;
-    @apply items-center;
-    @apply content-center;
-    @apply grow;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-grow: 1;
 
     @media (max-width: $breakOne) {
       //
@@ -63,7 +63,7 @@
   }
 
   nav .mastMain {
-    @apply w-full;
+    width: 100%;
     background: $mango;
 
     @media (max-width: $breakOne) {
@@ -75,21 +75,21 @@
     }
 
     .masty {
-      @apply my-0 mx-auto;
-      @apply text-center;
+      margin: 0 auto;
+      text-align: center;
 
       .DHmast {
-        @apply grid;
+        display: grid;
         grid-template-columns: 2fr 4fr 7fr;
         grid-gap: 2em;
-        @apply items-center;
-        @apply my-0 mx-auto;
-        @apply pt-4;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 1em;
         //
 
         @media (max-width: $breakThou) {
           grid-template-columns: auto auto;
-          @apply justify-center;
+          justify-content: center;
           justify-items: center;
           grid-gap: .5em;
         }
@@ -106,52 +106,54 @@
           //
         }
 
-        @media only screen and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
-          @apply pt-4;
+        @media only screen and (max-device-width: 667px)
+        and (-webkit-device-pixel-ratio: 2)
+        {
+          padding-top: 1em;
         }
 
         a.drewHeadPic {
-          @apply w-[92px];
-          @apply h-[109px];
-          @apply pt-4 pr-4 pb-0 pl-4;
+          width: 92px !important;
+          height: 109px !important;
+          padding: 1em 1em 0em 1em;
           background-image: url(/img/drew_mug_dig.png);
-          @apply bg-no-repeat;
-          @apply bg-cover;
+          background-repeat: no-repeat;
+          background-size: cover;
           grid-column: 1 / 2;
           grid-row: 1 / 3;
-          @apply justify-self-end;
+          justify-self: end;
 
           @media (max-width: $breakThou) {
-            @apply w-[92px];
-            @apply h-[109px];
+            width: 92px !important;
+            height: 109px !important;
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            @apply mt-0 mr-2 mb-0 ml-0;
-            @apply justify-self-end;
+            margin: 0 .5em 0 0;
+            justify-self: right;
           }
 
           @media (max-width: $breakTwo) {
-            @apply w-[64px];
-            @apply h-[75px];
+            width: 64px !important;
+            height: 75px !important;
           }
 
           @media (max-width: $breakThree) {
-            @apply w-[46px];
-            @apply h-[55px];
-            @apply m-0;
+            width: 46px !important;
+            height: 55px !important;
+            margin: 0;
           }
 
           @media (max-width: $breakFour) {
             // width: 28px !important;
-            @apply h-[55px];
-            @apply m-0;
+            height: 55px !important;
+            margin: 0;
           }
 
           // @media (max-device-width: 667px)
           // and (-webkit-device-pixel-ratio: 2)
           // {
-          //   @apply mr-2;
-          //   @apply ml-0;
+          //   margin-right: 0.5em;
+          //   margin-left: 0em;
           //   width: 65px !important;
           //   height: 77px !important;
           //   margin: 0em;
@@ -166,37 +168,33 @@
         }
 
         a.svgArt {
-          @apply h-[5.9em];
+          height: 5.9em;
 
           @media (max-width: $breakThou) {
-            @apply h-[11.5vw];
+            height: 11.5vw;
           }
-
           @media (max-width: $breakOne) {
-            @apply h-[14vw];
+            height: 14vw;
           }
-
           @media (max-width: $breakTwo) {
-            @apply h-[14vw];
+            height: 14vw;
           }
-
           @media (max-width: $breakThree) {
-            @apply h-[14vw];
+            height: 14vw;
           }
         }
 
         a.mastDrew {
           grid-column: 2 / 3;
           grid-row: 1 / 3;
-          @apply w-[19em];
+          width: 19em;
 
           @media (max-width: $breakThou) {
-            grid-column: 2 / 3;
+            grid-column: 2 / 3 ;
             grid-row: 1 / 1;
-            @apply self-end;
-
-            @apply mb-[-1em];
-            @apply w-[40vw];
+            align-self: end;
+            margin-bottom: -1em;
+            width: 40vw;
           }
 
           @media (max-width: $breakOne) {
@@ -208,7 +206,7 @@
           }
 
           @media (max-width: $breakThree) {
-            @apply mb-[0em];
+            margin-bottom: 0em;
             width: 56vw;
           }
         }
@@ -217,12 +215,12 @@
           display: initial;
           grid-column: 3 / 4;
           grid-row: 1 / 3;
-          @apply w-[25.3em];
+          width: 25.3em;
 
           @media (max-width: $breakThou) {
             grid-column: 1 / 3;
             grid-row: 2 / 3;
-            @apply w-[50vw];
+            width: 50vw;
           }
 
           @media (max-width: $breakOne) {
@@ -230,12 +228,13 @@
           }
 
           @media (max-width: $breakTwo) {
-            @apply ml-0 mt-0;
+            margin-left: 0;
+            margin-top: 0;
           }
 
           @media (max-width: $breakThree) {
-            @apply w-[77vw];
-            @apply h-[20vw];
+            width: 77vw;
+            height: 20vw;
           }
         }
       }
@@ -243,17 +242,20 @@
   }
 
   nav .jobDesc {
-    @apply mt-[-1em] mr-0 mb-4 ml-[11.1em];
-    @apply text-left;
+    margin: -1em 0em 1em 11.1em;
+    // text-align: center;
+    // margin-top: -1em;
+    // @include clearfix;
+    text-align: left;
 
     @media (max-width: $breakThou) {
-      @apply my-4 mx-0;
-      @apply text-center;
+      margin: 1em 0em;
+      text-align: center;
     }
 
     @media (max-width: $breakOne) {
-      @apply my-0 mx-0 mb-4;
-      @apply text-center;
+      margin: 0rem 0rem 1rem;
+      text-align: center;
     }
 
     @media (max-width: $breakTwo) {
@@ -269,19 +271,18 @@
     }
 
     h2 {
-      @apply m-0;
+      margin: 0;
       font-family: $font-copy;
-      @apply font-normal;
-      @apply font-normal;
+      font-weight: 400;
       color: $blueTech;
-      @apply lowercase;
-      @apply text-[1.7em];
-      @apply leading-[1.1em];
-      @apply tracking-[.03em];
-      @apply inline;
+      text-transform: lowercase;
+      font-size: 1.7em;
+      line-height: 1.1em;
+      letter-spacing: .03em;
+      display: inline;
 
       &:nth-child(1) {
-        // @apply ml-4;
+        // margin-left: 1rem;
       }
 
       &:nth-child(2) {
@@ -289,90 +290,89 @@
       }
 
       @media (max-width: $breakThou) {
-        @apply inline;
-        @apply text-[3.3vw];
-        @apply mt-[-3px];
+        display: inline;
+        font-size: 3.3vw;
+        margin-top: -3px;
 
         &:nth-child(1) {
           //
         }
 
         &:nth-child(2) {
-          @apply ml-1;
+          margin-left: .25em !important;
         }
       }
 
       @media (max-width: $breakOne) {
-        @apply inline;
-        @apply text-[3.7vw];
-        @apply mt-[-3px];
+        display: inline;
+        font-size: 3.7vw;
+        margin-top: -3px;
 
         &:nth-child(1) {
           //
         }
 
         &:nth-child(2) {
-          @apply ml-1;
+          margin-left: .25em !important;
         }
       }
 
       @media (max-width: $breakTwo) {
-        @apply text-[5.8vw];
+        font-size: 5.8vw;
       }
     }
   }
 
   nav .bar {
-    @apply py-[.5vh] px-4;
+    padding: 0.5vh 1em;
     background: $blueTech;
-    @apply text-base-ivory;
+    color: $ivory;
     grid-column: 1 / 3;
     grid-row: 3 / 4;
 
     .contact {
-      @apply font-normal;
-      @apply text-base-ivory;
-      @apply flex;
-      @apply flex-row;
-      @apply flex-wrap;
-      @apply justify-center;
-      @apply items-center;
-      @apply content-center;
-      @apply grow;
-      @apply w-1/2;
+      font-weight: 400;
+      color: $ivory;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-grow: 1;
+      width: 50%;
 
       @media (max-width: 1024px) {
-        @apply w-full;
+        width: 100%;
       }
 
       @media (max-width: $breakOne) {
-        @apply w-full;
+        width: 100%
       }
 
       @media (max-width: $breakTwo) {
-        @apply w-full;
+        width: 100%
       }
 
       @media (max-width: $breakThree) {
-        @apply w-full;
+        width: 100%
       }
 
       p {
         font-family: $font-copy;
-        @apply font-medium;
-        @apply tracking-[.09em];
-        @apply tracking-[.09em];
-        @apply text-base-ivory;
-        @apply text-[1.3em];
-        @apply leading-10;
+        font-weight: 500;
+        letter-spacing: .09em;
+        color: $ivory;
+        font-size: 1.3em;
+        line-height: 2.5em;
         margin-left: 0.5em;
 
-        >a {
+        > a {
           color: transparentize($ivory, .1);
-          @apply no-underline;
+          text-decoration: none;
 
           &:hover {
-            @apply underline;
+            text-decoration: underline;
           }
         }
 
@@ -385,10 +385,9 @@
         }
 
         @media (max-width: $breakOne) {
-          @apply justify-center;
-          @apply text-[1.2em];
+          justify-content: center;
+          font-size: 1.2em !important;
           letter-spacing: .1em !important;
-          @apply tracking-[.1em];
 
           &:nth-child(1) {
             //
@@ -401,7 +400,6 @@
 
         @media (max-width: $breakTwo) {
           letter-spacing: 0.09em !important;
-          @apply tracking-[.1em];
 
           &:nth-child(1) {
             //
@@ -413,11 +411,11 @@
         }
 
         @media (max-width: $breakThree) {
-          @apply justify-center;
-          @apply text-[1.1em];
-          @apply tracking-[.07em];
-          @apply leading-8;
-          @apply text-center;
+          justify-content: center;
+          font-size: 1.1em !important;
+          letter-spacing: 0.07em !important;
+          line-height: 2em;
+          text-align: center;
 
           &:nth-child(1) {
             //
@@ -430,4 +428,7 @@
       }
     }
   }
+
+
+
 </style>

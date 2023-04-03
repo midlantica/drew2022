@@ -5,6 +5,7 @@ import ModernRoot from './template-modern/pages/ModernRoot.vue'
 import ModernProjects from './template-modern/pages/ModernProjects.vue'
 import ModernSkills from './template-modern/pages/ModernSkills.vue'
 import ModernAbout from './template-modern/pages/ModernAbout.vue'
+import ModernExtras from './template-modern/pages/ModernExtras.vue'
 
 import HomeBourbon from './template-bourbon/pages/HomeBourbon.vue'
 import ExtrasBourbon from './template-bourbon/pages/ExtrasBourbon.vue'

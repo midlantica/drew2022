@@ -1,136 +1,114 @@
 <template>
-  <div class="wrapper">
+  <div class="marT1 marL1H marRH">
     <div class="headBlock">
       <router-link :to="{ name: 'ExtrasBourbon' }" class="drewhead jelloHorizontal" />
       <h1>{{ store.copy.druHead }}</h1>
     </div>
-    <p v-html="store.copy.druCopy" />
+    <p v-html="store.copy.druCopy"></p>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
   import { inject } from 'vue'
 
-  const store = inject('store')
+  const store: any = inject('store')
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/bourbon-main.scss";
+@import "../assets/css/bourbon-main.scss";
 
-  .wrapper {
-    @apply w-full;
-    @apply pt-4 pl-5 pr-2;
+.headBlock {
+  display: grid;
+  grid-template-columns: 88px auto;
+  grid-template-rows: auto;
+  grid-column-gap: 6px;
+  justify-items: start;
+  align-items: center;
+  margin-top: .5rem;
+
+  a.drewhead {
+    margin-right: 1em;
+    background-image: url(/img/drew_mug_red.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 78px;
+    height: 94px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-start;
+  }
+
+  h1 {
+    display: inline-block;
+    font-family: $font-subhead;
+    color: $accent-red;
+    font-size: 1.7rem;
+    padding: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    max-width: 30ch;
 
     @media (min-width: $breakThou) {
-      //
+      max-width: 30ch;
     }
 
     @media (max-width: $breakOne) {
-      @apply px-4;
+      max-width: initial;
+      font-size: 1.65rem;
     }
 
     @media (max-width: $breakTwo) {
-      @apply px-2;
+      max-width: 30ch;
+      font-size: 1.5rem;
     }
 
     @media (max-width: $breakThree) {
-      //
+      font-size: 1.25rem;
     }
+
+  }
+}
+
+p.smallCaps {
+  font-variant: small-caps !important;
+  font-size: 185% !important;
+  // font-weight: 500;
+}
+
+p {
+  font-family: $font-copy;
+  font-size: 1.1rem !important;
+  line-height: 2.6rem;
+  color: $grey;
+  margin: 0.5rem 0.5rem 0rem !important;
+  letter-spacing: 0.03rem;
+
+  @media (max-width: $breakThou) {
+    columns: 2 20ch;
+    line-height: 2.25rem !important;
+    column-gap: 3rem;
+    column-rule: 1px solid transparentize($accent-red, .75);
+    text-justify: auto;
+    hyphens: auto;
   }
 
-  .headBlock {
-    @apply grid;
-    grid-template-columns: 88px auto;
-    grid-auto-rows: auto;
-    grid-template-rows: auto;
-    @apply gap-x-1.5;
-    @apply justify-items-start;
-    @apply items-center;
-    // @apply mt-2;
-
-    a.drewhead {
-      background-image: url(/img/drew_mug_red.png);
-      @apply bg-no-repeat;
-      @apply bg-cover;
-      @apply w-[78px];
-      @apply h-[94px];
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      @apply self-start;
-    }
-
-    h1 {
-      @apply inline-block;
-      font-family: $font-subhead;
-      color: $accent-red;
-      @apply text-[1.7rem];
-      @apply p-0;
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-      @apply self-center;
-      @apply max-w-[30ch];
-
-      @media (min-width: $breakThou) {
-        @apply max-w-[30ch];
-      }
-
-      @media (max-width: $breakOne) {
-        max-width: initial;
-        @apply text-[1.65rem];
-      }
-
-      @media (max-width: $breakTwo) {
-        @apply max-w-[30ch];
-        @apply text-[1.5rem];
-      }
-
-      @media (max-width: $breakThree) {
-        @apply text-[1.45rem];
-        @apply m-0;
-      }
-
-    }
+  @media (max-width: $breakOne) {
+    letter-spacing: 0.05rem;
+    // columns: 2 200px;
+    text-justify: auto;
+    hyphens: auto;
   }
 
-  p.smallCaps {
-    font-variant: small-caps !important;
-    // @apply all-small-caps;
-    @apply text-[185%];
-    // @apply font-medium;
+  @media (max-width: 670px) {
+    columns: initial;
+    text-justify: auto;
+    hyphens: auto;
   }
 
-  p {
-    font-family: $font-copy;
-    color: $grey;
-    @apply text-[1.1rem];
-    @apply leading-[2.4rem];
-    @apply mt-2 mx-2 mb-0;
-    @apply tracking-[0.03rem];
-
-    @media (max-width: $breakThou) {
-      columns: 2 20ch;
-      @apply leading-9;
-      @apply gap-x-12;
-      column-rule: 1px solid transparentize($accent-red, .75);
-      @apply text-justify;
-      hyphens: auto;
-    }
-
-    @media (max-width: $breakOne) {
-      @apply tracking-[0.05rem];
-      @apply text-justify;
-      hyphens: auto;
-    }
-
-    @media (max-width: 670px) {
-      columns: initial;
-      @apply text-justify;
-      hyphens: auto;
-    }
-
-    @media (max-width: $breakTwo) {
-      @apply text-justify;
-      hyphens: auto;
-    }
+  @media (max-width: $breakTwo) {
+    text-justify: auto;
+    hyphens: auto;
   }
+}
 </style>

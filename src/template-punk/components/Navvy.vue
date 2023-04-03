@@ -1,11 +1,8 @@
 <template>
   <nav>
-    <div class="greenBar">
-      &nbsp;
-    </div>
-    <p class="email">
-      <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
-    </p>
+
+    <div class="greenBar">&nbsp;</div>
+    <p class='email'><a :href='`mailto:` + `${store.copy.druEmail}`'>{{ store.copy.druEmail }}</a></p>
 
     <div class="mastMain">
       <router-link :to="{ name: 'Punk' }">
@@ -14,289 +11,319 @@
       <router-link :to="{ name: 'Punk' }">
         <mastHarper class="svgArt mastHarper" />
       </router-link>
-      <router-link :to="{ name: 'ExtrasPunk' }" class="DrewHead jelloHorizontal">
-        &nbsp;
-      </router-link>
+      <router-link :to="{ name: 'ExtrasPunk' }" class="DrewHead jelloHorizontal">&nbsp;</router-link>
     </div>
+
   </nav>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { inject } from 'vue'
   import mastDrew from './masthead/mastDrew.vue'
   import mastHarper from './masthead/mastHarper.vue'
 
-  const store = inject('store')
+  const store: any = inject('store')
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/punk-main.scss';
+@import '../assets/css/punk-main.scss';
 
-  $outRed: rgba(221, 9, 22, .3);
-  $outBlue: rgba(92, 201, 245, .3);
+$outRed: rgba(221, 9, 22, .3);
+$outBlue: rgba(92, 201, 245, .3);
 
-  nav {
-    @apply flex;
-    @apply flex-col;
-    @apply content-center;
-    padding: .5em 1em;
+nav {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  // align-items: center;
+  padding: .5em 1em;
+
+  @media (max-width: $breakOne) {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    // width: 50%;
+    // margin: 0 auto;
+  }
+
+  .greenBar {
+    display: block;
+    // width: 1024px;
+    width: 100%;
+    max-width: 1024px;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 5em;
+    align-self: center;
+    transform: translate(-50%, 0%);
+    //
+    filter: saturate(2.5);
+    background: rgba(0, 128, 0, 0.25);
+    // background: transparentize(green, .5);
+  }
+
+  p.email {
+    font-family: $font;
+    font-size: 1.5em;
+    color: $ivory;
+    letter-spacing: 0.03em;
+    text-shadow: 1px 1px 2px black;
+    text-transform: lowercase;
+    align-self: flex-end;
+    transform: rotate(-1deg);
+    margin-top: -0.4em;
+
+    a {
+      color: $ivory;
+      letter-spacing: 0.05em;
+      font-size: .9em;
+    }
 
     @media (max-width: $breakOne) {
-      @apply justify-center;
-      @apply content-center;
-      @apply items-center;
+      align-self: center;
+    }
+  }
+
+  // ###############################
+  // ###############################
+
+  .mastMain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: -1.5em;
+    z-index: 2;
+    width: 100%;
+    //
+
+    @media (max-width: $breakThou) {
+      //
     }
 
-    .greenBar {
-      @apply block;
-      @apply w-full;
-      @apply max-w-[1024px];
-      @apply z-0;
-      @apply absolute;
-      @apply top-0;
-      @apply left-1/2;
-      @apply h-[5em];
-      @apply self-center;
-      transform: translate(-50%, 0%);
-      filter: saturate(2.5);
-      background: rgba(0, 128, 0, 0.25);
+    @media (max-width: $breakOne) {
+      flex-wrap: wrap;
     }
 
-    p.email {
-      font-family: $font;
-      @apply text-[1.5em];
-      @apply text-base-ivory;
-      @apply tracking-[0.03em];
-      text-shadow: 1px 1px 2px black;
-      @apply lowercase;
-      @apply self-end;
-      transform: rotate(-1deg);
-      @apply mt-[-0.4em];
+    @media (max-width: $breakTwo) {
+      //
+    }
 
-      a {
-        @apply text-base-ivory;
-        @apply tracking-wider;
-        @apply text-[0.9em];
+    @media (max-width: $breakThree) {
+      //
+    }
+
+    a {
+      //
+
+      &:nth-child(1) {
+        width: 60vw;
+        // background: red;
+
+        @media (max-width: $breakThou) {
+          order: 1;
+        }
+
+        @media (max-width: $breakOne) {
+          order: 1;
+          width: 47vw;
+          margin-bottom: -1.5em;
+        }
+
+        @media (max-width: $breakTwo) {
+          order: 1;
+          width: 59vw;
+          // flex-grow: 0;
+        }
+
+        @media (max-width: $breakThree) {
+          width: 63vw;
+          order: 1;
+        }
       }
 
-      @media (max-width: $breakOne) {
-        @apply self-center;
+      &:nth-child(2) {
+        width: 80vw;
+        // background: green;
+
+        @media (max-width: $breakThou) {
+          order: 1;
+        }
+
+        @media (max-width: $breakOne) {
+          order: 3;
+          width: 68vw;
+        }
+
+        @media (max-width: $breakTwo) {
+          width: 88vw;
+          order: 3;
+        }
+
+        @media (max-width: $breakThree) {
+          order: 3;
+          width: 92vw;
+        }
       }
+
+      &:nth-child(3) {
+        // width: 130px;
+        // height: 150px;
+        // background: blue;
+
+        @media (max-width: $breakThou) {
+          order: 3;
+        }
+
+        @media (max-width: $breakOne) {
+          order: 2;
+        }
+
+        @media (max-width: $breakTwo) {
+          order: 2;
+        }
+
+        @media (max-width: $breakThree) {
+          order: 2;
+        }
+      }
+
     }
 
-    // ###############################
-    // ###############################
-
-    .mastMain {
-      @apply flex;
-      @apply flex-row;
-      @apply flex-nowrap;
-      @apply justify-center;
-      @apply items-center;
-      @apply content-center;
-      @apply mt-[-1.5em];
-      @apply z-[2];
-      @apply w-full;
+    a.svg.svgArt.mastDrew {
+      // display: block;
+      width: 200px;
+      width: 170px;
+      // height: 12vw;
+      // transform: rotate(1deg);
+      // margin-top: -1.5em;
+      // order: 1;
 
       @media (max-width: $breakThou) {
-        //
+        // width: 34vw;
+        // height: 17vh;
+        // margin-top: 1em;
+        // order: 1;
       }
 
       @media (max-width: $breakOne) {
-        @apply flex-wrap;
+        // width: 130px;
+        // height: 140px;
+        // margin-top: 1em;
+        // order: 1;
       }
 
       @media (max-width: $breakTwo) {
-        //
+        // width: 55vw;
+        // height: 17vh;
+        // margin-top: 1em;
+        // order: 1;
       }
 
       @media (max-width: $breakThree) {
-        //
-      }
-
-      a {
-        //
-
-        &:nth-child(1) {
-          @apply w-[60vw];
-
-          @media (max-width: $breakThou) {
-            @apply order-1;
-          }
-
-          @media (max-width: $breakOne) {
-            @apply order-1;
-            @apply w-[47vw];
-            // @apply mb-6;
-            @apply mt-6;
-          }
-
-          @media (max-width: $breakTwo) {
-            @apply order-1;
-            @apply w-[59vw];
-          }
-
-          @media (max-width: $breakThree) {
-            @apply w-[63vw];
-            @apply order-1;
-          }
-        }
-
-        &:nth-child(2) {
-          @apply w-[80vw];
-
-          @media (max-width: $breakThou) {
-            @apply order-1;
-          }
-
-          @media (max-width: $breakOne) {
-            @apply w-[68vw];
-            @apply order-3;
-          }
-
-          @media (max-width: $breakTwo) {
-            @apply w-[88vw];
-            @apply order-3;
-          }
-
-          @media (max-width: $breakThree) {
-            @apply w-[92vw];
-            @apply order-3;
-          }
-        }
-
-        &:nth-child(3) {
-          //
-
-          @media (max-width: $breakThou) {
-            @apply order-3;
-          }
-
-          @media (max-width: $breakOne) {
-            @apply order-2;
-          }
-
-          @media (max-width: $breakTwo) {
-            @apply order-2;
-          }
-
-          @media (max-width: $breakThree) {
-            @apply order-2;
-          }
-        }
-
-      }
-
-      a.svg.svgArt.mastDrew {
-        @apply w-[170px];
-        // @apply block;
-        // height: 12vw;
-        // transform: rotate(1deg);
-        // @apply mt-[-1.5em];
-        // @apply order-1;
-
-        @media (max-width: $breakThou) {
-          // width: 34vw;
-          // height: 17vh;
-          // margin-top: 1em;
-          // @apply order-1;
-        }
-
-        @media (max-width: $breakOne) {
-          // width: 130px;
-          // height: 140px;
-          // margin-top: 1em;
-          // @apply order-1;
-        }
-
-        @media (max-width: $breakTwo) {
-          // width: 55vw;
-          // height: 17vh;
-          // margin-top: 1em;
-          // @apply order-1;
-        }
-
-        @media (max-width: $breakThree) {
-          // width: 55vw;
-          // height: 17vh;
-          // margin-top: 1em;
-          // @apply order-1;
-        }
-      }
-
-      a.svg.svgArt.mastHarper {
-        // @apply block;
-        // width: 480px;
-        // width: 32.4vw;
-        // height: 20vh;
-        // transform: rotate(1deg);
-        // margin-top: -0.6em;
-        // margin-left: 1em;
-        // @apply order-2;
-
-        @media (max-width: $breakThou) {
-          // @apply order-2;
-          // width: 46vw;
-          // height: 20vh;
-          // @apply mt-[-1.5em];
-          // @apply grow;
-        }
-
-        @media (max-width: $breakOne) {
-          // @apply order-3;
-          // width: 68vw;
-          // height: 20vh;
-          // @apply mt-[-1.5em];
-          // @apply grow;
-        }
-
-        @media (max-width: $breakTwo) {
-          // @apply order-3;
-          // width: 64vw;
-          // height: 20vh;
-          // @apply mt-[-1.5em];
-          // @apply grow;
-        }
-
-        @media (max-width: $breakThree) {
-          // @apply order-3;
-          // width: 64vw;
-          // height: 20vh;
-          // @apply mt-[-1.5em];
-          // @apply grow;
-        }
-
-      }
-
-      a.DrewHead {
-        background-image: url(/img/drew_mug_punk.png);
-        filter: hue-rotate(360deg);
-        //
-        @apply bg-no-repeat;
-        @apply bg-contain;
-        @apply w-[18vw];
-        @apply h-[120px];
-        @apply no-underline;
-
-        @media (max-width: $breakOne) {
-          @apply w-[122px];
-          @apply h-[122px];
-          @apply mt-4;
-        }
-
-        @media (max-width: $breakTwo) {
-          @apply w-[122px];
-          @apply h-[135px];
-          @apply mt-2;
-        }
-
-        @media (max-width: $breakThree) {
-          @apply w-[82px];
-          @apply h-[93px];
-        }
-
+        // width: 55vw;
+        // height: 17vh;
+        // margin-top: 1em;
+        // order: 1;
       }
     }
 
+    a.svg.svgArt.mastHarper {
+      // display: block;
+      // width: 480px;
+      // width: 32.4vw;
+      // height: 20vh;
+      // transform: rotate(1deg);
+      // margin-top: -0.6em;
+      // margin-left: 1em;
+      // order: 2;
+
+      @media (max-width: $breakThou) {
+        // order: 2;
+        // width: 46vw;
+        // height: 20vh;
+        // margin-top: -1.5em;
+        // flex-grow: 1;
+      }
+
+      @media (max-width: $breakOne) {
+        // order: 3;
+        // width: 68vw;
+        // height: 20vh;
+        // margin-top: -1.5em;
+        // flex-grow: 1;
+      }
+
+      @media (max-width: $breakTwo) {
+        // order: 3;
+        // width: 64vw;
+        // height: 20vh;
+        // margin-top: -1.5em;
+        // flex-grow: 1;
+      }
+
+      @media (max-width: $breakThree) {
+        // order: 3;
+        // width: 64vw;
+        // height: 20vh;
+        // margin-top: -1.5em;
+        // flex-grow: 1;
+      }
+
+    }
+
+    a.DrewHead {
+      // display: block;
+      // min-width: 114px;
+      // height: 132px;
+      background-image: url(/img/drew_mug_punk.png);
+      filter: hue-rotate(360deg);
+      //
+      background-repeat: no-repeat;
+      background-size: contain;
+      // width: 240px;
+      width: 18vw;
+      height: 120px;
+      text-decoration: none;
+      // display: block;
+      // position: relative;
+      // top: 2.8em;
+      // left: 3.5em;
+      // margin-left: .5em;
+      // margin-top: 0.5em;
+      // order: 3;
+      // flex-grow: 1;
+      // background: green !important;
+
+      @media (max-width: $breakOne) {
+        width: 122px;
+        height: 122px;
+        margin-top: 1em;
+        // background: red !important;
+        // order: 2;
+      }
+
+      @media (max-width: $breakTwo) {
+        width: 122px;
+        height: 135px;
+        margin-top: .5em;
+        // background: blue !important;
+      }
+
+      @media (max-width: $breakThree) {
+        width: 82px;
+        height: 93px;
+        // background: purple !important;
+        // order: 2;
+      }
+
+
+    }
   }
+
+}
 </style>

@@ -1,56 +1,57 @@
 <template>
   <div>
     <div class="flexbox">
+
       <div class="jobTitles">
         <p>{{ store.copy.uiuxDesigner }}</p>
         <p>{{ store.copy.vizDesigner }}</p>
       </div>
 
       <div class="resumeLinks">
-        <a class="resume rOne" :href="resumeUrl" target="_BLANK">PDF
-          Resume</a>
+        <a class='resume rOne' href="resume/drew_harper_resume_portfolio.pdf" target="_BLANK">PDF Resume</a>
       </div>
+
     </div>
 
     <div class="copyGrid">
       <div class="mainBody">
         <h1>{{ store.copy.druHead }}</h1>
-        <p v-html="store.copy.druCopy" />
+        <p v-html="store.copy.druCopy"></p>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
   // import { defineComponent } from 'vue'
   import { inject } from 'vue'
-  const store = inject('store')
-  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
+
+  const store: any = inject('store')
 </script>
 
 <style lang="scss" scoped>
   @import "../assets/css/punk-main.scss";
 
   .flexbox {
-    @apply flex;
-    @apply flex-row;
-    @apply justify-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     .jobTitles {
-      @apply flex-row;
+      flex-direction: row;
       flex: 0 1 auto;
-      @apply self-start;
+      align-self: flex-start;
 
       p {
         color: $black;
         background: white;
-        @apply text-[0.9em];
+        font-size: .9em;
         font-family: Poppins !important;
-        @apply font-medium;
-        @apply not-italic;
-        @apply tracking-[.02em];
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: .02em;
         transform: rotate(-1.25deg);
-        @apply lowercase;
+        text-transform: lowercase;
         padding: 0.3em 0.5em;
 
         @media (max-width: $breakTwo) {
@@ -63,58 +64,58 @@
 
         &:nth-of-type(1) {
           transform: rotate(-.5deg);
-          @apply inline-block;
+          display: inline-block;
         }
 
         &:nth-of-type(2) {
           transform: rotate(2deg);
-          @apply inline-block;
-          @apply ml-2;
+          display: inline-block;
+          margin-left: .5rem;
         }
 
       }
     }
 
     .resumeLinks {
-      @apply self-end;
-      @apply flex-row;
+      align-self: flex-end;
+      flex-direction: row;
 
       .resume {
         color: $black;
         background: white;
-        @apply text-[0.9em];
+        font-size: .9em;
         font-family: Poppins !important;
-        @apply font-medium;
-        @apply not-italic;
-        @apply tracking-[.02em];
-        @apply lowercase;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: .02em;
+        text-transform: lowercase;
         padding: 0.3em 0.5em;
-        @apply inline-block;
-        @apply ml-1;
+        display: inline-block;
+        margin-left: .25rem;
 
         &.rOne {
           transform: rotate(-2deg) !important;
           background: transparentize(#ff4bf5, .5);
-          @apply text-white;
+          color: white;
         }
 
         &.rTwo {
           transform: rotate(6deg) !important;
-          @apply no-underline;
+          text-decoration: none;
 
           &:hover {
             color: #ff4bf5 !important;
-            @apply underline;
+            text-decoration: underline;
           }
         }
 
         &.rThree {
           transform: rotate(3deg) !important;
-          @apply no-underline;
+          text-decoration: none;
 
           &:hover {
             color: #ff4bf5 !important;
-            @apply underline;
+            text-decoration: underline;
           }
         }
 
@@ -129,16 +130,16 @@
   }
 
   .copyGrid {
-    @apply flex;
-    @apply flex-col;
+    display: flex;
+    flex-direction: column;
     flex: 0 1 auto;
     // margin-top: 1em;
-    @apply relative;
+    position: relative;
     left: 0;
-    @apply top-0;
+    top: 0;
 
     @media (max-width: $breakOne) {
-      @apply mb-[0em];
+      margin-bottom: 0em;
     }
   }
 
@@ -146,15 +147,15 @@
     transform: rotate(-1deg);
 
     h1 {
-      @apply text-[1.15rem];
+      font-size: 1.25rem;
       background: hsla(0, 100%, 50%, 0.85);
-      @apply text-white;
-      @apply font-medium;
+      color: white;
+      font-weight: 500;
       padding: 0 0em 0.1em 0.2rem;
       transform: rotate(1deg);
-      @apply z-10;
-      @apply inline-block;
-      @apply leading-[1.7rem];
+      z-index: 10;
+      display: inline-block;
+      line-height: 1.7rem;
       // transform: rotate(0deg);
 
       &:nth-of-type(1) {
@@ -163,24 +164,24 @@
     }
 
     p.smallCaps {
-      @apply text-[90%];
+      font-size: 90% !important;
       font-variant: small-caps !important;
       color: red !important;
     }
 
     p {
       font-family: Poppins !important;
-      @apply font-normal;
+      font-weight: 400;
       font-style: italic;
-      @apply text-[1em];
+      font-size: 1em;
       color: $grey;
-      @apply leading-9;
+      line-height: 2.25rem;
       letter-spacing: 0.045em;
-      @apply relative;
+      position: relative;
       top: 0em;
       background: #FBC83F;
       margin: 1em 1em 0em;
-      @apply inline;
+      display: inline;
       padding: 0.4em 0.1em;
       /////////
       // HIGHLIGHTING EFFECT
@@ -198,4 +199,5 @@
     }
 
   }
+
 </style>

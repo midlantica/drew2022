@@ -1,499 +1,473 @@
 <template>
   <div class="skillsGrid">
-    <div v-for="(item, index) in skills" :key="index">
-      <component
-        :is="item[0]" class="icon {{item[1]}} { active: hover }" @mouseleave="hover = false"
-        @click="showModal(item)"
-      />
-    </div>
-
-    <Teleport to="#modal">
-      <transition name="modal-fade">
-        <div class="modalBg" v-if="isModalOpen">
-          <div class="modal" ref="modal">
-            <div class="closeBtn" @click="closeModal">
-              <xOut />
-            </div>
-            <div class="modalInner">
-              <div class="icon">
-                <component
-                  :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }"
-                  @mouseleave="hover = false"
-                />
-              </div>
-              <div class="content">
-                <h4>{{ modelItem[2] }}</h4>
-                <p>{{ modelItem[3] }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </transition>
-    </Teleport>
+    <Popper v-for="item in poppers" trigger="hover">
+      <component :is="item[0]" class="icon {{item[1]}} { active: hover }" @mouseover="hover = true"
+        @mouseleave="hover = false" />
+      <template #content class="popper">
+        {{ item[2] }}
+      </template>
+    </Popper>
   </div>
 </template>
 
-<script setup>
-  import { ref, markRaw, defineAsyncComponent } from 'vue'
-  import { onClickOutside } from '@vueuse/core'
+<script setup lang="ts">
+  import { ref, defineAsyncComponent, shallowRef } from "vue"
+  import Popper from "vue3-popper"
 
-  import xOut from './Icons/iconXout.vue'
-
-  const iconUiux = markRaw(defineAsyncComponent(() => import('./Icons/iconUiux.vue')))
-  const iconHtml5 = markRaw(defineAsyncComponent(() => import('./Icons/iconHtml5.vue')))
-  const iconCss3 = markRaw(defineAsyncComponent(() => import('./Icons/iconCss3.vue')))
-  const iconJs = markRaw(defineAsyncComponent(() => import('./Icons/iconJs.vue')))
-  const iconSketch = markRaw(defineAsyncComponent(() => import('./Icons/iconSketch.vue')))
-  const iconSass = markRaw(defineAsyncComponent(() => import('./Icons/iconSass.vue')))
-  const iconVue = markRaw(defineAsyncComponent(() => import('./Icons/iconVue.vue')))
-  const iconSvg = markRaw(defineAsyncComponent(() => import('./Icons/iconSvg.vue')))
-  const iconTailwind = markRaw(defineAsyncComponent(() => import('./Icons/iconTailwind.vue')))
-  const iconFigma = markRaw(defineAsyncComponent(() => import('./Icons/iconFigma.vue')))
-  const iconNuxt = markRaw(defineAsyncComponent(() => import('./Icons/iconNuxt.vue')))
-  const iconChelsea = markRaw(defineAsyncComponent(() => import('./Icons/iconChelsea.vue')))
-
-  const modal = ref(null)
+  const iconUiux = defineAsyncComponent((): Promise<any> => import('./Icons/iconUiux.vue'))
+  const iconHtml5 = defineAsyncComponent((): Promise<any> => import('./Icons/iconHtml5.vue'))
+  const iconCss3 = defineAsyncComponent((): Promise<any> => import('./Icons/iconCss3.vue'))
+  const iconJs = defineAsyncComponent((): Promise<any> => import('./Icons/iconJs.vue'))
+  const iconSketch = defineAsyncComponent((): Promise<any> => import('./Icons/iconSketch.vue'))
+  const iconSass = defineAsyncComponent((): Promise<any> => import('./Icons/iconSass.vue'))
+  const iconVue = defineAsyncComponent((): Promise<any> => import('./Icons/iconVue.vue'))
+  const iconSvg = defineAsyncComponent((): Promise<any> => import('./Icons/iconSvg.vue'))
+  const iconVSCode = defineAsyncComponent((): Promise<any> => import('./Icons/iconVscode.vue'))
+  const iconFigma = defineAsyncComponent((): Promise<any> => import('./Icons/iconFigma.vue'))
+  const iconNuxt = defineAsyncComponent((): Promise<any> => import('./Icons/iconNuxt.vue'))
+  const iconChelsea = defineAsyncComponent((): Promise<any> => import('./Icons/iconChelsea.vue'))
 
   const hover = ref(false)
 
-  const modelItem = ref([])
-
-  function showModal (item) {
-    modelItem.value = item
-    isModalOpen.value = true
-  }
-
-  function closeModal () {
-    isModalOpen.value = false
-  }
-
-  const isModalOpen = ref(false)
-
-  onClickOutside(modal, () => (isModalOpen.value = false))
-
-  const skills = markRaw([
+  const poppers = shallowRef([
     [
       iconUiux,
       'uiux',
-      'UI/UX Design',
       'UX Design is my first love. Humility before the User. Crack the flow!'
-    ],
-    [
-      iconFigma,
-      'figma',
-      'Figma',
-      'Figma is the king of UX prototyping. It ain\'t Illustrator but collaboration ftw.'
     ],
     [
       iconHtml5,
       'html5',
-      'Html 5',
-      'HTML5: the bones of the Internet. As few divs and spans as possible if you please.'
+      `HTML5: the bones of the Internet. As few divs and spans as possible if you please.`
     ],
     [
       iconCss3,
       'css3',
-      'CSS 3',
-      'CSS3: Engineers just love CSS haha! Let me do that for you 🙂 I enjoy its declarative cascading infuriating novelty.'
+      `CSS3: Engineers just love CSS haha! Let me do that for you 🙂 I enjoy its declarative cascading infuriating novelty.`
     ],
     [
       iconJs,
       'js',
-      'JavaScript',
-      'JavaScript: I design, do all my HTML & CSS, I\'m still mastering JS. Continuous learning, Love me some Vue 💚, like this site'
-    ],
-    [
-      iconTailwind,
-      'tailwind',
-      'Tailwind CSS',
-      'Tailwind takes the naming pain out of CSS and it\'s brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park'
+      `JavaScript: I design, do all my HTML & CSS, I'm still mastering JS. Continuous learning, Love me some Vue 💚, like this site`
     ],
     [
       iconSass,
       'sass',
-      'SASS',
-      'SASS has made CSS so much more fun and nesty to use. CSS\'s new --vars make it more robust, but there\'s a long way to go.'
+      `SASS has made CSS so much more fun to use. CSS's new --vars make CSS more robust, but there's a long way to go.`
     ],
     [
       iconVue,
       'vue',
-      'Vue',
-      'Vue.js is my favorite JS framework, a great balance of Angular\'s ease and React\'s abilities.'
+      `Vue.js is my favorite JS framework, a great balance of Angular's ease and React's abilities.`
     ],
     [
       iconNuxt,
       'nuxt',
-      'Nuxt',
-      'The Nuxt framework for Vue: SSR, routes by dir, SEO; it\'s jam-stacked with Dev happiness. Digging Gridsome.js too.'
+      `The Nuxt framework for Vue: SSR, routes by dir, SEO; it's jam-stacked with Dev happiness. Digging Gridsome.js too.`
+    ],
+    [
+      iconVSCode,
+      'vsCode',
+      `VS Code: Used to be into Sublime Text but I'm all VS Code these days. MS better late than never.`
     ],
     [
       iconSketch,
       'sketch',
-      'Sketch',
-      'Sketch used to be the king of UX prototyping, now it\'s old school.'
+      `Sketch used to be the king of UX prototyping, now there are many alternatives.`
+    ],
+    [
+      iconFigma,
+      'figma',
+      `Figma is the new king of UX prototyping. It ain't Illustrator but UX rarely requires such sophistication.`
     ],
     [
       iconSvg,
       'svg',
-      'SVG',
-      'SVG: Vector is best because it scales and rasters don\'t, and it\'s editable, you can even put CSS in a SVG file.'
+      `SVG: Vector is best because it scales and rasters don't, and it's editable, but it still cannot replace a photograph.`
     ],
     [
       iconChelsea,
       'chelsea',
-      'Chelsea FC',
-      'I love Chelsea FC! 💙  I enjoy competition. Love Rugby and Cricket, I was a demon fast bowler! And Football, Go Titans!'
-    ]
+      `Blue is the color! Chelsea is the name! We're all together... and We're the only team in London with the European Cup! x2! 💙 `
+    ],
   ])
 
 </script>
 
 <style lang="scss" scoped>
-  @import "../template-modern/assets/css/modern-main.scss";
+@import "../template-modern/assets/css/modern-main.scss";
 
-  .modalBg {
-    @apply fixed;
-    @apply w-full;
-    height: 100%;
-    @apply top-0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: hsla(0, 0%, 0%, 0.6);
-    @apply flex;
-    @apply justify-center;
-    @apply items-center;
-    z-index: 100000;
-    @apply m-auto;
-    // transition: 20s ease-in;
-    // transform: translate(0px, 0px) rotate(0deg) !important;
-    animation: fade .25s;
+:deep(.popper) {
+  color: white !important;
+  // width: 30ch;
+  font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 500;
+  margin: auto !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.7rem;
+  line-height: 1.8;
+  border-radius: 0.5em;
+  // text-transform: uppercase;
+  max-width: 26ch;
+  background: linear-gradient(180deg, darken($ruby, 0), darken($ruby, 7)) !important;
+  z-index: 200000;
+  top: -1.25rem !important;
+  margin: 0 2rem !important;
+  box-shadow: 0px 1px 8px -2px hsla(0, 0%, 0%, 1);
+  left: -30px !important;
+  max-height: fit-content !important;
+  min-height: fit-content !important;
+}
 
-    .modal {
-      @apply relative;
-      margin-bottom: auto;
-      margin-top: 260px;
-      // max-width: 300px;
-      width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));
-      // min-@apply w-[80%];
-      // margin: auto 20%;
-      // margin-bottom: 4rem;
-      background: white;
-      background: linear-gradient(180deg,
-          hsl(0, 0%, 100%) 0%,
-          hsl(186, 43%, 92%) 100%);
-      // background: linear-gradient(180deg, white 0%, white 75%, rgba(230, 251, 255, 1) 100%);
+:deep(.popper #arrow::before) {
+  // background: red !important;
+}
 
-      // padding: 1rem 1rem 1rem 0rem;
-      border-radius: 20px;
-      box-shadow: 0px 6px 10px 0px hsl(0deg 0% 0% / 30%);
+.popper {
+  width: auto;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  z-index: 200000;
+  max-height: fit-content !important;
+}
 
-      .closeBtn {
-        @apply absolute;
-        top: -10px;
-        right: -10px;
-        background-color: transparent;
-        color: hsla(0, 0%, 0%, 50%);
-        border: none;
-        @apply cursor-pointer;
-        background: #ffffff;
-        border-radius: 20px;
-        width: 40px;
-        height: 40px;
-        @apply flex;
-        @apply items-center;
-        @apply justify-center;
-        @apply cursor-pointer;
+.popper .inline-block {
+  background: linear-gradient(180deg,
+      darken($ruby, 0) const darken($ruby, 7)) !important;
+}
 
-      }
+.popper .popper__arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  margin: 5px;
+}
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        color: hsla(0, 0%, 0%, 0.85);
-        margin-top: .25rem;
-        @apply text-center;
-      }
+.popper[x-placement^="top"] {
+  margin-bottom: 5px;
+}
 
-      h4 {
-        @apply text-[1.2rem];
-        @apply tracking-normal;
-      }
+.popper[x-placement^="top"] .popper__arrow {
+  border-width: 5px 5px 0 5px;
+  border-color: #fafafa transparent transparent transparent;
+  bottom: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-      p {
-        @apply text-[1rem];
-        line-height: 1.8;
-      }
+.popper[x-placement^="bottom"] {
+  margin-top: 5px;
+}
 
-      .modalInner {
-        // @apply w-full;
-        @apply relative;
-        @apply flex;
-        @apply flex-wrap;
-        margin: 1rem 2rem 1.5rem;
-        @apply justify-center;
-        @apply items-center;
+.popper[x-placement^="bottom"] .popper__arrow {
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #fafafa transparent;
+  top: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-        .icon {
-          // @apply inline-block;
-          // margin-left: -1rem;
-          // flex-shrink: 1;
-          @apply self-center;
+.popper[x-placement^="right"] {
+  margin-left: 5px;
+}
 
-          svg {
-            // @apply block;
-            width: 180px !important;
-            margin-right: -1.4rem !important;
-            margin-left: -2rem !important;
-            margin-bottom: -.5rem !important;
-          }
-        }
+.popper[x-placement^="right"] .popper__arrow {
+  border-width: 5px 5px 5px 0;
+  border-color: transparent #fafafa transparent transparent;
+  left: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
 
-        .content {
-          @apply inline;
-          flex-shrink: 1;
-        }
+.popper[x-placement^="left"] {
+  margin-right: 5px;
+}
 
-      }
+.popper[x-placement^="left"] .popper__arrow {
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #fafafa;
+  right: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
 
-    }
+.popper p {
+  font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+  font-size: 0.7em;
+  line-height: 1.75em;
+  font-weight: 600;
+  // color: white;
+  // background: #d71d5b;
+  // background: linear-gradient(180deg,
+  //     darken($ruby, 0),
+  //     darken($ruby, 7)
+  //   );
+  padding: 0.5rem 1.15rem;
+  border-radius: 0.5rem;
+  border: none;
+  letter-spacing: 0.05em;
+  // box-shadow: 0 2px 6px 0px hsla(0, 0%, 0%, 0.5);
+  box-shadow: hsla(0, 0%, 23%, 1) 0 0 6px 0;
+  // text-shadow: 0px 0px 2px 4px black !important;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  width: 100%;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: stretch;
+  align-content: space-between;
+  gap: 0.5rem auto;
+  position: relative;
+
+  @media (max-width: $breakThou) {
+    grid-row: 2;
   }
 
-  .skillsGrid {
-    @apply grid;
-    grid-column: 1 / 2;
-    grid-row: 2 / 4;
+  @media (max-width: $breakOne) {
+    grid-row: 2;
+  }
+
+  @media (max-width: $breakTwo) {
+    grid-row: 2;
+  }
+
+  @media (min-width: 1026px) {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    @apply w-full;
-    @apply justify-between;
-    justify-items: center;
-    align-items: stretch;
-    align-content: space-between;
-    gap: 0.5rem auto;
-    @apply relative;
+  }
 
-    @media (max-width: $breakThou) {
-      grid-row: 2;
-    }
+  @media (min-width: 563px) and (max-width: 1025px) {
+    grid-template-columns: repeat(6, minmax(88px, 1fr));
+  }
 
-    @media (max-width: $breakOne) {
-      grid-row: 2;
-    }
+  @media (min-width: 471px) and (max-width: 562px) {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
 
-    @media (max-width: $breakTwo) {
-      grid-row: 2;
-    }
+  @media (max-width: 470px) {
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  }
 
-    @media (min-width: 1026px) {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
+  svg {
+    width: 88px;
 
-    @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(88px, 1fr));
-    }
-
-    @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    }
-
-    @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
-    }
-
-    svg {
-      width: 88px;
-
-      &:hover {
-        // background: red !important;
-        animation: shimmy 0.25s !important;
-        // animation-duration: .25s;
-      }
-    }
-
-    svg g {
-      @apply cursor-pointer;
+    &:hover {
+      // background: red !important;
+      animation: shimmy 0.25s !important;
+      // animation-duration: .25s;
     }
   }
 
-  body.modern .skillsGrid {
-    @apply w-[70%];
-    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    @apply justify-center;
-    margin: 1rem auto;
+  svg g {
+    cursor: pointer;
+  }
+}
 
-    @media (min-width: 770px) {
-      @apply w-3/5;
-      // grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+body.modern .skillsGrid {
+  width: 70%;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  justify-content: center;
+  margin: 1rem auto;
+
+  @media (min-width: 770px) {
+    width: 60%;
+    // grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 80%;
+  }
+
+  svg {
+    width: 100px;
+    margin: 0rem auto 0.75rem;
+
+    &:hover {
+      // background: hsla(0, 100%, 25%, 0.25);
+      // fill: red;
     }
 
-    @media (max-width: 700px) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      @apply w-[80%];
+    g {
+      box-shadow: 0 0 12px black;
+      // stroke: $accent !important;
     }
+  }
+}
 
-    svg {
-      @apply w-[100px];
-      margin: 0rem auto 0.75rem;
+body.bourbon .skillsGrid {
+  //
 
-      &:hover {
-        // background: hsla(0, 100%, 25%, 0.25);
-        // fill: red;
-      }
+  @media (min-width: 1026px) {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 
-      g {
-        box-shadow: 0 0 12px black;
-        // stroke: $accent !important;
-      }
+  @media (min-width: 563px) and (max-width: 1025px) {
+    grid-template-columns: repeat(6, minmax(88px, 1fr));
+  }
+
+  @media (min-width: 471px) and (max-width: 562px) {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+
+  @media (max-width: 470px) {
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  }
+
+  svg {
+    width: 88px;
+  }
+
+  :deep(.popper) {
+    // background: #932213 !important;
+    background: linear-gradient(180deg,
+        darken(#932213, 0),
+        darken(#932213, 7)) !important;
+  }
+}
+
+body.techy .skillsGrid {
+
+  //
+  @media (min-width: 1026px) {
+    grid-template-columns: repeat(12, minmax(84px, 1fr));
+  }
+
+  @media (min-width: 563px) and (max-width: 1025px) {
+    grid-template-columns: repeat(6, minmax(84px, 1fr));
+  }
+
+  @media (min-width: 471px) and (max-width: 562px) {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+
+  @media (max-width: 470px) {
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  }
+
+  svg {
+    width: 88px;
+  }
+
+  :deep(.popper) {
+    // background: #932213 !important;
+    background: linear-gradient(180deg,
+        darken(#423ba0, 0),
+        darken(#423ba0, 7)) !important;
+  }
+}
+
+body.groovy .skillsGrid {
+  transition: 0.25s ease-in;
+  margin: 0 -1em 0 0em;
+
+  @media (min-width: 1026px) {
+    grid-template-columns: repeat(12, minmax(84px, 1fr));
+  }
+
+  @media (min-width: 563px) and (max-width: 1025px) {
+    grid-template-columns: repeat(6, minmax(84px, 1fr));
+  }
+
+  @media (min-width: 471px) and (max-width: 562px) {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+
+  @media (max-width: 470px) {
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  }
+
+  svg {
+    width: 88px;
+  }
+
+  :deep(.popper) {
+    // background: #932213 !important;
+    background: linear-gradient(180deg,
+        darken(#ff1a22, 0),
+        darken(#ff1a22, 7)) !important;
+  }
+}
+
+body.corp .skillsGrid {
+  //
+
+  @media (min-width: 1026px) {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  @media (min-width: 563px) and (max-width: 1025px) {
+    grid-template-columns: repeat(6, minmax(88px, 1fr));
+  }
+
+  @media (min-width: 471px) and (max-width: 562px) {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+
+  @media (max-width: 470px) {
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  }
+
+  svg {
+    width: 88px;
+
+    &:hover {
+      // background: red !important;
+      animation: shimmy 0.25s !important;
+      // animation-duration: .25s;
     }
   }
 
-  body.bourbon .skillsGrid {
-    //
+  :deep(.popper) {
+    // background: #932213 !important;
+    background: linear-gradient(180deg,
+        darken(#01487f, 0),
+        darken(#01345c, 7)) !important;
+  }
+}
 
-    @media (min-width: 1026px) {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
+body.punk .skillsGrid {
+  margin: 0.5em auto 0em;
+  transition: 0.25s ease-in;
+  transform: rotate(-0.5deg);
+  background: transparentize(rgba(0, 140, 0, 0.829), 0.5) !important;
 
-    @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(88px, 1fr));
-    }
-
-    @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    }
-
-    @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
-    }
-
-    svg {
-      width: 88px;
-    }
-
+  @media (min-width: 1026px) {
+    grid-template-columns: repeat(12, minmax(84px, 1fr));
   }
 
-  body.techy .skillsGrid {
-
-    //
-    @media (min-width: 1026px) {
-      grid-template-columns: repeat(12, minmax(84px, 1fr));
-    }
-
-    @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(84px, 1fr));
-    }
-
-    @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    }
-
-    @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
-    }
-
-    svg {
-      width: 88px;
-    }
-
+  @media (min-width: 563px) and (max-width: 1025px) {
+    grid-template-columns: repeat(6, minmax(88px, 1fr));
   }
 
-  body.groovy .skillsGrid {
-    @apply transition duration-[.25s] ease-in;
-    margin: 0 -1em 0 0em;
-
-    @media (min-width: 1026px) {
-      grid-template-columns: repeat(12, minmax(84px, 1fr));
-    }
-
-    @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(84px, 1fr));
-    }
-
-    @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    }
-
-    @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
-    }
-
-    svg {
-      width: 88px;
-    }
-
+  @media (min-width: 471px) and (max-width: 562px) {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   }
 
-  body.corp .skillsGrid {
-    //
-
-    @media (min-width: 1026px) {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-
-    @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(88px, 1fr));
-    }
-
-    @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    }
-
-    @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
-    }
-
-    svg {
-      width: 88px;
-
-      &:hover {
-        // background: red !important;
-        animation: shimmy 0.25s !important;
-        // animation-duration: .25s;
-      }
-    }
-
+  @media (max-width: 470px) {
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
   }
 
-  body.punk .skillsGrid {
-    margin: 0.5em auto 0em;
-    @apply transition duration-[.25s] ease-in;
-    // transform: rotate(-0.5deg);
-    background: transparentize(rgba(0, 140, 0, 0.829), 0.5) !important;
-
-    @media (min-width: 1026px) {
-      grid-template-columns: repeat(12, minmax(84px, 1fr));
-    }
-
-    @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(88px, 1fr));
-    }
-
-    @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    }
-
-    @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
-    }
-
-    svg {
-      width: 88px;
-    }
-
+  svg {
+    width: 88px;
   }
 
-  .modal-fade-enter-active,
-  .modal-fade-leave-active {
-    transition: all .5s ease;
-    // transform: scale(1.1);
+  :deep(.popper) {
+    // background: #932213 !important;
+    background: linear-gradient(180deg,
+        darken(#b100a7, 0),
+        darken(#b100a7, 7)) !important;
+    border: 2px dashed white !important;
   }
-
-  .modal-fade-enter-from,
-  .modal-fade-leave-to {
-    @apply opacity-0;
-  }
+}
 </style>

@@ -4,22 +4,22 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { ref } from 'vue'
-  const tooltipText = ref('tooltipText')
+  let tooltipText = ref('tooltipText')
 </script>
 
 <style lang="scss" scoped>
   .tooltip {
-    @apply bg-[#d71d5b];
+    background: #d71d5b;
     font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
     box-shadow: 0 2px 20px 0px black;
-    @apply py-20 px-6;
-    @apply w-[30ch];
-    @apply rounded-2xl;
+    padding: .5rem 1.5rem;
+    width: 30ch;
+    border-radius: 1rem;
     //
-    @apply fixed;
-    @apply top-[-3rem];
+    position: fixed;
+    top: -3rem;
 
     @media (max-width: $breakThou) {
       // margin: 0rem 0 .5rem;
@@ -30,23 +30,22 @@
     }
 
     @media (max-width: $breakFour) {
-      // @apply flex-col;
+      // flex-direction: column;
     }
 
     p {
-      // @apply block;
-      @apply text-[0.9em];
-      @apply leading-[1.4em];
-      @apply tracking-wider;
-      @apply text-white;
-      @apply font-medium;
+      // display: block;
+      font-size: .9em;
+      line-height: 1.4em;
+      letter-spacing: 0.05em;
+      color: white;
+      font-weight: 500;
       //
-      @apply content-center;
-      @apply items-center;
-      @apply justify-center;
-      @apply self-center;
-      @apply text-left;
-      @apply align-left;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      text-align: left;
 
     }
   }
@@ -54,37 +53,35 @@
   // Other templates
   body.corp .tooltip {
     @include box-shadow(0px, 0px, 3px, -1px, hsla(0, 14%, 22%, 0.5));
-    @apply rounded-sm;
+    border-radius: 2px;
     font-family: 'Bodoni Moda', Times, serif !important;
   }
 
   body.punk .tooltip {
-
     //
     p {
-     @apply my-1 mx-auto;
+      margin: .25rem auto;
     }
   }
 
   body.corp .tooltip {
-
     //
     p {
       font-family: 'Bodoni Moda', Times, serif !important;
-      @apply text-[1rem];
+      font-size: 1rem;
       letter-spacing: .001rem;
-      @apply leading-[1.4rem];
-      @apply m-0;
-      @apply font-medium;
+      line-height: 1.4rem;
+      margin: 0;
+      font-weight: 500;
 
       @media (max-width: $breakThou) {
-        @apply text-[1.15rem];
+        font-size: 1.15rem;
         line-height: 1.75rem;
       }
 
       @media (max-width: $breakTwo) {
-        @apply text-[1rem];
-        @apply leading-6;
+        font-size: 1rem;
+        line-height: 1.5rem;
       }
 
     }
@@ -92,27 +89,28 @@
 
   body.modern .tooltip {
     width: 45%;
-    @apply m-auto;
+    margin: auto;
     padding: 1rem 1.5rem;
 
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-      @apply text-[.85rem];
+      font-size: .85rem;
       letter-spacing: .000rem;
-      @apply leading-[1.4rem];
-      @apply m-0;
-      @apply font-light;
+      line-height: 1.4rem;
+      margin: 0;
+      font-weight: 300;
 
       // @media (max-width: $breakThou) {
-      //   @apply text-[1.15rem];
+      //   font-size: 1.15rem;
       //   line-height: 1.75rem;
       // }
 
       // @media (max-width: $breakTwo) {
-      //   @apply text-[1rem];
-      //   @apply leading-6;
+      //   font-size: 1rem;
+      //   line-height: 1.5rem;
       // }
 
     }
   }
+
 </style>

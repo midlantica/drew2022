@@ -1,13 +1,8 @@
 // See vue.config for auto import
 
-// @import 'tailwind.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // SETTINGS
 // @import '~breakpoint-sass/stylesheets/breakpoint';
-@import '../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss';
+@import "../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
 // @import 'vendor/html5Boilerplate';
 @import '_colors';
 @import '_breakpoints';
@@ -15,9 +10,8 @@
 @import '_drewShake';
 @import 'transitions';
 // @import 'tooltip';
-// @import 'quotes';
+@import 'quotes';
 @import 'tryout';
-// @import 'modal';
 
 * {
   box-sizing: border-box;

@@ -1,6 +1,7 @@
 <template>
   <transition name="fade" appear>
     <div>
+
       <transition name="topDown" appear>
         <header>
           <NavvyHead />
@@ -9,6 +10,7 @@
 
       <transition name="bounce2" appear>
         <main class="mainGrid">
+
           <transition name="bounce3" appear>
             <div class="copyArea">
               <HeadAndCopy />
@@ -28,12 +30,14 @@
           <transition name="bounce8" appear>
             <Skills />
           </transition>
+
         </main>
       </transition>
 
       <transition name="bounce10" appear>
         <Footer />
       </transition>
+
     </div>
   </transition>
 </template>
@@ -48,147 +52,150 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/groovy-main.scss";
+@import "../assets/css/groovy-main.scss";
 
-  .mainGrid {
-    @apply grid;
-    grid-template-columns: 7fr 6fr;
-    @apply gap-y-4;
-    @apply mt-0 mx-4 mb-2;
+.mainGrid {
+  display: grid;
+  grid-template-columns: 7fr 6fr;
+  grid-row-gap: 1em;
+  margin: 0em 1em 0.5em;
 
-    @media (max-width: $breakThou) {
-      grid-template-columns: 1fr;
-      @apply mt-0 mx-4 mb-4;
-    }
-
-    @media (max-width: $breakOne) {
-      //
-    }
-
-    @media (max-width: $breakTwo) {
-      //
-    }
-
-    @media (max-width: $breakThree) {
-      //
-    }
-
-    @media (max-width: $breakFour) {
-      //
-    }
+  @media (max-width: $breakThou) {
+    grid-template-columns: 1fr;
+    grid-gap: 0em;
+    grid-row-gap: 1em;
+    margin: 0em 1em 1em;
   }
 
-  header {
-    @apply text-base-ivory;
-    @apply bg-groovy-red;
-    @include clearfix;
+  @media (max-width: $breakOne) {
+    //
   }
 
-  .about {
-    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.25);
-    @apply bg-groovy-yellow;
-    @apply rounded-xl;
-    font-family: $font-head;
+  @media (max-width: $breakTwo) {
+    //
   }
 
-  .copyArea {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-
-    @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 1;
-    }
-
-    @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 1;
-    }
-
-    @media (max-width: $breakTwo) {
-      grid-column: 1 / 3;
-      grid-row: 1;
-    }
+  @media (max-width: $breakThree) {
+    //
   }
 
-  .slides {
-    grid-column: 2 / 3;
+  @media (max-width: $breakFour) {
+    //
+  }
+}
+
+header {
+  color: $ivory;
+  background: $groovy-red;
+  @include clearfix;
+}
+
+.about {
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.25);
+  background: $groovy-yellow;
+  border-radius: 0.75em;
+  font-family: $font-head;
+}
+
+.copyArea {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+
+  @media (max-width: $breakThou) {
+    grid-column: 1 / 3;
     grid-row: 1;
-    @apply z-10;
-    @apply mt-[-9.8rem];
-
-    @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 3;
-      @apply mt-0;
-    }
-
-    @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 3;
-    }
-
-    @media (max-width: $breakTwo) {
-      grid-column: 1 / 3;
-      grid-row: 3;
-    }
   }
 
-  .skillsGrid {
-    grid-column: 1 / -1;
+  @media (max-width: $breakOne) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  @media (max-width: $breakTwo) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+}
+
+.slides {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  z-index: 10;
+  margin-top: -9.3em;
+
+  @media (max-width: $breakThou) {
+    grid-column: 1 / 3;
     grid-row: 3;
-
-    @media (max-width: $breakThou) {
-      grid-row: 2;
-    }
-
-    @media (max-width: $breakOne) {
-      grid-row: 2;
-    }
-
-    @media (max-width: $breakTwo) {
-      grid-row: 2;
-    }
+    margin-top: initial;
   }
 
-  .about {
-    grid-column: 2 / 3;
+  @media (max-width: $breakOne) {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    margin-top: initial;
+  }
+
+  @media (max-width: $breakTwo) {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    margin-top: initial;
+  }
+}
+
+.skillsGrid {
+  grid-column: 1 / -1;
+  grid-row: 3;
+
+  @media (max-width: $breakThou) {
     grid-row: 2;
-    @apply mb-auto;
-
-    @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 4;
-    }
-
-    @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 4;
-    }
-
-    @media (max-width: $breakTwo) {
-      grid-column: 1 / 3;
-      grid-row: 4;
-    }
   }
 
-  .quoteBlock {
-    grid-column: 2 / 3;
-    grid-row: 3;
-
-    @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 5;
-    }
-
-    @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 5;
-    }
-
-    @media (max-width: $breakTwo) {
-      grid-column: 1 / 3;
-      grid-row: 5;
-    }
+  @media (max-width: $breakOne) {
+    grid-row: 2;
   }
+
+  @media (max-width: $breakTwo) {
+    grid-row: 2;
+  }
+}
+
+.about {
+  grid-column: 2 / 3;
+  grid-row: 2;
+
+  @media (max-width: $breakThou) {
+    grid-column: 1 / 3;
+    grid-row: 4;
+  }
+
+  @media (max-width: $breakOne) {
+    grid-column: 1 / 3;
+    grid-row: 4;
+  }
+
+  @media (max-width: $breakTwo) {
+    grid-column: 1 / 3;
+    grid-row: 4;
+  }
+}
+
+.quoteBlock {
+  grid-column: 2 / 3;
+  grid-row: 3;
+
+  @media (max-width: $breakThou) {
+    grid-column: 1 / 3;
+    grid-row: 5;
+  }
+
+  @media (max-width: $breakOne) {
+    grid-column: 1 / 3;
+    grid-row: 5;
+  }
+
+  @media (max-width: $breakTwo) {
+    grid-column: 1 / 3;
+    grid-row: 5;
+  }
+}
 </style>

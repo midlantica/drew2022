@@ -13,11 +13,11 @@
 
   svg {
     // width: 88px;
-    // @apply h-[60px];
+    // height: 60px;
   }
 
   svg:hover {
-    @apply cursor-pointer;
+    cursor: pointer;
   }
 
   #svgVue {
@@ -38,7 +38,8 @@
     }
   }
 
-  .groupVue {}
+  .groupVue {
+  }
 
   .lightGreen {
     fill: #40b883;

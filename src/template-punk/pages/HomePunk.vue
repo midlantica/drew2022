@@ -1,6 +1,7 @@
 <template>
   <transition name="fade" appear>
     <div>
+
       <transition name="topDown" appear>
         <header>
           <Navvy />
@@ -8,15 +9,16 @@
       </transition>
 
       <transition name="bounce" appear>
-        <main class="mainGrid">
+        <main class='mainGrid'>
+
           <transition name="bounce2" appear>
-            <div class="copyArea">
+            <div class='copyArea'>
               <HeadAndCopy />
             </div>
           </transition>
 
           <transition name="bounce4" appear>
-            <div class="slides">
+            <div class='slides'>
               <Carousel />
             </div>
           </transition>
@@ -28,13 +30,15 @@
           <transition name="bounce7" appear>
             <Skills />
           </transition>
+
         </main>
       </transition>
+
     </div>
   </transition>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import Navvy from '../components/Navvy.vue'
   import HeadAndCopy from '../components/HeadAndCopy.vue'
   // import Quote from '../components/Quote.vue'
@@ -48,20 +52,19 @@
 
   header,
   footer {
-    @apply text-base-ivory;
+    color: $ivory;
     background: initial !important;
-    @apply shadow-none;
+    box-shadow: none;
     margin-bottom: -1rem;
   }
 
   .mainGrid {
-    @apply grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.5rem 1rem;
     background: transparent;
     padding: 0em 1em;
-    @apply shadow-none;
-
+    box-shadow: none;
     //
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
@@ -80,9 +83,9 @@
   .copyArea {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    @apply flex;
-    @apply flex-col;
-    @apply self-end;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
@@ -142,8 +145,8 @@
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
       margin-top: 0.25em;
-      @apply mb-2;
-      @apply gap-y-0;
+      margin-bottom: 0.5em;
+      grid-row-gap: 0em;
     }
   }
 

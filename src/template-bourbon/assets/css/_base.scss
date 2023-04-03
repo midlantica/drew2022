@@ -11,7 +11,7 @@ $font-copy        :"AmericanTypewriterStd-Med", Helvetica, Times, serif !importa
 html, html a {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  @apply antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
@@ -20,5 +20,5 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: $base-font-size;
   background: #333;
-  @apply m-0;
+  margin: 0;
 }
