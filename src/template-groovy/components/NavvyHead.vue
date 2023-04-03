@@ -1,26 +1,26 @@
 <template>
   <div class="relative my-[-25px] flex flex-row items-center">
-    <div class="relative w-[210px] h-[210px] sm:left-[-2.75rem] min-[375px]:left-[-5.7rem]">
+    <div class="relative w-[210px] h-[210px] sm:left-[-2.75rem] min-[375px]:left-[-5.7rem] ease-out duration-300">
       <div class="groovyCircle float-left clear-left block">
-        <router-link :to="{ name: 'ExtrasGroovy' }" class="jelloHorizontal relative bg-[url('/img/drew_mug_sepia.png')] w-[98px] h-[119px] left-[3.5rem] top-[2.8rem] bg-no-repeat bg-cover block" />
+        <router-link :to="{ name: 'ExtrasGroovy' }" class="jelloHorizontal relative bg-[url('/img/drew_mug_sepia.png')] w-[98px] h-[119px] min-[375px]:left-[4.5rem] min-[375px]:top-[2.8rem] sm:left-[3.5rem] sm:top-[2.8rem] bg-no-repeat bg-cover block ease-out duration-300" />
       </div>
     </div>
 
-    <router-link to="/Groovy" class="drewHarperSVG float-left relative min-[375px]:left-[-1.95rem] sm:left-[-1.65rem] ">
+    <router-link to="/Groovy" class="float-left relative min-[375px]:left-[-1.95rem] sm:left-[-1.65rem]">
       <div class="w-auto flex flex-row gap-4 flex-wrap m-auto justify-center">
-        <mastDrew class="min-[375px]:h-[1.8rem] sm:h-[3.2rem]" />
-        <mastHarper class="min-[375px]:h-[1.8rem] sm:h-[3.2rem]" />
+        <mastDrew class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
+        <mastHarper class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
       </div>
-      <h2 class="min-[375px]:text-[.8rem] sm:text-[1.5rem] text-center font-normal text-base-ivory lowercase leading-normal tracking-[.025em] my-1 w-full mx-auto">
+      <h2 class="min-[375px]:text-[.8rem] sm:text-[1.5rem] text-center font-normal text-base-ivory lowercase leading-normal tracking-[.025em] my-1 w-full mx-auto ease-out duration-300">
         {{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}
       </h2>
 
       <div class="shrink">
         <div class="w-full flex flex-row lg:flex-row flex-wrap gap-x-4 gap-y-2 items-center justify-center mx-auto">
-          <div class="groovyOvalBtn">
+          <div class="groovyOvalBtn ease-out duration-300">
             <a class="email" :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
           </div>
-          <div class="groovyOvalBtn">
+          <div class="groovyOvalBtn ease-out duration-300">
             <a class="resume" href="/resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
           </div>
         </div>
