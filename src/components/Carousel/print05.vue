@@ -1,37 +1,41 @@
 <template>
-  <vueper-slides fade :infinite="false" :bullets="false" :slide-ratio="1 / 1.3" autoplay fractions progress>
+  <vueper-slides
+    fade :infinite="false" :bullets="false"
+    :slide-ratio="1 / 1.3" autoplay fractions
+    progress
+  >
     <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
-      <template v-slot:loader>
-        <i class="icon icon-loader spinning"></i>
+      <template #loader>
+        <i class="icon icon-loader spinning" />
         <span>Loading...</span>
       </template>
     </vueper-slide>
   </vueper-slides>
 </template>
 
-<script setup lang="ts">
-  import { shallowRef } from "vue"
-  import { VueperSlides, VueperSlide } from "vueperslides"
-  import "vueperslides/dist/vueperslides.css"
+<script setup>
+  import { shallowRef } from 'vue'
+  import { VueperSlides, VueperSlide } from 'vueperslides'
+  import 'vueperslides/dist/vueperslides.css'
 
   // let title = ref('')
   // const imgPath = ('/public/img/portfolio/01_uiux/')
-  let slides = shallowRef([
+  const slides = shallowRef([
     {
-      image: "/img/portfolio/05_print/jpay/jpay_newsletters.png",
+      image: '/img/portfolio/05_print/jpay/jpay_newsletters.png'
     },
     {
-      image: "/img/portfolio/05_print/mlotto_brochure.jpg",
+      image: '/img/portfolio/05_print/mlotto_brochure.jpg'
     },
     {
-      image: "/img/portfolio/05_print/celebrity_cruise_lines_brochure.jpg",
+      image: '/img/portfolio/05_print/celebrity_cruise_lines_brochure.jpg'
     },
     {
-      image: "/img/portfolio/05_print/starclippers_email_panel.png",
-    },
+      image: '/img/portfolio/05_print/starclippers_email_panel.png'
+    }
   ])
 </script>
 
 <style lang="scss">
-@import "../../assets/css/carousel.scss";
+  @import "../../assets/css/carousel.scss";
 </style>

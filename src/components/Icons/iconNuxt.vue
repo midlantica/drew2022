@@ -3,9 +3,7 @@
     <title>Nuxt JS</title>
     <g class="groupNuxt">
       <path
-        class="darkGreen"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        class="darkGreen" fill-rule="evenodd" clip-rule="evenodd"
         d="M41.833 13.9399C40.2963 11.3264 36.4543 11.3263 34.9175 13.9399L18.169 42.4236C16.6322 45.0371 18.5532 48.3041 21.6267 48.3041H34.7016C33.3882 47.1688 32.9019 45.2048 33.8957 43.5198L46.5803 22.0135L41.833 13.9399Z"
       />
       <path
@@ -21,11 +19,11 @@
 
   svg {
     // width: 88px;
-    // height: 60px;
+    // @apply h-[60px];
   }
 
   svg:hover {
-    cursor: pointer;
+    @apply cursor-pointer;
   }
 
   .corp #svgNuxt {
@@ -37,6 +35,7 @@
   }
 
   #svgNuxt {
+
     //
     &:hover .groupNuxt {
       animation: iconFlipXAni 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2;

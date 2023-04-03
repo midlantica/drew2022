@@ -4,80 +4,79 @@
       <router-link :to="{ name: 'ModernExtras' }" class="drewhead jelloHorizontal" />
       <h1>{{ store.copy.druHead }}</h1>
     </div>
-    <p v-html="store.copy.druCopy"></p>
+    <p v-html="store.copy.druCopy" />
   </div>
 </template>
 
-<script lang="ts" setup>
-  // import { defineComponent } from 'vue'
+<script setup>
+// import { defineComponent } from 'vue'
   import { inject } from 'vue'
 
-  const store: any = inject('store')
+  const store = inject('store')
 </script>
 
 <style lang="scss" scoped>
   @import "../assets/css/modern-main.scss";
 
   .headBlock {
-    display: grid;
+    @apply grid;
     grid-template-columns: 88px auto;
     grid-template-rows: auto;
-    grid-column-gap: 6px;
-    justify-items: start;
-    align-items: center;
+    @apply gap-x-1.5;
+    @apply justify-items-start;
+    @apply items-center;
     margin-bottom: 1rem;
     gap: .5rem;
 
     a.drewhead {
-      margin-right: 1em;
       background-image: url(/img/drew_mug_red.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 78px;
-      height: 94px;
+      @apply bg-no-repeat;
+      @apply bg-cover;
+      @apply w-[78px];
+      @apply h-[94px];
       grid-column: 1 / 2;
       grid-row: 1 / 2;
-      align-self: flex-start;
+      @apply self-start;
     }
 
     h1 {
-      display: inline-block;
+      @apply inline-block;
       font-family: $font-subhead;
-      letter-spacing: -0.01ch;
-      padding: 0;
+      @apply tracking-[-0.01ch];
+      @apply p-0;
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      align-self: center;
-      margin-top: 2.2rem;
+      @apply self-center;
+      @apply mt-[2.2rem];
       // >>>>>>
-      width: 20ch;
-      color: #da2561 !important;
-      font-weight: 400;
+      @apply w-[20ch];
+      @apply text-[#da2561];
+      @apply font-normal;
       font-size: clamp(.8rem, 1.1rem, 1.25rem) !important;
       text-shadow: 1px 1px 4px black;
       // >>>>>>
-      color: white !important;
-      font-weight: 500;
-      font-size: 1.1rem !important;
-      width: 20ch;
+      @apply text-white;
+      @apply font-medium;
+      @apply text-[1.1rem];
+      @apply w-[20ch];
 
       @media (max-width: 535px) {
         width: initial;
-        margin-top: .75rem;
+        @apply mt-[.75rem];
       }
 
       @media (max-width: $breakOne) {
         max-width: initial;
-        // font-size: 1.65rem;
+        // @apply text-[1.65rem];
       }
 
       @media (max-width: $breakTwo) {
-        max-width: 30ch;
-        // font-size: 1.5rem;
+        @apply max-w-[30ch];
+        // @apply text-[1.5rem];
       }
 
       @media (max-width: $breakThree) {
-        // font-size: 1.25rem;
+        // @apply text-[1.25rem];
       }
 
     }
@@ -85,45 +84,45 @@
 
   p.smallCaps {
     font-variant: small-caps !important;
-    font-size: 185% !important;
-    font-weight: 300;
+    @apply text-[185%];
+    @apply font-light;
   }
 
   p {
     font-family: $font-copy;
     font-size: clamp(0.8rem, 0.95rem, 1.35rem);
     line-height: clamp(1.5rem, 2.2rem, 2.6rem);
-    font-weight: 300;
+    @apply font-light;
     margin: 0rem !important;
     // margin: 0.0rem auto 1rem !important;
-    letter-spacing: 0.03rem;
+    @apply tracking-[0.03rem];
 
     // @media (max-width: 300000rem) {
-    //   // font-size: 1.3rem;
+    //   // @apply text-[1.3rem];
     //   // line-height: 2.5rem !important;
     //   columns: 2 20ch;
-    //   column-gap: 3rem;
+    //   @apply gap-x-12;
     //   column-rule: 1px solid transparentize($accent-red, .75);
-    //   text-justify: auto;
+    //   @apply text-justify;
     //   hyphens: none;
     // }
 
     // @media (max-width: $breakOne) {
-    //   letter-spacing: 0.05rem;
-    //   // font-size: 1rem !important;
+    //   @apply tracking-[0.05rem];
+    //   // @apply text-[1rem];
     //   // columns: 2 200px;
-    //   text-justify: auto;
+    //   @apply text-justify;
     //   hyphens: auto;
     // }
 
     // @media (max-width: 670px) {
     //   columns: initial;
-    //   text-justify: auto;
+    //   @apply text-justify;
     //   hyphens: auto;
     // }
 
     // @media (max-width: $breakTwo) {
-    //   text-justify: auto;
+    //   @apply text-justify;
     //   hyphens: auto;
     // }
   }

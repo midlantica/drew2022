@@ -2,12 +2,12 @@
 
 h1, h2, h3, h4, h5 {
   color: $accent-red;
-  line-height: 1.1em;
-  font-weight: normal;
-  text-align: left;
+  @apply leading-[1.1em];
+  @apply font-normal;
+  @apply text-left;
   margin: .75em 0 .25em 0;
-  padding: 0;
-  letter-spacing: .025em;
+  @apply p-0;
+  @apply tracking-[.025em];
   text-transform: uppercase;
   font-family: $font-subhead !important;
 }
@@ -15,18 +15,18 @@ h1, h2, h3, h4, h5 {
 h2 {
   font-size: 2.25em;
   color: $accent;
-  text-transform: capitalize;
+  @apply capitalize;
   font-family: $font-subhead !important;
 }
 
 h3 {
-  font-size: 1.7em;
+  @apply text-[1.7em];
   color: $blue-dark;
 }
 
 h4 {
-  font-size: 1.5em;
-  letter-spacing: .04em;
+  @apply text-[1.5em];
+  @apply tracking-[.04em];
 }
 
 h5 {
@@ -38,20 +38,20 @@ p {
   font-size: $base-font-size;
   // color: $blue-mid;
   line-height: $base-line-height;
-  font-weight: normal;
-  text-align: left;
-  margin: 0;
-  padding: 0;
+  @apply font-normal;
+  @apply text-left;
+  @apply m-0;
+  @apply p-0;
 }
 
 ul {
   list-style-type: square;
-  padding: 0;
+  @apply p-0;
   margin: 0 -1em 1em 0em;
   font-family: $font-copy !important;
   color: $blue-mid;
   line-height: $base-line-height;
-  text-align: left;
+  @apply text-left;
 
   li {
     list-style-position: outside;
@@ -60,5 +60,3 @@ ul {
     line-height: 1.6em;
   }
 }
-
-

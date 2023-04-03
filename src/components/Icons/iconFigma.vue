@@ -4,9 +4,7 @@
 
     <g id="figmaIconGroup">
       <path
-        class="background"
-        fill="url(#backer)"
-        height="100%"
+        class="background" fill="url(#backer)" height="100%"
         width="100%"
         d="M59.5746 50.0012H30.4354C27.4483 50.0012 25.0044 47.5572 25.0044 44.5702V15.431C25.0044 12.4439 27.4483 10 30.4354 10H59.5746C62.5616 10 65.0055 12.4439 65.0055 15.431V44.5702C65.0055 47.5572 62.5616 50.0012 59.5746 50.0012Z"
       />
@@ -36,7 +34,7 @@
 
 <style lang="scss" scoped>
   svg:hover {
-    cursor: pointer;
+    @apply cursor-pointer;
   }
 
   .corp #figmaBox {
@@ -50,7 +48,7 @@
 
   #figmaBox {
     // width: 88px;
-    // height: 60px;
+    // @apply h-[60px];
 
     .background {
       fill: url(#backer) hsl(0, 0%, 10%);
@@ -116,18 +114,18 @@
 
   @keyframes transparenter {
     0% {
-      opacity: 1;
-      //opacity: 0;
+      @apply opacity-100;
+      //@apply opacity-0;
     }
 
     50% {
-      opacity: 0;
-      //opacity: 0;
+      @apply opacity-0;
+      //@apply opacity-0;
     }
 
     100% {
-      opacity: 1;
-      //opacity: 0;
+      @apply opacity-100;
+      //@apply opacity-0;
     }
   }
 </style>

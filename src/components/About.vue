@@ -1,32 +1,66 @@
 <template>
-  <div class="about">
+  <div
+    class="about" ref="target" :style="{ transform: cardTransform, transition: 'transform 0.25 ease-out' }"
+    @click="play"
+  >
     <div class="flagBox">
-      <div class="flag">&nbsp;</div>
+      <div class="flag">
+        &nbsp;
+      </div>
     </div>
     <p>{{ store.copy.aboutCopy }}</p>
   </div>
 </template>
 
-<script lang="ts" setup>
-  import { inject } from "vue";
+<script setup>
+  import { inject, ref, computed } from 'vue'
+  import { useMouseInElement } from '@vueuse/core'
 
-  const store: any = inject("store");
+  const store = inject('store')
+
+  const target = ref(null)
+  const { elementX, elementY, isOutside, elementHeight, elementWidth } = useMouseInElement(target)
+  const cardTransform = computed(() => {
+    const MAX_ROTATION = 10
+
+    const rX = (MAX_ROTATION / 2 - (elementY.value / elementHeight.value) * MAX_ROTATION).toFixed(2) // handles x-axis
+    const rY = (MAX_ROTATION / 2 - (elementX.value / elementWidth.value) * MAX_ROTATION).toFixed(2) // handles x-axis
+
+    return isOutside.value ? '' : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
+  })
+
+  // SOUND!!! ###################################
+  // SOUND!!! ###################################
+  const yeehaw = new Audio('/yeehaw.mp3')
+  const jollyGood = new Audio('/jollyGood.mp3')
+
+  let isActive = false
+
+  const play = () => {
+    if (isActive) {
+      yeehaw.play()
+      console.log(isActive)
+    } else {
+      jollyGood.play()
+      console.log(isActive)
+    }
+    isActive = !isActive
+  }
 </script>
 
 <style lang="scss" scoped>
   .about {
-    background: #fbf3bb;
-    padding: 1.25rem 1.75rem;
-    // display: block;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    //
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    border-radius: 2px;
+    @apply bg-[#fbf3bb];
+    @apply py-5 px-7;
+    @apply flex;
+    @apply flex-row;
+    @apply flex-nowrap;
+    @apply justify-center;
+    @apply items-center;
+    @apply content-center;
+    @apply self-center;
+    @apply rounded-sm;
+    @apply cursor-pointer;
     @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
 
     @media (max-width: $breakThou) {
@@ -38,150 +72,160 @@
     }
 
     @media (max-width: $breakFour) {
-      flex-direction: column;
+      @apply flex-col;
     }
   }
 
   .flagBox {
-    display: flex;
-    flex-direction: column;
+    @apply flex;
+    @apply flex-col;
     //
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
+    @apply content-center;
+    @apply items-center;
+    @apply justify-center;
+    @apply self-center;
     //
-    float: left;
-    clear: left;
-    flex-basis: auto;
+    @apply float-left;
+    @apply clear-left;
+    @apply basis-auto;
 
     @media (max-width: $breakFour) {
-      margin-bottom: 0.5em;
+      @apply mb-2;
     }
   }
 
   .flag {
-    display: block;
+    @apply block;
     background: url("/img/brit_amer_flag.svg");
-    background-repeat: no-repeat;
+    @apply bg-no-repeat;
+    @apply mr-4;
     background-size: contain;
-    margin-right: 1em;
     background-position-y: center;
     //
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    width: 100px;
-    height: 60px;
+    @apply content-center;
+    @apply items-center;
+    @apply justify-center;
+    @apply self-center;
+    @apply w-[100px];
+    @apply h-[60px];
   }
 
   p {
-    display: block;
+    @apply block;
     color: lighten($grey, 15);
-    font-size: 0.9em;
-    line-height: 1.4em;
-    letter-spacing: 0.05em;
+    @apply text-[0.9em];
+    @apply leading-[1.4em];
+    @apply tracking-wider;
     //
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    text-align: left;
+    @apply content-center;
+    @apply items-center;
+    @apply justify-center;
+    @apply self-center;
+    @apply text-left;
   }
 
   .corp .about {
     @include box-shadow(0px, 0px, 3px, -1px, hsla(0, 14%, 22%, 0.5));
-    border-radius: 2px;
+    @apply rounded-sm;
     font-family: Alegreya;
   }
 
   .punk .about {
+
     //
     p {
       margin: 0.25rem auto;
     }
   }
 
+  .techy .about {
+    background: #423BA0 !important;
+
+    //
+    p {
+      @apply text-white;
+      margin: 0.25rem auto;
+    }
+  }
+
   .corp .about {
+
     //
     p {
       font-family: "Bodoni Moda", Times, serif !important;
-      font-size: 0.85rem;
-      letter-spacing: 0.001rem;
-      line-height: 1.4rem;
-      margin: 0;
-      font-weight: 500;
+      @apply text-[0.9rem];
+      @apply tracking-[0.02rem];
+      @apply leading-6;
+      @apply m-0;
+      @apply font-medium;
 
       @media (max-width: $breakThou) {
-        font-size: 1.15rem;
+        @apply text-[1.15rem];
         line-height: 1.75rem;
       }
 
       @media (max-width: $breakTwo) {
-        font-size: 1rem;
-        line-height: 1.5rem;
+        @apply text-[1rem];
+        @apply leading-6;
       }
     }
   }
 
   .modern .about {
-    display: flex;
-    flex-direction: column;
+    @apply flex;
+    @apply flex-col;
     margin: initial;
     margin-top: auto;
-    width: 100%;
-    // min-width: 30ch;
-    gap: 1rem;
+    @apply w-full;
+    @apply gap-4;
     box-shadow: 2px 2px 10px 0px black;
-    border-radius: 3px;
+    @apply rounded-[3px];
 
     @media (max-width: 850px) {
-      flex-direction: row;
+      @apply flex-row;
     }
 
     @media (max-width: 550px) {
-      flex-direction: column;
+      @apply flex-col;
     }
 
     .flagBox {
-      width: auto;
-      // margin-bottom: 1rem;
+      @apply w-auto;
     }
 
     .flag {
-      display: block;
+      @apply block;
       background: url("/img/brit_amer_flag.svg");
-      background-repeat: no-repeat;
+      @apply bg-no-repeat;
       background-size: contain;
       margin-right: initial !important;
       background-position-y: center;
       //
-      align-content: center;
-      align-items: center;
-      justify-content: center;
-      align-self: center;
-      width: 100px;
-      height: 60px;
+      @apply content-center;
+      @apply items-center;
+      @apply justify-center;
+      @apply self-center;
+      @apply w-[100px];
+      @apply h-[60px];
     }
 
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
       font-size: clamp(0.75rem, 0.8rem, 1.15rem) !important;
-      letter-spacing: 0rem;
-      line-height: 1.5rem;
-      margin: 0;
-      font-weight: 300;
-      color: $ivory;
+      @apply tracking-normal;
+      @apply leading-6;
+      @apply m-0;
+      @apply font-light;
+      @apply text-base-ivory;
 
       // @media (max-width: $breakThou) {
-      //   font-size: 1.15rem;
+      //   @apply text-[1.15rem];
       //   line-height: 1.75rem;
       // }
 
       // @media (max-width: $breakTwo) {
-      //   font-size: 1rem;
-      //   line-height: 1.5rem;
+      //   @apply text-[1rem];
+      //   @apply leading-6;
       // }
     }
   }

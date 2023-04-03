@@ -11,6 +11,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "jsx": "preserve",
+    "allowJs": true,
     "paths": {
       "/@/*": [ // / to begin with.
         "src/*"
@@ -28,7 +29,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/**/*.svg"
-  ],
+, "src/main.js"  ],
   "exclude": [
     "node_modules"
   ],

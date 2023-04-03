@@ -7,19 +7,16 @@ export default defineConfig({
   plugins: [
     vue(),
     svgLoader({
-      defaultImport: 'url',
-    }),
+      defaultImport: 'url'
+    })
   ],
   resolve: {
-    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue', 'svg'],
-    //...
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue', 'svg']
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `
-          @import "./src/assets/css/main.scss";
-        `
+        additionalData: '@import "./src/assets/css/main.scss";'
       }
     }
   }

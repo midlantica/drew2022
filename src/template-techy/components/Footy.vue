@@ -5,35 +5,35 @@
 </template>
 
 <style lang='scss' scoped>
-@import '../assets/css/techy-main.scss';
+  @import '../assets/css/techy-main.scss';
 
-div {
-  // height: 3em;
-  background: $mango;
+  div {
+    // height: 3em;
+    background: $mango;
 
-  p {
-    font-size: 1.2em;
-    color: $blueTech;
-    text-align: center;
-    padding: .5em;
-    letter-spacing: 0.02em;
+    p {
+      @apply text-[1.2em];
+      color: $blueTech;
+      @apply text-center;
+      padding: .5em;
+      @apply tracking-wide;
 
-    @media (max-width: $breakThou) {
-      font-size: 1.25em;
-    }
+      @media (max-width: $breakThou) {
+        @apply text-[1.25em];
+      }
 
-    @media (max-width: $breakOne) {
-      font-size: 1.2em;
-    }
+      @media (max-width: $breakOne) {
+        @apply text-[1.2em];
+      }
 
-    @media (max-width: $breakTwo) {
-      font-size: 1em;
-    }
+      @media (max-width: $breakTwo) {
+        @apply text-[1em];
+      }
 
-    @media (max-width: $breakThree) {
-      font-size: .85em;
-      line-height: 1.25em;
+      @media (max-width: $breakThree) {
+        @apply text-[.85em];
+        @apply leading-5;
+      }
     }
   }
-}
 </style>

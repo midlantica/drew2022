@@ -12,5 +12,5 @@ $font-copy        :Poppins, Helvetica, Times, serif;
 body {
   font-family: $font;
   font-size: $base-font-size;
-  margin: 0;
+  @apply m-0;
 }

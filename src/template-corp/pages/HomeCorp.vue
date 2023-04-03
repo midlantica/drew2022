@@ -48,141 +48,142 @@
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/css/corp-main.scss';
+  @import '../assets/css/corp-main.scss';
 
-.about {
-  background: white;
-  font-size: 0.95em;
+  .about {
+    background: white;
+    font-size: 0.95em;
 
-  @media (max-width: $breakThou) {
-    //
-  }
-}
-
-header,
-footer {
-  // color: $ivory;
-  box-shadow: none !important;
-}
-
-.mainGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.5rem 1rem;
-  margin: 0.25rem 1rem 1rem;
-
-  @media (max-width: $breakThou) {
-    grid-template-columns: 1fr;
-    grid-row-gap: 1em;
+    @media (max-width: $breakThou) {
+      //
+    }
   }
 
-  @media (max-width: $breakOne) {
-    //
+  header,
+  footer {
+    // @apply text-base-ivory;
+    box-shadow: none !important;
+
   }
 
-  @media (max-width: $breakTwo) {
-    //
+  .mainGrid {
+    @apply grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem 1rem;
+    margin: 0.25rem 1rem 1rem;
+
+    @media (max-width: $breakThou) {
+      grid-template-columns: 1fr;
+      row-gap: 1em;
+    }
+
+    @media (max-width: $breakOne) {
+      //
+    }
+
+    @media (max-width: $breakTwo) {
+      //
+    }
   }
-}
 
-.copyArea {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  .copyArea {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
 
-  @media (max-width: $breakThou) {
-    grid-column: 1 / 3;
+    @media (max-width: $breakThou) {
+      grid-column: 1 / 3;
+      grid-row: 1;
+      @apply mb-[-1em];
+    }
+
+    @media (max-width: $breakOne) {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    @media (max-width: $breakTwo) {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+  }
+
+  .slides {
+    grid-column: 2 / 3;
     grid-row: 1;
-    margin-bottom: -1em;
+
+    @media (max-width: $breakThou) {
+      grid-column: 1 / 3;
+      grid-row: 3;
+      margin-top: initial;
+    }
+
+    @media (max-width: $breakOne) {
+      grid-column: 1 / 3;
+      grid-row: 3;
+      margin-top: initial;
+    }
+
+    @media (max-width: $breakTwo) {
+      grid-column: 1 / 3;
+      grid-row: 3;
+      margin-top: initial;
+    }
   }
 
-  @media (max-width: $breakOne) {
-    grid-column: 1 / 3;
-    grid-row: 1;
-  }
-
-  @media (max-width: $breakTwo) {
-    grid-column: 1 / 3;
-    grid-row: 1;
-  }
-}
-
-.slides {
-  grid-column: 2 / 3;
-  grid-row: 1;
-
-  @media (max-width: $breakThou) {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    margin-top: initial;
-  }
-
-  @media (max-width: $breakOne) {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    margin-top: initial;
-  }
-
-  @media (max-width: $breakTwo) {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    margin-top: initial;
-  }
-}
-
-.skillsGrid {
-  grid-column: 1 / 2;
-  grid-row: 2;
-
-  @media (max-width: $breakThou) {
+  .skillsGrid {
+    grid-column: 1 / 2;
     grid-row: 2;
+
+    @media (max-width: $breakThou) {
+      grid-row: 2;
+    }
+
+    @media (max-width: $breakOne) {
+      grid-row: 2;
+    }
+
+    @media (max-width: $breakTwo) {
+      grid-row: 2;
+    }
   }
 
-  @media (max-width: $breakOne) {
+  .about {
+    grid-column: 2 / 3;
     grid-row: 2;
+
+    @media (max-width: $breakThou) {
+      grid-column: 1 / 3;
+      grid-row: 4;
+    }
+
+    @media (max-width: $breakOne) {
+      grid-column: 1 / 3;
+      grid-row: 4;
+    }
+
+    @media (max-width: $breakTwo) {
+      grid-column: 1 / 3;
+      grid-row: 4;
+    }
   }
 
-  @media (max-width: $breakTwo) {
-    grid-row: 2;
+  .quoteBlock {
+    grid-column: 2 / 3;
+    grid-row: 3;
+
+    @media (max-width: $breakThou) {
+      grid-column: 1 / 3;
+      grid-row: 5;
+    }
+
+    @media (max-width: $breakOne) {
+      grid-column: 1 / 3;
+      grid-row: 5;
+    }
+
+    @media (max-width: $breakTwo) {
+      grid-column: 1 / 3;
+      grid-row: 5;
+    }
   }
-}
-
-.about {
-  grid-column: 2 / 3;
-  grid-row: 2;
-
-  @media (max-width: $breakThou) {
-    grid-column: 1 / 3;
-    grid-row: 4;
-  }
-
-  @media (max-width: $breakOne) {
-    grid-column: 1 / 3;
-    grid-row: 4;
-  }
-
-  @media (max-width: $breakTwo) {
-    grid-column: 1 / 3;
-    grid-row: 4;
-  }
-}
-
-.quoteBlock {
-  grid-column: 2 / 3;
-  grid-row: 3;
-
-  @media (max-width: $breakThou) {
-    grid-column: 1 / 3;
-    grid-row: 5;
-  }
-
-  @media (max-width: $breakOne) {
-    grid-column: 1 / 3;
-    grid-row: 5;
-  }
-
-  @media (max-width: $breakTwo) {
-    grid-column: 1 / 3;
-    grid-row: 5;
-  }
-}
 </style>

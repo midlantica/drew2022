@@ -14,10 +14,9 @@
 
 <script setup>
   import Navvy from '../components/Navvy'
-  import Quotes from '../../components/Quote.vue'
   import ExtrasC from '../../components/ExtrasC'
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/css/corp-main.scss';
+  @import '../assets/css/corp-main.scss';
 </style>

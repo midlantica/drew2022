@@ -6,387 +6,388 @@
         <component :is="Component" />
       </transition>
     </router-view>
+    <teleport to="#modal" />
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
   import { provide } from 'vue'
   import store from './store/index'
   import quotes from './store/quotes'
   import Tabs from './components/Tabs.vue'
 
-  provide('store', store) as any
-  provide('quotes', quotes) as any
+  provide('store', store)
+  provide('quotes', quotes)
 </script>
 
 <style lang="scss">
-@import './assets/css/main.scss';
-
-$font-groovy: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-$backer: #fffae4;
-$backBlack: #1f1f1f;
-
-.wrapper {
-  max-width: 1024px;
-  margin: 0 auto;
-  position: relative;
-  //
-}
-
-// #############################
-// BOURBON
-body.bourbon {
-  background: $backBlack;
+  @import "./assets/css/main.scss";
+  $font-groovy: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  $backer: #fffae4;
+  $backBlack: #1f1f1f;
 
   .wrapper {
-    background: url(./template-bourbon/assets/img/bg/graphy_2.png) repeat;
+    @apply relative;
+    @apply max-w-[1024px];
+    @apply my-0 mx-auto;
+    //
+  }
 
-    @media (max-width: $breakOne) {
+  // #############################
+  // BOURBON
+  body.bourbon {
+    background: $backBlack;
+
+    .wrapper {
+      background: url(./template-bourbon/assets/img/bg/graphy_2.png) repeat;
+
+      @media (max-width: $breakOne) {
+        //
+      }
+
+      header,
+      footer {
+        background: url(./template-bourbon/assets/img/bg/bg_bag_dk.jpg) repeat;
+        // @apply p-4;
+      }
+    }
+
+    .about>p {
+      font-family: "AmericanTypewriterStd-Med";
+      @apply my-1 mx-auto;
+      @apply text-[.84em];
+
+      @media (max-width: $breakThou) {
+        @apply text-[1.65vw];
+      }
+
+      @media (max-width: $breakOne) {
+        @apply text-[1.85vw];
+      }
+
+      @media (max-width: $breakTwo) {
+        @apply text-[2.5vw];
+      }
+
+      @media (max-width: $breakThree) {
+        @apply text-[3vw];
+      }
+    }
+
+    &.extras .extrasWrapper {
+
       //
+      h1 {
+        font-family: "VeneerTwo", Helvetica, Arial, sans-serif;
+        @apply pt-4;
+        @apply text-[1.75em];
+        @apply font-light;
+        @apply antialiased;
+        text-rendering: optimizeLegibility;
+      }
     }
 
-    header,
-    footer {
-      background: url(./template-bourbon/assets/img/bg/bg_bag_dk.jpg) repeat;
-    }
-  }
-
-  .about>p {
-    font-family: 'AmericanTypewriterStd-Med';
-    font-size: 0.84em;
-    margin: 0.25rem auto;
-
-    @media (max-width: $breakThou) {
-      font-size: 1.65vw;
-    }
-
-    @media (max-width: $breakOne) {
-      font-size: 1.85vw;
-    }
-
-    @media (max-width: $breakTwo) {
-      font-size: 2.5vw;
-    }
-
-    @media (max-width: $breakThree) {
-      font-size: 3vw;
+    .smallCaps {
+      @apply text-[90%];
+      @apply tracking-wider;
+      font-variant: small-caps !important;
     }
   }
 
-  &.extras .extrasWrapper {
+  // #############################
+  // MODERN
+  body.modern {
+    @apply h-[calc(100%)];
+    @apply bg-[hsl(320,100%,9%)];
 
-    //
-    h1 {
-      font-size: 1.75em;
-      padding-top: 1em;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      font-family: 'VeneerTwo', Helvetica, Arial, sans-serif;
-      font-weight: 300;
+    .wrapper {
+      @apply flex;
+      @apply flex-col;
+      @apply grow;
+      @apply max-w-[1024px];
+      @apply min-h-[780px];
+      @apply pb-14;
+      //
+      @apply bg-[hsl(320,100%,9%)];
+      background-image: url(./template-modern/assets/img/bg/bg_bak_dk4.jpeg);
+      @apply bg-cover;
+
+      @media (max-width: $breakOne) {
+        // height: 100vh;
+        // min-height: 100vh;
+        // max-height: 100vh;
+        // background-size: 100% calc(100%);
+        // //
+        // @apply w-full;
+        // @apply absolute;
+        // @apply top-0;
+        // left: 0;
+      }
+
+      header,
+      footer {
+        // background: url(./template-modern/assets/img/bg/bg_bag_dk.jpg) repeat;
+        @apply shadow-none;
+      }
+    }
+
+    .about {
+      @apply w-1/2;
+      @apply my-0 mx-auto;
+      // background: hsla(340, 76%, 48%, 1) !important;
+      background: linear-gradient(180deg,
+          hsl(340deg 76% 48% / 100%),
+          hsl(340deg 76% 31% / 100%)) !important;
+    }
+
+    &.extras {
+      @apply bg-[#2e001f];
+
+      .flexxy a p {
+        @apply text-white;
+        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+        @apply border-b border-solid border-[hsla(0,0%,100%,.5)];
+      }
+    }
+
+    &.extras .extrasWrapper {
+
+      //
+      h1 {
+        @apply pt-4;
+        @apply text-white;
+        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+        font-size: clamp(.85rem, 1.2rem, 1.4rem) !important;
+        @apply font-semibold;
+        @apply leading-normal;
+        @apply capitalize;
+        @apply antialiased;
+        text-rendering: optimizeLegibility;
+      }
+    }
+
+    .smallCaps {
+      @apply text-[90%];
+      @apply tracking-wider;
+      font-variant: small-caps !important;
     }
   }
 
-  .smallCaps {
-    font-variant: small-caps !important;
-    font-size: 90% !important;
-    letter-spacing: 0.05rem;
-  }
-}
+  // #############################
+  // GROOVY
+  body.groovy {
+    background: $backBlack;
 
-// #############################
-// MODERN
-body.modern {
-  height: calc(100%);
-  background: hsl(320, 100%, 9%);
+    .wrapper {
+      background: linear-gradient(lighten($backer, 10) 0%,
+          darken($backer, 05) 85%,
+          darken($backer, 10) 100%);
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    //
-    background: hsl(320, 100%, 9%);
-    background-image: url(./template-modern/assets/img/bg/bg_bak_dk4.jpeg);
-    background-size: cover;
-    min-height: 780px;
-    max-width: 1024px;
-    padding-bottom: 3.5rem;
-
-    @media (max-width: $breakOne) {
-      // height: 100vh;
-      // min-height: 100vh;
-      // max-height: 100vh;
-      // background-size: 100% calc(100%);
-      // //
-      // width: 100%;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
+      @media (max-width: $breakOne) {
+        // background-size: 110% 50%;
+      }
     }
 
-    header,
-    footer {
-      // background: url(./template-modern/assets/img/bg/bg_bag_dk.jpg) repeat;
-      box-shadow: none;
-    }
-  }
-
-  .about {
-    // background: hsla(340, 76%, 48%, 1) !important;
-    background: linear-gradient(180deg,
-        hsl(340deg 76% 48% / 61%),
-        hsl(340deg 76% 31% / 62%)) !important;
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  &.extras {
-    background: #2e001f;
-
-    .flexxy a p {
-      font-family: Spartan, 'Helvetica Neue', Helvetica, sans-serif !important;
-      color: white;
-      border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
-    }
-  }
-
-  &.extras .extrasWrapper {
-
-    //
-    h1 {
-      font-size: clamp(0.85rem, 1.2rem, 1.4rem) !important;
-      font-family: Spartan, 'Helvetica Neue', Helvetica, sans-serif !important;
-      color: white;
-      padding-top: 1em;
-      font-weight: 600;
-      line-height: 1.5;
-      text-transform: capitalize;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-    }
-  }
-
-  .smallCaps {
-    font-variant: small-caps !important;
-    font-size: 90% !important;
-    letter-spacing: 0.05rem;
-  }
-}
-
-// #############################
-// GROOVY
-body.groovy {
-  background: $backBlack;
-
-  .wrapper {
-    background: linear-gradient(lighten($backer, 10) 0%,
-        darken($backer, 05) 85%,
-        darken($backer, 10) 100%);
-
-    @media (max-width: $breakOne) {
-      // background-size: 110% 50%;
-    }
-  }
-
-  .about>p {
-    font-size: 0.85rem !important;
-    font-family: $font-groovy;
-    line-height: 1.25rem;
-    margin: 0.25rem 0;
-  }
-
-  .smallCaps {
-    font-variant: small-caps !important;
-    font-size: 87.5% !important;
-    letter-spacing: 0.05rem;
-  }
-
-  &.extras .extrasWrapper {
-
-    //
-    h1 {
-      font-size: 1.5em;
-      padding-top: 1em;
+    .about>p {
+      @apply mt-1 mx-0;
       font-family: $font-groovy;
-      font-weight: 300;
-      text-transform: capitalize;
-      color: black;
+      @apply text-[.85rem];
+      @apply leading-[1.25rem];
     }
 
-    p {
-      font-family: $font-groovy;
-      font-size: 1em !important;
+    .smallCaps {
+      @apply text-[87.5%];
+      @apply tracking-wider;
+      font-variant: small-caps !important;
     }
-  }
-}
 
-// #############################
-// TECHY
-body.techy {
-  background: $backBlack;
+    &.extras .extrasWrapper {
+      //
 
-  .wrapper {
-    background: #fffdf4;
-  }
+      h1 {
+        font-family: $font-groovy;
+        @apply pt-4;
+        @apply text-black;
+        @apply text-[1.5em];
+        @apply font-light;
+        @apply capitalize;
+      }
 
-  &.extras .extrasWrapper {
-    background: #fffff1 !important;
-
-    h1 {
-      font-family: Helvetica !important;
-      font-size: 1.5em;
-      color: lighten(black, 30);
-      padding-top: 1em;
-      text-transform: capitalize;
+      p {
+        font-family: $font-groovy;
+        @apply text-[1em];
+      }
     }
   }
 
-  .about {
-    background: #ffe268 !important;
-    box-shadow: none !important;
+  // #############################
+  // TECHY
+  body.techy {
+    background: $backBlack;
 
-    p {
-      font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-      margin: 0rem auto;
+    .wrapper {
+      @apply bg-[#fffdf4];
+    }
+
+    &.extras .extrasWrapper {
+      @apply bg-[#fffff1];
+
+      h1 {
+        @apply pt-4;
+        color: lighten(black, 30);
+        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
+        @apply text-[1.5em];
+        @apply capitalize;
+      }
+    }
+
+    .about {
+      @apply bg-[#ffe268];
+      box-shadow: none !important;
+
+      p {
+        @apply my-0 mx-auto;
+        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
+      }
+    }
+
+    .smallCaps {
+      @apply text-[87.5%];
+      @apply tracking-wider;
+      font-variant: small-caps !important;
+    }
+
+    &.extras .extrasWrapper {
+
+      //
+      h1 {
+        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
+        @apply pt-4;
+        @apply text-[1.75em];
+        @apply font-medium;
+      }
+
+      p {
+        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
+        @apply text-[1em];
+      }
+    }
+
+    &.extras .contact {
+      @apply w-full;
     }
   }
 
-  .smallCaps {
-    font-variant: small-caps !important;
-    font-size: 87.5% !important;
-    letter-spacing: 0.05rem;
-  }
+  // #############################
+  // CORP
+  body.corp {
+    background: $backBlack;
 
-  &.extras .extrasWrapper {
-
-    //
-    h1 {
-      font-size: 1.75em;
-      padding-top: 1em;
-      font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-      font-weight: 500;
+    .wrapper {
+      background: url(/img/bg/white_paper_patt-01.jpg) repeat;
     }
 
-    p {
-      font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-      font-size: 1em !important;
-    }
-  }
-
-  &.extras .contact {
-    width: 100% !important;
-  }
-}
-
-// #############################
-// CORP
-body.corp {
-  background: $backBlack;
-
-  .wrapper {
-    background: url(/img/bg/white_paper_patt-01.jpg) repeat;
-  }
-
-  .smallCaps {
-    font-variant: small-caps !important;
-    font-size: 90% !important;
-    letter-spacing: 0.03rem;
-  }
-
-  &.extras .extrasWrapper {
-
-    //
-    h1 {
-      font-size: 1.5em;
-      padding-top: 1em;
-      font-family: 'Bodoni Moda', Times, serif !important;
-      font-weight: 600;
-      color: #01487f !important;
-      text-transform: capitalize;
+    .smallCaps {
+      @apply text-[90%];
+      @apply tracking-[.03em];
+      font-variant: small-caps !important;
     }
 
-    p {
-      font-family: 'Bodoni Moda', Times, serif !important;
-      font-size: 1em;
+    &.extras .extrasWrapper {
+      //
+
+      h1 {
+        font-family: "Bodoni Moda", Times, serif !important;
+        @apply pt-4;
+        @apply text-[#01487f];
+        @apply text-[1.5em];
+        @apply font-semibold;
+        @apply capitalize;
+      }
+
+      p {
+        font-family: "Bodoni Moda", Times, serif !important;
+        @apply text-[1em];
+      }
+    }
+
+    .about p {
+      font-family: "Bodoni Moda", Times, serif !important;
+      @apply text-[1em];
     }
   }
 
-  .about p {
-    font-family: 'Bodoni Moda', Times, serif !important;
-    font-size: 1em;
+  // #############################
+  // PUNK
+  body.punk {
+    background: $backBlack;
+
+    .wrapper {
+      @apply w-full;
+      @apply bg-repeat;
+      @apply bg-center;
+      background: url(/img/bg/circles.svg), url(/img/bg/Drew-punk-back.jpg);
+      background-size: 100% 640%, 100% 100%;
+
+      @media (max-width: $breakOne) {
+        background-position: center center, -3em 0;
+        background-size: 100% 640%, 130% 90%;
+      }
+
+      @media (max-width: $breakTwo) {
+        background-position: center center, -3em 11em;
+        background-size: 100% 600%, 120% 100%;
+      }
+
+      @media (max-width: $breakTwo) {
+        background-position: center center, -3em 3em;
+        background-size: 100% 600%, 250% 70%;
+      }
+    }
+
+    .about>p {
+      font-family: Poppins, "Helvetica Neue", Arial, sans-serif !important;
+      @apply text-[.8em];
+
+      @media (max-width: $breakThou) {
+        @apply text-[1.65vw];
+      }
+
+      @media (max-width: $breakOne) {
+        @apply text-[1.85vw];
+      }
+
+      @media (max-width: $breakTwo) {
+        @apply text-[2.5vw];
+      }
+
+      @media (max-width: $breakThree) {
+        @apply text-[3vw];
+      }
+    }
+
+    &.extras .extrasWrapper {
+
+      //
+      h1 {
+        @apply font-['Poppins,"Helvetica_Neue",Helvetica,Arial,sans-serif'];
+        @apply pt-4;
+        @apply text-black;
+        @apply text-[1.75em];
+        @apply font-light;
+        @apply capitalize;
+      }
+
+      p {
+        @apply font-['Poppins,"Helvetica_Neue",Helvetica,Arial,sans-serif'];
+        @apply text-black;
+      }
+    }
+
+    .smallCaps {
+      @apply text-[95%];
+      @apply tracking-wider;
+      font-variant: small-caps !important;
+    }
   }
-}
-
-// #############################
-// PUNK
-body.punk {
-  background: $backBlack;
-
-  .wrapper {
-    width: 100%;
-    background: url(/img/bg/circles.svg), url(/img/bg/Drew-punk-back.jpg);
-    background-repeat: repeat-y, repeat-y;
-    background-size: 100% 640%, 100% 100%;
-    background-position: center center, center center;
-
-    @media (max-width: $breakOne) {
-      background-size: 100% 640%, 130% 90%;
-      background-position: center center, -3em 0em;
-    }
-
-    @media (max-width: $breakTwo) {
-      background-size: 100% 600%, 120% 100%;
-      background-position: center center, -3em 11em;
-    }
-
-    @media (max-width: $breakTwo) {
-      background-size: 100% 600%, 250% 70%;
-      background-position: center center, -3em 3em;
-    }
-  }
-
-  .about>p {
-    font-family: Poppins, 'Helvetica Neue', Arial, sans-serif !important;
-    font-size: 0.8em !important;
-
-    @media (max-width: $breakThou) {
-      font-size: 1.65vw !important;
-    }
-
-    @media (max-width: $breakOne) {
-      font-size: 1.85vw !important;
-    }
-
-    @media (max-width: $breakTwo) {
-      font-size: 2.5vw !important;
-    }
-
-    @media (max-width: $breakThree) {
-      font-size: 3vw !important;
-    }
-  }
-
-  &.extras .extrasWrapper {
-
-    //
-    h1 {
-      font-size: 1.75em;
-      padding-top: 1em;
-      font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-      font-weight: 300;
-      text-transform: capitalize;
-      color: black;
-    }
-
-    p {
-      font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-      color: black;
-    }
-  }
-
-  .smallCaps {
-    font-variant: small-caps !important;
-    font-size: 95% !important;
-    letter-spacing: 0.05rem;
-  }
-}
 </style>
