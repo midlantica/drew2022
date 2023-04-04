@@ -36,7 +36,7 @@
       </transition>
 
       <footer>
-        <NavvyEmpty />
+        <nav class="h-3" />
       </footer>
     </div>
   </transition>
@@ -44,7 +44,6 @@
 
 <script setup>
   import Navvy from '../components/Navvy.vue'
-  import NavvyEmpty from '../components/NavvyEmpty.vue'
   import HeadAndCopy from '../components/HeadAndCopy.vue'
   import About from '../../components/About.vue'
   import Skills from '../../components/Skills.vue'
@@ -61,9 +60,7 @@
   }
 
   .mainGrid {
-    @apply grid;
-    margin: 1em 1em;
-
+    @apply grid my-4 mx-4;
     grid-gap: 1em;
     grid-template-columns: repeat(2, 1fr);
 
@@ -83,10 +80,9 @@
   }
 
   .copyArea {
-    transition-delay: 250ms;
-
     grid-column: 1 / 2;
     grid-row: 1 / 4;
+    transition-delay: 250ms;
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
@@ -148,10 +144,7 @@
     }
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-      margin-top: .25em;
-      margin-bottom: .5em;
-
-      row-gap: 0;
+        @apply mt-1 mb-2 gap-y-0;
     }
   }
 

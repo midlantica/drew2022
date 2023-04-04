@@ -18,8 +18,7 @@
   @import "../assets/css/bourbon-main.scss";
 
   .wrapper {
-    @apply w-full;
-    @apply pt-4 pl-5 pr-2;
+    @apply w-full pt-4 pl-5 pr-2;
 
     @media (min-width: $breakThou) {
       //
@@ -59,8 +58,8 @@
       }
 
       @media (max-width: $breakOne) {
-        max-width: initial;
         @apply text-[1.65rem];
+        max-width: initial;
       }
 
       @media (max-width: $breakTwo) {
@@ -77,44 +76,30 @@
   }
 
   p.smallCaps {
-    font-variant: small-caps !important;
-    // @apply all-small-caps;
     @apply text-[185%];
-    // @apply font-medium;
+    font-variant: small-caps !important;
   }
 
   p {
-    font-family: $font-copy;
-    color: $grey;
-    @apply text-[1.1rem];
-    @apply leading-[2.4rem];
-    @apply mt-2 mx-2 mb-0;
-    @apply tracking-[0.03rem];
+    @apply leading-[2.4rem] text-bourbon-copy text-[1.1rem] text-base-grey mt-2 mx-2 mb-0 tracking-[0.03rem] mr-2;
 
     @media (max-width: $breakThou) {
       columns: 2 20ch;
-      @apply leading-9;
-      @apply gap-x-12;
       column-rule: 1px solid transparentize($accent-red, .75);
-      @apply text-justify;
-      hyphens: auto;
+      @apply leading-9 gap-x-12 text-justify hyphens-auto;
     }
 
     @media (max-width: $breakOne) {
-      @apply tracking-[0.05rem];
-      @apply text-justify;
-      hyphens: auto;
+      @apply tracking-[0.05rem] text-justify hyphens-auto;
     }
 
     @media (max-width: 670px) {
+      @apply text-justify hyphens-auto;
       columns: initial;
-      @apply text-justify;
-      hyphens: auto;
     }
 
     @media (max-width: $breakTwo) {
-      @apply text-justify;
-      hyphens: auto;
+      @apply text-justify hyphens-auto;
     }
   }
 </style>

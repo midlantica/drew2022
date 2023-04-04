@@ -1,6 +1,6 @@
 <template>
   <div class="relative my-[-25px] flex flex-row items-center">
-    <div class="relative w-[210px] h-[210px] sm:left-[-2.75rem] min-[375px]:left-[-5.7rem] ease-out duration-300">
+    <div class="relative w-[210px] h-[210px] sm:left-[-2.75rem] min-[375px]:left-[-5.7rem] ease-out duration-300 top-[-5px]">
       <div class="groovyCircle float-left clear-left block">
         <router-link :to="{ name: 'ExtrasGroovy' }" class="jelloHorizontal relative bg-[url('/img/drew_mug_sepia.png')] w-[98px] h-[119px] min-[375px]:left-[4.5rem] min-[375px]:top-[2.8rem] sm:left-[3.5rem] sm:top-[2.8rem] bg-no-repeat bg-cover block ease-out duration-300" />
       </div>
@@ -42,35 +42,26 @@
   @import '../assets/css/groovy-main.scss';
 
   .groovyCircle {
-    width: 210px;
-    height: 210px;
+    @apply w-[210px] h-[210px] rounded-[10em] z-10 block mr-[-2.75em] mb-[-5.3em];
     box-shadow: 8px 6px 0px rgba(37, 37, 37, 0.25);
-    border-radius: 10em;
-    z-index: 5;
-    display: block;
-    margin-right: -2.75em;
-    margin-bottom: -5.3em;
     background-image: radial-gradient(
-        /* 0 - 25% */
-        $groovy-aqua 0%,
-        $groovy-aqua 35%,
-        /* 25% - 50% */
-        $groovy-yellow 35%,
-        $groovy-yellow 47%,
-        /* 50% - 75% */
-        $groovy-orange 47%,
-        $groovy-orange 59%,
-        /* 75% - 100% */
-        $groovy-red 59%,
-        $groovy-red 100%);
-    clip-path: polygon(21% 0%, 100% 0%, 110% 50%, 100% 100%, 21% 110%);
-    animation: 1s ease-out;
+      /* 0 - 25% */
+      $groovy-aqua 0%,
+      $groovy-aqua 35%,
+      /* 25% - 50% */
+      $groovy-yellow 35%,
+      $groovy-yellow 47%,
+      /* 50% - 75% */
+      $groovy-orange 47%,
+      $groovy-orange 59%,
+      /* 75% - 100% */
+      $groovy-red 59%,
+      $groovy-red 100%);
+      clip-path: polygon(21% 0%, 100% 0%, 110% 50%, 100% 100%, 21% 110%);
+      animation: 1s ease-out;
 
-    @media (max-width: $breakFour) {
-      width: 160px;
-      height: 160px;
-      top: -1.4em;
-      left: -2.9em;
+      @media (max-width: $breakFour) {
+        @apply w-[160px] h-[160px] top-[-1.4em] left-[-2.9em];
     }
   }
 

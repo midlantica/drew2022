@@ -95,7 +95,7 @@
       @apply gap-x-12;
       column-rule: 2px dotted $paleBlue;
       @apply text-justify;
-      hyphens: auto;
+      @apply hyphens-auto;
     }
 
     @media (max-width: $breakOne) {

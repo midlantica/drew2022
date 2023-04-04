@@ -6,7 +6,6 @@
 </template>
 
 <script setup>
-  // import { defineComponent } from 'vue'
   import { inject } from 'vue'
 
   const store = inject('store')
@@ -15,20 +14,17 @@
 <style lang='scss' scoped>
   @import '../assets/css/groovy-main.scss';
 
-  // $breakThou: 1024px;
-  // $breakOne: 840px;
-  // $breakTwo: 630px;
   $breakThree: 530px;
 
   section {
-    margin: 2rem 1.5rem 1.3rem;
+    @apply mt-10 mx-6 mb-2;
 
     @media (max-width: $breakThou) {
-      // margin-top: 2.4em;
+      //
     }
 
     @media (max-width: $breakOne) {
-      // margin: 3rem 1.5rem 0rem;
+      //
     }
 
     @media (max-width: $breakTwo) {
@@ -41,12 +37,8 @@
   }
 
   h1 {
-    font-family: $font-head;
+    @apply text-bourbon-head text-[1.5rem] leading-[2.1rem] font-medium mb-2;
     text-transform: initial;
-    @apply text-[1.5rem];
-    @apply leading-[2.1rem];
-    @apply font-medium;
-    @apply mb-2;
 
     @media (min-width: $breakThou) {
       max-width: 26ch;
@@ -70,18 +62,12 @@
   }
 
   p {
-    font-family: $font-copy;
-    color: $grey;
-    font-size: 1.125rem;
-    letter-spacing: 0.009rem;
-    @apply leading-[2.6rem];
+    @apply text-bourbon-copy text-base-grey text-[1.125rem] tracking-[0.009rem] leading-[2.6rem];
 
     @media (max-width: $breakThou) {
+      @apply gap-x-12 text-justify hyphens-auto;
       columns: 2 200px;
-      @apply gap-x-12;
       column-rule: 2px dotted transparentize($orange, 0.5);
-      @apply text-justify;
-      hyphens: auto;
     }
 
     @media (max-width: $breakOne) {
@@ -90,12 +76,9 @@
     }
 
     @media (max-width: 670px) {
+      @apply text-[1.05rem] leading-[2.4rem] pl-[1.3rem] mr-2;
       columns: initial;
-      font-size: 1.05rem;
-      @apply leading-[2.4rem];
-      padding-left: 1.3rem;
       border-left: 2px dotted transparentize($orange, 0.5);
-      margin-right: 0.5rem;
     }
 
     @media (max-width: $breakTwo) {

@@ -30,16 +30,11 @@
 <style lang='scss' scoped>
   @import "../assets/css/bourbon-main.scss";
 
-  $outRed: hsla(356, 92%, 45%, 0.3);
-  $outBlue: hsla(197, 88%, 66%, 0.3);
-
   a {
-    @apply text-base-ivory;
-    @apply no-underline;
+    @apply text-base-ivory no-underline;
 
     &:link {
-      @apply text-base-ivory;
-      @apply no-underline;
+      @apply text-base-ivory no-underline;
     }
 
     &:hover {
@@ -53,24 +48,15 @@
   h4,
   h5,
   p {
-    @apply leading-4;
-    @apply m-0;
-    @apply p-0;
-    color: $ivory !important;
+    @apply text-bourbon-ivory leading-4 m-0 p-0;
 
     a {
-      color: $ivory !important;
-      @apply no-underline;
+      @apply text-bourbon-ivory no-underline;
     }
   }
 
   nav {
-    @apply flex;
-    @apply flex-row;
-    @apply flex-wrap;
-    @apply justify-between;
-    @apply items-center;
-    padding: 0.5em 1.25em;
+    @apply flex flex-row flex-wrap justify-between items-center py-2 px-5;
 
     @media (max-width: $breakOne) {
       @apply justify-center;
@@ -78,102 +64,66 @@
   }
 
   h1 {
-    font-family: $font-subhead;
-    @apply font-normal;
-    @apply text-[4em];
-    @apply leading-none;
+    @apply text-bourbon-subhead font-normal text-[4em] leading-none tracking-[.06em] transition duration-[.25s] ease-in antialiased w-auto grow-0;
     text-shadow: 4px 0px 3px $black;
-    @apply tracking-[.06em];
-    @apply transition duration-[.25s] ease-in;
-    @apply antialiased;
-    @apply w-auto;
-    @apply grow-0;
 
     @media (max-width: $breakOne) {
-      @apply grow-0;
-      // @apply leading-[4.5rem];
-      @apply text-right;
+      @apply grow-0 text-right;
     }
 
     @media (max-width: $breakTwo) {
-      @apply grow-0;
-      @apply text-center;
+      @apply grow-0 text-center;
     }
 
     @media (max-width: $breakThree) {
       font-size: 3.05em;
-      // margin-bottom: -9px;
     }
   }
 
   section.jobDesc {
-    @apply grow;
-    @apply ml-[0.55rem] mt-[.25rem];
-    @apply transition duration-[.25s] ease-in;
-    // @apply flex;
+    @apply grow ml-[0.55rem] mt-[.25rem] transition duration-[.25s] ease-in;
 
     @media (max-width: $breakOne) {
-      @apply grow-0;
-      @apply ml-2 mt-2;
+      @apply grow-0 ml-2 mt-2;
     }
 
     @media (max-width: $breakTwo) {
-      @apply grow-0;
-      @apply text-center;
-      @apply self-center;
-      @apply ml-0 mt-2;
+      @apply grow-0 text-center self-center ml-0 mt-2;
 
       &:nth-child(1) {
-        // @apply float-left;
-        // @apply clear-left;
+        //
       }
 
       &:nth-child(2) {
-        // @apply float-left;
-        // @apply ml-0;
+        //
       }
     }
 
     @media (max-width: $breakThree) {
-      // @apply grow-0;
-      // @apply text-center;
-      // @apply self-center;
       @apply ml-0 mt-0;
 
       &:nth-child(1) {
-        // @apply float-left;
-        // @apply clear-left;
+        //
       }
 
       &:nth-child(2) {
-        // @apply float-left;
-        // @apply ml-0;
+        //
       }
     }
 
     h2 {
-      @apply text-[1.675rem];
-      @apply tracking-[0.075rem];
+      @apply text-[1.675rem] tracking-[0.075rem] leading-[1.55rem] antialiased mb-[.15rem];
       text-shadow: 3px 0px 3px $black;
-      @apply leading-[1.55rem];
-      @apply antialiased;
-      @apply mb-[.15rem];
 
       &:nth-child(2) {
-        @apply text-[1.51rem];
-        @apply mb-[.1em];
+        @apply text-[1.51rem] mb-[.1em];
       }
 
       @media (max-width: $breakTwo) {
-        @apply inline-block;
-        @apply text-[1.775em];
-        // @apply mt-[-3px];
+        @apply inline-block text-[1.775em];
 
         &:nth-child(2) {
-          @apply ml-1;
-          @apply text-[1.775em];
-          // @apply mt-[-3px];
-          // @apply text-[1.775em];
+          @apply ml-1 text-[1.775em];
         }
       }
 
@@ -182,93 +132,63 @@
 
         &:nth-child(2) {
           @apply text-[1.25em];
-          // @apply ml-1;
-          // @apply mt-[-3px];
         }
       }
     }
   }
 
   section.contact {
-    @apply uppercase;
-    @apply mt-[.5rem];
-    @apply z-10;
+    @apply uppercase mt-[.5rem] z-10 transition duration-[.25s] ease-in;
     text-shadow: 3px 0px 1px $black;
-    @apply transition duration-[.25s] ease-in;
 
     @media (max-width: $breakOne) {
-      @apply w-full;
-      @apply flex flex-row flex-wrap items-center justify-center gap-4;
+      @apply w-full flex flex-row flex-wrap items-center justify-center gap-4;
     }
 
     @media (max-width: $breakTwo) {
-      @apply mt-[0.5em];
-      @apply flex-row;
+      @apply mt-[0.5em] flex-row;
     }
 
     @media (max-width: $breakThree) {
-      @apply mt-1;
-      @apply transition duration-[.25s] ease-in;
-      @apply gap-x-2 gap-y-1;
+      @apply mt-1 transition duration-[.25s] ease-in gap-x-2 gap-y-1;
     }
 
     p {
-      font-family: $font-copy;
-      @apply tracking-[0.05rem];
-      @apply text-[1.15rem];
-      @apply leading-[1.35rem];
-      @apply lowercase;
-      @apply antialiased;
+      @apply text-bourbon-copy tracking-[0.05rem] text-[1.15rem] leading-[1.35rem] lowercase antialiased;
 
       &:nth-child(1) {
-        // @apply text-[1.25em];
+        //
       }
 
       &:nth-child(2) {
-        // @apply text-[1.25em];
+        //
       }
 
       @media (max-width: $breakOne) {
-        @apply justify-center;
-        @apply text-[1.5rem];
-        @apply tracking-[0.1785rem];
-        @apply mt-[-.3em];
-        line-height: 1.95rem;
-        // letter-spacing: 0.215rem !important;
+        @apply justify-center text-[1.5rem] tracking-[0.1785rem] mt-[-.3em] leading-[1.95rem];
 
         &:nth-child(1) {
-          // @apply float-left;
-          // @apply clear-left;
-          // @apply mr-2;
+          //
         }
 
         &:nth-child(2) {
-          // @apply float-left;
+          //
         }
       }
 
       @media (max-width: $breakTwo) {
-        @apply text-[1.05rem];
-        @apply tracking-[.09em];
+        @apply text-[1.05rem] tracking-[.09em];
       }
 
       @media (max-width: $breakThree) {
-        @apply justify-center;
-        @apply text-[1rem];
-        @apply tracking-[.09em];
-        @apply leading-5;
-        // @apply mb-[-4px];
-        @apply text-center;
-        // letter-spacing: 0.215rem !important;
+        @apply justify-center text-[1rem] tracking-[.09em] leading-5 text-center;
 
         &:nth-child(1) {
-          // @apply float-none clear-none;
-          // @apply mr-0;
+          //
         }
 
         &:nth-child(2) {
-          // @apply float-none;
-          line-height: 1.6em;
+          @apply leading-[1.6rem]
         }
       }
     }

@@ -99,7 +99,7 @@
       columns: 2 200px;
       @apply gap-x-12;
       @apply text-justify;
-      hyphens: auto;
+      @apply hyphens-auto;
       column-rule: 2px dotted transparentize($blueTech, .5);
     }
 

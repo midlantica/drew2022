@@ -112,18 +112,18 @@
     //   // @apply text-[1rem];
     //   // columns: 2 200px;
     //   @apply text-justify;
-    //   hyphens: auto;
+    //   @apply hyphens-auto;
     // }
 
     // @media (max-width: 670px) {
     //   columns: initial;
     //   @apply text-justify;
-    //   hyphens: auto;
+    //   @apply hyphens-auto;
     // }
 
     // @media (max-width: $breakTwo) {
     //   @apply text-justify;
-    //   hyphens: auto;
+    //   @apply hyphens-auto;
     // }
   }
 </style>
