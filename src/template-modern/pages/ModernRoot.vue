@@ -59,7 +59,7 @@
   .mainGrid {
     @apply grid;
     grid-template-columns: 1fr;
-    // grid-gap: 1em;
+    // @apply gap-4;
     // margin: 0em 0 1em;
     gap: 0.5rem;
     width: 90%;

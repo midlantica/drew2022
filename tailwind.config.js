@@ -81,7 +81,10 @@ module.exports = {
           orange: '#e34234',
           paleyellow: '#ffffbf99',
           accentRed: '#C02C19',
-          white: '#fffdf4'
+          white: '#fffdf4',
+          head: 'Bodoni Moda, Times, serif',
+          subhead: 'Bodoni Moda, Times, serif',
+          copy: 'Bodoni Moda, Times, serif'
         },
         punk: {
           //
