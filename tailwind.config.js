@@ -3,9 +3,28 @@ module.exports = {
   important: true,
   content: [
     './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}'
+    './src/components/**/*.vue',
+    './src/template-bourbon/components/**/*.vue',
+    './src/template-bourbon/pages/**/*.vue',
+    './src/template-corp/components/**/*.vue',
+    './src/template-corp/pages/**/*.vue',
+    './src/template-groovy/components/**/*.vue',
+    './src/template-groovy/pages/**/*.vue',
+    './src/template-modern/components/**/*.vue',
+    './src/template-modern/pages/**/*.vue',
+    './src/template-punk/components/**/*.vue',
+    './src/template-punk/pages/**/*.vue',
+    './src/template-techy/components/**/*.vue',
+    './src/template-techy/pages/**/*.vue',
+    './src/**/*.vue'
   ],
   theme: {
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square'
+    },
     extend: {
       colors: {
         base: {
@@ -30,7 +49,10 @@ module.exports = {
           orange: '#e34234',
           paleyellow: '#ffffbf99',
           accentRed: '#c02c19',
-          ivory: '#fffdf4'
+          ivory: '#fffdf4',
+          head: 'VeneerTwo, Helvetica, Arial, sans-serif',
+          subhead: 'Veneer, Helvetica, Arial, sans-serif',
+          copy: 'AmericanTypewriterStd-Med, Helvetica, Times, serif'
         },
         groovy: {
           aqua: '#99f1ec',

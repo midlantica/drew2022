@@ -4,7 +4,6 @@
 
 <style lang='scss' scoped>
   @import "../assets/css/bourbon-main.scss";
-  // @import '../assets/css/bourbon-main.scss';
 
   nav {
     @apply flex;
@@ -12,7 +11,7 @@
     @apply flex-wrap;
     @apply justify-between;
     @apply items-center;
-    padding: 0.5em 1.25em;
+    @apply my-2 mx-5;
 
     @media (max-width: $breakOne) {
       @apply justify-center;

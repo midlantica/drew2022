@@ -50,7 +50,6 @@
     display: block;
     margin-right: -2.75em;
     margin-bottom: -5.3em;
-    //
     background-image: radial-gradient(
         /* 0 - 25% */
         $groovy-aqua 0%,
@@ -80,40 +79,8 @@
     @apply hover:bg-groovy-redDk tracking-wide hover:text-white hover:cursor-pointer;
 
     a {
-      @apply text-base-ivory;
-      @apply no-underline;
+      @apply text-base-ivory no-underline;
       @apply min-[375px]:text-[1rem] sm:text-[1rem] md:text-[1rem];
-
-      &:link {
-        @apply text-base-ivory;
-        @apply no-underline;
-      }
-    }
-
-  }
-
-  .groovyOval {
-    @apply w-fit;
-    @apply py-[.15rem] px-5 pb-[.3rem];
-    @apply border border-groovy-orange border-solid;
-    @apply rounded-[20rem];
-    @apply text-[1rem];
-    @apply leading-normal;
-
-    &:hover {
-      @apply bg-groovy-redDk;
-      @apply text-white;
-      @apply cursor-pointer;
-    }
-
-    a {
-      font-family: $font-copy;
-      @apply text-white;
-
-      &:hover {
-        @apply text-white;
-      }
-
     }
 
   }

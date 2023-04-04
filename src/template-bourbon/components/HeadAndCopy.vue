@@ -39,36 +39,20 @@
   }
 
   .headBlock {
-    @apply grid;
+    @apply grid gap-x-1.5 justify-items-start items-center auto-rows-auto;
     grid-template-columns: 88px auto;
-    grid-auto-rows: auto;
-    grid-template-rows: auto;
-    @apply gap-x-1.5;
-    @apply justify-items-start;
-    @apply items-center;
-    // @apply mt-2;
+    // grid-template-rows: auto;
 
     a.drewhead {
-      background-image: url(/img/drew_mug_red.png);
-      @apply bg-no-repeat;
-      @apply bg-cover;
-      @apply w-[78px];
-      @apply h-[94px];
       grid-column: 1 / 2;
       grid-row: 1 / 2;
-      @apply self-start;
+      @apply bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')];
     }
 
     h1 {
-      @apply inline-block;
-      font-family: $font-subhead;
-      color: $accent-red;
-      @apply text-[1.7rem];
-      @apply p-0;
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      @apply self-center;
-      @apply max-w-[30ch];
+      @apply text-bourbon-subhead text-[1.7rem] inline-block text-bourbon-accentRed p-0 self-center max-w-[30ch];
 
       @media (min-width: $breakThou) {
         @apply max-w-[30ch];
