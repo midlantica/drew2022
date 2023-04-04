@@ -14,18 +14,11 @@
 <style lang="scss" scoped>
   @import "../assets/css/corp-main.scss";
 
-  // $breakOne: 840px;
-  // $breakTwo: 630px;
-  // $breakThree: 430px;
-
-  $paleBlue: #7cc3fa;
-
   .wrap {
     @apply flex;
     @apply flex-col;
     @apply flex-nowrap;
     @apply mt-4 mr-4 mb-4 ml-6;
-    // @apply relative;
 
     @media (max-width: $breakTwo) {
       margin: 0em 1em 1em;
@@ -33,11 +26,8 @@
   }
 
   h1 {
-    font-family: $font-head;
-    // @apply font-medium;
-    color: $blue-dark;
+    @apply font-corpHead text-corp-blueDark;
     @apply normal-case;
-    // @apply text-[1.5em];
     margin: 0em 0em .5em;
     @apply p-0;
     @apply leading-[2rem];
@@ -72,21 +62,21 @@
   }
 
   p.smallCaps {
-    font-family: $font-caps;
-    font-variant: small-caps;
-    font-size: 75%;
     @apply font-medium;
+    @apply capitalize;
+    @apply text-[75%];
+    @apply tracking-wider;
   }
 
   p {
     color: transparentize($black, 0.15);
-    font-family: $font-copy;
+    @apply font-corpCopy;
     @apply font-normal;
     font-size: 1.1rem;
     line-height: 2.9rem;
     padding-left: 1.2rem;
     text-align: justify;
-    border-left: 2px dotted $paleBlue;
+    @apply border-2 border-dotted border-corp-paleBlue;
     @apply ml-[.2rem];
     letter-spacing: 0.00rem;
 
@@ -105,10 +95,8 @@
 
     @media (max-width: 670px) {
       columns: initial;
-      // font-size: 1.05rem;
-      // @apply leading-[2.4rem];
       padding-left: 1.3rem;
-      border-left: 2px dotted $paleBlue;
+      @apply border-2 border-dotted border-corp-paleBlue;
       margin-right: 0.5rem;
     }
 
