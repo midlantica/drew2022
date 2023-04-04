@@ -8,13 +8,12 @@
   </transition>
 
   <footer>
-    <NavvyEmpty />
+    <nav class="h-3" />
   </footer>
 </template>
 
 <script setup>
   import Navvy from '../components/Navvy.vue'
-  import NavvyEmpty from '../components/NavvyEmpty.vue'
   import ExtrasC from '../../components/ExtrasC.vue'
 </script>
 

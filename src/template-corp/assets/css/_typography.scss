@@ -1,60 +1,31 @@
 h1, h2, h3, h4, h5 {
-  color: $accent-red;
-  font-family: $font-subhead;
-  @apply leading-[1.1em];
-  @apply font-normal;
-  @apply text-left;
-  margin: .75em 0 .25em 0;
-  @apply p-0;
-  @apply tracking-[.025em];
-  text-transform: uppercase;
+  @apply font-corpHead text-base-accentRed font-normal leading-[1.1em] text-left mt-3 mx-0 mb-1 p-0 tracking-[.025em] uppercase;
 }
 
 h2 {
-  font-family: $font-subhead;
-  color: $accent;
-  font-size: 2.25em;
-  @apply normal-case;
+  @apply font-corpSubhead text-base-accent text-4xl normal-case;
 }
 
 h3 {
-  @apply text-[1.7em];
-  color: $blue-dark;
+  @apply text-[1.7em] text-corp-blueDark;
 }
 
 h4 {
-  @apply text-[1.5em];
-  @apply tracking-[.04em];
+  @apply text-[1.5em] tracking-[.04em];
 }
 
 h5 {
-  font-size: $base-font-size;
+  font-size: 1rem;
 }
 
 p {
-  font-family: $font-copy;
-  @apply font-normal;
-  @apply text-left;
-  @apply m-0;
-  @apply p-0;
-  @apply text-[1.3em];
-  letter-spacing: -0.013em;
-  line-height: 2.1em;
+  @apply font-corpCopy font-normal text-left m-0 p-0 text-[1.3em] tracking-[-0.013em] leading-[2.1em];
 }
 
 ul {
-  list-style-type: square;
-  padding: 0;
-  margin: 0 -1em 1em 0em;
-  font-family: $font-copy;
-  color: $blue-mid;
-  line-height: 1.5rem;
-  @apply text-left;
+  @apply font-corpCopy list-square p-0 mt-0 mr-[-1em] mb-4 ml-0 text-corp-blueMid leading-6 text-left;
 
   li {
-    list-style-position: outside;
-    margin: .25em 0em 0 1em;
-    padding-left: -1em;
-    line-height: 1.6em;
+    @apply list-outside leading-[1.6rem] pl-[-1em] mt-1 mr-0 mb-0 ml-4;
   }
 }

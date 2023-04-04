@@ -83,9 +83,11 @@
   }
 
   p.smallCaps {
-    font-variant: small-caps !important;
-    @apply text-[185%];
+    // @apply text-[185%];
+    @apply text-[180%];
     @apply font-light;
+    @apply capitalize;
+    @apply tracking-wider;
   }
 
   p {

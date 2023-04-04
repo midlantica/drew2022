@@ -164,8 +164,11 @@
 
     p.smallCaps {
       @apply text-[90%];
-      font-variant: small-caps !important;
       color: red !important;
+      //
+      @apply font-medium;
+      @apply capitalize;
+      // @apply tracking-wider;
     }
 
     p {

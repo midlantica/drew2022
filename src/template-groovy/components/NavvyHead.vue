@@ -66,12 +66,10 @@
   }
 
   .groovyOvalBtn {
-    @apply w-fit py-[.1rem] px-4 pb-[.2rem] border border-groovy-orange border-solid rounded-[20rem] leading-normal gap-0;
-    @apply hover:bg-groovy-redDk tracking-wide hover:text-white hover:cursor-pointer;
+    @apply w-fit py-[.1rem] px-4 pb-[.2rem] border border-groovy-orange border-solid rounded-[20rem] leading-normal gap-0 tracking-wide hover:bg-groovy-redDk hover:text-white hover:cursor-pointer;
 
     a {
-      @apply text-base-ivory no-underline;
-      @apply min-[375px]:text-[1rem] sm:text-[1rem] md:text-[1rem];
+      @apply text-base-ivory no-underline min-[375px]:text-[1rem] sm:text-[1rem] md:text-[1rem];
     }
 
   }

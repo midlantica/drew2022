@@ -37,7 +37,7 @@
   }
 
   h1 {
-    @apply text-bourbon-head text-[1.5rem] leading-[2.1rem] font-medium mb-2;
+    @apply font-groovyHead text-[1.5rem] leading-[2.1rem] font-medium mb-2 text-groovy-redDk;
     text-transform: initial;
 
     @media (min-width: $breakThou) {
@@ -62,7 +62,7 @@
   }
 
   p {
-    @apply text-bourbon-copy text-base-grey text-[1.125rem] tracking-[0.009rem] leading-[2.6rem];
+    @apply font-groovyCopy text-base-grey text-[1.125rem] tracking-[0.009rem] leading-[2.6rem];
 
     @media (max-width: $breakThou) {
       @apply gap-x-12 text-justify hyphens-auto;

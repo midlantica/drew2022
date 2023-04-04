@@ -26,18 +26,8 @@
   }
 
   h1 {
-    @apply font-corpHead text-corp-blueDark;
-    @apply normal-case;
-    margin: 0em 0em .5em;
-    @apply p-0;
-    @apply leading-[2rem];
-    @apply transition duration-[.25s] ease-in;
-    @apply tracking-[0.01rem];
-    @apply w-full;
-    //
-    @apply font-semibold;
-    max-width: 28ch;
-    @apply text-[1.3rem];
+    // max-width: 28ch;
+    @apply max-w-[28ch] font-corpHead text-corp-blueDark normal-case p-0 leading-[2rem] transition duration-[.25s] ease-in tracking-[0.01rem] w-full font-semibold text-[1.3rem] mt-0 mx-0 mb-2;
 
     @media (min-width: $breakThou) {
       max-width: 28ch;
@@ -62,42 +52,27 @@
   }
 
   p.smallCaps {
-    @apply font-medium;
-    @apply capitalize;
-    @apply text-[75%];
-    @apply tracking-wider;
+    @apply tracking-wider text-[75%] capitalize font-medium;
   }
 
   p {
     color: transparentize($black, 0.15);
-    @apply font-corpCopy;
-    @apply font-normal;
-    font-size: 1.1rem;
-    line-height: 2.9rem;
-    padding-left: 1.2rem;
-    text-align: justify;
-    @apply border-2 border-dotted border-corp-paleBlue;
-    @apply ml-[.2rem];
-    letter-spacing: 0.00rem;
+    @apply font-corpCopy font-normal border-l-2 border-dotted border-corp-paleBlue ml-[.2rem] text-justify pl-[1.2rem] leading-[2.9rem] text-[1.1rem] tracking-normal;
 
     @media (max-width: $breakThou) {
       columns: 2 200px;
-      @apply gap-x-12;
-      column-rule: 2px dotted $paleBlue;
-      @apply text-justify;
-      @apply hyphens-auto;
+      column-rule: 2px dotted #7cc3fa;
+      @apply gap-x-12 text-justify hyphens-auto;
     }
 
     @media (max-width: $breakOne) {
-      @apply tracking-[0.05rem];
       columns: 2 200px;
+      @apply tracking-[0.05rem];
     }
 
     @media (max-width: 670px) {
       columns: initial;
-      padding-left: 1.3rem;
-      @apply border-2 border-dotted border-corp-paleBlue;
-      margin-right: 0.5rem;
+      @apply border-l-2 border-dotted border-corp-paleBlue mr-2 pl-[1.3rem];
     }
 
     @media (max-width: $breakTwo) {

@@ -9,8 +9,8 @@ $font-copy        :"Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !imp
 // ############################
 
 body {
-  font-family: $font;
-  font-size: $base-font-size;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
   background: #333;
-  @apply m-0;
+  margin: 0;
 }

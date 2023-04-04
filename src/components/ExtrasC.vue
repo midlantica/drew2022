@@ -88,6 +88,10 @@
 </script>
 
 <style lang="scss" scoped>
+
+  $ivory: #fffdf4;
+  $accentRed: #7c0000;
+
   h1 {
     @apply text-[2em];
     @apply text-center;
@@ -120,7 +124,7 @@
         @include shadow;
 
         &:hover {
-          border: 2px solid lighten($accent-red, 0);
+          border: 2px solid lighten($accentRed, 0);
           @include no-shadow;
         }
       }
@@ -139,17 +143,17 @@
         @include clearfix;
 
         &:hover {
-          border-bottom: 1px solid lighten($accent-red, 30);
+          border-bottom: 1px solid lighten($accentRed, 30);
         }
       }
 
       &:hover p {
         color: purple;
-        border-bottom: 1px solid lighten($accent-red, 30);
+        border-bottom: 1px solid lighten($accentRed, 30);
       }
 
       &:hover img {
-        border: 2px solid lighten($accent-red, 0);
+        border: 2px solid lighten($accentRed, 0);
         @include no-shadow;
         @apply cursor-pointer;
       }

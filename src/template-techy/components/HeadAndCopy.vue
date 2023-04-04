@@ -73,10 +73,10 @@
   }
 
   p.smallCaps {
-    // font-family: $font-caps;
-    font-variant: small-caps;
-    font-size: 80%;
     // @apply font-medium;
+    @apply capitalize;
+    @apply text-[80%];
+    @apply tracking-wider;
   }
 
   p {

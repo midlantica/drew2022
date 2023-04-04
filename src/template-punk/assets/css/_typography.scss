@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5 {
-  color: $accent-red;
+  @apply text-base-accentRed;
   @apply leading-[1.1em];
   @apply font-normal;
   @apply text-left;

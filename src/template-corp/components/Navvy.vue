@@ -68,15 +68,13 @@
   h4,
   h5,
   p {
-    @apply leading-4;
+    @apply leading-4 text-corp-blueDark;
     @apply m-0;
     @apply p-0;
-    color: $blue-dark !important;
     @apply normal-case;
 
     a {
-      color: $blue-dark !important;
-      @apply no-underline;
+      @apply no-underline text-corp-blueDark;
     }
   }
 
@@ -99,8 +97,7 @@
     background-image: url(/img/drew_mug_red.png);
     // @apply bg-no-repeat;
     // @apply bg-cover;
-    width: 80px;
-    height: 80px;
+    @apply w-[80px] h-[80px];
     background-position: -39px -59px;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
     @apply bg-no-repeat;
@@ -108,9 +105,6 @@
     filter: hue-rotate(210deg) grayscale(50%);
     border-radius: 1px;
     margin-bottom: .75rem;
-    // width: 72px;
-    // height: 88px;
-    // @apply block;
 
     @media (max-width: $breakTwo) {
       background-position: -40px -50px !important;
@@ -119,7 +113,7 @@
   }
 
   h1 {
-    font-family: $font-copy;
+    @apply font-corpCopy;
     @apply text-[1.5rem];
     @apply transition duration-[.25s] ease-in;
     @apply font-medium;
@@ -142,7 +136,7 @@
   }
 
   h3 {
-    font-family: $font-copy;
+    @apply font-corpCopy;
     @apply text-[1.35rem];
     @apply transition duration-[.25s] ease-in;
     @apply font-bold;
@@ -228,7 +222,7 @@
     }
 
     p {
-      font-family: $font-copy;
+      @apply font-corpCopy;
       @apply text-[1.3em];
       @apply tracking-[.01em];
       @apply items-center;

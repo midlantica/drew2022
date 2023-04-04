@@ -106,30 +106,13 @@
   $carouselFade: 0.5;
 
   .projectBox {
-    @apply bg-[#f2f2f2];
-    @apply rounded;
-    @apply p-2;
-    @apply relative;
-    @apply lowercase;
-    @include clearfix;
+    @apply bg-[#f2f2f2] rounded p-2 relative lowercase clear-both;
 
     .projectBox__top {
-      @apply flex;
-      @apply flex-row;
-      @apply flex-nowrap;
-      @apply items-start;
-      @apply h-6;
-      @apply mb-1;
-      @apply relative;
-      @apply z-20;
+      @apply flex flex-row flex-nowrap items-start h-6 mb-1 relative z-20;
 
       .projectHead {
-        @apply text-[0.9em];
-        @apply text-center;
-        @apply normal-case;
-        @apply m-auto;
-        @apply cursor-pointer;
-        @apply mt-[-2px];
+        @apply text-[0.9em] text-center normal-case m-auto cursor-pointer mt-[-2px];
 
         div a {
           @apply cursor-pointer;
@@ -407,6 +390,9 @@
       p {
         @apply text-gray-800;
       }
+    }
+    .projectHead {
+      @apply font-corpHead uppercase mt-[1px] #{!important};
     }
 
     .miniGallery div .box {

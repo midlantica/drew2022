@@ -14,20 +14,10 @@ html, html a {
   @apply antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-size: $base-font-size;
+  font-size: 0.85em;
 }
 
 html, body {
   font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: $base-font-size;
+  font-size: 0.85em;
 }
-
-// html {
-  // // background: rgb(20, 20, 20) !important;
-  // @apply bg-[hsl(320,100%,9%)];
-  // background: url(/img/bg/bg_bak_dk4.jpeg) no-repeat center center fixed;
-  // -webkit-@apply bg-cover;
-  // -moz-@apply bg-cover;
-  // -o-@apply bg-cover;
-  // @apply bg-cover;
-// }

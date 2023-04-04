@@ -147,56 +147,31 @@
   // ALL QUOTES ########################
 
   .arrowBtn {
-    @apply text-white;
-    @apply font-bold;
-    @apply select-none;
+    @apply text-white font-bold select-none;
 
     &:hover {
-      @apply text-[yellow];
-      @apply cursor-pointer;
+      @apply text-[yellow] cursor-pointer;
     }
   }
 
   .quoteBlock {
-    @apply flex;
-    @apply justify-center;
-    @apply items-center;
-    @apply pt-2 px-4 pb-2;
-    @apply text-center;
-    @apply m-auto;
-    @apply w-full;
-    @apply basis-auto;
-    @apply min-w-full;
-    @apply min-h-[5rem];
-    @apply leading-normal;
-    @apply text-[0.9rem];
-    @apply gap-2;
+    @apply flex justify-center items-center pt-2 px-4 pb-2 text-center m-auto w-full basis-auto min-w-full min-h-[5rem] leading-normal text-[0.9rem] gap-2;
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-      @apply clear-both;
-      @apply my-2;
-      @apply gap-y-0;
-      @apply text-[0.8rem];
-      @apply gap-1;
+        @apply clear-both my-2 gap-y-0 text-[0.8rem] gap-1;
     }
 
     p,
     cite {
-      @apply not-italic;
-      @apply inline;
-      @apply leading-normal;
+      @apply not-italic inline leading-normal;
     }
 
     cite {
-      @apply break-keep;
-      @apply whitespace-nowrap;
+      @apply break-keep whitespace-nowrap;
     }
 
     .quotePad {
-      @apply p-0;
-      @apply leading-4;
-      @apply m-auto;
-      @apply select-none;
+      @apply p-0 leading-4 m-auto select-none;
     }
   }
 
@@ -205,31 +180,24 @@
 
   // MODERN ########################
   .modern .quoteBlock {
-    font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-    @apply text-[hsl(0,0%,80%)];
-    @apply mt-12;
+    @apply font-modernCopy text-[hsl(0,0%,80%)] mt-12;
 
     p {
-      font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+      @apply font-modernCopy
     }
 
     .cite {
-      font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+      @apply font-modernCopy
     }
   }
 
   // BOURBON ########################
   .bourbon .quoteBlock {
-    font-family: "AmericanTypewriterStd-Med";
-    @apply bg-[#932213];
-    @apply rounded-sm;
+    @apply font-bourbonCopy bg-[#932213] rounded-sm;
     @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-      @apply clear-both;
-      @apply mt-2;
-      @apply mb-2;
-      @apply gap-y-0;
+        @apply clear-both mt-2 mb-2 gap-y-0;
     }
 
     .quotePad {
@@ -237,8 +205,7 @@
     }
 
     .quotePad a {
-      @apply text-white;
-      @apply cursor-pointer;
+      @apply text-white cursor-pointer;
 
       &:hover {
         @apply text-[yellow];
@@ -246,11 +213,7 @@
     }
 
     p {
-      @apply text-[0.9em];
-      color: $ivory !important;
-      @apply tracking-wider;
-      @apply leading-[1.5em];
-      @apply text-center;
+      @apply text-[0.9em] text-base-ivory tracking-wider leading-[1.5em] text-center;
       animation: fadeTexter 2s forwards;
 
       @media only screen and (min-device-width: 700px) and (max-device-width: $breakThou) {
@@ -266,51 +229,35 @@
     // GROOVY ########################
     .groovy .quoteBlock {
       p {
-        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+        @apply font-modernCopy
       }
 
       .cite {
-        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+        @apply font-modernCopy
       }
     }
   }
 
   // GROOVY ########################
   .groovy .quoteBlock {
-    font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    @apply bg-[#932213];
-    @apply pt-[0.75em] px-[2em] pb-[1em];
+    @apply font-groovyCopy bg-[#932213] pt-[0.75em] px-[2em] pb-[1em] text-center;
     @include shadow;
-    @apply text-center;
-
   }
 
   // TECHY ########################
   .techy .quoteBlock {
-    // @apply font-['Dosis,Helvetica,Arial,sans-serif'];
-    font-family: 'Dosis, "Helvetica Neue", Arial, sans-serif' !important;
-    background: $mango;
-    @apply p-4;
-    @apply min-h-min;
+    @apply font-techyCopy p-4 min-h-min bg-techy-mango;
 
     .arrowBtn {
-      color: $blueTech;
-      @apply pt-0 px-2 pb-[0.2rem];
-      border: 1px solid $blueTech;
-      @apply leading-[1.3];
+      @apply text-techy-blueTech pt-0 px-2 pb-[0.2rem] leading-[1.3] border border-solid border-techy-blueTech;
 
       &:hover {
-        color: $mango;
-        background: $blueTech;
+        @apply bg-techy-blueTech text-techy-mango;
       }
     }
 
     p {
-      @apply text-[1em];
-      color: $blueTech;
-      @apply text-center;
-      @apply tracking-wide;
-      font-family: 'Dosis, "Helvetica Neue", Arial, sans-serif' !important;
+      @apply text-[1em] text-techy-blueTech text-center tracking-wide font-techyCopy;
 
       @media (max-width: $breakThou) {
         @apply text-[1.25em];
@@ -325,35 +272,24 @@
       }
 
       @media (max-width: $breakThree) {
-        @apply text-[.85em];
-        @apply leading-5;
+        @apply text-[.85em] leading-5;
       }
     }
 
     .cite {
-      @apply inline;
-      color: $blueTech;
-      @apply tracking-[.08em];
+      @apply text-techy-blueTech tracking-[.08em] inline;
     }
   }
 
   // CORP ########################
   .corp .quoteBlock {
-    font-family: "Bodoni Moda", Times, serif !important;
-    @apply bg-[#01487F];
-    @apply py-3 px-3;
-    @apply text-center;
-    @apply text-white;
-    @apply min-h-min;
+    @apply font-corpCopy bg-corp-blueDark py-3 px-3 text-center min-h-min text-white;
 
     .arrowBtn {
-      @apply text-white;
-      @apply py-0 px-1;
-      @apply font-bold;
+      @apply text-white py-0 px-1 font-bold;
 
       &:hover {
-        color: $mango;
-        @apply bg-[#00355d];
+        @apply text-techy-mango bg-corp-blueDark;
       }
     }
 
@@ -374,22 +310,22 @@
     }
 
     p {
-      font-family: "Bodoni Moda", Times, serif !important;
+      @apply font-corpCopy;
     }
 
     .cite {
-      font-family: "Bodoni Moda", Times, serif !important;
+      @apply font-corpCopy;
     }
   }
 
   // PUNK ########################
   .punk .quoteBlock {
     p {
-      font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+      @apply font-modernCopy
     }
 
     .cite {
-      font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+      @apply font-modernCopy
     }
   }
 

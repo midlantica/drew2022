@@ -50,17 +50,7 @@
 
 <style lang="scss" scoped>
   .about {
-    @apply bg-[#fbf3bb];
-    @apply py-5 px-7;
-    @apply flex;
-    @apply flex-row;
-    @apply flex-nowrap;
-    @apply justify-center;
-    @apply items-center;
-    @apply content-center;
-    @apply self-center;
-    @apply rounded-sm;
-    @apply cursor-pointer;
+    @apply bg-[#fbf3bb] py-5 px-7 flex flex-row flex-nowrap justify-center items-center content-center self-center rounded-sm cursor-pointer;
     @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
 
     @media (max-width: $breakThou) {
@@ -77,17 +67,7 @@
   }
 
   .flagBox {
-    @apply flex;
-    @apply flex-col;
-    //
-    @apply content-center;
-    @apply items-center;
-    @apply justify-center;
-    @apply self-center;
-    //
-    @apply float-left;
-    @apply clear-left;
-    @apply basis-auto;
+    @apply flex flex-col content-center items-center justify-center self-center float-left clear-left basis-auto;
 
     @media (max-width: $breakFour) {
       @apply mb-2;
@@ -95,33 +75,12 @@
   }
 
   .flag {
-    @apply block;
-    background: url("/img/brit_amer_flag.svg");
-    @apply bg-no-repeat;
-    @apply mr-4;
-    background-size: contain;
-    background-position-y: center;
-    //
-    @apply content-center;
-    @apply items-center;
-    @apply justify-center;
-    @apply self-center;
-    @apply w-[100px];
-    @apply h-[60px];
+    @apply block bg-no-repeat mr-4 content-center items-center justify-center self-center w-[100px] h-[60px] bg-[url('/img/brit_amer_flag.svg')] bg-center bg-contain;
   }
 
   p {
-    @apply block;
     color: lighten($grey, 15);
-    @apply text-[0.9em];
-    @apply leading-[1.4em];
-    @apply tracking-wider;
-    //
-    @apply content-center;
-    @apply items-center;
-    @apply justify-center;
-    @apply self-center;
-    @apply text-left;
+    @apply block text-[0.9em] leading-[1.4em] tracking-wider content-center items-center justify-center self-center text-left;
   }
 
   .corp .about {
@@ -131,55 +90,42 @@
   }
 
   .punk .about {
-
     //
+
     p {
       margin: 0.25rem auto;
     }
   }
 
   .techy .about {
-    background: #423BA0 !important;
+    @apply bg-techy-blueTech;
 
-    //
     p {
-      @apply text-white;
-      margin: 0.25rem auto;
+      @apply text-white my-1 mx-auto;
     }
   }
 
   .corp .about {
-
     //
+
     p {
       font-family: "Bodoni Moda", Times, serif !important;
-      @apply text-[0.9rem];
-      @apply tracking-[0.02rem];
-      @apply leading-6;
-      @apply m-0;
-      @apply font-medium;
+      @apply text-[0.9rem] tracking-[0.02rem] leading-6 m-0 font-medium;
 
       @media (max-width: $breakThou) {
-        @apply text-[1.15rem];
-        line-height: 1.75rem;
+        @apply text-[1.15rem] leading-7;
       }
 
       @media (max-width: $breakTwo) {
-        @apply text-[1rem];
-        @apply leading-6;
+        @apply text-[1rem] leading-6;
       }
     }
   }
 
   .modern .about {
-    @apply flex;
-    @apply flex-col;
     margin: initial;
-    margin-top: auto;
-    @apply w-full;
-    @apply gap-4;
     box-shadow: 2px 2px 10px 0px black;
-    @apply rounded-[3px];
+    @apply flex flex-col w-full gap-4 rounded-[3px] mt-auto;
 
     @media (max-width: 850px) {
       @apply flex-row;
@@ -194,39 +140,18 @@
     }
 
     .flag {
-      @apply block;
       background: url("/img/brit_amer_flag.svg");
-      @apply bg-no-repeat;
       background-size: contain;
       margin-right: initial !important;
       background-position-y: center;
       //
-      @apply content-center;
-      @apply items-center;
-      @apply justify-center;
-      @apply self-center;
-      @apply w-[100px];
-      @apply h-[60px];
+      @apply block bg-no-repeat content-center items-center justify-center self-center w-[100px] h-[60px];
     }
 
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
       font-size: clamp(0.75rem, 0.8rem, 1.15rem) !important;
-      @apply tracking-normal;
-      @apply leading-6;
-      @apply m-0;
-      @apply font-light;
-      @apply text-base-ivory;
-
-      // @media (max-width: $breakThou) {
-      //   @apply text-[1.15rem];
-      //   line-height: 1.75rem;
-      // }
-
-      // @media (max-width: $breakTwo) {
-      //   @apply text-[1rem];
-      //   @apply leading-6;
-      // }
+      @apply tracking-normal leading-6 m-0 font-light text-base-ivory;
     }
   }
 </style>
