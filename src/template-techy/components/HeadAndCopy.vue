@@ -15,7 +15,7 @@
   @import '../assets/css/techy-main.scss';
 
   section {
-    margin: 2rem 1.85rem 0rem 2.25rem;
+    @apply mt-11 mr-[1.95rem] mb-0 ml-10;
 
     @media (min-width: $breakThou) {
       //
@@ -23,12 +23,10 @@
 
     @media (max-width: $breakThou) {
       margin-top: 1.5rem;
-      @apply ml-8;
-      @apply ml-8;
+      @apply mt-8 ml-8;
     }
 
     @media (max-width: $breakOne) {
-      @apply ml-4;
       @apply ml-4;
     }
 
@@ -42,25 +40,18 @@
   }
 
   h1 {
-    font-family: $font-head;
-    @apply font-semibold;
-    text-transform: initial;
-    @apply leading-[2.2rem];
-    @apply text-[1.7rem];
-    margin-bottom: .85rem;
-    margin-top: 2rem;
-    color: $blueTech;
+    @apply text-techy-blueTech font-semibold font-techyHead leading-[2rem] text-[1.5rem] mt-8 mb-4 normal-case;
 
     @media (min-width: $breakThou) {
       max-width: 26ch;
     }
 
     @media (max-width: $breakThou) {
-      max-width: initial;
+      @apply max-w-none;
     }
 
     @media (max-width: $breakOne) {
-      max-width: initial;
+      @apply max-w-none;
     }
 
     @media (max-width: $breakTwo) {
@@ -68,76 +59,46 @@
     }
 
     @media (max-width: $breakThree) {
-      max-width: initial;
+      @apply max-w-none;
     }
   }
 
   p.smallCaps {
-    // @apply font-medium;
-    @apply capitalize;
-    @apply text-[80%];
-    @apply tracking-wider;
+    @apply capitalize text-[80%] tracking-wider;
   }
 
   p {
-    font-family: $font-copy;
-    @apply text-[1.3rem];
-    @apply leading-[3rem];
+    @apply text-[1.2rem] font-techyCopy leading-[2.8rem] tracking-[.06em];
     color: transparentize($blueTech, .2);
-    @apply tracking-[.06em];
 
     @media (min-width: $breakThou) and (-webkit-min-device-pixel-ratio: 2) {
-      // @apply text-[1.2rem];
-      // line-height: 2.6em;
+      //
     }
 
     @media (max-width: $breakThou) {
-      @apply text-[1.2rem];
-      line-height: 2.1em;
-      @apply tracking-wider;
-      text-align: justify;
       columns: 2 200px;
-      @apply gap-x-12;
-      @apply text-justify;
-      @apply hyphens-auto;
       column-rule: 2px dotted transparentize($blueTech, .5);
+      @apply text-[1.2rem] leading-[2.1em] text-justify tracking-wider gap-x-12 hyphens-auto;
     }
 
     @media (max-width: $breakOne) {
-      // @apply text-[1rem];
-      // line-height: 2.2em;
-      // margin: 1.5em .5em 0;
-      // letter-spacing: 0.00em;
-      // background: red;
       columns: 2 200px;
     }
 
     @media (max-width: $breakTwo) {
-      @apply text-[1.2rem];
-      line-height: 2.3em;
-      // margin: 1em 1em 0;
-      @apply tracking-[.01em];
-      // background: red;
+      @apply text-[1.2rem] leading-[2.3em] tracking-[.01em];
     }
 
     @media (max-width: $breakTwo) and (-webkit-min-device-pixel-ratio: 2) {
       @apply text-[1.15rem];
-      // line-height: 2.4em;
-      // margin: 1em 1em 0;
-      // padding: 0 1em;
-      // background: red;
     }
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-      margin: 0.5em 0em 0em;
-      // @apply pb-4;
-      font-size: 1.18em;
-      padding: 0em 0em 0em;
-      // background: purple;
+        @apply text-[1.18em] mt-2 mr-0 mb-0 pt-0 px-0 pb-0;
     }
 
     @media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
-      // background: red;
+      //
     }
 
   }

@@ -125,7 +125,7 @@
     //
 
     .projectBox {
-      background: none;
+      @apply bg-transparent;
 
       @media (max-width: $breakThou) {
         //
@@ -148,87 +148,56 @@
       }
 
       p {
-        font-family: Spartan, Helvetica, Arial, sans-serif !important;
-        @apply text-white;
-        @apply text-[1rem];
-        @apply text-center;
-        @apply lowercase;
-        @apply tracking-[0em];
+        @apply font-modernCopy text-white text-[1rem] text-center lowercase tracking-[0em];
       }
     }
 
     .miniGallery div .box {
-      @apply h-[168px];
-      background: none !important;
-      border: 1px solid transparent !important;
-      @apply rounded-xl;
-      @apply top-0;
-      @apply relative;
+      @apply h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
+      // border: 1px solid transparent !important;
 
       @media (max-width: $breakThou) {
         @apply min-h-min;
       }
 
       &:hover {
-        @apply ease-out;
-        @apply rounded-xl;
-        border: 1px solid transparentize(white, .5) !important;
-        box-shadow: 0px 0px 1rem 0px #d71d5b;
-        // @apply top-[-5px];
+        @apply ease-out rounded-xl border border-solid border-[#FFFFFF80] shadow-[0px_0px_1rem_0px_#d71d5b];
 
         p {
           @apply top-[-5px];
         }
 
         svg {
-          @apply relative;
-          @apply top-[-5px];
-          @apply ease-out;
+          @apply relative top-[-5px] ease-out;
 
           &:hover {
+            @apply opacity-[.8] relative ease-out;
             stroke: $accent-red;
-            @apply opacity-[.8];
-            @apply relative;
-            @apply ease-out;
           }
         }
       }
 
       p {
-        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-        @apply text-white;
-        @apply text-[1rem];
-        @apply relative;
-        @apply lowercase;
-        @apply top-[5px];
-        @apply text-center;
-        @apply mt-[4px] mx-0 mb-0;
-        @apply ease-out;
+        @apply font-modernCopy text-white text-[1rem] relative lowercase top-[5px] text-center mt-[4px] mx-0 mb-0 ease-out;
 
         &:hover {
           @apply ease-out;
-          // @apply top-[-5px];
         }
       }
 
       .iconSVG {
-        @apply relative;
-        @apply ease-out;
+        @apply relative ease-out;
         width: initial !important;
 
         &:hover {
-          @apply relative;
-          @apply ease-out;
-          @apply top-[-5px];
+          @apply relative ease-out top-[-5px];
         }
 
         svg path,
         svg polygon,
         svg rect,
         svg polyline {
-          @apply stroke-white;
-          @apply top-[-5px];
-          @apply ease-out;
+          @apply stroke-white top-[-5px] ease-out;
         }
       }
 
@@ -236,8 +205,8 @@
   }
 
   body.bourbon {
-
     //
+
     .projectBox {
       @include box-shadow(0px, 2px, 6px, -2px, hsla(0, 0%, 0%, .9));
 
@@ -267,7 +236,6 @@
     }
 
     .miniGallery div .box {
-      // @apply h-[130px];
       @apply h-[181.5px];
 
       p {
@@ -286,8 +254,8 @@
   }
 
   body.groovy {
-
     //
+
     .projectBox {
       @include box-shadow(0px, 6px, 0px, 0px, hsla(0, 0%, 0%, 0.25));
 
@@ -316,12 +284,10 @@
     }
 
     .miniGallery div .box {
-      height: 170px !important;
+      @apply h-[170px];
 
       p {
-        @apply font-groovyCopy;
-        @apply text-center;
-        @apply text-gray-800;
+        @apply font-groovyCopy text-center text-gray-800;
       }
     }
 
@@ -359,12 +325,24 @@
     }
 
     .miniGallery div .box {
-      height: 167px !important;
+      @apply h-[167px] border border-solid border-gray-200 ease-out duration-200;
+
+      &:hover {
+        @apply h-[167px] border-2 border-solid border-techy-mango ease-out duration-200;
+      }
 
       p {
-        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
-        @apply text-center;
-        @apply text-gray-800;
+        @apply font-techyCopy text-center text-gray-800 ease-out duration-200;
+      }
+
+      svg {
+        @apply ease-out duration-200;
+
+        path,
+        polygon,
+        circle {
+          @apply ease-out duration-200;
+        }
       }
     }
   }
@@ -373,7 +351,7 @@
 
     //
     .projectBox {
-      background: #d7e7f3;
+      @apply bg-base-offWhite;
       @include box-shadow(0px, 1px, 1px, 0px, hsla(0, 0%, 0%, 0.5), false);
 
       @media (max-width: $breakThou) {
@@ -401,18 +379,17 @@
     }
 
     .miniGallery div .box {
-      height: 182px !important;
-      border: none;
+      @apply h-[182px];
+      @apply border border-solid border-[#D7E7F3];
 
       &:hover {
         border: none;
+        @apply border border-solid border-[#abcbe3];
       }
 
       p {
         font-family: 'Bodoni Moda', Times, serif !important;
-        @apply tracking-wider;
-        @apply text-center;
-        @apply text-gray-800;
+        @apply tracking-wider text-center text-gray-800;
       }
     }
   }
@@ -463,8 +440,7 @@
   }
 
   body.modern .miniGallery {
-    background: none;
-    @apply gap-4;
+    @apply bg-none gap-4;
   }
 
   body.corp .VueCarousel.druCarousel {
@@ -472,26 +448,13 @@
   }
 
   .miniGallery {
-    @apply flex;
-    @apply flex-row;
-    @apply flex-wrap;
-    @apply justify-between;
-    @apply items-center;
-    @apply content-center;
-    @apply duration-75;
-    @apply w-full;
+    @apply flex flex-row flex-wrap justify-between items-center content-center duration-75 w-full;
 
     div {
-      @apply grow;
-      @apply w-[125px];
-      @apply no-underline;
-      @apply cursor-pointer;
-      @apply inline-block;
+      @apply grow w-[125px] no-underline cursor-pointer inline-block;
 
       &:hover {
-        // @apply text-base-ivory;
-        @apply text-bourbon-ivory;
-        @apply no-underline;
+        @apply text-bourbon-ivory no-underline;
       }
 
       a {
@@ -499,42 +462,24 @@
       }
 
       .box {
-        @apply flex;
-        @apply flex-col;
-        @apply flex-nowrap;
-        @apply items-center;
-        @apply content-center;
-        @apply justify-center;
-        @apply duration-75;
-        @apply text-center;
+        @apply flex flex-col flex-nowrap items-center content-center justify-center duration-75 text-center m-auto bg-white;
         box-shadow: 0px 2px 2px -3px black;
-        @apply m-auto;
-        @apply bg-white;
-        border: 1px solid transparentize(grey, 0.85) !important;
+        border: 1px solid transparentize(grey, 0.85);
 
         p {
-          @apply text-[#333];
-          @apply relative;
-          @apply ease-out;
-          @apply lowercase;
+          @apply text-[#333] relative ease-out lowercase;
         }
 
         &:hover {
-          @apply ease-out;
+          @apply ease-out top-[-5px];
           border: 1px solid transparentize(grey, 0.5);
-          // box-shadow: 0px 2px 4px -1px hsla(0, 0%, 50%, 0.25);
-          @apply top-[-5px];
 
           p {
-            @apply relative;
-            @apply top-[-5px];
-            @apply ease-out;
+            @apply relative top-[-5px] ease-out;
           }
 
           svg {
-            @apply relative;
-            @apply top-[-5px];
-            @apply ease-out;
+            @apply relative top-[-5px] ease-out;
           }
         }
 
@@ -571,17 +516,9 @@
         }
 
         p {
-          @apply w-full;
-          @apply text-[0.85em];
-          @apply normal-case;
-          @apply text-white;
-          @apply text-center;
-          @apply tracking-wider;
-          @apply mb-2;
-          @apply text-center;
+          @apply w-full text-[0.85em] normal-case text-white text-center tracking-wider mb-2;
 
           &:hover {
-            // @apply text-base-ivory;
             @apply text-bourbon-ivory;
           }
         }
@@ -592,23 +529,19 @@
 
   @keyframes carouselFader {
     0% {
-      @apply scale-0;
-      @apply opacity-0;
+      @apply scale-0 opacity-0;
     }
 
     50% {
-      @apply scale-0;
-      @apply opacity-0;
+      @apply scale-0 opacity-0;
     }
 
     95% {
-      @apply scale-100;
-      @apply opacity-100;
+      @apply scale-100 opacity-100;
     }
 
     100% {
-      @apply scale-100;
-      @apply opacity-100;
+      @apply scale-100 opacity-100;
     }
   }
 
@@ -642,23 +575,18 @@
   }
 
   .iconSVG {
-    @apply relative;
-    @apply ease-out;
+    @apply relative ease-out duration-200;
     width: initial !important;
 
     &:hover {
-      @apply relative;
-      @apply ease-out;
+      @apply relative ease-out duration-200;
     }
 
     svg path,
     svg polygon,
     svg rect,
     svg polyline {
-      @apply stroke-white;
-      // @apply relative;
-      // top: -10px !important;
-      // @apply ease-out;
+      @apply stroke-white ease-out duration-200;
     }
   }
 
@@ -673,4 +601,4 @@
     }
   }
 
-</style>
+</style>-
