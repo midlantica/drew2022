@@ -258,24 +258,20 @@
       }
 
       p {
-        font-family: 'Spartan', Helvetica, Arial, sans-serif !important;
-        @apply text-gray-800;
-        @apply font-medium;
-        @apply lowercase;
+        @apply text-gray-800 font-bourbonCopy font-medium lowercase;
+      }
+
+      .projectHead {
+        @apply font-bourbonCopy mt-[1px] tracking-wide;
       }
     }
 
     .miniGallery div .box {
-      @apply h-[130px];
+      // @apply h-[130px];
       @apply h-[181.5px];
 
       p {
-        font-family: 'Spartan', Helvetica, Arial, sans-serif !important;
-        @apply text-[.85rem];
-        @apply text-gray-800;
-        @apply text-center;
-        @apply tracking-normal;
-        @apply lowercase;
+        @apply text-[.85rem] font-bourbonCopy text-gray-800 text-center tracking-normal lowercase;
 
         a {
           @apply text-gray-800;
@@ -286,6 +282,7 @@
         }
       }
     }
+
   }
 
   body.groovy {
@@ -313,22 +310,26 @@
       p {
         @apply text-gray-800;
       }
+      .projectHead {
+        @apply font-groovyCopy mt-[1px];
+      }
     }
 
     .miniGallery div .box {
       height: 170px !important;
 
       p {
-        font-family: Dosis, 'Helvetica Neue', Arial, sans-serif !important;
+        @apply font-groovyCopy;
         @apply text-center;
         @apply text-gray-800;
       }
     }
+
   }
 
   body.techy {
-
     //
+
     .projectBox {
       @include box-shadow(0px, 2px, 6px, -2px, hsla(0, 0%, 0%, 1));
 
@@ -350,6 +351,10 @@
 
       p {
         @apply text-gray-800;
+      }
+
+      .projectHead {
+        @apply font-techyCopy uppercase mt-[1px];
       }
     }
 
@@ -390,9 +395,9 @@
       p {
         @apply text-gray-800;
       }
-    }
-    .projectHead {
-      @apply font-corpHead uppercase mt-[1px] #{!important};
+      .projectHead {
+        @apply font-corpHead mt-[1px];
+      }
     }
 
     .miniGallery div .box {
@@ -437,15 +442,17 @@
       p {
         @apply text-gray-800;
       }
+      .projectHead {
+        @apply font-punkCopy mt-[1px];
+      }
+
     }
 
     .miniGallery div .box {
       @apply h-[181.5px];
 
       p {
-        font-family: Poppins, 'Helvetica Neue', Arial, sans-serif !important;
-        @apply text-center;
-        @apply text-gray-800;
+        @apply text-center font-punkCopy text-gray-800;
       }
 
     }
@@ -663,5 +670,7 @@
     &:hover {
       color: hsla(0, 0%, 100%, 1);
       background: hsla(0, 0%, 0%, 0.5);
+    }
   }
-}</style>
+
+</style>

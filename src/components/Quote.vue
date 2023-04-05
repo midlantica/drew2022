@@ -257,7 +257,7 @@
     }
 
     p {
-      @apply text-[1em] text-techy-blueTech text-center tracking-wide font-techyCopy;
+      @apply font-techyCopy text-[1em] text-techy-blueTech text-center tracking-wide;
 
       @media (max-width: $breakThou) {
         @apply text-[1.25em];

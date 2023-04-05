@@ -297,8 +297,7 @@
       //
 
       h1 {
-        font-family: "Bodoni Moda", Times, serif !important;
-        @apply pt-4;
+        @apply pt-4 font-corpCopy;
         @apply text-[#01487f];
         @apply text-[1.5em];
         @apply font-semibold;
@@ -306,14 +305,12 @@
       }
 
       p {
-        font-family: "Bodoni Moda", Times, serif !important;
-        @apply text-[1em];
+        @apply text-[1em] font-corpCopy;
       }
     }
 
     .about p {
-      font-family: "Bodoni Moda", Times, serif !important;
-      @apply text-[1em];
+      @apply text-[1em] font-corpCopy;
     }
   }
 

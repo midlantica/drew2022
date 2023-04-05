@@ -40,7 +40,6 @@
   .headBlock {
     @apply grid gap-x-1.5 justify-items-start items-center auto-rows-auto;
     grid-template-columns: 88px auto;
-    // grid-template-rows: auto;
 
     a.drewhead {
       grid-column: 1 / 2;
@@ -51,7 +50,7 @@
     h1 {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      @apply text-bourbon-subhead text-[1.7rem] inline-block text-bourbon-accentRed p-0 self-center max-w-[30ch];
+      @apply font-bourbonSubhead text-[1.7rem] inline-block text-bourbon-accentRed p-0 self-center max-w-[30ch];
 
       @media (min-width: $breakThou) {
         @apply max-w-[30ch];
@@ -59,29 +58,26 @@
 
       @media (max-width: $breakOne) {
         @apply text-[1.65rem];
-        max-width: initial;
+        // max-width: initial;
       }
 
       @media (max-width: $breakTwo) {
-        @apply max-w-[30ch];
-        @apply text-[1.5rem];
+        @apply max-w-[30ch] text-[1.5rem];
       }
 
       @media (max-width: $breakThree) {
-        @apply text-[1.45rem];
-        @apply m-0;
+        @apply text-[1.45rem] m-0;
       }
 
     }
   }
 
   p.smallCaps {
-    @apply text-[185%];
-    font-variant: small-caps !important;
+    @apply text-[180%] uppercase ;
   }
 
   p {
-    @apply leading-[2.4rem] text-bourbon-copy text-[1.1rem] text-base-grey mt-2 mx-2 mb-0 tracking-[0.03rem] mr-2;
+    @apply leading-[2.4rem] font-bourbonCopy text-[1.1rem] text-base-grey mt-2 mx-2 mb-0 tracking-[0.03rem] mr-2;
 
     @media (max-width: $breakThou) {
       columns: 2 20ch;

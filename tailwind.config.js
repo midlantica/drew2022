@@ -46,7 +46,7 @@ module.exports = {
         modern: {
           ruby: '#D71D5B',
           accent: '#FFC05C',
-          accentRed: '#FFC05C',
+          accentRed: '#d71d5b',
           grey: '#352E38',
           backer: '#352E38'
         },
@@ -59,10 +59,7 @@ module.exports = {
           orange: '#e34234',
           paleyellow: '#ffffbf99',
           accentRed: '#c02c19',
-          ivory: '#fffdf4',
-          head: 'VeneerTwo, Helvetica, Arial, sans-serif',
-          subhead: 'Veneer, Helvetica, Arial, sans-serif',
-          copy: 'AmericanTypewriterStd-Med, Helvetica, Times, serif'
+          ivory: '#fffdf4'
         },
         groovy: {
           aqua: '#99f1ec',
@@ -103,21 +100,21 @@ module.exports = {
 
         },
         //
-        modernHead: ['Spartan, Helvetica Neue, Helvetica, sans-serif'],
-        modernSubhead: ['Spartan, Helvetica Neue, Helvetica, sans-serif'],
-        modernCopy: ['Spartan, Helvetica Neue, Helvetica, sans-serif'],
+        modernHead: ['Spartan, "Helvetica Neue", Helvetica, sans-serif'],
+        modernSubhead: ['Spartan, "Helvetica Neue", Helvetica, sans-serif'],
+        modernCopy: ['Spartan, "Helvetica Neue", Helvetica, sans-serif'],
         //
         bourbonHead: ['VeneerTwo, Helvetica, Arial, sans-serif'],
         bourbonSubhead: ['Veneer, Helvetica, Arial, sans-serif'],
         bourbonCopy: ['AmericanTypewriterStd-Med, Helvetica, Times, serif'],
         //
-        groovyHead: ['Avenir, Helvetica Neue, Helvetica, Arial, sans-serif'],
-        groovySubhead: ['Avenir, Helvetica Neue, Helvetica, Arial, sans-serif'],
-        groovyCopy: ['Avenir, Helvetica Neue, Helvetica, Arial, sans-serif'],
+        groovyHead: ['Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif'],
+        groovySubhead: ['Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif'],
+        groovyCopy: ['Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif'],
         //
-        techyHead: ['Dosis, Helvetica Neue, Arial, sans-serif'],
-        techySubhead: ['Dosis, Helvetica Neue, Arial, sans-serif'],
-        techyCopy: ['Dosis, Helvetica Neue, Arial, sans-serif'],
+        techyHead: ['Dosis, "Helvetica Neue", Arial, sans-serif'],
+        techySubhead: ['Dosis, "Helvetica Neue", Arial, sans-serif'],
+        techyCopy: ['Dosis, "Helvetica Neue", Arial, sans-serif'],
         //
         corpHead: ['Bodoni Moda, Times, serif'],
         corpSubhead: ['Bodoni Moda, Times, serif'],

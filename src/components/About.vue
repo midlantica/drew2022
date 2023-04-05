@@ -54,11 +54,11 @@
     @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
 
     @media (max-width: $breakThou) {
-      margin: 0rem 0 0.5rem;
+      @apply mt-0 mx-0 mb-2;
     }
 
     @media (max-width: $breakOne) {
-      margin: 0 0 0.5rem;
+      @apply mt-0 mx-0 mb-2;
     }
 
     @media (max-width: $breakFour) {
@@ -79,21 +79,19 @@
   }
 
   p {
-    color: lighten($grey, 15);
-    @apply block text-[0.9em] leading-[1.4em] tracking-wider content-center items-center justify-center self-center text-left;
+    @apply text-gray-600 block text-[0.9em] leading-[1.4em] tracking-wider content-center items-center justify-center self-center text-left;
   }
 
   .corp .about {
     @include box-shadow(0px, 0px, 3px, -1px, hsla(0, 14%, 22%, 0.5));
     @apply rounded-sm;
-    font-family: Alegreya;
   }
 
   .punk .about {
     //
 
     p {
-      margin: 0.25rem auto;
+      @apply my-1 mx-auto;
     }
   }
 
@@ -101,7 +99,7 @@
     @apply bg-techy-blueTech;
 
     p {
-      @apply text-white my-1 mx-auto;
+      @apply text-white my-1 mx-auto font-techyCopy;
     }
   }
 
@@ -109,8 +107,7 @@
     //
 
     p {
-      font-family: "Bodoni Moda", Times, serif !important;
-      @apply text-[0.9rem] tracking-[0.02rem] leading-6 m-0 font-medium;
+      @apply text-[0.9rem] tracking-[0.02rem] leading-6 m-0 font-medium font-corpCopy;
 
       @media (max-width: $breakThou) {
         @apply text-[1.15rem] leading-7;
@@ -123,7 +120,7 @@
   }
 
   .modern .about {
-    margin: initial;
+    // margin: initial;
     box-shadow: 2px 2px 10px 0px black;
     @apply flex flex-col w-full gap-4 rounded-[3px] mt-auto;
 
@@ -140,18 +137,11 @@
     }
 
     .flag {
-      background: url("/img/brit_amer_flag.svg");
-      background-size: contain;
-      margin-right: initial !important;
-      background-position-y: center;
-      //
-      @apply block bg-no-repeat content-center items-center justify-center self-center w-[100px] h-[60px];
+      @apply block bg-no-repeat content-center items-center justify-center self-center w-[100px] h-[60px] bg-[("/img/brit_amer_flag.svg")] bg-contain mr-0 bg-center;
     }
 
     p {
-      font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-      font-size: clamp(0.75rem, 0.8rem, 1.15rem) !important;
-      @apply tracking-normal leading-6 m-0 font-light text-base-ivory;
+      @apply tracking-normal leading-6 m-0 font-light text-base-ivory font-modernCopy text-[.8rem];
     }
   }
 </style>

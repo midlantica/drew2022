@@ -64,7 +64,7 @@
   }
 
   h1 {
-    @apply text-bourbon-subhead font-normal text-[4em] leading-none tracking-[.06em] transition duration-[.25s] ease-in antialiased w-auto grow-0;
+    @apply font-bourbonSubhead font-normal text-[4em] leading-none tracking-[.06em] transition duration-[.25s] ease-in antialiased w-auto grow-0;
     text-shadow: 4px 0px 3px $black;
 
     @media (max-width: $breakOne) {
@@ -154,7 +154,7 @@
     }
 
     p {
-      @apply text-bourbon-copy tracking-[0.05rem] text-[1.15rem] leading-[1.35rem] lowercase antialiased;
+      @apply font-bourbonCopy tracking-[0.05rem] text-[1.15rem] leading-[1.35rem] lowercase antialiased;
 
       &:nth-child(1) {
         //

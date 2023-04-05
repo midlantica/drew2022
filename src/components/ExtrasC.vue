@@ -109,6 +109,7 @@
       @apply basis-auto;
       @apply grow;
       box-sizing: border-box;
+      @apply box-border;
       @apply text-center;
       @apply items-center;
       @apply no-underline;

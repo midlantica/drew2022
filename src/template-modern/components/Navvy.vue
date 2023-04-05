@@ -29,20 +29,15 @@
 <style lang="scss" scoped>
   @import "../assets/css/modern-main.scss";
 
-  $outRed: hsla(356, 92%, 45%, 0.3);
-  $outBlue: hsla(197, 88%, 66%, 0.3);
-
   a {
-    @apply text-base-ivory;
-    @apply no-underline;
+    @apply text-base-ivory no-underline;
 
     &:link {
-      @apply text-base-ivory;
-      @apply no-underline;
+      @apply text-base-ivory no-underline;
     }
 
     &:hover {
-      color: $accent;
+      @apply text-modern-accent;
     }
   }
 
@@ -52,49 +47,27 @@
   h4,
   h5,
   p {
-    @apply leading-4;
-    @apply m-0;
-    @apply p-0;
-    color: $ivory !important;
-    @apply normal-case;
-    @apply font-extralight;
+    @apply leading-4 m-0 p-0 normal-case font-extralight text-base-ivory;
 
     a {
-      color: $ivory !important;
-      @apply no-underline;
+      @apply no-underline text-base-ivory;
     }
   }
 
   nav {
-    @apply flex;
-    @apply flex-col;
-    @apply flex-nowrap;
-    @apply justify-center;
-    @apply items-center;
-    @apply pt-6 px-0 pb-0;
+    @apply flex flex-col flex-nowrap justify-center items-center pt-6 px-0 pb-0;
   }
 
   h1 {
-    @apply normal-case;
-    @apply text-[3.75rem];
-    @apply font-extralight;
-    @apply tracking-[-0.05em];
-    font-family: $font-subhead;
     text-shadow: 1px 1px 4px $black;
-    @apply transition duration-[.25s] ease-in;
-    @apply duration-200;
-    @apply leading-normal;
-    @apply text-center;
-    @apply antialiased;
-    @apply w-auto;
-    @apply grow;
+    @apply font-modernSubhead normal-case text-[3.25rem] font-extralight tracking-[-0.05em] transition ease-in duration-200 leading-normal text-center antialiased w-auto grow;
 
     a {
-      color: $accent !important;
+      @apply text-[3.25rem] text-modern-accent;
 
       //
       &:hover {
-        color: $accent !important;
+        @apply text-modern-accent;
       }
     }
 
@@ -112,14 +85,10 @@
   }
 
   section.jobDesc {
-    // @apply mt-2;
-    // @apply lowercase;
-    text-decoration: lowercase;
-    @apply transition duration-[.25s] ease-in;
+    @apply transition duration-[.25s] ease-in lowercase;
 
     @media (max-width: $breakTwo) {
-      @apply text-center;
-      @apply self-center;
+      @apply text-center self-center;
 
       &:nth-child(1) {
         //
@@ -139,14 +108,7 @@
     }
 
     h2 {
-      @apply text-[1.15rem];
-      @apply tracking-[-0.01em];
-      @apply leading-[1.5em];
-      @apply font-normal;
-      @apply text-[hsla(0,0%,100%,0.85)];
-      @apply text-center;
-      @apply lowercase;
-      @apply antialiased;
+      @apply text-[1.15rem] tracking-[-0.01em] leading-[1.5em] font-normal text-[hsla(0,0%,100%,0.85)] text-center lowercase antialiased;
       text-shadow: 1px 1px 4px $black;
 
       @media (max-width: $breakTwo) {
@@ -160,9 +122,7 @@
   }
 
   section.contact {
-    @apply mt-0;
-    @apply z-10;
-    @apply transition duration-[.25s] ease-in;
+    @apply mt-0 z-10 transition duration-[.25s] ease-in;
 
     @media (max-width: $breakOne) {
       //
@@ -177,28 +137,14 @@
     }
 
     p {
-      font-family: $font-subhead;
-      @apply tracking-[-0.01em];
-      @apply font-normal;
-      @apply text-[1rem];
-      @apply text-center;
-      @apply mt-2;
+      @apply font-modernCopy font-normal text-center mt-2 leading-[1.4rem] tracking-[0.05rem] antialiased text-[0.85rem];
       text-shadow: 1px 1px 4px $black;
-      @apply leading-[1.4rem];
-      @apply tracking-[0.05rem];
-      @apply antialiased;
-      @apply text-[0.85rem];
 
       a {
-        @apply border border-[#ff000054] border-solid;
-        @apply py-[0.3rem] px-[0.9rem];
-        @apply rounded-[2rem];
-        @apply my-0 mx-2;
+        @apply border border-[#ff000054] border-solid py-[0.3rem] px-[0.9rem] rounded-[2rem] my-0 mx-2;
 
         &:hover {
-          @apply text-[$yellow-red];
-          @apply underline;
-          @apply no-underline;
+          @apply text-[$yellow-red] no-underline;
           background: darken($ruby, 15);
         }
       }
@@ -218,15 +164,13 @@
   }
 
   h1 {
-    color: $accent-red !important;
-    @apply normal-case;
-    @apply text-center;
+    @apply text-modern-accentRed normal-case text-center;
 
     a {
-      color: $accent-red !important;
+      @apply text-modern-accentRed;
 
       &:hover {
-        color: $accent-red !important;
+        @apply text-modern-accentRed;
       }
     }
   }
