@@ -8,9 +8,3 @@ $font-subhead     :Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif !impo
 $font-copy        :Poppins, Helvetica, Times, serif;
 
 // ############################
-
-body {
-  font-family: $font;
-  font-size: $base-font-size;
-  @apply m-0;
-}

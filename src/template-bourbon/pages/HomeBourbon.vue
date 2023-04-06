@@ -60,8 +60,8 @@
   }
 
   .mainGrid {
-    @apply grid my-4 mx-4 gap-4 gap-y-4 gap-x-0;
     grid-template-columns: repeat(2, 1fr);
+    @apply grid my-4 mr-6 ml-4 gap-x-4 gap-y-4;
 
     @media (max-width: $breakThou) {
       @apply grid gap-y-4;

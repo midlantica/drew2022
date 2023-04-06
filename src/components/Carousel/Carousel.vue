@@ -154,6 +154,30 @@
       p {
         @apply font-modernCopy text-white text-[1rem] text-center lowercase tracking-[0em];
       }
+
+      .carouselArrow {
+        color: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        background: transparentize(black, .65);
+        padding: 0.2rem .75rem 0.15rem .6rem;
+        margin: 0rem 0 0 0em;
+        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif;
+        cursor: pointer;
+        position: absolute;
+        text-transform: none;
+        box-shadow: none;
+        letter-spacing: 0.05em;
+        // z-index: 100;
+
+        &:hover {
+          // background: grey;
+          // color: $accent-red;
+          // font-weight: bold;
+          background: transparentize(white, .9);
+          // font-weight: bold;
+        }
+      }
     }
 
     .miniGallery div .box {
@@ -280,6 +304,7 @@
       p {
         @apply text-gray-800;
       }
+
       .projectHead {
         @apply font-groovyCopy mt-[1px];
       }
@@ -300,6 +325,7 @@
 
     .projectBox {
       @include box-shadow(0px, 2px, 6px, -2px, hsla(0, 0%, 0%, 1));
+      @apply rounded-none;
 
       @media (max-width: $breakThou) {
         @apply min-h-min;
@@ -375,13 +401,29 @@
       p {
         @apply text-gray-800;
       }
+
       .projectHead {
         @apply font-corpHead mt-[1px];
+      }
+
+      .carouselArrow {
+        border-radius: 2px;
+        box-shadow: none;
+        // background: hsla(205, 98%, 17%, 0.65);
+        border: none;
+        letter-spacing: 0.05em;
+        @apply rounded-sm shadow-none bg-[hsla(205,98%,17%,0.65)] tracking-[0.05em];
+        // text-shadow: 1px 1px 0 0 black;
+
+        &:hover {
+          background: hsla(205, 98%, 17%, .85);
+          box-shadow: none;
+        }
       }
     }
 
     .miniGallery div .box {
-      @apply h-[182px] border border-solid border-[#D7E7F3];
+      @apply h-[183px] border border-solid border-[#D7E7F3];
 
       &:hover {
         @apply border border-solid border-[#abcbe3];
@@ -397,6 +439,7 @@
 
     //
     .projectBox {
+      @apply rounded-none bg-white/70;
       @include box-shadow(0px, 1px, 1px, 0px, hsla(0, 0%, 0%, 0.5), false);
 
       @media (max-width: $breakThou) {
@@ -416,12 +459,20 @@
       }
 
       p {
-        @apply text-gray-800;
+        @apply text-base-black;
       }
+
       .projectHead {
         @apply font-punkCopy mt-[1px];
       }
 
+      .carouselArrow {
+        @apply rounded-none text-white bg-black/50 pt-[.1rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
+
+        &:hover {
+          @apply text-white bg-black/50;
+        }
+      }
     }
 
     .miniGallery div .box {
@@ -591,11 +642,10 @@
   }
 
   .carouselArrow {
-    @apply text-white bg-black/30 pt-[.15rem] pr-[.5rem] pb-[.1rem] pl-[.4rem];
+    @apply text-white bg-black/30 pt-[.1rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
 
     &:hover {
       @apply text-white bg-black/50;
     }
   }
-
 </style>-

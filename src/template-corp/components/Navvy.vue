@@ -40,11 +40,11 @@
     @apply items-center;
     @apply pt-[2em] px-[2em] pb-0;
     @apply justify-between;
-    @apply mb-4;
+    @apply mb-6;
 
     @media (max-width: $breakOne) {
       @apply justify-center;
-      @apply mb-4;
+      @apply mb-8;
     }
   }
 

@@ -64,7 +64,7 @@
   }
 
   .mainGrid {
-    @apply grid gap-y-2 gap-x-0 ml-4 mb-4 mr-6;
+    @apply grid gap-y-4 gap-x-0 ml-4 mb-4 mr-6;
     grid-template-columns: repeat(2, 1fr);
 
     @media (max-width: $breakThou) {

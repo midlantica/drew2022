@@ -7,17 +7,3 @@ $font-subhead     :Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
 $font-copy        :Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
 
 // ############################
-
-html, html a {
-  -webkit-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-  @apply antialiased text-[.85rem] box-border;
-  // -moz-osx-font-smoothing: grayscale;
-  // font-size: 0.85em;
-  // @apply box-border;
-}
-
-html, body {
-  font-family: 'Spartan, Helvetica Neue, Helvetica, sans-serif';
-  font-size: 0.85em;
-}

@@ -267,7 +267,7 @@
     }
 
     svg {
-      @apply w-[100px] mt-0 mx-auto mb-3;
+      @apply w-[100px] mx-auto;
 
       &:hover {
         //
@@ -360,7 +360,7 @@
 
     @media (min-width: 1026px) {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      margin-top: -2.5rem;
+      margin-top: -4.6rem;
 
     }
 

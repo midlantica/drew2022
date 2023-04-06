@@ -97,7 +97,8 @@ module.exports = {
           white: '#fffdf4'
         },
         punk: {
-          //
+          red: '#FF0000',
+          magenta: '#FF4BF5'
         }
       },
       fontFamily: {

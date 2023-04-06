@@ -1,11 +1,5 @@
 h1, h2, h3, h4, h5 {
-  @apply text-base-accentRed;
-  @apply leading-[1.1em];
-  @apply font-normal;
-  @apply text-left;
-  margin: .75em 0 .25em 0;
-  @apply p-0;
-  @apply tracking-[.025em];
+  @apply text-base-accentRed leading-[1.1em] font-normal text-left mt-3 mr-0 mb-1 ml-0 p-0 tracking-[.025em];
   text-transform: uppercase;
   font-family: $font-subhead;
 }
@@ -36,10 +30,7 @@ p {
   font-size: $base-font-size;
   // color: $blue-mid;
   line-height: $base-line-height;
-  @apply font-normal;
-  @apply text-left;
-  @apply m-0;
-  @apply p-0;
+  @apply font-normal text-left m-0 p-0;
 }
 
 ul {
