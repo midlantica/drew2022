@@ -1,62 +1,31 @@
 h1, h2, h3, h4, h5 {
-  color: $white;
-  @apply leading-[1.5em];
-  @apply font-normal;
-  @apply text-left;
-  margin: .75em 0 .25em 0;
-  @apply p-0;
-  @apply tracking-[.025em];
-  @apply capitalize;
-  font-family: $font-subhead;
-  @apply font-semibold;
+  @apply font-modernSubhead text-white leading-[1.5em] text-left p-0 tracking-[.025em] capitalize font-semibold mt-3 mx-0 mb-1;
 }
 
 h2 {
-  @apply text-[2em];
-  // color: $accent;
-  @apply capitalize;
-  font-family: $font-subhead;
-  @apply font-normal;
+  @apply font-modernSubhead capitalize text-[2em] font-normal;
 }
 
 h3 {
   @apply text-[1.7em];
-  // color: $blue-dark;
 }
 
 h4 {
-  @apply text-[1.5em];
-  @apply tracking-[.04em];
+  @apply text-[1.5em] tracking-[.04em];
 }
 
 h5 {
-  font-size: $base-font-size;
+  @apply text-[.85em]
 }
 
 p {
-  font-family: $font-copy;
-  font-size: $base-font-size;
-  @apply text-white;
-  line-height: $base-line-height;
-  @apply font-normal;
-  @apply text-left;
-  @apply m-0;
-  @apply p-0;
+  @apply text-white text-[.85em] font-modernCopy leading-[2em] font-normal text-left m-0 p-0;
 }
 
 ul {
-  list-style-type: square;
-  @apply p-0;
-  margin: 0 -1em 1em 0em;
-  font-family: $font-copy;
-  color: $blue-mid;
-  line-height: $base-line-height;
-  @apply text-left;
+  @apply p-0 font-modernCopy text-left leading-[2em] text-modern-ruby list-square mt-0 mr-[-1] mb-4 ml-0;
 
   li {
-    list-style-position: outside;
-    margin: .25em 0em 0 1em;
-    padding-left: -1em;
-    line-height: 1.6em;
+    @apply list-outside leading-[1.6em] pl-[-1em] mt-1 mx-0 mb-4;
   }
 }

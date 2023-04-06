@@ -18,19 +18,8 @@
   @import '../assets/css/modern-main.scss';
 
   .modern .skillsGrid {
-    @apply w-1/2;
-    @apply grid;
-    // grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    @apply justify-center;
-    margin: 1rem auto;
-    justify-items: center;
-    align-items: stretch;
-    align-content: space-between;
-    @apply text-center;
-    gap: .5rem auto;
+    @apply w-1/2 grid justify-center text-center my-4 mx-auto items-stretch content-between gap-y-2 gap-x-0 justify-items-center;
 
     @media (max-width: 900px) {
       @apply w-3/5;
@@ -49,10 +38,7 @@
     }
 
     svg {
-      @apply w-[100px];
-      // stroke: $accent;
-      // margin-bottom: 1rem;
-      margin: 0rem auto .75rem;
+      @apply w-[100px] mt-0 mx-auto mb-3;
 
       g {
         // stroke: red !important;
@@ -62,8 +48,7 @@
       polygon,
       rect,
       polyline {
-        stroke: $ruby;
-        stroke-width: 10px;
+        @apply stroke-modern-ruby stroke-[10px];
       }
     }
 
@@ -79,10 +64,7 @@
   }
 
   .fade-enter,
-  .fade-leave-to
-
-  /* .fade-leave-active below version 2.1.8 */
-    {
+  .fade-leave-to {
     @apply opacity-0;
   }
 </style>

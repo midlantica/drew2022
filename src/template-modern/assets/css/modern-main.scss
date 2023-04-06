@@ -1,23 +1,11 @@
-// @import url('/fonts/Texgyre2/texgyre.css');
-// @import '/fonts/Texgyre2/texgyre_regular/texgyre_regular.css';
-// @import '/fonts/Texgyre2/texgyre_italic/texgyre_italic.css';
-// @import '/fonts/Texgyre2/texgyre_bold/texgyre_bold.css';
-// @import '/fonts/Texgyre2/texgyre_bolditalic/texgyre_bolditalic.css';
-// @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;600;900&display=swap');
-
-// BASE
-@import '_base.scss';
-
-// SETTINGS
-@import '_colors.scss';
-
-// TYPOGRAPHY
 @import '_typography.scss';
 
-.modern .skills .quoteBlock p {
-  font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+html, html a {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  @apply antialiased text-[.85rem] box-border;
 }
 
-.modern .skills .cite {
-  font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+html, body {
+  @apply font-modernCopy text-[.85em];
 }

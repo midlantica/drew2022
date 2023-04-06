@@ -79,16 +79,12 @@
   }
 
   header {
-    @apply text-base-ivory;
-    @apply bg-groovy-red;
-    @include clearfix;
+    @apply text-base-ivory bg-groovy-red clearfix;
   }
 
   .about {
+    @apply bg-groovy-yellow rounded-xl font-groovyHead;
     box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.25);
-    @apply bg-groovy-yellow;
-    @apply rounded-xl;
-    font-family: $font-head;
   }
 
   .copyArea {
@@ -114,8 +110,7 @@
   .slides {
     grid-column: 2 / 3;
     grid-row: 1;
-    @apply z-10;
-    @apply mt-[-9.5rem];
+    @apply z-10 mt-[-9.5rem];
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;

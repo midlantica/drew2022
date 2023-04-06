@@ -22,21 +22,15 @@
 
 <style lang="scss">
   @import "./assets/css/main.scss";
-  $font-groovy: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  $backer: #fffae4;
-  $backBlack: #1f1f1f;
 
   .wrapper {
-    @apply relative;
-    @apply max-w-[1024px];
-    @apply my-0 mx-auto;
-    //
+    @apply relative max-w-[1024px] my-0 mx-auto;
   }
 
   // #############################
   // BOURBON
   body.bourbon {
-    background: $backBlack;
+    @apply bg-base-backBlack;
 
     .wrapper {
       background: url(./template-bourbon/assets/img/bg/graphy_2.png) repeat;
@@ -48,14 +42,11 @@
       header,
       footer {
         background: url(./template-bourbon/assets/img/bg/bg_bag_dk.jpg) repeat;
-        // @apply p-4;
       }
     }
 
     .about>p {
-      font-family: "AmericanTypewriterStd-Med";
-      @apply my-1 mx-auto;
-      @apply text-[.84em];
+      @apply my-1 mx-auto font-bourbonCopy text-[.84em];
 
       @media (max-width: $breakThou) {
         @apply text-[1.65vw];
@@ -75,21 +66,16 @@
     }
 
     &.extras .extrasWrapper {
-
       //
+
       h1 {
-        font-family: "VeneerTwo", Helvetica, Arial, sans-serif;
-        @apply pt-4;
-        @apply text-[1.75em];
-        @apply font-light;
-        @apply antialiased;
+        @apply pt-4 font-bourbonHead text-[1.75em] font-light antialiased;
         text-rendering: optimizeLegibility;
       }
     }
 
     .smallCaps {
-      @apply text-[90%];
-      @apply tracking-wider;
+      @apply text-[90%] tracking-wider;
       font-variant: small-caps !important;
     }
   }
@@ -97,44 +83,24 @@
   // #############################
   // MODERN
   body.modern {
-    @apply h-[calc(100%)];
-    @apply bg-[hsl(320,100%,9%)];
+    @apply h-[calc(100%)] bg-[hsl(320,100%,9%)];
 
     .wrapper {
-      @apply flex;
-      @apply flex-col;
-      @apply grow;
-      @apply max-w-[1024px];
-      @apply min-h-[780px];
-      @apply pb-14;
-      //
-      @apply bg-[hsl(320,100%,9%)];
+      @apply flex flex-col grow max-w-[1024px] min-h-[780px] pb-14 bg-[hsl(320,100%,9%)] bg-cover;
       background-image: url(./template-modern/assets/img/bg/bg_bak_dk4.jpeg);
-      @apply bg-cover;
 
       @media (max-width: $breakOne) {
-        // height: 100vh;
-        // min-height: 100vh;
-        // max-height: 100vh;
-        // background-size: 100% calc(100%);
-        // //
-        // @apply w-full;
-        // @apply absolute;
-        // @apply top-0;
-        // left: 0;
+        //
       }
 
       header,
       footer {
-        // background: url(./template-modern/assets/img/bg/bg_bag_dk.jpg) repeat;
         @apply shadow-none;
       }
     }
 
     .about {
-      @apply w-1/2;
-      @apply my-0 mx-auto;
-      // background: hsla(340, 76%, 48%, 1) !important;
+      @apply w-1/2 my-0 mx-auto;
       background: linear-gradient(180deg,
           hsl(340deg 76% 48% / 100%),
           hsl(340deg 76% 31% / 100%)) !important;
@@ -144,31 +110,22 @@
       @apply bg-[#2e001f];
 
       .flexxy a p {
-        @apply text-white;
-        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-        @apply border-b border-solid border-[hsla(0,0%,100%,.5)];
+        @apply text-white font-modernSubhead border-b border-solid border-[hsla(0,0%,100%,.5)];
       }
     }
 
     &.extras .extrasWrapper {
-
       //
+
       h1 {
-        @apply pt-4;
-        @apply text-white;
-        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
         font-size: clamp(.85rem, 1.2rem, 1.4rem) !important;
-        @apply font-semibold;
-        @apply leading-normal;
-        @apply capitalize;
-        @apply antialiased;
+        @apply pt-4 text-white font-semibold leading-normal capitalize antialiased font-modernSubhead;
         text-rendering: optimizeLegibility;
       }
     }
 
     .smallCaps {
-      @apply text-[90%];
-      @apply tracking-wider;
+      @apply text-[90%] tracking-wider;
       font-variant: small-caps !important;
     }
   }
@@ -176,28 +133,21 @@
   // #############################
   // GROOVY
   body.groovy {
-    background: $backBlack;
+    @apply bg-base-backBlack;
 
     .wrapper {
-      background: linear-gradient(lighten($backer, 10) 0%,
-          darken($backer, 05) 85%,
-          darken($backer, 10) 100%);
+      // background: linear-gradient(lighten($backer, 10) 0%,
+      //     darken($backer, 05) 85%,
+      //     darken($backer, 10) 100%);
+      @apply bg-gradient-to-b from-white via-[#fff5cb] via-85% to-[#fff5cb];
 
       @media (max-width: $breakOne) {
-        // background-size: 110% 50%;
+        //
       }
     }
 
     .about>p {
-      @apply mt-1 mx-0;
-      font-family: $font-groovy;
-      @apply text-[.85rem];
-      @apply leading-[1.25rem];
-    }
-
-    .smallCaps {
-      @apply text-[87.5%];
-      @apply tracking-wider;
+      @apply text-[87.5%] tracking-wider font-groovyCopy;
       font-variant: small-caps !important;
     }
 
@@ -205,17 +155,11 @@
       //
 
       h1 {
-        font-family: $font-groovy;
-        @apply pt-4;
-        @apply text-black;
-        @apply text-[1.5em];
-        @apply font-light;
-        @apply capitalize;
+        @apply pt-4 text-black text-[1.5em] font-light capitalize font-groovyHead;
       }
 
       p {
-        font-family: $font-groovy;
-        @apply text-[1em];
+        @apply text-[1em] font-groovyCopy;
       }
     }
   }
@@ -223,7 +167,7 @@
   // #############################
   // TECHY
   body.techy {
-    background: $backBlack;
+    @apply bg-base-backBlack;
 
     .wrapper {
       @apply bg-[#fffdf4];
@@ -233,11 +177,8 @@
       @apply bg-[#fffff1];
 
       h1 {
-        @apply pt-4;
         color: lighten(black, 30);
-        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
-        @apply text-[1.5em];
-        @apply capitalize;
+        @apply pt-4 font-techyCopy text-[1.5em] capitalize;
       }
     }
 
@@ -246,14 +187,12 @@
       box-shadow: none !important;
 
       p {
-        @apply my-0 mx-auto;
-        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
+        @apply my-0 mx-auto font-techyCopy;
       }
     }
 
     .smallCaps {
-      @apply text-[87.5%];
-      @apply tracking-wider;
+      @apply text-[87.5%] tracking-wider;
       font-variant: small-caps !important;
     }
 
@@ -261,15 +200,11 @@
 
       //
       h1 {
-        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
-        @apply pt-4;
-        @apply text-[1.75em];
-        @apply font-medium;
+        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'] pt-4 text-[1.75em] font-medium;
       }
 
       p {
-        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'];
-        @apply text-[1em];
+        @apply font-techyCopy text-[1em];
       }
     }
 
@@ -281,15 +216,14 @@
   // #############################
   // CORP
   body.corp {
-    background: $backBlack;
+    @apply bg-base-backBlack;
 
     .wrapper {
       background: url(/img/bg/white_paper_patt-01.jpg) repeat;
     }
 
     .smallCaps {
-      @apply text-[90%];
-      @apply tracking-[.03em];
+      @apply text-[90%] tracking-[.03em];
       font-variant: small-caps !important;
     }
 
@@ -297,11 +231,7 @@
       //
 
       h1 {
-        @apply pt-4 font-corpCopy;
-        @apply text-[#01487f];
-        @apply text-[1.5em];
-        @apply font-semibold;
-        @apply capitalize;
+        @apply pt-4 font-corpCopy text-[#01487f] text-[1.5em] font-semibold capitalize;
       }
 
       p {
@@ -317,12 +247,10 @@
   // #############################
   // PUNK
   body.punk {
-    background: $backBlack;
+    @apply bg-base-backBlack;
 
     .wrapper {
-      @apply w-full;
-      @apply bg-repeat;
-      @apply bg-center;
+      @apply w-full bg-repeat bg-center;
       background: url(/img/bg/circles.svg), url(/img/bg/Drew-punk-back.jpg);
       background-size: 100% 640%, 100% 100%;
 
@@ -367,23 +295,16 @@
 
       //
       h1 {
-        @apply font-['Poppins,"Helvetica_Neue",Helvetica,Arial,sans-serif'];
-        @apply pt-4;
-        @apply text-black;
-        @apply text-[1.75em];
-        @apply font-light;
-        @apply capitalize;
+        @apply font-punkHead pt-4 text-black text-[1.75em] font-light capitalize;
       }
 
       p {
-        @apply font-['Poppins,"Helvetica_Neue",Helvetica,Arial,sans-serif'];
-        @apply text-black;
+        @apply font-punkCopy text-black;
       }
     }
 
     .smallCaps {
-      @apply text-[95%];
-      @apply tracking-wider;
+      @apply text-[95%] tracking-wider;
       font-variant: small-caps !important;
     }
   }

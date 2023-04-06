@@ -15,7 +15,7 @@
   @import '../assets/css/techy-main.scss';
 
   section {
-    @apply mt-11 mr-[1.95rem] mb-0 ml-10;
+    @apply mt-[2.45] mr-[1.95rem] mb-0 ml-10 ;
 
     @media (min-width: $breakThou) {
       //
@@ -40,7 +40,7 @@
   }
 
   h1 {
-    @apply text-techy-blueTech font-semibold font-techyHead leading-[2rem] text-[1.5rem] mt-8 mb-4 normal-case;
+    @apply text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-8 mb-4 normal-case;
 
     @media (min-width: $breakThou) {
       max-width: 26ch;
@@ -68,7 +68,7 @@
   }
 
   p {
-    @apply text-[1.2rem] font-techyCopy leading-[2.8rem] tracking-[.06em];
+    @apply text-[1.2rem] font-techyCopy leading-[2.9rem] tracking-[.06em];
     color: transparentize($blueTech, .2);
 
     @media (min-width: $breakThou) and (-webkit-min-device-pixel-ratio: 2) {

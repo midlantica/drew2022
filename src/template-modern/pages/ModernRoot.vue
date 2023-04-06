@@ -31,37 +31,26 @@
   @import "../assets/css/modern-main.scss";
 
   .modBacker {
-    // background: hsl(282, 10%, 10%);
-    // height: 770px;
-    // @apply bg-no-repeat;
-    // @apply bg-cover;
     @apply flex;
     @apply flex-col;
     @apply items-center;
-    // transform: scaleX(-1);
 
     @media (max-width: 900px) {
-      // background-size: 130vh !important;
-      // height: calc(100vh - 30px);
+      //
     }
 
     @media (max-width: 600px) {
-      // height: calc(100vh - 30px);
-      // background-size: contain;
+      //
     }
 
     @media (max-width: 300px) {
-      // height: calc(100vh - 30px);
-      // background-size: contain;
+      //
     }
   }
 
   .mainGrid {
-    @apply grid;
+    @apply grid gap-y-2 gap-x-0;
     grid-template-columns: 1fr;
-    // @apply gap-4;
-    // margin: 0em 0 1em;
-    gap: 0.5rem;
     width: 90%;
 
     @media (max-width: $breakThou) {}
@@ -72,7 +61,7 @@
     }
 
     @media (max-width: $breakTwo) {
-      // width:   80%;
+      //
     }
   }
 
@@ -85,18 +74,15 @@
     justify-self: center;
 
     @media (max-width: $breakThou) {
-      // grid-column: 1 / 3;
-      // grid-row: 3;
+      //
     }
 
     @media (max-width: $breakOne) {
-      // grid-column: 1 / 3;
-      // grid-row: 3;
+      //
     }
 
     @media (max-width: $breakTwo) {
-      // grid-column: 1 / 3;
-      // grid-row: 3;
+      //
     }
   }
 
@@ -104,7 +90,7 @@
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     justify-self: center !important;
-    @apply justify-center;
+    @apply justify-center justify-items-center;
     width: 35vw !important;
     grid-template-columns: repeat(6, minmax(88px, 1fr)) !important;
     width: initial !important;
@@ -112,7 +98,6 @@
     @media (max-width: 300000000rem) {
       grid-row: 2;
       width: 70vw !important;
-      // grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
       grid-template-columns: repeat(4, minmax(88px, 1fr)) !important;
     }
 

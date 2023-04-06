@@ -53,7 +53,7 @@
   .mainGrid {
     @apply grid;
     grid-template-columns: 7fr 6fr;
-    grid-gap: 1rem 1rem;
+    grid-gap: 1rem 0rem;
     padding: 0 1em 0.5em;
 
     @media (min-width: $breakThou) and (min-device-width: 768px) {

@@ -60,7 +60,7 @@
   }
 
   .mainGrid {
-    @apply grid my-4 mx-4 gap-4;
+    @apply grid my-4 mx-4 gap-4 gap-y-4 gap-x-0;
     grid-template-columns: repeat(2, 1fr);
 
     @media (max-width: $breakThou) {
@@ -80,7 +80,7 @@
   .copyArea {
     grid-column: 1 / 2;
     grid-row: 1 / 4;
-    transition-delay: 250ms;
+    @apply delay-[250ms];
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;

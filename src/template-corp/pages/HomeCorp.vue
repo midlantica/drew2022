@@ -51,8 +51,7 @@
   @import '../assets/css/corp-main.scss';
 
   .about {
-    background: white;
-    font-size: 0.95em;
+    @apply text-[.95em] bg-white;
 
     @media (max-width: $breakThou) {
       //
@@ -61,20 +60,17 @@
 
   header,
   footer {
-    // @apply text-base-ivory;
-    box-shadow: none !important;
-
+    @apply shadow-none;
   }
 
   .mainGrid {
-    @apply grid;
+    @apply grid gap-y-4 gap-x-0 mx-4 mb-4;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0.5rem 1rem;
-    margin: 0.25rem 1rem 1rem;
 
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
       row-gap: 1em;
+      @apply gap-y-4;
     }
 
     @media (max-width: $breakOne) {
@@ -114,36 +110,37 @@
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
       grid-row: 3;
-      margin-top: initial;
+      @apply mt-0;
     }
 
     @media (max-width: $breakOne) {
       grid-column: 1 / 3;
       grid-row: 3;
-      margin-top: initial;
+      @apply mt-0;
     }
 
     @media (max-width: $breakTwo) {
       grid-column: 1 / 3;
       grid-row: 3;
-      margin-top: initial;
+      @apply mt-0;
     }
   }
 
   .skillsGrid {
     grid-column: 1 / 2;
+    // @apply row
     grid-row: 2;
 
     @media (max-width: $breakThou) {
-      grid-row: 2;
+      // grid-row: 2;
     }
 
     @media (max-width: $breakOne) {
-      grid-row: 2;
+      // grid-row: 2;
     }
 
     @media (max-width: $breakTwo) {
-      grid-row: 2;
+      // grid-row: 2;
     }
   }
 

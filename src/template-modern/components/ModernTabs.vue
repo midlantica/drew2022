@@ -24,30 +24,15 @@
   }
 
   .modernTabs {
-    @apply mt-7 mx-0 mb-2;
-    @apply flex;
-    @apply flex-row;
-    @apply flex-wrap;
-    @apply justify-center;
-    font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
+    @apply font-modernCopy mt-7 mx-0 mb-3 flex flex-row flex-wrap justify-center;
 
     a {
-      color: $black;
-      @apply my-2 mx-2;
-      @apply pt-[.55rem] px-4 pb-[.4rem];
-      @apply rounded-[2rem];
-      @apply no-underline;
-      @apply uppercase;
-      @apply text-[.6rem];
-      @apply font-semibold;
-      @apply tracking-[0.075ch];
-      background: $ruby;
-      background: linear-gradient(180deg, darken($ruby, 0), darken($ruby, 15));
+      @apply text-black my-2 mx-2 pt-[.55rem] px-4 pb-[.4rem] rounded-[2rem] no-underline uppercase text-[.6rem] font-semibold tracking-[0.075ch] bg-modern-ruby;
+      background: linear-gradient(180deg, darken(#D71D5B, 0), darken(#D71D5B, 15));
 
       &:hover {
-        color: $white;
-        background: $ruby;
-        background: linear-gradient(0deg, darken($ruby, 0), darken($ruby, 15));
+        @apply bg-modern-ruby text-white;
+        background: linear-gradient(0deg, darken(#D71D5B, 0), darken(#D71D5B, 15));
       }
     }
   }

@@ -42,7 +42,8 @@ module.exports = {
           ivory: '#fffdf4',
           accent: '#ffa500',
           accentRed: '#7c0000',
-          offWhite: '#d7e7f3'
+          offWhite: '#d7e7f3',
+          backBlack: '#1f1f1f'
         },
         modern: {
           ruby: '#D71D5B',

@@ -144,8 +144,8 @@
         @apply border border-[#ff000054] border-solid py-[0.3rem] px-[0.9rem] rounded-[2rem] my-0 mx-2;
 
         &:hover {
-          @apply text-[$yellow-red] no-underline;
-          background: darken($ruby, 15);
+          @apply text-[$yellow-red] no-underline bg-modern-ruby;
+          // background: darken($ruby, 15);
         }
       }
 

@@ -152,59 +152,19 @@
   @import "../template-modern/assets/css/modern-main.scss";
 
   .modalBg {
-    @apply fixed;
-    @apply w-full;
-    height: 100%;
-    @apply top-0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: hsla(0, 0%, 0%, 0.6);
-    @apply flex;
-    @apply justify-center;
-    @apply items-center;
-    z-index: 100000;
-    @apply m-auto;
-    // transition: 20s ease-in;
-    // transform: translate(0px, 0px) rotate(0deg) !important;
+    @apply fixed w-full top-0 flex justify-center items-center m-auto h-full left-0 right-0 bottom-0 z-50 bg-black/60;
     animation: fade .25s;
 
     .modal {
-      @apply relative;
-      margin-bottom: auto;
-      margin-top: 260px;
-      // max-width: 300px;
       width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));
-      // min-@apply w-[80%];
-      // margin: auto 20%;
-      // margin-bottom: 4rem;
-      background: white;
       background: linear-gradient(180deg,
-          hsl(0, 0%, 100%) 0%,
-          hsl(186, 43%, 92%) 100%);
-      // background: linear-gradient(180deg, white 0%, white 75%, rgba(230, 251, 255, 1) 100%);
-
-      // padding: 1rem 1rem 1rem 0rem;
-      border-radius: 20px;
+      hsl(0, 0%, 100%) 0%,
+      hsl(186, 43%, 92%) 100%);
       box-shadow: 0px 6px 10px 0px hsl(0deg 0% 0% / 30%);
+      @apply relative mb-auto mt-[260px] bg-white rounded-[20px] ;
 
       .closeBtn {
-        @apply absolute;
-        top: -10px;
-        right: -10px;
-        background-color: transparent;
-        color: hsla(0, 0%, 0%, 50%);
-        border: none;
-        @apply cursor-pointer;
-        background: #ffffff;
-        border-radius: 20px;
-        width: 40px;
-        height: 40px;
-        @apply flex;
-        @apply items-center;
-        @apply justify-center;
-        @apply cursor-pointer;
-
+        @apply absolute flex items-center justify-center cursor-pointer bg-white rounded-[20px] w-[40px] h-[40px] border-none text-black/50 top-[-10px] right-[-10px];
       }
 
       h1,
@@ -214,67 +174,43 @@
       h5,
       h6,
       p {
-        color: hsla(0, 0%, 0%, 0.85);
-        margin-top: .25rem;
-        @apply text-center;
+        @apply text-center mt-1 text-black/80;
       }
 
       h4 {
-        @apply text-[1.2rem];
-        @apply tracking-normal;
+        @apply text-[1.2rem] tracking-normal;
       }
 
       p {
-        @apply text-[1rem];
-        line-height: 1.8;
+        @apply text-[1rem] leading-[1.8];
       }
 
       .modalInner {
-        // @apply w-full;
-        @apply relative;
-        @apply flex;
-        @apply flex-wrap;
-        margin: 1rem 2rem 1.5rem;
-        @apply justify-center;
-        @apply items-center;
+        @apply relative flex flex-wrap justify-center items-center justify-items-center mt-4 mx-8 mb-6;
 
         .icon {
-          // @apply inline-block;
-          // margin-left: -1rem;
-          // flex-shrink: 1;
-          @apply self-center;
+          @apply self-center justify-items-center h-[88px] gap-0;
 
           svg {
-            // @apply block;
-            width: 180px !important;
-            margin-right: -1.4rem !important;
-            margin-left: -2rem !important;
-            margin-bottom: -.5rem !important;
+            @apply w-[180px] m-auto;
           }
         }
 
         .content {
-          @apply inline;
-          flex-shrink: 1;
+          @apply inline shrink;
         }
-
       }
-
     }
   }
 
+  .skillsGrid div {
+    @apply h-[70px] m-auto flex items-center justify-center;
+  }
   .skillsGrid {
-    @apply grid;
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    @apply w-full;
-    @apply justify-between;
-    justify-items: center;
-    align-items: stretch;
-    align-content: space-between;
-    gap: 0.5rem auto;
-    @apply relative;
+    @apply w-full grid justify-center items-stretch content-between relative gap-y-[.5] gap-x-[auto] justify-items-center;
 
     @media (max-width: $breakThou) {
       grid-row: 2;
@@ -305,12 +241,10 @@
     }
 
     svg {
-      width: 88px;
+      @apply w-[88px];
 
       &:hover {
-        // background: red !important;
-        animation: shimmy 0.25s !important;
-        // animation-duration: .25s;
+        @apply animate-[shimmy] duration-[.25s];
       }
     }
 
@@ -320,14 +254,11 @@
   }
 
   body.modern .skillsGrid {
-    @apply w-[70%];
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    @apply justify-center;
-    margin: 1rem auto;
+    @apply w-[70%] justify-center my-4 mx-auto gap-y-4 gap-x-0;
 
     @media (min-width: 770px) {
       @apply w-3/5;
-      // grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     }
 
     @media (max-width: 700px) {
@@ -336,26 +267,24 @@
     }
 
     svg {
-      @apply w-[100px];
-      margin: 0rem auto 0.75rem;
+      @apply w-[100px] mt-0 mx-auto mb-3;
 
       &:hover {
-        // background: hsla(0, 100%, 25%, 0.25);
-        // fill: red;
+        //
       }
 
       g {
         box-shadow: 0 0 12px black;
-        // stroke: $accent !important;
       }
     }
   }
 
   body.bourbon .skillsGrid {
-    //
+    // @apply mt-[-1rem];
 
     @media (min-width: 1026px) {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      @apply mt-[-1rem];
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
@@ -371,7 +300,7 @@
     }
 
     svg {
-      width: 88px;
+      @apply w-[88px];
     }
 
   }
@@ -396,14 +325,13 @@
     }
 
     svg {
-      width: 88px;
+      @apply w-[88px];
     }
 
   }
 
   body.groovy .skillsGrid {
-    @apply transition duration-[.25s] ease-in;
-    margin: 0 -1em 0 0em;
+    @apply transition duration-[.25s] ease-in mt-0 mr-[-1rem] mb-0 ml-0;
 
     @media (min-width: 1026px) {
       grid-template-columns: repeat(12, minmax(84px, 1fr));
@@ -422,7 +350,7 @@
     }
 
     svg {
-      width: 88px;
+      @apply w-[88px];
     }
 
   }
@@ -432,6 +360,8 @@
 
     @media (min-width: 1026px) {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      margin-top: -2.5rem;
+
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
@@ -447,12 +377,10 @@
     }
 
     svg {
-      width: 88px;
+      @apply w-[88px];
 
       &:hover {
-        // background: red !important;
         animation: shimmy 0.25s !important;
-        // animation-duration: .25s;
       }
     }
 
@@ -460,8 +388,7 @@
 
   body.punk .skillsGrid {
     margin: 0.5em auto 0em;
-    @apply transition duration-[.25s] ease-in;
-    // transform: rotate(-0.5deg);
+    @apply transition duration-[.25s] ease-in mt-2 mx-auto mb-0;
     background: transparentize(rgba(0, 140, 0, 0.829), 0.5) !important;
 
     @media (min-width: 1026px) {
@@ -481,7 +408,7 @@
     }
 
     svg {
-      width: 88px;
+      @apply w-[88px];
     }
 
   }
@@ -489,7 +416,6 @@
   .modal-fade-enter-active,
   .modal-fade-leave-active {
     transition: all .5s ease;
-    // transform: scale(1.1);
   }
 
   .modal-fade-enter-from,

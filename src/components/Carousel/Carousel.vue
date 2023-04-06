@@ -145,6 +145,10 @@
 
       .projectBox__top {
         @apply mb-2;
+
+        .projectHead {
+          @apply mt-[2px];
+        }
       }
 
       p {
@@ -154,7 +158,6 @@
 
     .miniGallery div .box {
       @apply h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
-      // border: 1px solid transparent !important;
 
       @media (max-width: $breakThou) {
         @apply min-h-min;
@@ -171,8 +174,7 @@
           @apply relative top-[-5px] ease-out;
 
           &:hover {
-            @apply opacity-[.8] relative ease-out;
-            stroke: $accent-red;
+            @apply opacity-[.8] relative ease-out stroke-modern-accentRed;
           }
         }
       }
@@ -186,8 +188,8 @@
       }
 
       .iconSVG {
-        @apply relative ease-out;
-        width: initial !important;
+        @apply relative ease-out w-auto;
+        // width: initial !important;
 
         &:hover {
           @apply relative ease-out top-[-5px];
@@ -379,17 +381,14 @@
     }
 
     .miniGallery div .box {
-      @apply h-[182px];
-      @apply border border-solid border-[#D7E7F3];
+      @apply h-[182px] border border-solid border-[#D7E7F3];
 
       &:hover {
-        border: none;
         @apply border border-solid border-[#abcbe3];
       }
 
       p {
-        font-family: 'Bodoni Moda', Times, serif !important;
-        @apply tracking-wider text-center text-gray-800;
+        @apply font-corpCopy tracking-wider text-center text-gray-800;
       }
     }
   }
@@ -464,7 +463,8 @@
       .box {
         @apply flex flex-col flex-nowrap items-center content-center justify-center duration-75 text-center m-auto bg-white;
         box-shadow: 0px 2px 2px -3px black;
-        border: 1px solid transparentize(grey, 0.85);
+        // border: 1px solid transparentize(grey, 0.85);
+        @apply border border-solid text-gray-400/80;
 
         p {
           @apply text-[#333] relative ease-out lowercase;
@@ -472,7 +472,8 @@
 
         &:hover {
           @apply ease-out top-[-5px];
-          border: 1px solid transparentize(grey, 0.5);
+          // border: 1px solid transparentize(grey, 0.5);
+          @apply border border-solid text-gray-400/80;
 
           p {
             @apply relative top-[-5px] ease-out;
@@ -575,8 +576,7 @@
   }
 
   .iconSVG {
-    @apply relative ease-out duration-200;
-    width: initial !important;
+    @apply relative ease-out duration-200 w-auto;
 
     &:hover {
       @apply relative ease-out duration-200;
@@ -591,13 +591,10 @@
   }
 
   .carouselArrow {
-    color: hsla(0, 0%, 100%, 1);
-    background: hsla(0, 0%, 0%, 0.3);
-    padding: 0.15rem 0.5rem 0.1rem 0.4rem;
+    @apply text-white bg-black/30 pt-[.15rem] pr-[.5rem] pb-[.1rem] pl-[.4rem];
 
     &:hover {
-      color: hsla(0, 0%, 100%, 1);
-      background: hsla(0, 0%, 0%, 0.5);
+      @apply text-white bg-black/50;
     }
   }
 
