@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  important: true,
+  // important: true,
   content: [
     './index.html',
     './src/components/**/*.vue',
@@ -33,6 +33,9 @@ module.exports = {
         breakOne: '840px',
         breakThou: '1024px'
         // breakMinMax: '630px 760px',
+      },
+      boxShadow: {
+        druShadow: '0px 0px 4px 0px #000000'
       },
       colors: {
         base: {

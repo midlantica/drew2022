@@ -10,7 +10,7 @@ html, html a {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  // box-sizing: border-box;
+  // @apply box-border;
   @apply box-border;
 }
 

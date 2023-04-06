@@ -93,9 +93,7 @@
   $accentRed: #7c0000;
 
   h1 {
-    @apply text-[2em];
-    @apply text-center;
-    @apply py-2 px-0;
+    @apply text-[2em] text-center py-2 px-0;
 
     a {
       @apply no-underline;
@@ -106,23 +104,15 @@
     //
 
     a {
-      @apply basis-auto;
-      @apply grow;
-      box-sizing: border-box;
-      @apply box-border;
-      @apply text-center;
-      @apply items-center;
-      @apply no-underline;
-      // margin: 0em 1em;
-      @apply text-black;
+      @apply basis-auto grow box-border text-center items-center no-underline text-black ;
 
       img.portThumbs {
         width: 400px;
         height: auto;
-        // margin: 1em auto 0;
         border: 2px solid $ivory;
         transition: opacity 1s ease-in-out;
         @include shadow;
+        @apply w-[400px] h-auto border-2 border-solid text-base-ivory druShadow;
 
         &:hover {
           border: 2px solid lighten($accentRed, 0);
@@ -131,16 +121,11 @@
       }
 
       p {
-        @apply inline-block;
-        @apply text-center;
-        // @apply m-0;
-        margin-bottom: 1em;
-        @apply mt-2;
-        padding-bottom: 0;
-        @apply text-[0.85em];
-        @apply text-black;
+        @apply inline-block text-center mt-2 text-[0.85em] text-black;
         border-bottom: 1px solid transparent;
+        padding-bottom: 0;
         max-width: 400px;
+        margin-bottom: 1em;
         @include clearfix;
 
         &:hover {
