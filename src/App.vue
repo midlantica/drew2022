@@ -147,8 +147,8 @@
     }
 
     .about>p {
-      @apply text-[87.5%] tracking-wider font-groovyCopy;
-      font-variant: small-caps !important;
+      @apply text-[0.8em] tracking-wider font-groovyCopy;
+      // font-variant: small-caps !important;
     }
 
     &.extras .extrasWrapper {

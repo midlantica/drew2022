@@ -15,13 +15,26 @@
   @import "../assets/css/corp-main.scss";
 
   .wrap {
-    @apply flex;
-    @apply flex-col;
-    @apply flex-nowrap;
-    @apply mt-4 mr-4 mb-4 ml-6;
+    @apply flex flex-col flex-nowrap mt-4 mr-8 mb-4 ml-6;
+
+    @media (min-width: $breakThou) {
+      @apply mt-4 mx-4 mb-4;
+    }
+
+    @media (max-width: $breakThou) {
+      @apply mt-4 mx-4 mb-4;
+    }
+
+    @media (max-width: $breakOne) {
+      @apply mt-4 mx-4 mb-4;
+    }
 
     @media (max-width: $breakTwo) {
-      margin: 0em 1em 1em;
+      @apply mt-4 mx-4 mb-4;
+    }
+
+    @media (max-width: $breakThree) {
+      @apply mt-4 mx-4 mb-4;
     }
   }
 
@@ -57,7 +70,7 @@
 
   p {
     color: transparentize($black, 0.15);
-    @apply font-corpCopy font-normal border-l-2 border-dotted border-corp-paleBlue ml-[.2rem] text-justify pl-[1.2rem] leading-[2.9rem] text-[1.1rem] tracking-normal;
+    @apply font-corpCopy font-normal border-l-2 border-dotted border-corp-paleBlue ml-[.2rem] text-justify pl-[1.2rem] leading-[2.9rem] text-[1.1rem] tracking-normal hyphens-auto;
 
     @media (max-width: $breakThou) {
       columns: 2 200px;

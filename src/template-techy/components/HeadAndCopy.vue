@@ -15,27 +15,27 @@
   @import '../assets/css/techy-main.scss';
 
   section {
-    @apply mt-[2.45] mr-[1.95rem] mb-0 ml-10 ;
+    @apply mt-[2.45] mr-[1.95rem] mb-0 ml-6 ;
 
     @media (min-width: $breakThou) {
-      //
+      @apply ml-4 mr-6;
     }
 
     @media (max-width: $breakThou) {
       margin-top: 1.5rem;
-      @apply mt-8 ml-8;
+      @apply ml-4 mr-2;
     }
 
     @media (max-width: $breakOne) {
-      @apply ml-4;
+      @apply ml-4 mr-2;
     }
 
     @media (max-width: $breakTwo) {
-      //
+      @apply ml-4 mr-2;
     }
 
     @media (max-width: $breakThree) {
-      //
+      @apply ml-4 mr-2;
     }
   }
 

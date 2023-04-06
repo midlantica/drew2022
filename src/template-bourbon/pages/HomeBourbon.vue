@@ -56,7 +56,7 @@
 
   header,
   footer {
-    @include shadow;
+    @apply shadow-druShadow;
   }
 
   .mainGrid {

@@ -240,8 +240,7 @@
 
   // GROOVY ########################
   .groovy .quoteBlock {
-    @apply font-groovyCopy bg-[#932213] pt-[0.75em] px-[2em] pb-[1em] text-center;
-    @include shadow;
+    @apply font-groovyCopy bg-[#932213] pt-[0.75em] px-[2em] pb-[1em] text-center shadow-druShadow;
   }
 
   // TECHY ########################

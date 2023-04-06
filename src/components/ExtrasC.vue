@@ -111,8 +111,8 @@
         height: auto;
         border: 2px solid $ivory;
         transition: opacity 1s ease-in-out;
-        @include shadow;
-        @apply w-[400px] h-auto border-2 border-solid text-base-ivory druShadow;
+        // @include shadow;
+        @apply w-[400px] h-auto border-2 border-solid text-base-ivory shadow-druShadow;
 
         &:hover {
           border: 2px solid lighten($accentRed, 0);
