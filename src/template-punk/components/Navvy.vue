@@ -33,14 +33,14 @@
   @import '../assets/css/punk-main.scss';
 
   nav {
-    @apply flex flex-col content-center px-2 py-4;
+    @apply flex flex-col content-center px-2 py-4 items-center;
 
     @media (max-width: $breakOne) {
       @apply justify-center content-center items-center;
     }
 
     .greenBar {
-      @apply block w-full max-w-[1024px] z-0 absolute top-0 left-1/2 h-[5em] self-center bg-[rgba(0,128,0,0.25)] translate-x-[50%] translate-y-[0%];
+      @apply block w-full max-w-[1024px] z-0 absolute top-0 left-0 h-[5em] self-center bg-[rgba(0,128,0,0.25)];
       filter: saturate(2.5);
     }
 

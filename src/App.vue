@@ -46,7 +46,7 @@
     }
 
     .about>p {
-      @apply my-1 mx-auto font-bourbonCopy text-[.84em];
+      @apply my-1 mx-auto font-bourbonCopy text-[.82em];
 
       @media (max-width: $breakThou) {
         @apply text-[1.65vw];
@@ -143,7 +143,7 @@
     }
 
     .about>p {
-      @apply text-[0.8em] tracking-wider font-groovyCopy uppercase;
+      @apply text-[0.8em] tracking-wider font-groovyCopy;
     }
 
     &.extras .extrasWrapper {

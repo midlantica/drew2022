@@ -15,23 +15,23 @@
   @import '../assets/css/techy-main.scss';
 
   section {
-    @apply mt-[2.45] mr-[1.95rem] mb-0 ml-6 ;
+    @apply mt-[2.45rem] mr-[1.95rem] mb-0 ml-6 ;
 
     @media (min-width: $breakThou) {
-      @apply ml-4 mr-6;
+      // @apply ;
     }
 
     @media (max-width: $breakThou) {
-      margin-top: 1.5rem;
-      @apply ml-4 mr-2;
+      @apply mt-2 mx-2;
+      // @apply ml-4 mr-2;
     }
 
     @media (max-width: $breakOne) {
-      @apply ml-4 mr-2;
+      @apply mx-2;
     }
 
     @media (max-width: $breakTwo) {
-      @apply ml-4 mr-2;
+      @apply mx-1;
     }
 
     @media (max-width: $breakThree) {
@@ -88,14 +88,17 @@
 
     @media (max-width: $breakTwo) {
       @apply text-[1.2rem] leading-[2.3em] tracking-[.01em];
+      columns: 1;
     }
 
     @media (max-width: $breakTwo) and (-webkit-min-device-pixel-ratio: 2) {
       @apply text-[1.15rem];
+      columns: 1;
     }
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
         @apply text-[1.18em] mt-2 mr-0 mb-0 pt-0 px-0 pb-0;
+        columns: 1;
     }
 
     @media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
