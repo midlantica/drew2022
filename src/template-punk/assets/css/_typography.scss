@@ -1,51 +1,31 @@
 h1, h2, h3, h4, h5 {
-  @apply text-base-accentRed leading-[1.1em] font-normal text-left mt-3 mr-0 mb-1 ml-0 p-0 tracking-[.025em];
-  text-transform: uppercase;
-  font-family: $font-subhead;
+  @apply font-punkHead text-base-accentRed leading-[1.1em] font-normal text-left mt-3 mr-0 mb-1 ml-0 p-0 tracking-[.025em] uppercase;
 }
 
 h2 {
-  font-size: 2.25em;
-  color: $accent;
-  @apply capitalize;
-  font-family: $font-subhead;
+  @apply text-black capitalize font-punkSubhead text-[2.25em];
 }
 
 h3 {
   @apply text-[1.7em];
-  color: $blue-dark;
 }
 
 h4 {
-  @apply text-[1.5em];
-  @apply tracking-[.04em];
+  @apply text-[1.5em] tracking-[.04em];
 }
 
 h5 {
-  font-size: $base-font-size;
+  @apply text-[1rem];
 }
 
 p {
-  font-family: $font-copy;
-  font-size: $base-font-size;
-  // color: $blue-mid;
-  line-height: $base-line-height;
-  @apply font-normal text-left m-0 p-0;
+  @apply font-punkCopy text-[1rem] leading-[1.7rem] font-normal text-left m-0 p-0;
 }
 
 ul {
-  list-style-type: square;
-  @apply p-0;
-  margin: 0 -1em 1em 0em;
-  font-family: $font-copy;
-  color: $blue-mid;
-  line-height: $base-line-height;
-  @apply text-left;
+  @apply font-punkCopy text-black p-0 text-left leading-[1.7rem] list-square mt-0 mr-[-1em] mb-4 ml-0;
 
   li {
-    list-style-position: outside;
-    margin: .25em 0em 0 1em;
-    padding-left: -1em;
-    line-height: 1.6em;
+    @apply list-outside pl-[-1em] leading-[1.6em] mt-1 mr-0 mb-0 ml-4;
   }
 }

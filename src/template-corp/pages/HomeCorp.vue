@@ -64,8 +64,8 @@
   }
 
   .mainGrid {
-    @apply grid gap-y-4 gap-x-0 ml-4 mb-4 mr-6;
     grid-template-columns: repeat(2, 1fr);
+    @apply grid gap-y-4 gap-x-0 ml-4 mb-4 mr-6;
 
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
@@ -127,7 +127,6 @@
 
   .skillsGrid {
     grid-column: 1 / 2;
-    // @apply row
     grid-row: 2;
 
     @media (max-width: $breakThou) {

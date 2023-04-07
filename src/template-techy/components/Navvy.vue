@@ -48,14 +48,7 @@
   @import '../assets/css/techy-main.scss';
 
   nav {
-    @apply w-full;
-    @apply flex;
-    @apply flex-col;
-    @apply flex-nowrap;
-    @apply justify-center;
-    @apply items-center;
-    @apply content-center;
-    @apply grow;
+    @apply w-full flex flex-col flex-nowrap justify-center items-center content-center grow;
 
     @media (max-width: $breakOne) {
       //
@@ -75,23 +68,15 @@
     }
 
     .masty {
-      @apply my-0 mx-auto;
-      @apply text-center;
+      @apply my-0 mx-auto text-center;
 
       .DHmast {
-        @apply grid;
         grid-template-columns: 2fr 4fr 7fr;
-        grid-gap: 2em;
-        @apply items-center;
-        @apply my-0 mx-auto;
-        @apply pt-4;
-        //
+        @apply grid items-center my-0 mx-auto pt-4 gap-8;
 
         @media (max-width: $breakThou) {
           grid-template-columns: auto auto;
-          @apply justify-center;
-          justify-items: center;
-          grid-gap: .5em;
+          @apply justify-center gap-2;
         }
 
         @media (max-width: $breakOne) {
@@ -111,57 +96,28 @@
         }
 
         a.drewHeadPic {
-          @apply w-[92px];
-          @apply h-[109px];
-          @apply pt-4 pr-4 pb-0 pl-4;
-          background-image: url(/img/drew_mug_dig.png);
-          @apply bg-no-repeat;
-          @apply bg-cover;
+          @apply w-[92px] h-[109px] pt-4 pr-4 pb-0 pl-4 bg-no-repeat bg-cover justify-self-end;
           grid-column: 1 / 2;
           grid-row: 1 / 3;
-          @apply justify-self-end;
+          background-image: url(/img/drew_mug_dig.png);
 
           @media (max-width: $breakThou) {
-            @apply w-[92px];
-            @apply h-[109px];
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            @apply mt-0 mr-2 mb-0 ml-0;
-            @apply justify-self-end;
+            @apply w-[92px] h-[109px] mt-0 mr-2 mb-0 ml-0 justify-self-end;
           }
 
           @media (max-width: $breakTwo) {
-            @apply w-[64px];
-            @apply h-[75px];
+            @apply w-[64px] h-[75px];
           }
 
           @media (max-width: $breakThree) {
-            @apply w-[46px];
-            @apply h-[55px];
-            @apply m-0;
+            @apply w-[46px] h-[55px] m-0;
           }
 
           @media (max-width: $breakFour) {
-            // width: 28px !important;
-            @apply h-[55px];
-            @apply m-0;
+            @apply h-[55px] m-0;
           }
-
-          // @media (max-device-width: 667px)
-          // and (-webkit-device-pixel-ratio: 2)
-          // {
-          //   @apply mr-2;
-          //   @apply ml-0;
-          //   width: 65px !important;
-          //   height: 77px !important;
-          //   margin: 0em;
-          // }
-
-          // @media (max-width: $breakFour) {
-          //   width: 39px !important;
-          //   height: 46px !important;
-          //   margin: 0em;
-          // }
 
         }
 
@@ -193,10 +149,7 @@
           @media (max-width: $breakThou) {
             grid-column: 2 / 3;
             grid-row: 1 / 1;
-            @apply self-end;
-
-            @apply mb-[-1em];
-            @apply w-[40vw];
+            @apply self-end mb-[-1em] w-[40vw];
           }
 
           @media (max-width: $breakOne) {
@@ -208,8 +161,7 @@
           }
 
           @media (max-width: $breakThree) {
-            @apply mb-[0em];
-            width: 56vw;
+            @apply w-[56vw] mb-[0em] ;
           }
         }
 
@@ -234,8 +186,7 @@
           }
 
           @media (max-width: $breakThree) {
-            @apply w-[77vw];
-            @apply h-[20vw];
+            @apply w-[77vw] h-[20vw];
           }
         }
       }
@@ -243,17 +194,14 @@
   }
 
   nav .jobDesc {
-    @apply mt-[-1em] mr-0 mb-4 ml-[11.1em];
-    @apply text-left;
+    @apply mt-[-1em] mr-0 mb-4 ml-[11.1em] text-left;
 
     @media (max-width: $breakThou) {
-      @apply my-4 mx-0;
-      @apply text-center;
+      @apply my-4 mx-0 text-center;
     }
 
     @media (max-width: $breakOne) {
-      @apply my-0 mx-0 mb-4;
-      @apply text-center;
+      @apply my-0 mx-0 mb-4 text-center;
     }
 
     @media (max-width: $breakTwo) {
@@ -269,19 +217,10 @@
     }
 
     h2 {
-      @apply m-0;
-      font-family: $font-copy;
-      @apply font-normal;
-      @apply font-normal;
-      color: $blueTech;
-      @apply lowercase;
-      @apply text-[1.7em];
-      @apply leading-[1.1em];
-      @apply tracking-[.03em];
-      @apply inline;
+      @apply font-techyHead text-techy-blueTech m-0 font-normal lowercase text-[1.7em] leading-[1.1em] tracking-[.03em] inline;
 
       &:nth-child(1) {
-        // @apply ml-4;
+        //
       }
 
       &:nth-child(2) {
@@ -289,9 +228,7 @@
       }
 
       @media (max-width: $breakThou) {
-        @apply inline;
-        @apply text-[3.3vw];
-        @apply mt-[-3px];
+        @apply inline text-[3.3vw] mt-[-3px];
 
         &:nth-child(1) {
           //
@@ -303,9 +240,7 @@
       }
 
       @media (max-width: $breakOne) {
-        @apply inline;
-        @apply text-[3.7vw];
-        @apply mt-[-3px];
+        @apply inline text-[3.7vw] mt-[-3px];
 
         &:nth-child(1) {
           //
@@ -323,23 +258,12 @@
   }
 
   nav .bar {
-    @apply py-[.5vh] px-4;
-    background: $blueTech;
-    @apply text-base-ivory;
     grid-column: 1 / 3;
     grid-row: 3 / 4;
+    @apply bg-techy-blueTech text-base-ivory py-[.5vh] px-4;
 
     .contact {
-      @apply font-normal;
-      @apply text-base-ivory;
-      @apply flex;
-      @apply flex-row;
-      @apply flex-wrap;
-      @apply justify-center;
-      @apply items-center;
-      @apply content-center;
-      @apply grow;
-      @apply w-1/2;
+      @apply font-normal text-base-ivory flex flex-row flex-wrap justify-center items-center content-center grow w-1/2;
 
       @media (max-width: 1024px) {
         @apply w-full;
@@ -358,14 +282,7 @@
       }
 
       p {
-        font-family: $font-copy;
-        @apply font-medium;
-        @apply tracking-[.09em];
-        @apply tracking-[.09em];
-        @apply text-base-ivory;
-        @apply text-[1.3em];
-        @apply leading-10;
-        margin-left: 0.5em;
+        @apply font-techyCopy font-medium tracking-[.09em] text-base-ivory text-[1.3em] leading-10 ml-2;
 
         >a {
           color: transparentize($ivory, .1);
@@ -385,10 +302,7 @@
         }
 
         @media (max-width: $breakOne) {
-          @apply justify-center;
-          @apply text-[1.2em];
-          letter-spacing: .1em !important;
-          @apply tracking-[.1em];
+          @apply justify-center text-[1.2em] tracking-[.1em];
 
           &:nth-child(1) {
             //
@@ -400,8 +314,7 @@
         }
 
         @media (max-width: $breakTwo) {
-          letter-spacing: 0.09em !important;
-          @apply tracking-[.1em];
+          @apply tracking-[.09em] ;
 
           &:nth-child(1) {
             //
@@ -413,11 +326,7 @@
         }
 
         @media (max-width: $breakThree) {
-          @apply justify-center;
-          @apply text-[1.1em];
-          @apply tracking-[.07em];
-          @apply leading-8;
-          @apply text-center;
+          @apply justify-center text-[1.1em] tracking-[.07em] leading-8 text-center;
 
           &:nth-child(1) {
             //

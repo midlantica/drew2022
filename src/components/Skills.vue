@@ -284,7 +284,7 @@
 
     @media (min-width: 1026px) {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      @apply mt-[-1rem];
+      @apply mt-[-1.3rem];
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {

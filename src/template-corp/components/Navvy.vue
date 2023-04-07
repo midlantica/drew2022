@@ -34,27 +34,18 @@
   @import '../assets/css/corp-main.scss';
 
   nav {
-    @apply flex;
-    @apply flex-row;
-    @apply flex-wrap;
-    @apply items-center;
-    @apply pt-[2em] px-[2em] pb-0;
-    @apply justify-between;
-    @apply mb-6;
+    @apply flex flex-row flex-wrap items-center pt-[2em] px-[2em] pb-0 justify-between mb-6;
 
     @media (max-width: $breakOne) {
-      @apply justify-center;
-      @apply mb-8;
+      @apply justify-center mb-8;
     }
   }
 
   a {
-    @apply text-base-ivory;
-    @apply no-underline;
+    @apply text-base-ivory no-underline;
 
     &:link {
-      @apply text-base-ivory;
-      @apply no-underline;
+      @apply text-base-ivory no-underline;
     }
 
     &:hover {
@@ -68,10 +59,7 @@
   h4,
   h5,
   p {
-    @apply leading-4 text-corp-blueDark;
-    @apply m-0;
-    @apply p-0;
-    @apply normal-case;
+    @apply leading-4 text-corp-blueDark m-0 p-0 normal-case;
 
     a {
       @apply no-underline text-corp-blueDark;
@@ -79,32 +67,23 @@
   }
 
   .drewHarper {
-    height: 83px;
-    //
+    @apply h-[83px];
 
     @media (max-width: $breakOne) {
       //
     }
 
     @media (max-width: $breakTwo) {
-      height: auto;
+      @apply h-auto;
     }
   }
 
   a.drewhead {
-    @apply inline-block;
-    background: #c00000;
-    background-image: url(/img/drew_mug_red.png);
-    // @apply bg-no-repeat;
-    // @apply bg-cover;
-    @apply w-[80px] h-[80px];
     background-position: -39px -59px;
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
-    @apply bg-no-repeat;
     background-size: 151%;
     filter: hue-rotate(210deg) grayscale(50%);
-    border-radius: 1px;
-    margin-bottom: .75rem;
+    @apply bg-[url('/img/drew_mug_red.png')] inline-block w-[80px] h-[80px] bg-no-repeat bg-corp-accentRed rounded-[1px] mb-3 shadow-[0px_0px_1px_1px_#00000026];
+    // box-shadow: 10px 10px 1px 1px #00000026;
 
     @media (max-width: $breakTwo) {
       background-position: -40px -50px !important;
@@ -113,10 +92,7 @@
   }
 
   h1 {
-    @apply font-corpCopy;
-    @apply text-[1.5rem];
-    @apply transition duration-[.25s] ease-in;
-    @apply font-medium;
+    @apply font-corpCopy text-[1.5rem] transition duration-[.25s] ease-in font-medium;
 
     a:hover {
       color: initial !important;
@@ -136,15 +112,9 @@
   }
 
   h3 {
-    @apply font-corpCopy;
-    @apply text-[1.35rem];
-    @apply transition duration-[.25s] ease-in;
-    @apply font-bold;
-    @apply text-center;
-    @apply leading-loose;
+    @apply font-corpCopy text-[1.35rem] transition duration-[.25s] ease-in font-bold text-center leading-loose;
 
     a:hover {
-      color: initial !important;
       //
     }
 
@@ -174,11 +144,7 @@
   }
 
   .drewTop {
-    @apply flex;
-    @apply flex-col;
-    @apply flex-wrap;
-    @apply content-center;
-    @apply text-center;
+    @apply flex flex-col flex-wrap content-center text-center;
 
     @media (max-width: $breakThree) {
       @apply w-full;
@@ -187,58 +153,32 @@
   }
 
   .contact {
-    @apply grow;
-    @apply flex;
-    @apply flex-col;
-    @apply flex-wrap;
-    @apply justify-center;
-    @apply items-center;
-    @apply content-center;
-    @apply mt-4;
-    @apply self-baseline;
-    //
+    @apply grow flex flex-col flex-wrap justify-center items-center content-center mt-4 self-baseline;
 
     @media (max-width: $breakOne) {
-      @apply ml-0;
-      @apply flex-row;
-      @apply mt-4;
+      @apply ml-0 flex-row mt-4;
     }
 
     @media (max-width: $breakTwo) {
-      @apply mt-[.4em];
-      @apply flex-row;
+      @apply mt-[.4em] flex-row;
     }
 
     @media (max-width: $breakThree) {
-      @apply mt-4;
-      @apply transition duration-[.25s] ease-in;
-      @apply flex-row;
+      @apply mt-4 transition duration-[.25s] ease-in flex-row;
     }
 
     @media (max-width: 520px) {
-      @apply mt-4;
-      @apply transition duration-[.25s] ease-in;
-      @apply flex-col;
+      @apply mt-4 transition duration-[.25s] ease-in flex-col;
     }
 
     p {
-      @apply font-corpCopy;
-      @apply text-[1.3em];
-      @apply tracking-[.01em];
-      @apply items-center;
-      @apply text-center;
-      @apply leading-[1.5em];
-      @apply grow;
-      @apply font-semibold;
-      @apply lowercase;
-      // @apply mt-[1rem];
+      @apply font-corpCopy text-[1.3em] tracking-[.01em] items-center text-center leading-[1.5em] grow font-semibold lowercase;
 
       a {
         border-bottom: 2px dotted lighten($blue-dark, 20);
 
         &:hover {
-          @apply text-[maroon];
-          @apply border-b-2 border-dotted border-[hsl(0,100%,25%)];
+          @apply text-[maroon] border-b-2 border-dotted border-[hsl(0,100%,25%)];
         }
       }
 
@@ -246,13 +186,11 @@
         @apply justify-center;
 
         &:nth-child(1) {
-          @apply text-right;
-          @apply my-0 mx-1;
+          @apply text-right my-0 mx-1;
         }
 
         &:nth-child(2) {
-          @apply text-left;
-          @apply my-0 mx-1;
+          @apply text-left my-0 mx-1;
         }
       }
 
@@ -261,10 +199,7 @@
       }
 
       @media (max-width: $breakThree) {
-        @apply justify-center;
-        @apply leading-5;
-        @apply mb-[-4px];
-        @apply text-center;
+        @apply justify-center leading-5 mb-[-4px] text-center;
       }
 
       &.resume,
@@ -277,8 +212,7 @@
           border-bottom: 1px dotted $accent;
 
           &:hover {
-            @apply text-[maroon];
-            @apply border-b-2 border-dotted border-[hsl(0,100%,25%)];
+            @apply text-[maroon] border-b-2 border-dotted border-[hsl(0,100%,25%)];
           }
         }
       }

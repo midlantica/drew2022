@@ -1,60 +1,31 @@
 h1, h2, h3, h4, h5 {
-  @apply text-base-accentRed;
-  @apply leading-[1.1em];
-  @apply font-normal;
-  @apply text-left;
-  margin: .75em 0 .25em 0;
-  @apply p-0;
-  @apply tracking-[.025em];
-  text-transform: uppercase;
-  font-family: $font-subhead;
+  @apply font-techyHead text-base-accentRed leading-[1.1em] font-normal text-left p-0 tracking-[.025em] uppercase mt-3 mx-0 mb-1;
 }
 
 h2 {
-  font-size: 2.25em;
-  color: $accent;
-  @apply capitalize;
-  font-family: $font-subhead;
+  @apply capitalize text-[2.25em] font-techyHead text-base-accentRed;
 }
 
 h3 {
-  @apply text-[1.7em];
-  color: $blue-dark;
+  @apply text-[1.7em] text-techy-blueTech;
 }
 
 h4 {
-  @apply text-[1.5em];
-  @apply tracking-[.04em];
+  @apply text-[1.5em] tracking-[.04em];
 }
 
 h5 {
-  font-size: $base-font-size;
+  @apply text-[1rem];
 }
 
 p {
-  font-family: $font-copy;
-  font-size: $base-font-size;
-  // color: $blue-mid;
-  line-height: $base-line-height;
-  @apply font-normal;
-  @apply text-left;
-  @apply m-0;
-  @apply p-0;
+  @apply font-techyCopy text-[1rem] leading-[1.7rem] font-normal text-left m-0 p-0;
 }
 
 ul {
-  list-style-type: square;
-  @apply p-0;
-  margin: 0 -1em 1em 0em;
-  font-family: $font-copy;
-  color: $blue-mid;
-  line-height: $base-line-height;
-  @apply text-left;
+  @apply font-techyCopy text-left leading-[1.7em] p-0 list-square mt-0 mr-[-1em] mb-4 ml-0;
 
   li {
-    list-style-position: outside;
-    margin: .25em 0em 0 1em;
-    padding-left: -1em;
-    line-height: 1.6em;
+    @apply list-outside pl-[-1em] leading-[1.6em] mt-1 mr-0 mb-0 ml-4;
   }
 }

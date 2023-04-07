@@ -156,26 +156,10 @@
       }
 
       .carouselArrow {
-        color: rgba(255, 255, 255, 0.75);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-        background: transparentize(black, .65);
-        padding: 0.2rem .75rem 0.15rem .6rem;
-        margin: 0rem 0 0 0em;
-        font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif;
-        cursor: pointer;
-        position: absolute;
-        text-transform: none;
-        box-shadow: none;
-        letter-spacing: 0.05em;
-        // z-index: 100;
+        @apply rounded-[20px] m-0 pt-[.2rem] pr-[.75rem] pb-[.15rem] pl-[.6rem] shadow-none absolute transform-none tracking-[.05em] cursor-pointer border border-solid border-[#FFFFFF33] text-[#FFFFFFBF] font-modernCopy bg-black/5;
 
         &:hover {
-          // background: grey;
-          // color: $accent-red;
-          // font-weight: bold;
-          background: transparentize(white, .9);
-          // font-weight: bold;
+          @apply bg-white/5;
         }
       }
     }
@@ -262,7 +246,7 @@
     }
 
     .miniGallery div .box {
-      @apply h-[181.5px];
+      @apply h-[180px];
 
       p {
         @apply text-[.85rem] font-bourbonCopy text-gray-800 text-center tracking-normal lowercase;
@@ -407,17 +391,11 @@
       }
 
       .carouselArrow {
-        border-radius: 2px;
-        box-shadow: none;
-        // background: hsla(205, 98%, 17%, 0.65);
-        border: none;
-        letter-spacing: 0.05em;
-        @apply rounded-sm shadow-none bg-[hsla(205,98%,17%,0.65)] tracking-[0.05em];
-        // text-shadow: 1px 1px 0 0 black;
+        @apply text-white bg-[hsla(205,98%,17%,0.6)] tracking-[0.05em] shadow-none rounded-sm;
 
         &:hover {
-          background: hsla(205, 98%, 17%, .85);
-          box-shadow: none;
+          @apply text-white bg-[hsla(205,98%,17%,0.85)];
+
         }
       }
     }
@@ -467,7 +445,7 @@
       }
 
       .carouselArrow {
-        @apply rounded-none text-white bg-black/50 pt-[.1rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
+        @apply rounded-none text-white bg-black/30 pt-[.1rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
 
         &:hover {
           @apply text-white bg-black/50;
@@ -476,7 +454,7 @@
     }
 
     .miniGallery div .box {
-      @apply h-[181.5px];
+      @apply h-[183px];
 
       p {
         @apply text-center font-punkCopy text-gray-800;
@@ -642,10 +620,10 @@
   }
 
   .carouselArrow {
-    @apply text-white bg-black/30 pt-[.1rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
+    @apply text-black/80 bg-black/10 pt-[.125rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
 
     &:hover {
-      @apply text-white bg-black/50;
+      @apply text-white bg-black/40;
     }
   }
 </style>-

@@ -32,51 +32,24 @@
 <style lang="scss" scoped>
   @import '../assets/css/punk-main.scss';
 
-  $outRed: rgba(221, 9, 22, .3);
-  $outBlue: rgba(92, 201, 245, .3);
-
   nav {
-    @apply flex;
-    @apply flex-col;
-    @apply content-center;
-    padding: .5em 1em;
+    @apply flex flex-col content-center px-2 py-4;
 
     @media (max-width: $breakOne) {
-      @apply justify-center;
-      @apply content-center;
-      @apply items-center;
+      @apply justify-center content-center items-center;
     }
 
     .greenBar {
-      @apply block;
-      @apply w-full;
-      @apply max-w-[1024px];
-      @apply z-0;
-      @apply absolute;
-      @apply top-0;
-      @apply left-1/2;
-      @apply h-[5em];
-      @apply self-center;
-      transform: translate(-50%, 0%);
+      @apply block w-full max-w-[1024px] z-0 absolute top-0 left-1/2 h-[5em] self-center bg-[rgba(0,128,0,0.25)] translate-x-[50%] translate-y-[0%];
       filter: saturate(2.5);
-      background: rgba(0, 128, 0, 0.25);
     }
 
     p.email {
-      font-family: $font;
-      @apply text-[1.5em];
-      @apply text-base-ivory;
-      @apply tracking-[0.03em];
+      @apply font-punkCopy text-[1.5em] text-base-ivory tracking-[0.03em] lowercase self-end mt-[-0.4em] -rotate-1;
       text-shadow: 1px 1px 2px black;
-      @apply lowercase;
-      @apply self-end;
-      transform: rotate(-1deg);
-      @apply mt-[-0.4em];
 
       a {
-        @apply text-base-ivory;
-        @apply tracking-wider;
-        @apply text-[0.9em];
+        @apply text-base-ivory tracking-wider text-[0.9em];
       }
 
       @media (max-width: $breakOne) {
@@ -85,18 +58,8 @@
     }
 
     // ###############################
-    // ###############################
-
     .mastMain {
-      @apply flex;
-      @apply flex-row;
-      @apply flex-nowrap;
-      @apply justify-center;
-      @apply items-center;
-      @apply content-center;
-      @apply mt-[-1.5em];
-      @apply z-[2];
-      @apply w-full;
+      @apply flex flex-row flex-nowrap justify-center items-center content-center mt-[-1.5em] z-[2] w-full;
 
       @media (max-width: $breakThou) {
         //
@@ -125,20 +88,15 @@
           }
 
           @media (max-width: $breakOne) {
-            @apply order-1;
-            @apply w-[47vw];
-            // @apply mb-6;
-            @apply mt-6;
+            @apply order-1 w-[47vw] mt-6;
           }
 
           @media (max-width: $breakTwo) {
-            @apply order-1;
-            @apply w-[59vw];
+            @apply order-1 w-[59vw];
           }
 
           @media (max-width: $breakThree) {
-            @apply w-[63vw];
-            @apply order-1;
+            @apply w-[63vw] order-1;
           }
         }
 
@@ -150,18 +108,15 @@
           }
 
           @media (max-width: $breakOne) {
-            @apply w-[68vw];
-            @apply order-3;
+            @apply w-[68vw] order-3;
           }
 
           @media (max-width: $breakTwo) {
-            @apply w-[88vw];
-            @apply order-3;
+            @apply w-[88vw] order-3;
           }
 
           @media (max-width: $breakThree) {
-            @apply w-[92vw];
-            @apply order-3;
+            @apply w-[92vw] order-3;
           }
         }
 
@@ -189,110 +144,60 @@
 
       a.svg.svgArt.mastDrew {
         @apply w-[170px];
-        // @apply block;
-        // height: 12vw;
-        // transform: rotate(1deg);
-        // @apply mt-[-1.5em];
-        // @apply order-1;
 
         @media (max-width: $breakThou) {
-          // width: 34vw;
-          // height: 17vh;
-          // margin-top: 1em;
-          // @apply order-1;
+          //
         }
 
         @media (max-width: $breakOne) {
-          // width: 130px;
-          // height: 140px;
-          // margin-top: 1em;
-          // @apply order-1;
+          //
         }
 
         @media (max-width: $breakTwo) {
-          // width: 55vw;
-          // height: 17vh;
-          // margin-top: 1em;
-          // @apply order-1;
+          //
         }
 
         @media (max-width: $breakThree) {
-          // width: 55vw;
-          // height: 17vh;
-          // margin-top: 1em;
-          // @apply order-1;
+          //
         }
       }
 
       a.svg.svgArt.mastHarper {
-        // @apply block;
-        // width: 480px;
-        // width: 32.4vw;
-        // height: 20vh;
-        // transform: rotate(1deg);
-        // margin-top: -0.6em;
-        // margin-left: 1em;
-        // @apply order-2;
+        //
 
         @media (max-width: $breakThou) {
-          // @apply order-2;
-          // width: 46vw;
-          // height: 20vh;
-          // @apply mt-[-1.5em];
-          // @apply grow;
+          //
         }
 
         @media (max-width: $breakOne) {
-          // @apply order-3;
-          // width: 68vw;
-          // height: 20vh;
-          // @apply mt-[-1.5em];
-          // @apply grow;
+          //
         }
 
         @media (max-width: $breakTwo) {
-          // @apply order-3;
-          // width: 64vw;
-          // height: 20vh;
-          // @apply mt-[-1.5em];
-          // @apply grow;
+          //
         }
 
         @media (max-width: $breakThree) {
-          // @apply order-3;
-          // width: 64vw;
-          // height: 20vh;
-          // @apply mt-[-1.5em];
-          // @apply grow;
+          //
         }
 
       }
 
       a.DrewHead {
-        background-image: url(/img/drew_mug_punk.png);
-        filter: hue-rotate(360deg);
+        @apply bg-[url('/img/drew_mug_punk.png')];
         //
-        @apply bg-no-repeat;
-        @apply bg-contain;
-        @apply w-[18vw];
-        @apply h-[120px];
-        @apply no-underline;
+        @apply bg-no-repeat bg-contain w-[18vw] h-[120px] no-underline;
 
         @media (max-width: $breakOne) {
-          @apply w-[122px];
-          @apply h-[122px];
-          @apply mt-4;
+          @apply w-[122px] h-[122px] mt-4;
         }
 
         @media (max-width: $breakTwo) {
-          @apply w-[122px];
-          @apply h-[135px];
-          @apply mt-2;
+          @apply w-[122px] h-[135px] mt-2;
         }
 
         @media (max-width: $breakThree) {
-          @apply w-[82px];
-          @apply h-[93px];
+          @apply w-[82px] h-[93px];
         }
 
       }

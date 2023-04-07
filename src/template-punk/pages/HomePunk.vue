@@ -48,24 +48,16 @@
 
   header,
   footer {
-    @apply text-base-ivory;
-    background: initial !important;
-    @apply shadow-none;
-    margin-bottom: -1rem;
+    @apply text-base-ivory shadow-none -mb-4;
   }
 
   .mainGrid {
-    @apply grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0.5rem 1rem;
-    background: transparent;
-    padding: 0em 1em;
-    @apply shadow-none;
+    @apply grid gap-x-2 gap-y-4 shadow-none py-0 px-4 bg-transparent;
 
-    //
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
-      grid-gap: 0.25rem 0em;
+      @apply gap-x-1 gap-y-0;
     }
 
     @media (max-width: $breakOne) {
@@ -80,9 +72,7 @@
   .copyArea {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    @apply flex;
-    @apply flex-col;
-    @apply self-end;
+    @apply flex flex-col self-end;
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
@@ -141,9 +131,7 @@
     }
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-      margin-top: 0.25em;
-      @apply mb-2;
-      @apply gap-y-0;
+      @apply mb-2 gap-y-0 mt-1;
     }
   }
 

@@ -29,9 +29,7 @@
 
   header,
   footer {
-    @apply text-base-ivory;
-    background: initial !important;
-    @apply shadow-none;
+    @apply text-base-ivory shadow-none;
   }
 
   .backer {
@@ -39,20 +37,11 @@
   }
 
   .flexxy {
-    @apply w-full;
-    @apply flex;
-    @apply gap-y-0 gap-x-8;
-    @apply place-content-center;
-    @apply justify-center;
-    // @apply absolute;
-    // z-index: 100;
-    // top: .5rem;
-    // left: 1rem;
+    @apply w-full flex gap-y-0 gap-x-8 place-content-center justify-center;
   }
 
   .headerCopy {
-    @apply text-black;
-    font-family: $font;
+    @apply text-black font-punkHead;
 
     a {
       @apply text-black;

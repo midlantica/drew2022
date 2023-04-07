@@ -1,8 +1,12 @@
 // SETTINGS
-@import '_colors.scss';
+// @import '_colors.scss';
 
 // BASE
-@import '_base.scss';
+// @import '_base.scss';
 
 // TYPOGRAPHY
 @import '_typography.scss';
+
+body {
+  @apply text-[1rem] bg-base-grey font-techyCopy m-0 ;
+}

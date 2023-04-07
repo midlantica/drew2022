@@ -6,12 +6,12 @@
       </div>
     </div>
 
-    <router-link to="/Groovy" class="float-left relative min-[375px]:left-[-1.95rem] sm:left-[-1.65rem]">
+    <router-link to="/Groovy" class="float-left relative min-[375px]:left-[-1.95rem] sm:left-[-1.85rem]">
       <div class="w-auto flex flex-row gap-4 flex-wrap m-auto justify-center">
         <mastDrew class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
         <mastHarper class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
       </div>
-      <h2 class="min-[375px]:text-[.8rem] sm:text-[1.5rem] text-center font-normal text-base-ivory lowercase leading-normal tracking-[.025em] my-1 w-full mx-auto ease-out duration-300">
+      <h2 class="min-[375px]:text-[.8rem] sm:text-[1.49rem] text-center font-normal text-base-ivory lowercase leading-normal tracking-[.025em] my-1 w-full mx-auto ease-out duration-300">
         {{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}
       </h2>
 
