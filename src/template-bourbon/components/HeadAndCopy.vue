@@ -58,7 +58,7 @@
 
       @media (max-width: $breakOne) {
         @apply text-[1.65rem];
-        // max-width: initial;
+        //
       }
 
       @media (max-width: $breakTwo) {
@@ -73,7 +73,7 @@
   }
 
   p.smallCaps {
-    @apply text-[180%] uppercase ;
+    @apply text-[180%] uppercase;
   }
 
   p {

@@ -70,13 +70,11 @@
 
       h1 {
         @apply pt-4 font-bourbonHead text-[1.75em] font-light antialiased;
-        text-rendering: optimizeLegibility;
       }
     }
 
     .smallCaps {
-      @apply text-[90%] tracking-wider;
-      font-variant: small-caps !important;
+      @apply text-[90%] tracking-wider uppercase;
     }
   }
 
@@ -120,13 +118,11 @@
       h1 {
         font-size: clamp(.85rem, 1.2rem, 1.4rem) !important;
         @apply pt-4 text-white font-semibold leading-normal capitalize antialiased font-modernSubhead;
-        text-rendering: optimizeLegibility;
       }
     }
 
     .smallCaps {
-      @apply text-[90%] tracking-wider;
-      font-variant: small-caps !important;
+      @apply text-[90%] tracking-wider uppercase;
     }
   }
 
@@ -147,8 +143,7 @@
     }
 
     .about>p {
-      @apply text-[0.8em] tracking-wider font-groovyCopy;
-      // font-variant: small-caps !important;
+      @apply text-[0.8em] tracking-wider font-groovyCopy uppercase;
     }
 
     &.extras .extrasWrapper {
@@ -177,14 +172,13 @@
       @apply bg-[#fffff1];
 
       h1 {
-        color: lighten(black, 30);
-        @apply pt-4 font-techyCopy text-[1.5em] capitalize;
+        // color: lighten(black, 30);
+        @apply text-black/30 pt-4 font-techyCopy text-[1.5em] capitalize;
       }
     }
 
     .about {
-      @apply bg-[#ffe268];
-      box-shadow: none !important;
+      @apply bg-[#ffe268] shadow-none;
 
       p {
         @apply my-0 mx-auto font-techyCopy;
@@ -192,15 +186,18 @@
     }
 
     .smallCaps {
-      @apply text-[87.5%] tracking-wider;
-      font-variant: small-caps !important;
+      @apply text-[87.5%] tracking-wider uppercase;
+    }
+
+    .contact {
+      @apply flex gap-x-4;
     }
 
     &.extras .extrasWrapper {
 
       //
       h1 {
-        @apply font-['Dosis,"Helvetica_Neue",Arial,sans-serif'] pt-4 text-[1.75em] font-medium;
+        @apply font-techyHead pt-4 text-[1.75em] font-medium mb-2 text-techy-blueTech;
       }
 
       p {
@@ -209,7 +206,7 @@
     }
 
     &.extras .contact {
-      @apply w-full;
+      @apply flex w-full m-auto gap-x-4;
     }
   }
 
@@ -224,7 +221,6 @@
 
     .smallCaps {
       @apply text-[90%] tracking-[.03em];
-      font-variant: small-caps !important;
     }
 
     &.extras .extrasWrapper {
@@ -292,8 +288,8 @@
     }
 
     &.extras .extrasWrapper {
-
       //
+
       h1 {
         @apply font-punkHead pt-4 text-black text-[1.75em] font-light capitalize;
       }
@@ -304,8 +300,7 @@
     }
 
     .smallCaps {
-      @apply text-[95%] tracking-wider;
-      font-variant: small-caps !important;
+      @apply text-[95%] tracking-wider uppercase;
     }
   }
 </style>

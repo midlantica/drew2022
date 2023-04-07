@@ -88,10 +88,6 @@
 </script>
 
 <style lang="scss" scoped>
-
-  $ivory: #fffdf4;
-  $accentRed: #7c0000;
-
   h1 {
     @apply text-[2em] text-center py-2 px-0;
 
@@ -107,41 +103,27 @@
       @apply basis-auto grow box-border text-center items-center no-underline text-black ;
 
       img.portThumbs {
-        width: 400px;
-        height: auto;
-        border: 2px solid $ivory;
-        transition: opacity 1s ease-in-out;
-        // @include shadow;
-        @apply w-[400px] h-auto border-2 border-solid text-base-ivory shadow-druShadow;
+        @apply w-[400px] h-auto border-2 border-solid text-base-ivory shadow-druShadow transition-opacity duration-1000 ease-in-out;
 
         &:hover {
-          border: 2px solid lighten($accentRed, 0);
-          @include no-shadow;
+          @apply shadow-none border-2 border-solid text-base-accentRed;
         }
       }
 
       p {
-        @apply inline-block text-center mt-2 text-[0.85em] text-black;
-        border-bottom: 1px solid transparent;
-        padding-bottom: 0;
-        max-width: 400px;
-        margin-bottom: 1em;
-        @include clearfix;
+        @apply inline-block text-center mt-2 text-[0.85em] text-black mb-4 max-w-[400px] pb-0 border-b border-solid border-transparent;
 
         &:hover {
-          border-bottom: 1px solid lighten($accentRed, 30);
+          @apply border-b border-solid border-base-accentRed;
         }
       }
 
       &:hover p {
-        color: purple;
-        border-bottom: 1px solid lighten($accentRed, 30);
+        @apply text-base-accentRed border border-solid border-base-accentRed/30;
       }
 
       &:hover img {
-        border: 2px solid lighten($accentRed, 0);
-        @include no-shadow;
-        @apply cursor-pointer;
+        @apply shadow-none cursor-pointer border-2 border-solid border-base-accentRed;
       }
     }
   }
@@ -160,13 +142,12 @@
         @apply text-white;
 
         &:hover {
-          border-bottom: 1px solid white;
+          @apply border border-solid border-base-white;
         }
       }
 
       &:hover p {
-        @apply text-white;
-        border-bottom: 1px solid white;
+        @apply text-white border border-solid border-base-white;
       }
 
     }
@@ -183,18 +164,15 @@
       }
 
       p {
-        @apply text-white;
-        background: red;
-        padding: .15rem .25rem;
+        @apply text-white bg-base-accentRed py-[.15rem] px-[.25rem];
 
         &:hover {
-          border-bottom: 1px solid white;
+          @apply border border-solid border-base-white;
         }
       }
 
       &:hover p {
-        @apply text-white;
-        border-bottom: 1px solid black;
+        @apply text-white border border-solid border-base-black;
       }
 
     }

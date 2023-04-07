@@ -98,7 +98,8 @@ module.exports = {
         },
         punk: {
           red: '#FF0000',
-          magenta: '#FF4BF5'
+          magenta: '#FF4BF5',
+          peach: '#fbc83f'
         }
       },
       fontFamily: {

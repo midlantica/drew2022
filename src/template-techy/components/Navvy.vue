@@ -161,7 +161,7 @@
           }
 
           @media (max-width: $breakThree) {
-            @apply w-[56vw] mb-[0em] ;
+            @apply w-[56vw] mb-0 ;
           }
         }
 

@@ -64,7 +64,7 @@
   }
 
   p.smallCaps {
-    @apply capitalize text-[80%] tracking-wider;
+    @apply text-[80%] tracking-wider uppercase;
   }
 
   p {
@@ -83,6 +83,7 @@
 
     @media (max-width: $breakOne) {
       columns: 2 200px;
+      @apply columns-2;
     }
 
     @media (max-width: $breakTwo) {

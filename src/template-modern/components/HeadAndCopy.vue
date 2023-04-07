@@ -55,7 +55,7 @@
   }
 
   p.smallCaps {
-    @apply text-[180%] font-light capitalize tracking-wider;
+    @apply text-[180%] font-light uppercase tracking-wider;
   }
 
   p {

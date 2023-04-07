@@ -65,7 +65,7 @@
   }
 
   p.smallCaps {
-    @apply tracking-wider text-[75%] capitalize font-medium;
+    @apply tracking-wider text-[75%] uppercase font-medium;
   }
 
   p {

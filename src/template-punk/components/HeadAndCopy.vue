@@ -32,26 +32,14 @@
   @import "../assets/css/punk-main.scss";
 
   .flexbox {
-    @apply flex;
-    @apply flex-row;
-    @apply justify-between;
+    @apply flex flex-row justify-between;
 
     .jobTitles {
-      @apply flex-row;
       flex: 0 1 auto;
-      @apply self-start;
+      @apply flex-row self-start;
 
       p {
-        color: $black;
-        background: white;
-        @apply text-[0.9em];
-        font-family: Poppins !important;
-        @apply font-medium;
-        @apply not-italic;
-        @apply tracking-[.02em];
-        transform: rotate(-1.25deg);
-        @apply lowercase;
-        padding: 0.3em 0.5em;
+        @apply font-punkCopy text-base-black bg-white text-[0.9em] font-medium not-italic tracking-[.02em] -hue-rotate-[1.25deg] lowercase py-1 px-2;
 
         @media (max-width: $breakTwo) {
           //
@@ -62,65 +50,44 @@
         }
 
         &:nth-of-type(1) {
-          transform: rotate(-.5deg);
-          @apply inline-block;
+          @apply inline-block -rotate-[.5deg];
         }
 
         &:nth-of-type(2) {
-          transform: rotate(2deg);
-          @apply inline-block;
-          @apply ml-2;
+          @apply inline-block ml-2 rotate-2;
         }
 
       }
     }
 
     .resumeLinks {
-      @apply self-end;
-      @apply flex-row;
+      @apply self-end flex-row;
 
       .resume {
-        color: $black;
-        background: white;
-        @apply text-[0.9em];
-        font-family: Poppins !important;
-        @apply font-medium;
-        @apply not-italic;
-        @apply tracking-[.02em];
-        @apply lowercase;
-        padding: 0.3em 0.5em;
-        @apply inline-block;
-        @apply ml-1;
+        @apply text-[0.9em] font-punkCopy text-base-black bg-white font-medium not-italic tracking-[.02em] lowercase inline-block ml-1 py-[0.3em] px-2;
 
         &.rOne {
-          transform: rotate(-2deg) !important;
-          background: transparentize(#ff4bf5, .5);
-          @apply text-white;
+          @apply text-white -rotate-2 bg-punk-magenta/50;
         }
 
         &.rTwo {
-          transform: rotate(6deg) !important;
-          @apply no-underline;
+          @apply no-underline rotate-6;
 
           &:hover {
-            color: #ff4bf5 !important;
-            @apply underline;
+            @apply underline text-punk-magenta;
           }
         }
 
         &.rThree {
-          transform: rotate(3deg) !important;
-          @apply no-underline;
+          @apply no-underline rotate-3;
 
           &:hover {
-            color: #ff4bf5 !important;
-            @apply underline;
+            @apply underline text-punk-magenta;
           }
         }
 
         a:hover {
-          color: #ff4bf5 !important;
-          background: red;
+          @apply underline text-punk-magenta bg-punk-red;
         }
 
       }
@@ -129,72 +96,36 @@
   }
 
   .copyGrid {
-    @apply flex;
-    @apply flex-col;
     flex: 0 1 auto;
-    // margin-top: 1em;
-    @apply relative;
-    left: 0;
-    @apply top-0;
+    @apply flex flex-col relative top-0 left-0;
 
     @media (max-width: $breakOne) {
-      @apply mb-[0em];
+      @apply mb-0;
     }
   }
 
   .mainBody {
-    transform: rotate(-1deg);
+    @apply -rotate-1;
 
     h1 {
-      @apply text-[1.15rem];
-      background: hsla(0, 100%, 50%, 0.85);
-      @apply text-white;
-      @apply font-medium;
-      padding: 0 0em 0.1em 0.2rem;
-      transform: rotate(1deg);
-      @apply z-10;
-      @apply inline-block;
-      @apply leading-[1.7rem];
-      // transform: rotate(0deg);
+      @apply font-medium z-10 inline-block leading-[1.7rem] text-white text-[1.15rem] bg-punk-red/80 rotate-1 pt-0 pr-0 pb-[.1rem] pl-[.2rem];
 
       &:nth-of-type(1) {
-        transform: rotate(0deg);
+        @apply rotate-0;
       }
     }
 
     p.smallCaps {
-      @apply text-[90%];
-      color: red !important;
-      //
-      @apply font-medium;
-      @apply capitalize;
-      // @apply tracking-wider;
+      @apply text-[95%] text-punk-red font-medium uppercase;
     }
 
     p {
-      font-family: Poppins !important;
-      @apply font-normal;
-      font-style: italic;
-      @apply text-[1em];
-      color: $grey;
-      @apply leading-9;
-      letter-spacing: 0.045em;
-      @apply relative;
-      top: 0em;
-      background: #FBC83F;
       margin: 1em 1em 0em;
-      @apply inline;
       padding: 0.4em 0.1em;
-      /////////
-      // HIGHLIGHTING EFFECT
-      background: linear-gradient(180deg, #fbc83f 100%, #fbc83f 100%);
-      // line-height: 3em;
+      @apply font-normal text-[1em] leading-9 relative inline italic font-punkCopy text-base-grey tracking-[.045em] top-0 bg-punk-peach ;
+      // background: linear-gradient(180deg, #fbc83f 100%, #fbc83f 100%);
 
       @media (min-width: $breakOne) {
-        //
-      }
-
-      @media (min-width: 1010px) {
         //
       }
 
