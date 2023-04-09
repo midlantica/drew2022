@@ -14,7 +14,6 @@
 
 <script setup>
   import Navvy from '../components/Navvy'
-  // import Footy from '../components/Footy'
   import ExtrasC from '../../components/ExtrasC'
 </script>
 
@@ -22,25 +21,18 @@
   @import '../assets/css/techy-main.scss';
 
   header {
-    @apply text-base-ivory;
-    background: $groovy-red;
-    background: $mango;
-    @apply shadow-none;
-    // margin-bottom: -1.2em;
+    @apply text-base-ivory shadow-none bg-base-accentRed;
   }
 
   footer {
-    @apply text-base-ivory;
-    background: $mango;
-    @apply shadow-none;
+    @apply text-base-ivory shadow-none bg-techy-mango;
   }
 
   .flexContainer {
-    background: #fffff1;
+    @apply bg-[#fffff1];
   }
 
   .backer {
-    @apply w-full;
-    background: #fffff1;
+    @apply w-full bg-[#fffff1];
   }
 </style>

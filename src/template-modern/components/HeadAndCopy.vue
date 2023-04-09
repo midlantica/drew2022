@@ -9,7 +9,6 @@
 </template>
 
 <script setup>
-  // import { defineComponent } from 'vue'
   import { inject } from 'vue'
 
   const store = inject('store')
@@ -26,8 +25,8 @@
     a.drewhead {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
-      background-image: url(/img/drew_mug_red.png);
-      @apply bg-no-repeat bg-cover w-[78px] h-[94px] self-start;
+      // background-image: url(/img/drew_mug_red.png);
+      @apply bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')];
     }
 
     h1 {

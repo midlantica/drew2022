@@ -56,8 +56,7 @@
   }
 
   nav .mastMain {
-    @apply w-full;
-    background: $mango;
+    @apply w-full bg-techy-mango;
 
     @media (max-width: $breakOne) {
       //
@@ -100,6 +99,7 @@
           grid-column: 1 / 2;
           grid-row: 1 / 3;
           background-image: url(/img/drew_mug_dig.png);
+          // @apply url[('/img/drew_mug_dig.png')]
 
           @media (max-width: $breakThou) {
             grid-column: 1 / 2;
@@ -286,7 +286,7 @@
 
         >a {
           color: transparentize($ivory, .1);
-          @apply no-underline;
+          @apply no-underline text-base-ivory/[.1];
 
           &:hover {
             @apply underline;

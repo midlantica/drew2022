@@ -11,26 +11,21 @@
 
 <style lang="scss" scoped>
   .tooltip {
-    @apply bg-[#d71d5b];
     font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
     box-shadow: 0 2px 20px 0px black;
-    @apply py-20 px-6;
-    @apply w-[30ch];
-    @apply rounded-2xl;
+    @apply bg-[#d71d5b] py-20 px-6 w-[30ch] rounded-2xl;
     //
-    @apply fixed;
-    @apply top-[-3rem];
+    @apply fixed top-[-3rem];
 
     @media (max-width: $breakThou) {
-      // margin: 0rem 0 .5rem;
+      //
     }
 
     @media (max-width: $breakOne) {
-      // margin: 0 0 .5rem;
-    }
+      //
 
     @media (max-width: $breakFour) {
-      // @apply flex-col;
+      //
     }
 
     p {

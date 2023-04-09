@@ -38,7 +38,8 @@
     }
 
     &:hover {
-      color: $accent !important;
+      // color: $accent !important;
+      @apply text-bourbon-accentRed;
     }
   }
 

@@ -83,8 +83,7 @@
   }
 
   .corp .about {
-    @include box-shadow(0px, 0px, 3px, -1px, hsla(0, 14%, 22%, 0.5));
-    @apply rounded-sm;
+    @apply shadow-none;
   }
 
   .punk .about {
@@ -99,7 +98,7 @@
     @apply bg-techy-blueTech;
 
     p {
-      @apply text-white my-1 mx-auto font-techyCopy;
+      @apply text-white my-0 mx-auto font-techyCopy;
     }
   }
 
@@ -120,7 +119,6 @@
   }
 
   .modern .about {
-    // margin: initial;
     box-shadow: 2px 2px 10px 0px black;
     @apply flex flex-col w-full gap-4 rounded-[3px] mt-auto;
 

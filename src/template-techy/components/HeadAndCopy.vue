@@ -18,12 +18,12 @@
     @apply mt-[2.45rem] mr-[1.95rem] mb-0 ml-6 ;
 
     @media (min-width: $breakThou) {
-      // @apply ;
+      //
     }
 
     @media (max-width: $breakThou) {
       @apply mt-2 mx-2;
-      // @apply ml-4 mr-2;
+      //
     }
 
     @media (max-width: $breakOne) {

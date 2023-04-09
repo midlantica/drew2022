@@ -6,12 +6,7 @@
   @import '../assets/css/modern-main.scss';
 
   nav {
-    @apply flex;
-    @apply flex-row;
-    @apply flex-wrap;
-    @apply justify-between;
-    @apply items-center;
-    padding: 0.5em 1.25em;
+    @apply flex flex-row flex-wrap justify-between items-center py-2 px-5;
 
     @media (max-width: $breakOne) {
       @apply justify-center;

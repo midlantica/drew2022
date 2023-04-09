@@ -175,9 +175,6 @@
     }
   }
 
-  // ####################################
-  // ####################################
-
   // MODERN ########################
   .modern .quoteBlock {
     @apply font-modernCopy text-[hsl(0,0%,80%)] mt-12;
@@ -305,6 +302,7 @@
 
       &:hover {
         content: '>';
+        // @apply content;
       }
     }
 
@@ -338,8 +336,7 @@
   .zoomQuote-leave-to {
     transform: scale(0.9);
     transform: translateX(-20px);
-    transition: all 1s ease-out;
-    @apply opacity-0;
+    @apply opacity-0 transition-all duration-1000 ease-out;
   }
 
   .fadeTexter-enter,

@@ -37,7 +37,6 @@
 <script setup>
   import Navvy from '../components/Navvy.vue'
   import HeadAndCopy from '../components/HeadAndCopy.vue'
-  // import Quote from '../components/Quote.vue'
   import Skills from '../../components/Skills.vue'
   import About from '../../components/About.vue'
   import Carousel from '../../components/Carousel/Carousel.vue'
@@ -57,7 +56,7 @@
 
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
-      @apply gap-x-1 gap-y-0;
+      @apply gap-x-1 gap-y-2;
     }
 
     @media (max-width: $breakOne) {

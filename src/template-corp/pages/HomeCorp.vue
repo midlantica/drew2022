@@ -130,15 +130,15 @@
     grid-row: 2;
 
     @media (max-width: $breakThou) {
-      // grid-row: 2;
+      //
     }
 
     @media (max-width: $breakOne) {
-      // grid-row: 2;
+      //
     }
 
     @media (max-width: $breakTwo) {
-      // grid-row: 2;
+      //
     }
   }
 

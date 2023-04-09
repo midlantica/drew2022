@@ -120,9 +120,7 @@
     }
 
     p {
-      margin: 1em 1em 0em;
-      padding: 0.4em 0.1em;
-      @apply font-normal text-[1em] leading-9 relative inline italic font-punkCopy text-base-grey tracking-[.045em] top-0 bg-punk-peach ;
+      @apply font-normal text-[1em] leading-9 relative inline italic font-punkCopy text-base-grey tracking-[.045em] top-0 bg-punk-peach mt-4 mx-4 mb-0 py-[.4rem] px-[.1rem];
       // background: linear-gradient(180deg, #fbc83f 100%, #fbc83f 100%);
 
       @media (min-width: $breakOne) {

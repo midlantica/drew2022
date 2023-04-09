@@ -490,19 +490,15 @@
       }
 
       .box {
-        @apply flex flex-col flex-nowrap items-center content-center justify-center duration-75 text-center m-auto bg-white;
+        @apply flex flex-col flex-nowrap items-center content-center justify-center duration-75 text-center m-auto bg-white border border-solid text-gray-400/80;
         box-shadow: 0px 2px 2px -3px black;
-        // border: 1px solid transparentize(grey, 0.85);
-        @apply border border-solid text-gray-400/80;
 
         p {
           @apply text-[#333] relative ease-out lowercase;
         }
 
         &:hover {
-          @apply ease-out top-[-5px];
-          // border: 1px solid transparentize(grey, 0.5);
-          @apply border border-solid text-gray-400/80;
+          @apply ease-out top-[-5px] border border-solid text-gray-400/80;
 
           p {
             @apply relative top-[-5px] ease-out;

@@ -280,7 +280,7 @@
   }
 
   body.bourbon .skillsGrid {
-    // @apply mt-[-1rem];
+    //
 
     @media (min-width: 1026px) {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -306,8 +306,8 @@
   }
 
   body.techy .skillsGrid {
-
     //
+
     @media (min-width: 1026px) {
       grid-template-columns: repeat(12, minmax(84px, 1fr));
     }
@@ -387,9 +387,7 @@
   }
 
   body.punk .skillsGrid {
-    margin: 0.5em auto 0em;
-    @apply transition duration-[.25s] ease-in mt-2 mx-auto mb-0;
-    background: transparentize(rgba(0, 140, 0, 0.829), 0.5) !important;
+    @apply transition duration-[.25s] ease-in mt-2 mx-auto mb-0 bg-[rgba(0,140,0,0.3)];
 
     @media (min-width: 1026px) {
       grid-template-columns: repeat(12, minmax(84px, 1fr));
@@ -415,7 +413,7 @@
 
   .modal-fade-enter-active,
   .modal-fade-leave-active {
-    transition: all .5s ease;
+    @apply transition ease-linear duration-500;
   }
 
   .modal-fade-enter-from,

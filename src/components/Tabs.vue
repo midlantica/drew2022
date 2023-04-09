@@ -31,103 +31,19 @@
   @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
 
   .tabs {
-    @apply font-['Barlow_Semi_Condensed'];
-    @apply flex;
-    @apply flex-row;
-    @apply flex-nowrap;
-    @apply justify-between;
-    @apply items-start;
-    @apply content-center;
-    @apply text-center;
-    @apply text-[0.85em];
-    @apply relative;
-    @apply top-0;
-    @apply left-0;
-    @apply z-10;
-    @apply w-[100.1%];
-    @apply tracking-normal;
-    @apply overflow-x-hidden;
-    @apply bg-[#333];
+    @apply font-['Barlow_Semi_Condensed'] flex flex-row flex-nowrap justify-between items-start content-center text-center text-[0.85em] relative top-0 left-0 z-10 w-[100.1%] tracking-normal overflow-x-hidden bg-[#333];
 
     a {
-      @apply grow;
-      @apply text-[#fffdf4bf];
-      @apply py-2 px-0;
-      @apply border-r border-[#fffdf440];
-      @apply no-underline;
-      @apply uppercase;
-      @apply tracking-[0.1em];
-      @apply text-[0.8em];
+      @apply grow text-[#fffdf4bf] py-2 px-0 border-r border-[#fffdf440] no-underline uppercase tracking-[0.1em] text-[0.8em];
 
       &:last-child {
         @apply border-r-0;
       }
 
       &:hover {
-        @apply text-[#fffdf4];
-        @apply duration-200 ease-in;
+        @apply text-[#fffdf4] duration-200 ease-in;
       }
     }
-  }
-
-  body.modern .tabs a.modern {
-    @apply text-base-ivory;
-    background: linear-gradient(hsla(340, 76%, 48%, 1), hsl(340, 76%, 30%));
-    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
-  }
-
-  body.bourbon .tabs>a.bourbon {
-    @apply text-base-ivory;
-    background: linear-gradient(darken($orange, 10), darken($orange, 25));
-    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
-  }
-
-  body.groovy .tabs>a.groovy {
-    color: $black;
-    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,0.25)];
-    background: linear-gradient($groovy-aqua-dk 0%,
-        $groovy-aqua-dk 20%,
-        $groovy-yellow-dk 20%,
-        $groovy-yellow-dk 50%,
-        $groovy-orange-dk 50%,
-        $groovy-orange-dk 75%,
-        $groovy-red-dk 75%,
-        $groovy-red-dk 100%);
-
-    &:hover {
-      color: $black;
-      @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
-      background: linear-gradient($groovy-aqua 0%,
-          $groovy-aqua 20%,
-          $groovy-yellow 20%,
-          $groovy-yellow 50%,
-          $groovy-orange 50%,
-          $groovy-orange 75%,
-          $groovy-red 75%,
-          $groovy-red 90% black 90% black 100%);
-    }
-
-  }
-
-  body.techy .tabs>a.techy {
-    @apply text-[fffdf4e6];
-    background: linear-gradient(darken(#423BA0, 00), darken(#423BA0, 15));
-    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
-    // box-shadow: 0px -2px 6px black inset;
-  }
-
-  body.corp .tabs>a.corp {
-    @apply text-[fffdf4e6];
-    background: linear-gradient(darken(hsl(205, 97%, 27%), 0), darken(hsl(205, 97%, 27%), 10));
-    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
-    // box-shadow: 0px -2px 6px black inset;
-  }
-
-  body.punk .tabs>a.punk {
-    @apply text-[fffdf4e6];
-    // background: #ff0000d9;
-    // @apply bg-[hsla(0, 100%, 50%, 0.85)];
-    background: linear-gradient(hsl(303, 100%, 35%), hsl(303, 100%, 20%));
   }
 
   body .tabs {
@@ -198,4 +114,56 @@
       }
     }
   }
+
+  body.modern .tabs a.modern {
+    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)] text-base-ivory;
+    background: linear-gradient(hsla(340, 76%, 48%, 1), hsl(340, 76%, 30%));
+  }
+
+  body.bourbon .tabs>a.bourbon {
+    @apply text-base-ivory drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
+    background: linear-gradient(darken($orange, 10), darken($orange, 25));
+  }
+
+  body.groovy .tabs>a.groovy {
+    @apply text-base-black drop-shadow-[0px_0px_1px_rgba(0,0,0,0.25)];
+    background: linear-gradient($groovy-aqua-dk 0%,
+        $groovy-aqua-dk 20%,
+        $groovy-yellow-dk 20%,
+        $groovy-yellow-dk 50%,
+        $groovy-orange-dk 50%,
+        $groovy-orange-dk 75%,
+        $groovy-red-dk 75%,
+        $groovy-red-dk 100%);
+
+    &:hover {
+      @apply text-base-black drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
+      background: linear-gradient($groovy-aqua 0%,
+          $groovy-aqua 20%,
+          $groovy-yellow 20%,
+          $groovy-yellow 50%,
+          $groovy-orange 50%,
+          $groovy-orange 75%,
+          $groovy-red 75%,
+          $groovy-red 90% black 90% black 100%);
+    }
+
+  }
+
+  body.techy .tabs>a.techy {
+    @apply text-base-ivory/75  drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
+    background: linear-gradient(darken(#423BA0, 00), darken(#423BA0, 15));
+  }
+
+  body.corp .tabs>a.corp {
+    @apply text-base-ivory/75;
+    background: linear-gradient(darken(hsl(205, 97%, 27%), 0), darken(hsl(205, 97%, 27%), 10));
+    @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
+  }
+
+  body.punk .tabs>a.punk {
+    @apply text-base-ivory/75;
+    background: linear-gradient(hsl(303, 100%, 35%), hsl(303, 100%, 20%));
+  }
+
 </style>

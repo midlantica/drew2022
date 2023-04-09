@@ -51,11 +51,9 @@
   @import "../assets/css/techy-main.scss";
 
   .mainGrid {
-    @apply grid;
     grid-template-columns: 7fr 6fr;
     grid-gap: 1rem 0rem;
-    padding: 0 1em 0.5em;
-    @apply ml-0 mr-2;
+    @apply grid ml-0 mr-2 pt-0 pr-4 pb-2;
 
     @media (min-width: $breakThou) and (min-device-width: 768px) {
       grid-template-columns: 7fr 6fr;
@@ -81,10 +79,7 @@
   }
 
   header {
-    @apply text-base-ivory;
-    background: $groovy-red;
-    background: $mango;
-    @apply shadow-none;
+    @apply text-base-ivory shadow-none bg-techy-mango;
   }
 
   .copyArea {
@@ -122,31 +117,26 @@
   .slides {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    @apply z-10;
-    margin-top: -5em !important;
+    @apply z-10 -mt-20;
 
     // IPAD LANDSCAPE
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      @apply z-10;
-      margin-top: -5.5em !important;
+      @apply z-10 mt-[-5.5em];
     }
 
     // IPAD PRO LANDSCAPE
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      @apply z-10;
-      // @apply mt-0;
-      @apply mt-0;
+      @apply z-10 mt-0;
     }
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
       grid-row: 2;
-      @apply top-0;
-      margin-top: 0em !important;
+      @apply top-0 mt-0;
     }
 
     @media (max-width: $breakOne) {
@@ -224,9 +214,7 @@
   }
 
   footer {
-    @apply text-base-ivory;
-    background: $mango;
-    @apply shadow-none;
+    @apply text-base-ivory bg-techy-mango shadow-none;
 
     @media (max-width: $breakThou) {
       //

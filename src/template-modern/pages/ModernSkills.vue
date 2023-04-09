@@ -34,7 +34,7 @@
     }
 
     .icon {
-      cursor: pointer !important;
+      @apply cursor-pointer;
     }
 
     svg {

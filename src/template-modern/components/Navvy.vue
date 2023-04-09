@@ -145,7 +145,6 @@
 
         &:hover {
           @apply text-[$yellow-red] no-underline bg-modern-ruby;
-          // background: darken($ruby, 15);
         }
       }
 

@@ -16,9 +16,7 @@
   $breakThree: 530px;
 
   footer {
-    @apply relative;
-    height: 160px;
-    @apply text-base-ivory;
+    @apply relative text-base-ivory h-[160px];
     background: linear-gradient(
         /* 0 - 25% */
         $groovy-aqua 0%,
@@ -51,45 +49,23 @@
 
     .car {
       background: url(/img/alfa-carabo.png);
-      @apply bg-no-repeat;
-      @apply bg-cover;
-      width: 226px;
-      height: 165px;
-      @apply block;
-      @apply absolute;
-      top: -0.3em;
-      left: 0.7em;
+      @apply bg-no-repeat bg-cover block absolute top-[-.3rem] left-[-1em] w-[226px] h-[165px];
 
       @media (max-width: $breakThree) {
-        width: 186px;
-        height: 135px;
-        top: 1em;
-        left: -1em;
+        @apply w-[165px] h-[135px] top-4 -left-4;
       }
 
       // IPHONE 6,7,8
       @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-        width: 186px;
-        height: 135px;
-        top: 1em;
-        left: -1em;
+        @apply w-[186px] h-[135px] top-4 -left-4;
       }
     }
 
     .starWars {
-      background: url(/img/star-wars-transfers.png);
-      @apply bg-no-repeat;
-      @apply bg-cover;
-      width: 148px;
-      height: 177px;
-      @apply block;
-      @apply absolute;
-      top: -17px;
-      right: 0px;
+      @apply bg-no-repeat bg-cover block absolute top-[-17px] right-0 w-[148px] h-[177px] bg-[url('/img/star-wars-transfers.png')];
 
       @media (max-width: $breakThree) {
-        width: 120px;
-        height: 177px;
+        @apply w-[120px] h-[177px];
       }
 
     }

@@ -31,9 +31,7 @@
   @import "../assets/css/modern-main.scss";
 
   .modBacker {
-    @apply flex;
-    @apply flex-col;
-    @apply items-center;
+    @apply flex flex-col items-center;
 
     @media (max-width: 900px) {
       //
@@ -49,15 +47,13 @@
   }
 
   .mainGrid {
-    @apply grid gap-y-2 gap-x-0;
+    @apply grid gap-y-2 gap-x-0 w-[90%];
     grid-template-columns: 1fr;
-    width: 90%;
 
     @media (max-width: $breakThou) {}
 
     @media (max-width: $breakOne) {
-      width: 90%;
-      margin: 0rem;
+      @apply w-[90%] m-0;
     }
 
     @media (max-width: $breakTwo) {
@@ -68,10 +64,7 @@
   .slides {
     grid-column: 1;
     grid-row: 1;
-    @apply content-center;
-    max-width: 500px;
-    @apply w-full;
-    justify-self: center;
+    @apply content-center w-full justify-self-center max-w-[500px];
 
     @media (max-width: $breakThou) {
       //
@@ -89,16 +82,14 @@
   .skillsGrid {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
-    justify-self: center !important;
-    @apply justify-center justify-items-center;
-    width: 35vw !important;
     grid-template-columns: repeat(6, minmax(88px, 1fr)) !important;
     width: initial !important;
+    @apply justify-center justify-items-center w-[35vw];
 
     @media (max-width: 300000000rem) {
       grid-row: 2;
-      width: 70vw !important;
       grid-template-columns: repeat(4, minmax(88px, 1fr)) !important;
+      @apply w-[70vw];
     }
 
     @media (max-width: $breakOne) {

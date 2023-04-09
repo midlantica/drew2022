@@ -8,15 +8,10 @@
   @import '../assets/css/techy-main.scss';
 
   div {
-    // height: 3em;
-    background: $mango;
+    @apply bg-techy-mango;
 
     p {
-      @apply text-[1.2em];
-      color: $blueTech;
-      @apply text-center;
-      padding: .5em;
-      @apply tracking-wide;
+      @apply text-[1.2em] text-center tracking-wide p-2 text-techy-blueTech;
 
       @media (max-width: $breakThou) {
         @apply text-[1.25em];
@@ -31,8 +26,7 @@
       }
 
       @media (max-width: $breakThree) {
-        @apply text-[.85em];
-        @apply leading-5;
+        @apply text-[.85em] leading-5;
       }
     }
   }

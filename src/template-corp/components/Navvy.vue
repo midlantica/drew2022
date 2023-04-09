@@ -83,7 +83,6 @@
     background-size: 151%;
     filter: hue-rotate(210deg) grayscale(50%);
     @apply bg-[url('/img/drew_mug_red.png')] inline-block w-[80px] h-[80px] bg-no-repeat bg-corp-accentRed rounded-[1px] mb-3 shadow-[0px_0px_1px_1px_#00000026];
-    // box-shadow: 10px 10px 1px 1px #00000026;
 
     @media (max-width: $breakTwo) {
       background-position: -40px -50px !important;
@@ -205,7 +204,7 @@
       &.resume,
       &.email {
         color: $blue-dark !important;
-        @apply leading-normal;
+        @apply text-corp-blueDark leading-normal;
 
         a {
           color: $blue-dark !important;
