@@ -17,19 +17,7 @@
 
   footer {
     @apply relative text-base-ivory h-[160px];
-    background: linear-gradient(
-        /* 0 - 25% */
-        $groovy-aqua 0%,
-        $groovy-aqua 25%,
-        /* 25% - 50% */
-        $groovy-yellow 25%,
-        $groovy-yellow 50%,
-        /* 50% - 75% */
-        $groovy-orange 50%,
-        $groovy-orange 75%,
-        /* 75% - 100% */
-        $groovy-red 75%,
-        $groovy-red 100%);
+    @apply bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
 
     @media (max-width: $breakThou) {
       //
@@ -48,7 +36,7 @@
     }
 
     .car {
-      @apply bg-no-repeat bg-cover block absolute top-[-.3rem] left-[-1em] w-[226px] h-[165px] bg-['/img/alfa-carabo.png'];
+      @apply bg-no-repeat bg-cover block absolute top-[-.3rem] left-[-1em] w-[226px] h-[165px] bg-[url('/img/alfa-carabo.png')];
 
       @media (max-width: $breakThree) {
         @apply w-[165px] h-[135px] top-4 -left-4;

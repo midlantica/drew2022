@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="areaWrapper">
     <div class="headBlock">
       <router-link :to="{ name: 'ExtrasBourbon' }" class="drewhead jelloHorizontal" />
       <h1>{{ store.copy.druHead }}</h1>
@@ -17,7 +17,7 @@
 <style lang="scss" scoped>
   @import "../assets/css/bourbon-main.scss";
 
-  .wrapper {
+  .areaWrapper {
     @apply w-full pt-4 pl-5 pr-2;
 
     @media (min-width: $breakThou) {
@@ -38,8 +38,8 @@
   }
 
   .headBlock {
-    @apply grid gap-x-1.5 justify-items-start items-center auto-rows-auto;
     grid-template-columns: 88px auto;
+    @apply grid gap-x-1.5 justify-items-start items-center auto-rows-auto;
 
     a.drewhead {
       grid-column: 1 / 2;

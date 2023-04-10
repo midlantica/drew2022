@@ -137,10 +137,10 @@
       @apply font-modernCopy font-normal text-center mt-2 leading-[1.4rem] tracking-[0.05rem] antialiased text-[0.85rem] drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)];
 
       a {
-        @apply border border-[#ff000054] border-solid py-[0.3rem] px-[0.9rem] rounded-[2rem] my-0 mx-2;
+        @apply border border-[#ff000054] border-solid py-[0.3rem] rounded-[2rem] my-0 mx-2 px-5;
 
         &:hover {
-          @apply text-modern-accent no-underline bg-modern-ruby;
+          @apply text-black no-underline bg-modern-ruby;
         }
       }
 

@@ -50,8 +50,7 @@
     //
 
     >a.modern {
-      background: $grey;
-      @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
+      @apply drop-shadow-[0px_0px_1px_rgba(0,0,0,1)] bg-base-grey;
 
       &:hover {
         @apply bg-[hsl(340,76%,48%)];
@@ -70,33 +69,8 @@
       @apply bg-[#333];
 
       &:hover {
-        color: $black;
-        background: linear-gradient(
-            /* // 0 - 10% */
-            $groovy-aqua-dk 0%,
-            $groovy-aqua-dk 20%,
-            /* // 10% - 50% */
-            $groovy-yellow-dk 20%,
-            $groovy-yellow-dk 50%,
-            /* // 50% - 75% */
-            $groovy-orange-dk 50%,
-            $groovy-orange-dk 75%,
-            /* // 75% - 100% */
-            $groovy-red-dk 75%,
-            $groovy-red-dk 100%);
-        // @apply bg-gradient-to-b
-        //   /* // 0 - 10% */
-        //   from-[#6cebe4]
-        //   via-[#6cebe4]
-        //   /* // 0 - 10% */
-        //   via-[#fece00]
-        //   via-[#fece00]
-        //   /* // 0 - 10% */
-        //   via-[#e68f00]
-        //   via-[#e68f00]
-        //   /* // 0 - 10% */
-        //   via-[#e60008]
-        //   to-[#e60008];
+        @apply text-black;
+        @apply bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
       }
     }
 
@@ -135,25 +109,11 @@
 
   body.groovy .tabs>a.groovy {
     @apply text-base-black drop-shadow-[0px_0px_1px_rgba(0,0,0,0.25)];
-    background: linear-gradient($groovy-aqua-dk 0%,
-        $groovy-aqua-dk 20%,
-        $groovy-yellow-dk 20%,
-        $groovy-yellow-dk 50%,
-        $groovy-orange-dk 50%,
-        $groovy-orange-dk 75%,
-        $groovy-red-dk 75%,
-        $groovy-red-dk 100%);
+    @apply bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
 
     &:hover {
       @apply text-base-black drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
-      background: linear-gradient($groovy-aqua 0%,
-          $groovy-aqua 20%,
-          $groovy-yellow 20%,
-          $groovy-yellow 50%,
-          $groovy-orange 50%,
-          $groovy-orange 75%,
-          $groovy-red 75%,
-          $groovy-red 90% black 90% black 100%);
+      @apply bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
     }
 
   }

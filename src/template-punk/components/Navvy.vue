@@ -44,10 +44,14 @@
     }
 
     p.email {
-      @apply font-punkCopy text-[1.5em] text-base-ivory tracking-[0.03em] lowercase self-end mt-[-0.6em] mb-2 -rotate-1 drop-shadow-[2px_2px_1px_black] z-50;
+      @apply font-punkCopy text-[1.3em] text-base-ivory tracking-[0.02em] lowercase self-end mt-[-0.5em] mb-2 -rotate-1 z-50 p-0;
 
       a {
-        @apply text-base-ivory tracking-wider text-[0.9em];
+        @apply text-base-ivory tracking-wider text-[0.9em] px-2 py-1;
+
+        &:hover {
+          @apply text-black bg-yellow-400;
+        }
       }
 
       @media (max-width: $breakOne) {

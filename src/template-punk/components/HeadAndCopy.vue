@@ -68,6 +68,10 @@
 
         &.rOne {
           @apply text-white -rotate-2 bg-punk-magenta/50;
+
+          &:hover {
+            @apply bg-punk-magenta text-black;
+          }
         }
 
         &.rTwo {
@@ -121,7 +125,6 @@
 
     p {
       @apply font-normal text-[1em] leading-9 relative inline italic font-punkCopy text-base-grey tracking-[.045em] top-0 bg-punk-peach mt-4 mx-4 mb-0 py-[.4rem] px-[.1rem];
-      // background: linear-gradient(180deg, #fbc83f 100%, #fbc83f 100%);
 
       @media (min-width: $breakOne) {
         //
