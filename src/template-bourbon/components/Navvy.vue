@@ -39,7 +39,7 @@
 
     &:hover {
       // color: $accent !important;
-      @apply text-bourbon-accentRed;
+      @apply text-bourbon-orange;
     }
   }
 
@@ -65,8 +65,7 @@
   }
 
   h1 {
-    @apply font-bourbonSubhead font-normal text-[4em] leading-none tracking-[.06em] transition duration-[.25s] ease-in antialiased w-auto grow-0;
-    text-shadow: 4px 0px 3px $black;
+    @apply font-bourbonSubhead font-normal text-[4em] leading-none tracking-[.06em] transition duration-[.25s] ease-in antialiased w-auto grow-0 drop-shadow-[4px_0px_3px_rgba(0,0,0,0.1)];
 
     @media (max-width: $breakOne) {
       @apply grow-0 text-right;
@@ -113,8 +112,7 @@
     }
 
     h2 {
-      @apply text-[1.675rem] tracking-[0.075rem] leading-[1.55rem] antialiased mb-[.15rem];
-      text-shadow: 3px 0px 3px $black;
+      @apply text-[1.675rem] tracking-[0.075rem] leading-[1.55rem] antialiased mb-[.15rem] drop-shadow-[3px_0px_3px_rgba(0,0,0,0.1)];
 
       &:nth-child(2) {
         @apply text-[1.51rem] mb-[.1em];
@@ -139,8 +137,7 @@
   }
 
   section.contact {
-    @apply uppercase mt-[.5rem] z-10 transition duration-[.25s] ease-in;
-    text-shadow: 3px 0px 1px $black;
+    @apply uppercase mt-[.5rem] z-10 transition duration-[.25s] ease-in drop-shadow-[3px_0px_1px_rgba(0,0,0,0.1)];
 
     @media (max-width: $breakOne) {
       @apply w-full flex flex-row flex-wrap items-center justify-center gap-4;

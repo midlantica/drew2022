@@ -40,13 +40,11 @@
     }
 
     .greenBar {
-      @apply block w-full max-w-[1024px] z-0 absolute top-0 left-0 h-[5em] self-center bg-[rgba(0,128,0,0.25)];
-      filter: saturate(2.5);
+      @apply block w-full max-w-[1024px] z-0 absolute top-0 left-0 h-[5em] self-center bg-[rgba(0,128,0,0.25)] saturate-[2.5];
     }
 
     p.email {
-      @apply font-punkCopy text-[1.5em] text-base-ivory tracking-[0.03em] lowercase self-end mt-[-0.4em] -rotate-1;
-      text-shadow: 1px 1px 2px black;
+      @apply font-punkCopy text-[1.5em] text-base-ivory tracking-[0.03em] lowercase self-end mt-[-0.6em] mb-2 -rotate-1 drop-shadow-[2px_2px_1px_black] z-50;
 
       a {
         @apply text-base-ivory tracking-wider text-[0.9em];
@@ -59,7 +57,7 @@
 
     // ###############################
     .mastMain {
-      @apply flex flex-row flex-nowrap justify-center items-center content-center mt-[-1.5em] z-[2] w-full;
+      @apply flex flex-row flex-nowrap justify-center items-center content-center mt-[-1.5em] z-[2] w-full rotate-[.75rem];
 
       @media (max-width: $breakThou) {
         //

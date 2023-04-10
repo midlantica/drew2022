@@ -10,10 +10,10 @@
 <style lang='scss' scoped>
   @import '../assets/css/groovy-main.scss';
 
-  $breakThou: 1024px;
-  $breakOne: 840px;
-  $breakTwo: 630px;
-  $breakThree: 530px;
+  // $breakThou: 1024px;
+  // $breakOne: 840px;
+  // $breakTwo: 630px;
+  // $breakThree: 530px;
 
   footer {
     @apply relative text-base-ivory h-[160px];
@@ -48,8 +48,7 @@
     }
 
     .car {
-      background: url(/img/alfa-carabo.png);
-      @apply bg-no-repeat bg-cover block absolute top-[-.3rem] left-[-1em] w-[226px] h-[165px];
+      @apply bg-no-repeat bg-cover block absolute top-[-.3rem] left-[-1em] w-[226px] h-[165px] bg-['/img/alfa-carabo.png'];
 
       @media (max-width: $breakThree) {
         @apply w-[165px] h-[135px] top-4 -left-4;

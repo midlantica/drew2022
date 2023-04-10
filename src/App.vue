@@ -99,9 +99,7 @@
 
     .about {
       @apply w-1/2 my-0 mx-auto;
-      background: linear-gradient(180deg,
-          hsl(340deg 76% 48% / 100%),
-          hsl(340deg 76% 31% / 100%)) !important;
+      @apply bg-gradient-to-b from-[#d71d5b] to-[#8b133b];
     }
 
     &.extras {
@@ -132,9 +130,6 @@
     @apply bg-base-backBlack;
 
     .wrapper {
-      // background: linear-gradient(lighten($backer, 10) 0%,
-      //     darken($backer, 05) 85%,
-      //     darken($backer, 10) 100%);
       @apply bg-gradient-to-b from-white via-[#fff5cb] via-85% to-[#fff5cb];
 
       @media (max-width: $breakOne) {
@@ -172,7 +167,6 @@
       @apply bg-[#fffff1];
 
       h1 {
-        // color: lighten(black, 30);
         @apply text-black/30 pt-4 font-techyCopy text-[1.5em] capitalize;
       }
     }
@@ -216,7 +210,7 @@
     @apply bg-base-backBlack;
 
     .wrapper {
-      background: url(/img/bg/white_paper_patt-01.jpg) repeat;
+      @apply bg-[url('/img/bg/white_paper_patt-01.jpg')] bg-repeat;
     }
 
     .smallCaps {
@@ -246,13 +240,15 @@
     @apply bg-base-backBlack;
 
     .wrapper {
+      // background-size: 100% 640%, 100% 100%;
       @apply w-full bg-repeat bg-center;
-      background: url(/img/bg/circles.svg), url(/img/bg/Drew-punk-back.jpg);
-      background-size: 100% 640%, 100% 100%;
+      @apply bg-[url('/img/bg/circles.svg'),_url('/img/bg/Drew-punk-back.jpg')] bg-[length:100%_640%,100%_100%];
 
       @media (max-width: $breakOne) {
-        background-position: center center, -3em 0;
-        background-size: 100% 640%, 130% 90%;
+        // background-position: center center, -3em 0;
+        // background-size: 100% 640%, 130% 90%;
+        @apply bg-[length:100%_640%,130%_90%];
+        @apply bg-[center_center];
       }
 
       @media (max-width: $breakTwo) {
@@ -267,8 +263,8 @@
     }
 
     .about>p {
-      font-family: Poppins, "Helvetica Neue", Arial, sans-serif !important;
-      @apply text-[.8em];
+      // font-family: Poppins, "Helvetica Neue", Arial, sans-serif !important;
+      @apply font-punkCopy text-[.8em];
 
       @media (max-width: $breakThou) {
         @apply text-[1.65vw];

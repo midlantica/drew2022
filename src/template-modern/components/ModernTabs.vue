@@ -27,12 +27,10 @@
     @apply font-modernCopy mt-7 mx-0 mb-3 flex flex-row flex-wrap justify-center;
 
     a {
-      @apply text-black my-2 mx-2 pt-[.55rem] px-4 pb-[.4rem] rounded-[2rem] no-underline uppercase text-[.6rem] font-semibold tracking-[0.075ch] bg-modern-ruby;
-      background: linear-gradient(180deg, darken(#D71D5B, 0), darken(#D71D5B, 15));
+      @apply text-black my-2 mx-2 pt-[.55rem] px-4 pb-[.4rem] rounded-[2rem] no-underline uppercase text-[.6rem] font-semibold tracking-[0.075ch] bg-modern-ruby bg-gradient-to-b from-[#D71D5B] to-[#871239];
 
       &:hover {
-        @apply bg-modern-ruby text-white;
-        background: linear-gradient(0deg, darken(#D71D5B, 0), darken(#D71D5B, 15));
+        @apply bg-modern-ruby text-white bg-gradient-to-b from-[#D71D5B] to-[#871239];
       }
     }
   }

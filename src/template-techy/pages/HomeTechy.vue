@@ -130,7 +130,7 @@
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
-      @apply z-10 mt-0;
+      @apply z-10 mt-[-5rem];
     }
 
     @media (max-width: $breakThou) {

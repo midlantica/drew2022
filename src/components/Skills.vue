@@ -157,11 +157,9 @@
 
     .modal {
       width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));
-      background: linear-gradient(180deg,
-      hsl(0, 0%, 100%) 0%,
-      hsl(186, 43%, 92%) 100%);
       box-shadow: 0px 6px 10px 0px hsl(0deg 0% 0% / 30%);
-      @apply relative mb-auto mt-[260px] bg-white rounded-[20px] ;
+      @apply relative mb-auto mt-[260px] bg-white rounded-[20px]
+      bg-gradient-to-b from-[#fff] to-[#E2F2F3];
 
       .closeBtn {
         @apply absolute flex items-center justify-center cursor-pointer bg-white rounded-[20px] w-[40px] h-[40px] border-none text-black/50 top-[-10px] right-[-10px];

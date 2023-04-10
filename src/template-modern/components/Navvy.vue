@@ -59,13 +59,11 @@
   }
 
   h1 {
-    text-shadow: 1px 1px 4px $black;
-    @apply font-modernSubhead normal-case text-[3.25rem] font-extralight tracking-[-0.05em] transition ease-in duration-200 leading-normal text-center antialiased w-auto grow;
+    @apply font-modernSubhead normal-case text-[3.25rem] font-extralight tracking-[-0.05em] transition ease-in duration-200 leading-normal text-center antialiased w-auto grow drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)];
 
     a {
       @apply text-[3.25rem] text-modern-accent;
 
-      //
       &:hover {
         @apply text-modern-accent;
       }
@@ -108,8 +106,7 @@
     }
 
     h2 {
-      @apply text-[1.15rem] tracking-[-0.01em] leading-[1.5em] font-normal text-[hsla(0,0%,100%,0.85)] text-center lowercase antialiased;
-      text-shadow: 1px 1px 4px $black;
+      @apply text-[1.15rem] tracking-[-0.01em] leading-[1.5em] font-normal text-[hsla(0,0%,100%,0.85)] text-center lowercase antialiased drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)];
 
       @media (max-width: $breakTwo) {
         //
@@ -137,14 +134,13 @@
     }
 
     p {
-      @apply font-modernCopy font-normal text-center mt-2 leading-[1.4rem] tracking-[0.05rem] antialiased text-[0.85rem];
-      text-shadow: 1px 1px 4px $black;
+      @apply font-modernCopy font-normal text-center mt-2 leading-[1.4rem] tracking-[0.05rem] antialiased text-[0.85rem] drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)];
 
       a {
         @apply border border-[#ff000054] border-solid py-[0.3rem] px-[0.9rem] rounded-[2rem] my-0 mx-2;
 
         &:hover {
-          @apply text-[$yellow-red] no-underline bg-modern-ruby;
+          @apply text-modern-accent no-underline bg-modern-ruby;
         }
       }
 

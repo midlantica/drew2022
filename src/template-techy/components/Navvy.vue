@@ -95,11 +95,9 @@
         }
 
         a.drewHeadPic {
-          @apply w-[92px] h-[109px] pt-4 pr-4 pb-0 pl-4 bg-no-repeat bg-cover justify-self-end;
           grid-column: 1 / 2;
           grid-row: 1 / 3;
-          background-image: url(/img/drew_mug_dig.png);
-          // @apply url[('/img/drew_mug_dig.png')]
+          @apply w-[92px] h-[109px] pt-4 pr-4 pb-0 pl-4 bg-no-repeat bg-cover justify-self-end bg-[url('/img/drew_mug_dig.png')];
 
           @media (max-width: $breakThou) {
             grid-column: 1 / 2;
@@ -285,8 +283,7 @@
         @apply font-techyCopy font-medium tracking-[.09em] text-base-ivory text-[1.3em] leading-10 ml-2;
 
         >a {
-          color: transparentize($ivory, .1);
-          @apply no-underline text-base-ivory/[.1];
+          @apply no-underline text-base-ivory/[.9] underline-offset-4;
 
           &:hover {
             @apply underline;
