@@ -50,15 +50,14 @@
 
 <style lang="scss" scoped>
   .about {
-    @apply bg-[#fbf3bb] py-5 px-7 flex flex-row flex-nowrap justify-center items-center content-center self-center rounded-sm cursor-pointer;
-    @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
+    @apply bg-[#fbf3bb] py-5 px-7 flex flex-row flex-nowrap justify-center items-center content-center self-center rounded-sm cursor-pointer shadow-[0px_1px_2px_0px_#00000080];
 
     @media (max-width: $breakThou) {
-      @apply mt-0 mx-0 mb-2;
+      @apply mt-0 mx-0 mb-0;
     }
 
     @media (max-width: $breakOne) {
-      @apply mt-0 mx-0 mb-2;
+      @apply mt-0 mx-0 mb-0;
     }
 
     @media (max-width: $breakFour) {
@@ -119,8 +118,7 @@
   }
 
   .modern .about {
-    box-shadow: 2px 2px 10px 0px black;
-    @apply flex flex-col w-full gap-4 rounded-[3px] mt-auto;
+    @apply flex flex-col w-full gap-4 rounded-[3px] mt-auto shadow-[2px_2px_10px_0px_black];
 
     @media (max-width: 850px) {
       @apply flex-row;

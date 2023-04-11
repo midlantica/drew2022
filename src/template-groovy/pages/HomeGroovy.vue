@@ -82,8 +82,7 @@
   }
 
   .about {
-    @apply bg-groovy-yellow rounded-xl font-groovyHead;
-    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.25);
+    @apply bg-groovy-yellow rounded-xl font-groovyHead shadow-[0px_6px_0px_0px_hsl(0,_0%,_0%,_25%)];
   }
 
   .copyArea {

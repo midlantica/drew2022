@@ -157,9 +157,8 @@
 
     .modal {
       width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));
-      box-shadow: 0px 6px 10px 0px hsl(0deg 0% 0% / 30%);
       @apply relative mb-auto mt-[260px] bg-white rounded-[20px]
-      bg-gradient-to-b from-[#fff] to-[#E2F2F3];
+      bg-gradient-to-b from-[#fff] to-[#E2F2F3] shadow-[0px_6px_10px_0px_#0000004D];
 
       .closeBtn {
         @apply absolute flex items-center justify-center cursor-pointer bg-white rounded-[20px] w-[40px] h-[40px] border-none text-black/50 top-[-10px] right-[-10px];
@@ -272,7 +271,7 @@
       }
 
       g {
-        box-shadow: 0 0 12px black;
+        @apply shadow-[0px_0px_12px_0px_black];
       }
     }
   }
@@ -359,7 +358,6 @@
     @media (min-width: 1026px) {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       margin-top: -4.6rem;
-
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
@@ -378,7 +376,7 @@
       @apply w-[88px];
 
       &:hover {
-        animation: shimmy 0.25s !important;
+        @apply animate-[shimmy_.25s];
       }
     }
 

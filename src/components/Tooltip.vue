@@ -11,11 +11,7 @@
 
 <style lang="scss" scoped>
   .tooltip {
-    font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-    box-shadow: 0 2px 20px 0px black;
-    @apply bg-[#d71d5b] py-20 px-6 w-[30ch] rounded-2xl;
-    //
-    @apply fixed top-[-3rem];
+    @apply bg-[#d71d5b] py-20 px-6 w-[30ch] rounded-2xl shadow-[0px_2px_20px_0px_black] fixed top-[-3rem];
 
     @media (max-width: $breakThou) {
       //
@@ -23,6 +19,7 @@
 
     @media (max-width: $breakOne) {
       //
+    }
 
     @media (max-width: $breakFour) {
       //
@@ -30,18 +27,7 @@
 
     p {
       // @apply block;
-      @apply text-[0.9em];
-      @apply leading-[1.4em];
-      @apply tracking-wider;
-      @apply text-white;
-      @apply font-medium;
-      //
-      @apply content-center;
-      @apply items-center;
-      @apply justify-center;
-      @apply self-center;
-      @apply text-left;
-      @apply align-left;
+      @apply text-[0.9em] leading-[1.4em] tracking-wider text-white font-medium content-center items-center justify-center self-center text-left align-left;
 
     }
   }
@@ -54,23 +40,20 @@
   }
 
   body.punk .tooltip {
-
     //
+
     p {
      @apply my-1 mx-auto;
     }
   }
 
   body.corp .tooltip {
-
     //
+
     p {
       font-family: 'Bodoni Moda', Times, serif !important;
-      @apply text-[1rem];
       letter-spacing: .001rem;
-      @apply leading-[1.4rem];
-      @apply m-0;
-      @apply font-medium;
+      @apply text-[1rem] leading-[1.4rem] m-0 font-medium;
 
       @media (max-width: $breakThou) {
         @apply text-[1.15rem];
@@ -78,36 +61,21 @@
       }
 
       @media (max-width: $breakTwo) {
-        @apply text-[1rem];
-        @apply leading-6;
+        @apply text-[1rem] leading-6;
       }
 
     }
   }
 
   body.modern .tooltip {
-    width: 45%;
     @apply m-auto;
+    width: 45%;
     padding: 1rem 1.5rem;
 
     p {
       font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-      @apply text-[.85rem];
       letter-spacing: .000rem;
-      @apply leading-[1.4rem];
-      @apply m-0;
-      @apply font-light;
-
-      // @media (max-width: $breakThou) {
-      //   @apply text-[1.15rem];
-      //   line-height: 1.75rem;
-      // }
-
-      // @media (max-width: $breakTwo) {
-      //   @apply text-[1rem];
-      //   @apply leading-6;
-      // }
-
+      @apply text-[.85rem] leading-[1.4rem] m-0 font-light;
     }
   }
 </style>

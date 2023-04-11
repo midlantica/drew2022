@@ -103,6 +103,10 @@
 <style lang='scss' scoped>
   @import '../../assets/css/carousel.scss';
 
+  :root {
+    --carouselFade: .5s;
+  }
+
   $carouselFade: 0.5;
 
   .projectBox {
@@ -118,6 +122,83 @@
           @apply cursor-pointer;
         }
       }
+    }
+  }
+
+  .miniGallery {
+    @apply w-full flex flex-row flex-wrap justify-between items-center content-center;
+
+    div {
+      @apply flex-auto w-[125px] no-underline cursor-pointer inline-block text-center;
+
+      &:hover {
+        @apply text-bourbon-ivory no-underline;
+      }
+
+      a {
+        @apply flex;
+      }
+
+      .box {
+        @apply flex flex-col flex-nowrap items-center content-center justify-center duration-75 text-center m-auto bg-white border border-solid text-gray-400/80 min-w-[130px] shadow-[0px_2px_2px_-3px_black];
+
+        p {
+          @apply text-[#333] relative ease-out lowercase;
+        }
+
+        &:hover {
+          @apply ease-out top-[-5px] border border-solid text-gray-400/80;
+
+          p {
+            @apply relative top-[-5px] ease-out;
+          }
+
+          svg {
+            @apply relative top-[-5px] ease-out;
+          }
+        }
+
+        &.Uiux {
+          //
+
+          @media (max-width: $breakThou) {
+            //
+          }
+        }
+
+        &.Mobile {
+          //
+
+          @media (max-width: $breakThou) {
+            //
+          }
+        }
+
+        &.Kiosk {
+          //
+        }
+
+        &.Graphics {
+          //
+        }
+
+        &.Print {
+          //
+        }
+
+        &.Misc {
+          //
+        }
+
+        p {
+          @apply w-full text-[0.85em] normal-case text-center tracking-wider mb-2;
+
+          &:hover {
+            // @apply text-bourbon-ivory;
+          }
+        }
+      }
+
     }
   }
 
@@ -164,53 +245,57 @@
       }
     }
 
-    .miniGallery div .box {
-      @apply h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
+    .miniGallery {
+      @apply bg-none gap-4;
 
-      @media (max-width: $breakThou) {
-        @apply min-h-min;
-      }
+      div .box {
+        @apply h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
 
-      &:hover {
-        @apply ease-out rounded-xl border border-solid border-[#FFFFFF80] shadow-[0px_0px_1rem_0px_#d71d5b];
-
-        p {
-          @apply top-[-5px];
+        @media (max-width: $breakThou) {
+          @apply min-h-min;
         }
 
-        svg {
-          @apply relative top-[-5px] ease-out;
+        &:hover {
+          @apply ease-out rounded-xl border border-solid border-[#FFFFFF80] shadow-[0px_0px_1rem_0px_#d71d5b];
 
-          &:hover {
-            @apply opacity-[.8] relative ease-out stroke-modern-accentRed;
+          p {
+            @apply top-[-5px];
+          }
+
+          svg {
+            @apply relative top-[-5px] ease-out;
+
+            &:hover {
+              @apply opacity-[.8] relative ease-out stroke-modern-accentRed;
+            }
           }
         }
-      }
 
-      p {
-        @apply font-modernCopy text-white text-[1rem] relative lowercase top-[5px] text-center mt-[4px] mx-0 mb-0 ease-out;
+        p {
+          @apply font-modernCopy text-white text-[1rem] relative lowercase top-[5px] text-center mt-[4px] mx-0 mb-0 ease-out;
 
-        &:hover {
-          @apply ease-out;
-        }
-      }
-
-      .iconSVG {
-        @apply relative ease-out w-auto;
-        // width: initial !important;
-
-        &:hover {
-          @apply relative ease-out top-[-5px];
+          &:hover {
+            @apply ease-out;
+          }
         }
 
-        svg path,
-        svg polygon,
-        svg rect,
-        svg polyline {
-          @apply stroke-white top-[-5px] ease-out;
-        }
-      }
+        .iconSVG {
+          @apply relative ease-out w-auto;
+          // width: initial !important;
 
+          &:hover {
+            @apply relative ease-out top-[-5px];
+          }
+
+          svg path,
+          svg polygon,
+          svg rect,
+          svg polyline {
+            @apply stroke-white top-[-5px] ease-out;
+          }
+        }
+
+      }
     }
   }
 
@@ -453,99 +538,16 @@
       }
     }
 
-    .miniGallery div .box {
-      @apply h-[183px];
-
-      p {
-        @apply text-center font-punkCopy text-gray-800;
-      }
-
-    }
-  }
-
-  body.punk .miniGallery {
-    @apply top-0;
-  }
-
-  body.modern .miniGallery {
-    @apply bg-none gap-4;
-  }
-
-  .miniGallery {
-    @apply w-full flex flex-row flex-wrap justify-between items-center content-center;
-
-    div {
-      @apply flex-auto w-[125px] no-underline cursor-pointer inline-block text-center;
-
-      &:hover {
-        @apply text-bourbon-ivory no-underline;
-      }
-
-      a {
-        @apply flex;
-      }
-
-      .box {
-        @apply flex flex-col flex-nowrap items-center content-center justify-center duration-75 text-center m-auto bg-white border border-solid text-gray-400/80;
-        box-shadow: 0px 2px 2px -3px black;
+    .miniGallery {
+      @apply top-0;
+      div .box {
+        @apply h-[183px];
 
         p {
-          @apply text-[#333] relative ease-out lowercase;
+          @apply text-center font-punkCopy text-gray-800;
         }
 
-        &:hover {
-          @apply ease-out top-[-5px] border border-solid text-gray-400/80;
-
-          p {
-            @apply relative top-[-5px] ease-out;
-          }
-
-          svg {
-            @apply relative top-[-5px] ease-out;
-          }
-        }
-
-        &.Uiux {
-          //
-
-          @media (max-width: $breakThou) {
-            //
-          }
-        }
-
-        &.Mobile {
-          //
-
-          @media (max-width: $breakThou) {
-            //
-          }
-        }
-
-        &.Kiosk {
-          //
-        }
-
-        &.Graphics {
-          //
-        }
-
-        &.Print {
-          //
-        }
-
-        &.Misc {
-          //
-        }
-
-        p {
-          @apply w-full text-[0.85em] normal-case text-center tracking-wider mb-2;
-
-          &:hover {
-            // @apply text-bourbon-ivory;
-          }
-        }
       }
-
     }
   }
 
@@ -571,27 +573,27 @@
     //
 
     &:nth-of-type(1) {
-      animation: carouselFader ($carouselFade *0.51 + s);
+      animation: carouselFader ($carouselFade * 0.51 + s);
     }
 
     &:nth-of-type(2) {
-      animation: carouselFader ($carouselFade *0.51.2 + s);
+      animation: carouselFader ($carouselFade * 0.51.2 + s);
     }
 
     &:nth-of-type(3) {
-      animation: carouselFader ($carouselFade *0.51.3 + s);
+      animation: carouselFader ($carouselFade * 0.51.3 + s);
     }
 
     &:nth-of-type(4) {
-      animation: carouselFader ($carouselFade *0.51.4 + s);
+      animation: carouselFader ($carouselFade * 0.51.4 + s);
     }
 
     &:nth-of-type(5) {
-      animation: carouselFader ($carouselFade *0.51.5 + s);
+      animation: carouselFader ($carouselFade * 0.51.5 + s);
     }
 
     &:nth-of-type(6) {
-      animation: carouselFader ($carouselFade *0.51.6 + s);
+      animation: carouselFader ($carouselFade * 0.51.6 + s);
     }
   }
 

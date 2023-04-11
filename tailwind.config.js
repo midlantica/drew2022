@@ -34,6 +34,9 @@ module.exports = {
         breakThou: '1024px'
         // breakMinMax: '630px 760px',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
+      },
       boxShadow: {
         druShadow: '0px 0px 4px 0px #000000'
       },
@@ -133,5 +136,7 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [
+    require('tailwind-clip-path')
+  ]
 }

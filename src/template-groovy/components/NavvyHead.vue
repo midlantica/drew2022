@@ -42,8 +42,10 @@
   @import '../assets/css/groovy-main.scss';
 
   .groovyCircle {
-    @apply w-[210px] h-[210px] rounded-[10em] z-10 block mr-[-2.75em] mb-[-5.3em];
-    box-shadow: 8px 6px 0px rgba(37, 37, 37, 0.25);
+    @apply w-[210px] h-[210px] rounded-[10em] z-10 block mr-[-2.75em] mb-[-5.3em] shadow-[8px_6px_0px_0px_hsl(0,_0%,_0%,_25%)] duration-1000 ease-out clip-path-polygon-[21%_0,_100%_0,_110%_50%,_100%_100%,_21%_110%];
+    // @apply radial-gradient[(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
+    // @apply bg-radial-gradient[(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
+    // @apply radial-gradient(at center center, rgb(55, 65, 81), rgb(225, 29, 72), rgb(185, 28, 28));
     background-image: radial-gradient(
       /* 0 - 25% */
       $groovy-aqua 0%,
@@ -57,8 +59,6 @@
       /* 75% - 100% */
       $groovy-red 59%,
       $groovy-red 100%);
-      clip-path: polygon(21% 0%, 100% 0%, 110% 50%, 100% 100%, 21% 110%);
-      animation: 1s ease-out;
 
       @media (max-width: $breakFour) {
         @apply w-[160px] h-[160px] top-[-1.4em] left-[-2.9em];

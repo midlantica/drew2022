@@ -85,7 +85,6 @@
 
     .wrapper {
       @apply flex flex-col grow max-w-[1024px] min-h-[780px] pb-14 bg-[hsl(320,100%,9%)] bg-[url('./template-modern/assets/img/bg/bg_bak_dk4.jpeg')] bg-cover;
-      // background-image: url(./template-modern/assets/img/bg/bg_bak_dk4.jpeg);
 
       @media (max-width: $breakOne) {
         //

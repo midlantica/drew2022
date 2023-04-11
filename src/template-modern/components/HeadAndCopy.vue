@@ -25,7 +25,6 @@
     a.drewhead {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
-      // background-image: url(/img/drew_mug_red.png);
       @apply bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')];
     }
 
