@@ -60,7 +60,7 @@
 
   .fade-enter-active,
   .fade-leave-active {
-    transition: all .25s ease-out .25s;
+    @apply transition-all duration-200 ease-out;
   }
 
   .fade-enter,

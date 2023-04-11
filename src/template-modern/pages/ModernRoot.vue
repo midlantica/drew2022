@@ -47,8 +47,8 @@
   }
 
   .mainGrid {
-    @apply grid gap-y-2 gap-x-0 w-[90%];
-    grid-template-columns: 1fr;
+    @apply w-[90%] grid grid-cols-1 gap-y-2 gap-x-0;
+    // grid-template-columns: 1fr;
 
     @media (max-width: $breakThou) {}
 
@@ -83,7 +83,6 @@
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     grid-template-columns: repeat(6, minmax(88px, 1fr)) !important;
-    width: initial !important;
     @apply justify-center justify-items-center w-[35vw];
 
     @media (max-width: 300000000rem) {
