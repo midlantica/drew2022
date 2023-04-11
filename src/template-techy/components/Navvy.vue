@@ -215,7 +215,7 @@
     }
 
     h2 {
-      @apply font-techyHead text-techy-blueTech m-0 font-normal lowercase text-[1.7em] leading-[1.1em] tracking-[.03em] inline;
+      @apply font-techyHead text-techy-blueTech m-0 font-normal lowercase text-[1.6em] leading-[1.1em] tracking-[.03em] inline;
 
       &:nth-child(1) {
         //

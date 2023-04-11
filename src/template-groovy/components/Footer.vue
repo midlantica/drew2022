@@ -36,7 +36,7 @@
     }
 
     .car {
-      @apply bg-no-repeat bg-cover block absolute top-[-.3rem] left-[-1em] w-[226px] h-[165px] bg-[url('/img/alfa-carabo.png')];
+      @apply bg-no-repeat bg-cover block absolute top-[-.3rem] left-2 w-[226px] h-[165px] bg-[url('/img/alfa-carabo.png')];
 
       @media (max-width: $breakThree) {
         @apply w-[165px] h-[135px] top-4 -left-4;

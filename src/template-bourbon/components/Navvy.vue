@@ -38,7 +38,6 @@
     }
 
     &:hover {
-      // color: $accent !important;
       @apply text-bourbon-orange;
     }
   }
@@ -62,6 +61,14 @@
     @media (max-width: $breakOne) {
       @apply justify-center;
     }
+
+    a {
+      @apply text-bourbon-ivory;
+
+      &:hover {
+        @apply text-[orange];
+      }
+    }
   }
 
   h1 {
@@ -78,6 +85,7 @@
     @media (max-width: $breakThree) {
       font-size: 3.05em;
     }
+
   }
 
   section.jobDesc {

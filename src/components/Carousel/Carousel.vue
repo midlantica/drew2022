@@ -471,15 +471,11 @@
     @apply bg-none gap-4;
   }
 
-  body.corp .VueCarousel.druCarousel {
-    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.29);
-  }
-
   .miniGallery {
-    @apply flex flex-row flex-wrap justify-between items-center content-center duration-75 w-full;
+    @apply w-full flex flex-row flex-wrap justify-between items-center content-center;
 
     div {
-      @apply grow w-[125px] no-underline cursor-pointer inline-block;
+      @apply flex-auto w-[125px] no-underline cursor-pointer inline-block text-center;
 
       &:hover {
         @apply text-bourbon-ivory no-underline;
@@ -542,10 +538,10 @@
         }
 
         p {
-          @apply w-full text-[0.85em] normal-case text-white text-center tracking-wider mb-2;
+          @apply w-full text-[0.85em] normal-case text-center tracking-wider mb-2;
 
           &:hover {
-            @apply text-bourbon-ivory;
+            // @apply text-bourbon-ivory;
           }
         }
       }
@@ -572,9 +568,8 @@
   }
 
   .miniGallery div {
-    @apply text-center;
-
     //
+
     &:nth-of-type(1) {
       animation: carouselFader ($carouselFade *0.51 + s);
     }

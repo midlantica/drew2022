@@ -15,23 +15,18 @@
   @import '../assets/css/techy-main.scss';
 
   section {
-    @apply mt-[2.45rem] mr-[1.95rem] mb-0 ml-6 ;
-
-    @media (min-width: $breakThou) {
-      //
-    }
+    @apply mt-[2.45rem] mr-[1.5rem] mb-0 ml-6;
 
     @media (max-width: $breakThou) {
-      @apply mt-2 mx-2;
-      //
+      @apply mt-4 mx-4 mb-4;
     }
 
     @media (max-width: $breakOne) {
-      @apply mx-2;
+      // @apply mx-2;
     }
 
     @media (max-width: $breakTwo) {
-      @apply mx-1;
+      @apply mx-2;
     }
 
     @media (max-width: $breakThree) {
@@ -40,7 +35,7 @@
   }
 
   h1 {
-    @apply text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-8 mb-4 normal-case;
+    @apply text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-0 mb-4 normal-case;
 
     @media (min-width: $breakThou) {
       max-width: 26ch;
@@ -63,16 +58,17 @@
     }
   }
 
-  p.smallCaps {
-    @apply text-[80%] tracking-wider uppercase;
-  }
-
   p {
     @apply text-[1.2rem] font-techyCopy leading-[2.9rem] tracking-[.06em];
     color: transparentize($blueTech, .2);
 
+    &.smallCaps {
+      @apply text-[80%] tracking-wider uppercase;
+    }
+
     @media (min-width: $breakThou) and (-webkit-min-device-pixel-ratio: 2) {
       //
+
     }
 
     @media (max-width: $breakThou) {
