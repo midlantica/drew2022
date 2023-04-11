@@ -1,7 +1,7 @@
 <template>
   <transition name="bounce3" appear>
     <div class="extrasWrapper flex flex-row flex-wrap w-full m-auto">
-      <h1 class="marAuto">
+      <h1 class="m-auto">
         Portfolio Extras
       </h1>
 

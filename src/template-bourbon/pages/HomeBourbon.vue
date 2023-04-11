@@ -25,11 +25,11 @@
             </transition>
           </div>
 
-          <transition name="bounce8" appear>
+          <transition name="bounce7" appear>
             <About />
           </transition>
 
-          <transition name="bounce10" appear>
+          <transition name="bounce8" appear>
             <Quotes />
           </transition>
         </main>
@@ -60,12 +60,10 @@
   }
 
   .mainGrid {
-    grid-template-columns: repeat(2, 1fr);
-    @apply grid my-4 mr-6 ml-4 gap-x-4 gap-y-4;
+    @apply grid grid-cols-2 my-4 mr-6 ml-4 gap-x-4 gap-y-4;
 
     @media (max-width: $breakThou) {
-      grid-template-columns: 1fr;
-      @apply grid gap-y-4;
+      @apply grid gap-y-4 grid-cols-1;
     }
 
     @media (max-width: $breakOne) {
@@ -142,7 +140,7 @@
     }
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-        @apply mt-1 mb-2 gap-y-0;
+        @apply mt-1 gap-y-0;
     }
   }
 

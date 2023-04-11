@@ -51,13 +51,10 @@
   @import "../assets/css/groovy-main.scss";
 
   .mainGrid {
-    @apply grid;
-    grid-template-columns: 7fr 6fr;
-    @apply gap-y-4 mt-0 mx-4 mb-2;
+    @apply grid grid-cols-[7fr_6fr] gap-y-4 mt-0 mx-4 mb-2;
 
     @media (max-width: $breakThou) {
-      grid-template-columns: 1fr;
-      @apply mt-0 mx-4 mb-4;
+      @apply grid-cols-1 mt-0 mx-4 mb-4;
     }
 
     @media (max-width: $breakOne) {
@@ -147,7 +144,7 @@
   .about {
     grid-column: 2 / 3;
     grid-row: 2;
-    @apply mb-auto;
+    @apply mb-0;
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;

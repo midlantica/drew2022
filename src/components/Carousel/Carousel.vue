@@ -303,7 +303,7 @@
     //
 
     .projectBox {
-      @include box-shadow(0px, 2px, 6px, -2px, hsla(0, 0%, 0%, .9));
+      @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)];
 
       @media (max-width: $breakThou) {
         //
@@ -352,7 +352,7 @@
     //
 
     .projectBox {
-      @include box-shadow(0px, 6px, 0px, 0px, hsla(0, 0%, 0%, 0.25));
+      @apply shadow-[0px_6px_0px_0px_hsl(0,_0%,_0%,_25%)];
 
       @media (max-width: $breakThou) {
         @apply min-h-min;
@@ -393,7 +393,7 @@
     //
 
     .projectBox {
-      @include box-shadow(0px, 2px, 6px, -2px, hsla(0, 0%, 0%, 1));
+      @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)];
       @apply rounded-none;
 
       @media (max-width: $breakThou) {
@@ -449,7 +449,7 @@
     //
     .projectBox {
       @apply bg-base-offWhite;
-      @include box-shadow(0px, 1px, 1px, 0px, hsla(0, 0%, 0%, 0.5), false);
+      @apply shadow-[0px_1px_1px_0px_hsl(0,_0%,_0%,_50%)];
 
       @media (max-width: $breakThou) {
         @apply min-h-min;
@@ -503,7 +503,7 @@
     //
     .projectBox {
       @apply rounded-none bg-white/70;
-      @include box-shadow(0px, 1px, 1px, 0px, hsla(0, 0%, 0%, 0.5), false);
+      @apply shadow-[0px_1px_1px_0px_hsl(0,_0%,_0%,_50%)];
 
       @media (max-width: $breakThou) {
         @apply min-h-min;

@@ -27,8 +27,6 @@
     @apply relative max-w-[1024px] my-0 mx-auto;
   }
 
-  // #############################
-  // BOURBON
   body.bourbon {
     @apply bg-base-backBlack;
 
@@ -78,8 +76,6 @@
     }
   }
 
-  // #############################
-  // MODERN
   body.modern {
     @apply h-[calc(100%)] bg-[hsl(320,100%,9%)];
 
@@ -122,8 +118,6 @@
     }
   }
 
-  // #############################
-  // GROOVY
   body.groovy {
     @apply bg-base-backBlack;
 
@@ -152,8 +146,6 @@
     }
   }
 
-  // #############################
-  // TECHY
   body.techy {
     @apply bg-base-backBlack;
 
@@ -202,13 +194,11 @@
     }
   }
 
-  // #############################
-  // CORP
   body.corp {
     @apply bg-base-backBlack;
 
     .wrapper {
-      @apply bg-[url('/img/bg/white_paper_patt-01.jpg')] bg-repeat;
+      @apply bg-[url(/img/bg/white_paper_patt-01.jpg)] bg-repeat;
     }
 
     .smallCaps {
@@ -232,32 +222,30 @@
     }
   }
 
-  // #############################
-  // PUNK
   body.punk {
     @apply bg-base-backBlack;
 
     .wrapper {
-      // background-size: 100% 640%, 100% 100%;
-      @apply w-full bg-repeat bg-center bg-[url('/img/bg/circles.svg'),_url('/img/bg/Drew-punk-back.jpg')] bg-[length:100%_640%,100%_100%];
+      @apply w-full bg-repeat bg-center bg-[url(/img/bg/circles.svg),_url(/img/bg/Drew-punk-back.jpg)] bg-[length:_100%_640%,100%_100%];
 
       @media (max-width: $breakOne) {
-        @apply bg-[length:100%_640%,130%_90%] bg-[center_center];
+        @apply bg-[length:_100%_640%,130%_90%] bg-[center_center];
       }
 
       @media (max-width: $breakTwo) {
-        background-position: center center, -3em 11em;
-        background-size: 100% 600%, 120% 100%;
+        // background-position: center center, -3em 11em;
+        // background-size: 100% 600%, 120% 100%;
+        @apply bg-[length:_100%_600%,120%_100%] bg-[center_center,-3em_11em];
       }
 
       @media (max-width: $breakTwo) {
-        background-position: center center, -3em 3em;
-        background-size: 100% 600%, 250% 70%;
+        // background-position: center center, -3em 3em;
+        // background-size: 100% 600%, 250% 70%;
+        @apply bg-[length:_100%_600%,250%_100%] bg-[center_center,-3em_3em];
       }
     }
 
     .about>p {
-      // font-family: Poppins, "Helvetica Neue", Arial, sans-serif !important;
       @apply font-punkCopy text-[.8em];
 
       @media (max-width: $breakThou) {
@@ -293,4 +281,29 @@
       @apply text-[95%] tracking-wider uppercase;
     }
   }
+
+  ::selection {
+    color: #000;
+    background: #fbd404;
+  }
+
+  ::-webkit-scrollbar {
+    height: 0.75rem;
+    width: 0.75rem;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom,
+        hsla(0, 0%, 79%, 0.226) 0%,
+        hsla(0, 0%, 79%, 0.514) 100%);
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0px;
+  }
+
 </style>

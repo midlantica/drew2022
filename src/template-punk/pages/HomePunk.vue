@@ -51,12 +51,10 @@
   }
 
   .mainGrid {
-    grid-template-columns: repeat(2, 1fr);
-    @apply grid gap-x-2 gap-y-4 shadow-none py-0 px-4 bg-transparent;
+    @apply grid grid-cols-2 gap-x-2 gap-y-4 shadow-none py-0 px-4 bg-transparent;
 
     @media (max-width: $breakThou) {
-      grid-template-columns: 1fr;
-      @apply gap-x-1 gap-y-2;
+      @apply grid-cols-1 gap-x-1 gap-y-2;
     }
 
     @media (max-width: $breakOne) {
@@ -116,7 +114,6 @@
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
       grid-row: 5;
-      margin-bottom: 1em;
     }
 
     @media (max-width: $breakOne) {
@@ -130,7 +127,7 @@
     }
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-      @apply mb-2 gap-y-0 mt-1;
+      @apply gap-y-0;
     }
   }
 

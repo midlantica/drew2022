@@ -26,7 +26,6 @@
     }
 
     p {
-      // @apply block;
       @apply text-[0.9em] leading-[1.4em] tracking-wider text-white font-medium content-center items-center justify-center self-center text-left align-left;
 
     }
@@ -34,9 +33,7 @@
 
   // Other templates
   body.corp .tooltip {
-    @include box-shadow(0px, 0px, 3px, -1px, hsla(0, 14%, 22%, 0.5));
-    @apply rounded-sm;
-    font-family: 'Bodoni Moda', Times, serif !important;
+    @apply rounded-sm font-corpCopy shadow-[0px_0px_3px_-1px_hsl(0,_0%,_0%,_50%)];
   }
 
   body.punk .tooltip {
@@ -51,13 +48,10 @@
     //
 
     p {
-      font-family: 'Bodoni Moda', Times, serif !important;
-      letter-spacing: .001rem;
-      @apply text-[1rem] leading-[1.4rem] m-0 font-medium;
+      @apply text-[1rem] leading-[1.4rem] m-0 font-medium tracking-[.001rem] font-corpCopy;
 
       @media (max-width: $breakThou) {
-        @apply text-[1.15rem];
-        line-height: 1.75rem;
+        @apply text-[1.15rem] leading-7;
       }
 
       @media (max-width: $breakTwo) {
@@ -68,14 +62,10 @@
   }
 
   body.modern .tooltip {
-    @apply m-auto;
-    width: 45%;
-    padding: 1rem 1.5rem;
+    @apply m-auto w-[45%] py-4 px-6;
 
     p {
-      font-family: Spartan, "Helvetica Neue", Helvetica, sans-serif !important;
-      letter-spacing: .000rem;
-      @apply text-[.85rem] leading-[1.4rem] m-0 font-light;
+      @apply text-[.85rem] leading-[1.4rem] m-0 font-light font-modernCopy tracking-0;
     }
   }
 </style>

@@ -190,8 +190,7 @@
 
   // BOURBON ########################
   .bourbon .quoteBlock {
-    @apply font-bourbonCopy bg-[#932213] rounded-sm;
-    @include box-shadow(0px, 1px, 2px, 0px, hsla(0, 0%, 0%, 0.5));
+    @apply font-bourbonCopy bg-[#932213] rounded-sm shadow-[0px_1px_2px_0px_hsl(0,_0%,_0%,_50%)];
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
         @apply clear-both mt-2 mb-2 gap-y-0;
