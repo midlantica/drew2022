@@ -1,14 +1,18 @@
 <template>
   <nav>
-    <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center justify-center gap-0">
+    <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center justify-center gap-x-4">
       <div class="drewTop max-[830px]:m-auto gap-2 grow">
         <router-link :to="{ name: 'Corp' }" class="w-full flex max-[830px]:flex-column flex-row flex-wrap content-center gap-6 justify-center">
           <router-link :to="{ name: 'ExtrasCorp' }" class="drewhead jelloHorizontal content-center m-0" />
-          <drewHarper class="drewHarper marTH" />
+          <div class="flex flex-col flex-wrap">
+            <drewHarper class="drewHarper mt-2" />
+            <div class="flex flex-row justify-center flex-wrap ">
+              <h3 class="font-corpCopy text-[115%] transition duration-[.25s] ease-in font-bold text-center leading-loose uppercase tracking-[0.16rem]">
+                {{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}
+              </h3>
+            </div>
+          </div>
         </router-link>
-        <div class="flex flex-row just-center">
-          <h3>{{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}</h3>
-        </div>
       </div>
       <section class="contact">
         <p class="resume">
@@ -82,7 +86,7 @@
     background-position: -39px -59px;
     background-size: 151%;
     filter: hue-rotate(210deg) grayscale(50%);
-    @apply bg-[url('/img/drew_mug_red.png')] inline-block w-[80px] h-[80px] bg-no-repeat bg-corp-accentRed rounded-[1px] mb-3 shadow-[0px_0px_1px_1px_#00000026];
+    @apply bg-[url('/img/drew_mug_red.png')] inline-block w-[80px] h-[80px] bg-no-repeat bg-corp-accentRed rounded-[1px] shadow-[0px_0px_1px_1px_#00000026];
 
     @media (max-width: $breakTwo) {
       background-position: -40px -50px !important;
@@ -91,7 +95,7 @@
   }
 
   h1 {
-    @apply font-corpCopy text-[1.5rem] transition duration-[.25s] ease-in font-medium;
+    @apply font-corpHead text-[1.5rem] transition duration-[.25s] ease-in font-medium;
 
     a:hover {
       color: initial !important;
@@ -152,7 +156,7 @@
   }
 
   .contact {
-    @apply grow flex flex-col flex-wrap justify-center items-center content-center mt-4 self-baseline;
+    @apply grow flex flex-col flex-wrap justify-center items-center content-center m-auto self-baseline gap-x-4;
 
     @media (max-width: $breakOne) {
       @apply ml-0 flex-row mt-4;

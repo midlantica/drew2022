@@ -75,7 +75,7 @@
   }
 
   header {
-    @apply text-base-ivory bg-groovy-red clearfix;
+    @apply text-base-ivory bg-groovy-red after:clear-both h-[188px];
   }
 
   .about {

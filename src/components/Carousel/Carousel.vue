@@ -422,10 +422,10 @@
     }
 
     .miniGallery div .box {
-      @apply h-[170px] border border-solid border-gray-200 ease-out duration-200;
+      @apply h-[167px] border border-solid border-gray-200 ease-out duration-200;
 
       &:hover {
-        @apply h-[170px] border-2 border-solid border-techy-mango ease-out duration-200;
+        @apply border-2 border-solid border-techy-mango ease-out duration-200;
       }
 
       p {

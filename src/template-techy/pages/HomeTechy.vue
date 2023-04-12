@@ -53,28 +53,29 @@
   .mainGrid {
     grid-template-columns: 7fr 6fr;
     grid-gap: 1rem 0rem;
-    @apply grid ml-0 mr-2 pt-0 pr-4 pb-2;
+    @apply grid mt-0 mx-6 mb-2;
 
     @media (min-width: $breakThou) and (min-device-width: 768px) {
       grid-template-columns: 7fr 6fr;
-      @apply mx-2;
+      @apply mt-0 mx-4 mb-2;
     }
 
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
-      @apply mx-2;
+      @apply mt-0 mx-4 mb-2;
     }
 
     // IPAD LANDSCAPE
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       grid-template-columns: 1fr;
-      @apply mx-2;
+      @apply mt-0 mx-6 mb-2;
     }
 
     // IPAD PRO LANDSCAPE
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       grid-template-columns: 7fr 6fr;
-      @apply mx-2;
+      // @apply mx-6;
+      @apply mt-0 mx-6 mb-2;
     }
   }
 

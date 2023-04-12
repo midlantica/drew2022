@@ -357,7 +357,7 @@
 
     @media (min-width: 1026px) {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      margin-top: -4.6rem;
+      margin-top: -2.8rem;
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {

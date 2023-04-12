@@ -27,6 +27,13 @@
     @apply relative max-w-[1024px] my-0 mx-auto;
   }
 
+  img,
+  video,
+  audio {
+    max-width: 100%;
+    height: auto;
+  }
+
   body.bourbon {
     @apply bg-base-backBlack;
 
@@ -226,22 +233,18 @@
     @apply bg-base-backBlack;
 
     .wrapper {
-      @apply w-full bg-repeat bg-center bg-[url(/img/bg/circles.svg),_url(/img/bg/Drew-punk-back.jpg)] bg-[length:_100%_640%,100%_100%];
+      @apply w-full bg-repeat bg-center bg-[url(/img/bg/circles.svg),_url(/img/bg/Drew-punk-back.jpg)] bg-[length:_102%_640%,100%_100%];
 
       @media (max-width: $breakOne) {
-        @apply bg-[length:_100%_640%,130%_90%] bg-[center_center];
+        @apply bg-[length:_102%_640%,130%_90%] bg-[center_center];
       }
 
       @media (max-width: $breakTwo) {
-        // background-position: center center, -3em 11em;
-        // background-size: 100% 600%, 120% 100%;
-        @apply bg-[length:_100%_600%,120%_100%] bg-[center_center,-3em_11em];
+        @apply bg-[length:_102%_600%,120%_100%] bg-[center_center,-3em_11em];
       }
 
       @media (max-width: $breakTwo) {
-        // background-position: center center, -3em 3em;
-        // background-size: 100% 600%, 250% 70%;
-        @apply bg-[length:_100%_600%,250%_100%] bg-[center_center,-3em_3em];
+        @apply bg-[length:_102%_600%,250%_100%] bg-[center_center,-3em_3em];
       }
     }
 

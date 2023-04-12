@@ -65,11 +65,11 @@
 
   .mainGrid {
     grid-template-columns: repeat(2, 1fr);
-    @apply grid gap-y-4 gap-x-0 ml-4 mb-4 mr-6;
+    @apply grid gap-y-2 gap-x-0 ml-4 mb-4 mr-6;
 
     @media (max-width: $breakThou) {
       grid-template-columns: 1fr;
-      @apply gap-y-4 mx-4;
+      @apply gap-y-2 mx-4;
     }
 
     @media (max-width: $breakOne) {
@@ -105,6 +105,7 @@
   .slides {
     grid-column: 2 / 3;
     grid-row: 1;
+    @apply -mt-4;
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;

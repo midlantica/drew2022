@@ -6,7 +6,7 @@
       </div>
     </div>
 
-    <router-link to="/Groovy" class="float-left relative min-[375px]:left-[-1.95rem] sm:left-[-1.85rem]">
+    <router-link to="/Groovy" class="float-left relative min-[375px]:left-[-1.95rem] sm:left-[-1.55rem]">
       <div class="w-auto flex flex-row gap-4 flex-wrap m-auto justify-center">
         <mastDrew class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
         <mastHarper class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
@@ -43,9 +43,6 @@
 
   .groovyCircle {
     @apply w-[210px] h-[210px] rounded-[10em] z-10 block mr-[-2.75em] mb-[-5.3em] shadow-[8px_6px_0px_0px_hsl(0,_0%,_0%,_25%)] duration-1000 ease-out clip-path-polygon-[21%_0,_100%_0,_110%_50%,_100%_100%,_21%_110%];
-    // @apply radial-gradient[(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
-    // @apply bg-radial-gradient[(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
-    // @apply radial-gradient(at center center, rgb(55, 65, 81), rgb(225, 29, 72), rgb(185, 28, 28));
     background-image: radial-gradient(
       /* 0 - 25% */
       $groovy-aqua 0%,

@@ -15,18 +15,18 @@
   @import '../assets/css/techy-main.scss';
 
   section {
-    @apply mt-[2.45rem] mr-[1.5rem] mb-0 ml-6;
+    @apply mt-[2rem] mr-[1.5rem] mb-0 ml-4;
 
     @media (max-width: $breakThou) {
-      @apply mt-4 mx-4 mb-4;
+      @apply mt-6 mx-6 mb-4;
     }
 
     @media (max-width: $breakOne) {
-      // @apply mx-2;
+      @apply mx-4;
     }
 
     @media (max-width: $breakTwo) {
-      @apply mx-2;
+      @apply mx-4;
     }
 
     @media (max-width: $breakThree) {

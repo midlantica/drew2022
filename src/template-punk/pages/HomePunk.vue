@@ -51,7 +51,7 @@
   }
 
   .mainGrid {
-    @apply grid grid-cols-2 gap-x-2 gap-y-4 shadow-none py-0 px-4 bg-transparent;
+    @apply grid grid-cols-2 gap-x-2 gap-y-2 shadow-none py-0 px-4 bg-transparent;
 
     @media (max-width: $breakThou) {
       @apply grid-cols-1 gap-x-1 gap-y-2;

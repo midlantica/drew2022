@@ -108,11 +108,11 @@
       @apply text-[0.9rem] tracking-[0.02rem] leading-6 m-0 font-medium font-corpCopy;
 
       @media (max-width: $breakThou) {
-        @apply text-[1.15rem] leading-7;
+        @apply leading-7;
       }
 
       @media (max-width: $breakTwo) {
-        @apply text-[1rem] leading-6;
+        @apply leading-6;
       }
     }
   }
