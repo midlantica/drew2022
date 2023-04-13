@@ -85,5 +85,5 @@
 </script>
 
 <style lang="scss">
-  @import "../../assets/css/carousel.scss";
+  // @import "../../assets/css/carousel.scss";
 </style>

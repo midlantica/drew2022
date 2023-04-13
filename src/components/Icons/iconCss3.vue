@@ -40,12 +40,10 @@
 </template>
 
 <style lang="scss" scoped>
-  // @import '~/assets/css/_colors.scss';
 
   svg {
+    //
 
-    // width: 88px;
-    // @apply h-[60px];
     &:hover {
       @apply cursor-pointer;
     }
@@ -64,25 +62,20 @@
   }
 
   #css3item:hover #whiteStuff {
-    //animation: rounder 1s ease-in;
     animation-fill-mode: forwards;
     transform-origin: 17.5px 17px;
     transform: rotateY(180deg);
     transition-duration: 0.5s;
-    //animation-delay: 400ms;
-    //animation-iteration-count: 2;
   }
 
   @keyframes rounder {
     0% {
       transform: rotate(0deg);
-      //@apply opacity-0;
       transform: translateX(2rem);
     }
 
     100% {
       transform: rotate(360deg);
-      //@apply opacity-0;
       transform: translateX(2rem);
     }
   }

@@ -39,7 +39,6 @@
 
   .corp #figmaBox {
     filter: brightness(2) sepia(1) hue-rotate(170deg) saturate(3);
-    // filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(10);
 
     &:hover {
       filter: none;
@@ -47,8 +46,7 @@
   }
 
   #figmaBox {
-    // width: 88px;
-    // @apply h-[60px];
+    //
 
     .background {
       fill: url(#backer) hsl(0, 0%, 10%);
@@ -83,9 +81,6 @@
     animation: transparenter 1s ease-in;
     animation-delay: 0.75s;
     animation-iteration-count: 2;
-    // animation-fill-mode: forwards;
-    // transform-origin: 18px 17px;
-    //animation-iteration-count: 2;
 
     &.orange {
       animation-delay: 0.75s * 0;
@@ -115,17 +110,14 @@
   @keyframes transparenter {
     0% {
       @apply opacity-100;
-      //@apply opacity-0;
     }
 
     50% {
       @apply opacity-0;
-      //@apply opacity-0;
     }
 
     100% {
       @apply opacity-100;
-      //@apply opacity-0;
     }
   }
 </style>

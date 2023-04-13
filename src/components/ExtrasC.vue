@@ -90,10 +90,6 @@
 <style lang="scss" scoped>
   h1 {
     @apply text-[2em] text-center py-2 px-0;
-
-    a {
-      @apply no-underline;
-    }
   }
 
 </style>
