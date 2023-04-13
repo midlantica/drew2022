@@ -9,8 +9,5 @@ $font-copy        :"Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif !imp
 // ############################
 
 body {
-  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  background: #333;
-  margin: 0;
+  @apply m-0 bg-base-grey text-[1rem] font-groovyCopy;
 }

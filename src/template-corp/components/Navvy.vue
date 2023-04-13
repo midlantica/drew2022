@@ -53,7 +53,7 @@
     }
 
     &:hover {
-      color: $accent !important;
+      // color: $accent !important;
     }
   }
 
@@ -98,7 +98,7 @@
     @apply font-corpHead text-[1.5rem] transition duration-[.25s] ease-in font-medium;
 
     a:hover {
-      color: initial !important;
+      // color: initial !important;
     }
 
     @media (max-width: $breakOne) {
@@ -156,7 +156,7 @@
   }
 
   .contact {
-    @apply grow flex flex-col flex-wrap justify-center items-center content-center m-auto self-baseline gap-x-4;
+    @apply grow flex flex-col flex-wrap justify-center items-center content-center m-auto self-baseline gap-x-4 gap-y-2;
 
     @media (max-width: $breakOne) {
       @apply ml-0 flex-row mt-4;
@@ -178,10 +178,11 @@
       @apply font-corpCopy text-[1.3em] tracking-[.01em] items-center text-center leading-[1.5em] grow font-semibold lowercase;
 
       a {
-        border-bottom: 2px dotted lighten($blue-dark, 20);
+        // border-bottom: 2px dotted lighten($blue-dark, 20);
+        @apply text-corp-blueMid;
 
         &:hover {
-          @apply text-[maroon] border-b-2 border-dotted border-[hsl(0,100%,25%)];
+          @apply text-corp-blueDark border-b-2 border-dotted border-corp-blueMid;
         }
       }
 
@@ -207,15 +208,13 @@
 
       &.resume,
       &.email {
-        color: $blue-dark !important;
-        @apply text-corp-blueDark leading-normal;
+        @apply text-corp-blueMid leading-normal;
 
         a {
-          color: $blue-dark !important;
-          border-bottom: 1px dotted $accent;
+          @apply text-corp-blueDark;
 
           &:hover {
-            @apply text-[maroon] border-b-2 border-dotted border-[hsl(0,100%,25%)];
+            @apply text-corp-blueDark border-b-2 border-dotted border-corp-blueMid;
           }
         }
       }

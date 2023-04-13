@@ -1,7 +1,7 @@
 <template>
   <transition name="bounce3" appear>
-    <div class="extrasWrapper flex flex-row flex-wrap w-full m-auto">
-      <h1 class="m-auto">
+    <div class="extrasWrapper flex flex-row flex-wrap w-full m-auto gap-4">
+      <h1 class="text-black font-punkHead bg-white/70 py-1 px-3 leading-normal mt-2 mx-auto">
         Portfolio Extras
       </h1>
 
@@ -96,85 +96,4 @@
     }
   }
 
-  .extrasWrap {
-    //
-
-    a {
-      @apply basis-auto grow box-border text-center items-center no-underline text-black ;
-
-      img.portThumbs {
-        @apply w-[400px] h-auto border-2 border-solid text-base-ivory shadow-druShadow transition-opacity duration-1000 ease-in-out;
-
-        &:hover {
-          @apply shadow-none border-2 border-solid text-base-accentRed;
-        }
-      }
-
-      p {
-        @apply inline-block text-center mt-2 text-[0.85em] text-black mb-4 max-w-[400px] pb-0 border-b border-solid border-transparent;
-
-        &:hover {
-          @apply border-b border-solid border-base-accentRed;
-        }
-      }
-
-      &:hover p {
-        @apply text-base-accentRed border border-solid border-base-accentRed/30;
-      }
-
-      &:hover img {
-        @apply shadow-none cursor-pointer border-2 border-solid border-base-accentRed;
-      }
-    }
-  }
-
-  .modern .extrasWrap {
-    //
-
-    a {
-      //
-
-      img.portThumbs {
-        //
-      }
-
-      p {
-        @apply text-white;
-
-        &:hover {
-          @apply border border-solid border-base-white;
-        }
-      }
-
-      &:hover p {
-        @apply text-white border border-solid border-base-white;
-      }
-
-    }
-  }
-
-  .punk .extrasWrap {
-    //
-
-    a {
-      //
-
-      img.portThumbs {
-        //
-      }
-
-      p {
-        @apply text-white bg-base-accentRed py-[.15rem] px-[.25rem];
-
-        &:hover {
-          @apply border border-solid border-base-white;
-        }
-      }
-
-      &:hover p {
-        @apply text-white border border-solid border-base-black;
-      }
-
-    }
-  }
 </style>

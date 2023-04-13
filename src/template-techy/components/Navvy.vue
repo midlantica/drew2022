@@ -164,7 +164,7 @@
         }
 
         a.mastHarper {
-          display: initial;
+          // display: initial;
           grid-column: 3 / 4;
           grid-row: 1 / 3;
           @apply w-[25.3em];

@@ -101,7 +101,7 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '../../assets/css/carousel.scss';
+  // @import '../../assets/css/carousel.scss';
 
   :root {
     --carouselFade: .5s;
@@ -126,7 +126,7 @@
   }
 
   .miniGallery {
-    @apply w-full flex flex-row flex-wrap justify-between items-center content-center;
+    @apply w-full flex flex-row flex-wrap justify-center items-center content-center;
 
     div {
       @apply flex-auto w-[125px] no-underline cursor-pointer inline-block text-center;
@@ -248,53 +248,55 @@
     .miniGallery {
       @apply bg-none gap-4;
 
-      div .box {
-        @apply h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
+      div {
+        @apply max-w-[150px];
+        .box {
+          @apply h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
 
-        @media (max-width: $breakThou) {
-          @apply min-h-min;
-        }
-
-        &:hover {
-          @apply ease-out rounded-xl border border-solid border-[#FFFFFF80] shadow-[0px_0px_1rem_0px_#d71d5b];
-
-          p {
-            @apply top-[-5px];
+          @media (max-width: $breakThou) {
+            @apply min-h-min;
           }
 
-          svg {
-            @apply relative top-[-5px] ease-out;
+          &:hover {
+            @apply ease-out rounded-xl border border-solid border-[#FFFFFF80] shadow-[0px_0px_1rem_0px_#d71d5b];
+
+            p {
+              @apply top-[-5px];
+            }
+
+            svg {
+              @apply relative top-[-5px] ease-out;
+
+              &:hover {
+                @apply opacity-[.8] relative ease-out stroke-modern-accentRed;
+              }
+            }
+          }
+
+          p {
+            @apply font-modernCopy text-white text-[.85rem] relative lowercase top-[5px] text-center mt-[4px] mx-0 mb-0 ease-out;
 
             &:hover {
-              @apply opacity-[.8] relative ease-out stroke-modern-accentRed;
+              @apply ease-out;
+            }
+          }
+
+          .iconSVG {
+            @apply relative ease-out w-auto;
+            // width: initial !important;
+
+            &:hover {
+              @apply relative ease-out top-[-5px];
+            }
+
+            svg path,
+            svg polygon,
+            svg rect,
+            svg polyline {
+              @apply stroke-white top-[-5px] ease-out;
             }
           }
         }
-
-        p {
-          @apply font-modernCopy text-white text-[1rem] relative lowercase top-[5px] text-center mt-[4px] mx-0 mb-0 ease-out;
-
-          &:hover {
-            @apply ease-out;
-          }
-        }
-
-        .iconSVG {
-          @apply relative ease-out w-auto;
-          // width: initial !important;
-
-          &:hover {
-            @apply relative ease-out top-[-5px];
-          }
-
-          svg path,
-          svg polygon,
-          svg rect,
-          svg polyline {
-            @apply stroke-white top-[-5px] ease-out;
-          }
-        }
-
       }
     }
   }
@@ -612,7 +614,7 @@
   }
 
   .carouselArrow {
-    @apply text-black/80 bg-black/10 pt-[.125rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
+    @apply text-[.65rem] text-black/80 bg-black/10 pt-[.125rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
 
     &:hover {
       @apply text-white bg-black/40;

@@ -9,7 +9,7 @@
       <h2>{{ store.copy.uiuxDesigner }} / {{ store.copy.vizDesigner }}</h2>
     </section>
     <section class="contact">
-      <p class="flexRowWrap flex-shrink-1 just-center">
+      <p class="flex flex-row flex-wrap shrink justify-center gap-0">
         <a :href="`mailto:` + `${store.copy.druEmail}`" class="marTH">{{
           store.copy.druEmail
         }}</a>
@@ -134,7 +134,7 @@
     }
 
     p {
-      @apply font-modernCopy font-normal text-center mt-2 leading-[1.4rem] tracking-[0.05rem] antialiased text-[0.85rem] drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)];
+      @apply font-modernCopy font-normal text-center mt-4 leading-[1.4rem] tracking-[0.05rem] antialiased text-[0.75rem] drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)];
 
       a {
         @apply border border-[#ff000054] border-solid py-[0.3rem] rounded-[2rem] my-0 mx-2 px-5;

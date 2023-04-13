@@ -1,7 +1,7 @@
 $mortar: .25rem;
 
 .vueperslides__arrow {
-  color: rgb(67, 67, 67);
+  color: #333;
   stroke-linejoin: round;
   filter:
     drop-shadow(-1px -1px 1px hsla(0, 0%, 100%, 0.5))
@@ -62,7 +62,7 @@ $mortar: .25rem;
 
 .carouselArrow {
   font-size: 0.7em;
-  color: $grey;
+  color: #333;
   border: none;
   border-radius: 2px;
   border-left-width: 10px;
@@ -72,14 +72,10 @@ $mortar: .25rem;
   font-family: Helvetica, Arial, sans-serif;
   cursor: pointer;
   position: absolute;
-  // z-index: 100;
   box-shadow: 2px 2px 2px hsla(0, 0%, 100%, 0.5);
 
   &:hover {
-    // background: grey;
     background: transparentize(black, .90);
-    // font-weight: bold;
-    // color: $accent-red
   }
 }
 
@@ -99,19 +95,16 @@ $mortar: .25rem;
   }
 }
 
-$modernCol: $white;
-$ruby: hsla(340, 76%, 48%, 1);
-
 body.modern .box {
 
   &:hover {
     //
     .brickBack {
-      fill: $ruby;
+      fill: #D71D5B;
       transition: fill 10s ease-out;
     }
     .brickCircles {
-      fill: $ruby;
+      fill: #D71D5B;
       transition: fill 10s ease-out;
     }
   }
@@ -124,7 +117,7 @@ body.modern .box {
   svg polygon,
   svg rect,
   svg polyline {
-    stroke: $modernCol;
+    stroke: white;
   }
 
 }
@@ -135,11 +128,11 @@ body.corp .box {
   &:hover {
     //
     .brickBack {
-      fill: hsl(195, 88%, 90%);
+      fill: #cff1fc;
       transition: fill 10s ease-out;
     }
     .brickCircles {
-      fill: hsl(195, 88%, 90%);
+      fill: #cff1fc;
       transition: fill 10s ease-out;
     }
   }

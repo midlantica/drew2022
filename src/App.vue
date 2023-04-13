@@ -27,11 +27,36 @@
     @apply relative max-w-[1024px] my-0 mx-auto;
   }
 
-  img,
-  video,
-  audio {
-    max-width: 100%;
-    height: auto;
+  .extrasWrap {
+    //
+
+    a {
+      @apply basis-auto grow box-border text-center items-center no-underline text-black ;
+
+      img.portThumbs {
+        @apply w-[400px] h-auto border-2 border-solid border-black/10 text-base-ivory transition-opacity duration-1000 ease-in-out;
+
+        &:hover {
+          @apply border-2 border-solid border-black text-base-accentRed;
+        }
+      }
+
+      p {
+        @apply inline-block text-center mt-2 text-[0.85em] text-black mb-4 max-w-[400px] pb-0 border-b border-solid border-transparent;
+
+        &:hover {
+          @apply underline;
+        }
+      }
+
+      &:hover p {
+        @apply text-base-accentRed underline;
+      }
+
+      &:hover img {
+        @apply shadow-none cursor-pointer border-b-2 border-solid border-b-base-accentRed;
+      }
+    }
   }
 
   body.bourbon {
@@ -114,15 +139,44 @@
     &.extras .extrasWrapper {
       //
 
+      .smallCaps {
+        @apply text-[90%] tracking-wider uppercase;
+      }
+
       h1 {
-        font-size: clamp(.85rem, 1.2rem, 1.4rem) !important;
-        @apply pt-4 text-white font-semibold leading-normal capitalize antialiased font-modernSubhead;
+        @apply text-white font-modernCopy text-[1.2rem] leading-normal capitalize antialiased bg-transparent tracking-wider;
+      }
+
+      a {
+        //
+
+        &:hover {
+          // @apply border border-modern-ruby;
+
+          p {
+            @apply text-white underline;
+          }
+        }
+
+        img.portThumbs {
+          @apply border border-white;
+
+          &:hover {
+            @apply border border-modern-ruby;
+          }
+        }
+
+        p {
+          @apply text-white;
+
+          &:hover {
+            @apply underline border-base-white;
+          }
+        }
+
       }
     }
 
-    .smallCaps {
-      @apply text-[90%] tracking-wider uppercase;
-    }
   }
 
   body.groovy {
@@ -144,7 +198,7 @@
       //
 
       h1 {
-        @apply pt-4 text-black text-[1.5em] font-light capitalize font-groovyHead;
+        @apply pt-4 text-black text-[1.5em] font-semibold capitalize font-groovyHead bg-transparent mt-6;
       }
 
       p {
@@ -181,7 +235,7 @@
     }
 
     .contact {
-      @apply flex gap-x-4;
+      @apply flex gap-x-4 gap-y-4;
     }
 
     &.extras .extrasWrapper {
@@ -197,7 +251,7 @@
     }
 
     &.extras .contact {
-      @apply flex w-full m-auto gap-x-4;
+      @apply flex w-full m-auto gap-x-4 gap-y-4;
     }
   }
 
@@ -216,7 +270,7 @@
       //
 
       h1 {
-        @apply pt-4 font-corpCopy text-[#01487f] text-[1.5em] font-semibold capitalize;
+        @apply font-corpHead text-corp-blueDark text-[1.5em] bg-transparent font-semibold capitalize mt-0;
       }
 
       p {
@@ -272,41 +326,40 @@
       //
 
       h1 {
-        @apply font-punkHead pt-4 text-black text-[1.75em] font-light capitalize;
+        @apply mt-4 text-black text-[1.25rem] font-semibold leading-normal capitalize antialiased font-modernSubhead;
       }
 
       p {
         @apply font-punkCopy text-black;
       }
+
+      .smallCaps {
+        @apply text-[95%] tracking-wider uppercase;
+      }
+
+      a {
+        @apply bg-punk-red shadow;
+
+        &:hover p {
+          @apply text-yellow-200 shadow-black no-underline;
+        }
+
+        img.portThumbs {
+          //
+        }
+
+        p {
+          @apply text-white bg-punk-red py-[.15rem] px-[.25rem];
+
+          &:hover {
+            @apply border-base-white;
+          }
+        }
+
+      }
+
     }
 
-    .smallCaps {
-      @apply text-[95%] tracking-wider uppercase;
-    }
-  }
-
-  ::selection {
-    color: #000;
-    background: #fbd404;
-  }
-
-  ::-webkit-scrollbar {
-    height: 0.75rem;
-    width: 0.75rem;
-    overflow-x: hidden !important;
-    overflow-y: hidden !important;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom,
-        hsla(0, 0%, 79%, 0.226) 0%,
-        hsla(0, 0%, 79%, 0.514) 100%);
-    border-radius: 6px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 0px;
   }
 
 </style>

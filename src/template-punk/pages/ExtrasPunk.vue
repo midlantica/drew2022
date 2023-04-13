@@ -1,9 +1,9 @@
 <template>
-  <header>
+  <header class="text-base-ivory shadow-none">
     <Navvy />
-    <div class="flexxy">
-      <span class="headerCopy">{{ store.copy.uiuxDesigner }}/{{ store.copy.vizDesigner }}</span>
-      <a class="headerCopy resume rOne" :href="resumeUrl" target="_BLANK">PDF Resume</a>
+    <div class="w-full flex flex-wrap gap-x-6 gap-y-1 place-content-center justify-center m-0">
+      <span class="text-black font-punkHead bg-punk-magenta/70 py-1 px-3 leading-normal">{{ store.copy.uiuxDesigner }}/{{ store.copy.vizDesigner }}</span>
+      <a class="text-black font-punkHead bg-punk-magenta/70 py-1 px-3 leading-normal hover:bg-punk-red hover:text-white" :href="resumeUrl" target="_BLANK">PDF Resume</a>
     </div>
   </header>
 
@@ -11,7 +11,7 @@
     <ExtrasC />
   </transition>
 
-  <footer>
+  <footer class="text-base-ivory shadow-none">
     <!-- <Navvy /> -->
   </footer>
 </template>
@@ -27,24 +27,8 @@
 <style lang="scss" scoped>
   @import '../assets/css/punk-main.scss';
 
-  header,
-  footer {
-    @apply text-base-ivory shadow-none;
+  nav {
+    @apply mb-0;
   }
 
-  .backer {
-    @apply bg-base-ivory;
-  }
-
-  .flexxy {
-    @apply w-full flex gap-y-0 gap-x-8 place-content-center justify-center;
-  }
-
-  .headerCopy {
-    @apply text-black font-punkHead;
-
-    a {
-      @apply text-black;
-    }
-  }
 </style>

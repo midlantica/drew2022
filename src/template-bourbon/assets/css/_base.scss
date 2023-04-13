@@ -1,22 +1,7 @@
-// FONTS
-$font             :"Helvetica Neue", Helvetica, Arial, sans-serif !important;
-$font-head        :VeneerTwo, Helvetica, Arial, sans-serif !important;
-$font-subhead     :Veneer, Helvetica, Arial, sans-serif !important;
-$font-copy        :"AmericanTypewriterStd-Med", Helvetica, Times, serif !important;
-
-// ############################
-
 html, html a {
-  -webkit-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  // @apply box-border;
   @apply box-border;
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  background: #333;
-  margin: 0;
+  @apply m-0 bg-base-grey text-[1rem] font-bourbonCopy;
 }

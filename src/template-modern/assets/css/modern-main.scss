@@ -1,7 +1,7 @@
 @import '_typography.scss';
 
 html, html a {
-  @apply antialiased text-[.85rem] box-border;
+  @apply antialiased box-border;
 }
 
 html, body {

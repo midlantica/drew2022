@@ -21,7 +21,7 @@
   </nav>
 </template>
 
-<script setup>
+<script setup scoped>
   import { inject } from 'vue'
   import mastDrew from './masthead/mastDrew.vue'
   import mastHarper from './masthead/mastHarper.vue'
