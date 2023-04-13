@@ -68,13 +68,11 @@
   }
 
   p {
-    color: transparentize(black, 0.15);
-    @apply font-corpCopy font-normal border-l-2 border-dotted border-corp-paleBlue ml-[.2rem] text-justify pl-[1.2rem] leading-[2.8rem] text-[1.1rem] tracking-normal hyphens-auto;
+    @apply text-black/10 font-corpCopy font-normal border-l-2 border-dotted border-corp-paleBlue ml-[.2rem] text-justify pl-[1.2rem] leading-[2.8rem] text-[1.1rem] tracking-normal hyphens-auto;
 
     @media (max-width: $breakThou) {
       columns: 2 200px;
-      column-rule: 2px dotted #7cc3fa;
-      @apply gap-x-12 text-justify hyphens-auto;
+      @apply gap-x-12 text-justify hyphens-auto rule-w-[2px] rule-style-dotted rule-color-[#7cc3fa];
     }
 
     @media (max-width: $breakOne) {

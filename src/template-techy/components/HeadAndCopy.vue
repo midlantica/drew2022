@@ -38,7 +38,7 @@
     @apply text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-0 mb-4 normal-case;
 
     @media (min-width: $breakThou) {
-      max-width: 26ch;
+      @apply max-w-[26ch];
     }
 
     @media (max-width: $breakThou) {
@@ -59,8 +59,7 @@
   }
 
   p {
-    @apply text-[1.2rem] font-techyCopy leading-[2.9rem] tracking-[.06em];
-    color: transparentize(#423ba0, .2);
+    @apply text-[1.2rem] font-techyCopy leading-[2.9rem] tracking-[.06em] text-techy-blueTech;
 
     &.smallCaps {
       @apply text-[80%] tracking-wider uppercase;
@@ -73,8 +72,8 @@
 
     @media (max-width: $breakThou) {
       columns: 2 200px;
-      column-rule: 2px dotted transparentize(#423ba0, .5);
-      @apply text-[1.2rem] leading-[2.1em] text-justify tracking-wider gap-x-12 hyphens-auto;
+      // column-rule: 2px dotted transparentize(#423ba0, .5);
+      @apply text-[1.2rem] leading-[2.1em] text-justify tracking-wider gap-x-12 hyphens-auto rule-w-[2px] rule-style-dotted rule-color-[#423ba08b];
     }
 
     @media (max-width: $breakOne) {

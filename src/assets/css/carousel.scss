@@ -1,20 +1,14 @@
 .vueperslides__arrow {
   stroke-linejoin: round;
-  // filter:
-  // drop-shadow(-1px -1px 1px hsla(0, 0%, 100%, 0.5))
-  // drop-shadow(1px -1px 1px hsla(0, 0%, 100%, 0.5))
-  // drop-shadow(1px 1px 1px hsla(0, 0%, 100%, 0.5))
-  // drop-shadow(-1px 1px 1px hsla(0, 0%, 100%, 0.5));
   @apply text-base-grey drop-shadow-[-1px_1px_1px_hsla(0,0%,100%,0.5)];
 
   &:hover {
-    stroke: rgb(255, 255, 255);
-    stroke-width: 2px;
+    @apply stroke-2 stroke-white;;
   }
 }
 
 .vueperslides__arrow svg {
-  width: 3em;
+  @apply w-12;
 
   &:hover {
     //
@@ -23,56 +17,30 @@
 }
 
 .vueperslides__arrow svg:hover path {
-  stroke: rgb(211, 0, 0);
-  stroke-width: 2px;
+  @apply stroke-2 stroke-[#d30000];
 
   &:hover {
-    stroke-width: 2px;
+    // @apply stroke-2;
   }
 }
 
 .vueperslides__progress {
-  color: hsla(98, 100%, 37%, 0.5);
-  border: 1px solid hsla(0, 0%, 100%, 0.25);
-  top: calc(100% - 4px);
-  height: 4px;
+  @apply text-[hsla(98,100%,37%,0.5)] top-[calc(100%-4px)] h-1 border border-solid border-[hsla(0,0%,100%,0.25)];
 }
 
 .vueperslides__fractions {
-  position: absolute;
-  top: initial;
-  left: initial;
-  bottom: .25rem !important;
-  right: .25rem !important;
-  z-index: 2;
-  padding: 0.15em 0.5em;
-  border: 1px solid hsl(0deg 0% 100% / 27%);
-  border-radius: 0.4em;
-  background: hsl(0deg 0% 32% / 32%);
-  color: hsl(0deg 0% 100%);
-  font-family: Helvetica, Arial, sans-serif !important;
+  @apply font-sans text-white/80 bg-base-grey/30 rounded-lg border border-solid border-base-white/30 py-1 px-2 z-10 right-1 bottom-1 top-auto left-auto absolute inline-block;
 }
 
 .fullScreen {
-  cursor: pointer;
+  @apply cursor-pointer;
 }
 
 .carouselArrow {
-  font-size: 0.7em;
-  color: #333;
-  border: none;
-  border-radius: 2px;
-  border-left-width: 10px;
-  background: transparentize(white, 0.95);
-  padding: 0.2rem 0.5rem 0.16rem 0.4rem;
-  margin: 0rem 0 0 0em;
-  font-family: Helvetica, Arial, sans-serif;
-  cursor: pointer;
-  position: absolute;
-  box-shadow: 2px 2px 2px hsla(0, 0%, 100%, 0.5);
+  @apply text-[.7rem] text-base-grey border-none rounded-sm border-l-[10px] bg-white/90 pt-[.2rem] pr-2 pb-[.16rem] pl-[.4rem] m-0 font-sans cursor-pointer absolute drop-shadow-[2px_2px_2px_hsla(0,0%,100%,0.5)];
 
   &:hover {
-    background: transparentize(black, .90);
+    @apply bg-black/90;
   }
 }
 
@@ -82,12 +50,10 @@
   &:hover {
     //
     .brickBack {
-      fill: hsla(0, 100%, 57%, .3);
-      transition: fill 10s ease-out;
+      @apply fill-[hsl(6.61deg,100%,80%)] transition-all duration-100 ease-out;
     }
     .brickCircles {
-      fill: hsla(0, 100%, 57%, .3);
-      transition: fill 10s ease-out;
+      @apply fill-[hsl(6.61deg,100%,80%)] transition-all duration-100 ease-out;
     }
   }
 }
@@ -97,24 +63,22 @@ body.modern .box {
   &:hover {
     //
     .brickBack {
-      fill: #D71D5B;
-      transition: fill 10s ease-out;
+      @apply fill-[#D71D5B] transition-all duration-100 ease-out;
     }
     .brickCircles {
-      fill: #D71D5B;
-      transition: fill 10s ease-out;
+      @apply fill-[#D71D5B] transition-all duration-100 ease-out;
     }
   }
 
   svg {
-    width: 88px !important;
+    @apply w-[88px];
   }
 
   svg path,
   svg polygon,
   svg rect,
   svg polyline {
-    stroke: white;
+    @apply stroke-white;
   }
 
 }
@@ -125,12 +89,10 @@ body.corp .box {
   &:hover {
     //
     .brickBack {
-      fill: #cff1fc;
-      transition: fill 10s ease-out;
+      @apply fill-[#cff1fc] transition-all duration-100 ease-out;
     }
     .brickCircles {
-      fill: #cff1fc;
-      transition: fill 10s ease-out;
+      @apply fill-[#cff1fc] transition-all duration-100 ease-out;
     }
   }
 }
@@ -141,12 +103,10 @@ body.techy .box {
   &:hover {
     //
     .brickBack {
-      fill: hsla(48, 100%, 70%, 0.8);
-      transition: fill 10s ease-out;
+      @apply fill-[hsla(48,100%,70%,0.8)] transition-all duration-100 ease-out;
     }
     .brickCircles {
-      fill: hsla(48, 100%, 70%, 0.8);
-      transition: fill 10s ease-out;
+      @apply fill-[hsla(48,100%,70%,0.8)] transition-all duration-100 ease-out;
     }
   }
 }
@@ -157,12 +117,10 @@ body.punk .box {
   &:hover {
     //
     .brickBack {
-      fill: hsla(59, 100%, 50%, 0.85);
-      transition: fill 10s ease-out;
+      @apply fill-[hsla(59,100%,50%,.85)] transition-all duration-100 ease-out;
     }
     .brickCircles {
-      fill: hsla(59, 100%, 50%, 0.85);
-      transition: fill 10s ease-out;
+      @apply fill-[hsla(59,100%,50%,.85)] transition-all duration-100 ease-out;
     }
   }
 }
@@ -173,11 +131,10 @@ body.groovy .box {
   &:hover {
     //
     .brickBack {
-      fill: hsla(180, 100%, 50%, 0.25);
-      transition: fill 10s ease-out;
+      @apply fill-[hsla(180,100%,50%,.25)] transition-all duration-100 ease-out;
     }
     .brickCircles {
-      fill: hsla(180, 100%, 50%, 0.25);
+      @apply fill-[hsla(180,100%,50%,.25)] transition-all duration-100 ease-out;
     }
   }
 }

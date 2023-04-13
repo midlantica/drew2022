@@ -81,8 +81,7 @@
 
     @media (max-width: $breakThou) {
       columns: 2 20ch;
-      column-rule: 1px solid transparentize(#c02c19, .75);
-      @apply leading-9 gap-x-12 text-justify hyphens-auto;
+      @apply leading-9 gap-x-12 text-justify hyphens-auto rule-w-[1px] rule-style-solid rule-color-[hsla(7,77%,43%,50%)];
     }
 
     @media (max-width: $breakOne) {
@@ -90,8 +89,8 @@
     }
 
     @media (max-width: 670px) {
-      @apply text-justify hyphens-auto;
       columns: initial;
+      @apply text-justify hyphens-auto;
     }
 
     @media (max-width: $breakTwo) {
