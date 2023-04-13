@@ -2,12 +2,6 @@ $mortar: .25rem;
 
 .vueperslides__arrow {
   color: rgb(67, 67, 67);
-  // text-shadow: 2px 2px 2px red;
-  // >>>>
-  // fill: none;
-  // stroke: red;
-  // stroke-width: 10px;
-  // stroke-linejoin: round;
   stroke-linejoin: round;
   filter:
     drop-shadow(-1px -1px 1px hsla(0, 0%, 100%, 0.5))
@@ -22,19 +16,10 @@ $mortar: .25rem;
 }
 
 .vueperslides__arrow svg {
-  // vertical-align: middle;
-  // stroke: currentColor;
-  // fill: none;
   width: 3em;
-  // padding: 1em;
-  // -webkit-box-sizing: border-box;
-  // box-sizing: border-box;
-  // stroke: black;
-  // stroke-width: 1px;
 
   &:hover {
-    // color: white !important;
-    // stroke-width: 2px;
+    //
   }
 
 }
@@ -52,10 +37,8 @@ $mortar: .25rem;
 .vueperslides__progress {
   color: hsla(98, 100%, 37%, 0.5);
   border: 1px solid hsla(0, 0%, 100%, 0.25);
-  // top: initial;
   top: calc(100% - 4px);
   height: 4px;
-  // border: 1px solid magenta;
 }
 
 .vueperslides__fractions {

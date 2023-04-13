@@ -2,7 +2,6 @@
   -webkit-animation: jelloHorizontal 0.9s both;
   animation: jelloHorizontal 0.9s both;
   animation-delay: 2s;
-  // animation-play-state: running;
 }
 
 
@@ -10,7 +9,6 @@
   -webkit-animation: jelloHorizontal 0.9s both !important;
   animation: jelloHorizontal 0.9s both !important;
   animation-delay: initial !important;
-  // animation-play-state: running;
 }
 
 @keyframes jelloHorizontal {

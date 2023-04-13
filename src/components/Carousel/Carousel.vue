@@ -393,8 +393,7 @@
     //
 
     .projectBox {
-      @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)];
-      @apply rounded-none;
+      @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)] rounded-none;
 
       @media (max-width: $breakThou) {
         @apply min-h-min;
@@ -499,8 +498,8 @@
   }
 
   body.punk {
-
     //
+
     .projectBox {
       @apply rounded-none bg-white/70;
       @apply shadow-[0px_1px_1px_0px_hsl(0,_0%,_0%,_50%)];
