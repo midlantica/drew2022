@@ -1,12 +1,27 @@
-// SETTINGS
-// @import '_colors.scss';
-
-// BASE
-// @import '_base.scss';
-
-// TYPOGRAPHY
-@import '_typography.scss';
-
 body {
   @apply font-techyCopy m-0 text-[1rem] bg-base-grey;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply font-techyHead text-base-accentRed leading-[1.1em] font-normal text-left p-0 tracking-[.025em] uppercase mt-3 mx-0 mb-1;
+}
+
+h2 {
+  @apply capitalize text-[2.25em] font-techyHead text-base-accentRed;
+}
+
+h3 {
+  @apply text-[1.7em] text-techy-blueTech;
+}
+
+h4 {
+  @apply text-[1.5em] tracking-[.04em];
+}
+
+h5 {
+  @apply text-[1rem];
+}
+
+p {
+  @apply font-techyCopy text-[1rem] leading-[1.7rem] font-normal text-left m-0 p-0;
 }

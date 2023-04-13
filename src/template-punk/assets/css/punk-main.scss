@@ -1,12 +1,27 @@
-// SETTINGS
-@import '../../../assets/css/_colors.scss';
-
-// BASE
-// @import '_base.scss';
-
-// TYPOGRAPHY
-@import '_typography.scss';
-
 body {
   @apply font-punkCopy m-0 text-[1rem];
+}
+
+h1, h2, h3, h4, h5 {
+  @apply font-punkHead text-base-accentRed leading-[1.1em] font-normal text-left mt-3 mr-0 mb-1 ml-0 p-0 tracking-[.025em] uppercase;
+}
+
+h2 {
+  @apply text-black capitalize font-punkSubhead text-[2.25em];
+}
+
+h3 {
+  @apply text-[1.7em];
+}
+
+h4 {
+  @apply text-[1.5em] tracking-[.04em];
+}
+
+h5 {
+  @apply text-[1rem];
+}
+
+p {
+  @apply font-punkCopy text-[1rem] leading-[1.7rem] font-normal text-left m-0 p-0;
 }

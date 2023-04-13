@@ -6,7 +6,6 @@
 
 // SETTINGS
 @import '../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss';
-@import '_colors';
 @import '_drewShake';
 @import 'transitions';
 
@@ -50,5 +49,5 @@ $breakMinMax: 630px 760px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply rounded-none bg-[rgba(255,255,255,0.1)] ;
+  @apply rounded-none bg-[hsla(0,0%,100%,0)] ;
 }

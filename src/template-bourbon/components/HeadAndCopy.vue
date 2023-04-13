@@ -81,7 +81,7 @@
 
     @media (max-width: $breakThou) {
       columns: 2 20ch;
-      column-rule: 1px solid transparentize($accent-red, .75);
+      column-rule: 1px solid transparentize(#c02c19, .75);
       @apply leading-9 gap-x-12 text-justify hyphens-auto;
     }
 

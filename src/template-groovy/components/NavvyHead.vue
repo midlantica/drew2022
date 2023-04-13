@@ -45,17 +45,17 @@
     @apply w-[210px] h-[210px] rounded-[10em] z-10 block mr-[-2.75em] mb-[-5.3em] shadow-[8px_6px_0px_0px_hsl(0,_0%,_0%,_25%)] duration-1000 ease-out clip-path-polygon-[21%_0,_100%_0,_110%_50%,_100%_100%,_21%_110%];
     background-image: radial-gradient(
       /* 0 - 25% */
-      $groovy-aqua 0%,
-      $groovy-aqua 35%,
+      #99f1ec 0%,
+      #99f1ec 35%,
       /* 25% - 50% */
-      $groovy-yellow 35%,
-      $groovy-yellow 47%,
+      #ffdd4b 35%,
+      #ffdd4b 47%,
       /* 50% - 75% */
-      $groovy-orange 47%,
-      $groovy-orange 59%,
+      #ff9f00 47%,
+      #ff9f00 59%,
       /* 75% - 100% */
-      $groovy-red 59%,
-      $groovy-red 100%);
+      #ff1a22 59%,
+      #ff1a22 100%);
 
       @media (max-width: $breakFour) {
         @apply w-[160px] h-[160px] top-[-1.4em] left-[-2.9em];
