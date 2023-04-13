@@ -16,7 +16,8 @@ module.exports = {
     './src/template-punk/pages/**/*.vue',
     './src/template-techy/components/**/*.vue',
     './src/template-techy/pages/**/*.vue',
-    './src/**/*.vue'
+    './src/**/*.vue',
+    './public/**/*.html'
   ],
   theme: {
     listStyleType: {

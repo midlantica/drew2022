@@ -120,7 +120,7 @@
     }
 
     h2 {
-      @apply text-[1.675rem] tracking-[0.075rem] leading-[1.55rem] antialiased mb-[.15rem] drop-shadow-[3px_0px_3px_rgba(0,0,0,0.1)];
+      @apply font-bourbonHead text-[1.675rem] tracking-[0.075rem] leading-[1.55rem] antialiased mb-[.15rem] drop-shadow-[3px_0px_3px_rgba(0,0,0,0.1)];
 
       &:nth-child(2) {
         @apply text-[1.51rem] mb-[.1em];

@@ -6,3 +6,8 @@
 
 // TYPOGRAPHY
 @import '_typography.scss';
+
+
+body {
+  @apply m-0 bg-base-grey text-[1rem] font-groovyCopy;
+}
