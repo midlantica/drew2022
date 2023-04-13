@@ -86,7 +86,7 @@
   }
 
   .punk .about {
-    //
+    @apply mb-4;
 
     p {
       @apply my-1 mx-auto;

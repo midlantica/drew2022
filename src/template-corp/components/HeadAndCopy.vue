@@ -68,7 +68,7 @@
   }
 
   p {
-    @apply text-black/10 font-corpCopy font-normal border-l-2 border-dotted border-corp-paleBlue ml-[.2rem] text-justify pl-[1.2rem] leading-[2.8rem] text-[1.1rem] tracking-normal hyphens-auto;
+    @apply text-corp-blueDark/90 font-corpCopy font-normal border-l-2 border-dotted border-corp-paleBlue ml-[.2rem] text-justify pl-[1.2rem] leading-[2.8rem] text-[1.1rem] tracking-normal hyphens-auto;
 
     @media (max-width: $breakThou) {
       columns: 2 200px;

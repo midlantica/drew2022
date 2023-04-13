@@ -34,7 +34,16 @@ $breakOne: 840px;
 $breakTwo: 630px;
 $breakThree: 430px;
 $breakFour: 320px;
-$breakMinMax: 630px 760px;
+// $breakMinMax: 630px 760px;
+
+:root {
+  --breakThou: 1024px;
+  --breakOne: 840px;
+  --breakTwo: 630px;
+  --breakThree: 430px;
+  --breakFour: 320px;
+  // --breakMinMax: 630px 760px;
+}
 
 ::selection {
   @apply text-black bg-[#fbd404];

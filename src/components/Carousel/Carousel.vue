@@ -161,7 +161,7 @@
         &.Uiux {
           //
 
-          @media (max-width: $breakThou) {
+          @media (max-width: var(--breakThou)) {
             //
           }
         }
@@ -169,7 +169,7 @@
         &.Mobile {
           //
 
-          @media (max-width: $breakThou) {
+          @media (max-width: var(--breakThou)) {
             //
           }
         }
@@ -208,19 +208,19 @@
     .projectBox {
       @apply bg-transparent;
 
-      @media (max-width: $breakThou) {
+      @media (max-width: var(--breakThou)) {
         //
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: var(--breakOne)) {
         //
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         //
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: var(--breakThree)) {
         //
       }
 
@@ -253,7 +253,7 @@
         .box {
           @apply h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
 
-          @media (max-width: $breakThou) {
+          @media (max-width: var(--breakThou)) {
             @apply min-h-min;
           }
 
@@ -307,19 +307,19 @@
     .projectBox {
       @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)];
 
-      @media (max-width: $breakThou) {
+      @media (max-width: var(--breakThou)) {
         //
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: var(--breakOne)) {
         //
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         //
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: var(--breakThree)) {
         //
       }
 
@@ -356,19 +356,19 @@
     .projectBox {
       @apply shadow-[0px_6px_0px_0px_hsl(0,_0%,_0%,_25%)];
 
-      @media (max-width: $breakThou) {
+      @media (max-width: var(--breakThou)) {
         @apply min-h-min;
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: var(--breakOne)) {
         //
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         //
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: var(--breakThree)) {
         //
       }
 
@@ -397,19 +397,19 @@
     .projectBox {
       @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)] rounded-none;
 
-      @media (max-width: $breakThou) {
+      @media (max-width: var(--breakThou)) {
         @apply min-h-min;
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: var(--breakOne)) {
         //
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         //
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: var(--breakThree)) {
         //
       }
 
@@ -452,19 +452,19 @@
       @apply bg-base-offWhite;
       @apply shadow-[0px_1px_1px_0px_hsl(0,_0%,_0%,_50%)];
 
-      @media (max-width: $breakThou) {
+      @media (max-width: var(--breakThou)) {
         @apply min-h-min;
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: var(--breakOne)) {
         //
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         // min-height: 386px;
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: var(--breakThree)) {
         //
       }
 
@@ -506,19 +506,19 @@
       @apply rounded-none bg-white/70;
       @apply shadow-[0px_1px_1px_0px_hsl(0,_0%,_0%,_50%)];
 
-      @media (max-width: $breakThou) {
+      @media (max-width: var(--breakThou)) {
         @apply min-h-min;
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: var(--breakOne)) {
         //
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         //
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: var(--breakThree)) {
         //
       }
 
@@ -574,27 +574,27 @@
     //
 
     &:nth-of-type(1) {
-      animation: carouselFader ($carouselFade * 0.51 + s);
+      animation: carouselFader (calc(var(--carouselFade) * 0.51) + s);
     }
 
     &:nth-of-type(2) {
-      animation: carouselFader ($carouselFade * 0.51.2 + s);
+      animation: carouselFader (calc(var(--carouselFade) * 0.51).2 + s);
     }
 
     &:nth-of-type(3) {
-      animation: carouselFader ($carouselFade * 0.51.3 + s);
+      animation: carouselFader (calc(var(--carouselFade) * 0.51).3 + s);
     }
 
     &:nth-of-type(4) {
-      animation: carouselFader ($carouselFade * 0.51.4 + s);
+      animation: carouselFader (calc(var(--carouselFade) * 0.51).4 + s);
     }
 
     &:nth-of-type(5) {
-      animation: carouselFader ($carouselFade * 0.51.5 + s);
+      animation: carouselFader (calc(var(--carouselFade) * 0.51).5 + s);
     }
 
     &:nth-of-type(6) {
-      animation: carouselFader ($carouselFade * 0.51.6 + s);
+      animation: carouselFader (calc(var(--carouselFade) * 0.51).6 + s);
     }
   }
 
