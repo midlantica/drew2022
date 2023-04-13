@@ -11,33 +11,22 @@
 @import 'transitions';
 
 * {
-  box-sizing: border-box;
-
-  &::before,
-  &::after {
-    box-sizing: border-box;
-  }
+  @apply box-border;
 }
 
 html,
 html a {
-  -webkit-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-  font-size: 1em;
+  //
 }
 
 body {
-  margin: 0;
+  @apply m-0;
 }
 
 img,
 video,
 audio {
-  max-width: 100%;
-  height: auto;
+  @apply max-w-full h-auto;
 }
 
 // BREAKPOINTS
@@ -49,25 +38,17 @@ $breakFour: 320px;
 $breakMinMax: 630px 760px;
 
 ::selection {
-  color: #000;
-  background: #fbd404;
+  @apply text-black bg-[#fbd404];
 }
 
 ::-webkit-scrollbar {
-  height: 0.75rem;
-  width: 0.75rem;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
+  @apply h-3 w-3 overflow-x-hidden overflow-y-hidden;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom,
-    hsla(0, 0%, 79%, 0.226) 0%,
-    hsla(0, 0%, 79%, 0.514) 100%);
-  border-radius: 6px;
+  @apply rounded-md bg-gradient-to-b from-[hsla(0,0%,79%,0.226)] to-[hsla(0,0%,79%,0.514)];
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 0px;
+  @apply rounded-none bg-[rgba(255,255,255,0.1)] ;
 }

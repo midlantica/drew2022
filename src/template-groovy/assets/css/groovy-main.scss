@@ -1,12 +1,4 @@
-// SETTINGS
-// @import '_colors.scss';
-
-// BASE
-@import '_base.scss';
-
-// TYPOGRAPHY
 @import '_typography.scss';
-
 
 body {
   @apply m-0 bg-base-grey text-[1rem] font-groovyCopy;

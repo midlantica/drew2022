@@ -39,7 +39,6 @@
   }
 
   h1 {
-    // max-width: 28ch;
     @apply max-w-[28ch] font-corpHead text-corp-blueDark normal-case p-0 leading-[2rem] transition duration-[.25s] ease-in tracking-[0.01rem] w-full font-semibold text-[1.3rem] mt-0 mx-0 mb-2;
 
     @media (min-width: $breakThou) {

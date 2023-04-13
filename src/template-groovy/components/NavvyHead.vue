@@ -11,7 +11,7 @@
         <mastDrew class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
         <mastHarper class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
       </div>
-      <h2 class="min-[375px]:text-[.8rem] sm:text-[1.49rem] text-center font-normal text-base-ivory lowercase leading-normal tracking-[.025em] my-1 w-full mx-auto ease-out duration-300">
+      <h2 class="min-[375px]:text-[.8rem] sm:text-[1.45rem] text-center font-normal text-base-ivory lowercase leading-normal tracking-[.025em] my-1 w-full mx-auto ease-out duration-300">
         {{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}
       </h2>
 
