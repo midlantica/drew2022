@@ -77,7 +77,7 @@
       //
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply h-auto;
     }
   }
@@ -88,7 +88,7 @@
     filter: hue-rotate(210deg) grayscale(50%);
     @apply bg-[url('/img/drew_mug_red.png')] inline-block w-[80px] h-[80px] bg-no-repeat bg-corp-accentRed rounded-[1px] shadow-[0px_0px_1px_1px_#00000026];
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       background-position: -40px -50px !important;
       background-size: 145% !important;
     }
@@ -105,7 +105,7 @@
       //
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
 
@@ -125,7 +125,7 @@
       //
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
 
@@ -141,7 +141,7 @@
       @apply self-center;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply h-[3ch];
     }
   }
@@ -162,7 +162,7 @@
       @apply ml-0 flex-row mt-4;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply mt-[.4em] flex-row;
     }
 
@@ -198,7 +198,7 @@
         }
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         //
       }
 

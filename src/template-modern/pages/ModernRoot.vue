@@ -56,7 +56,7 @@
       @apply w-[90%] m-0;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
   }
@@ -74,7 +74,7 @@
       //
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
   }
@@ -95,7 +95,7 @@
       grid-row: 2;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       grid-row: 2;
     }
   }

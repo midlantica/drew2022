@@ -29,7 +29,7 @@
       @apply mt-0 mx-4 mb-4;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply mt-0 mx-4 mb-4;
     }
 
@@ -53,7 +53,7 @@
       max-width: initial;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       max-width: 28ch;
     }
 
@@ -85,7 +85,7 @@
       @apply border-l-2 border-dotted border-corp-paleBlue mr-2 pl-[1.3rem];
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
   }

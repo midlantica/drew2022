@@ -54,7 +54,7 @@
         @apply text-[1.15rem] leading-7;
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply text-[1rem] leading-6;
       }
 

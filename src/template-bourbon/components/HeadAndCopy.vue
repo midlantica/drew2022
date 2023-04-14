@@ -28,7 +28,7 @@
       @apply px-4;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply px-2;
     }
 
@@ -61,7 +61,7 @@
         //
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply max-w-[30ch] text-[1.5rem];
       }
 
@@ -93,7 +93,7 @@
       @apply text-justify hyphens-auto;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply text-justify hyphens-auto;
     }
   }

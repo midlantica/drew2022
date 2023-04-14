@@ -70,7 +70,7 @@
       //
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
   }
@@ -90,7 +90,7 @@
       grid-row: 1;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       grid-column: 1 / 3;
       grid-row: 1;
     }
@@ -110,7 +110,7 @@
       grid-row: 3;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       grid-column: 1 / 3;
       grid-row: 3;
     }
@@ -130,7 +130,7 @@
       grid-row: 4;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       grid-column: 1 / 3;
       grid-row: 4;
     }
@@ -158,7 +158,7 @@
       grid-row: 5;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       grid-column: 1 / 3;
       grid-row: 5;
     }

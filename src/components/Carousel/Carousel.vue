@@ -265,7 +265,7 @@
             }
 
             svg {
-              @apply relative top-[-5px] ease-out;
+              @apply stroke-[1px] stroke-white relative top-[-5px] ease-out;
 
               &:hover {
                 @apply opacity-[.8] relative ease-out stroke-modern-accentRed;
@@ -282,18 +282,34 @@
           }
 
           .iconSVG {
-            @apply relative ease-out w-auto;
+            @apply relative ease-out w-auto stroke-[1px] stroke-white ;
             // width: initial !important;
+            // stroke: red !important;
+            // stroke-width: 1px !important;
+            // fill: orange !important;
 
             &:hover {
-              @apply relative ease-out top-[-5px];
+              @apply ease-out top-[-5px] stroke-[1px] stroke-white;
+
+              path,
+              polygon,
+              rect,
+              polyline {
+                @apply stroke-white top-[-5px] ease-out stroke-[1px] shadow-sm shadow-white;
+                // stroke: red !important;
+                // stroke-width: 2px !important;
+                // fill: orange !important;
+              }
             }
 
-            svg path,
-            svg polygon,
-            svg rect,
-            svg polyline {
-              @apply stroke-white top-[-5px] ease-out;
+            path,
+            polygon,
+            rect,
+            polyline {
+              @apply stroke-white top-[-5px] ease-out stroke-[1px];
+              // stroke: red !important;
+              // stroke-width: 2px !important;
+              // fill: orange !important;
             }
           }
         }
@@ -571,7 +587,7 @@
   }
 
   .miniGallery div {
-    //
+    animation: carouselFader (calc(var(--carouselFade) * 0.5) + s);
 
     &:nth-of-type(1) {
       animation: carouselFader (calc(var(--carouselFade) * 0.51) + s);
@@ -599,18 +615,29 @@
   }
 
   .iconSVG {
-    @apply relative ease-out duration-200 w-auto;
+    @apply stroke-[1px] stroke-white relative ease-out duration-200 w-auto;
+    // stroke: red;
+    // stroke-width: 2px;
+    // fill: orange;
 
     &:hover {
-      @apply relative ease-out duration-200;
+      @apply stroke-[1px] stroke-white relative ease-out duration-200;
     }
 
-    svg path,
-    svg polygon,
-    svg rect,
-    svg polyline {
-      @apply stroke-white ease-out duration-200;
+    g {
+      @apply stroke-[1px] stroke-white ease-out duration-200;
+
+      svg path,
+      svg polygon,
+      svg rect,
+      svg polyline {
+        @apply stroke-[1px] stroke-white ease-out duration-200;
+        // stroke: red;
+        // stroke-width: 2px;
+        // fill: orange;
+      }
     }
+
   }
 
   .carouselArrow {

@@ -62,7 +62,7 @@
       //
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
 
@@ -82,7 +82,7 @@
           //
         }
 
-        @media (max-width: $breakTwo) {
+        @media (max-width: var(--breakTwo)) {
           //
         }
 
@@ -105,7 +105,7 @@
             @apply w-[92px] h-[109px] mt-0 mr-2 mb-0 ml-0 justify-self-end;
           }
 
-          @media (max-width: $breakTwo) {
+          @media (max-width: var(--breakTwo)) {
             @apply w-[64px] h-[75px];
           }
 
@@ -130,7 +130,7 @@
             @apply h-[14vw];
           }
 
-          @media (max-width: $breakTwo) {
+          @media (max-width: var(--breakTwo)) {
             @apply h-[14vw];
           }
 
@@ -154,7 +154,7 @@
             //
           }
 
-          @media (max-width: $breakTwo) {
+          @media (max-width: var(--breakTwo)) {
             //
           }
 
@@ -179,7 +179,7 @@
             //
           }
 
-          @media (max-width: $breakTwo) {
+          @media (max-width: var(--breakTwo)) {
             @apply ml-0 mt-0;
           }
 
@@ -202,7 +202,7 @@
       @apply my-0 mx-0 mb-4 text-center;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
 
       &:nth-child(1) {
@@ -249,7 +249,7 @@
         }
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply text-[5.8vw];
       }
     }
@@ -271,7 +271,7 @@
         @apply w-full;
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply w-full;
       }
 
@@ -310,7 +310,7 @@
           }
         }
 
-        @media (max-width: $breakTwo) {
+        @media (max-width: var(--breakTwo)) {
           @apply tracking-[.09em] ;
 
           &:nth-child(1) {

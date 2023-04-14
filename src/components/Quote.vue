@@ -262,7 +262,7 @@
         @apply text-[1.2em];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply text-[1em];
       }
 

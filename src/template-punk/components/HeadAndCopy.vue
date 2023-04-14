@@ -41,7 +41,7 @@
       p {
         @apply font-punkCopy text-base-black bg-white text-[0.9em] font-medium not-italic tracking-[.02em] -hue-rotate-[1.25deg] lowercase py-1 px-2;
 
-        @media (max-width: $breakTwo) {
+        @media (max-width: var(--breakTwo)) {
           //
         }
 

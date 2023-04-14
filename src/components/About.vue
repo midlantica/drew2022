@@ -111,7 +111,7 @@
         @apply leading-7;
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply leading-6;
       }
     }

@@ -73,7 +73,7 @@
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply w-[99.8%];
       }
 
@@ -102,7 +102,7 @@
         @apply w-[99.8%] text-[1.85vw];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply w-[99.8%] text-[2.5vw];
       }
 
@@ -138,7 +138,7 @@
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply w-[99.8%];
       }
 
@@ -225,7 +225,7 @@
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply w-[99.8%];
       }
 
@@ -269,7 +269,7 @@
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply w-[99.8%];
       }
 
@@ -337,7 +337,7 @@
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply w-[99.8%];
       }
 
@@ -381,7 +381,7 @@
         @apply w-[99.8%] bg-[length:_102%_640%,130%_90%] bg-[center_center];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply w-[99.8%] bg-[length:_102%_600%,120%_100%] bg-[center_center,-3em_11em];
       }
 
@@ -401,7 +401,7 @@
         @apply text-[1.85vw];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply text-[2.5vw];
       }
 

@@ -73,7 +73,7 @@
       //
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
 
@@ -85,7 +85,7 @@
   section.jobDesc {
     @apply transition duration-[.25s] ease-in lowercase;
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply text-center self-center;
 
       &:nth-child(1) {
@@ -108,7 +108,7 @@
     h2 {
       @apply text-[1.15rem] tracking-[-0.01em] leading-[1.5em] font-normal text-[hsla(0,0%,100%,0.85)] text-center lowercase antialiased drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)];
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         //
       }
 
@@ -125,7 +125,7 @@
       //
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
 
@@ -148,7 +148,7 @@
         //
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         //
       }
 

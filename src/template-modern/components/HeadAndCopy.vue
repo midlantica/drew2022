@@ -41,7 +41,7 @@
         @apply w-auto;
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply max-w-[30ch];
       }
 

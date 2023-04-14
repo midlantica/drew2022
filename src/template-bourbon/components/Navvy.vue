@@ -78,7 +78,7 @@
       @apply grow-0 text-right;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply grow-0 text-center;
     }
 
@@ -95,7 +95,7 @@
       @apply grow-0 ml-2 mt-2;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply grow-0 text-center self-center ml-0 mt-2;
 
       &:nth-child(1) {
@@ -126,7 +126,7 @@
         @apply text-[1.51rem] mb-[.1em];
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply inline-block text-[1.775em];
 
         &:nth-child(2) {
@@ -151,7 +151,7 @@
       @apply w-full flex flex-row flex-wrap items-center justify-center gap-4;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply mt-[0.5em] flex-row;
     }
 
@@ -182,7 +182,7 @@
         }
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         @apply text-[1.05rem] tracking-[.09em];
       }
 

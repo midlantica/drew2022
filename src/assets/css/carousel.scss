@@ -32,10 +32,6 @@
   @apply font-sans text-white/80 bg-base-grey/30 rounded-lg border border-solid border-base-white/30 py-1 px-2 z-10 right-1 bottom-1 top-auto left-auto absolute inline-block;
 }
 
-.fullScreen {
-  @apply cursor-pointer;
-}
-
 .carouselArrow {
   @apply text-[.7rem] text-base-grey border-none rounded-sm border-l-[10px] bg-white/90 pt-[.2rem] pr-2 pb-[.16rem] pl-[.4rem] m-0 font-sans cursor-pointer absolute drop-shadow-[2px_2px_2px_hsla(0,0%,100%,0.5)];
 
@@ -47,15 +43,24 @@
 .box {
   //
 
+  g {
+    stroke-width: 1px;
+    stroke: red;
+    fill: red;
+  }
+
   &:hover {
     //
     .brickBack {
-      @apply fill-[hsl(6.61deg,100%,80%)] transition-all duration-100 ease-out;
+      @apply stroke-[1px] fill-[hsl(6.61deg,100%,80%)] transition-all duration-100 ease-out;
     }
     .brickCircles {
-      @apply fill-[hsl(6.61deg,100%,80%)] transition-all duration-100 ease-out;
+      @apply stroke-[1px] fill-[hsl(6.61deg,100%,80%)] transition-all duration-100 ease-out;
     }
   }
+
+
+
 }
 
 body.modern .box {
@@ -63,22 +68,22 @@ body.modern .box {
   &:hover {
     //
     .brickBack {
-      @apply fill-[#D71D5B] transition-all duration-100 ease-out;
+      @apply stroke-[1px] fill-[#D71D5B] transition-all duration-100 ease-out;
     }
     .brickCircles {
-      @apply fill-[#D71D5B] transition-all duration-100 ease-out;
+      @apply stroke-[1px] fill-[#D71D5B] transition-all duration-100 ease-out;
     }
   }
 
   svg {
-    @apply w-[88px];
+    @apply stroke-[1px] w-[88px];
   }
 
   svg path,
   svg polygon,
   svg rect,
   svg polyline {
-    @apply stroke-white;
+    @apply stroke-[1px] stroke-white;
   }
 
 }

@@ -25,7 +25,7 @@
       @apply mx-4;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply mx-4;
     }
 
@@ -49,7 +49,7 @@
       @apply max-w-none;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       max-width: 26ch;
     }
 
@@ -81,12 +81,12 @@
       @apply columns-2;
     }
 
-    @media (max-width: $breakTwo) {
+    @media (max-width: var(--breakTwo)) {
       @apply text-[1.2rem] leading-[2.3em] tracking-[.01em];
       columns: 1;
     }
 
-    @media (max-width: $breakTwo) and (-webkit-min-device-pixel-ratio: 2) {
+    @media (max-width: var(--breakTwo)) and (-webkit-min-device-pixel-ratio: 2) {
       @apply text-[1.15rem];
       columns: 1;
     }

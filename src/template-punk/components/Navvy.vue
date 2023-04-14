@@ -71,7 +71,7 @@
         @apply flex-wrap;
       }
 
-      @media (max-width: $breakTwo) {
+      @media (max-width: var(--breakTwo)) {
         //
       }
 
@@ -93,7 +93,7 @@
             @apply order-1 w-[47vw] mt-6;
           }
 
-          @media (max-width: $breakTwo) {
+          @media (max-width: var(--breakTwo)) {
             @apply order-1 w-[59vw];
           }
 
@@ -113,7 +113,7 @@
             @apply w-[68vw] order-3;
           }
 
-          @media (max-width: $breakTwo) {
+          @media (max-width: var(--breakTwo)) {
             @apply w-[88vw] order-3;
           }
 
@@ -133,7 +133,7 @@
             @apply order-2;
           }
 
-          @media (max-width: $breakTwo) {
+          @media (max-width: var(--breakTwo)) {
             @apply order-2;
           }
 
@@ -155,7 +155,7 @@
           //
         }
 
-        @media (max-width: $breakTwo) {
+        @media (max-width: var(--breakTwo)) {
           //
         }
 
@@ -175,7 +175,7 @@
           //
         }
 
-        @media (max-width: $breakTwo) {
+        @media (max-width: var(--breakTwo)) {
           //
         }
 
@@ -194,7 +194,7 @@
           @apply w-[122px] h-[122px] mt-4;
         }
 
-        @media (max-width: $breakTwo) {
+        @media (max-width: var(--breakTwo)) {
           @apply w-[122px] h-[135px] mt-2;
         }
 
