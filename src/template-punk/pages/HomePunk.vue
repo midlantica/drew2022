@@ -67,63 +67,50 @@
   }
 
   .copyArea {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-    @apply flex flex-col self-end;
+    @apply col-start-1 col-end-2 row-start-1 row-end-3 flex flex-col self-end;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
   }
 
   .slides {
-    grid-column: 2 / 3;
-    grid-row: 1;
+    @apply col-start-2 col-end-3 row-start-1 row-end-1;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 3;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 3;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 3;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
   }
 
   .about {
-    grid-column: 2 / 3;
-    grid-row: 2;
+    @apply col-start-2 col-end-3 row-start-2 row-end-2;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -132,39 +119,34 @@
   }
 
   .quoteBlock {
-    grid-column: 2 / 3;
-    grid-row: 3;
+    @apply col-start-2 col-end-3 row-start-3 row-end-3;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
   }
 
   .skillsGrid {
-    grid-column: 1 / 3;
-    grid-row: 3;
+    @apply col-start-1 col-end-3 row-start-3 row-end-3;
 
     @media (max-width: $breakThou) {
-      grid-row: 4;
+      @apply row-start-4 row-end-4;
     }
 
     @media (max-width: $breakOne) {
-      grid-row: 4;
+      @apply row-start-4 row-end-4;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-row: 4;
+      @apply row-start-4 row-end-4;
     }
   }
 </style>

@@ -52,8 +52,7 @@
 
   .mainGrid {
     grid-template-columns: 7fr 6fr;
-    grid-gap: 1rem 0rem;
-    @apply grid mt-0 mx-6 mb-2;
+    @apply grid mt-0 mx-6 mb-2 gap-y-4 gap-x-0;
 
     @media (min-width: $breakThou) and (min-device-width: 768px) {
       grid-template-columns: 7fr 6fr;
@@ -74,7 +73,6 @@
     // IPAD PRO LANDSCAPE
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       grid-template-columns: 7fr 6fr;
-      // @apply mx-6;
       @apply mt-0 mx-6 mb-2;
     }
   }
@@ -84,133 +82,106 @@
   }
 
   .copyArea {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    @apply col-start-1 col-end-2 row-start-1 row-end-3;
 
     // IPAD LANDSCAPE
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-      grid-column: 1 / 2;
-      grid-row: 1 / 3;
+      @apply col-start-1 col-end-2 row-start-1 row-end-3;
     }
 
     // IPAD PRO LANDSCAPE
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-      grid-column: 1 / 2;
-      grid-row: 1 / 3;
+      @apply col-start-1 col-end-2 row-start-1 row-end-3;
     }
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
   }
 
   .slides {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    @apply z-10 -mt-20;
+    @apply col-start-2 col-end-3 row-start-1 row-end-2 z-10 -mt-20;
 
     // IPAD LANDSCAPE
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-      @apply z-10 mt-[-5.5em];
+      @apply col-start-2 col-end-3 row-start-1 row-end-2 z-10 mt-[-5.5em];
     }
 
     // IPAD PRO LANDSCAPE
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-      @apply z-10 mt-[-5rem];
+      @apply col-start-2 col-end-3 row-start-1 row-end-2 z-10 mt-[-5rem];
     }
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 2;
-      @apply top-0 mt-0;
+      @apply col-start-1 col-end-3 row-start-2 row-end-2 top-0 mt-0;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 2;
-      @apply mt-0;
+      @apply col-start-1 col-end-3 row-start-2 row-end-2 mt-0;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 2;
-      @apply mt-0;
+      @apply col-start-1 col-end-3 row-start-2 row-end-2 mt-0;
     }
   }
 
   .about {
-    grid-column: 2 / 3;
-    grid-row: 2;
+    @apply col-start-2 col-end-3 row-start-2 row-end-2;
 
     // IPAD LANDSCAPE
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-      grid-column: 2 / 3;
-      grid-row: 2;
+      @apply col-start-1 col-end-3 row-start-2 row-end-2;
     }
 
     // IPAD PRO LANDSCAPE
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-      grid-column: 2 / 3;
-      grid-row: 2;
+      @apply col-start-2 col-end-3 row-start-2 row-end-2;
     }
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
   }
 
   .skillsGrid {
-    grid-column: 1 / -1;
-    grid-row: 3 / 4;
+    @apply col-span-full row-start-3 row-end-4;
 
     // IPAD LANDSCAPE
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-      grid-column: 1 / -1;
-      grid-row: 3 / 4;
+      @apply col-span-full row-start-3 row-end-4;
     }
 
     // IPAD PRO LANDSCAPE
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-      grid-column: 1 / -1;
-      grid-row: 3 / 4;
+      @apply col-span-full row-start-3 row-end-4;
     }
 
     @media (max-width: $breakThou) {
-      grid-row: 3;
+      @apply row-start-3 row-end-3;
     }
 
     @media (max-width: $breakOne) {
-      grid-row: 3;
+      @apply row-start-3 row-end-3;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-row: 3;
+      @apply row-start-3 row-end-3;
     }
   }
 

@@ -48,7 +48,6 @@
 
   .mainGrid {
     @apply w-[90%] grid grid-cols-1 gap-y-2 gap-x-0;
-    // grid-template-columns: 1fr;
 
     @media (max-width: $breakThou) {}
 
@@ -62,9 +61,7 @@
   }
 
   .slides {
-    grid-column: 1;
-    grid-row: 1;
-    @apply content-center w-full justify-self-center max-w-[500px];
+    @apply content-center w-full justify-self-center max-w-[500px] col-start-1 col-end-1 row-start-1 row-end-1;
 
     @media (max-width: $breakThou) {
       //
@@ -80,23 +77,20 @@
   }
 
   .skillsGrid {
-    grid-column: 1 / 2;
-    grid-row: 2 / 4;
     grid-template-columns: repeat(6, minmax(88px, 1fr)) !important;
-    @apply justify-center justify-items-center w-[35vw];
+    @apply col-start-1 col-end-2 row-start-2 row-end-4 justify-center justify-items-center w-[35vw];
 
     @media (max-width: 300000000rem) {
-      grid-row: 2;
       grid-template-columns: repeat(4, minmax(88px, 1fr)) !important;
-      @apply w-[70vw];
+      @apply w-[70vw] row-start-2 row-end-2;
     }
 
     @media (max-width: $breakOne) {
-      grid-row: 2;
+      @apply row-start-2 row-end-2;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-row: 2;
+      @apply row-start-2 row-end-2;
     }
   }
 </style>

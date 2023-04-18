@@ -459,17 +459,20 @@
     //
 
     g {
-      @apply stroke-[1px] stroke-white ease-out duration-300;
+      @apply stroke-[1px] stroke-white/75 ease-out duration-300;
 
-      path,
-      polygon,
-      rect,
-      polyline {
-        @apply stroke-[1px] stroke-white ease-out duration-300;
-      }
-
+      // path,
+      // polygon,
+      // rect,
+      // polyline {
+        // @apply stroke-[1px] stroke-white ease-out duration-300;
+      // }
     }
 
+  }
+
+  body.modern .box:hover g {
+    @apply stroke-[1px] stroke-white ease-out duration-300;
   }
 
   body.bourbon .box:hover .brickBack,

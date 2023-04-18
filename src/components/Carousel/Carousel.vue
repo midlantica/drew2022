@@ -139,14 +139,14 @@
         @apply flex;
 
         .box {
-          @apply flex flex-col flex-nowrap items-center content-center justify-center text-center m-auto bg-white border border-solid text-gray-800 min-w-[130px] shadow-[0px_2px_2px_-3px_black] stroke-gray-800;
+          @apply flex flex-col flex-nowrap items-center content-center justify-center text-center m-auto bg-white border border-solid text-black/50 min-w-[130px] shadow-[0px_2px_2px_-3px_black] stroke-black/50;
 
           svg.iconSVG {
-            @apply stroke-[1px] stroke-gray-800 relative ease-out duration-200 w-auto fill-transparent;
+            @apply stroke-[1px] stroke-black/50 relative ease-out duration-200 w-auto fill-transparent;
           }
 
           p {
-            @apply w-full text-gray-800 text-[0.85em] normal-case text-center tracking-wider relative;
+            @apply w-full text-black/50 text-[0.85em] normal-case text-center tracking-wider relative;
           }
 
           &:hover {
@@ -192,7 +192,7 @@
       }
 
       .projectBox__top {
-        @apply mb-2;
+        @apply mb-3;
 
         .projectHead {
           @apply mt-[2px];

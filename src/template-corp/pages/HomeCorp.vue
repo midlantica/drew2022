@@ -82,53 +82,40 @@
   }
 
   .copyArea {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    @apply col-start-1 col-end-2 row-start-1 row-end-3;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 1;
-      @apply mb-[-1em];
+      @apply col-start-1 col-end-3 row-start-1 row-end-1 mb-[-1em];
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
   }
 
   .slides {
-    grid-column: 2 / 3;
-    grid-row: 1;
-    @apply -mt-4;
+    @apply col-start-2 col-end-3 row-start-1 row-end-1 -mt-4;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 3;
-      @apply mt-0;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3 mt-0;
+
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 3;
-      @apply mt-0;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3 mt-0;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 3;
-      @apply mt-0;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3 mt-0;
     }
   }
 
   .skillsGrid {
-    grid-column: 1 / 2;
-    grid-row: 2;
+    @apply col-start-1 col-end-2 row-start-2 row-end-2;
 
     @media (max-width: $breakThou) {
       //
@@ -144,42 +131,34 @@
   }
 
   .about {
-    grid-column: 2 / 3;
-    grid-row: 2;
+    @apply col-start-2 col-end-3 row-start-2 row-end-2;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
   }
 
   .quoteBlock {
-    grid-column: 2 / 3;
-    grid-row: 3;
+    @apply col-start-2 col-end-3 row-start-3 row-end-3;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
   }
 </style>

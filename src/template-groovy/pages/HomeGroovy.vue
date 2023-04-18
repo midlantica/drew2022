@@ -83,102 +83,83 @@
   }
 
   .copyArea {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    @apply col-start-1 col-end-2 row-start-1 row-end-3;
 
     @media (max-width: $breakThou) {
       grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      @apply col-start-1 col-end-3 row-start-1 row-end-1 ;
     }
   }
 
   .slides {
-    grid-column: 2 / 3;
-    grid-row: 1;
-    @apply z-10 mt-[-9.5rem];
+    @apply col-start-2 col-end-3 row-start-1 row-end-1 z-10 mt-[-9.5rem];
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 3;
-      @apply mt-0;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3 mt-0;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 3;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 3;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
   }
 
   .skillsGrid {
-    grid-column: 1 / -1;
-    grid-row: 3;
+    @apply col-span-full row-span-3 mt-0;
 
     @media (max-width: $breakThou) {
-      grid-row: 2;
+      @apply row-span-2 mt-0;
     }
 
     @media (max-width: $breakOne) {
-      grid-row: 2;
+      @apply row-span-2 mt-0;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-row: 2;
+      @apply row-span-2 mt-0;
     }
   }
 
   .about {
-    grid-column: 2 / 3;
-    grid-row: 2;
-    @apply mb-0;
+    @apply col-start-2 col-end-3 row-span-2 mb-0;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      @apply col-start-1 col-end-3 row-span-4;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      @apply col-start-1 col-end-3 row-span-4;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      @apply col-start-1 col-end-3 row-span-4;
     }
   }
 
   .quoteBlock {
-    grid-column: 2 / 3;
-    grid-row: 3;
+    @apply col-start-2 col-end-3 row-span-3;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-span-5;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-span-5;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 5;
+      @apply col-start-1 col-end-3 row-span-5;
     }
   }
 </style>
