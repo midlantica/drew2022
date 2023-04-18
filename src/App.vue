@@ -450,4 +450,51 @@
 
   }
 
+  body.modern .box:hover .brickBack,
+  body.modern .box:hover .brickCircles {
+    @apply fill-[#d51b5b] ease-out duration-500;
+  }
+
+  body.modern .iconSVG {
+    //
+
+    g {
+      @apply stroke-[1px] stroke-white ease-out duration-300;
+
+      path,
+      polygon,
+      rect,
+      polyline {
+        @apply stroke-[1px] stroke-white ease-out duration-300;
+      }
+
+    }
+
+  }
+
+  body.bourbon .box:hover .brickBack,
+  body.bourbon .box:hover .brickCircles {
+    @apply fill-[#ffd12d] ease-out duration-500;
+  }
+
+  body.groovy .box:hover .brickBack,
+  body.groovy .box:hover .brickCircles {
+    @apply fill-[#ffdd4b] ease-out duration-500;
+  }
+
+  body.techy .box:hover .brickBack,
+  body.techy .box:hover .brickCircles {
+    @apply fill-[#ffdd00] ease-out duration-500;
+  }
+
+  body.corp .box:hover .brickBack,
+  body.corp .box:hover .brickCircles {
+    @apply fill-[#95d5ff] ease-out duration-500;
+  }
+
+  body.punk .box:hover .brickBack,
+  body.punk .box:hover .brickCircles {
+    @apply fill-[#f995d3] ease-out duration-500;
+  }
+
 </style>

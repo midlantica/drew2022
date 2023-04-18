@@ -101,13 +101,9 @@
 </script>
 
 <style lang='scss' scoped>
-  // @import '../../assets/css/carousel.scss';
-
   :root {
     --carouselFade: .5s;
   }
-
-  $carouselFade: 0.5;
 
   .projectBox {
     @apply bg-[#f2f2f2] rounded p-2 relative lowercase clear-both;
@@ -125,77 +121,48 @@
     }
   }
 
+  .carouselArrow {
+    @apply text-[.7rem] text-gray-600 border-none rounded-sm border-l-[10px] bg-black/10 pt-[.2rem] pr-2 pb-[.16rem] pl-[.4rem] m-0 font-sans cursor-pointer absolute drop-shadow-[2px_2px_2px_hsla(0,0%,100%,0.5)];
+
+    &:hover {
+      @apply bg-black/20 text-black;
+    }
+  }
+
   .miniGallery {
     @apply w-full flex flex-row flex-wrap justify-center items-center content-center;
 
     div {
       @apply flex-auto w-[125px] no-underline cursor-pointer inline-block text-center;
 
-      &:hover {
-        @apply text-bourbon-ivory no-underline;
-      }
-
       a {
         @apply flex;
-      }
 
-      .box {
-        @apply flex flex-col flex-nowrap items-center content-center justify-center duration-75 text-center m-auto bg-white border border-solid text-gray-400/80 min-w-[130px] shadow-[0px_2px_2px_-3px_black];
+        .box {
+          @apply flex flex-col flex-nowrap items-center content-center justify-center text-center m-auto bg-white border border-solid text-gray-800 min-w-[130px] shadow-[0px_2px_2px_-3px_black] stroke-gray-800;
 
-        p {
-          @apply text-[#333] relative ease-out lowercase;
-        }
-
-        &:hover {
-          @apply ease-out top-[-5px] border border-solid text-gray-400/80;
+          svg.iconSVG {
+            @apply stroke-[1px] stroke-gray-800 relative ease-out duration-200 w-auto fill-transparent;
+          }
 
           p {
-            @apply relative top-[-5px] ease-out;
+            @apply w-full text-gray-800 text-[0.85em] normal-case text-center tracking-wider relative;
           }
-
-          svg {
-            @apply relative top-[-5px] ease-out;
-          }
-        }
-
-        &.Uiux {
-          //
-
-          @media (max-width: var(--breakThou)) {
-            //
-          }
-        }
-
-        &.Mobile {
-          //
-
-          @media (max-width: var(--breakThou)) {
-            //
-          }
-        }
-
-        &.Kiosk {
-          //
-        }
-
-        &.Graphics {
-          //
-        }
-
-        &.Print {
-          //
-        }
-
-        &.Misc {
-          //
-        }
-
-        p {
-          @apply w-full text-[0.85em] normal-case text-center tracking-wider mb-2;
 
           &:hover {
-            // @apply text-bourbon-ivory;
+            //
+
+            p {
+              @apply ease-out duration-300 top-[-7px];
+              // @apply decoration-yellow-400 underline underline-offset-4 decoration-2;
+            }
+
+            svg.iconSVG {
+              @apply ease-out duration-300 w-auto top-[-7px];
+            }
+
           }
+
         }
       }
 
@@ -233,88 +200,45 @@
       }
 
       p {
-        @apply font-modernCopy text-white text-[1rem] text-center lowercase tracking-[0em];
+        @apply font-modernCopy text-white text-[.85rem] text-center lowercase tracking-[0em];
       }
 
       .carouselArrow {
-        @apply rounded-[20px] m-0 pt-[.2rem] pr-[.75rem] pb-[.15rem] pl-[.6rem] shadow-none absolute transform-none tracking-[.05em] cursor-pointer border border-solid border-[#FFFFFF33] text-[#FFFFFFBF] font-modernCopy bg-black/5;
+        @apply rounded-xl text-white/80 bg-white/20 pt-[.15rem] pr-[.85rem] pb-[.2rem] pl-[.75rem] drop-shadow-none text-center;
 
         &:hover {
-          @apply bg-white/5;
+          @apply text-black bg-white/80;
         }
       }
+
     }
 
     .miniGallery {
       @apply bg-none gap-4;
 
-      div {
-        @apply max-w-[150px];
-        .box {
-          @apply h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
+      .box {
+        @apply max-w-[150px] h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
 
-          @media (max-width: var(--breakThou)) {
-            @apply min-h-min;
-          }
-
-          &:hover {
-            @apply ease-out rounded-xl border border-solid border-[#FFFFFF80] shadow-[0px_0px_1rem_0px_#d71d5b];
-
-            p {
-              @apply top-[-5px];
-            }
-
-            svg {
-              @apply stroke-[1px] stroke-white relative top-[-5px] ease-out;
-
-              &:hover {
-                @apply opacity-[.8] relative ease-out stroke-modern-accentRed;
-              }
-            }
-          }
-
-          p {
-            @apply font-modernCopy text-white text-[.85rem] relative lowercase top-[5px] text-center mt-[4px] mx-0 mb-0 ease-out;
-
-            &:hover {
-              @apply ease-out;
-            }
-          }
-
-          .iconSVG {
-            @apply relative ease-out w-auto stroke-[1px] stroke-white ;
-            // width: initial !important;
-            // stroke: red !important;
-            // stroke-width: 1px !important;
-            // fill: orange !important;
-
-            &:hover {
-              @apply ease-out top-[-5px] stroke-[1px] stroke-white;
-
-              path,
-              polygon,
-              rect,
-              polyline {
-                @apply stroke-white top-[-5px] ease-out stroke-[1px] shadow-sm shadow-white;
-                // stroke: red !important;
-                // stroke-width: 2px !important;
-                // fill: orange !important;
-              }
-            }
-
-            path,
-            polygon,
-            rect,
-            polyline {
-              @apply stroke-white top-[-5px] ease-out stroke-[1px];
-              // stroke: red !important;
-              // stroke-width: 2px !important;
-              // fill: orange !important;
-            }
-          }
+        @media (max-width: var(--breakThou)) {
+          @apply min-h-min;
         }
+
+        &:hover {
+          @apply rounded-xl border border-solid border-[#FFFFFF80] shadow-[0px_0px_1rem_0px_#d71d5b] top-[-5px] ease-out duration-100;
+        }
+
+        .iconSVG {
+          @apply relative w-auto ease-out duration-100;
+        }
+
+        p {
+          @apply font-modernCopy font-extralight text-white text-[.85rem] relative lowercase text-center mt-[4px] mx-0 mb-0;
+        }
+
       }
+
     }
+
   }
 
   body.bourbon {
@@ -557,6 +481,7 @@
 
     .miniGallery {
       @apply top-0;
+
       div .box {
         @apply h-[183px];
 
@@ -586,65 +511,4 @@
     }
   }
 
-  .miniGallery div {
-    animation: carouselFader (calc(var(--carouselFade) * 0.5) + s);
-
-    &:nth-of-type(1) {
-      animation: carouselFader (calc(var(--carouselFade) * 0.51) + s);
-    }
-
-    &:nth-of-type(2) {
-      animation: carouselFader (calc(var(--carouselFade) * 0.51).2 + s);
-    }
-
-    &:nth-of-type(3) {
-      animation: carouselFader (calc(var(--carouselFade) * 0.51).3 + s);
-    }
-
-    &:nth-of-type(4) {
-      animation: carouselFader (calc(var(--carouselFade) * 0.51).4 + s);
-    }
-
-    &:nth-of-type(5) {
-      animation: carouselFader (calc(var(--carouselFade) * 0.51).5 + s);
-    }
-
-    &:nth-of-type(6) {
-      animation: carouselFader (calc(var(--carouselFade) * 0.51).6 + s);
-    }
-  }
-
-  .iconSVG {
-    @apply stroke-[1px] stroke-white relative ease-out duration-200 w-auto;
-    // stroke: red;
-    // stroke-width: 2px;
-    // fill: orange;
-
-    &:hover {
-      @apply stroke-[1px] stroke-white relative ease-out duration-200;
-    }
-
-    g {
-      @apply stroke-[1px] stroke-white ease-out duration-200;
-
-      svg path,
-      svg polygon,
-      svg rect,
-      svg polyline {
-        @apply stroke-[1px] stroke-white ease-out duration-200;
-        // stroke: red;
-        // stroke-width: 2px;
-        // fill: orange;
-      }
-    }
-
-  }
-
-  .carouselArrow {
-    @apply text-[.65rem] text-black/80 bg-black/10 pt-[.125rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
-
-    &:hover {
-      @apply text-white bg-black/40;
-    }
-  }
-</style>-
+</style>

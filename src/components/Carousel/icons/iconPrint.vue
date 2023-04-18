@@ -7,9 +7,7 @@
     viewBox="0 0 111 111"
   >
     <g
-      fill="none"
       fill-rule="evenodd"
-      stroke="grey"
       stroke-linecap="round"
       stroke-linejoin="round"
       transform="translate(19.352 8.966)"
@@ -51,12 +49,5 @@
 </template>
 
 <style lang="scss" scoped>
-  // @import '~/assets/css/_colors.scss';
-
-  svg {
-    // width: 88px;
-    // @apply h-[60px];
-
-  }
-
+  //
 </style>

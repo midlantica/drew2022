@@ -76,63 +76,74 @@
   }
 
   .copyArea {
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
-    @apply delay-[250ms];
+    // grid-column: 1 / 2;
+    // grid-row: 1 / 4;
+    @apply delay-[250ms] col-start-1 col-end-2 row-start-1 row-end-4;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      // grid-column: 1 / 3;
+      // grid-row: 1;
+      @apply col-start-1 col-end-3 row-span-full;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      // grid-column: 1 / 3;
+      // grid-row: 1;
+      @apply col-start-1 col-end-3 row-span-full;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 1;
+      // grid-column: 1 / 3;
+      // grid-row: 1;
+      @apply col-start-1 col-end-3 row-span-full;
     }
   }
 
   .slides {
-    grid-column: 2 / 3;
-    grid-row: 1;
+    // grid-column: 2 / 3;
+    // grid-row: 1;
+    @apply col-start-2 col-end-3 row-span-full;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 3;
+      // grid-column: 1 / 3;
+      // grid-row: 3;
+      @apply col-start-1 col-end-3 row-span-full row-start-3 row-end-3;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 3;
+      // grid-column: 1 / 3;
+      // grid-row: 3;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 3;
+      // grid-column: 1 / 3;
+      // grid-row: 3;
+      @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
   }
 
   .about {
-    grid-column: 2 / 3;
-    grid-row: 2;
+    // grid-column: 2 / 3;
+    // grid-row: 2;
+    @apply col-start-2 col-end-3 row-start-2;
 
     @media (max-width: $breakThou) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      // grid-column: 1 / 3;
+      // grid-row: 4;
+      @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
     @media (max-width: $breakOne) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      // grid-column: 1 / 3;
+      // grid-row: 4;
+      @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
     @media (max-width: var(--breakTwo)) {
-      grid-column: 1 / 3;
-      grid-row: 4;
+      // grid-column: 1 / 3;
+      // grid-row: 4;
+      @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
     @media (max-width: $breakThree) {
