@@ -52,15 +52,15 @@
   .about {
     @apply bg-[#fbf3bb] py-5 px-7 flex flex-row flex-nowrap justify-center items-center content-center self-center rounded-sm cursor-pointer shadow-[0px_1px_2px_0px_#00000080];
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply mt-0 mx-0 mb-0;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply mt-0 mx-0 mb-0;
     }
 
-    @media (max-width: $breakFour) {
+    @media (max-width: 320px) {
       @apply flex-col;
     }
   }
@@ -68,7 +68,7 @@
   .flagBox {
     @apply flex flex-col content-center items-center justify-center self-center float-left clear-left basis-auto;
 
-    @media (max-width: $breakFour) {
+    @media (max-width: 320px) {
       @apply mb-2;
     }
   }
@@ -107,11 +107,11 @@
     p {
       @apply text-[0.9rem] tracking-[0.02rem] leading-6 m-0 font-medium font-corpCopy;
 
-      @media (max-width: $breakThou) {
+      @media (max-width: 1024px) {
         @apply leading-7;
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply leading-6;
       }
     }

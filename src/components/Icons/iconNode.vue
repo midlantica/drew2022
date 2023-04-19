@@ -38,22 +38,20 @@
 <script></script>
 
 <style lang="scss" scoped>
-  // @import '~/assets/css/_colors.scss';
 
   svg {
-    // width: 88px;
-    // @apply h-[60px];
+    //
 
     .darkGreen {
-      fill: rgba(12, 42, 13, 1);
+      @apply fill-[rgba(12,42,13,1)];
     }
 
     .greens {
-      fill: rgba(106, 175, 97, 1);
+      @apply fill-[rgba(106,175,97,1)];
     }
   }
 
   svg:hover {
-    cursor: grab;
+    @apply cursor-grab;
   }
 </style>

@@ -17,19 +17,19 @@
   section {
     @apply mt-[2rem] mr-[1.5rem] mb-0 ml-4;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply mt-6 mx-6 mb-4;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply mx-4;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply mx-4;
     }
 
-    @media (max-width: $breakThree) {
+    @media (max-width: 430px) {
       @apply ml-4 mr-2;
     }
   }
@@ -37,23 +37,23 @@
   h1 {
     @apply text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-0 mb-4 normal-case;
 
-    @media (min-width: $breakThou) {
+    @media (min-width: 1024px) {
       @apply max-w-[26ch];
     }
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply max-w-none;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply max-w-none;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       max-width: 26ch;
     }
 
-    @media (max-width: $breakThree) {
+    @media (max-width: 430px) {
       @apply max-w-none;
     }
   }
@@ -65,35 +65,33 @@
       @apply text-[80%] tracking-wider uppercase;
     }
 
-    @media (min-width: $breakThou) and (-webkit-min-device-pixel-ratio: 2) {
+    @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
       //
 
     }
 
-    @media (max-width: $breakThou) {
-      columns: 2 200px;
-      // column-rule: 2px dotted transparentize(#423ba0, .5);
-      @apply text-[1.2rem] leading-[2.1em] text-justify tracking-wider gap-x-12 hyphens-auto rule-w-[2px] rule-style-dotted rule-color-[#423ba08b];
+    @media (max-width: 1024px) {
+      @apply columns-2 text-[1.2rem] leading-[2.1em] text-justify tracking-wider gap-x-12 hyphens-auto rule-w-[2px] rule-style-dotted rule-color-[#423ba08b];
     }
 
-    @media (max-width: $breakOne) {
-      columns: 2 200px;
+    @media (max-width: 840px) {
       @apply columns-2;
     }
 
-    @media (max-width: var(--breakTwo)) {
-      @apply text-[1.2rem] leading-[2.3em] tracking-[.01em];
-      columns: 1;
+    @media (max-width: 700px) {
+      @apply columns-1;
     }
 
-    @media (max-width: var(--breakTwo)) and (-webkit-min-device-pixel-ratio: 2) {
-      @apply text-[1.15rem];
-      columns: 1;
+    @media (max-width: 630px) {
+      @apply columns-1 text-[1.2rem] leading-[2.3em] tracking-[.01em];
+    }
+
+    @media (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2) {
+      @apply columns-1 text-[1.15rem];
     }
 
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
-        @apply text-[1.18em] mt-2 mr-0 mb-0 pt-0 px-0 pb-0;
-        columns: 1;
+        @apply columns-1 text-[1.18em] mt-2 mr-0 mb-0 pt-0 px-0 pb-0;
     }
 
     @media only screen and (min-device-width : 375px) and (max-device-width : 667px) {

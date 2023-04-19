@@ -8,7 +8,7 @@
   nav {
     @apply flex flex-row flex-wrap justify-between items-center py-2 px-5;
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply justify-center;
     }
   }

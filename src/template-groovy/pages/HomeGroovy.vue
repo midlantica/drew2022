@@ -53,23 +53,23 @@
   .mainGrid {
     @apply grid grid-cols-[7fr_6fr] gap-y-4 mt-0 mx-4 mb-2;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply grid-cols-1 mt-0 mx-4 mb-4;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       //
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       //
     }
 
-    @media (max-width: $breakThree) {
+    @media (max-width: 430px) {
       //
     }
 
-    @media (max-width: $breakFour) {
+    @media (max-width: 320px) {
       //
     }
   }
@@ -85,16 +85,16 @@
   .copyArea {
     @apply col-start-1 col-end-2 row-start-1 row-end-3;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       grid-column: 1 / 3;
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1 ;
     }
   }
@@ -102,15 +102,15 @@
   .slides {
     @apply col-start-2 col-end-3 row-start-1 row-end-1 z-10 mt-[-9.5rem];
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3 mt-0;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
   }
@@ -118,15 +118,15 @@
   .skillsGrid {
     @apply col-span-full row-span-3 mt-0;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply row-span-2 mt-0;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply row-span-2 mt-0;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply row-span-2 mt-0;
     }
   }
@@ -134,15 +134,15 @@
   .about {
     @apply col-start-2 col-end-3 row-span-2 mb-0;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply col-start-1 col-end-3 row-span-4;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply col-start-1 col-end-3 row-span-4;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply col-start-1 col-end-3 row-span-4;
     }
   }
@@ -150,15 +150,15 @@
   .quoteBlock {
     @apply col-start-2 col-end-3 row-span-3;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply col-start-1 col-end-3 row-span-5;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply col-start-1 col-end-3 row-span-5;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply col-start-1 col-end-3 row-span-5;
     }
   }

@@ -23,6 +23,15 @@
 <style lang="scss">
   @import "./assets/css/main.scss";
 
+  :root {
+    --breakThou: 1024px;
+    --breakOne: 840px;
+    --break768: 768px;
+    --breakTwo: 630px;
+    --breakThree: 430px;
+    --breakFour: 320px;
+  }
+
   .wrapper {
     @apply relative max-w-[1024px] my-0 mx-auto;
   }
@@ -65,23 +74,23 @@
     .wrapper {
       @apply w-[99.8%] bg-[url('./template-bourbon/assets/img/bg/graphy_2.png')] bg-repeat;
 
-      @media (max-width: $breakThou) {
+      @media (max-width: 1024px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: 840px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: 430px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakFour) {
+      @media (max-width: 320px) {
         @apply w-[99.8%];
       }
 
@@ -94,19 +103,19 @@
     .about>p {
       @apply w-[99.8%] my-1 mx-auto font-bourbonCopy text-[.82em];
 
-      @media (max-width: $breakThou) {
+      @media (max-width: 1024px) {
         @apply w-[99.8%] text-[1.65vw];
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: 840px) {
         @apply w-[99.8%] text-[1.85vw];
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply w-[99.8%] text-[2.5vw];
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: 430px) {
         @apply w-[99.8%] text-[3vw];
       }
     }
@@ -130,23 +139,23 @@
     .wrapper {
       @apply w-[99.8%] flex flex-col grow max-w-[1024px] min-h-[780px] pb-14 bg-[hsl(320,100%,9%)] bg-[url('./template-modern/assets/img/bg/bg_bak_dk4.jpeg')] bg-cover;
 
-      @media (max-width: $breakThou) {
+      @media (max-width: 1024px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: 840px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: 430px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakFour) {
+      @media (max-width: 320px) {
         @apply w-[99.8%];
       }
 
@@ -217,23 +226,23 @@
     .wrapper {
       @apply w-[99.8%] bg-gradient-to-b from-white via-[#fff5cb] via-85% to-[#fff5cb];
 
-      @media (max-width: $breakThou) {
+      @media (max-width: 1024px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: 840px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: 430px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakFour) {
+      @media (max-width: 320px) {
         @apply w-[99.8%];
       }
     }
@@ -261,23 +270,23 @@
     .wrapper {
       @apply w-[99.8%] bg-[#fffdf4];
 
-      @media (max-width: $breakThou) {
+      @media (max-width: 1024px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: 840px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: 430px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakFour) {
+      @media (max-width: 320px) {
         @apply w-[99.8%];
       }
     }
@@ -307,8 +316,8 @@
     }
 
     &.extras .extrasWrapper {
-
       //
+
       h1 {
         @apply font-techyHead pt-4 text-[1.75em] font-medium mb-2 text-techy-blueTech;
       }
@@ -329,23 +338,23 @@
     .wrapper {
       @apply w-[99.8%] bg-[url(/img/bg/white_paper_patt-01.jpg)] bg-repeat;
 
-      @media (max-width: $breakThou) {
+      @media (max-width: 1024px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: 840px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: 430px) {
         @apply w-[99.8%];
       }
 
-      @media (max-width: $breakFour) {
+      @media (max-width: 320px) {
         @apply w-[99.8%];
       }
     }
@@ -377,15 +386,15 @@
     .wrapper {
       @apply w-[99.8%] bg-repeat bg-center bg-[url(/img/bg/circles.svg),_url(/img/bg/Drew-punk-back.jpg)] bg-[length:_102%_640%,100%_100%];
 
-      @media (max-width: $breakOne) {
+      @media (max-width: 840px) {
         @apply w-[99.8%] bg-[length:_102%_640%,130%_90%] bg-[center_center];
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply w-[99.8%] bg-[length:_102%_600%,120%_100%] bg-[center_center,-3em_11em];
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: 430px) {
         @apply w-[99.8%] bg-[length:_102%_600%,250%_100%] bg-[center_center,-3em_3em];
       }
     }
@@ -393,19 +402,19 @@
     .about>p {
       @apply font-punkCopy text-[.8em];
 
-      @media (max-width: $breakThou) {
+      @media (max-width: 1024px) {
         @apply text-[1.65vw];
       }
 
-      @media (max-width: $breakOne) {
+      @media (max-width: 840px) {
         @apply text-[1.85vw];
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply text-[2.5vw];
       }
 
-      @media (max-width: $breakThree) {
+      @media (max-width: 430px) {
         @apply text-[3vw];
       }
     }
@@ -460,13 +469,6 @@
 
     g {
       @apply stroke-[1px] stroke-white/75 ease-out duration-300;
-
-      // path,
-      // polygon,
-      // rect,
-      // polyline {
-        // @apply stroke-[1px] stroke-white ease-out duration-300;
-      // }
     }
 
   }

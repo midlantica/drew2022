@@ -57,7 +57,7 @@
       #ff1a22 59%,
       #ff1a22 100%);
 
-      @media (max-width: var(--breakFour)) {
+      @media (max-width: 320px) {
         @apply w-[160px] h-[160px] top-[-1.4em] left-[-2.9em];
     }
   }

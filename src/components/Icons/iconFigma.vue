@@ -57,23 +57,23 @@
     }
 
     .green {
-      fill: hsl(157, 91%, 43%);
+      @apply fill-[hsl(157,91%,43%)];
     }
 
     .purple {
-      fill: hsl(266, 100%, 67%);
+      @apply fill-[hsl(266,100%,67%)];
     }
 
     .orange {
-      fill: hsl(14, 89%, 53%);
+      @apply fill-[hsl(14,89%,53%)];
     }
 
     .tangerine {
-      fill: hsl(6, 100%, 69%);
+      @apply fill-[hsl(6,100%,69%)];
     }
 
     .blue {
-      fill: hsl(197, 99%, 55%);
+      @apply fill-[hsl(197,99%,55%)];
     }
   }
 

@@ -106,7 +106,7 @@
       iconTailwind,
       'tailwind',
       'Tailwind CSS',
-      'Tailwind takes the naming pain out of CSS and it\'s brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park'
+      'Tailwind takes the naming pain out of CSS and it\'s brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park. I converted this site to Tailwind 😀'
     ],
     [
       iconSass,
@@ -209,15 +209,15 @@
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     @apply w-full grid justify-center items-stretch content-between relative gap-y-[.5] gap-x-[auto] justify-items-center;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       grid-row: 2;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       grid-row: 2;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       grid-row: 2;
     }
 

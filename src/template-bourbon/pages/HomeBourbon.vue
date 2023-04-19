@@ -54,55 +54,52 @@
 <style lang='scss' scoped>
   @import "../assets/css/bourbon-main.scss";
 
+  :root {
+    --breakThou: 1024px;
+    --breakOne: 840px;
+    --break768: 768px;
+    --breakTwo: 630px;
+    --breakThree: 430px;
+    --breakFour: 320px;
+  }
+
   header,
   footer {
     @apply shadow-druShadow;
   }
 
   .mainGrid {
-    @apply grid grid-cols-2 my-4 mr-6 ml-4 gap-x-4 gap-y-4;
-
-    @media (max-width: $breakThou) {
-      @apply grid gap-y-4 grid-cols-1;
-    }
-
-    @media (max-width: $breakOne) {
-      //
-    }
-
-    @media (max-width: var(--breakTwo)) {
-      //
-    }
+    @apply grid grid-cols-1 lg:grid-cols-2 my-4 mr-6 ml-4 gap-x-4 gap-y-4;
   }
 
   .copyArea {
     @apply delay-[250ms] col-start-1 col-end-2 row-start-1 row-end-4;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply col-start-1 col-end-3 row-span-full;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply col-start-1 col-end-3 row-span-full;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply col-start-1 col-end-3 row-span-full;
     }
   }
 
   .slides {
-    @apply col-start-2 col-end-3 row-span-full;
+    @apply col-start-2 col-end-3 row-start-1 row-end-1;
 
-    @media (max-width: $breakThou) {
-      @apply col-start-1 col-end-3 row-span-full row-start-3 row-end-3;
-    }
-
-    @media (max-width: $breakOne) {
+    @media (max-width: 1024px) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 840px) {
+      @apply col-start-1 col-end-3 row-start-3 row-end-3;
+    }
+
+    @media (max-width: 630px) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
   }
@@ -110,19 +107,19 @@
   .about {
     @apply col-start-2 col-end-3 row-start-2;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: $breakThree) {
+    @media (max-width: 430px) {
       @apply m-0;
     }
 
@@ -134,19 +131,19 @@
   .quoteBlock {
     @apply col-start-2 col-end-3 row-start-3 row-end-3;
 
-    @media (max-width: $breakThou) {
+    @media (max-width: 1024px) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: $breakOne) {
+    @media (max-width: 840px) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: $breakThree) {
+    @media (max-width: 430px) {
       @apply m-0;
     }
   }
