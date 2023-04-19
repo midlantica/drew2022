@@ -31,6 +31,7 @@ module.exports = {
         breakFour: '320px',
         breakThree: '430px',
         breakTwo: '630px',
+        break768: '768px',
         breakOne: '840px',
         breakThou: '1024px'
         // breakMinMax: '630px 760px',
