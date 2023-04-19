@@ -206,35 +206,31 @@
   .skillsGrid {
     @apply col-start-1 col-end-2 row-start-2 row-end-4 w-full grid justify-center items-stretch content-between relative gap-y-[.5] gap-x-[auto] justify-items-center;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply row-start-2 row-end-2;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply row-start-2 row-end-2;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply row-start-2 row-end-2;
     }
 
     @media (min-width: 1026px) {
-      // grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       @apply grid-rows-[auto-fit,_minmax(120px,_1fr)] ;
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
-      // grid-template-columns: repeat(6, minmax(88px, 1fr));
       @apply grid-rows-[auto-fit,_minmax(120px,_1fr)] ;
     }
 
     @media (min-width: 471px) and (max-width: 562px) {
-      // grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
       @apply grid-rows-[auto-fit,_minmax(120px,_1fr)] ;
     }
 
     @media (max-width: 470px) {
-      // grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
       @apply grid-rows-[auto-fit,_minmax(120px,_1fr)] ;
     }
 
@@ -252,16 +248,14 @@
   }
 
   body.modern .skillsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    @apply w-[70%] justify-center my-4 mx-auto gap-y-4 gap-x-0;
+    @apply grid-cols-[repeat(auto-fit,_minmax(25%,_1fr))] w-[70%] justify-center my-4 mx-auto gap-y-4 gap-x-0;
 
     @media (min-width: 770px) {
       @apply w-3/5;
     }
 
     @media (max-width: 700px) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      @apply w-[80%];
+      @apply grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] w-[80%];
     }
 
     svg {
@@ -281,20 +275,19 @@
     //
 
     @media (min-width: 1026px) {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      @apply mt-[-1.3rem];
+      @apply grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] mt-[-1.3rem];
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(88px, 1fr));
+      @apply grid-cols-[repeat(6,_minmax(88px,_1fr))];
     }
 
     @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      @apply grid-cols-[repeat(3,_minmax(110px,_1fr))];
     }
 
     @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+      @apply grid-cols-[repeat(auto-fit,_minmax(88px,_1fr))];
     }
 
     svg {
@@ -307,19 +300,19 @@
     //
 
     @media (min-width: 1026px) {
-      grid-template-columns: repeat(12, minmax(84px, 1fr));
+      @apply grid-cols-[repeat(12,_minmax(84px,_1fr))];
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(84px, 1fr));
+      @apply grid-cols-[repeat(6,_minmax(84px,_1fr))];
     }
 
     @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      @apply grid-cols-[repeat(auto-fit,_minmax(110px,_1fr))];
     }
 
     @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+      @apply grid-cols-[repeat(auto-fit,_minmax(110px,_1fr))];
     }
 
     svg {
@@ -332,19 +325,23 @@
     @apply transition duration-[.25s] ease-in mt-0 mr-[-1rem] mb-0 ml-0;
 
     @media (min-width: 1026px) {
-      grid-template-columns: repeat(12, minmax(84px, 1fr));
+      @apply grid-cols-[repeat(12,_minmax(84px,_1fr))];
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(84px, 1fr));
+      @apply grid-cols-[repeat(6,_minmax(84px,_1fr))];
     }
 
     @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      @apply grid-cols-[repeat(4,_minmax(88px,_1fr))];
     }
 
     @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+      @apply grid-cols-[repeat(3,_minmax(88px,_1fr))];
+    }
+
+    @media (max-width: 320px) {
+      @apply grid-cols-[repeat(auto-fit,_minmax(88px,_1fr))];
     }
 
     svg {
@@ -357,20 +354,19 @@
     //
 
     @media (min-width: 1026px) {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      margin-top: -2.8rem;
+      @apply grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] mt-[-2.8rem];
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(88px, 1fr));
+      @apply grid-cols-[repeat(6,_minmax(88px,_1fr))];
     }
 
-    @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    @media (min-width: theme("screens.breakXxsm")) and (max-width: 562px) {
+      @apply grid-cols-[repeat(3,_minmax(110px,_1fr))];
     }
 
-    @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+    @media (max-width: theme("screens.breakXxsm")) {
+      @apply grid-cols-[repeat(auto-fit,_minmax(88px,_1fr))];
     }
 
     svg {
@@ -387,19 +383,19 @@
     @apply transition duration-[.25s] ease-in mt-2 mx-auto mb-0 bg-[rgba(0,140,0,0.3)];
 
     @media (min-width: 1026px) {
-      grid-template-columns: repeat(12, minmax(84px, 1fr));
+      @apply grid-cols-[repeat(12,_minmax(84px,_1fr))];
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(88px, 1fr));
+      @apply grid-cols-[repeat(6,_minmax(88px,_1fr))];
     }
 
     @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      @apply grid-cols-[repeat(auto-fit,_minmax(110px,_1fr))];
     }
 
     @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+      @apply grid-cols-[repeat(auto-fit,_minmax(88px,_1fr))];
     }
 
     svg {

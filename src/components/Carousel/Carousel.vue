@@ -175,19 +175,19 @@
     .projectBox {
       @apply bg-transparent;
 
-      @media (max-width: theme("screens.breakThou")) {
+      @media (max-width: theme("screens.breakXlg")) {
         //
       }
 
-      @media (max-width: theme("screens.breakOne")) {
+      @media (max-width: theme("screens.breakLg")) {
         //
       }
 
-      @media (max-width: theme("screens.breakTwo")) {
+      @media (max-width: theme("screens.breakSm")) {
         //
       }
 
-      @media (max-width: theme("screens.breakThree")) {
+      @media (max-width: theme("screens.breakXsm")) {
         //
       }
 
@@ -204,10 +204,10 @@
       }
 
       .carouselArrow {
-        @apply rounded-xl text-white/80 bg-white/20 pt-[.15rem] pr-[.85rem] pb-[.2rem] pl-[.75rem] drop-shadow-none text-center;
+        @apply rounded-xl text-white/70 bg-transparent pt-[.15rem] pr-[.85rem] pb-[.2rem] pl-[.75rem] drop-shadow-none text-center border border-white/20 border-solid;
 
         &:hover {
-          @apply text-black bg-white/80;
+          @apply text-white bg-black/80;
         }
       }
 
@@ -219,7 +219,7 @@
       .box {
         @apply max-w-[150px] h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
 
-        @media (max-width: theme("screens.breakThou")) {
+        @media (max-width: theme("screens.breakXlg")) {
           @apply min-h-min;
         }
 
@@ -247,19 +247,19 @@
     .projectBox {
       @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)];
 
-      @media (max-width: theme("screens.breakThou")) {
+      @media (max-width: theme("screens.breakXlg")) {
         //
       }
 
-      @media (max-width: theme("screens.breakOne")) {
+      @media (max-width: theme("screens.breakLg")) {
         //
       }
 
-      @media (max-width: theme("screens.breakTwo")) {
+      @media (max-width: theme("screens.breakSm")) {
         //
       }
 
-      @media (max-width: theme("screens.breakThree")) {
+      @media (max-width: theme("screens.breakXsm")) {
         //
       }
 
@@ -296,19 +296,19 @@
     .projectBox {
       @apply shadow-[0px_6px_0px_0px_hsl(0,_0%,_0%,_25%)];
 
-      @media (max-width: theme("screens.breakThou")) {
+      @media (max-width: theme("screens.breakXlg")) {
         @apply min-h-min;
       }
 
-      @media (max-width: theme("screens.breakOne")) {
+      @media (max-width: theme("screens.breakLg")) {
         //
       }
 
-      @media (max-width: theme("screens.breakTwo")) {
+      @media (max-width: theme("screens.breakSm")) {
         //
       }
 
-      @media (max-width: theme("screens.breakThree")) {
+      @media (max-width: theme("screens.breakXsm")) {
         //
       }
 
@@ -337,19 +337,19 @@
     .projectBox {
       @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)] rounded-none;
 
-      @media (max-width: theme("screens.breakThou")) {
+      @media (max-width: theme("screens.breakXlg")) {
         @apply min-h-min;
       }
 
-      @media (max-width: theme("screens.breakOne")) {
+      @media (max-width: theme("screens.breakLg")) {
         //
       }
 
-      @media (max-width: theme("screens.breakTwo")) {
+      @media (max-width: theme("screens.breakSm")) {
         //
       }
 
-      @media (max-width: theme("screens.breakThree")) {
+      @media (max-width: theme("screens.breakXsm")) {
         //
       }
 
@@ -391,19 +391,19 @@
     .projectBox {
       @apply bg-base-offWhite shadow-[0px_1px_1px_0px_hsl(0,_0%,_0%,_50%)];
 
-      @media (max-width: theme("screens.breakThou")) {
+      @media (max-width: theme("screens.breakXlg")) {
         @apply min-h-min;
       }
 
-      @media (max-width: theme("screens.breakOne")) {
+      @media (max-width: theme("screens.breakLg")) {
         //
       }
 
-      @media (max-width: theme("screens.breakTwo")) {
+      @media (max-width: theme("screens.breakSm")) {
         // min-height: 386px;
       }
 
-      @media (max-width: theme("screens.breakThree")) {
+      @media (max-width: theme("screens.breakXsm")) {
         //
       }
 
@@ -416,7 +416,7 @@
       }
 
       .carouselArrow {
-        @apply text-white bg-[hsla(205,98%,17%,0.6)] tracking-[0.05em] shadow-none rounded-sm;
+        @apply text-corp-blueDark bg-corp-blueDark/5 tracking-[0.05em] shadow-none rounded-sm border border-corp-blueDark/70 border-solid;
 
         &:hover {
           @apply text-white bg-[hsla(205,98%,17%,0.85)];
@@ -445,19 +445,19 @@
       @apply rounded-none bg-white/70;
       @apply shadow-[0px_1px_1px_0px_hsl(0,_0%,_0%,_50%)];
 
-      @media (max-width: theme("screens.breakThou")) {
+      @media (max-width: theme("screens.breakXlg")) {
         @apply min-h-min;
       }
 
-      @media (max-width: theme("screens.breakOne")) {
+      @media (max-width: theme("screens.breakLg")) {
         //
       }
 
-      @media (max-width: theme("screens.breakTwo")) {
+      @media (max-width: theme("screens.breakSm")) {
         //
       }
 
-      @media (max-width: theme("screens.breakThree")) {
+      @media (max-width: theme("screens.breakXsm")) {
         //
       }
 
@@ -470,7 +470,7 @@
       }
 
       .carouselArrow {
-        @apply rounded-none text-white bg-black/30 pt-[.1rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none;
+        @apply text-white bg-black/30 pt-[.1rem] pr-[.5rem] pb-[.2rem] pl-[.4rem] shadow-none rounded-sm;
 
         &:hover {
           @apply text-white bg-black/50;

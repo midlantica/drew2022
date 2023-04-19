@@ -17,19 +17,19 @@
   section {
     @apply mt-[2rem] mr-[1.5rem] mb-0 ml-4;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply mt-6 mx-6 mb-4;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply mx-4;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply mx-4;
     }
 
-    @media (max-width: theme("screens.breakThree")) {
+    @media (max-width: theme("screens.breakXsm")) {
       @apply ml-4 mr-2;
     }
   }
@@ -37,23 +37,23 @@
   h1 {
     @apply text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-0 mb-4 normal-case;
 
-    @media (min-width: 1024px) {
+    @media (min-width: theme("screens.breakXlg")) {
       @apply max-w-[26ch];
     }
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply max-w-none;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply max-w-none;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       max-width: 26ch;
     }
 
-    @media (max-width: theme("screens.breakThree")) {
+    @media (max-width: theme("screens.breakXsm")) {
       @apply max-w-none;
     }
   }
@@ -65,16 +65,16 @@
       @apply text-[80%] tracking-wider uppercase;
     }
 
-    @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    @media (min-width: theme("screens.breakXlg")) and (-webkit-min-device-pixel-ratio: 2) {
       //
 
     }
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply columns-2 text-[1.2rem] leading-[2.1em] text-justify tracking-wider gap-x-12 hyphens-auto rule-w-[2px] rule-style-dotted rule-color-[#423ba08b];
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply columns-2;
     }
 
@@ -82,11 +82,11 @@
       @apply columns-1;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply columns-1 text-[1.2rem] leading-[2.3em] tracking-[.01em];
     }
 
-    @media (max-width: theme("screens.breakTwo")) and (-webkit-min-device-pixel-ratio: 2) {
+    @media (max-width: theme("screens.breakSm")) and (-webkit-min-device-pixel-ratio: 2) {
       @apply columns-1 text-[1.15rem];
     }
 

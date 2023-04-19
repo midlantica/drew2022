@@ -53,21 +53,21 @@
   .mainGrid {
     @apply grid-cols-[7fr_6fr] grid mt-0 mx-6 mb-2 gap-y-4 gap-x-0;
 
-    @media (min-width: 1024px) and (min-device-width: 768px) {
+    @media (min-width: theme("screens.breakXlg")) and (min-device-width: theme("screens.breakMd")) {
       @apply grid-cols-[7fr_6fr] mt-0 mx-4 mb-2;
     }
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply grid-cols-1 mt-0 mx-4 mb-2;
     }
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media (min-device-width: theme("screens.breakMd")) and (max-device-width: theme("screens.breakXlg")) and (orientation: landscape) {
       @apply grid-cols-1 mt-0 mx-6 mb-2;
     }
 
     // IPAD PRO LANDSCAPE
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @media (min-width: theme("screens.breakXlg")) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       @apply grid-cols-[7fr_6fr] mt-0 mx-6 mb-2;
     }
   }
@@ -80,24 +80,24 @@
     @apply col-start-1 col-end-2 row-start-1 row-end-3;
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media (min-device-width: theme("screens.breakMd")) and (max-device-width: theme("screens.breakXlg")) and (orientation: landscape) {
       @apply col-start-1 col-end-2 row-start-1 row-end-3;
     }
 
     // IPAD PRO LANDSCAPE
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @media (min-width: theme("screens.breakXlg")) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       @apply col-start-1 col-end-2 row-start-1 row-end-3;
     }
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
   }
@@ -106,24 +106,24 @@
     @apply col-start-2 col-end-3 row-start-1 row-end-2 z-10 -mt-20;
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media (min-device-width: theme("screens.breakMd")) and (max-device-width: theme("screens.breakXlg")) and (orientation: landscape) {
       @apply col-start-2 col-end-3 row-start-1 row-end-2 z-10 mt-[-5.5em];
     }
 
     // IPAD PRO LANDSCAPE
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @media (min-width: theme("screens.breakXlg")) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       @apply col-start-2 col-end-3 row-start-1 row-end-2 z-10 mt-[-5rem];
     }
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-2 row-end-2 top-0 mt-0;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-2 row-end-2 mt-0;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-2 row-end-2 mt-0;
     }
   }
@@ -132,24 +132,24 @@
     @apply col-start-2 col-end-3 row-start-2 row-end-2;
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media (min-device-width: theme("screens.breakMd")) and (max-device-width: theme("screens.breakXlg")) and (orientation: landscape) {
       @apply col-start-1 col-end-3 row-start-2 row-end-2;
     }
 
     // IPAD PRO LANDSCAPE
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @media (min-width: theme("screens.breakXlg")) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       @apply col-start-2 col-end-3 row-start-2 row-end-2;
     }
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
   }
@@ -158,24 +158,24 @@
     @apply col-span-full row-start-3 row-end-4;
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media (min-device-width: theme("screens.breakMd")) and (max-device-width: theme("screens.breakXlg")) and (orientation: landscape) {
       @apply col-span-full row-start-3 row-end-4;
     }
 
     // IPAD PRO LANDSCAPE
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @media (min-width: theme("screens.breakXlg")) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       @apply col-span-full row-start-3 row-end-4;
     }
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply row-start-3 row-end-3;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply row-start-3 row-end-3;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply row-start-3 row-end-3;
     }
   }
@@ -183,15 +183,15 @@
   footer {
     @apply text-base-ivory bg-techy-mango shadow-none;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       //
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       //
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       //
     }
   }

@@ -1,16 +1,14 @@
 <template>
   <div class="quoteBlock" v-if="currentQuote">
-    <div @click="previousQuote()" class="arrowBtn">
-      &lt;
-    </div>
+    <div @click="previousQuote()" class="arrowBtn" />
     <transition name="quoteFade">
       <div class="quotePad">
-        <p>&ldquo;{{ currentQuote.quote }}&rdquo; <cite>&ndash; {{ currentQuote.author }}</cite></p>
+        <p>
+          &ldquo;{{ currentQuote.quote }}&rdquo; <cite>&ndash; {{ currentQuote.author }}</cite>
+        </p>
       </div>
     </transition>
-    <div @click="nextQuote()" class="arrowBtn">
-      &gt;
-    </div>
+    <div @click="nextQuote()" class="arrowBtn" />
   </div>
 </template>
 
@@ -146,11 +144,20 @@
 <style lang='scss'>
 
   .arrowBtn {
-    @apply text-white font-bold select-none;
+    @apply text-white select-none p-2 font-normal font-sans;
 
     &:hover {
       @apply text-[yellow] cursor-pointer;
     }
+
+    &:first-of-type:before {
+      @apply block content-['<'];
+    }
+
+    &:last-of-type:before {
+      @apply block content-['>'];
+    }
+
   }
 
   .quoteBlock {
@@ -211,7 +218,7 @@
       @apply text-[0.9em] text-base-ivory tracking-wider leading-[1.5em] text-center;
       animation: fadeTexter 2s forwards;
 
-      @media only screen and (min-device-width: 700px) and (max-device-width: 1024px) {
+      @media only screen and (min-device-width: 700px) and (max-device-width: theme("screens.breakXlg")) {
         @apply text-[0.9em];
       }
 
@@ -253,19 +260,19 @@
     p {
       @apply font-techyCopy text-[1em] text-techy-blueTech text-center tracking-wide;
 
-      @media (max-width: theme("screens.breakThou")) {
+      @media (max-width: theme("screens.breakXlg")) {
         @apply text-[1.25em];
       }
 
-      @media (max-width: theme("screens.breakOne")) {
+      @media (max-width: theme("screens.breakLg")) {
         @apply text-[1.2em];
       }
 
-      @media (max-width: theme("screens.breakTwo")) {
+      @media (max-width: theme("screens.breakSm")) {
         @apply text-[1em];
       }
 
-      @media (max-width: theme("screens.breakThree")) {
+      @media (max-width: theme("screens.breakXsm")) {
         @apply text-[.85em] leading-5;
       }
     }
@@ -292,6 +299,7 @@
 
       &:hover {
         content: '<';
+        // @apply content-['<'];
       }
     }
 
@@ -300,7 +308,7 @@
 
       &:hover {
         content: '>';
-        // @apply content;
+        // @apply content-['>'];
       }
     }
 

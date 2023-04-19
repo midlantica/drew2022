@@ -52,15 +52,15 @@
   .about {
     @apply bg-[#fbf3bb] py-5 px-7 flex flex-row flex-nowrap justify-center items-center content-center self-center rounded-sm cursor-pointer shadow-[0px_1px_2px_0px_#00000080];
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply mt-0 mx-0 mb-0;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply mt-0 mx-0 mb-0;
     }
 
-    @media (max-width: theme("screens.breakFour")) {
+    @media (max-width: theme("screens.breakXxsm")) {
       @apply flex-col;
     }
   }
@@ -68,7 +68,7 @@
   .flagBox {
     @apply flex flex-col content-center items-center justify-center self-center float-left clear-left basis-auto;
 
-    @media (max-width: theme("screens.breakFour")) {
+    @media (max-width: theme("screens.breakXxsm")) {
       @apply mb-2;
     }
   }
@@ -107,11 +107,11 @@
     p {
       @apply text-[0.9rem] tracking-[0.02rem] leading-6 m-0 font-medium font-corpCopy;
 
-      @media (max-width: theme("screens.breakThou")) {
+      @media (max-width: theme("screens.breakXlg")) {
         @apply leading-7;
       }
 
-      @media (max-width: theme("screens.breakTwo")) {
+      @media (max-width: theme("screens.breakSm")) {
         @apply leading-6;
       }
     }

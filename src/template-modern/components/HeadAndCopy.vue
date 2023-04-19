@@ -32,15 +32,15 @@
         @apply mt-[.75rem] w-auto;
       }
 
-      @media (max-width: theme("screens.breakOne")) {
+      @media (max-width: theme("screens.breakLg")) {
         @apply w-auto;
       }
 
-      @media (max-width: theme("screens.breakTwo")) {
+      @media (max-width: theme("screens.breakSm")) {
         @apply max-w-[30ch];
       }
 
-      @media (max-width: theme("screens.breakThree")) {
+      @media (max-width: theme("screens.breakXsm")) {
         //
       }
 

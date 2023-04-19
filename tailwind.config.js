@@ -28,13 +28,12 @@ module.exports = {
     },
     extend: {
       screens: {
-        breakFour: '320px',
-        breakThree: '430px',
-        breakTwo: '630px',
-        break768: '768px',
-        breakOne: '840px',
-        breakThou: '1024px'
-        // breakMinMax: '630px 760px',
+        breakXxsm: '320px', // Xxsm
+        breakXsm: '430px', // Xsm
+        breakSm: '630px', // Sm
+        breakMd: '768px', // Md
+        breakLg: '840px', // Lg
+        breakXlg: '1024px' // Xlg
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'

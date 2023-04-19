@@ -29,14 +29,14 @@ audio {
 }
 
 // BREAKPOINTS
-:root {
-  --breakThou: 1024px;
-  --breakOne: 840px;
-  --break768: 768px;
-  --breakTwo: 630px;
-  --breakThree: 430px;
-  --breakFour: 320px;
-}
+// :root {
+//   --breakXlg: 1024px;
+//   --breakLg: 840px;
+//   --breakMd: 768px;
+//   --breakSm: 630px;
+//   --breakXsm: 430px;
+//   --breakXxsm: 320px;
+// }
 
 ::selection {
   @apply text-black bg-[#fbd404];

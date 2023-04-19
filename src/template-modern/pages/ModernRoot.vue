@@ -32,30 +32,20 @@
 
   .modBacker {
     @apply flex flex-col items-center;
-
-    @media (max-width: 900px) {
-      //
-    }
-
-    @media (max-width: 600px) {
-      //
-    }
-
-    @media (max-width: 300px) {
-      //
-    }
   }
 
   .mainGrid {
     @apply w-[90%] grid grid-cols-1 gap-y-2 gap-x-0;
 
-    @media (max-width: theme("screens.breakThou")) {}
+    @media (max-width: theme("screens.breakXlg")) {
+      //
+    }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply w-[90%] m-0;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       //
     }
   }
@@ -63,33 +53,31 @@
   .slides {
     @apply content-center w-full justify-self-center max-w-[500px] col-start-1 col-end-1 row-start-1 row-end-1;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       //
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       //
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       //
     }
   }
 
   .skillsGrid {
-    grid-template-columns: repeat(6, minmax(88px, 1fr)) !important;
-    @apply col-start-1 col-end-2 row-start-2 row-end-4 justify-center justify-items-center w-[35vw];
+    @apply grid-cols-[repeat(6,_minmax(88px,_1fr))] col-start-1 col-end-2 row-start-2 row-end-4 justify-center justify-items-center w-[35vw];
 
-    @media (max-width: 300000000rem) {
-      grid-template-columns: repeat(4, minmax(88px, 1fr)) !important;
-      @apply w-[70vw] row-start-2 row-end-2;
+    @media (max-width: theme("screens.breakXlg")) {
+      @apply grid-cols-[repeat(4,_minmax(88px,_1fr))] w-[70vw] row-start-2 row-end-2;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply row-start-2 row-end-2;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply row-start-2 row-end-2;
     }
   }

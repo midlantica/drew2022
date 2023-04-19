@@ -53,7 +53,7 @@
   .about {
     @apply text-[.95em] bg-white;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       //
     }
   }
@@ -64,19 +64,17 @@
   }
 
   .mainGrid {
-    grid-template-columns: repeat(2, 1fr);
-    @apply grid gap-y-2 gap-x-0 ml-4 mb-4 mr-6;
+    @apply grid-cols-2 grid gap-y-2 gap-x-0 ml-4 mb-4 mr-6;
 
-    @media (max-width: theme("screens.breakThou")) {
-      grid-template-columns: 1fr;
-      @apply gap-y-2 mx-4;
+    @media (max-width: theme("screens.breakXlg")) {
+      @apply grid-cols-1 gap-y-2 mx-4;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       //
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       //
     }
   }
@@ -84,15 +82,15 @@
   .copyArea {
     @apply col-start-1 col-end-2 row-start-1 row-end-3;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1 mb-[-1em];
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
   }
@@ -100,16 +98,16 @@
   .slides {
     @apply col-start-2 col-end-3 row-start-1 row-end-1 -mt-4;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3 mt-0;
 
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3 mt-0;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3 mt-0;
     }
   }
@@ -117,15 +115,15 @@
   .skillsGrid {
     @apply col-start-1 col-end-2 row-start-2 row-end-2;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       //
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       //
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       //
     }
   }
@@ -133,15 +131,15 @@
   .about {
     @apply col-start-2 col-end-3 row-start-2 row-end-2;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
   }
@@ -149,15 +147,15 @@
   .quoteBlock {
     @apply col-start-2 col-end-3 row-start-3 row-end-3;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
   }

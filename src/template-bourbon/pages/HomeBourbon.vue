@@ -66,15 +66,15 @@
   .copyArea {
     @apply delay-[250ms] col-start-1 col-end-2 row-start-1 row-end-4;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-span-full;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-span-full;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-span-full;
     }
   }
@@ -82,15 +82,15 @@
   .slides {
     @apply col-start-2 col-end-3 row-start-1 row-end-1;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
   }
@@ -98,19 +98,19 @@
   .about {
     @apply col-start-2 col-end-3 row-start-2;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-4 row-end-4;
     }
 
-    @media (max-width: theme("screens.breakThree")) {
+    @media (max-width: theme("screens.breakXsm")) {
       @apply m-0;
     }
 
@@ -122,19 +122,19 @@
   .quoteBlock {
     @apply col-start-2 col-end-3 row-start-3 row-end-3;
 
-    @media (max-width: theme("screens.breakThou")) {
+    @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: theme("screens.breakOne")) {
+    @media (max-width: theme("screens.breakLg")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: theme("screens.breakTwo")) {
+    @media (max-width: theme("screens.breakSm")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: theme("screens.breakThree")) {
+    @media (max-width: theme("screens.breakXsm")) {
       @apply m-0;
     }
   }
