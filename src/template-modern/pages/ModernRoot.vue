@@ -49,13 +49,13 @@
   .mainGrid {
     @apply w-[90%] grid grid-cols-1 gap-y-2 gap-x-0;
 
-    @media (max-width: 1024px) {}
+    @media (max-width: theme("screens.breakThou")) {}
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply w-[90%] m-0;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       //
     }
   }
@@ -63,15 +63,15 @@
   .slides {
     @apply content-center w-full justify-self-center max-w-[500px] col-start-1 col-end-1 row-start-1 row-end-1;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       //
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       //
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       //
     }
   }
@@ -85,11 +85,11 @@
       @apply w-[70vw] row-start-2 row-end-2;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply row-start-2 row-end-2;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply row-start-2 row-end-2;
     }
   }

@@ -41,11 +41,11 @@
       p {
         @apply font-punkCopy text-base-black bg-white text-[0.9em] font-medium not-italic tracking-[.02em] -hue-rotate-[1.25deg] lowercase py-1 px-2;
 
-        @media (max-width: 630px) {
+        @media (max-width: theme("screens.breakTwo")) {
           //
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: theme("screens.breakThree")) {
           //
         }
 
@@ -103,7 +103,7 @@
     flex: 0 1 auto;
     @apply flex flex-col relative top-0 left-0;
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply mb-0;
     }
   }

@@ -69,15 +69,15 @@
       }
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       //
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       //
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: theme("screens.breakThree")) {
       //
     }
   }
@@ -85,7 +85,7 @@
   section.jobDesc {
     @apply transition duration-[.25s] ease-in lowercase;
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply text-center self-center;
 
       &:nth-child(1) {
@@ -97,22 +97,22 @@
       }
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       //
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: theme("screens.breakThree")) {
       @apply w-[20ch];
     }
 
     h2 {
       @apply text-[1.15rem] tracking-[-0.01em] leading-[1.5em] font-normal text-[hsla(0,0%,100%,0.85)] text-center lowercase antialiased drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)];
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         //
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         //
       }
     }
@@ -121,15 +121,15 @@
   section.contact {
     @apply mt-0 z-10 transition duration-[.25s] ease-in;
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       //
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       //
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: theme("screens.breakThree")) {
       @apply w-[30ch];
     }
 
@@ -144,15 +144,15 @@
         }
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         //
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         //
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         //
       }
     }

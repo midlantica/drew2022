@@ -17,19 +17,19 @@
   section {
     @apply mt-[2rem] mr-[1.5rem] mb-0 ml-4;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply mt-6 mx-6 mb-4;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply mx-4;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply mx-4;
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: theme("screens.breakThree")) {
       @apply ml-4 mr-2;
     }
   }
@@ -41,19 +41,19 @@
       @apply max-w-[26ch];
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply max-w-none;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply max-w-none;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       max-width: 26ch;
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: theme("screens.breakThree")) {
       @apply max-w-none;
     }
   }
@@ -70,11 +70,11 @@
 
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply columns-2 text-[1.2rem] leading-[2.1em] text-justify tracking-wider gap-x-12 hyphens-auto rule-w-[2px] rule-style-dotted rule-color-[#423ba08b];
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply columns-2;
     }
 
@@ -82,11 +82,11 @@
       @apply columns-1;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply columns-1 text-[1.2rem] leading-[2.3em] tracking-[.01em];
     }
 
-    @media (max-width: 630px) and (-webkit-min-device-pixel-ratio: 2) {
+    @media (max-width: theme("screens.breakTwo")) and (-webkit-min-device-pixel-ratio: 2) {
       @apply columns-1 text-[1.15rem];
     }
 

@@ -13,15 +13,15 @@
   .tooltip {
     @apply bg-[#d71d5b] py-20 px-6 w-[30ch] rounded-2xl shadow-[0px_2px_20px_0px_black] fixed top-[-3rem];
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       //
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       //
     }
 
-    @media (max-width: 320px) {
+    @media (max-width: theme("screens.breakFour")) {
       //
     }
 
@@ -50,11 +50,11 @@
     p {
       @apply text-[1rem] leading-[1.4rem] m-0 font-medium tracking-[.001rem] font-corpCopy;
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         @apply text-[1.15rem] leading-7;
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         @apply text-[1rem] leading-6;
       }
 

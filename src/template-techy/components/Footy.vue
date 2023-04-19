@@ -13,19 +13,19 @@
     p {
       @apply text-[1.2em] text-center tracking-wide p-2 text-techy-blueTech;
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         @apply text-[1.25em];
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         @apply text-[1.2em];
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         @apply text-[1em];
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         @apply text-[.85em] leading-5;
       }
     }

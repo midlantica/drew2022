@@ -175,19 +175,19 @@
     .projectBox {
       @apply bg-transparent;
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         //
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         //
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         //
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         //
       }
 
@@ -219,7 +219,7 @@
       .box {
         @apply max-w-[150px] h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
 
-        @media (max-width: 1024px) {
+        @media (max-width: theme("screens.breakThou")) {
           @apply min-h-min;
         }
 
@@ -247,19 +247,19 @@
     .projectBox {
       @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)];
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         //
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         //
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         //
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         //
       }
 
@@ -296,19 +296,19 @@
     .projectBox {
       @apply shadow-[0px_6px_0px_0px_hsl(0,_0%,_0%,_25%)];
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         @apply min-h-min;
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         //
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         //
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         //
       }
 
@@ -337,19 +337,19 @@
     .projectBox {
       @apply shadow-[0px_2px_6px_-2px_hsl(0,_0%,_0%,_90%)] rounded-none;
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         @apply min-h-min;
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         //
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         //
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         //
       }
 
@@ -391,19 +391,19 @@
     .projectBox {
       @apply bg-base-offWhite shadow-[0px_1px_1px_0px_hsl(0,_0%,_0%,_50%)];
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         @apply min-h-min;
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         //
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         // min-height: 386px;
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         //
       }
 
@@ -445,19 +445,19 @@
       @apply rounded-none bg-white/70;
       @apply shadow-[0px_1px_1px_0px_hsl(0,_0%,_0%,_50%)];
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         @apply min-h-min;
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         //
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         //
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         //
       }
 

@@ -206,15 +206,15 @@
   .skillsGrid {
     @apply col-start-1 col-end-2 row-start-2 row-end-4 w-full grid justify-center items-stretch content-between relative gap-y-[.5] gap-x-[auto] justify-items-center;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply row-start-2 row-end-2;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply row-start-2 row-end-2;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply row-start-2 row-end-2;
     }
 

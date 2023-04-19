@@ -50,7 +50,7 @@
   nav {
     @apply w-full flex flex-col flex-nowrap justify-center items-center content-center grow;
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       //
     }
   }
@@ -58,11 +58,11 @@
   nav .mastMain {
     @apply w-full bg-techy-mango;
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       //
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       //
     }
 
@@ -73,20 +73,20 @@
         // grid-template-columns: 2fr 4fr 7fr;
         @apply grid grid-cols-[2fr_4fr_7fr] items-center my-0 mx-auto pt-4 gap-8;
 
-        @media (max-width: 1024px) {
+        @media (max-width: theme("screens.breakThou")) {
           // grid-template-columns: auto auto;
           @apply grid-cols-[auto_auto] justify-center gap-2;
         }
 
-        @media (max-width: 840px) {
+        @media (max-width: theme("screens.breakOne")) {
           //
         }
 
-        @media (max-width: 630px) {
+        @media (max-width: theme("screens.breakTwo")) {
           //
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: theme("screens.breakThree")) {
           //
         }
 
@@ -97,19 +97,19 @@
         a.drewHeadPic {
           @apply col-start-1 col-end-2 row-start-1 row-end-3 w-[92px] h-[109px] pt-4 pr-4 pb-0 pl-4 bg-no-repeat bg-cover justify-self-end bg-[url('/img/drew_mug_dig.png')];
 
-          @media (max-width: 1024px) {
+          @media (max-width: theme("screens.breakThou")) {
             @apply col-start-1 col-end-2 row-start-1 row-end-2 w-[92px] h-[109px] mt-0 mr-2 mb-0 ml-0 justify-self-end;
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: theme("screens.breakTwo")) {
             @apply w-[64px] h-[75px];
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: theme("screens.breakThree")) {
             @apply w-[46px] h-[55px] m-0;
           }
 
-          @media (max-width: 320px) {
+          @media (max-width: theme("screens.breakFour")) {
             @apply h-[55px] m-0;
           }
 
@@ -118,19 +118,19 @@
         a.svgArt {
           @apply h-[5.9em];
 
-          @media (max-width: 1024px) {
+          @media (max-width: theme("screens.breakThou")) {
             @apply h-[11.5vw];
           }
 
-          @media (max-width: 840px) {
+          @media (max-width: theme("screens.breakOne")) {
             @apply h-[14vw];
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: theme("screens.breakTwo")) {
             @apply h-[14vw];
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: theme("screens.breakThree")) {
             @apply h-[14vw];
           }
         }
@@ -138,19 +138,19 @@
         a.mastDrew {
           @apply col-start-2 col-end-3 row-start-1 row-end-3 w-[19em];
 
-          @media (max-width: 1024px) {
+          @media (max-width: theme("screens.breakThou")) {
             @apply col-start-2 col-end-3 row-start-1 row-end-1 self-end mb-[-1em] w-[40vw];
           }
 
-          @media (max-width: 840px) {
+          @media (max-width: theme("screens.breakOne")) {
             //
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: theme("screens.breakTwo")) {
             //
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: theme("screens.breakThree")) {
             @apply w-[56vw] mb-0 ;
           }
         }
@@ -158,19 +158,19 @@
         a.mastHarper {
           @apply col-start-3 col-end-4 row-start-1 row-end-3 w-[25.3em];
 
-          @media (max-width: 1024px) {
+          @media (max-width: theme("screens.breakThou")) {
             @apply col-start-1 col-end-3 row-start-2 row-end-3 w-[50vw];
           }
 
-          @media (max-width: 840px) {
+          @media (max-width: theme("screens.breakOne")) {
             //
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: theme("screens.breakTwo")) {
             @apply ml-0 mt-0;
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: theme("screens.breakThree")) {
             @apply w-[77vw] h-[20vw];
           }
         }
@@ -181,15 +181,15 @@
   nav .jobDesc {
     @apply mt-[-1em] mr-0 mb-4 ml-[11.1em] text-left;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply my-4 mx-0 text-center;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply my-0 mx-0 mb-4 text-center;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       //
 
       &:nth-child(1) {
@@ -212,7 +212,7 @@
         //
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         @apply inline text-[3.3vw] mt-[-3px];
 
         &:nth-child(1) {
@@ -224,7 +224,7 @@
         }
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         @apply inline text-[3.7vw] mt-[-3px];
 
         &:nth-child(1) {
@@ -236,7 +236,7 @@
         }
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         @apply text-[5.8vw];
       }
     }
@@ -248,19 +248,19 @@
     .contact {
       @apply font-normal text-base-ivory flex flex-row flex-wrap justify-center items-center content-center grow w-1/2;
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         @apply w-full;
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         @apply w-full;
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         @apply w-full;
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         @apply w-full;
       }
 
@@ -283,7 +283,7 @@
           //
         }
 
-        @media (max-width: 840px) {
+        @media (max-width: theme("screens.breakOne")) {
           @apply justify-center text-[1.2em] tracking-[.1em];
 
           &:nth-child(1) {
@@ -295,7 +295,7 @@
           }
         }
 
-        @media (max-width: 630px) {
+        @media (max-width: theme("screens.breakTwo")) {
           @apply tracking-[.09em] ;
 
           &:nth-child(1) {
@@ -307,7 +307,7 @@
           }
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: theme("screens.breakThree")) {
           @apply justify-center text-[1.1em] tracking-[.07em] leading-8 text-center;
 
           &:nth-child(1) {

@@ -24,15 +24,15 @@
       //
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply px-4;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply px-2;
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: theme("screens.breakThree")) {
       //
     }
   }
@@ -51,16 +51,16 @@
         @apply max-w-[30ch];
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         @apply text-[1.65rem];
         //
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         @apply max-w-[30ch] text-[1.5rem];
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         @apply text-[1.45rem] m-0;
       }
 
@@ -74,12 +74,12 @@
   p {
     @apply leading-[2.4rem] font-bourbonCopy text-[1.1rem] text-base-grey mt-2 mx-2 mb-0 tracking-[0.03rem] mr-2;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       // columns: 2 20ch;
       @apply columns-2 leading-9 gap-x-12 text-justify hyphens-auto rule-w-[1px] rule-style-solid rule-color-[hsla(7,77%,43%,50%)];
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply columns-2 tracking-[0.05rem] text-justify hyphens-auto;
     }
 
@@ -88,7 +88,7 @@
       @apply columns-1 text-justify hyphens-auto;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply columns-1 text-justify hyphens-auto;
     }
   }

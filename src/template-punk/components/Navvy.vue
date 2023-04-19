@@ -35,7 +35,7 @@
   nav {
     @apply flex flex-col content-center px-2 py-4 items-center;
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply justify-center content-center items-center;
     }
 
@@ -54,7 +54,7 @@
         }
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         @apply self-center;
       }
     }
@@ -63,19 +63,19 @@
     .mastMain {
       @apply flex flex-row flex-nowrap justify-center items-center content-center mt-[-1.5em] z-[2] w-full rotate-[.75rem];
 
-      @media (max-width: 1024px) {
+      @media (max-width: theme("screens.breakThou")) {
         //
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: theme("screens.breakOne")) {
         @apply flex-wrap;
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: theme("screens.breakTwo")) {
         //
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: theme("screens.breakThree")) {
         //
       }
 
@@ -85,19 +85,19 @@
         &:nth-child(1) {
           @apply w-[60vw];
 
-          @media (max-width: 1024px) {
+          @media (max-width: theme("screens.breakThou")) {
             @apply order-1;
           }
 
-          @media (max-width: 840px) {
+          @media (max-width: theme("screens.breakOne")) {
             @apply order-1 w-[47vw] mt-6;
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: theme("screens.breakTwo")) {
             @apply order-1 w-[59vw];
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: theme("screens.breakThree")) {
             @apply w-[63vw] order-1;
           }
         }
@@ -105,19 +105,19 @@
         &:nth-child(2) {
           @apply w-[80vw];
 
-          @media (max-width: 1024px) {
+          @media (max-width: theme("screens.breakThou")) {
             @apply order-1;
           }
 
-          @media (max-width: 840px) {
+          @media (max-width: theme("screens.breakOne")) {
             @apply w-[68vw] order-3;
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: theme("screens.breakTwo")) {
             @apply w-[88vw] order-3;
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: theme("screens.breakThree")) {
             @apply w-[92vw] order-3;
           }
         }
@@ -125,19 +125,19 @@
         &:nth-child(3) {
           //
 
-          @media (max-width: 1024px) {
+          @media (max-width: theme("screens.breakThou")) {
             @apply order-3;
           }
 
-          @media (max-width: 840px) {
+          @media (max-width: theme("screens.breakOne")) {
             @apply order-2;
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: theme("screens.breakTwo")) {
             @apply order-2;
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: theme("screens.breakThree")) {
             @apply order-2;
           }
         }
@@ -147,19 +147,19 @@
       a.svg.svgArt.mastDrew {
         @apply w-[170px];
 
-        @media (max-width: 1024px) {
+        @media (max-width: theme("screens.breakThou")) {
           //
         }
 
-        @media (max-width: 840px) {
+        @media (max-width: theme("screens.breakOne")) {
           //
         }
 
-        @media (max-width: 630px) {
+        @media (max-width: theme("screens.breakTwo")) {
           //
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: theme("screens.breakThree")) {
           //
         }
       }
@@ -167,19 +167,19 @@
       a.svg.svgArt.mastHarper {
         //
 
-        @media (max-width: 1024px) {
+        @media (max-width: theme("screens.breakThou")) {
           //
         }
 
-        @media (max-width: 840px) {
+        @media (max-width: theme("screens.breakOne")) {
           //
         }
 
-        @media (max-width: 630px) {
+        @media (max-width: theme("screens.breakTwo")) {
           //
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: theme("screens.breakThree")) {
           //
         }
 
@@ -190,15 +190,15 @@
         //
         @apply bg-no-repeat bg-contain w-[18vw] h-[120px] no-underline;
 
-        @media (max-width: 840px) {
+        @media (max-width: theme("screens.breakOne")) {
           @apply w-[122px] h-[122px] mt-4;
         }
 
-        @media (max-width: 630px) {
+        @media (max-width: theme("screens.breakTwo")) {
           @apply w-[122px] h-[135px] mt-2;
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: theme("screens.breakThree")) {
           @apply w-[82px] h-[93px];
         }
 

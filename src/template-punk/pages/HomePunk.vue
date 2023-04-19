@@ -53,15 +53,15 @@
   .mainGrid {
     @apply grid grid-cols-2 gap-x-2 gap-y-2 shadow-none py-0 px-4 bg-transparent;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply grid-cols-1 gap-x-1 gap-y-2;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       //
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       //
     }
   }
@@ -69,15 +69,15 @@
   .copyArea {
     @apply col-start-1 col-end-2 row-start-1 row-end-3 flex flex-col self-end;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
   }
@@ -85,15 +85,15 @@
   .slides {
     @apply col-start-2 col-end-3 row-start-1 row-end-1;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply col-start-1 col-end-3 row-start-3 row-end-3;
     }
   }
@@ -101,15 +101,15 @@
   .about {
     @apply col-start-2 col-end-3 row-start-2 row-end-2;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
@@ -121,15 +121,15 @@
   .quoteBlock {
     @apply col-start-2 col-end-3 row-start-3 row-end-3;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply col-start-1 col-end-3 row-start-5 row-end-5;
     }
   }
@@ -137,15 +137,15 @@
   .skillsGrid {
     @apply col-start-1 col-end-3 row-start-3 row-end-3;
 
-    @media (max-width: 1024px) {
+    @media (max-width: theme("screens.breakThou")) {
       @apply row-start-4 row-end-4;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: theme("screens.breakOne")) {
       @apply row-start-4 row-end-4;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: theme("screens.breakTwo")) {
       @apply row-start-4 row-end-4;
     }
   }
