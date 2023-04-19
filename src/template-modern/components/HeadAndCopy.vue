@@ -18,34 +18,29 @@
   @import "../assets/css/modern-main.scss";
 
   .headBlock {
-    grid-template-columns: 88px auto;
     grid-template-rows: auto;
-    @apply grid gap-x-1.5 justify-items-start items-center mt-4 mb-3 gap-2;
+    @apply grid grid-cols-[88px_auto] gap-x-1.5 justify-items-start items-center mt-4 mb-3 gap-2;
 
     a.drewhead {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      @apply bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')];
+      @apply col-start-1 col-end-2 row-start-1 row-end-2 bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')];
     }
 
     h1 {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-      @apply inline-block font-modernSubhead tracking-[-0.01ch] p-0 self-center mt-[2.2rem] w-[20ch] text-white font-normal text-[1.1rem] drop-shadow-[1px_1px_4px_black];
+      @apply col-start-2 col-end-3 row-start-1 row-end-2  inline-block font-modernSubhead tracking-[-0.01ch] p-0 self-center mt-[2.2rem] w-[20ch] text-white font-normal text-[1.1rem] drop-shadow-[1px_1px_4px_black];
 
       @media (max-width: 535px) {
         @apply mt-[.75rem] w-auto;
       }
 
-      @media (max-width: var(--breakOne)) {
+      @media (max-width: 840px) {
         @apply w-auto;
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply max-w-[30ch];
       }
 
-      @media (max-width: var(--breakThree)) {
+      @media (max-width: 430px) {
         //
       }
 

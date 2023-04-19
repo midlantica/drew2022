@@ -83,10 +83,9 @@
   }
 
   .copyArea {
-    @apply col-start-1 col-end-2 row-start-1 row-end-3;
+    @apply col-start-1 col-end-2 row-start-1 row-end-4;
 
     @media (max-width: 1024px) {
-      grid-column: 1 / 3;
       @apply col-start-1 col-end-3 row-start-1 row-end-1;
     }
 

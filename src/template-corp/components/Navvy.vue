@@ -40,7 +40,7 @@
   nav {
     @apply flex flex-row flex-wrap items-center pt-[2em] px-[2em] pb-0 justify-between mb-6;
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       @apply justify-center mb-8;
     }
   }
@@ -73,11 +73,11 @@
   .drewHarper {
     @apply h-[83px];
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       //
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply h-auto;
     }
   }
@@ -88,7 +88,7 @@
     filter: hue-rotate(210deg) grayscale(50%);
     @apply bg-[url('/img/drew_mug_red.png')] inline-block w-[80px] h-[80px] bg-no-repeat bg-corp-accentRed rounded-[1px] shadow-[0px_0px_1px_1px_#00000026];
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       background-position: -40px -50px !important;
       background-size: 145% !important;
     }
@@ -101,15 +101,15 @@
       // color: initial !important;
     }
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       //
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       //
     }
 
-    @media (max-width: var(--breakThree)) {
+    @media (max-width: 430px) {
       //
     }
   }
@@ -121,15 +121,15 @@
       //
     }
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       //
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       //
     }
 
-    @media (max-width: var(--breakThree)) {
+    @media (max-width: 430px) {
       //
     }
   }
@@ -137,11 +137,11 @@
   .uiux {
     @apply h-[4ch];
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       @apply self-center;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply h-[3ch];
     }
   }
@@ -149,7 +149,7 @@
   .drewTop {
     @apply flex flex-col flex-wrap content-center text-center;
 
-    @media (max-width: var(--breakThree)) {
+    @media (max-width: 430px) {
       @apply w-full;
     }
 
@@ -158,15 +158,15 @@
   .contact {
     @apply grow flex flex-col flex-wrap justify-center items-center content-center m-auto self-baseline gap-x-4 gap-y-2;
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       @apply ml-0 flex-row mt-4;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply mt-[.4em] flex-row;
     }
 
-    @media (max-width: var(--breakThree)) {
+    @media (max-width: 430px) {
       @apply mt-4 transition duration-[.25s] ease-in flex-row;
     }
 
@@ -186,7 +186,7 @@
         }
       }
 
-      @media (max-width: var(--breakOne)) {
+      @media (max-width: 840px) {
         @apply justify-center;
 
         &:nth-child(1) {
@@ -198,11 +198,11 @@
         }
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         //
       }
 
-      @media (max-width: var(--breakThree)) {
+      @media (max-width: 430px) {
         @apply justify-center leading-5 mb-[-4px] text-center;
       }
 

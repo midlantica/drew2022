@@ -204,37 +204,38 @@
     @apply h-[70px] m-auto flex items-center justify-center;
   }
   .skillsGrid {
-    grid-column: 1 / 2;
-    grid-row: 2 / 4;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    @apply w-full grid justify-center items-stretch content-between relative gap-y-[.5] gap-x-[auto] justify-items-center;
+    @apply col-start-1 col-end-2 row-start-2 row-end-4 w-full grid justify-center items-stretch content-between relative gap-y-[.5] gap-x-[auto] justify-items-center;
 
-    @media (max-width: var(--breakThou)) {
-      grid-row: 2;
+    @media (max-width: 1024px) {
+      @apply row-start-2 row-end-2;
     }
 
-    @media (max-width: var(--breakOne)) {
-      grid-row: 2;
+    @media (max-width: 840px) {
+      @apply row-start-2 row-end-2;
     }
 
-    @media (max-width: var(--breakTwo)) {
-      grid-row: 2;
+    @media (max-width: 630px) {
+      @apply row-start-2 row-end-2;
     }
 
     @media (min-width: 1026px) {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      // grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      @apply grid-rows-[auto-fit,_minmax(120px,_1fr)] ;
     }
 
     @media (min-width: 563px) and (max-width: 1025px) {
-      grid-template-columns: repeat(6, minmax(88px, 1fr));
+      // grid-template-columns: repeat(6, minmax(88px, 1fr));
+      @apply grid-rows-[auto-fit,_minmax(120px,_1fr)] ;
     }
 
     @media (min-width: 471px) and (max-width: 562px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      // grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      @apply grid-rows-[auto-fit,_minmax(120px,_1fr)] ;
     }
 
     @media (max-width: 470px) {
-      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+      // grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+      @apply grid-rows-[auto-fit,_minmax(120px,_1fr)] ;
     }
 
     svg {

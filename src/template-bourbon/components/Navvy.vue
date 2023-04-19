@@ -58,7 +58,7 @@
   nav {
     @apply flex flex-row flex-wrap justify-between items-center py-2 px-5;
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       @apply justify-center;
     }
 
@@ -74,15 +74,15 @@
   h1 {
     @apply font-bourbonSubhead font-normal text-[4em] leading-none tracking-[.06em] transition duration-[.25s] ease-in antialiased w-auto grow-0 drop-shadow-[4px_0px_3px_rgba(0,0,0,0.1)];
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       @apply grow-0 text-right;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply grow-0 text-center;
     }
 
-    @media (max-width: var(--breakThree)) {
+    @media (max-width: 430px) {
       font-size: 3.05em;
     }
 
@@ -91,11 +91,11 @@
   section.jobDesc {
     @apply grow ml-[0.55rem] mt-[.25rem] transition duration-[.25s] ease-in;
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       @apply grow-0 ml-2 mt-2;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply grow-0 text-center self-center ml-0 mt-2;
 
       &:nth-child(1) {
@@ -107,7 +107,7 @@
       }
     }
 
-    @media (max-width: var(--breakThree)) {
+    @media (max-width: 430px) {
       @apply ml-0 mt-0;
 
       &:nth-child(1) {
@@ -126,7 +126,7 @@
         @apply text-[1.51rem] mb-[.1em];
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply inline-block text-[1.775em];
 
         &:nth-child(2) {
@@ -134,7 +134,7 @@
         }
       }
 
-      @media (max-width: var(--breakThree)) {
+      @media (max-width: 430px) {
         @apply text-[1.25em];
 
         &:nth-child(2) {
@@ -147,15 +147,15 @@
   section.contact {
     @apply uppercase mt-[.5rem] z-10 transition duration-[.25s] ease-in drop-shadow-[3px_0px_1px_rgba(0,0,0,0.1)];
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       @apply w-full flex flex-row flex-wrap items-center justify-center gap-4;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       @apply mt-[0.5em] flex-row;
     }
 
-    @media (max-width: var(--breakThree)) {
+    @media (max-width: 430px) {
       @apply mt-1 transition duration-[.25s] ease-in gap-x-2 gap-y-1;
     }
 
@@ -170,7 +170,7 @@
         //
       }
 
-      @media (max-width: var(--breakOne)) {
+      @media (max-width: 840px) {
         @apply justify-center text-[1.5rem] tracking-[0.1785rem] mt-[-.3em] leading-[1.95rem];
 
         &:nth-child(1) {
@@ -182,11 +182,11 @@
         }
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply text-[1.05rem] tracking-[.09em];
       }
 
-      @media (max-width: var(--breakThree)) {
+      @media (max-width: 430px) {
         @apply justify-center text-[1rem] tracking-[.09em] leading-5 text-center;
 
         &:nth-child(1) {

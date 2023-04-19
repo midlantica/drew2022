@@ -50,7 +50,7 @@
   nav {
     @apply w-full flex flex-col flex-nowrap justify-center items-center content-center grow;
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       //
     }
   }
@@ -58,11 +58,11 @@
   nav .mastMain {
     @apply w-full bg-techy-mango;
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       //
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       //
     }
 
@@ -70,23 +70,23 @@
       @apply my-0 mx-auto text-center;
 
       .DHmast {
-        grid-template-columns: 2fr 4fr 7fr;
-        @apply grid items-center my-0 mx-auto pt-4 gap-8;
+        // grid-template-columns: 2fr 4fr 7fr;
+        @apply grid grid-cols-[2fr_4fr_7fr] items-center my-0 mx-auto pt-4 gap-8;
 
-        @media (max-width: var(--breakThou)) {
-          grid-template-columns: auto auto;
-          @apply justify-center gap-2;
+        @media (max-width: 1024px) {
+          // grid-template-columns: auto auto;
+          @apply grid-cols-[auto_auto] justify-center gap-2;
         }
 
-        @media (max-width: var(--breakOne)) {
+        @media (max-width: 840px) {
           //
         }
 
-        @media (max-width: var(--breakTwo)) {
+        @media (max-width: 630px) {
           //
         }
 
-        @media (max-width: var(--breakThree)) {
+        @media (max-width: 430px) {
           //
         }
 
@@ -95,25 +95,21 @@
         }
 
         a.drewHeadPic {
-          grid-column: 1 / 2;
-          grid-row: 1 / 3;
-          @apply w-[92px] h-[109px] pt-4 pr-4 pb-0 pl-4 bg-no-repeat bg-cover justify-self-end bg-[url('/img/drew_mug_dig.png')];
+          @apply col-start-1 col-end-2 row-start-1 row-end-3 w-[92px] h-[109px] pt-4 pr-4 pb-0 pl-4 bg-no-repeat bg-cover justify-self-end bg-[url('/img/drew_mug_dig.png')];
 
-          @media (max-width: var(--breakThou)) {
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            @apply w-[92px] h-[109px] mt-0 mr-2 mb-0 ml-0 justify-self-end;
+          @media (max-width: 1024px) {
+            @apply col-start-1 col-end-2 row-start-1 row-end-2 w-[92px] h-[109px] mt-0 mr-2 mb-0 ml-0 justify-self-end;
           }
 
-          @media (max-width: var(--breakTwo)) {
+          @media (max-width: 630px) {
             @apply w-[64px] h-[75px];
           }
 
-          @media (max-width: var(--breakThree)) {
+          @media (max-width: 430px) {
             @apply w-[46px] h-[55px] m-0;
           }
 
-          @media (max-width: var(--breakFour)) {
+          @media (max-width: 320px) {
             @apply h-[55px] m-0;
           }
 
@@ -122,68 +118,59 @@
         a.svgArt {
           @apply h-[5.9em];
 
-          @media (max-width: var(--breakThou)) {
+          @media (max-width: 1024px) {
             @apply h-[11.5vw];
           }
 
-          @media (max-width: var(--breakOne)) {
+          @media (max-width: 840px) {
             @apply h-[14vw];
           }
 
-          @media (max-width: var(--breakTwo)) {
+          @media (max-width: 630px) {
             @apply h-[14vw];
           }
 
-          @media (max-width: var(--breakThree)) {
+          @media (max-width: 430px) {
             @apply h-[14vw];
           }
         }
 
         a.mastDrew {
-          grid-column: 2 / 3;
-          grid-row: 1 / 3;
-          @apply w-[19em];
+          @apply col-start-2 col-end-3 row-start-1 row-end-3 w-[19em];
 
-          @media (max-width: var(--breakThou)) {
-            grid-column: 2 / 3;
-            grid-row: 1 / 1;
-            @apply self-end mb-[-1em] w-[40vw];
+          @media (max-width: 1024px) {
+            @apply col-start-2 col-end-3 row-start-1 row-end-1 self-end mb-[-1em] w-[40vw];
           }
 
-          @media (max-width: var(--breakOne)) {
+          @media (max-width: 840px) {
             //
           }
 
-          @media (max-width: var(--breakTwo)) {
+          @media (max-width: 630px) {
             //
           }
 
-          @media (max-width: var(--breakThree)) {
+          @media (max-width: 430px) {
             @apply w-[56vw] mb-0 ;
           }
         }
 
         a.mastHarper {
-          // display: initial;
-          grid-column: 3 / 4;
-          grid-row: 1 / 3;
-          @apply w-[25.3em];
+          @apply col-start-3 col-end-4 row-start-1 row-end-3 w-[25.3em];
 
-          @media (max-width: var(--breakThou)) {
-            grid-column: 1 / 3;
-            grid-row: 2 / 3;
-            @apply w-[50vw];
+          @media (max-width: 1024px) {
+            @apply col-start-1 col-end-3 row-start-2 row-end-3 w-[50vw];
           }
 
-          @media (max-width: var(--breakOne)) {
+          @media (max-width: 840px) {
             //
           }
 
-          @media (max-width: var(--breakTwo)) {
+          @media (max-width: 630px) {
             @apply ml-0 mt-0;
           }
 
-          @media (max-width: var(--breakThree)) {
+          @media (max-width: 430px) {
             @apply w-[77vw] h-[20vw];
           }
         }
@@ -194,15 +181,15 @@
   nav .jobDesc {
     @apply mt-[-1em] mr-0 mb-4 ml-[11.1em] text-left;
 
-    @media (max-width: var(--breakThou)) {
+    @media (max-width: 1024px) {
       @apply my-4 mx-0 text-center;
     }
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       @apply my-0 mx-0 mb-4 text-center;
     }
 
-    @media (max-width: var(--breakTwo)) {
+    @media (max-width: 630px) {
       //
 
       &:nth-child(1) {
@@ -225,7 +212,7 @@
         //
       }
 
-      @media (max-width: var(--breakThou)) {
+      @media (max-width: 1024px) {
         @apply inline text-[3.3vw] mt-[-3px];
 
         &:nth-child(1) {
@@ -237,7 +224,7 @@
         }
       }
 
-      @media (max-width: var(--breakOne)) {
+      @media (max-width: 840px) {
         @apply inline text-[3.7vw] mt-[-3px];
 
         &:nth-child(1) {
@@ -249,16 +236,14 @@
         }
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply text-[5.8vw];
       }
     }
   }
 
   nav .bar {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
-    @apply bg-techy-blueTech text-base-ivory py-[.5vh] px-4;
+    @apply col-start-1 col-end-3 row-start-3 row-end-4 bg-techy-blueTech text-base-ivory py-[.5vh] px-4;
 
     .contact {
       @apply font-normal text-base-ivory flex flex-row flex-wrap justify-center items-center content-center grow w-1/2;
@@ -267,15 +252,15 @@
         @apply w-full;
       }
 
-      @media (max-width: var(--breakOne)) {
+      @media (max-width: 840px) {
         @apply w-full;
       }
 
-      @media (max-width: var(--breakTwo)) {
+      @media (max-width: 630px) {
         @apply w-full;
       }
 
-      @media (max-width: var(--breakThree)) {
+      @media (max-width: 430px) {
         @apply w-full;
       }
 
@@ -298,7 +283,7 @@
           //
         }
 
-        @media (max-width: var(--breakOne)) {
+        @media (max-width: 840px) {
           @apply justify-center text-[1.2em] tracking-[.1em];
 
           &:nth-child(1) {
@@ -310,7 +295,7 @@
           }
         }
 
-        @media (max-width: var(--breakTwo)) {
+        @media (max-width: 630px) {
           @apply tracking-[.09em] ;
 
           &:nth-child(1) {
@@ -322,7 +307,7 @@
           }
         }
 
-        @media (max-width: var(--breakThree)) {
+        @media (max-width: 430px) {
           @apply justify-center text-[1.1em] tracking-[.07em] leading-8 text-center;
 
           &:nth-child(1) {

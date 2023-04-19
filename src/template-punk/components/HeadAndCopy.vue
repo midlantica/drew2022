@@ -41,11 +41,11 @@
       p {
         @apply font-punkCopy text-base-black bg-white text-[0.9em] font-medium not-italic tracking-[.02em] -hue-rotate-[1.25deg] lowercase py-1 px-2;
 
-        @media (max-width: var(--breakTwo)) {
+        @media (max-width: 630px) {
           //
         }
 
-        @media (max-width: var(--breakThree)) {
+        @media (max-width: 430px) {
           //
         }
 
@@ -103,7 +103,7 @@
     flex: 0 1 auto;
     @apply flex flex-col relative top-0 left-0;
 
-    @media (max-width: var(--breakOne)) {
+    @media (max-width: 840px) {
       @apply mb-0;
     }
   }
@@ -126,7 +126,7 @@
     p {
       @apply font-normal text-[1em] leading-9 relative inline italic font-punkCopy text-base-grey tracking-[.045em] top-0 bg-punk-peach mt-4 mx-4 mb-0 py-[.4rem] px-[.1rem];
 
-      @media (min-width: var(--breakOne)) {
+      @media (min-width: 840px) {
         //
       }
 
