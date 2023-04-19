@@ -50,7 +50,7 @@
   nav {
     @apply w-full flex flex-col flex-nowrap justify-center items-center content-center grow;
 
-    @media (max-width: 840px) {
+    @media (max-width: var(--breakOne)) {
       //
     }
   }
@@ -58,11 +58,11 @@
   nav .mastMain {
     @apply w-full bg-techy-mango;
 
-    @media (max-width: 840px) {
+    @media (max-width: var(--breakOne)) {
       //
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
 
@@ -73,20 +73,20 @@
         grid-template-columns: 2fr 4fr 7fr;
         @apply grid items-center my-0 mx-auto pt-4 gap-8;
 
-        @media (max-width: 1024px) {
+        @media (max-width: var(--breakThou)) {
           grid-template-columns: auto auto;
           @apply justify-center gap-2;
         }
 
-        @media (max-width: 840px) {
+        @media (max-width: var(--breakOne)) {
           //
         }
 
-        @media (max-width: 630px) {
+        @media (max-width: var(--breakTwo)) {
           //
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: var(--breakThree)) {
           //
         }
 
@@ -99,21 +99,21 @@
           grid-row: 1 / 3;
           @apply w-[92px] h-[109px] pt-4 pr-4 pb-0 pl-4 bg-no-repeat bg-cover justify-self-end bg-[url('/img/drew_mug_dig.png')];
 
-          @media (max-width: 1024px) {
+          @media (max-width: var(--breakThou)) {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             @apply w-[92px] h-[109px] mt-0 mr-2 mb-0 ml-0 justify-self-end;
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: var(--breakTwo)) {
             @apply w-[64px] h-[75px];
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: var(--breakThree)) {
             @apply w-[46px] h-[55px] m-0;
           }
 
-          @media (max-width: 320px) {
+          @media (max-width: var(--breakFour)) {
             @apply h-[55px] m-0;
           }
 
@@ -122,19 +122,19 @@
         a.svgArt {
           @apply h-[5.9em];
 
-          @media (max-width: 1024px) {
+          @media (max-width: var(--breakThou)) {
             @apply h-[11.5vw];
           }
 
-          @media (max-width: 840px) {
+          @media (max-width: var(--breakOne)) {
             @apply h-[14vw];
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: var(--breakTwo)) {
             @apply h-[14vw];
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: var(--breakThree)) {
             @apply h-[14vw];
           }
         }
@@ -144,21 +144,21 @@
           grid-row: 1 / 3;
           @apply w-[19em];
 
-          @media (max-width: 1024px) {
+          @media (max-width: var(--breakThou)) {
             grid-column: 2 / 3;
             grid-row: 1 / 1;
             @apply self-end mb-[-1em] w-[40vw];
           }
 
-          @media (max-width: 840px) {
+          @media (max-width: var(--breakOne)) {
             //
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: var(--breakTwo)) {
             //
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: var(--breakThree)) {
             @apply w-[56vw] mb-0 ;
           }
         }
@@ -169,21 +169,21 @@
           grid-row: 1 / 3;
           @apply w-[25.3em];
 
-          @media (max-width: 1024px) {
+          @media (max-width: var(--breakThou)) {
             grid-column: 1 / 3;
             grid-row: 2 / 3;
             @apply w-[50vw];
           }
 
-          @media (max-width: 840px) {
+          @media (max-width: var(--breakOne)) {
             //
           }
 
-          @media (max-width: 630px) {
+          @media (max-width: var(--breakTwo)) {
             @apply ml-0 mt-0;
           }
 
-          @media (max-width: 430px) {
+          @media (max-width: var(--breakThree)) {
             @apply w-[77vw] h-[20vw];
           }
         }
@@ -194,15 +194,15 @@
   nav .jobDesc {
     @apply mt-[-1em] mr-0 mb-4 ml-[11.1em] text-left;
 
-    @media (max-width: 1024px) {
+    @media (max-width: var(--breakThou)) {
       @apply my-4 mx-0 text-center;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: var(--breakOne)) {
       @apply my-0 mx-0 mb-4 text-center;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: var(--breakTwo)) {
       //
 
       &:nth-child(1) {
@@ -225,7 +225,7 @@
         //
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: var(--breakThou)) {
         @apply inline text-[3.3vw] mt-[-3px];
 
         &:nth-child(1) {
@@ -237,7 +237,7 @@
         }
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: var(--breakOne)) {
         @apply inline text-[3.7vw] mt-[-3px];
 
         &:nth-child(1) {
@@ -249,7 +249,7 @@
         }
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: var(--breakTwo)) {
         @apply text-[5.8vw];
       }
     }
@@ -267,15 +267,15 @@
         @apply w-full;
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: var(--breakOne)) {
         @apply w-full;
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: var(--breakTwo)) {
         @apply w-full;
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: var(--breakThree)) {
         @apply w-full;
       }
 
@@ -298,7 +298,7 @@
           //
         }
 
-        @media (max-width: 840px) {
+        @media (max-width: var(--breakOne)) {
           @apply justify-center text-[1.2em] tracking-[.1em];
 
           &:nth-child(1) {
@@ -310,7 +310,7 @@
           }
         }
 
-        @media (max-width: 630px) {
+        @media (max-width: var(--breakTwo)) {
           @apply tracking-[.09em] ;
 
           &:nth-child(1) {
@@ -322,7 +322,7 @@
           }
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: var(--breakThree)) {
           @apply justify-center text-[1.1em] tracking-[.07em] leading-8 text-center;
 
           &:nth-child(1) {

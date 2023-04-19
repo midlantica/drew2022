@@ -209,15 +209,15 @@
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     @apply w-full grid justify-center items-stretch content-between relative gap-y-[.5] gap-x-[auto] justify-items-center;
 
-    @media (max-width: 1024px) {
+    @media (max-width: var(--breakThou)) {
       grid-row: 2;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: var(--breakOne)) {
       grid-row: 2;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: var(--breakTwo)) {
       grid-row: 2;
     }
 

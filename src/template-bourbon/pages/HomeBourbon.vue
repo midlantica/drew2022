@@ -54,15 +54,6 @@
 <style lang='scss' scoped>
   @import "../assets/css/bourbon-main.scss";
 
-  :root {
-    --breakThou: 1024px;
-    --breakOne: 840px;
-    --break768: 768px;
-    --breakTwo: 630px;
-    --breakThree: 430px;
-    --breakFour: 320px;
-  }
-
   header,
   footer {
     @apply shadow-druShadow;

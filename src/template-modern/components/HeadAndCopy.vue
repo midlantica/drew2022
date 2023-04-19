@@ -37,15 +37,15 @@
         @apply mt-[.75rem] w-auto;
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: var(--breakOne)) {
         @apply w-auto;
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: var(--breakTwo)) {
         @apply max-w-[30ch];
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: var(--breakThree)) {
         //
       }
 

@@ -21,19 +21,19 @@
   section {
     @apply mt-10 mx-6 mb-0;
 
-    @media (max-width: 1024px) {
+    @media (max-width: var(--breakThou)) {
       //
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: var(--breakOne)) {
       //
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: var(--breakTwo)) {
       @apply mt-[1.8rem] mx-4 mb-0;
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: var(--breakThree)) {
       //
     }
   }
@@ -41,23 +41,23 @@
   h1 {
     @apply font-groovyHead text-[1.5rem] leading-[2.1rem] font-medium mb-2 text-groovy-redDk normal-case;
 
-    @media (min-width: 1024px) {
+    @media (min-width: var(--breakThou)) {
       max-width: 26ch;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: var(--breakThou)) {
       max-width: initial;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: var(--breakOne)) {
       max-width: initial;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: var(--breakTwo)) {
       max-width: 26ch;
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: var(--breakThree)) {
       max-width: initial;
     }
   }
@@ -65,12 +65,12 @@
   p {
     @apply font-groovyCopy text-base-grey text-[1.125rem] tracking-[0.009rem] leading-[2.6rem];
 
-    @media (max-width: 1024px) {
+    @media (max-width: var(--breakThou)) {
       columns: 2 200px;
       @apply gap-x-12 text-justify hyphens-auto rule-w-2 rule-style-dotted rule-color-[hsla(39,100%,50%,.75)];
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: var(--breakOne)) {
       columns: 2 200px;
       @apply tracking-[0.05rem];
     }
@@ -80,7 +80,7 @@
       @apply text-[1.05rem] leading-[2.4rem] pl-[1.3rem] mr-2 border-l-2 border-dotted border-[hsla(39,100%,50%,.75)];
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: var(--breakTwo)) {
       //
     }
 

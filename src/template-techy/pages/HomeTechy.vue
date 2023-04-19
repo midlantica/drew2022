@@ -53,7 +53,7 @@
   .mainGrid {
     @apply grid-cols-[7fr_6fr] grid mt-0 mx-6 mb-2 gap-y-4 gap-x-0;
 
-    @media (min-width: 1024px) and (min-device-width: var(--break768)) {
+    @media (min-width: 1024px) and (min-device-width: 768px) {
       @apply grid-cols-[7fr_6fr] mt-0 mx-4 mb-2;
     }
 
@@ -62,7 +62,7 @@
     }
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: var(--break768)) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       @apply grid-cols-1 mt-0 mx-6 mb-2;
     }
 
@@ -80,7 +80,7 @@
     @apply col-start-1 col-end-2 row-start-1 row-end-3;
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: var(--break768)) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       @apply col-start-1 col-end-2 row-start-1 row-end-3;
     }
 
@@ -106,7 +106,7 @@
     @apply col-start-2 col-end-3 row-start-1 row-end-2 z-10 -mt-20;
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: var(--break768)) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       @apply col-start-2 col-end-3 row-start-1 row-end-2 z-10 mt-[-5.5em];
     }
 
@@ -132,7 +132,7 @@
     @apply col-start-2 col-end-3 row-start-2 row-end-2;
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: var(--break768)) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       @apply col-start-1 col-end-3 row-start-2 row-end-2;
     }
 
@@ -158,7 +158,7 @@
     @apply col-span-full row-start-3 row-end-4;
 
     // IPAD LANDSCAPE
-    @media only screen and (min-device-width: var(--break768)) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       @apply col-span-full row-start-3 row-end-4;
     }
 

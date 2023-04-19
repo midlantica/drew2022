@@ -20,19 +20,19 @@
   .areaWrapper {
     @apply w-full pt-4 pl-5 pr-2;
 
-    @media (min-width: 1024px) {
+    @media (min-width: var(--breakThou)) {
       //
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: var(--breakOne)) {
       @apply px-4;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: var(--breakTwo)) {
       @apply px-2;
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: var(--breakThree)) {
       //
     }
   }
@@ -52,20 +52,20 @@
       grid-row: 1 / 2;
       @apply font-bourbonSubhead text-[1.7rem] inline-block text-bourbon-accentRed p-0 self-center max-w-[30ch];
 
-      @media (min-width: 1024px) {
+      @media (min-width: var(--breakThou)) {
         @apply max-w-[30ch];
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: var(--breakOne)) {
         @apply text-[1.65rem];
         //
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: var(--breakTwo)) {
         @apply max-w-[30ch] text-[1.5rem];
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: var(--breakThree)) {
         @apply text-[1.45rem] m-0;
       }
 
@@ -79,12 +79,12 @@
   p {
     @apply leading-[2.4rem] font-bourbonCopy text-[1.1rem] text-base-grey mt-2 mx-2 mb-0 tracking-[0.03rem] mr-2;
 
-    @media (max-width: 1024px) {
+    @media (max-width: var(--breakThou)) {
       columns: 2 20ch;
       @apply leading-9 gap-x-12 text-justify hyphens-auto rule-w-[1px] rule-style-solid rule-color-[hsla(7,77%,43%,50%)];
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: var(--breakOne)) {
       @apply tracking-[0.05rem] text-justify hyphens-auto;
     }
 
@@ -93,7 +93,7 @@
       @apply text-justify hyphens-auto;
     }
 
-    @media (max-width: 630px) {
+    @media (max-width: var(--breakTwo)) {
       @apply text-justify hyphens-auto;
     }
   }

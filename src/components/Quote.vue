@@ -211,7 +211,7 @@
       @apply text-[0.9em] text-base-ivory tracking-wider leading-[1.5em] text-center;
       animation: fadeTexter 2s forwards;
 
-      @media only screen and (min-device-width: 700px) and (max-device-width: 1024px) {
+      @media only screen and (min-device-width: 700px) and (max-device-width: var(--breakThou)) {
         @apply text-[0.9em];
       }
 
@@ -253,19 +253,19 @@
     p {
       @apply font-techyCopy text-[1em] text-techy-blueTech text-center tracking-wide;
 
-      @media (max-width: 1024px) {
+      @media (max-width: var(--breakThou)) {
         @apply text-[1.25em];
       }
 
-      @media (max-width: 840px) {
+      @media (max-width: var(--breakOne)) {
         @apply text-[1.2em];
       }
 
-      @media (max-width: 630px) {
+      @media (max-width: var(--breakTwo)) {
         @apply text-[1em];
       }
 
-      @media (max-width: 430px) {
+      @media (max-width: var(--breakThree)) {
         @apply text-[.85em] leading-5;
       }
     }
