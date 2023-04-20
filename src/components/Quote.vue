@@ -1,15 +1,15 @@
 <template>
-  <div class="quoteBlock" v-if="currentQuote">
-    <div @click="previousQuote()" class="arrowBtn" />
-    <transition name="quoteFade">
-      <div class="quotePad">
-        <p>
-          &ldquo;{{ currentQuote.quote }}&rdquo; <cite>&ndash; {{ currentQuote.author }}</cite>
+  <transition name="quoteFade">
+    <div class="quoteBlock" v-if="currentQuote">
+      <div @click="previousQuote()" class="arrowBtn" />
+      <div class="p-0 leading-4 m-auto select-none w-full flex flex-row items-center justify-center">
+        <p class="text-center not-italic inline leading-normal" :class="{ fadage: quoteAni }">
+          &ldquo;{{ currentQuote.quote }}&rdquo; <cite class="not-italic inline leading-normal break-keep whitespace-nowrap">&ndash; {{ currentQuote.author }}</cite>
         </p>
       </div>
-    </transition>
-    <div @click="nextQuote()" class="arrowBtn" />
-  </div>
+      <div @click="nextQuote()" class="arrowBtn" />
+    </div>
+  </transition>
 </template>
 
 <script setup>
@@ -17,20 +17,31 @@
 
   const currentQuoteIndex = ref(0)
   const currentQuote = ref(null)
+  const quoteAni = ref(false)
+
+  function quoteAnimator () {
+    quoteAni.value = true
+    setTimeout(() => {
+      quoteAni.value = !quoteAni.value
+    }, 3000)
+  }
 
   const nextQuote = () => {
     currentQuoteIndex.value = (currentQuoteIndex.value + 1) % quotes.length
     currentQuote.value = quotes[currentQuoteIndex.value]
+    quoteAnimator()
   }
 
   const previousQuote = () => {
     currentQuoteIndex.value = (currentQuoteIndex.value - 1 + quotes.length) % quotes.length
     currentQuote.value = quotes[currentQuoteIndex.value]
+    quoteAnimator()
   }
 
   onMounted(() => {
     currentQuote.value = quotes[currentQuoteIndex.value]
     setInterval(nextQuote, 10000)
+    quoteAnimator()
   })
 
   const quotes = [
@@ -167,18 +178,18 @@
         @apply clear-both my-2 gap-y-0 text-[0.8rem] gap-1;
     }
 
-    p,
-    cite {
-      @apply not-italic inline leading-normal;
-    }
+    // p,
+    // cite {
+    //   @apply not-italic inline leading-normal;
+    // }
 
-    cite {
-      @apply break-keep whitespace-nowrap;
-    }
+    // cite {
+    //   @apply break-keep whitespace-nowrap;
+    // }
 
-    .quotePad {
-      @apply p-0 leading-4 m-auto select-none;
-    }
+    // .quotePad {
+    //   @apply p-0 leading-4 m-auto select-none;
+    // }
   }
 
   // MODERN ########################
@@ -202,17 +213,17 @@
         @apply clear-both mt-2 mb-2 gap-y-0;
     }
 
-    .quotePad {
-      @apply text-center;
-    }
+    // .quotePad {
+    //   @apply text-center;
+    // }
 
-    .quotePad a {
-      @apply text-white cursor-pointer;
+    // .quotePad a {
+    //   @apply text-white cursor-pointer;
 
-      &:hover {
-        @apply text-[yellow];
-      }
-    }
+    //   &:hover {
+    //     @apply text-[yellow];
+    //   }
+    // }
 
     p {
       @apply text-[0.9em] text-base-ivory tracking-wider leading-[1.5em] text-center;
@@ -372,4 +383,20 @@
   .quoteFade-leave-to {
     @apply opacity-0;
   }
+
+  .fadage {
+    // animation: fadage 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    animation: fadage 1s ease-in-out both;
+  }
+
+  @keyframes fadage {
+    0% {
+      @apply opacity-0;
+    }
+
+    100% {
+      @apply opacity-100 scale-100;
+    }
+  }
+
 </style>

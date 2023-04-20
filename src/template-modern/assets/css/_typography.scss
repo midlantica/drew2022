@@ -1,0 +1,62 @@
+h1, h2, h3, h4, h5 {
+  color: $white;
+  @apply leading-[1.5em];
+  @apply font-normal;
+  @apply text-left;
+  margin: .75em 0 .25em 0;
+  @apply p-0;
+  @apply tracking-[.025em];
+  @apply capitalize;
+  font-family: $font-subhead;
+  @apply font-semibold;
+}
+
+h2 {
+  @apply text-[2em];
+  // color: $accent;
+  @apply capitalize;
+  font-family: $font-subhead;
+  @apply font-normal;
+}
+
+h3 {
+  @apply text-[1.7em];
+  // color: $blue-dark;
+}
+
+h4 {
+  @apply text-[1.5em];
+  @apply tracking-[.04em];
+}
+
+h5 {
+  font-size: $base-font-size;
+}
+
+p {
+  font-family: $font-copy;
+  font-size: $base-font-size;
+  @apply text-white;
+  line-height: $base-line-height;
+  @apply font-normal;
+  @apply text-left;
+  @apply m-0;
+  @apply p-0;
+}
+
+ul {
+  list-style-type: square;
+  @apply p-0;
+  margin: 0 -1em 1em 0em;
+  font-family: $font-copy;
+  color: $blue-mid;
+  line-height: $base-line-height;
+  @apply text-left;
+
+  li {
+    list-style-position: outside;
+    margin: .25em 0em 0 1em;
+    padding-left: -1em;
+    line-height: 1.6em;
+  }
+}
