@@ -1,11 +1,11 @@
 <template>
   <transition name="bounce3" appear>
-    <div class="extrasWrapper flex flex-row flex-wrap w-full m-auto gap-4">
-      <h1 class="text-black font-punkHead bg-white/70 py-1 px-3 leading-normal mt-2 mx-auto">
+    <div class="flex flex-row flex-wrap w-full gap-4 m-auto extrasWrapper">
+      <h1 class="px-3 py-1 mx-auto mt-2 leading-normal text-black font-punkHead bg-white/70">
         Portfolio Extras
       </h1>
 
-      <div class="extrasWrap w-full p-0 flex flex-row flex-wrap place-content-center gap-x-4 items-start">
+      <div class="flex flex-row flex-wrap items-start w-full p-0 extrasWrap place-content-center gap-x-4">
         <div v-for="(item, index) in portfolioExtras" :key="index" class="content-center gap-x-4">
           <a :href="itemUrl(item)" target="_BLANK">
             <img class="portThumbs" :src="itemSrc(item)">

@@ -1,9 +1,9 @@
 <template>
-  <header class="text-base-ivory shadow-none">
+  <header class="shadow-none text-base-ivory">
     <Navvy />
-    <div class="w-full flex flex-wrap gap-x-6 gap-y-1 place-content-center justify-center m-0">
-      <span class="text-black font-punkHead bg-punk-magenta/70 py-1 px-3 leading-normal">{{ store.copy.uiuxDesigner }}/{{ store.copy.vizDesigner }}</span>
-      <a class="text-black font-punkHead bg-punk-magenta/70 py-1 px-3 leading-normal hover:bg-punk-red hover:text-white" :href="resumeUrl" target="_BLANK">PDF Resume</a>
+    <div class="flex flex-wrap justify-center w-full m-0 gap-x-6 gap-y-1 place-content-center">
+      <span class="px-3 py-1 leading-normal text-black font-punkHead bg-punk-magenta/70">{{ store.copy.uiuxDesigner }}/{{ store.copy.vizDesigner }}</span>
+      <a class="px-3 py-1 leading-normal text-black font-punkHead bg-punk-magenta/70 hover:bg-punk-red hover:text-white" :href="resumeUrl" target="_BLANK">PDF Resume</a>
     </div>
   </header>
 
@@ -11,7 +11,7 @@
     <ExtrasC />
   </transition>
 
-  <footer class="text-base-ivory shadow-none">
+  <footer class="shadow-none text-base-ivory">
     <!-- <Navvy /> -->
   </footer>
 </template>

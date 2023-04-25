@@ -1,5 +1,5 @@
 <template>
-  <header class="text-base-ivory shadow-none bg-base-accentRed">
+  <header class="shadow-none text-base-ivory bg-base-accentRed">
     <Navvy />
   </header>
 
@@ -7,7 +7,7 @@
     <ExtrasC />
   </transition>
 
-  <footer class="text-base-ivory shadow-none bg-techy-mango">
+  <footer class="shadow-none text-base-ivory bg-techy-mango">
     <NavvyEmpty />
   </footer>
 </template>

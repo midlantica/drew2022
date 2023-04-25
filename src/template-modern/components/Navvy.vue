@@ -9,7 +9,7 @@
       <h2>{{ store.copy.uiuxDesigner }} / {{ store.copy.vizDesigner }}</h2>
     </section>
     <section class="contact">
-      <p class="flex flex-row flex-wrap shrink justify-center gap-0">
+      <p class="flex flex-row flex-wrap justify-center gap-0 shrink">
         <a :href="`mailto:` + `${store.copy.druEmail}`" class="marTH">{{
           store.copy.druEmail
         }}</a>

@@ -3,10 +3,10 @@
     <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center justify-center gap-x-4">
       <div class="drewTop max-[830px]:m-auto gap-2 grow">
         <router-link :to="{ name: 'Corp' }" class="w-full flex max-[830px]:flex-column flex-row flex-wrap content-center gap-6 justify-center">
-          <router-link :to="{ name: 'ExtrasCorp' }" class="drewhead jelloHorizontal content-center m-0" />
+          <router-link :to="{ name: 'ExtrasCorp' }" class="content-center m-0 drewhead jelloHorizontal" />
           <div class="flex flex-col flex-wrap">
-            <drewHarper class="drewHarper mt-2" />
-            <div class="flex flex-row justify-center flex-wrap ">
+            <drewHarper class="mt-2 drewHarper" />
+            <div class="flex flex-row flex-wrap justify-center ">
               <h3 class="font-corpCopy text-[115%] transition duration-[.25s] ease-in font-bold text-center leading-loose uppercase tracking-[0.16rem]">
                 {{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}
               </h3>

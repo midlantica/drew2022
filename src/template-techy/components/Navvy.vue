@@ -12,7 +12,7 @@
           </router-link>
         </div>
 
-        <div class="jobDesc block">
+        <div class="block jobDesc">
           <h2>{{ store.copy.uiuxDesigner }} +</h2>
           <h2 class="marLH">
             {{ store.copy.vizDesigner }}
