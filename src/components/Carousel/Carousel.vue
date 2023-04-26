@@ -139,10 +139,10 @@
         @apply flex;
 
         .box {
-          @apply flex flex-col flex-nowrap items-center content-center justify-center text-center m-auto bg-white border border-solid text-black/50 min-w-[130px] shadow-[0px_2px_2px_-3px_black] stroke-black/50;
+          @apply flex flex-col flex-nowrap items-center content-center justify-center text-center m-auto bg-white border border-solid text-black/50 min-w-[130px] shadow-[0px_2px_2px_-3px_black] stroke-black/50 relative;
 
           svg.iconSVG {
-            @apply stroke-[1px] stroke-black/50 relative ease-out duration-200 w-auto fill-transparent;
+            @apply stroke-[1px] stroke-black/50 relative w-auto fill-transparent;
           }
 
           p {
@@ -150,17 +150,15 @@
           }
 
           &:hover {
-            //
+            @apply relative;
 
             p {
-              @apply ease-out duration-300 top-[-7px];
-              // @apply decoration-yellow-400 underline underline-offset-4 decoration-2;
+              @apply ease-in-out duration-100 top-[-5px];
             }
 
             svg.iconSVG {
-              @apply ease-out duration-300 w-auto top-[-7px];
+              @apply ease-in-out duration-100 w-auto top-[-5px];
             }
-
           }
 
         }
@@ -217,22 +215,30 @@
       @apply bg-none gap-4;
 
       .box {
-        @apply max-w-[150px] h-[168px] rounded-xl top-0 relative bg-transparent border border-solid border-transparent;
+        @apply max-w-[150px] h-[168px] rounded-xl top-0 bg-transparent border border-solid border-transparent relative;
+
+        svg.iconSVG {
+          @apply w-auto top-0 relative ease-in-out duration-200;
+        }
+
+        p {
+          @apply font-modernCopy font-extralight text-white text-[.85rem] lowercase text-center mt-[4px] mx-0 mb-0 top-0 relative ease-in-out duration-200;
+        }
 
         @media (max-width: theme("screens.breakXlg")) {
           @apply min-h-min;
         }
 
         &:hover {
-          @apply rounded-xl border border-solid border-[#FFFFFF80] shadow-[0px_0px_1rem_0px_#d71d5b] top-[-5px] ease-out duration-100;
-        }
+          @apply rounded-xl border border-solid border-[#FFFFFF80] shadow-[0px_0px_1rem_0px_#d71d5b];
 
-        .iconSVG {
-          @apply relative w-auto ease-out duration-100;
-        }
+          svg.iconSVG {
+            @apply ease-in-out duration-200 top-[-5px];
+          }
 
-        p {
-          @apply font-modernCopy font-extralight text-white text-[.85rem] relative lowercase text-center mt-[4px] mx-0 mb-0;
+          p {
+            @apply font-modernCopy font-extralight text-white text-[.85rem] relative lowercase text-center mt-[4px] mx-0 mb-0 top-[-5px];
+          }
         }
 
       }
@@ -272,20 +278,33 @@
       }
     }
 
-    .miniGallery div .box {
-      @apply h-[180px];
+    .miniGallery .box {
+      @apply h-[180px] relative top-0;
+
+      svg.iconSVG {
+        @apply w-auto relative top-0;
+      }
 
       p {
-        @apply text-[.85rem] font-bourbonCopy text-gray-800 text-center tracking-normal lowercase;
+        @apply text-[.85rem] font-bourbonCopy text-gray-800 text-center tracking-normal lowercase relative top-0;
 
         a {
           @apply text-gray-800;
-
-          &:hover {
-            @apply text-gray-800;
-          }
         }
       }
+
+      &:hover {
+        @apply ease-in-out duration-200 relative;
+
+        svg.iconSVG {
+          @apply ease-in-out duration-200 top-[-5px];
+        }
+
+        p {
+          @apply ease-in-out duration-200 top-[-5px];
+        }
+      }
+
     }
 
   }
@@ -322,11 +341,28 @@
     }
 
     .miniGallery div .box {
-      @apply h-[170px];
+      @apply h-[170px] relative top-0;
+
+      svg.iconSVG {
+        @apply w-auto relative top-0;
+      }
 
       p {
-        @apply font-groovyCopy text-center text-gray-800;
+        @apply font-groovyCopy text-gray-800 text-[.85rem] relative top-0;
       }
+
+      &:hover {
+        @apply ease-in-out duration-200;
+
+        svg.iconSVG {
+          @apply ease-in-out duration-200 top-[-5px];
+        }
+
+        p {
+          @apply font-groovyCopy text-center text-gray-800 ease-in-out duration-200 top-[-5px];
+        }
+      }
+
     }
 
   }
@@ -363,23 +399,25 @@
     }
 
     .miniGallery div .box {
-      @apply h-[167px] border border-solid border-gray-200 ease-out duration-200;
+      @apply h-[167px] border border-solid border-gray-200 relative top-0;
 
-      &:hover {
-        @apply border-2 border-solid border-techy-mango ease-out duration-200;
+      svg.iconSVG {
+        @apply w-auto ease-in-out relative top-0;
       }
 
       p {
-        @apply font-techyCopy text-center text-gray-800 ease-out duration-200;
+        @apply font-groovyCopy text-gray-800 text-[.85rem] text-center ease-in-out relative top-0;
       }
 
-      svg {
-        @apply ease-out duration-200;
+      &:hover {
+        @apply border-2 border-solid border-techy-mango ease-in-out duration-200 top-0;
 
-        path,
-        polygon,
-        circle {
-          @apply ease-out duration-200;
+        svg.iconSVG {
+          @apply ease-in-out duration-200 top-[-5px];
+        }
+
+        p {
+          @apply font-groovyCopy text-center text-gray-800 ease-in-out duration-200 top-[-5px];
         }
       }
     }
@@ -426,15 +464,28 @@
     }
 
     .miniGallery div .box {
-      @apply h-[183px] border border-solid border-[#D7E7F3];
+      @apply h-[183px] border border-solid border-[#D7E7F3] relative ease-in-out duration-200 top-0;
 
-      &:hover {
-        @apply border border-solid border-[#abcbe3];
+      svg.iconSVG {
+        @apply w-auto ease-in-out duration-200 relative top-0;
       }
 
       p {
-        @apply font-corpCopy tracking-wider text-center text-gray-800;
+        @apply font-corpCopy tracking-wider text-center text-gray-800 text-[.85rem] ease-in-out relative duration-200 top-0;
       }
+
+      &:hover {
+        @apply border border-solid border-[#abcbe3] ease-in-out duration-200 top-0;
+
+        svg.iconSVG {
+          @apply ease-in-out duration-200 top-[-5px];
+        }
+
+        p {
+          @apply ease-in-out duration-200 top-[-5px];
+        }
+      }
+
     }
   }
 
@@ -484,8 +535,24 @@
       div .box {
         @apply h-[183px];
 
+        svg.iconSVG {
+          @apply w-auto ease-in-out duration-200 relative top-0;
+        }
+
         p {
-          @apply text-center font-punkCopy text-gray-800;
+          @apply text-center font-punkCopy text-gray-800 tracking-wider text-[.85rem] ease-in-out relative duration-200 top-0;
+        }
+
+        &:hover {
+          @apply border border-solid border-[#abcbe3] ease-in-out duration-200 top-0;
+
+          svg.iconSVG {
+            @apply ease-in-out duration-200 top-[-5px];
+          }
+
+          p {
+            @apply ease-in-out duration-200 top-[-5px];
+          }
         }
 
       }

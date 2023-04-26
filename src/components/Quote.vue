@@ -2,7 +2,7 @@
   <transition name="quoteFade">
     <div class="quoteBlock" v-if="currentQuote">
       <div @click="previousQuote()" class="arrowBtn" />
-      <div class="flex flex-row items-center justify-center w-full p-0 pt-4 m-auto leading-4 select-none">
+      <div class="flex flex-row items-center justify-center w-full p-0 m-auto leading-4 select-none">
         <p class="inline not-italic leading-normal text-center" :class="{ fadage: quoteAni }">
           &ldquo;{{ currentQuote.quote }}&rdquo; <cite class="inline not-italic leading-normal break-keep whitespace-nowrap">&ndash; {{ currentQuote.author }}</cite>
         </p>
