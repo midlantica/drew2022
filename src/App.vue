@@ -115,7 +115,7 @@
       //
 
       h1 {
-        @apply pt-4 font-bourbonHead text-[1.75em] font-light antialiased;
+        @apply pt-4 font-bourbonHead text-bourbon-bourbon text-[1.75em] font-light antialiased;
       }
     }
 
@@ -246,7 +246,7 @@
       //
 
       h1 {
-        @apply pt-4 text-black text-[1.5em] font-semibold capitalize font-groovyHead bg-transparent mt-6;
+        @apply pt-4 text-groovy-redDk text-[1.5em] font-semibold capitalize font-groovyHead bg-transparent mt-8 mb-0;
       }
 
       p {
@@ -282,14 +282,6 @@
       }
     }
 
-    &.extras .extrasWrapper {
-      @apply bg-[#fffff1];
-
-      h1 {
-        @apply text-black/30 pt-4 font-techyCopy text-[1.5em] capitalize;
-      }
-    }
-
     .about {
       @apply bg-[#ffe268] shadow-none;
 
@@ -307,10 +299,10 @@
     }
 
     &.extras .extrasWrapper {
-      //
+      @apply bg-[#fffff1];
 
       h1 {
-        @apply font-techyHead pt-4 text-[1.75em] font-medium mb-2 text-techy-blueTech;
+        @apply font-techyHead mt-6 mb-0 p-0 mx-auto text-[1.65em] font-medium text-techy-blueTech capitalize;
       }
 
       p {

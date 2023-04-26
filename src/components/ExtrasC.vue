@@ -1,7 +1,7 @@
 <template>
   <transition name="bounce3" appear>
     <div class="flex flex-row flex-wrap w-full gap-4 m-auto extrasWrapper">
-      <h1 class="px-3 py-1 mx-auto mt-2 leading-normal text-black font-punkHead bg-white/70">
+      <h1 class="text-[2em] text-center px-auto pt-2 mx-auto mt-2 leading-normal text-black font-punkHead bg-white/70">
         Portfolio Extras
       </h1>
 
@@ -87,9 +87,5 @@
 
 </script>
 
-<style lang="scss" scoped>
-  h1 {
-    @apply text-[2em] text-center py-2 px-0;
-  }
-
-</style>
+<!-- <style lang="scss" scoped>
+</style> -->
