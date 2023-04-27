@@ -25,6 +25,7 @@
 
   .corp #svgTailwind {
     filter: brightness(0.95) sepia(1) hue-rotate(160deg) saturate(3);
+    @apply drop-shadow-tightBlackLt;
 
     &:hover {
       filter: none;

@@ -81,12 +81,20 @@
     @apply text-gray-600 block text-[0.9em] leading-[1.4em] tracking-wider content-center items-center justify-center self-center text-left;
   }
 
-  .corp .about {
-    @apply shadow-none bg-[#6bbaff42];
-  }
+  .corp {
+    //
+    .about {
+      @apply shadow-none bg-[#6bbaff42];
 
-  .corp .flag {
-    filter: hue-rotate(236deg) sepia(0.6);
+      p {
+        @apply text-corp-black;
+      }
+    }
+
+    .flag {
+      filter: hue-rotate(236deg) sepia(0.6);
+    }
+
   }
 
   .punk .about {

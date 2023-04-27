@@ -39,6 +39,7 @@
 
   .corp #figmaBox {
     filter: brightness(2) sepia(1) hue-rotate(170deg) saturate(3);
+    @apply drop-shadow-tightBlackLt;
 
     &:hover {
       filter: none;

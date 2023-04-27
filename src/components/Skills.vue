@@ -234,7 +234,7 @@
     }
 
     svg {
-      @apply w-[88px];
+      @apply w-[88px] drop-shadow-tightBlackLt;
 
       &:hover {
         @apply animate-[shimmy] duration-[.25s];
@@ -258,7 +258,7 @@
     }
 
     svg {
-      @apply w-[100px] mx-auto;
+      @apply w-[100px] mx-auto drop-shadow-lg;
 
       &:hover {
         //
@@ -290,7 +290,7 @@
     }
 
     svg {
-      @apply w-[88px];
+      @apply w-[88px] drop-shadow-tightBlackLt;
     }
 
   }
@@ -315,7 +315,7 @@
     }
 
     svg {
-      @apply w-[88px];
+      @apply w-[88px] drop-shadow-tightBlackLt;
     }
 
   }
@@ -344,7 +344,7 @@
     }
 
     svg {
-      @apply w-[88px];
+      @apply w-[88px] drop-shadow-tightBlackLt;
     }
 
   }
@@ -369,7 +369,7 @@
     }
 
     svg {
-      @apply w-[88px];
+      @apply w-[88px] drop-shadow-tightBlackLt;
 
       &:hover {
         @apply animate-[shimmy_.25s];
@@ -398,7 +398,7 @@
     }
 
     svg {
-      @apply w-[88px];
+      @apply w-[88px] drop-shadow-tightBlackMd;
     }
 
   }

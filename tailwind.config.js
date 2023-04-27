@@ -134,6 +134,11 @@ module.exports = {
         punkHead: ['Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif'],
         punkSubhead: ['Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif'],
         punkCopy: ['Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif']
+      },
+      dropShadow: {
+        tightBlackDk: '1px 1px 1px hsla(0, 0%, 0%, 1)',
+        tightBlackMd: '1px 1px 1px hsla(0, 0%, 0%, .5)',
+        tightBlackLt: '1px 1px 1px hsla(0, 0%, 0%, .25)'
       }
     }
   },
