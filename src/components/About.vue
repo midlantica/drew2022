@@ -82,7 +82,11 @@
   }
 
   .corp .about {
-    @apply shadow-none;
+    @apply shadow-none bg-[#6bbaff42];
+  }
+
+  .corp .flag {
+    filter: hue-rotate(236deg) sepia(0.6);
   }
 
   .punk .about {

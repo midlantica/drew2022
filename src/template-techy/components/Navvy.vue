@@ -47,10 +47,6 @@
 <style lang='scss' scoped>
   @import '../assets/css/techy-main.scss';
 
-  nav {
-    //
-  }
-
   nav .mastMain {
     //
 
@@ -98,7 +94,6 @@
           @media (max-width: theme("screens.breakXxsm")) {
             @apply h-[55px] m-0;
           }
-
         }
 
         a.svgArt {
@@ -177,33 +172,13 @@
 
     @media (max-width: theme("screens.breakSm")) {
       //
-
-      &:nth-child(1) {
-        //
-      }
-
-      &:nth-child(2) {
-        //
-      }
     }
 
     h2 {
       @apply font-techyHead text-techy-blueTech m-0 font-normal lowercase text-[1.6em] leading-[1.1em] tracking-[.03em] inline;
 
-      &:nth-child(1) {
-        //
-      }
-
-      &:nth-child(2) {
-        //
-      }
-
       @media (max-width: theme("screens.breakXlg")) {
         @apply inline text-[3.3vw] mt-[-3px];
-
-        &:nth-child(1) {
-          //
-        }
 
         &:nth-child(2) {
           @apply ml-1;
@@ -212,10 +187,6 @@
 
       @media (max-width: theme("screens.breakLg")) {
         @apply inline text-[3.7vw] mt-[-3px];
-
-        &:nth-child(1) {
-          //
-        }
 
         &:nth-child(2) {
           @apply ml-1;
@@ -261,48 +232,16 @@
           }
         }
 
-        &:nth-child(1) {
-          //
-        }
-
-        &:nth-child(2) {
-          //
-        }
-
         @media (max-width: theme("screens.breakLg")) {
           @apply justify-center text-[1.2em] tracking-[.1em];
-
-          &:nth-child(1) {
-            //
-          }
-
-          &:nth-child(2) {
-            //
-          }
         }
 
         @media (max-width: theme("screens.breakSm")) {
           @apply tracking-[.09em] ;
-
-          &:nth-child(1) {
-            //
-          }
-
-          &:nth-child(2) {
-            //
-          }
         }
 
         @media (max-width: theme("screens.breakXsm")) {
           @apply justify-center text-[1.1em] tracking-[.07em] leading-8 text-center;
-
-          &:nth-child(1) {
-            //
-          }
-
-          &:nth-child(2) {
-            //
-          }
         }
       }
     }

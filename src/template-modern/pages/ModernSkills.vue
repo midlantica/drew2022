@@ -17,33 +17,21 @@
 <style lang='scss' scoped>
   @import '../assets/css/modern-main.scss';
 
-  .modern .skillsGrid {
-    @apply w-1/2 grid grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] justify-center text-center my-4 mx-auto items-stretch content-between gap-y-2 gap-x-0 justify-items-center;
+  // >>>>>>>>>>>>>>>>>>>>>>.....
+  .skillsGrid {
+    @apply grid-cols-[repeat(6,_minmax(88px,_1fr))] col-start-1 col-end-2 row-start-2 row-end-4 justify-center justify-items-center w-[35vw];
 
-    @media (max-width: 900px) {
-      @apply w-3/5;
+    @media (max-width: theme("screens.breakXlg")) {
+      @apply grid-cols-[repeat(4,_minmax(88px,_1fr))] w-[70vw] row-start-2 row-end-2;
     }
 
-    @media (max-width: 600px) {
-      @apply w-[70%];
+    @media (max-width: theme("screens.breakLg")) {
+      @apply row-start-2 row-end-2;
     }
 
-    @media (max-width: 300px) {
-      @apply w-full;
+    @media (max-width: theme("screens.breakSm")) {
+      @apply row-start-2 row-end-2;
     }
-
-    .icon {
-      @apply cursor-pointer;
-    }
-
-    svg {
-      @apply w-[100px] mt-0 mx-auto mb-3;
-    }
-
-  }
-
-  .bounce {
-    @apply relative;
   }
 
   .fade-enter-active,

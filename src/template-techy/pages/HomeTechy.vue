@@ -2,7 +2,7 @@
   <transition name="fade" appear>
     <div>
       <transition name="topDown" appear>
-        <header>
+        <header class="shadow-none text-base-ivory bg-techy-mango">
           <Navvy />
         </header>
       </transition>
@@ -31,7 +31,7 @@
         </main>
       </transition>
 
-      <footer>
+      <footer class="shadow-none text-base-ivory bg-techy-mango">
         <Quote />
       </footer>
     </div>
@@ -70,10 +70,6 @@
     @media (min-width: theme("screens.breakXlg")) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       @apply grid-cols-[7fr_6fr] mt-0 mx-6 mb-2;
     }
-  }
-
-  header {
-    @apply text-base-ivory shadow-none bg-techy-mango;
   }
 
   .copyArea {
@@ -180,19 +176,4 @@
     }
   }
 
-  footer {
-    @apply text-base-ivory bg-techy-mango shadow-none;
-
-    @media (max-width: theme("screens.breakXlg")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakLg")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakSm")) {
-      //
-    }
-  }
 </style>

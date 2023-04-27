@@ -2,7 +2,7 @@
   <transition name="fade" appear>
     <div>
       <transition name="topDown" appear>
-        <header>
+        <header class="-mb-4 shadow-none text-base-ivory">
           <Navvy />
         </header>
       </transition>
@@ -44,11 +44,6 @@
 
 <style lang='scss' scoped>
   @import '../assets/css/punk-main.scss';
-
-  header,
-  footer {
-    @apply text-base-ivory shadow-none -mb-4;
-  }
 
   .mainGrid {
     @apply grid grid-cols-2 gap-x-2 gap-y-2 shadow-none py-0 px-4 bg-transparent;

@@ -18,11 +18,10 @@
   @import "../assets/css/modern-main.scss";
 
   .aboutGrid {
-    @apply grid-cols-[minmax(auto,_2fr)_minmax(225px,_1fr)];
-    @apply grid w-[80%] m-auto gap-8;
+    @apply w-[80%] grid grid-cols-[minmax(auto,_2fr)_minmax(225px,_1fr)] gap-8 m-auto;
 
     @media (max-width: 850px) {
-      @apply grid grid-cols-1 w-[90%];
+      @apply w-[90%] grid grid-cols-1;
     }
   }
 </style>

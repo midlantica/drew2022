@@ -10,10 +10,6 @@
   <transition name="bounce2" appear>
     <ExtrasC />
   </transition>
-
-  <footer class="shadow-none text-base-ivory">
-    <!-- <Navvy /> -->
-  </footer>
 </template>
 
 <script setup>

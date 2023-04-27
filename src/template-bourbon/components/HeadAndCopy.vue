@@ -53,7 +53,6 @@
 
       @media (max-width: theme("screens.breakLg")) {
         @apply text-[1.65rem];
-        //
       }
 
       @media (max-width: theme("screens.breakSm")) {
@@ -67,15 +66,10 @@
     }
   }
 
-  p.smallCaps {
-    @apply text-[180%] uppercase;
-  }
-
   p {
     @apply leading-[2.4rem] font-bourbonCopy text-[1.1rem] text-base-grey mt-2 mx-2 mb-0 tracking-[0.03rem] mr-2;
 
     @media (max-width: theme("screens.breakXlg")) {
-      // columns: 2 20ch;
       @apply columns-2 leading-9 gap-x-12 text-justify hyphens-auto rule-w-[1px] rule-style-solid rule-color-[hsla(7,77%,43%,50%)];
     }
 
@@ -84,7 +78,6 @@
     }
 
     @media (max-width: 670px) {
-      // columns: initial;
       @apply columns-1 text-justify hyphens-auto;
     }
 

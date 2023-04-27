@@ -95,10 +95,10 @@
   }
 
   h1 {
-    @apply font-corpHead text-[1.5rem] transition duration-[.25s] ease-in font-medium;
+    @apply font-corpHead text-[1.5rem] transition-all duration-[.25s] ease-in font-medium;
 
     a:hover {
-      // color: initial !important;
+      //
     }
 
     @media (max-width: theme("screens.breakLg")) {
@@ -115,7 +115,7 @@
   }
 
   h3 {
-    @apply font-corpCopy text-[1.35rem] transition duration-[.25s] ease-in font-bold text-center leading-loose;
+    @apply font-corpCopy text-[1.35rem] transition-all duration-[.25s] ease-in font-bold text-center leading-loose;
 
     a:hover {
       //
@@ -208,7 +208,7 @@
 
       &.resume,
       &.email {
-        @apply text-corp-blueMid leading-normal;
+        @apply text-corp-blueDark leading-normal;
 
         a {
           @apply text-corp-blueDark;

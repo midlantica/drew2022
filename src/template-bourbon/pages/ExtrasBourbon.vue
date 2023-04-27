@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="bg-[url('../assets/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
     <Navvy />
   </header>
 
@@ -7,7 +7,7 @@
     <ExtrasC />
   </transition>
 
-  <footer>
+  <footer class="bg-[url('../assets/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
     <nav class="h-3" />
   </footer>
 </template>

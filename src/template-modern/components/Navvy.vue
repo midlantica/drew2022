@@ -69,17 +69,6 @@
       }
     }
 
-    @media (max-width: theme("screens.breakLg")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakSm")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakXsm")) {
-      //
-    }
   }
 
   section.jobDesc {
@@ -87,14 +76,6 @@
 
     @media (max-width: theme("screens.breakSm")) {
       @apply text-center self-center;
-
-      &:nth-child(1) {
-        //
-      }
-
-      &:nth-child(2) {
-        //
-      }
     }
 
     @media (max-width: theme("screens.breakLg")) {
@@ -107,14 +88,6 @@
 
     h2 {
       @apply text-[1.15rem] tracking-[-0.01em] leading-[1.5em] font-normal text-[hsla(0,0%,100%,0.85)] text-center lowercase antialiased drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)];
-
-      @media (max-width: theme("screens.breakSm")) {
-        //
-      }
-
-      @media (max-width: theme("screens.breakXsm")) {
-        //
-      }
     }
   }
 
@@ -144,17 +117,6 @@
         }
       }
 
-      @media (max-width: theme("screens.breakLg")) {
-        //
-      }
-
-      @media (max-width: theme("screens.breakSm")) {
-        //
-      }
-
-      @media (max-width: theme("screens.breakXsm")) {
-        //
-      }
     }
   }
 

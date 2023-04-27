@@ -85,7 +85,6 @@
     @media (max-width: theme("screens.breakXsm")) {
       font-size: 3.05em;
     }
-
   }
 
   section.jobDesc {
@@ -97,26 +96,10 @@
 
     @media (max-width: theme("screens.breakSm")) {
       @apply grow-0 text-center self-center ml-0 mt-2;
-
-      &:nth-child(1) {
-        //
-      }
-
-      &:nth-child(2) {
-        //
-      }
     }
 
     @media (max-width: theme("screens.breakXsm")) {
       @apply ml-0 mt-0;
-
-      &:nth-child(1) {
-        //
-      }
-
-      &:nth-child(2) {
-        //
-      }
     }
 
     h2 {
@@ -162,24 +145,8 @@
     p {
       @apply font-bourbonCopy tracking-[0.05rem] text-[1.15rem] leading-[1.35rem] lowercase antialiased;
 
-      &:nth-child(1) {
-        //
-      }
-
-      &:nth-child(2) {
-        //
-      }
-
       @media (max-width: theme("screens.breakLg")) {
         @apply justify-center text-[1.5rem] tracking-[0.1785rem] mt-[-.3em] leading-[1.95rem];
-
-        &:nth-child(1) {
-          //
-        }
-
-        &:nth-child(2) {
-          //
-        }
       }
 
       @media (max-width: theme("screens.breakSm")) {
@@ -188,14 +155,6 @@
 
       @media (max-width: theme("screens.breakXsm")) {
         @apply justify-center text-[1rem] tracking-[.09em] leading-5 text-center;
-
-        &:nth-child(1) {
-          //
-        }
-
-        &:nth-child(2) {
-          @apply leading-[1.6rem]
-        }
       }
     }
   }

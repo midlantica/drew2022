@@ -2,7 +2,7 @@
   <transition name="fade" appear>
     <div>
       <transition name="topDown" appear>
-        <header>
+        <header class="shadow-none">
           <Navvy />
         </header>
       </transition>
@@ -31,7 +31,7 @@
         </main>
       </transition>
 
-      <footer>
+      <footer class="shadow-none">
         <Quotes />
       </footer>
     </div>
@@ -49,19 +49,6 @@
 
 <style lang="scss" scoped>
   @import '../assets/css/corp-main.scss';
-
-  .about {
-    @apply text-[.95em] bg-white;
-
-    @media (max-width: theme("screens.breakXlg")) {
-      //
-    }
-  }
-
-  header,
-  footer {
-    @apply shadow-none;
-  }
 
   .mainGrid {
     @apply grid-cols-2 grid gap-y-2 gap-x-0 ml-4 mb-4 mr-6;

@@ -84,11 +84,6 @@
       @media (max-width: theme("screens.breakXxsm")) {
         @apply w-[99.8%];
       }
-
-      header,
-      footer {
-        @apply bg-[url('./template-bourbon/assets/img/bg/bg_bag_dk.jpg')] bg-repeat;
-      }
     }
 
     .about>p {
@@ -406,7 +401,7 @@
       //
 
       h1 {
-        @apply mt-4 text-black text-[1.25rem] font-semibold leading-normal capitalize antialiased font-modernSubhead;
+        @apply mt-4 text-black text-[1.25rem] font-semibold leading-normal capitalize antialiased font-modernSubhead bg-white/70 px-2;
       }
 
       p {

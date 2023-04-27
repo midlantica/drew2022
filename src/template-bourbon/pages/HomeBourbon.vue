@@ -2,7 +2,7 @@
   <transition name="fade" appear>
     <div>
       <transition name="topDown" appear>
-        <header>
+        <header class="bg-[url('../assets/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
           <Navvy />
         </header>
       </transition>
@@ -35,7 +35,7 @@
         </main>
       </transition>
 
-      <footer>
+      <footer class="bg-[url('../assets/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
         <nav class="h-3" />
       </footer>
     </div>
@@ -52,13 +52,6 @@
 </script>
 
 <style lang='scss' scoped>
-  @import "../assets/css/bourbon-main.scss";
-
-  header,
-  footer {
-    @apply shadow-druShadow;
-  }
-
   .mainGrid {
     @apply grid grid-cols-1 lg:grid-cols-2 my-4 mr-6 ml-4 gap-x-4 gap-y-4;
   }

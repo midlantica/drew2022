@@ -8,7 +8,7 @@
   </transition>
 
   <footer class="shadow-none text-base-ivory bg-techy-mango">
-    <NavvyEmpty />
+    &nbsp;
   </footer>
 </template>
 
