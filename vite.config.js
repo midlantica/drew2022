@@ -19,5 +19,8 @@ export default defineConfig({
         additionalData: '@import "./src/assets/css/main.scss";'
       }
     }
+  },
+  build: {
+    minify: 'esbuild'
   }
 })

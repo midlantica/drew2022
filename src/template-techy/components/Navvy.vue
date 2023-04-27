@@ -1,7 +1,7 @@
 <template>
-  <nav>
-    <div class="mastMain">
-      <div class="masty">
+  <nav class="flex flex-col items-center content-center justify-center w-full flex-nowrap grow">
+    <div class="w-full mastMain bg-techy-mango">
+      <div class="mx-auto my-0 text-center masty">
         <div class="DHmast">
           <router-link :to="{ name: 'ExtrasTechy' }" class="drewHeadPic jelloHorizontal" />
           <router-link to="/Techy" class="svgArt mastDrew">
@@ -48,33 +48,19 @@
   @import '../assets/css/techy-main.scss';
 
   nav {
-    @apply w-full flex flex-col flex-nowrap justify-center items-center content-center grow;
-
-    @media (max-width: theme("screens.breakLg")) {
-      //
-    }
+    //
   }
 
   nav .mastMain {
-    @apply w-full bg-techy-mango;
-
-    @media (max-width: theme("screens.breakLg")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakSm")) {
-      //
-    }
+    //
 
     .masty {
-      @apply my-0 mx-auto text-center;
+      //
 
       .DHmast {
-        // grid-template-columns: 2fr 4fr 7fr;
         @apply grid grid-cols-[2fr_4fr_7fr] items-center my-0 mx-auto pt-4 gap-8;
 
         @media (max-width: theme("screens.breakXlg")) {
-          // grid-template-columns: auto auto;
           @apply grid-cols-[auto_auto] justify-center gap-2;
         }
 

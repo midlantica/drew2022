@@ -13,12 +13,4 @@
 </template>
 
 <style lang="scss" scoped>
-  // @import '~/assets/css/_colors.scss';
-
-  svg {
-    // width: 1102px;
-    // height: 337px;
-
-  }
-
 </style>

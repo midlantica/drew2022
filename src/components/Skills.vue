@@ -152,8 +152,7 @@
   @import "../template-modern/assets/css/modern-main.scss";
 
   .modalBg {
-    @apply fixed w-full top-0 flex justify-center items-center m-auto h-full left-0 right-0 bottom-0 z-50 bg-black/60;
-    animation: fade .25s;
+    @apply fixed w-full top-0 flex justify-center items-center m-auto h-full left-0 right-0 bottom-0 z-50 bg-black/60 animate-[fade_.25s];
 
     .modal {
       width: clamp(calc(300px - 2rem), 500px, calc(100% - 2rem));

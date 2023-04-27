@@ -1,7 +1,9 @@
 <template>
-  <section>
-    <h1>{{ store.copy.druHead }}</h1>
-    <p v-html="store.copy.druCopy" />
+  <section class="mt-[2rem] mr-[1.5rem] mb-0 ml-4">
+    <h1 class="text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-0 mb-4 normal-case">
+      {{ store.copy.druHead }}
+    </h1>
+    <p class="text-[1.2rem] font-techyCopy leading-[2.9rem] tracking-[.06em] text-techy-blueTech" v-html="store.copy.druCopy" />
   </section>
 </template>
 
@@ -15,7 +17,7 @@
   @import '../assets/css/techy-main.scss';
 
   section {
-    @apply mt-[2rem] mr-[1.5rem] mb-0 ml-4;
+    //
 
     @media (max-width: theme("screens.breakXlg")) {
       @apply mt-6 mx-6 mb-4;
@@ -35,7 +37,7 @@
   }
 
   h1 {
-    @apply text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-0 mb-4 normal-case;
+    //
 
     @media (min-width: theme("screens.breakXlg")) {
       @apply max-w-[26ch];
@@ -59,7 +61,7 @@
   }
 
   p {
-    @apply text-[1.2rem] font-techyCopy leading-[2.9rem] tracking-[.06em] text-techy-blueTech;
+    //
 
     &.smallCaps {
       @apply text-[80%] tracking-wider uppercase;
@@ -67,7 +69,6 @@
 
     @media (min-width: theme("screens.breakXlg")) and (-webkit-min-device-pixel-ratio: 2) {
       //
-
     }
 
     @media (max-width: theme("screens.breakXlg")) {
