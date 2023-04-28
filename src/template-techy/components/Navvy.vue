@@ -13,7 +13,7 @@
         </div>
 
         <div class="block jobDesc">
-          <h2>{{ store.copy.uiuxDesigner }} +</h2>
+          <h2>{{ store.copy.uiuxDesigner }} + </h2>
           <h2 class="marLH">
             {{ store.copy.vizDesigner }}
           </h2>
