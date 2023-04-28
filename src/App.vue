@@ -317,23 +317,23 @@
       @apply w-[99.8%] bg-[url(/img/bg/white_paper_patt-01.jpg)] bg-repeat;
 
       @media (max-width: theme("screens.breakXlg")) {
-        @apply w-[99.8%];
+        // @apply w-[99.8%];
       }
 
       @media (max-width: theme("screens.breakLg")) {
-        @apply w-[99.8%];
+        // @apply w-[99.8%];
       }
 
       @media (max-width: theme("screens.breakSm")) {
-        @apply w-[99.8%];
+        // @apply w-[99.8%];
       }
 
       @media (max-width: theme("screens.breakXsm")) {
-        @apply w-[99.8%];
+        // @apply w-[99.8%];
       }
 
       @media (max-width: theme("screens.breakXxsm")) {
-        @apply w-[99.8%];
+        // @apply w-[99.8%];
       }
     }
 

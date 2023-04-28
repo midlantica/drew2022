@@ -370,6 +370,16 @@
 
     svg {
       @apply w-[88px] drop-shadow-tightBlackLt;
+      filter: brightness(0.9) sepia(1) hue-rotate(160deg) saturate(3) !important;
+      // @apply brightness-[.85] sepia-[1] hue-rotate-[160deg] saturate-[3];
+
+      &.icon {
+
+      }
+
+      // #svgVue, #iconUiux, #figmaBox, #html5, #css3item, #jsBox, #svgTailwind, #svgIcon, #svgVue, #svgNuxt, #svgSketch, #svgSvg, #svgChelsea {
+      //   @apply brightness-[0.85] sepia-[1] hue-rotate-[160deg] saturate-[3];
+      // }
 
       &:hover {
         @apply animate-[shimmy_.25s];

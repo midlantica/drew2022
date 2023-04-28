@@ -51,11 +51,6 @@
     animation-timing-function: cubic-bezier(1, -0.24, 0, 1.27);
   }
 
-  .corp #jsBox {
-    filter: brightness(1) sepia(0) hue-rotate(160deg) saturate(2);
-    @apply drop-shadow-tightBlackLt;
-  }
-
   @keyframes gearRotate {
     2% {
       transform: rotate(2deg);

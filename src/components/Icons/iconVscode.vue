@@ -27,14 +27,6 @@
     @apply cursor-pointer;
   }
 
-  .corp #svgVscode {
-    filter: brightness(0.85) sepia(1) hue-rotate(160deg) saturate(3);
-
-    &:hover {
-      filter: none;
-    }
-  }
-
   #svgVscode {
     //
 

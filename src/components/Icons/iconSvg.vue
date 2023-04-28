@@ -42,15 +42,6 @@
     }
   }
 
-  .corp #svgSvg {
-    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(2);
-    @apply drop-shadow-tightBlackLt;
-
-    &:hover {
-      filter: none;
-    }
-  }
-
   #svgSvg {
     // transform: translate(28px, 7px);
 

@@ -29,15 +29,6 @@
       animation-delay: 0.85s;
     }
   }
-
-  .corp #svgVue {
-    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(3);
-
-    &:hover {
-      filter: none;
-    }
-  }
-
   .groupVue {}
 
   .lightGreen {

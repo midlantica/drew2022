@@ -49,15 +49,6 @@
     }
   }
 
-  .corp #css3item {
-    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(3);
-    @apply drop-shadow-tightBlackLt;
-
-    &:hover {
-      filter: none;
-    }
-  }
-
   #whiteStuff {
     filter: drop-shadow(0px 0.5px 0.5px rgba(0, 0, 0, 0.3));
   }

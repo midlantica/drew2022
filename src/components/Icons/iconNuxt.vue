@@ -26,15 +26,6 @@
     @apply cursor-pointer;
   }
 
-  .corp #svgNuxt {
-    filter: brightness(0.75) sepia(1) hue-rotate(160deg) saturate(3);
-    @apply drop-shadow-tightBlackLt;
-
-    &:hover {
-      filter: none;
-    }
-  }
-
   #svgNuxt {
 
     //

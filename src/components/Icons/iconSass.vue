@@ -34,15 +34,6 @@
     }
   }
 
-  .corp #svgIcon {
-    filter: brightness(1) sepia(1) hue-rotate(160deg) saturate(3);
-    @apply drop-shadow-tightBlackLt;
-
-    &:hover {
-      filter: none;
-    }
-  }
-
   .punk #svgIcon {
     fill: hsl(55.31deg 100% 50%);
 

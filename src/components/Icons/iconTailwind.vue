@@ -23,15 +23,6 @@
     transform-origin: 50% 50%;
   }
 
-  .corp #svgTailwind {
-    filter: brightness(0.95) sepia(1) hue-rotate(160deg) saturate(3);
-    @apply drop-shadow-tightBlackLt;
-
-    &:hover {
-      filter: none;
-    }
-  }
-
   #svgTailwind:hover .groupTailwind {
     animation: tailwindRotate 2s reverse ease-in-out 2;
     animation-delay: 1s;
