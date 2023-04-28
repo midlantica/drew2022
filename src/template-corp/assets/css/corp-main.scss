@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
+@import '/src/template-corp/assets/css/century/century.css';
+
 body {
   @apply m-0 bg-corp-ivory text-[1rem] font-corpCopy;
 }

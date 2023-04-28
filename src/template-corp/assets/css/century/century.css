@@ -1,4 +1,19 @@
 @font-face {
-  font-family: "century";
-  src: url('font.woff2') format('woff2');
+  font-family: "century-light";
+  src: url('CenturyModern-Light.otf') format('otf');
+}
+
+@font-face {
+  font-family: "century-light-italic";
+  src: url('CenturyModern-LightItalic.otf') format('otf');
+}
+
+@font-face {
+  font-family: "century-book";
+  src: url('CenturyModern-Book.otf') format('otf');
+}
+
+@font-face {
+  font-family: "century-book-italic";
+  src: url('CenturyModern-Italic.otf') format('otf');
 }
