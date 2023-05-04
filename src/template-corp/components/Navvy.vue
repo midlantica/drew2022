@@ -1,11 +1,11 @@
 <template>
-  <nav>
+  <nav class="flex flex-row flex-wrap items-center pt-[2em] px-[2em] pb-0 justify-center mb-6">
     <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center justify-center gap-x-4">
       <div class="drewTop max-[830px]:m-auto gap-2 grow">
         <router-link :to="{ name: 'Corp' }" class="w-full flex max-[830px]:flex-column flex-row flex-wrap content-center gap-6 justify-center">
           <router-link :to="{ name: 'ExtrasCorp' }" class="content-center m-0 drewhead jelloHorizontal" />
           <div class="flex flex-col flex-wrap">
-            <drewHarper class="mt-2 drewHarper" />
+            <drewHarper class="mt-2 breakMd:h-[83px] breakSm:h-auto" />
             <div class="flex flex-row flex-wrap justify-center ">
               <h3 class="font-corpCopy text-[115%] transition duration-[.25s] ease-in font-bold text-center leading-loose uppercase tracking-[0.16rem]">
                 {{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}
@@ -37,14 +37,6 @@
 <style lang='scss' scoped>
   @import '../assets/css/corp-main.scss';
 
-  nav {
-    @apply flex flex-row flex-wrap items-center pt-[2em] px-[2em] pb-0 justify-between mb-6;
-
-    @media (max-width: theme("screens.breakLg")) {
-      @apply justify-center mb-8;
-    }
-  }
-
   a {
     @apply text-base-ivory no-underline;
 
@@ -70,18 +62,6 @@
     }
   }
 
-  .drewHarper {
-    @apply h-[83px];
-
-    @media (max-width: theme("screens.breakLg")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakSm")) {
-      @apply h-auto;
-    }
-  }
-
   a.drewhead {
     background-position: -39px -59px;
     background-size: 151%;
@@ -91,46 +71,6 @@
     @media (max-width: theme("screens.breakSm")) {
       background-position: -40px -50px !important;
       background-size: 145% !important;
-    }
-  }
-
-  h1 {
-    @apply font-corpHead text-[1.5rem] transition-all duration-[.25s] ease-in font-medium;
-
-    a:hover {
-      //
-    }
-
-    @media (max-width: theme("screens.breakLg")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakSm")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakXsm")) {
-      //
-    }
-  }
-
-  h3 {
-    @apply font-corpCopy text-[1.35rem] transition-all duration-[.25s] ease-in font-bold text-center leading-loose;
-
-    a:hover {
-      //
-    }
-
-    @media (max-width: theme("screens.breakLg")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakSm")) {
-      //
-    }
-
-    @media (max-width: theme("screens.breakXsm")) {
-      //
     }
   }
 
