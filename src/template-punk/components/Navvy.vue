@@ -186,9 +186,7 @@
       }
 
       a.DrewHead {
-        @apply bg-[url('/img/drew_mug_punk.png')];
-        //
-        @apply bg-no-repeat bg-contain w-[18vw] h-[120px] no-underline;
+        @apply bg-[url('/img/drew_mug_punk.png')] bg-no-repeat bg-contain w-[18vw] h-[120px] no-underline;
 
         @media (max-width: theme("screens.breakLg")) {
           @apply w-[122px] h-[122px] mt-4;

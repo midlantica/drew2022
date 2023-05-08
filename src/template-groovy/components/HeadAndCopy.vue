@@ -19,7 +19,7 @@
   }
 
   section {
-    @apply mt-10 mx-6 mb-0;
+    @apply mt-10 mr-9 mb-0 ml-9;
 
     @media (max-width: theme("screens.breakXlg")) {
       //

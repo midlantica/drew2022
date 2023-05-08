@@ -114,9 +114,6 @@
       }
     }
 
-    .smallCaps {
-      @apply text-[90%] tracking-wider uppercase;
-    }
   }
 
   body.modern {
@@ -165,10 +162,6 @@
 
     &.extras .extrasWrapper {
       //
-
-      .smallCaps {
-        @apply text-[90%] tracking-wider uppercase;
-      }
 
       h1 {
         @apply text-white font-modernCopy text-[1.2rem] leading-normal capitalize antialiased bg-transparent tracking-wider;
@@ -285,10 +278,6 @@
       }
     }
 
-    .smallCaps {
-      @apply text-[87.5%] tracking-wider uppercase;
-    }
-
     .contact {
       @apply flex gap-x-4 gap-y-4;
     }
@@ -335,10 +324,6 @@
       @media (max-width: theme("screens.breakXxsm")) {
         // @apply w-[99.8%];
       }
-    }
-
-    .smallCaps {
-      @apply text-[90%] tracking-[.03em];
     }
 
     &.extras .extrasWrapper {
@@ -406,10 +391,6 @@
 
       p {
         @apply font-punkCopy text-black;
-      }
-
-      .smallCaps {
-        @apply text-[95%] tracking-wider uppercase;
       }
 
       a {

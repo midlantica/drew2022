@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="flex flex-row flex-wrap items-center justify-center px-5 py-2">
     <h1>
       <router-link :to="{ name: 'Bourbon' }">
         DREW HARPER
@@ -51,23 +51,15 @@
     @apply text-bourbon-ivory leading-4 m-0 p-0;
 
     a {
-      @apply text-bourbon-ivory no-underline;
+      @apply no-underline;
     }
   }
 
-  nav {
-    @apply flex flex-row flex-wrap justify-between items-center py-2 px-5;
+  nav a {
+    @apply text-bourbon-ivory;
 
-    @media (max-width: theme("screens.breakLg")) {
-      @apply justify-center;
-    }
-
-    a {
-      @apply text-bourbon-ivory;
-
-      &:hover {
-        @apply text-[orange];
-      }
+    &:hover {
+      @apply text-[orange];
     }
   }
 
@@ -83,19 +75,19 @@
     }
 
     @media (max-width: theme("screens.breakXsm")) {
-      font-size: 3.05em;
+      @apply font-[3.05rem];
     }
   }
 
   section.jobDesc {
-    @apply grow ml-[0.55rem] mt-[.25rem] transition duration-[.25s] ease-in;
+    @apply grow ml-[0.55rem] mt-[0.1rem] transition duration-[.25s] ease-in;
 
     @media (max-width: theme("screens.breakLg")) {
-      @apply grow-0 ml-2 mt-2;
+      @apply grow-0 ml-2;
     }
 
     @media (max-width: theme("screens.breakSm")) {
-      @apply grow-0 text-center self-center ml-0 mt-2;
+      @apply grow-0 text-center self-center ml-0;
     }
 
     @media (max-width: theme("screens.breakXsm")) {

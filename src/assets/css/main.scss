@@ -53,3 +53,7 @@ audio {
 ::-webkit-scrollbar-track {
   @apply rounded-none bg-[hsla(0,0%,100%,0)] ;
 }
+
+.smallCaps {
+  @apply text-[90%] tracking-wider uppercase;
+}

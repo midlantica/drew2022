@@ -178,18 +178,6 @@
         @apply clear-both my-2 gap-y-0 text-[0.8rem] gap-1;
     }
 
-    // p,
-    // cite {
-    //   @apply not-italic inline leading-normal;
-    // }
-
-    // cite {
-    //   @apply break-keep whitespace-nowrap;
-    // }
-
-    // .quotePad {
-    //   @apply p-0 leading-4 m-auto select-none;
-    // }
   }
 
   // MODERN ########################
@@ -212,18 +200,6 @@
     @media only screen and (min-device-width: 375px) and (max-device-width: 660px) and (-webkit-min-device-pixel-ratio: 2) {
         @apply clear-both mt-2 mb-2 gap-y-0;
     }
-
-    // .quotePad {
-    //   @apply text-center;
-    // }
-
-    // .quotePad a {
-    //   @apply text-white cursor-pointer;
-
-    //   &:hover {
-    //     @apply text-[yellow];
-    //   }
-    // }
 
     p {
       @apply text-[0.9em] text-base-ivory tracking-wider leading-[1.5em] text-center;

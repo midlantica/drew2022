@@ -1,9 +1,9 @@
 <template>
-  <section class="mt-[2rem] mr-[1.5rem] mb-0 ml-4">
-    <h1 class="text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-0 mb-4 normal-case">
+  <section class="mt-[2rem] mr-9 mb-0 ml-9">
+    <h1 class="font-techyHead text-[1.6rem] font-semibold leading-9 mt-0 mb-4 normal-case text-techy-blueTech">
       {{ store.copy.druHead }}
     </h1>
-    <p class="text-[1.2rem] font-techyCopy leading-[2.9rem] tracking-[.06em] text-techy-blueTech" v-html="store.copy.druCopy" />
+    <p class="font-techyCopy text-[1.25rem] leading-[3rem] tracking-[.06em] text-techy-blueTech" v-html="store.copy.druCopy" />
   </section>
 </template>
 

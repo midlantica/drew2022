@@ -3,7 +3,7 @@
     <section class="flex min-[830px]:flex-column flex-row flex-wrap w-full min-[830px]:content-center justify-center gap-x-4">
       <div class="drewTop max-[830px]:m-auto gap-2 grow">
         <router-link :to="{ name: 'Corp' }" class="w-full flex max-[830px]:flex-column flex-row flex-wrap content-center gap-6 justify-center">
-          <router-link :to="{ name: 'ExtrasCorp' }" class="content-center m-0 drewhead jelloHorizontal" />
+          <router-link :to="{ name: 'ExtrasCorp' }" class="content-center m-0 bg-[url('/img/drew_mug_red.png')] inline-block w-[80px] h-[80px] bg-[length:151%] bg-[-39px_-59px] bg-no-repeat bg-corp-accentRed rounded-[1px] shadow-[0px_0px_1px_1px_#00000026] hue-rotate-[210deg] grayscale-[50%] jelloHorizontal" />
           <div class="flex flex-col flex-wrap">
             <drewHarper class="mt-2 breakMd:h-[83px] breakSm:h-auto" />
             <div class="flex flex-row flex-wrap justify-center ">
@@ -62,18 +62,6 @@
     }
   }
 
-  a.drewhead {
-    background-position: -39px -59px;
-    background-size: 151%;
-    filter: hue-rotate(210deg) grayscale(50%);
-    @apply bg-[url('/img/drew_mug_red.png')] inline-block w-[80px] h-[80px] bg-no-repeat bg-corp-accentRed rounded-[1px] shadow-[0px_0px_1px_1px_#00000026];
-
-    @media (max-width: theme("screens.breakSm")) {
-      background-position: -40px -50px !important;
-      background-size: 145% !important;
-    }
-  }
-
   .uiux {
     @apply h-[4ch];
 
@@ -118,7 +106,6 @@
       @apply font-corpCopy text-[1.3em] tracking-[.01em] items-center text-center leading-[1.5em] grow font-semibold lowercase;
 
       a {
-        // border-bottom: 2px dotted lighten($blue-dark, 20);
         @apply text-corp-blueMid;
 
         &:hover {

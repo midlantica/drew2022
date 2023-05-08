@@ -17,7 +17,8 @@
             <div class="modalInner">
               <div class="icon">
                 <component
-                  :is="modelItem[0]" class="icon {{modelItem[1]}} { active: hover }"
+                  :is="modelItem[0]"
+                  class="icon {{modelItem[1]}} { active: hover }"
                   @mouseleave="hover = false"
                 />
               </div>

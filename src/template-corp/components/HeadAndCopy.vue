@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div class="flex flex-col mx-4 mt-0 mb-4 ml-4 ml-6 mr-8 flex-nowrap breakXlg:mt-0">
     <h1>{{ store.copy.druHead }}</h1>
     <p v-html="store.copy.druCopy" />
   </div>
@@ -13,30 +13,6 @@
 
 <style lang="scss" scoped>
   @import "../assets/css/corp-main.scss";
-
-  .wrap {
-    @apply flex flex-col flex-nowrap mt-0 mr-8 mb-4 ml-6;
-
-    @media (min-width: theme("screens.breakXlg")) {
-      @apply mt-0 mr-8 mb-4 ml-4;
-    }
-
-    @media (max-width: theme("screens.breakXlg")) {
-      @apply mt-0 mx-4 mb-4;
-    }
-
-    @media (max-width: theme("screens.breakLg")) {
-      @apply mt-0 mx-4 mb-4;
-    }
-
-    @media (max-width: theme("screens.breakSm")) {
-      @apply mt-0 mx-4 mb-4;
-    }
-
-    @media (max-width: theme("screens.breakXsm")) {
-      @apply mt-0 mx-4 mb-4;
-    }
-  }
 
   h1 {
     @apply max-w-[28ch] font-corpHead text-corp-blueDark normal-case p-0 leading-[2rem] transition duration-[.25s] ease-in tracking-[0.01rem] w-full font-semibold text-[1.3rem] mt-0 mx-0 mb-2;
