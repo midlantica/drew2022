@@ -142,43 +142,10 @@
 
       a.svg.svgArt.mastDrew {
         @apply w-[170px];
-
-        @media (max-width: theme("screens.breakXlg")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakLg")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakSm")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakXsm")) {
-          //
-        }
       }
 
       a.svg.svgArt.mastHarper {
         //
-
-        @media (max-width: theme("screens.breakXlg")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakLg")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakSm")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakXsm")) {
-          //
-        }
-
       }
 
       a.DrewHead {
