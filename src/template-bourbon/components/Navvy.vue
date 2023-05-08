@@ -1,20 +1,24 @@
 <template>
   <nav class="flex flex-row flex-wrap items-center justify-center px-5 py-2">
-    <h1>
-      <router-link :to="{ name: 'Bourbon' }">
+    <h1 class="p-0 m-0 leading-none text-bourbon-ivory">
+      <router-link class="no-underline text-base-ivory hover:text-[orange]" :to="{ name: 'Bourbon' }">
         DREW HARPER
       </router-link>
     </h1>
     <section class="jobDesc">
-      <h2>{{ store.copy.uiuxDesigner }}</h2>
-      <h2>{{ store.copy.vizDesigner }}</h2>
+      <h2 class="p-0 m-0 leading-4 text-bourbon-ivory">
+        {{ store.copy.uiuxDesigner }}
+      </h2>
+      <h2 class="p-0 m-0 leading-4 text-bourbon-ivory">
+        {{ store.copy.vizDesigner }}
+      </h2>
     </section>
     <section class="contact">
       <p class="email">
-        <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
+        <a class="no-underline text-base-ivory hover:text-[orange]" :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
       </p>
       <p class="resume">
-        <a href="/resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
+        <a class="no-underline text-base-ivory hover:text-[orange]" href="/resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
       </p>
     </section>
   </nav>
@@ -29,39 +33,6 @@
 
 <style lang='scss' scoped>
   @import "../assets/css/bourbon-main.scss";
-
-  a {
-    @apply text-base-ivory no-underline;
-
-    &:link {
-      @apply text-base-ivory no-underline;
-    }
-
-    &:hover {
-      @apply text-bourbon-orange;
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  p {
-    @apply text-bourbon-ivory leading-4 m-0 p-0;
-
-    a {
-      @apply no-underline;
-    }
-  }
-
-  nav a {
-    @apply text-bourbon-ivory;
-
-    &:hover {
-      @apply text-[orange];
-    }
-  }
 
   h1 {
     @apply font-bourbonSubhead font-normal text-[4em] leading-none tracking-[.06em] transition duration-[.25s] ease-in antialiased w-auto grow-0 drop-shadow-[4px_0px_3px_rgba(0,0,0,0.1)];

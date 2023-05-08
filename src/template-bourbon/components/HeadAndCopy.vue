@@ -1,7 +1,7 @@
 <template>
-  <div class="areaWrapper">
-    <div class="headBlock">
-      <router-link :to="{ name: 'ExtrasBourbon' }" class="drewhead jelloHorizontal" />
+  <div class="w-full pt-4 pl-5 pr-2 breakSm:px-2 breakLg:px-4">
+    <div class="grid grid-cols-[88px_auto] gap-x-1.5 justify-items-start items-center auto-rows-auto">
+      <router-link :to="{ name: 'ExtrasBourbon' }" class="col-start-1 col-end-2 row-start-1 row-end-2 bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')] jelloHorizontal" />
       <h1>{{ store.copy.druHead }}</h1>
     </div>
     <p v-html="store.copy.druCopy" />
@@ -17,53 +17,25 @@
 <style lang="scss" scoped>
   @import "../assets/css/bourbon-main.scss";
 
-  .areaWrapper {
-    @apply w-full pt-4 pl-5 pr-2;
+  h1 {
+    @apply col-start-2 col-end-3 row-start-1 row-end-2 font-bourbonSubhead text-[1.7rem] inline-block text-bourbon-accentRed p-0 self-center max-w-[30ch];
 
     @media (min-width: theme("screens.breakXlg")) {
-      //
+      @apply max-w-[30ch];
     }
 
     @media (max-width: theme("screens.breakLg")) {
-      @apply px-4;
+      @apply text-[1.65rem];
     }
 
     @media (max-width: theme("screens.breakSm")) {
-      @apply px-2;
+      @apply max-w-[30ch] text-[1.5rem];
     }
 
     @media (max-width: theme("screens.breakXsm")) {
-      //
-    }
-  }
-
-  .headBlock {
-    @apply grid grid-cols-[88px_auto] gap-x-1.5 justify-items-start items-center auto-rows-auto;
-
-    a.drewhead {
-      @apply col-start-1 col-end-2 row-start-1 row-end-2 bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')];
+      @apply text-[1.45rem] m-0;
     }
 
-    h1 {
-      @apply col-start-2 col-end-3 row-start-1 row-end-2 font-bourbonSubhead text-[1.7rem] inline-block text-bourbon-accentRed p-0 self-center max-w-[30ch];
-
-      @media (min-width: theme("screens.breakXlg")) {
-        @apply max-w-[30ch];
-      }
-
-      @media (max-width: theme("screens.breakLg")) {
-        @apply text-[1.65rem];
-      }
-
-      @media (max-width: theme("screens.breakSm")) {
-        @apply max-w-[30ch] text-[1.5rem];
-      }
-
-      @media (max-width: theme("screens.breakXsm")) {
-        @apply text-[1.45rem] m-0;
-      }
-
-    }
   }
 
   p {

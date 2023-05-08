@@ -18,9 +18,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/bourbon-main.scss";
-
-  h1 {
-    @apply pt-4 font-bourbonHead text-bourbon-bourbon text-[1.75em] font-light antialiased;
-  }
+  // @import "../assets/css/bourbon-main.scss";
 </style>

@@ -144,4 +144,5 @@
       @apply row-start-4 row-end-4;
     }
   }
+
 </style>

@@ -119,17 +119,12 @@
       }
     }
 
-    p.smallCaps {
-      @apply text-[95%] text-punk-red font-medium uppercase;
-    }
-
     p {
       @apply font-normal text-[1em] leading-9 relative inline italic font-punkCopy text-base-grey tracking-[.045em] top-0 bg-punk-peach mt-4 mx-4 mb-0 py-[.4rem] px-[.1rem];
 
       @media (min-width: theme("screens.breakLg")) {
         //
       }
-
     }
 
   }

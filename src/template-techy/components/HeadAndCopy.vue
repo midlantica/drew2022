@@ -1,9 +1,9 @@
 <template>
-  <section class="mt-[2rem] mr-9 mb-0 ml-9">
-    <h1 class="font-techyHead text-[1.6rem] font-semibold leading-9 mt-0 mb-4 normal-case text-techy-blueTech">
+  <section>
+    <h1>
       {{ store.copy.druHead }}
     </h1>
-    <p class="font-techyCopy text-[1.25rem] leading-[3rem] tracking-[.06em] text-techy-blueTech" v-html="store.copy.druCopy" />
+    <p v-html="store.copy.druCopy" />
   </section>
 </template>
 
@@ -17,7 +17,7 @@
   @import '../assets/css/techy-main.scss';
 
   section {
-    //
+    @apply mt-[2rem] mr-9 mb-0 ml-9;
 
     @media (max-width: theme("screens.breakXlg")) {
       @apply mt-6 mx-6 mb-4;
@@ -37,7 +37,7 @@
   }
 
   h1 {
-    //
+    @apply font-techyHead text-[1.6rem] font-semibold leading-9 mt-0 mb-4 normal-case text-techy-blueTech;
 
     @media (min-width: theme("screens.breakXlg")) {
       @apply max-w-[26ch];
@@ -61,11 +61,7 @@
   }
 
   p {
-    //
-
-    &.smallCaps {
-      @apply text-[80%] tracking-wider uppercase;
-    }
+    @apply font-techyCopy text-[1.25rem] leading-[3rem] tracking-[.06em] text-techy-blueTech;
 
     @media (min-width: theme("screens.breakXlg")) and (-webkit-min-device-pixel-ratio: 2) {
       //

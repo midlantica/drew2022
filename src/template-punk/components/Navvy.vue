@@ -1,6 +1,6 @@
 <template>
-  <nav>
-    <div class="greenBar">
+  <nav class="flex flex-col items-center content-center px-2 py-4 breakLg:justify-center breakLg:content-center breakLg:items-center">
+    <div class="block w-full max-w-screen-breakXlg z-0 absolute top-0 left-0 h-[5em] self-center bg-[rgba(0,128,0,0.25)] saturate-[2.5]">
       &nbsp;
     </div>
     <p class="email">
@@ -37,10 +37,6 @@
 
     @media (max-width: theme("screens.breakLg")) {
       @apply justify-center content-center items-center;
-    }
-
-    .greenBar {
-      @apply block w-full max-w-screen-breakXlg z-0 absolute top-0 left-0 h-[5em] self-center bg-[rgba(0,128,0,0.25)] saturate-[2.5];
     }
 
     p.email {
