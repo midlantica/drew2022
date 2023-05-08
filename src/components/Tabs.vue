@@ -69,8 +69,7 @@
       @apply bg-[#333];
 
       &:hover {
-        @apply text-black;
-        @apply bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
+        @apply text-black bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
       }
     }
 
@@ -108,12 +107,10 @@
   }
 
   body.groovy .tabs>a.groovy {
-    @apply text-base-black drop-shadow-[0px_0px_1px_rgba(0,0,0,0.25)];
-    @apply bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
+    @apply text-base-black drop-shadow-[0px_0px_1px_rgba(0,0,0,0.25)] bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
 
     &:hover {
-      @apply text-base-black drop-shadow-[0px_0px_1px_rgba(0,0,0,1)];
-      @apply bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
+      @apply text-base-black drop-shadow-[0px_0px_1px_rgba(0,0,0,1)] bg-[linear-gradient(180deg,_#6cebe4_0%,_#6cebe4_25%,_#fece00_0,_#fece00_50%,_#e68f00_50%,_#e68f00_75%,_#e60008_0,_#e60008_100%)];
     }
 
   }

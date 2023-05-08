@@ -10,10 +10,10 @@
     </section>
     <section class="contact">
       <p class="flex flex-row flex-wrap justify-center gap-0 shrink">
-        <a :href="`mailto:` + `${store.copy.druEmail}`" class="marTH">{{
+        <a :href="`mailto:` + `${store.copy.druEmail}`" class="mt-2">{{
           store.copy.druEmail
         }}</a>
-        <a :href="resumeUrl" target="_blank" class="marTH">PDF&nbsp;Resume</a>
+        <a :href="resumeUrl" target="_blank" class="mt-2">PDF&nbsp;Resume</a>
       </p>
     </section>
   </nav>
