@@ -2,7 +2,7 @@
   <transition name="fade" appear>
     <div>
       <transition name="topDown" appear>
-        <header>
+        <header class="text-base-ivory bg-groovy-red after:clear-both h-[188px]">
           <NavvyHead />
         </header>
       </transition>
@@ -74,9 +74,9 @@
     }
   }
 
-  header {
-    @apply text-base-ivory bg-groovy-red after:clear-both h-[188px];
-  }
+  // header {
+  //   @apply text-base-ivory bg-groovy-red after:clear-both h-[188px];
+  // }
 
   .about {
     @apply bg-groovy-yellow rounded-xl font-groovyHead shadow-[0px_6px_0px_0px_hsl(0,_0%,_0%,_25%)];
