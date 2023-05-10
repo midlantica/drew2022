@@ -53,7 +53,7 @@
 
 <style lang='scss' scoped>
   .mainGrid {
-    @apply grid grid-cols-1 lg:grid-cols-2 my-4 mr-6 ml-4 gap-x-4 gap-y-4;
+    @apply grid grid-cols-1 lg:grid-cols-2 my-4 mr-6 ml-4 gap-x-0 gap-y-4;
   }
 
   .copyArea {

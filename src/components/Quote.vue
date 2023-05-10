@@ -215,16 +215,6 @@
 
     }
 
-    // GROOVY ########################
-    .groovy .quoteBlock {
-      p {
-        @apply font-modernCopy
-      }
-
-      .cite {
-        @apply font-modernCopy
-      }
-    }
   }
 
   // GROOVY ########################
