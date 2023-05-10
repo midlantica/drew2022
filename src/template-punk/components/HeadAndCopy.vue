@@ -29,7 +29,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/punk-main.scss";
 
   .flexbox {
     @apply flex flex-row justify-between;
@@ -64,7 +63,7 @@
       @apply self-end flex-row;
 
       .resume {
-        @apply text-[0.9em] font-punkCopy text-base-black bg-white font-medium not-italic tracking-[.02em] lowercase inline-block ml-1 py-[0.3em] px-2;
+        @apply text-[0.9em] font-punkCopy text-base-black bg-white font-medium not-italic tracking-[.02em] lowercase inline-block ml-1 mb-4 py-[0.3em] px-2;
 
         &.rOne {
           @apply text-white -rotate-2 bg-punk-magenta/50;
@@ -112,7 +111,7 @@
     @apply -rotate-1;
 
     h1 {
-      @apply font-medium z-10 inline-block leading-[1.7rem] text-white text-[1.15rem] bg-punk-red/80 rotate-1 pt-0 pr-0 pb-[.1rem] pl-[.2rem];
+      @apply font-punkHead font-medium z-10 leading-[1.7rem] text-white text-[1.16rem] bg-punk-red/80 rotate-1 py-1 pr-0 pb-[.1rem] pl-[.2rem] tracking-[.025em] uppercase inline;
 
       &:nth-of-type(1) {
         @apply rotate-0;

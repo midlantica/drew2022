@@ -12,8 +12,6 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '../assets/css/groovy-main.scss';
-
   :root {
     --breakXsm: 530px;
   }

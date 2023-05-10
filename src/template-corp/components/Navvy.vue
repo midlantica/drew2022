@@ -38,7 +38,6 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '../assets/css/corp-main.scss';
 
   .contact {
     @apply grow flex flex-col flex-wrap justify-center items-center content-center m-auto self-baseline gap-x-4 gap-y-2;

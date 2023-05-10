@@ -21,7 +21,7 @@
 </script>
 
 <style lang="scss">
-  @import "./assets/css/main.scss";
+  // @import "./assets/css/main.scss";
 
   .wrapper {
     @apply relative max-w-screen-breakXlg my-0 mx-auto;
@@ -63,7 +63,7 @@
     @apply bg-base-backBlack;
 
     .wrapper {
-      @apply w-[99.8%] bg-[url('./template-bourbon/assets/img/bg/graphy_2.png')] bg-repeat;
+      @apply w-[99.8%] bg-[url('/img/bg/graphy_2.png')] bg-repeat;
 
       @media (max-width: theme("screens.breakXlg")) {
         @apply w-[99.8%];
@@ -120,7 +120,7 @@
     @apply h-[calc(100%)] bg-[hsl(320,100%,9%)];
 
     .wrapper {
-      @apply w-[99.8%] flex flex-col grow max-w-screen-breakXlg min-h-[780px] pb-14 bg-[hsl(320,100%,9%)] bg-[url('./template-modern/assets/img/bg/bg_bak_dk4.jpeg')] bg-cover;
+      @apply w-[99.8%] flex flex-col grow max-w-screen-breakXlg min-h-[780px] pb-14 bg-[hsl(320,100%,9%)] bg-[url('/img/bg/bg_bak_dk4.jpeg')] bg-cover;
 
       @media (max-width: theme("screens.breakXlg")) {
         @apply w-[99.8%];

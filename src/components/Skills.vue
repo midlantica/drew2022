@@ -150,7 +150,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../template-modern/assets/css/modern-main.scss";
 
   .modalBg {
     @apply fixed w-full top-0 flex justify-center items-center m-auto h-full left-0 right-0 bottom-0 z-50 bg-black/60 animate-[fade_.25s];
@@ -405,9 +404,24 @@
 
   }
 
-  .modal-fade-enter-active,
-  .modal-fade-leave-active {
-    @apply transition ease-linear duration-500;
+  .modern #modal .content:has(h4, p) {
+    @apply font-modernCopy;
+  }
+
+  .bourbon #modal .content:has(h4, p) {
+    @apply font-bourbonCopy;
+  }
+  .groovy #modal .content:has(h4, p) {
+    @apply font-groovyCopy;
+  }
+  .techy #modal .content:has(h4, p) {
+    @apply font-techyCopy;
+  }
+  .corp #modal .content:has(h4, p) {
+    @apply font-corpCopy;
+  }
+  .punk #modal .content:has(h4, p) {
+    @apply font-punkCopy;
   }
 
   .modal-fade-enter-from,

@@ -15,7 +15,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/modern-main.scss";
 
   .aboutGrid {
     @apply w-[80%] grid grid-cols-[minmax(auto,_2fr)_minmax(225px,_1fr)] gap-8 m-auto;

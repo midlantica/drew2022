@@ -30,7 +30,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/punk-main.scss';
 
   nav {
     @apply flex flex-col content-center px-2 py-4 items-center;

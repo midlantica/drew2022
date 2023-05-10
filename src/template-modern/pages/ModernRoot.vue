@@ -2,7 +2,7 @@
   <transition name="fade" appear>
     <div class="flex flex-col items-center">
       <transition name="topDown" appear>
-        <header>
+        <header class="w-full">
           <Navvy />
         </header>
       </transition>
@@ -28,5 +28,4 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/modern-main.scss";
 </style>

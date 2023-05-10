@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 // SETTINGS
-@import '../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss';
 @import '_drewShake';
 @import 'transitions';
 
@@ -27,16 +26,6 @@ video,
 audio {
   @apply max-w-full h-auto;
 }
-
-// BREAKPOINTS
-// :root {
-//   --breakXlg: 1024px;
-//   --breakLg: 840px;
-//   --breakMd: 768px;
-//   --breakSm: 630px;
-//   --breakXsm: 430px;
-//   --breakXxsm: 320px;
-// }
 
 ::selection {
   @apply text-black bg-[#fbd404];

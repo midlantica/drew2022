@@ -1,15 +1,15 @@
 <template>
   <nav class="flex flex-row flex-wrap items-center justify-center px-5 py-2">
-    <h1 class="p-0 m-0 leading-none text-bourbon-ivory">
+    <h1>
       <router-link class="no-underline text-base-ivory hover:text-[orange]" :to="{ name: 'Bourbon' }">
         DREW HARPER
       </router-link>
     </h1>
     <section class="jobDesc">
-      <h2 class="p-0 m-0 leading-4 text-bourbon-ivory">
+      <h2>
         {{ store.copy.uiuxDesigner }}
       </h2>
-      <h2 class="p-0 m-0 leading-4 text-bourbon-ivory">
+      <h2>
         {{ store.copy.vizDesigner }}
       </h2>
     </section>
@@ -32,10 +32,9 @@
 </script>
 
 <style lang='scss' scoped>
-  @import "../assets/css/bourbon-main.scss";
 
   h1 {
-    @apply font-bourbonSubhead font-normal text-[4em] leading-none tracking-[.06em] transition duration-[.25s] ease-in antialiased w-auto grow-0 drop-shadow-[4px_0px_3px_rgba(0,0,0,0.1)];
+    @apply text-bourbon-ivory font-bourbonSubhead font-normal text-[4em] leading-none tracking-[.06em] p-0 m-0 transition duration-[.25s] ease-in antialiased w-auto grow-0 drop-shadow-[4px_0px_3px_rgba(0,0,0,0.1)];
 
     @media (max-width: theme("screens.breakLg")) {
       @apply grow-0 text-right;
@@ -66,7 +65,7 @@
     }
 
     h2 {
-      @apply font-bourbonHead text-[1.675rem] tracking-[0.075rem] leading-[1.55rem] antialiased mb-[.15rem] drop-shadow-[3px_0px_3px_rgba(0,0,0,0.1)];
+      @apply p-0 m-0 text-bourbon-ivory font-bourbonHead text-[1.675rem] tracking-[0.075rem] leading-[1.55rem] antialiased mb-[.15rem] drop-shadow-[3px_0px_3px_rgba(0,0,0,0.1)];
 
       &:nth-child(2) {
         @apply text-[1.51rem] mb-[.1em];

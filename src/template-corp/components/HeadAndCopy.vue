@@ -12,7 +12,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/corp-main.scss";
 
   h1 {
     @apply max-w-[28ch] font-corpHead text-corp-blueDark normal-case p-0 leading-[2rem] transition duration-[.25s] ease-in tracking-[0.01rem] w-full font-semibold text-[1.3rem] mt-0 mx-0 mb-2;

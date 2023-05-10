@@ -48,8 +48,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/groovy-main.scss";
-
   .mainGrid {
     @apply grid grid-cols-[7fr_6fr] gap-y-4 mt-0 mx-4 mb-2;
 

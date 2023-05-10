@@ -4,7 +4,7 @@
       <router-link :to="{ name: 'ModernExtras' }" class="col-start-1 col-end-2 row-start-1 row-end-2 bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')] jelloHorizontal" />
       <h1>{{ store.copy.druHead }}</h1>
     </div>
-    <p class="font-light text-[0.95rem] leading-[2.2rem] tracking-[0.03rem] m-0 font-modernCopy" v-html="store.copy.druCopy" />
+    <p class="font-light text-[0.95rem] leading-[2.2rem] tracking-[0.03rem] m-0 font-modernCopy text-white" v-html="store.copy.druCopy" />
   </div>
 </template>
 
@@ -15,7 +15,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/modern-main.scss";
 
   h1 {
     @apply col-start-2 col-end-3 row-start-1 row-end-2  inline-block font-modernSubhead tracking-[-0.01ch] p-0 self-center mt-[2.2rem] w-[20ch] text-white font-normal text-[1.1rem] drop-shadow-[1px_1px_4px_black];

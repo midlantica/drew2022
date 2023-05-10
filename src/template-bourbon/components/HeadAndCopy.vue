@@ -15,10 +15,9 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/bourbon-main.scss";
 
   h1 {
-    @apply col-start-2 col-end-3 row-start-1 row-end-2 font-bourbonSubhead text-[1.7rem] inline-block text-bourbon-accentRed p-0 self-center max-w-[30ch];
+    @apply font-normal leading-[1.1em] text-bourbon-accentRed text-left tracking-[.025em] uppercase mt-3 mx-0 mb-1 col-start-2 col-end-3 row-start-1 row-end-2 font-bourbonSubhead text-[1.7rem] inline-block p-0 self-center max-w-[30ch];
 
     @media (min-width: theme("screens.breakXlg")) {
       @apply max-w-[30ch];

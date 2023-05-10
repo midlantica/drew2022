@@ -14,7 +14,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/techy-main.scss';
+  // @import '../assets/css/techy-main.scss';
 
   section {
     @apply mt-[2rem] mr-9 mb-0 ml-9;
@@ -37,7 +37,7 @@
   }
 
   h1 {
-    @apply font-techyHead text-[1.6rem] font-semibold leading-9 mt-0 mb-4 normal-case text-techy-blueTech;
+    @apply font-techyHead text-[1.6rem] font-semibold leading-9 tracking-wide mt-0 mb-4 normal-case text-techy-blueTech;
 
     @media (min-width: theme("screens.breakXlg")) {
       @apply max-w-[26ch];
