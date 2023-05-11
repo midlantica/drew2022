@@ -14,7 +14,6 @@
 </script>
 
 <style lang="scss" scoped>
-  // @import '../assets/css/techy-main.scss';
 
   section {
     @apply mt-[2rem] mr-9 mb-0 ml-9;
