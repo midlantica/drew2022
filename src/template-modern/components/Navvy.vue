@@ -14,9 +14,9 @@
       <p class="flex flex-row flex-wrap justify-center gap-x-3 gap-y-3 grow font-modernCopy font-medium text-center leading-[1.4rem] tracking-[0.05rem] antialiased text-[0.8rem] drop-shadow-[1px_1px_4px_rgba(0,0,0,0.1)]">
         <a
           :href="`mailto:` + `${store.copy.druEmail}`"
-          class="border border-[#ff000054] border-solid py-[0.3rem] rounded-[2rem] my-0 px-5 text-base-ivory hover:text-black hover:no-underline hover:bg-modern-ruby no-underline"
+          class="btn"
         >{{ store.copy.druEmail }}</a>
-        <a class="border border-[#ff000054] border-solid py-[0.3rem] rounded-[2rem] my-0 px-5 text-base-ivory hover:text-black hover:no-underline hover:bg-modern-ruby no-underline" :href="resumeUrl" target="_blank">PDF&nbsp;Resume</a>
+        <a class="btn" :href="resumeUrl" target="_blank">PDF&nbsp;Resume</a>
       </p>
     </section>
   </nav>
@@ -28,3 +28,9 @@
   const store = inject('store')
   const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
+
+<style lang="scss" scoped>
+  .btn {
+    @apply border border-[#ff000054] border-solid py-[0.3rem] rounded-[2rem] my-0 px-5 text-base-ivory hover:text-black hover:no-underline hover:bg-modern-ruby no-underline;
+  }
+</style>

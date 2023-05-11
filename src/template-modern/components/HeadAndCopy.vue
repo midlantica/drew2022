@@ -2,7 +2,7 @@
   <div>
     <div class="grid grid-cols-[88px_auto] auto-rows-auto gap-x-1.5 justify-items-start items-center mt-4 mb-3 gap-2">
       <router-link :to="{ name: 'ModernExtras' }" class="col-start-1 col-end-2 row-start-1 row-end-2 bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')] jelloHorizontal" />
-      <h1 class="col-start-2 col-end-3 row-start-1 row-end-2  inline-block font-modernSubhead tracking-[-0.01ch] p-0 self-center mt-[2.2rem] w-[20ch] text-white font-normal text-[1.1rem] drop-shadow-[1px_1px_4px_black]">
+      <h1 class="col-start-2 col-end-3 row-start-1 row-end-2 inline-block font-modernSubhead tracking-[-0.01ch] p-0 self-center mt-[2.2rem] w-auto text-white font-normal text-[1.1rem] drop-shadow-[1px_1px_4px_black] breakSm:max-w-[30ch] breakLg:w-auto max-[535px]:mt-[.75rem]">
         {{ store.copy.druHead }}
       </h1>
     </div>
@@ -15,27 +15,3 @@
 
   const store = inject('store')
 </script>
-
-<style lang="scss" scoped>
-
-  h1 {
-    // @apply col-start-2 col-end-3 row-start-1 row-end-2  inline-block font-modernSubhead tracking-[-0.01ch] p-0 self-center mt-[2.2rem] w-[20ch] text-white font-normal text-[1.1rem] drop-shadow-[1px_1px_4px_black];
-
-    @media (max-width: 535px) {
-      @apply mt-[.75rem] w-auto;
-    }
-
-    @media (max-width: theme("screens.breakLg")) {
-      @apply w-auto;
-    }
-
-    @media (max-width: theme("screens.breakSm")) {
-      @apply max-w-[30ch];
-    }
-
-    @media (max-width: theme("screens.breakXsm")) {
-      //
-    }
-  }
-
-</style>
