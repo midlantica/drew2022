@@ -38,16 +38,10 @@ const routes = [
     path: '/Modern',
     name: 'ModernRoot',
     component: ModernRoot,
-    redirect: '/Modern/Projects',
+    // redirect: '/Modern/Projects',
     meta: {
       bodyClass: 'modern',
       title: 'Drew Harper &ndash; UI/UX Designer',
-      metaTags: [
-        // {
-        //   name: 'description',
-        //   content: 'The home page of our example app.',
-        // }
-      ],
     },
     children: [
       {
