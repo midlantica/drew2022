@@ -46,3 +46,21 @@ audio {
 .smallCaps {
   @apply text-[95%] tracking-wider uppercase;
 }
+
+.authenticStamp {
+  @apply self-center;
+  animation: rotator .5s ease-in 1;
+  animation-delay: 1.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.authenticStampPunk {
+  @apply self-center;
+  animation: rotator2 .5s ease-in 1;
+  animation-delay: 1.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 1);
+}

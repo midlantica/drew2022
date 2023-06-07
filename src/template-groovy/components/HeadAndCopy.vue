@@ -1,12 +1,18 @@
 <template>
   <section>
-    <h1>{{ store.copy.druHead }}</h1>
+    <div class="flex items-center w-full gap-2 mb-2">
+      <h1>
+        {{ store.copy.druHead }}
+      </h1>
+      <AuthenticStamp class="authenticStamp" />
+    </div>
     <p v-html="store.copy.druCopy" />
   </section>
 </template>
 
 <script setup>
   import { inject } from 'vue'
+  import AuthenticStamp from '../../components/AuthenticStamp.vue'
 
   const store = inject('store')
 </script>
@@ -16,8 +22,12 @@
     --breakXsm: 530px;
   }
 
+  .authenticStamp {
+    @apply fill-groovy-red w-[120px] max-w-[90px] min-w-[90px];
+  }
+
   section {
-    @apply mt-10 mr-9 mb-0 ml-9;
+    @apply mt-4 mr-9 mb-0 ml-9;
 
     @media (max-width: theme("screens.breakXlg")) {
       //
@@ -37,10 +47,10 @@
   }
 
   h1 {
-    @apply font-groovyHead text-[1.5rem] leading-[2.1rem] font-medium mb-2 text-groovy-redDk normal-case;
+    @apply font-groovyHead text-[1.5rem] leading-[2.1rem] font-medium mt-2 mb-0 text-groovy-redDk normal-case;
 
     @media (min-width: theme("screens.breakXlg")) {
-      @apply max-w-[26ch];
+      // @apply max-w-[26ch];
     }
 
     @media (max-width: theme("screens.breakXlg")) {
@@ -52,7 +62,7 @@
     }
 
     @media (max-width: theme("screens.breakSm")) {
-      @apply max-w-[26ch];
+      @apply text-[1.3rem] leading-6;
     }
 
     @media (max-width: theme("screens.breakXsm")) {

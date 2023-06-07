@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex flex-row flex-wrap items-center pt-[2em] px-[2em] pb-0 justify-center mb-6">
+  <nav class="flex flex-row flex-wrap items-center pt-[2em] px-[2em] pb-0 justify-center mb-4">
     <section class="flex flex-row flex-wrap w-full max-[830px]:content-center justify-center gap-x-4">
       <div class="flex flex-wrap content-center text-center max-[830px]:m-auto gap-2 grow">
         <router-link :to="{ name: 'Corp' }" class="flex flex-row flex-wrap content-center justify-center w-full gap-6 breakXsm:w-full">

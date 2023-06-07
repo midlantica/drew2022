@@ -1,8 +1,9 @@
 <template>
-  <div class="w-full pt-4 pl-5 pr-2 breakSm:px-2 breakLg:px-4">
-    <div class="grid grid-cols-[88px_auto] gap-x-1.5 justify-items-start items-center auto-rows-auto">
-      <router-link :to="{ name: 'ExtrasBourbon' }" class="col-start-1 col-end-2 row-start-1 row-end-2 bg-no-repeat bg-cover w-[78px] h-[94px] self-start bg-[url('/img/drew_mug_red.png')] jelloHorizontal" />
+  <div class="w-full pl-5 pr-2 mt-2 breakSm:px-2 breakLg:px-4">
+    <div class="flex items-center justify-start gap-2 justify-items-start auto-rows-auto">
+      <router-link :to="{ name: 'ExtrasBourbon' }" class="block bg-no-repeat bg-cover w-[85px] min-w-[85px] h-[100px] min-h-[100px] bg-[url('/img/drew_mug_red.png')] self-center jelloHorizontal" />
       <h1>{{ store.copy.druHead }}</h1>
+      <AuthenticStamp class="authenticStamp" />
     </div>
     <p v-html="store.copy.druCopy" />
   </div>
@@ -10,17 +11,37 @@
 
 <script setup>
   import { inject } from 'vue'
+  import AuthenticStamp from '../../components/AuthenticStamp.vue'
 
   const store = inject('store')
 </script>
 
 <style lang="scss" scoped>
+  .authenticStamp {
+    @apply fill-bourbon-accentRed w-[180px] max-w-[90px] min-w-[90px];
+
+    @media (max-width: theme("screens.breakLg")) {
+      @apply fill-bourbon-accentRed w-[120px]
+    }
+
+    @media (max-width: theme("screens.breakSm")) {
+      @apply fill-bourbon-accentRed w-[120px]
+    }
+
+    @media (max-width: theme("screens.breakXsm")) {
+      @apply fill-bourbon-accentRed w-[120px]
+    }
+
+    @media (max-width: theme("screens.breakXxsm")) {
+      @apply min-w-[100px];
+    }
+  }
 
   h1 {
-    @apply font-normal leading-[1.1em] text-bourbon-accentRed text-left tracking-[.025em] uppercase mt-3 mx-0 mb-1 col-start-2 col-end-3 row-start-1 row-end-2 font-bourbonSubhead text-[1.7rem] inline-block p-0 self-center max-w-[30ch];
+    @apply font-normal leading-[1.1em] text-bourbon-accentRed text-left tracking-[.025em] uppercase mt-2 mx-0 font-bourbonSubhead text-[1.7rem] p-0 self-center;
 
     @media (min-width: theme("screens.breakXlg")) {
-      @apply max-w-[30ch];
+      // @apply max-w-[21ch];
     }
 
     @media (max-width: theme("screens.breakLg")) {
@@ -28,11 +49,11 @@
     }
 
     @media (max-width: theme("screens.breakSm")) {
-      @apply max-w-[30ch] text-[1.5rem];
+      @apply text-[1.4rem];
     }
 
     @media (max-width: theme("screens.breakXsm")) {
-      @apply text-[1.45rem] m-0;
+      @apply text-[1.25rem] m-0;
     }
 
   }

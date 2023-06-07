@@ -1,7 +1,8 @@
 <template>
   <section>
-    <h1>
+    <h1 class="flex items-center w-full gap-2">
       {{ store.copy.druHead }}
+      <AuthenticStamp class="authenticStamp" />
     </h1>
     <p v-html="store.copy.druCopy" />
   </section>
@@ -9,17 +10,22 @@
 
 <script setup>
   import { inject } from 'vue'
+  import AuthenticStamp from '../../components/AuthenticStamp.vue'
 
   const store = inject('store')
 </script>
 
 <style lang="scss" scoped>
 
+  .authenticStamp {
+    @apply fill-techy-blueTech w-[120px] max-w-[90px] min-w-[90px];
+  }
+
   section {
-    @apply mt-[2rem] mr-9 mb-0 ml-9;
+    @apply mt-4 mr-9 mb-0 ml-9;
 
     @media (max-width: theme("screens.breakXlg")) {
-      @apply mt-6 mx-6 mb-4;
+      @apply mt-4 mx-6 mb-4;
     }
 
     @media (max-width: theme("screens.breakLg")) {
@@ -39,7 +45,7 @@
     @apply font-techyHead text-[1.6rem] font-semibold leading-9 tracking-wide mt-0 mb-4 normal-case text-techy-blueTech;
 
     @media (min-width: theme("screens.breakXlg")) {
-      @apply max-w-[26ch];
+      // @apply max-w-[26ch];
     }
 
     @media (max-width: theme("screens.breakXlg")) {
@@ -51,11 +57,11 @@
     }
 
     @media (max-width: theme("screens.breakSm")) {
-      max-width: 26ch;
+      // max-width: 26ch;
     }
 
     @media (max-width: theme("screens.breakXsm")) {
-      @apply max-w-none;
+      @apply max-w-none text-[1.5rem];
     }
   }
 

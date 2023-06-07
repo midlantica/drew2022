@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="flex justify-start">
+      <AuthenticStamp class="authenticStampPunk" />
+    </div>
     <div class="flexbox">
       <div class="jobTitles">
         <p>{{ store.copy.uiuxDesigner }}</p>
@@ -24,11 +27,33 @@
 <script setup>
   // import { defineComponent } from 'vue'
   import { inject } from 'vue'
+  import AuthenticStamp from '../../components/AuthenticStamp.vue'
   const store = inject('store')
+
   const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 
 <style lang="scss" scoped>
+
+  .authenticStampPunk {
+    @apply fill-black w-[120px] max-w-[90px] min-w-[90px] pr-[.2rem] pb-[.1rem] mb-1;
+
+    @media (max-width: theme("screens.breakLg")) {
+      @apply -mr-[380px] -mt-[10px] w-[90px];
+    }
+
+    @media (max-width: theme("screens.breakSm")) {
+      @apply -mr-[330px] -mt-[20px] w-[80px] ;
+    }
+
+    @media (max-width: theme("screens.breakXsm")) {
+      @apply -mr-[300px] -mt-[20px] w-[70px];
+    }
+
+    @media (max-width: theme("screens.breakXxsm")) {
+      @apply -mr-[300px] -mt-[10px] w-[70px];
+    }
+  }
 
   .flexbox {
     @apply flex flex-row justify-between;

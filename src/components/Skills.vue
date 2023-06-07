@@ -83,19 +83,19 @@
       iconFigma,
       'figma',
       'Figma',
-      'Figma is the king of UX prototyping. It ain\'t Illustrator but collaboration ftw.'
+      'Figma is the king of UX prototyping. It ain\'t Illustrator but collaboration ftw. I am still mad at Adobe for destroying Fireworks! Now they\'ve bought Figma; what could go wrong?!?'
     ],
     [
       iconHtml5,
       'html5',
-      'Html 5',
-      'HTML5: the bones of the Internet. As few divs and spans as possible if you please.'
+      'HTML 5',
+      'The bones of the Internet; as few divs as possible if you please.'
     ],
     [
       iconCss3,
       'css3',
       'CSS 3',
-      'CSS3: Engineers just love CSS haha! Let me do that for you 🙂 I enjoy its declarative cascading infuriating novelty.'
+      'Coders just love CSS haha! So let me do that for you! I enjoy its declarative cascading infuriating novelty.'
     ],
     [
       iconJs,
@@ -107,19 +107,19 @@
       iconTailwind,
       'tailwind',
       'Tailwind CSS',
-      'Tailwind takes the naming pain out of CSS and it\'s brilliant DX. Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park. I converted this site to Tailwind 😀'
+      'Tailwind is great DX, even though it does clutter up your HTML, so just @apply it! Believe it or not, I actually made a mini Tailwind of my own, before Tailwind knocked it out of the park. Learned a lot converting this site to Tailwind 😀'
     ],
     [
       iconSass,
       'sass',
       'SASS',
-      'SASS has made CSS so much more fun and nesty to use. CSS\'s new --vars make it more robust, but there\'s a long way to go.'
+      'SASS has made CSS so much more fun and nesty to use. CSS\'s --vars make it more robust, but there\'s a long way to go before I give up my trusted SASS.'
     ],
     [
       iconVue,
       'vue',
       'Vue',
-      'Vue.js is my favorite JS framework, a great balance of Angular\'s ease and React\'s abilities.'
+      'Vue.js is my favorite JS framework, a great balance of Angular\'s ease and React\'s abilities. This site is 100% Vue.'
     ],
     [
       iconNuxt,
@@ -143,7 +143,7 @@
       iconChelsea,
       'chelsea',
       'Chelsea FC',
-      'I love Chelsea FC! 💙  I enjoy competition. Love Rugby and Cricket, I was a demon fast bowler! And Football, Go Titans!'
+      'I love Chelsea FC! 💙  I enjoy competition. Love Rugby and Cricket too. I was a demon fast bowler! And 🇺🇸 Football, Go Titans!'
     ]
   ])
 

@@ -1,3 +1,31 @@
+
+
+@keyframes rotator {
+  0% {
+    opacity: 0;
+    transform: rotate(263deg) scale(150%);
+  }
+  100% {
+    transform: rotate(363deg) scale(100%);
+    opacity: 1;
+    // transform: scale(95%);
+    // transform-origin: 50% 50%;
+  }
+}
+
+@keyframes rotator2 {
+  0% {
+    opacity: 0;
+    transform: rotate(263deg) scale(150%);
+  }
+  100% {
+    transform: rotate(353deg) scale(100%);
+    opacity: 1;
+    // transform: scale(95%);
+    // transform-origin: 50% 50%;
+  }
+}
+
 $timeBase: 1;
 
 // bounce
