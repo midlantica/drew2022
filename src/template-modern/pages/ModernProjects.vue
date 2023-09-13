@@ -10,5 +10,4 @@
   import Carousel from '../../components/Carousel/Carousel.vue'
 </script>
 
-<style lang='scss' scoped>
-</style>
+<style lang='scss' scoped></style>
