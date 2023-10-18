@@ -6,10 +6,12 @@
       </div>
     </div>
 
-    <router-link to="/Groovy" class="float-left relative min-[375px]:left-[-1.95rem] sm:left-[-1.55rem]">
+    <div to="/Groovy" class="float-left relative min-[375px]:left-[-1.95rem] sm:left-[-1.55rem]">
       <div class="flex flex-row flex-wrap justify-center w-auto gap-4 m-auto">
-        <mastDrew class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
-        <mastHarper class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
+        <router-link to="/Groovy" class="flex gap-4">
+          <mastDrew class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
+          <mastHarper class="min-[375px]:h-[1.8rem] sm:h-[3.2rem] ease-out duration-300" />
+        </router-link>
       </div>
       <h2 class="text-base-ivory min-[375px]:text-[.8rem] sm:text-[1.45rem] text-[1rem] text-center font-normal lowercase leading-normal tracking-[.025em] my-1 w-full mx-auto ease-out duration-300">
         {{ store.copy.uiuxDesigner }} + {{ store.copy.vizDesigner }}
@@ -21,17 +23,18 @@
             <a class="email" :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
           </div>
           <div class="duration-300 ease-out groovyOvalBtn">
-            <a class="resume" href="/resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
+            <a href="./resume/drew_harper_resume_portfolio.pdf" target="_blank" class="resume">PDF Resume</a>
           </div>
         </div>
       </div>
-    </router-link>
+    </div>
   </div>
 </template>
 
 <script setup>
   import mastDrew from './masthead/mastDrew.vue'
   import mastHarper from './masthead/mastHarper.vue'
+  // import portfolio from './resume/drew_harper_resume_portfolio.pdf'
 
   import { inject } from 'vue'
 
