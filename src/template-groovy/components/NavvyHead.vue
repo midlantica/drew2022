@@ -23,7 +23,7 @@
             <a class="email" :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
           </div>
           <div class="duration-300 ease-out groovyOvalBtn">
-            <a href="./resume/drew_harper_resume_portfolio.pdf" target="_blank" class="resume">PDF Resume</a>
+            <a :href="`${store.copy.portfolio}`" target="_blank" class="resume">PDF Resume</a>
           </div>
         </div>
       </div>
@@ -34,7 +34,6 @@
 <script setup>
   import mastDrew from './masthead/mastDrew.vue'
   import mastHarper from './masthead/mastHarper.vue'
-  // import portfolio from './resume/drew_harper_resume_portfolio.pdf'
 
   import { inject } from 'vue'
 

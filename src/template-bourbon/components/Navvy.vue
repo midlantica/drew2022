@@ -18,7 +18,7 @@
         <a class="no-underline text-base-ivory hover:text-[orange]" :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
       </p>
       <p class="resume">
-        <a class="no-underline text-base-ivory hover:text-[orange]" href="./resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
+        <a class="no-underline text-base-ivory hover:text-[orange]" :href="`${store.copy.portfolio}`" target="_blank">PDF Resume</a>
       </p>
     </section>
   </nav>
@@ -27,7 +27,6 @@
 <script setup>
   import { inject } from 'vue'
   import { RouterLink } from 'vue-router'
-  // import portfolio from 'resume/drew_harper_resume_portfolio.pdf'
 
   const store = inject('store')
 </script>

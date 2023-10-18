@@ -10,7 +10,7 @@
       </div>
 
       <div class="resumeLinks">
-        <a class="resume rOne" :href="resumeUrl" target="_BLANK">PDF
+        <a class="resume rOne" :href="`${store.copy.portfolio}`" target="_BLANK">PDF
           Resume</a>
       </div>
     </div>
@@ -30,7 +30,6 @@
   import AuthenticStamp from '../../components/AuthenticStamp.vue'
   const store = inject('store')
 
-  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 
 <style lang="scss" scoped>

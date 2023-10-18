@@ -19,7 +19,7 @@
       </div>
       <section class="contact">
         <p class="leading-normal font-corpCopy text-[1.3em] tracking-[.01em] items-center text-center grow font-semibold lowercase">
-          <a class="text-corp-blueDark hover:border-b-2 hover:border-dotted hover:border-corp-blueMid" :href="resumeUrl" target="_blank">PDF Resume</a>
+          <a class="text-corp-blueDark hover:border-b-2 hover:border-dotted hover:border-corp-blueMid" :href="`${store.copy.portfolio}`" target="_blank">PDF Resume</a>
         </p>
         <p class="leading-normal font-corpCopy text-[1.3em] tracking-[.01em] items-center text-center grow font-semibold lowercase">
           <a class="text-corp-blueDark hover:border-b-2 hover:border-dotted hover:border-corp-blueMid" :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
@@ -34,7 +34,6 @@
   import { inject } from 'vue'
 
   const store = inject('store')
-  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 
 <style lang='scss' scoped>

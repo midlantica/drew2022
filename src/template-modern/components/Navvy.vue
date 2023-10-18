@@ -17,7 +17,7 @@
           :href="`mailto:` + `${store.copy.druEmail}`"
           class="btn"
         >{{ store.copy.druEmail }}</a>
-        <a class="btn" :href="resumeUrl" target="_blank">PDF&nbsp;Resume</a>
+        <a class="btn" :href="`${store.copy.portfolio}`" target="_blank">PDF&nbsp;Resume</a>
       </p>
     </section>
   </nav>
@@ -28,7 +28,6 @@
   import AuthenticStamp from '../../components/AuthenticStamp.vue'
 
   const store = inject('store')
-  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 
 <style lang="scss" scoped>

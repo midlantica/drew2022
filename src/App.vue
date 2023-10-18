@@ -21,8 +21,6 @@
 </script>
 
 <style lang="scss">
-  // @import "./assets/css/main.scss";
-
   .wrapper {
     @apply relative max-w-screen-breakXlg my-0 mx-auto;
   }
