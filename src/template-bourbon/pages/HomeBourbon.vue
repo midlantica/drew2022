@@ -1,8 +1,8 @@
 <template>
   <transition name="fade" appear>
-    <div>
+    <div class="relative">
       <transition name="topDown" appear>
-        <header class="bg-[url('../assets/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
+        <header class="bg-[url(/img/bg/bg_bag_dk.jpg)] bg-repeat shadow-druShadow">
           <Navvy />
         </header>
       </transition>
@@ -35,7 +35,7 @@
         </main>
       </transition>
 
-      <footer class="bg-[url('../assets/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
+      <footer class="bg-[url(/img/bg/bg_bag_dk.jpg)] bg-repeat shadow-druShadow">
         <nav class="h-3" />
       </footer>
     </div>
@@ -52,12 +52,13 @@
 </script>
 
 <style lang='scss' scoped>
+  @import "/src/template-bourbon/assets/css/fonts/bourbonFonts/bourbonFonts.css";
   .mainGrid {
-    @apply grid grid-cols-1 lg:grid-cols-2 my-4 mr-6 ml-4 gap-x-4 gap-y-4;
-  }
+      @apply grid grid-cols-1 lg:grid-cols-2 my-4 mr-6 ml-4 gap-x-0 gap-y-4;
+    }
 
   .copyArea {
-    @apply delay-[250ms] col-start-1 col-end-2 row-start-1 row-end-4;
+    @apply delay-[250ms] col-start-1 col-end-2 row-start-1 row-end-4 relative;
 
     @media (max-width: theme("screens.breakXlg")) {
       @apply col-start-1 col-end-3 row-span-full;

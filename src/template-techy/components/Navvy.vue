@@ -14,9 +14,7 @@
 
         <div class="block jobDesc">
           <h2>{{ store.copy.uiuxDesigner }} + </h2>
-          <h2 class="marLH">
-            {{ store.copy.vizDesigner }}
-          </h2>
+          <h2>{{ store.copy.vizDesigner }}</h2>
         </div>
       </div>
 
@@ -26,7 +24,7 @@
             <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
           </p>
           <p class="resume">
-            <a :href="resumeUrl" target="_blank">PDF Resume</a>
+            <a :href="`${store.copy.portfolio}`" target="_blank">PDF Resume</a>
           </p>
         </div>
       </div>
@@ -41,12 +39,10 @@
   import { inject } from 'vue'
 
   const store = inject('store')
-  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
+  // const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
 </script>
 
 <style lang='scss' scoped>
-  @import '../assets/css/techy-main.scss';
-
   nav .mastMain {
     //
 

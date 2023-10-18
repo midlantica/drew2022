@@ -18,7 +18,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/groovy-main.scss';
 
   header {
     @apply text-base-ivory bg-groovy-red clear-both;

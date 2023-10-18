@@ -21,7 +21,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/punk-main.scss';
 
   nav {
     @apply mb-0;

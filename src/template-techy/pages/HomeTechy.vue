@@ -48,8 +48,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/techy-main.scss";
-
   .mainGrid {
     @apply grid-cols-[7fr_6fr] grid mt-0 mx-6 mb-2 gap-y-4 gap-x-0;
 

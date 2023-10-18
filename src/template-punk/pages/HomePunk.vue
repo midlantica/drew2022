@@ -43,8 +43,6 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '../assets/css/punk-main.scss';
-
   .mainGrid {
     @apply grid grid-cols-2 gap-x-2 gap-y-2 shadow-none py-0 px-4 bg-transparent;
 
@@ -144,4 +142,5 @@
       @apply row-start-4 row-end-4;
     }
   }
+
 </style>

@@ -1,20 +1,24 @@
 <template>
-  <nav>
+  <nav class="flex flex-row flex-wrap items-center justify-center px-5 py-2">
     <h1>
-      <router-link :to="{ name: 'Bourbon' }">
+      <router-link class="no-underline text-base-ivory hover:text-[orange]" :to="{ name: 'Bourbon' }">
         DREW HARPER
       </router-link>
     </h1>
     <section class="jobDesc">
-      <h2>{{ store.copy.uiuxDesigner }}</h2>
-      <h2>{{ store.copy.vizDesigner }}</h2>
+      <h2>
+        {{ store.copy.uiuxDesigner }}
+      </h2>
+      <h2>
+        {{ store.copy.vizDesigner }}
+      </h2>
     </section>
     <section class="contact">
       <p class="email">
-        <a :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
+        <a class="no-underline text-base-ivory hover:text-[orange]" :href="`mailto:` + `${store.copy.druEmail}`">{{ store.copy.druEmail }}</a>
       </p>
       <p class="resume">
-        <a href="/resume/drew_harper_resume_portfolio.pdf" target="_blank">PDF Resume</a>
+        <a class="no-underline text-base-ivory hover:text-[orange]" :href="`${store.copy.portfolio}`" target="_blank">PDF Resume</a>
       </p>
     </section>
   </nav>
@@ -28,51 +32,9 @@
 </script>
 
 <style lang='scss' scoped>
-  @import "../assets/css/bourbon-main.scss";
-
-  a {
-    @apply text-base-ivory no-underline;
-
-    &:link {
-      @apply text-base-ivory no-underline;
-    }
-
-    &:hover {
-      @apply text-bourbon-orange;
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  p {
-    @apply text-bourbon-ivory leading-4 m-0 p-0;
-
-    a {
-      @apply text-bourbon-ivory no-underline;
-    }
-  }
-
-  nav {
-    @apply flex flex-row flex-wrap justify-between items-center py-2 px-5;
-
-    @media (max-width: theme("screens.breakLg")) {
-      @apply justify-center;
-    }
-
-    a {
-      @apply text-bourbon-ivory;
-
-      &:hover {
-        @apply text-[orange];
-      }
-    }
-  }
 
   h1 {
-    @apply font-bourbonSubhead font-normal text-[4em] leading-none tracking-[.06em] transition duration-[.25s] ease-in antialiased w-auto grow-0 drop-shadow-[4px_0px_3px_rgba(0,0,0,0.1)];
+    @apply text-bourbon-ivory font-bourbonSubhead font-normal text-[4em] leading-none tracking-[.06em] p-0 m-0 transition duration-[.25s] ease-in antialiased w-auto grow-0 drop-shadow-[4px_0px_3px_rgba(0,0,0,0.1)];
 
     @media (max-width: theme("screens.breakLg")) {
       @apply grow-0 text-right;
@@ -83,19 +45,19 @@
     }
 
     @media (max-width: theme("screens.breakXsm")) {
-      font-size: 3.05em;
+      @apply font-[3.05rem];
     }
   }
 
   section.jobDesc {
-    @apply grow ml-[0.55rem] mt-[.25rem] transition duration-[.25s] ease-in;
+    @apply grow ml-[0.55rem] mt-[0.1rem] transition duration-[.25s] ease-in;
 
     @media (max-width: theme("screens.breakLg")) {
-      @apply grow-0 ml-2 mt-2;
+      @apply grow-0 ml-2;
     }
 
     @media (max-width: theme("screens.breakSm")) {
-      @apply grow-0 text-center self-center ml-0 mt-2;
+      @apply grow-0 text-center self-center ml-0;
     }
 
     @media (max-width: theme("screens.breakXsm")) {
@@ -103,7 +65,7 @@
     }
 
     h2 {
-      @apply font-bourbonHead text-[1.675rem] tracking-[0.075rem] leading-[1.55rem] antialiased mb-[.15rem] drop-shadow-[3px_0px_3px_rgba(0,0,0,0.1)];
+      @apply p-0 m-0 text-bourbon-ivory font-bourbonHead text-[1.675rem] tracking-[0.075rem] leading-[1.55rem] antialiased mb-[.15rem] drop-shadow-[3px_0px_3px_rgba(0,0,0,0.1)];
 
       &:nth-child(2) {
         @apply text-[1.51rem] mb-[.1em];

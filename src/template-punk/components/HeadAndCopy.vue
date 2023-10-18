@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="flex justify-start">
+      <AuthenticStamp class="authenticStampPunk" />
+    </div>
     <div class="flexbox">
       <div class="jobTitles">
         <p>{{ store.copy.uiuxDesigner }}</p>
@@ -7,7 +10,7 @@
       </div>
 
       <div class="resumeLinks">
-        <a class="resume rOne" :href="resumeUrl" target="_BLANK">PDF
+        <a class="resume rOne" :href="`${store.copy.portfolio}`" target="_BLANK">PDF
           Resume</a>
       </div>
     </div>
@@ -24,12 +27,32 @@
 <script setup>
   // import { defineComponent } from 'vue'
   import { inject } from 'vue'
+  import AuthenticStamp from '../../components/AuthenticStamp.vue'
   const store = inject('store')
-  const resumeUrl = '/resume/drew_harper_resume_portfolio.pdf'
+
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/punk-main.scss";
+
+  .authenticStampPunk {
+    @apply fill-black w-[120px] max-w-[90px] min-w-[90px] pr-[.2rem] pb-[.1rem] mb-1;
+
+    @media (max-width: theme("screens.breakLg")) {
+      @apply -mr-[380px] -mt-[10px] w-[90px];
+    }
+
+    @media (max-width: theme("screens.breakSm")) {
+      @apply -mr-[330px] -mt-[20px] w-[80px] ;
+    }
+
+    @media (max-width: theme("screens.breakXsm")) {
+      @apply -mr-[300px] -mt-[20px] w-[70px];
+    }
+
+    @media (max-width: theme("screens.breakXxsm")) {
+      @apply -mr-[300px] -mt-[10px] w-[70px];
+    }
+  }
 
   .flexbox {
     @apply flex flex-row justify-between;
@@ -64,7 +87,7 @@
       @apply self-end flex-row;
 
       .resume {
-        @apply text-[0.9em] font-punkCopy text-base-black bg-white font-medium not-italic tracking-[.02em] lowercase inline-block ml-1 py-[0.3em] px-2;
+        @apply text-[0.9em] font-punkCopy text-base-black bg-white font-medium not-italic tracking-[.02em] lowercase inline-block ml-1 mb-4 py-[0.3em] px-2;
 
         &.rOne {
           @apply text-white -rotate-2 bg-punk-magenta/50;
@@ -112,15 +135,11 @@
     @apply -rotate-1;
 
     h1 {
-      @apply font-medium z-10 inline-block leading-[1.7rem] text-white text-[1.15rem] bg-punk-red/80 rotate-1 pt-0 pr-0 pb-[.1rem] pl-[.2rem];
+      @apply font-punkHead font-medium z-10 leading-[1.7rem] text-white text-[1.16rem] bg-punk-red/80 rotate-1 py-1 pr-0 pb-[.1rem] pl-[.2rem] tracking-[.025em] uppercase inline;
 
       &:nth-of-type(1) {
         @apply rotate-0;
       }
-    }
-
-    p.smallCaps {
-      @apply text-[95%] text-punk-red font-medium uppercase;
     }
 
     p {
@@ -129,7 +148,6 @@
       @media (min-width: theme("screens.breakLg")) {
         //
       }
-
     }
 
   }

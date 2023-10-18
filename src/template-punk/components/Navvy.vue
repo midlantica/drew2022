@@ -1,6 +1,6 @@
 <template>
-  <nav>
-    <div class="greenBar">
+  <nav class="flex flex-col items-center content-center px-2 py-4 breakLg:justify-center breakLg:content-center breakLg:items-center">
+    <div class="block w-full max-w-screen-breakXlg z-0 absolute top-0 left-0 h-[5em] self-center bg-[rgba(0,128,0,0.25)] saturate-[2.5]">
       &nbsp;
     </div>
     <p class="email">
@@ -30,17 +30,12 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/punk-main.scss';
 
   nav {
     @apply flex flex-col content-center px-2 py-4 items-center;
 
     @media (max-width: theme("screens.breakLg")) {
       @apply justify-center content-center items-center;
-    }
-
-    .greenBar {
-      @apply block w-full max-w-screen-breakXlg z-0 absolute top-0 left-0 h-[5em] self-center bg-[rgba(0,128,0,0.25)] saturate-[2.5];
     }
 
     p.email {
@@ -146,49 +141,14 @@
 
       a.svg.svgArt.mastDrew {
         @apply w-[170px];
-
-        @media (max-width: theme("screens.breakXlg")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakLg")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakSm")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakXsm")) {
-          //
-        }
       }
 
       a.svg.svgArt.mastHarper {
         //
-
-        @media (max-width: theme("screens.breakXlg")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakLg")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakSm")) {
-          //
-        }
-
-        @media (max-width: theme("screens.breakXsm")) {
-          //
-        }
-
       }
 
       a.DrewHead {
-        @apply bg-[url('/img/drew_mug_punk.png')];
-        //
-        @apply bg-no-repeat bg-contain w-[18vw] h-[120px] no-underline;
+        @apply bg-[url('/img/drew_mug_punk.png')] bg-no-repeat bg-contain w-[18vw] h-[120px] no-underline;
 
         @media (max-width: theme("screens.breakLg")) {
           @apply w-[122px] h-[122px] mt-4;

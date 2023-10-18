@@ -14,5 +14,4 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/modern-main.scss';
 </style>

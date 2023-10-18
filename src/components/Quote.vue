@@ -178,18 +178,6 @@
         @apply clear-both my-2 gap-y-0 text-[0.8rem] gap-1;
     }
 
-    // p,
-    // cite {
-    //   @apply not-italic inline leading-normal;
-    // }
-
-    // cite {
-    //   @apply break-keep whitespace-nowrap;
-    // }
-
-    // .quotePad {
-    //   @apply p-0 leading-4 m-auto select-none;
-    // }
   }
 
   // MODERN ########################
@@ -213,18 +201,6 @@
         @apply clear-both mt-2 mb-2 gap-y-0;
     }
 
-    // .quotePad {
-    //   @apply text-center;
-    // }
-
-    // .quotePad a {
-    //   @apply text-white cursor-pointer;
-
-    //   &:hover {
-    //     @apply text-[yellow];
-    //   }
-    // }
-
     p {
       @apply text-[0.9em] text-base-ivory tracking-wider leading-[1.5em] text-center;
       animation: fadeTexter 2s forwards;
@@ -239,16 +215,6 @@
 
     }
 
-    // GROOVY ########################
-    .groovy .quoteBlock {
-      p {
-        @apply font-modernCopy
-      }
-
-      .cite {
-        @apply font-modernCopy
-      }
-    }
   }
 
   // GROOVY ########################

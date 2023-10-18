@@ -21,8 +21,6 @@
 </script>
 
 <style lang="scss">
-  @import "./assets/css/main.scss";
-
   .wrapper {
     @apply relative max-w-screen-breakXlg my-0 mx-auto;
   }
@@ -63,7 +61,7 @@
     @apply bg-base-backBlack;
 
     .wrapper {
-      @apply w-[99.8%] bg-[url('./template-bourbon/assets/img/bg/graphy_2.png')] bg-repeat;
+      @apply w-[99.8%] bg-[url('/img/bg/graphy_2.png')] bg-repeat;
 
       @media (max-width: theme("screens.breakXlg")) {
         @apply w-[99.8%];
@@ -114,16 +112,13 @@
       }
     }
 
-    .smallCaps {
-      @apply text-[90%] tracking-wider uppercase;
-    }
   }
 
   body.modern {
     @apply h-[calc(100%)] bg-[hsl(320,100%,9%)];
 
     .wrapper {
-      @apply w-[99.8%] flex flex-col grow max-w-screen-breakXlg min-h-[780px] pb-14 bg-[hsl(320,100%,9%)] bg-[url('./template-modern/assets/img/bg/bg_bak_dk4.jpeg')] bg-cover;
+      @apply w-[99.8%] flex flex-col grow max-w-screen-breakXlg min-h-[780px] pb-14 bg-[hsl(320,100%,9%)] bg-[url('/img/bg/bg_bak_dk4.jpeg')] bg-cover;
 
       @media (max-width: theme("screens.breakXlg")) {
         @apply w-[99.8%];
@@ -165,10 +160,6 @@
 
     &.extras .extrasWrapper {
       //
-
-      .smallCaps {
-        @apply text-[90%] tracking-wider uppercase;
-      }
 
       h1 {
         @apply text-white font-modernCopy text-[1.2rem] leading-normal capitalize antialiased bg-transparent tracking-wider;
@@ -285,10 +276,6 @@
       }
     }
 
-    .smallCaps {
-      @apply text-[87.5%] tracking-wider uppercase;
-    }
-
     .contact {
       @apply flex gap-x-4 gap-y-4;
     }
@@ -335,10 +322,6 @@
       @media (max-width: theme("screens.breakXxsm")) {
         // @apply w-[99.8%];
       }
-    }
-
-    .smallCaps {
-      @apply text-[90%] tracking-[.03em];
     }
 
     &.extras .extrasWrapper {
@@ -406,10 +389,6 @@
 
       p {
         @apply font-punkCopy text-black;
-      }
-
-      .smallCaps {
-        @apply text-[95%] tracking-wider uppercase;
       }
 
       a {

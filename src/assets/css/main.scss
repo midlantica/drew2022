@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 // SETTINGS
-@import '../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss';
 @import '_drewShake';
 @import 'transitions';
 
@@ -28,16 +27,6 @@ audio {
   @apply max-w-full h-auto;
 }
 
-// BREAKPOINTS
-// :root {
-//   --breakXlg: 1024px;
-//   --breakLg: 840px;
-//   --breakMd: 768px;
-//   --breakSm: 630px;
-//   --breakXsm: 430px;
-//   --breakXxsm: 320px;
-// }
-
 ::selection {
   @apply text-black bg-[#fbd404];
 }
@@ -52,4 +41,26 @@ audio {
 
 ::-webkit-scrollbar-track {
   @apply rounded-none bg-[hsla(0,0%,100%,0)] ;
+}
+
+.smallCaps {
+  @apply text-[95%] tracking-wider uppercase;
+}
+
+.authenticStamp {
+  @apply self-center;
+  animation: rotator .5s ease-in 1;
+  animation-delay: 1.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.authenticStampPunk {
+  @apply self-center;
+  animation: rotator2 .5s ease-in 1;
+  animation-delay: 1.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 1);
 }

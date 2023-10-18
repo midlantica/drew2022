@@ -18,5 +18,4 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/techy-main.scss';
 </style>

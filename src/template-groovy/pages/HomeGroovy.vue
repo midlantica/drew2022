@@ -2,7 +2,7 @@
   <transition name="fade" appear>
     <div>
       <transition name="topDown" appear>
-        <header>
+        <header class="text-base-ivory bg-groovy-red after:clear-both h-[188px]">
           <NavvyHead />
         </header>
       </transition>
@@ -48,8 +48,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/groovy-main.scss";
-
   .mainGrid {
     @apply grid grid-cols-[7fr_6fr] gap-y-4 mt-0 mx-4 mb-2;
 
@@ -74,9 +72,9 @@
     }
   }
 
-  header {
-    @apply text-base-ivory bg-groovy-red after:clear-both h-[188px];
-  }
+  // header {
+  //   @apply text-base-ivory bg-groovy-red after:clear-both h-[188px];
+  // }
 
   .about {
     @apply bg-groovy-yellow rounded-xl font-groovyHead shadow-[0px_6px_0px_0px_hsl(0,_0%,_0%,_25%)];

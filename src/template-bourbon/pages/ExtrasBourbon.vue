@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-[url('../assets/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
+  <header class="bg-[url('/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
     <Navvy />
   </header>
 
@@ -7,7 +7,7 @@
     <ExtrasC />
   </transition>
 
-  <footer class="bg-[url('../assets/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
+  <footer class="bg-[url('/img/bg/bg_bag_dk.jpg')] bg-repeat shadow-druShadow">
     <nav class="h-3" />
   </footer>
 </template>
@@ -18,5 +18,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/css/bourbon-main.scss";
+@import "/src/template-bourbon/assets/css/fonts/bourbonFonts/bourbonFonts.css";
 </style>

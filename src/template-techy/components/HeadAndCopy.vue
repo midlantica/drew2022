@@ -1,26 +1,31 @@
 <template>
-  <section class="mt-[2rem] mr-[1.5rem] mb-0 ml-4">
-    <h1 class="text-techy-blueTech font-semibold font-techyHead leading-[2.4rem] text-[1.5rem] mt-0 mb-4 normal-case">
+  <section>
+    <h1 class="flex items-center w-full gap-2">
       {{ store.copy.druHead }}
+      <AuthenticStamp class="authenticStamp" />
     </h1>
-    <p class="text-[1.2rem] font-techyCopy leading-[2.9rem] tracking-[.06em] text-techy-blueTech" v-html="store.copy.druCopy" />
+    <p v-html="store.copy.druCopy" />
   </section>
 </template>
 
 <script setup>
   import { inject } from 'vue'
+  import AuthenticStamp from '../../components/AuthenticStamp.vue'
 
   const store = inject('store')
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/css/techy-main.scss';
+
+  .authenticStamp {
+    @apply fill-techy-blueTech w-[120px] max-w-[90px] min-w-[90px];
+  }
 
   section {
-    //
+    @apply mt-4 mr-9 mb-0 ml-9;
 
     @media (max-width: theme("screens.breakXlg")) {
-      @apply mt-6 mx-6 mb-4;
+      @apply mt-4 mx-6 mb-4;
     }
 
     @media (max-width: theme("screens.breakLg")) {
@@ -37,10 +42,10 @@
   }
 
   h1 {
-    //
+    @apply font-techyHead text-[1.6rem] font-semibold leading-9 tracking-wide mt-0 mb-4 normal-case text-techy-blueTech;
 
     @media (min-width: theme("screens.breakXlg")) {
-      @apply max-w-[26ch];
+      // @apply max-w-[26ch];
     }
 
     @media (max-width: theme("screens.breakXlg")) {
@@ -52,20 +57,16 @@
     }
 
     @media (max-width: theme("screens.breakSm")) {
-      max-width: 26ch;
+      // max-width: 26ch;
     }
 
     @media (max-width: theme("screens.breakXsm")) {
-      @apply max-w-none;
+      @apply max-w-none text-[1.5rem];
     }
   }
 
   p {
-    //
-
-    &.smallCaps {
-      @apply text-[80%] tracking-wider uppercase;
-    }
+    @apply font-techyCopy text-[1.25rem] leading-[3rem] tracking-[.06em] text-techy-blueTech;
 
     @media (min-width: theme("screens.breakXlg")) and (-webkit-min-device-pixel-ratio: 2) {
       //
