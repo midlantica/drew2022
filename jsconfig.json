@@ -1,0 +1,8 @@
+{
+  "include": [
+    "./src/**/*",
+    "router.js",
+    "src/main.ts"
+  ],
+  "allowJs": true
+}
