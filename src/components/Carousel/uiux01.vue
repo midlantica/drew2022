@@ -24,6 +24,9 @@
       image: '/img/portfolio/01_uiux/Zander_screenshot_v1.png'
     },
     {
+      image: '/img/portfolio/01_uiux/design-system-uiux.png'
+    },
+    {
       image: '/img/portfolio/01_uiux/tdoe/tn_doc_01.jpg'
     },
     {

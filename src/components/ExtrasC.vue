@@ -34,14 +34,14 @@
 
   const portfolioExtras = [
     {
+      text: 'Design System',
+      imageUrl: 'design-system-lg.png',
+      imageSrc: 'design-system@2x.png'
+    },
+    {
       text: 'Zander Insurance',
       imageUrl: 'zander.png',
       imageSrc: 'zander_sm@2x.png'
-    },
-    {
-      text: 'A Service Request page',
-      imageUrl: 'serviceRequestV1.png',
-      imageSrc: 'service-request@2x.png'
     },
     {
       text: 'JPay.com multipage PDF',

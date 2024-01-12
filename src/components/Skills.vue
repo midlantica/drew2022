@@ -2,7 +2,9 @@
   <div class="skillsGrid">
     <div v-for="(item, index) in skills" :key="index">
       <component
-        :is="item[0]" class="icon {{item[1]}} { active: hover }" @mouseleave="hover = false"
+        :is="item[0]"
+        class="icon {{item[1]}} { active: hover }"
+        @mouseleave="hover = false"
         @click="showModal(item)"
       />
     </div>
