@@ -4,6 +4,7 @@ module.exports = {
   content: [
     './index.html',
     './src/components/**/*.vue',
+    './src/components/Buttons.vue',
     './src/template-bourbon/components/**/*.vue',
     './src/template-bourbon/pages/**/*.vue',
     './src/template-corp/components/**/*.vue',
@@ -53,7 +54,10 @@ module.exports = {
           backBlack: '#1f1f1f'
         },
         modern: {
+          rubyLight: '#E54379',
           ruby: '#D71D5B',
+          rubyDark: '#AB1748',
+          rubyDarker: '#7E1135',
           accent: '#FFC05C',
           accentRed: '#d71d5b',
           grey: '#352E38',

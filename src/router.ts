@@ -22,6 +22,7 @@ import HomePunk from './template-punk/pages/HomePunk.vue'
 import ExtrasPunk from './template-punk/pages/ExtrasPunk.vue'
 
 import ExtrasC from './components/ExtrasC.vue'
+import Buttons from './components/Buttons.vue'
 
 import VueBodyClass from 'vue-body-class'
 
@@ -174,6 +175,11 @@ const routes = [
       bodyClass: 'punk extras',
       title: 'Drew Harper &ndash; UI/UX Designer Extras',
     },
+  },
+  {
+    path: '/Buttons',
+    name: 'Buttons',
+    component: Buttons,
   },
   {
     path: '/NotFound',
