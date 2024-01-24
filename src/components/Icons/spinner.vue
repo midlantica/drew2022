@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="w-5 h-5 animate-spin absolute top-[5px] flex items-center content-center justify-center mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none"
+    class="absolute items-center content-center justify-center w-5 h-5 m-auto animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
     viewBox="0 0 24 24"
   >
     <circle

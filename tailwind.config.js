@@ -4,7 +4,6 @@ module.exports = {
   content: [
     './index.html',
     './src/components/**/*.vue',
-    './src/components/Buttons.vue',
     './src/template-bourbon/components/**/*.vue',
     './src/template-bourbon/pages/**/*.vue',
     './src/template-corp/components/**/*.vue',
