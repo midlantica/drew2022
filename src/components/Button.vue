@@ -22,6 +22,11 @@
       type: [String, Object],
       default: 'button'
     },
+    asRouterLink: {
+      type: String,
+      default: 'router-link',
+      required: true
+    },
     intent: {
       type: String,
       validator: val => ['primary', 'secondary', 'tertiary', 'danger', 'text'].includes(val),

@@ -177,11 +177,6 @@ const routes = [
     },
   },
   {
-    path: '/Buttons',
-    name: 'Buttons',
-    component: Buttons,
-  },
-  {
     path: '/NotFound',
     redirect: '/',
   },
