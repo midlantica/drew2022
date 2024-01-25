@@ -1,40 +1,46 @@
 <script setup>
   import Button from '../components/Button.vue'
-  import { CogIcon } from '@heroicons/vue/20/solid'
+  import { CogIcon, MapIcon, UserIcon, TrophyIcon } from '@heroicons/vue/20/solid'
+
+  console.log(CogIcon)
 </script>
 
 <template>
-  <div class="flex flex-row flex-wrap justify-center gap-4 font-modernCopy mt-7">
+  <div class="flex flex-row flex-wrap content-center justify-center gap-2 px-20 font-modernCopy mt-7">
     <Button
-      intent="primary" size="small" :left-icon="CogIcon"
+      intent="primary" size="small" :right-icon="CogIcon"
       loading
-    >
-      Primary
-    </Button>
+    />
+    <Button
+      intent="primary" size="small" :icon="MapIcon"
+    />
+    <Button
+      intent="tertiary" size="small" :icon="UserIcon"
+    />
     <Button
       intent="primary" size="small"
       :right-icon="CogIcon"
     >
-      Primary
+      Small
     </Button>
 
     <Button
       intent="primary" size="normal"
-      :right-icon="CogIcon"
+      :left-icon="CogIcon"
     >
-      Primary
+      Normal
     </Button>
 
     <Button
       intent="primary" size="large"
       :right-icon="CogIcon"
     >
-      Primary
+      Large
     </Button>
 
     <Button
-      intent="primary" size="largest"
-      :right-icon="CogIcon"
+      intent="primary" size="small"
+      :left-icon="UserIcon"
     >
       Primary
     </Button>
@@ -47,8 +53,17 @@
       Tertiary
     </Button>
 
-    <Button intent="danger">
-      Danger
+    <Button intent="secondary" size="small">
+      small
+    </Button>
+    <Button intent="secondary" size="normal">
+      normal
+    </Button>
+    <Button intent="secondary" size="large">
+      large
+    </Button>
+    <Button intent="secondary" size="largest">
+      largest
     </Button>
 
     <Button
@@ -63,7 +78,7 @@
       disabled
       :left-icon="CogIcon"
     >
-      Primary Disabled
+      Disabled
     </Button>
   </div>
 </template>
