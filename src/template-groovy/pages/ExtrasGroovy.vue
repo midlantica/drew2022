@@ -8,7 +8,7 @@
   </transition>
 
   <footer>
-    <NavvyEmpty />
+    <!-- <NavvyEmpty /> -->
   </footer>
 </template>
 
